@@ -1,0 +1,25 @@
+# Runtime job output (PRD section 10)
+jobs/
+outputs/
+
+# Machine-specific config overrides (paths, envs); see config.local.yaml.example
+config.local.yaml
+
+# Test/input assets fetched separately (see README for download instructions)
+partnet_mobility/
+meshes/
+meshes_run/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Never track model weights or caches here (weights live in the shared HF cache)
+*.pth
+*.safetensors
+*.ckpt
+
+# Local model/torch caches if pointed under the repo
+/.cache/

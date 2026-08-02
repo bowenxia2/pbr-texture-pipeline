@@ -1,0 +1,14 @@
+# Additional packages layered on top of TRELLIS.2/setup.sh (run first) so ONE `trellis2`
+# conda env can also run this repo's app, batch CLI, and Stage R/D (render + diffusion).
+# Install after: `. ./setup.sh --new-env --basic --flash-attn --nvdiffrast --nvdiffrec --cumesh --o-voxel --flexgemm`
+# (run from inside the TRELLIS.2/ submodule; see README.md "Setup").
+diffusers==0.38.0
+accelerate==1.14.0
+requests==2.34.2
+importlib_metadata==9.0.0
+fastapi==0.138.0
+uvicorn==0.49.0
+fast_simplification==0.1.13
+# natten's prebuilt wheels are keyed to a specific torch/CUDA build; if plain pip fails to
+# find a match for your setup, see https://github.com/SHI-Labs/NATTEN for the wheel index.
+natten==0.21.0

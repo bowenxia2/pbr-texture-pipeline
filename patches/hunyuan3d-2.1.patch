@@ -1,0 +1,34 @@
+diff --git a/hy3dpaint/textureGenPipeline.py b/hy3dpaint/textureGenPipeline.py
+index a582892..9396eea 100644
+--- a/hy3dpaint/textureGenPipeline.py
++++ b/hy3dpaint/textureGenPipeline.py
+@@ -38,7 +38,7 @@ class Hunyuan3DPaintConfig:
+     def __init__(self, max_num_view, resolution):
+         self.device = "cuda"
+ 
+-        self.multiview_cfg_path = "hy3dpaint/cfgs/hunyuan-paint-pbr.yaml"
++        self.multiview_cfg_path = "cfgs/hunyuan-paint-pbr.yaml"
+         self.custom_pipeline = "hunyuanpaintpbr"
+         self.multiview_pretrained_path = "tencent/Hunyuan3D-2.1"
+         self.dino_ckpt_path = "facebook/dinov2-giant"
+diff --git a/requirements.txt b/requirements.txt
+index d9f1e4d..38ebae5 100644
+--- a/requirements.txt
++++ b/requirements.txt
+@@ -3,6 +3,7 @@
+ 
+ # Build Tools
+ ninja==1.11.1.1
++setuptools<81  # pkg_resources removed in setuptools 81; required by pytorch_lightning 1.9.5
+ pybind11==2.13.4
+ 
+ # Core ML/Deep Learning
+@@ -53,7 +54,7 @@ psutil==6.0.0
+ cupy-cuda12x==13.4.1
+ 
+ # Blender
+-bpy==4.0
++bpy==4.2.0
+ 
+ # ONNX Runtime
+ onnxruntime==1.16.3

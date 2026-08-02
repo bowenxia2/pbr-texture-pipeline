@@ -1,0 +1,23 @@
+# Machine-specific overrides for config.yaml (PROJECT ROOT relative paths, conda locations,
+# shared caches). Copy this file to config.local.yaml (gitignored, never committed) and fill
+# in the values that differ from config.yaml's portable defaults.
+#
+# Only include the keys you actually need to override; config.local.yaml is deep-merged on
+# top of config.yaml at load time, so anything you omit falls back to the base config.
+#
+# Common reasons to use this file:
+#   - Your conda envs/HF cache live on a large scratch disk instead of under the repo.
+#   - You already have the backend repos (TRELLIS.2, Hunyuan3D-2.1, Orient-Anything-V2)
+#     checked out elsewhere (e.g. with local patches/experiments) and want to point at
+#     those instead of the git submodules under this repo.
+#   - `conda`/`mamba` isn't on $PATH or set as $CONDA_EXE.
+
+env:
+  hf_cache: /path/to/shared/.cache/huggingface
+  torch_cache: /path/to/shared/.cache/torch
+  # conda_bin: /path/to/conda/bin/conda
+
+repos:
+  trellis2: /path/to/TRELLIS.2
+  hunyuan: /path/to/Hunyuan3D-2.1/hy3dpaint
+  orient: /path/to/Orient-Anything-V2

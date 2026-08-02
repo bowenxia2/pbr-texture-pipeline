@@ -1,0 +1,9 @@
+[submodule "TRELLIS.2"]
+	path = TRELLIS.2
+	url = https://github.com/microsoft/TRELLIS.2.git
+[submodule "Hunyuan3D-2.1"]
+	path = Hunyuan3D-2.1
+	url = https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1.git
+[submodule "Orient-Anything-V2"]
+	path = Orient-Anything-V2
+	url = https://github.com/SpatialVision/Orient-Anything-V2.git
