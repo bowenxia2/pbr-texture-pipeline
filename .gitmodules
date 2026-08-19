@@ -1,6 +1,6 @@
 [submodule "TRELLIS.2"]
 	path = TRELLIS.2
-	url = https://github.com/bxia2/TRELLIS.2.git
+	url = https://github.com/bowenxia2/TRELLIS.2.git
 [submodule "Orient-Anything-V2"]
 	path = Orient-Anything-V2
 	url = https://github.com/SpatialVision/Orient-Anything-V2.git
