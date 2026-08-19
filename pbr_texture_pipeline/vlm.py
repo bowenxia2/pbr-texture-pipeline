@@ -37,9 +37,11 @@ _THINK_RE = re.compile(r"<think>.*?</think>", re.DOTALL)
 _MAX_FORCE_ATTEMPTS = 3
 
 # Fixed prompt discipline (PRD section 4, behavior 3): every ref_prompt ends with this.
-BOILERPLATE = "single object, centered, plain white background, soft even studio lighting"
+BOILERPLATE = "single object, centered, plain neutral gray background, soft even studio lighting"
 DEFAULT_NEGATIVE = ("cartoon, painting, illustration, text, watermark, cluttered background, "
-                    "harsh shadows, strong reflections, people, multiple objects")
+                    "harsh shadows, strong reflections, people, multiple objects, "
+                    "extra items, accessories, props, loose parts, surrounding objects, "
+                    "contents, decorations not part of the object")
 
 CAPTION_MAX_TOKENS = int(_CFG.get("vlm.caption_max_new_tokens", 512))
 SPEC_MAX_TOKENS = int(_CFG.get("vlm.spec_max_new_tokens", 1024))
@@ -202,7 +204,6 @@ def _coerce_spec(raw: dict, category_hint: str = "object") -> dict:
     if spec["category_confidence"] not in ("high", "medium", "low"):
         spec["category_confidence"] = "medium"
     spec["front_view_index"] = max(0, min(7, spec["front_view_index"]))
-    # Enforce prompt discipline: ref_prompt must end with the boilerplate.
     if spec["ref_prompt"] and BOILERPLATE not in spec["ref_prompt"]:
         spec["ref_prompt"] = spec["ref_prompt"].rstrip(" .,;") + ", " + BOILERPLATE
     return spec
@@ -274,7 +275,7 @@ def caption_turn(contact_sheet_path: str, metadata_note: str = "") -> str:
     return _generate(messages, max_new_tokens=CAPTION_MAX_TOKENS)
 
 
-# --- spec-turn system prompt: three enforced behaviors --------------------------
+# --- spec-turn system prompt: four enforced behaviors --------------------------
 def system_prompt() -> str:
     example = {
         "category": "chair",
@@ -304,7 +305,13 @@ def system_prompt() -> str:
         "3. PROMPT DISCIPLINE: the ref_prompt you emit MUST be a detailed description of a "
         "plausible textured appearance - name a concrete material and finish for every "
         "distinct region of the object - and it MUST end with this exact boilerplate so "
-        "downstream background removal and PBR decomposition work: \"" + BOILERPLATE + "\".\n\n"
+        "downstream background removal and PBR decomposition work: \"" + BOILERPLATE + "\".\n"
+        "4. OBJECT ONLY: the ref_prompt describes ONLY the surface texture of the object's "
+        "existing geometry - its materials, colors, and finishes. Do NOT add items, props, "
+        "accessories, contents, or decorations that are not part of the mesh (e.g. no coffee "
+        "beans on a coffee machine, no food in an oven, no clothes in a washing machine, no "
+        "books on a shelf). The image will be used as a texturing reference, not a lifestyle "
+        "scene. Include the negative_prompt terms that suppress such additions.\n\n"
         "When you have a final appearance, emit a single block exactly like this (valid JSON "
         "between the tags):\n"
         "[SPEC]\n" + json.dumps(example, indent=2) + "\n[/SPEC]\n"
@@ -325,7 +332,7 @@ def save_caption(jobdir, caption: str, model_id: str = DEFAULT_MODEL_ID) -> None
     jobdir.write_json(jobdir.caption(), {"caption": caption, "model": model_id})
 
 
-# --- articulated context (WS3): appearance sheet + articulation summary ---------
+# --- articulated context (WS3): articulation summary + metadata -----------------
 def normalize_category(raw: str) -> str:
     """Normalize a dataset category for prompt injection and comparison: split CamelCase
     ("StorageFurniture" -> "storage furniture"), lowercase, preserve all-caps tokens ("USB").
@@ -369,7 +376,7 @@ def articulation_summary(job) -> str:
 def metadata_note(asset: dict) -> str:
     """The authoritative asset-metadata paragraph given to both Stage V turns of a urdf job:
     normalized dataset category plus the union of semantics.txt labels and group labels.
-    Empty when the asset has no metadata category (behavior then matches a flat mesh)."""
+    Empty when the asset has no metadata category."""
     cat = normalize_category(asset.get("category") or "")
     if not cat:
         return ""
@@ -384,17 +391,10 @@ def metadata_note(asset: dict) -> str:
 
 def articulated_context(job) -> dict:
     """The articulated Stage V context for a job, shared by run_auto and the worker's open
-    op: appearance sheet path, articulation summary, keep_appearance, the authoritative
-    metadata note, and the normalized metadata category. All empty/None for non-urdf jobs."""
-    ctx = {"appearance_sheet": None, "articulation_note": "", "keep_appearance": False,
-           "metadata_note": "", "category": None}
-    if job.state.get("kind") != "urdf":
-        return ctx
-    if job.appearance_sheet().is_file():
-        ctx["appearance_sheet"] = str(job.appearance_sheet())
+    op: articulation summary, the authoritative metadata note, and the normalized metadata
+    category."""
+    ctx = {"articulation_note": "", "metadata_note": "", "category": None}
     ctx["articulation_note"] = articulation_summary(job)
-    ctx["keep_appearance"] = bool(job.state.get("params", {}).get(
-        "keep_appearance", _CFG.get("articulated.keep_appearance", False)))
     asset = job.state.get("asset") or {}
     if asset.get("category"):
         ctx["category"] = normalize_category(asset["category"])
@@ -424,16 +424,14 @@ def apply_category_metadata(spec: dict, category: str) -> tuple[dict, bool]:
 
 # --- chat drivers ----------------------------------------------------------------
 def opening_turn(contact_sheet_path: str, material_hint: str = "",
-                 appearance_sheet: Optional[str] = None, articulation_note: str = "",
-                 keep_appearance: bool = False, metadata_note: str = "") \
+                 articulation_note: str = "",
+                 metadata_note: str = "") \
         -> tuple[list[dict], str, Optional[dict], str]:
     """Automated opening: caption the mesh, then propose a spec from views + caption.
 
-    Articulated jobs (WS3) may add `appearance_sheet` (a second image showing the existing
-    MTL/texture appearance), an `articulation_note` paragraph, `keep_appearance` (steer
-    the spec toward the observed colors/materials), and `metadata_note` (the authoritative
-    dataset-metadata paragraph, given to both the caption turn and the spec turn). The
-    [SPEC] flow itself is unchanged.
+    Articulated jobs (WS3) may add an `articulation_note` paragraph and `metadata_note`
+    (the authoritative dataset-metadata paragraph, given to both the caption turn and the
+    spec turn). The [SPEC] flow itself is unchanged.
 
     Returns (messages, assistant_reply, spec_or_none, caption). `messages` is the spec
     conversation (the caption is embedded in its opening user turn, so the transcript is
@@ -449,21 +447,9 @@ def opening_turn(contact_sheet_path: str, material_hint: str = "",
     if articulation_note:
         text += articulation_note + "\n\n"
     text += "Caption of this object (from the same renders):\n" + caption + "\n\n"
-    if appearance_sheet:
-        text += ("The second image shows the SAME views rendered with the object's existing "
-                 "colors and textures (its current appearance). ")
-        if keep_appearance:
-            text += ("Match the observed colors and materials closely in your spec; refine "
-                     "them into a realistic appearance rather than inventing a new one. ")
-        else:
-            text += ("Treat the observed colors and materials as soft guidance you may "
-                     "improve upon. ")
-        text += "\n\n"
     text += ("Propose a detailed, plausible appearance spec now. "
              "Emit the [SPEC]...[/SPEC] block." + hint)
     content: list[dict] = [{"type": "image", "image": contact_sheet_path}]
-    if appearance_sheet:
-        content.append({"type": "image", "image": appearance_sheet})
     content.append({"type": "text", "text": text})
     messages = [
         {"role": "system", "content": system_prompt()},
@@ -497,8 +483,8 @@ def run_auto(jobdir, contact_sheet_path: str, category_hint: str = "object",
              material_hint: str = "") -> dict:
     """Automated Stage V: caption -> spec -> force-finalize retry -> template fallback.
 
-    urdf jobs automatically gain the appearance sheet + articulation summary (WS3) and,
-    when the asset has a metadata category, the authoritative metadata note: the emitted
+    urdf jobs automatically gain the articulation summary (WS3) and, when the asset has a
+    metadata category, the authoritative metadata note: the emitted
     spec's category is force-set to the metadata category (one corrective retry when the
     VLM disagreed and its ref_prompt does not mention the category), with the VLM's answer
     kept as spec["vlm_category"] on mismatch.
@@ -510,8 +496,8 @@ def run_auto(jobdir, contact_sheet_path: str, category_hint: str = "object",
     if meta_cat:
         category_hint = meta_cat
     messages, _reply, spec, caption = opening_turn(
-        contact_sheet_path, material_hint, appearance_sheet=ctx["appearance_sheet"],
-        articulation_note=ctx["articulation_note"], keep_appearance=ctx["keep_appearance"],
+        contact_sheet_path, material_hint,
+        articulation_note=ctx["articulation_note"],
         metadata_note=ctx["metadata_note"])
     save_caption(jobdir, caption)
     fallback = False
@@ -671,13 +657,6 @@ def extract_plan(text: str) -> Optional[dict]:
     return raw if isinstance(raw, dict) else None
 
 
-def _hex(rgb) -> str:
-    try:
-        return "#{:02x}{:02x}{:02x}".format(*[int(c) for c in rgb[:3]])
-    except (TypeError, ValueError):
-        return "-"
-
-
 def groups_table(asset_state: dict) -> str:
     """Compressed group listing: one row per semantic label (count, links, summed area share,
     dominant colors, <=3 example group ids) plus individual rows for the largest groups.
@@ -687,16 +666,14 @@ def groups_table(asset_state: dict) -> str:
     for g in groups:
         by_label.setdefault(g["label"], []).append(g)
 
-    lines = ["LABEL | N GROUPS | LINKS | AREA% | MOTION | DOMINANT COLORS | EXAMPLE GROUP IDS"]
+    lines = ["LABEL | N GROUPS | LINKS | AREA% | MOTION | EXAMPLE GROUP IDS"]
     for label, gs in sorted(by_label.items(), key=lambda kv: -sum(g["area_frac"] for g in kv[1])):
         area = sum(g["area_frac"] for g in gs) * 100
         links = sorted({g["link"] for g in gs})
         motions = sorted({g.get("motion", "static") for g in gs})
-        colors = sorted({_hex(g["dominant_color"]) for g in gs if g.get("dominant_color")})
         examples = [g["group_id"] for g in gs[:3]]
         lines.append(f"{label} | {len(gs)} | {len(links)} links | {area:.1f}% | "
-                     f"{'/'.join(motions)} | {', '.join(colors) or '-'} | "
-                     f"{', '.join(examples)}")
+                     f"{'/'.join(motions)} | {', '.join(examples)}")
 
     largest = sorted(groups, key=lambda g: -g["area_frac"])[:_TABLE_TOP_N]
     lines.append("")
@@ -710,18 +687,9 @@ def groups_table(asset_state: dict) -> str:
 def plan_system_prompt() -> str:
     example = {
         "materials": {
-            "oak_wood": {"swatch_prompt": "seamless tileable light oak wood grain surface "
-                                          "texture, photorealistic material sample, flat "
-                                          "top-down view, even soft studio lighting, no "
-                                          "objects, no shadows, uniform, high detail, 4k "
-                                          "material swatch",
+            "oak_wood": {"description": "light oak wood grain",
                          "base_color": [196, 160, 110], "metallic": 0.0, "roughness": 0.7},
-            "brushed_steel": {"swatch_prompt": "seamless tileable brushed stainless steel "
-                                               "metal surface texture, photorealistic "
-                                               "material sample, flat top-down view, even "
-                                               "soft studio lighting, no objects, no "
-                                               "shadows, uniform, high detail, 4k material "
-                                               "swatch",
+            "brushed_steel": {"description": "brushed stainless steel metal",
                               "base_color": [150, 152, 155], "metallic": 1.0,
                               "roughness": 0.4},
         },
@@ -730,19 +698,16 @@ def plan_system_prompt() -> str:
     }
     return (
         "You are a material planner for per-part 3D texturing of an articulated object. You "
-        "will see: (1) a 2x4 clay contact sheet of the whole assembled object, (2) optionally "
-        "a matching sheet rendered with the object's EXISTING colors/textures, and (3) a "
+        "will see: (1) a 2x4 clay contact sheet of the whole assembled object and (2) a "
         "generated reference photo of a plausible final appearance. You also get a table of "
         "the object's semantic part groups.\n\n"
         "Design ONE coherent material scheme for the whole object, then assign a material to "
         "every semantic LABEL in the table (per-label, not per-group; use \"overrides\" only "
         "when a specific group_id must differ from its label's material). Reuse the same "
-        "material key for parts that should match (shared keys share one texture swatch, "
-        "which keeps the object visually consistent).\n\n"
-        "Every material entry needs: swatch_prompt (a flat, seamless, object-free material "
-        "swatch prompt in the exact style of the example), base_color (RGB 0-255), metallic "
-        "(0-1), roughness (0-1). Propose only materials this object category is actually "
-        "manufactured from.\n\n"
+        "material key for parts that should match to keep the object visually consistent.\n\n"
+        "Every material entry needs: description (short material description), base_color "
+        "(RGB 0-255), metallic (0-1), roughness (0-1). Propose only materials this object "
+        "category is actually manufactured from.\n\n"
         "When you are done, emit a single block exactly like this (valid JSON between the "
         "tags):\n"
         "[PLAN]\n" + json.dumps(example, indent=2) + "\n[/PLAN]\n"
@@ -754,8 +719,8 @@ def plan_system_prompt() -> str:
 def coerce_plan(raw: dict, asset_state: dict, category: str) -> dict:
     """Resolve every group via assign -> overrides -> catalog fallback; normalize materials.
 
-    Bare material strings become full swatch prompts; missing/unknown labels fall back to
-    catalog.options_for(category, label)[0] and are flagged per group.
+    Missing/unknown labels fall back to catalog.options_for(category, label)[0] and are
+    flagged per group.
     """
     from pbr_texture_pipeline.articulated import catalog
 
@@ -777,13 +742,10 @@ def coerce_plan(raw: dict, asset_state: dict, category: str) -> dict:
     for share_key in sorted({v["share_key"] for v in groups_res.values()}):
         mat = materials_raw.get(share_key)
         if isinstance(mat, str):
-            mat = {"swatch_prompt": mat}
+            mat = {}
         if not isinstance(mat, dict):
             mat = {}
-        prompt = mat.get("swatch_prompt")
-        if not isinstance(prompt, str) or not prompt.strip():
-            prompt = share_key
-        prompt = catalog.swatch_prompt(prompt.strip())
+        description = catalog.material_phrase(share_key)
         base, metallic, rough = catalog.pbr_hint(share_key)
         try:
             base_color = [int(c) for c in (mat.get("base_color") or base)][:3]
@@ -795,7 +757,7 @@ def coerce_plan(raw: dict, asset_state: dict, category: str) -> dict:
             except (TypeError, ValueError):
                 return dflt
         materials[share_key] = {
-            "swatch_prompt": prompt,
+            "description": description,
             "base_color": base_color,
             "metallic": _num(mat.get("metallic"), metallic),
             "roughness": _num(mat.get("roughness"), rough),
@@ -817,7 +779,7 @@ def catalog_fallback_plan(asset_state: dict, category: str) -> dict:
 def run_plan(job, max_new_tokens: int = PLAN_MAX_TOKENS) -> dict:
     """Stage P: one plan call + one force-finalize retry + catalog fallback.
 
-    Images: clay contact sheet + appearance sheet (when present) + ref/chosen.png = <= 3.
+    Images: clay contact sheet + ref/chosen.png (when present).
     Writes vlm/plan.json (+ vlm/plan_transcript.json) and returns {"plan", "fallback"}.
     """
     if _llm is None:
@@ -830,19 +792,10 @@ def run_plan(job, max_new_tokens: int = PLAN_MAX_TOKENS) -> dict:
 
     content: list[dict] = [{"type": "image", "image": str(job.contact_sheet())}]
     img_desc = ["Image 1: clay contact sheet (2x4, whole object at rest pose)."]
-    if job.appearance_sheet().is_file():
-        content.append({"type": "image", "image": str(job.appearance_sheet())})
-        img_desc.append("Image 2: the same views with the object's EXISTING colors/textures "
-                        "(soft guidance).")
     if job.chosen().is_file():
         content.append({"type": "image", "image": str(job.chosen())})
         img_desc.append(f"Image {len(content)}: generated whole-object reference photo "
                         "(anchor the overall look to it).")
-
-    keep = bool(job.state.get("params", {}).get(
-        "keep_appearance", _CFG.get("articulated.keep_appearance", False)))
-    keep_note = ("Match the observed existing colors/materials closely per part.\n"
-                 if keep and job.appearance_sheet().is_file() else "")
     from pbr_texture_pipeline.articulated import catalog
 
     table = groups_table(asset_state)
@@ -853,7 +806,6 @@ def run_plan(job, max_new_tokens: int = PLAN_MAX_TOKENS) -> dict:
                             for label, opts in sorted(options.items()))
     content.append({"type": "text", "text":
                     "\n".join(img_desc) + f"\n\nObject category: {category}.\n"
-                    + keep_note
                     + "\nPART GROUPS:\n" + table
                     + "\n\nSensible catalog options per label (you may also propose other "
                       "plausible materials):\n" + options_txt
@@ -883,7 +835,7 @@ def run_plan(job, max_new_tokens: int = PLAN_MAX_TOKENS) -> dict:
     return {"plan": plan, "fallback": fallback}
 
 
-# --- targeted-retexture confirmation (PRD_articulated_v2 section 7) -----------
+# --- targeted-retexture confirmation (PRD.md section 7.7) --------------------
 REFINE_MAX_TOKENS = 512
 _GRADE_RE = re.compile(r"\[GRADE\]\s*(.+?)\s*\[/GRADE\]", re.DOTALL)
 _GRADES = ("good", "blurry", "wrong_material", "missing_texture")

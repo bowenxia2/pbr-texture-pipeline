@@ -1,15 +1,15 @@
-"""Batch CLI: many meshes, unattended, stage-major (PRD section 8).
+"""Batch CLI: many assets, unattended, stage-major (PRD section 8).
 
-    conda run -n trellis2 python -m pbr_texture_pipeline.batch \
-      --meshes 'partnet_mobility/**/*.obj' --jobs-root jobs/ \
-      --backends trellis2,hunyuan --stages render,vlm,diffuse,texture,eval \
-      --candidates 4 --seed 42 --material-hint "clean, factory-new" \
+    conda run -n trellis2 python -m pbr_texture_pipeline.batch \\
+      --assets 'partnet_mobility/*/mobility.urdf' --jobs-root jobs/ \\
+      --stages render,vlm,diffuse,plan,texture,eval,judge \\
+      --candidates 4 --seed 42 --material-hint "clean, factory-new" \\
       --select iou+clip --gpu-mode dual --limit 100 --resume
 
-Execution is stage-major for model-load efficiency (mirrors the pbr_compare sweeps): the VLM
-loads once for all meshes, Qwen-Image loads once for all, and each backend loads once over all
-its approved pairs via `--pairs-file`. Between GPU stages the previous model family is unloaded
-so Stage T (texturing subprocess) has VRAM even on a single GPU (PRD section 7 stage-exclusion).
+Execution is stage-major for model-load efficiency: the VLM loads once for all assets,
+Qwen-Image loads once for all, and the backend loads once over all its approved pairs via
+`--pairs-file`. Between GPU stages the previous model family is unloaded so Stage T (texturing
+subprocess) has VRAM even on a single GPU (PRD section 7 stage-exclusion).
 
 Heavy imports (torch, the renderer, Qwen-Image) are deferred into each stage so `--help` and
 argument parsing never touch CUDA.
@@ -31,7 +31,7 @@ from typing import Optional
 os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
 
 from pbr_texture_pipeline.config import load_config
-from pbr_texture_pipeline.jobdir import JobDir, make_urdf_job_id, resolve_stages
+from pbr_texture_pipeline.jobdir import JobDir, make_job_id, resolve_stages
 
 _CFG = load_config()
 
@@ -39,12 +39,13 @@ _CFG = load_config()
 # --- CLI ---------------------------------------------------------------------
 def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser("pbr_texture_pipeline.batch", description="Unattended batch texturing.")
-    ap.add_argument("--meshes", required=True,
-                    help="glob of input meshes (.glb/.obj/...) and/or mobility.urdf files, "
-                         "e.g. 'partnet_mobility/*/mobility.urdf'")
+    ap.add_argument("--assets", "--meshes", required=True, dest="assets",
+                    help="glob of URDF files (mobility.urdf or model.urdf), "
+                         "e.g. 'partnet_mobility/*/mobility.urdf' or "
+                         "'articraft_extracted/*/model.urdf'")
     ap.add_argument("--jobs-root", default="jobs")
     ap.add_argument("--backends", default="trellis2",
-                    help="comma list: trellis2,hunyuan")
+                    help="comma list: trellis2")
     ap.add_argument("--stages", default="render,vlm,diffuse,plan,texture,eval,judge",
                     help="comma list / aliases R,V,D,P,T,E,J")
     ap.add_argument("--candidates", type=int, default=int(_CFG.get("diffusion.candidates", 4)))
@@ -62,11 +63,8 @@ def build_parser() -> argparse.ArgumentParser:
                     help="do NOT texture jobs whose Stage D was flagged needs_review")
     ap.add_argument("--spec-cache-by-category", action="store_true",
                     help="(deferred, PRD open question 10) reuse one spec per category")
-    ap.add_argument("--diffusion-kind", default="depth", choices=["depth", "depth+canny"])
-    # Articulated (urdf) options (PRD.md, articulated extension).
-    ap.add_argument("--keep-appearance", action="store_true",
-                    default=bool(_CFG.get("articulated.keep_appearance", False)),
-                    help="steer the VLM to match the asset's existing colors/materials")
+    ap.add_argument("--canny-scale", type=float, default=None,
+                    help="canny ControlNet scale (default from config.yaml)")
     ap.add_argument("--group-by", default=str(_CFG.get("articulated.group_by", "semantic")),
                     choices=["semantic", "link"],
                     help="texture-group granularity for urdf assets")
@@ -87,11 +85,7 @@ def expand_meshes(pattern: str, limit: Optional[int]) -> list[str]:
 # --- job resolution (--resume) ----------------------------------------------
 def find_or_create_job(jobs_root: str, mesh_path: str, resume: bool,
                        params: dict) -> JobDir:
-    """On --resume, reuse the most recent existing job for this mesh; else create fresh.
-
-    A .urdf path creates an articulated (kind="urdf") job with an asset-id-based job id
-    (every asset's file is `mobility.urdf`, so stem-based ids would collide).
-    """
+    """On --resume, reuse the most recent existing job for this asset; else create fresh."""
     if resume:
         target = str(Path(mesh_path).resolve())
         matches = [j for j in JobDir.load_all(jobs_root)
@@ -100,45 +94,41 @@ def find_or_create_job(jobs_root: str, mesh_path: str, resume: bool,
             job = max(matches, key=lambda j: j.state.get("created", ""))
             print(f"[batch] resume: reusing {job.job_id}")
             return job
-    if Path(mesh_path).suffix.lower() == ".urdf":
-        category = ""
-        meta = Path(mesh_path).resolve().parent / "meta.json"
-        if meta.is_file():
-            try:
-                category = json.loads(meta.read_text()).get("model_cat") or ""
-            except (OSError, json.JSONDecodeError):
-                category = ""
-        return JobDir.create(jobs_root, mesh_path, params=params, kind="urdf",
-                             job_id=make_urdf_job_id(mesh_path, category))
-    return JobDir.create(jobs_root, mesh_path, params=params)
+    category = ""
+    asset_dir = Path(mesh_path).resolve().parent
+    meta = asset_dir / "meta.json"
+    if meta.is_file():
+        try:
+            category = json.loads(meta.read_text()).get("model_cat") or ""
+        except (OSError, json.JSONDecodeError):
+            category = ""
+    if not category:
+        import xml.etree.ElementTree as ET
+        try:
+            robot_name = ET.parse(str(mesh_path)).getroot().get("name")
+            if robot_name:
+                category = robot_name.replace("_", " ").strip()
+        except Exception:  # noqa: BLE001
+            pass
+    return JobDir.create(jobs_root, mesh_path, params=params,
+                         job_id=make_job_id(mesh_path, category))
 
 
 # --- Stage R -----------------------------------------------------------------
 def stage_render(jobs: list[JobDir]) -> None:
-    from pbr_texture_pipeline import rendering as R
+    from pbr_texture_pipeline.articulated import stages as AS
     for job in jobs:
         if job.is_done("render"):
             print(f"[batch][R] skip (done) {job.job_id}")
             continue
         try:
             job.start("render")
-            if job.kind == "urdf":
-                from pbr_texture_pipeline.articulated import stages as AS
-                info = AS.render(job)
-                job.finish("render", params={"mask_coverage": info["mask_coverage"],
-                                             "n_groups": info["n_groups"],
-                                             "n_tiny": info["n_tiny"],
-                                             "has_appearance": info["has_appearance"]})
-                print(f"[batch][R] {job.job_id} coverage={info['mask_coverage']:.3f} "
-                      f"groups={info['n_groups']} (tiny {info['n_tiny']}) "
-                      f"appearance={info['has_appearance']}")
-                continue
-            norm = R.load_and_normalize(job.state["mesh_source"], job)
-            mesh_repr = R.to_mesh_repr(norm)
-            R.render_contact_sheet(job, mesh_repr)
-            info = R.render_control_maps(job, mesh_repr)
-            job.finish("render", params={"mask_coverage": info["mask_coverage"]})
-            print(f"[batch][R] {job.job_id} coverage={info['mask_coverage']:.3f}")
+            info = AS.render(job)
+            job.finish("render", params={"mask_coverage": info["mask_coverage"],
+                                         "n_groups": info["n_groups"],
+                                         "n_tiny": info["n_tiny"]})
+            print(f"[batch][R] {job.job_id} coverage={info['mask_coverage']:.3f} "
+                  f"groups={info['n_groups']} (tiny {info['n_tiny']})")
         except Exception as e:  # noqa: BLE001
             job.fail("render", traceback.format_exc())
             print(f"[batch][R] FAIL {job.job_id}: {e}")
@@ -186,7 +176,7 @@ def stage_vlm(jobs: list[JobDir], material_hint: str, spec_cache_by_category: bo
 
 # --- Stage D -----------------------------------------------------------------
 def stage_diffuse(jobs: list[JobDir], n: int, seed: int, select: str,
-                  kind: str, strict: bool) -> None:
+                  canny_scale, strict: bool) -> None:
     from pbr_texture_pipeline import diffusion as D
     todo = [j for j in jobs if not j.is_done("diffuse") and j.is_done("vlm")]
     if not todo:
@@ -199,15 +189,14 @@ def stage_diffuse(jobs: list[JobDir], n: int, seed: int, select: str,
                 job.start("diffuse", seed=seed)
                 # Free the previous job's RMBG/CLIP before the 20B forward (VRAM headroom).
                 D.unload_scoring_models()
-                D.generate_candidates(job, prompt, negative, base_seed=seed, n=n, kind=kind)
+                D.generate_candidates(job, prompt, negative, base_seed=seed, n=n,
+                                      canny_scale=canny_scale)
                 scores = D.score_candidates(job, prompt, n=n)
                 sel = D.select_batch(scores)
                 D.cutout(job, sel["index"])
-                # Articulated: a second generation from the open-pose depth with the
-                # selected candidate's seed, while the pipe is still resident.
-                if (job.kind == "urdf"
-                        and bool(_CFG.get("articulated.global.open_pose_pass", True))
-                        and job.path("control", "open", "depth.png").is_file()):
+                if (bool(_CFG.get("articulated.global.open_pose_pass", True))
+                        and job.path("control", "open", "depth.png").is_file()
+                        and job.path("control", "open", "canny.png").is_file()):
                     D.generate_open_reference(job, seed, sel["index"])
                 status = "needs_review" if sel["needs_review"] else "done"
                 job.finish("diffuse", status,
@@ -226,23 +215,13 @@ def stage_diffuse(jobs: list[JobDir], n: int, seed: int, select: str,
         D.unload_pipe()      # free Qwen-Image+ControlNet before Stage T subprocesses
 
 
-# --- Stage P (articulated material plan) -------------------------------------
+# --- Stage P (material plan) -------------------------------------------------
 def stage_plan(jobs: list[JobDir]) -> None:
-    """Per-part material plan for urdf jobs via the vlm worker (one load over all jobs).
-
-    Flat mesh jobs mark the stage done with {"skipped": true} so downstream gating and the
-    jobs browser stay uniform.
-    """
+    """Per-part material plan via the VLM worker (one load over all jobs)."""
     from pbr_texture_pipeline.backends import registry
     from pbr_texture_pipeline.workers.ipc import WorkerClient
 
-    for job in jobs:
-        if job.kind == "mesh" and not job.is_done("plan"):
-            job.start("plan")
-            job.finish("plan", params={"skipped": True})
-
-    todo = [j for j in jobs if j.kind == "urdf" and not j.is_done("plan")
-            and j.is_done("render")]
+    todo = [j for j in jobs if not j.is_done("plan") and j.is_done("render")]
     if not todo:
         return
     model_id = _CFG.model("vlm")
@@ -280,69 +259,8 @@ def _original_mesh(job: JobDir) -> str:
 
 
 def stage_texture(jobs: list[JobDir], backends: list[str], seed: int, strict: bool) -> None:
-    """Group by backend: load each backend once over all approved pairs (--pairs-file)."""
-    from pbr_texture_pipeline.backends import registry
-
-    urdf_jobs = [j for j in jobs if j.kind == "urdf"]
-    jobs = [j for j in jobs if j.kind == "mesh"]
-    if urdf_jobs:
-        stage_texture_urdf(urdf_jobs, backends, seed, strict)
-
-    # Approved = Stage D produced a cutout. needs_review is textured too unless --strict.
-    approved = []
-    for j in jobs:
-        st = j.status("diffuse")
-        if st == "done" or (st == "needs_review" and not strict):
-            if j.chosen_rgba().is_file():
-                approved.append(j)
-    if not approved:
-        if not urdf_jobs:
-            print("[batch][T] no approved jobs")
-        return
-
-    for backend in backends:
-        pairs = []
-        job_by_outdir = {}
-        for job in approved:
-            if job.output_glb(backend) is not None and job.is_done("texture"):
-                continue  # already textured this backend (resume)
-            out_dir = str(job.textured_dir(backend))
-            pairs.append({
-                "mesh": _original_mesh(job), "image": str(job.chosen_rgba()),
-                "out_dir": out_dir, "seed": seed, "camera_json": str(job.camera_json()),
-            })
-            job_by_outdir[out_dir] = job
-        if not pairs:
-            continue
-
-        pairs_path = approved[0].root.parent / f"_pairs_{backend}.json"
-        with open(pairs_path, "w") as f:
-            json.dump(pairs, f, indent=2)
-
-        print(f"[batch][T] {backend}: {len(pairs)} pairs")
-        for job in job_by_outdir.values():
-            job.start("texture", seed=seed)
-        res = registry.texture_pairs(backend, str(pairs_path))
-
-        # Map each emitted result back to a job by its out_dir / glb path.
-        done_dirs = set()
-        for r in res.get("results", []):
-            glb = r.get("glb_path") or ""
-            for out_dir, job in job_by_outdir.items():
-                if glb.startswith(out_dir):
-                    ok = bool(r.get("ok") and Path(glb).exists())
-                    prev = job.stage("texture").get("params", {}).get("backends", {})
-                    prev[backend] = {"ok": ok, "glb_path": glb if ok else None}
-                    job.finish("texture", "done" if ok else "error",
-                               params={"backends": prev})
-                    done_dirs.add(out_dir)
-        # Jobs that emitted no result line for this backend -> mark error.
-        for out_dir, job in job_by_outdir.items():
-            if out_dir not in done_dirs:
-                prev = job.stage("texture").get("params", {}).get("backends", {})
-                prev[backend] = {"ok": False, "glb_path": None}
-                job.finish("texture", "error", params={"backends": prev})
-        pairs_path.unlink(missing_ok=True)
+    """One trellis2 global pair per job, per-group bakes inside the adapter."""
+    stage_texture_urdf(jobs, backends, seed, strict)
 
 
 def _grade_urdf_backend(job: JobDir, backend: str) -> None:
@@ -375,12 +293,9 @@ def _grade_urdf_backend(job: JobDir, backend: str) -> None:
 
 def stage_texture_urdf(jobs: list[JobDir], backends: list[str], seed: int,
                        strict: bool) -> None:
-    """Articulated Stage T: one trellis2_global pair per job (one field decode on the merged
-    mesh, per-group bakes inside the adapter, tiny groups included), then per-backend URDF +
-    assembled.glb. Resume is group-granular (the pair lists only missing group GLBs).
-
-    Hunyuan has no articulated path (its whole-object conditioning does not fit per-group
-    bakes); urdf jobs are trellis2-only and Stage J records a walkover.
+    """Stage T: one trellis2 global pair per job (one field decode on the merged mesh,
+    per-group bakes inside the adapter, tiny groups included), then URDF + assembled.glb.
+    Resume is group-granular (the pair lists only missing group GLBs).
     """
     from pbr_texture_pipeline.articulated import stages as AS
     from pbr_texture_pipeline.backends import registry
@@ -395,12 +310,7 @@ def stage_texture_urdf(jobs: list[JobDir], backends: list[str], seed: int,
             continue
         approved.append(j)
     if not approved:
-        print("[batch][T] no approved urdf jobs")
-        return
-
-    if "hunyuan" in backends:
-        print("[batch][T] hunyuan skipped for articulated jobs (no articulated path)")
-    if "trellis2" not in backends:
+        print("[batch][T] no approved jobs")
         return
 
     global_pairs = []
@@ -410,11 +320,11 @@ def stage_texture_urdf(jobs: list[JobDir], backends: list[str], seed: int,
         if pair is not None:
             global_pairs.append(pair)
     if global_pairs:
-        pairs_path = approved[0].root.parent / "_pairs_trellis2_global_urdf.json"
+        pairs_path = approved[0].root.parent / "_pairs_trellis2_urdf.json"
         with open(pairs_path, "w") as f:
             json.dump(global_pairs, f, indent=2)
-        print(f"[batch][T] trellis2_global: {len(global_pairs)} job pairs (urdf)")
-        registry.texture_pairs("trellis2_global", str(pairs_path))
+        print(f"[batch][T] trellis2: {len(global_pairs)} job pairs (urdf)")
+        registry.texture_pairs("trellis2", str(pairs_path))
         pairs_path.unlink(missing_ok=True)
     for job in approved:
         _grade_urdf_backend(job, "trellis2")
@@ -442,10 +352,10 @@ def stage_eval(jobs: list[JobDir], backends: list[str]) -> None:
         print(f"[batch][E] index -> {idx['html']} ({idx['n_rows']} rows)")
 
 
-# --- targeted retexturing (PRD_articulated_v2 section 7) ----------------------
+# --- targeted retexturing (PRD section 7) ------------------------------------
 def stage_refine(jobs: list[JobDir], backends: list[str], seed: int,
                  force: bool) -> None:
-    """Measure-then-repair pass between eval and judge for articulated jobs.
+    """Measure-then-repair pass between eval and judge.
 
     Candidate selection (heuristics over eval/diagnostics.json) and VLM confirmation always
     run, so the trigger rate is a tracked metric; the retexture execution itself runs only
@@ -463,8 +373,7 @@ def stage_refine(jobs: list[JobDir], backends: list[str], seed: int,
     backend = "trellis2"  # diagnostics (field voxels, blur, pass-B fractions) are trellis2's
     if backend not in backends:
         return
-    todo = [j for j in jobs if j.kind == "urdf"
-            and j.status("eval") in ("done", "needs_review")]
+    todo = [j for j in jobs if j.status("eval") in ("done", "needs_review")]
     if not todo:
         return
 
@@ -537,11 +446,11 @@ def stage_refine(jobs: list[JobDir], backends: list[str], seed: int,
         if pair is not None:
             global_pairs.append(pair)
     if global_pairs:
-        pairs_path = affected[0].root.parent / "_pairs_trellis2_global_refine.json"
+        pairs_path = affected[0].root.parent / "_pairs_trellis2_refine.json"
         with open(pairs_path, "w") as f:
             json.dump(global_pairs, f, indent=2)
-        print(f"[batch][F] trellis2_global: {len(global_pairs)} retexture pair(s)")
-        registry.texture_pairs("trellis2_global", str(pairs_path))
+        print(f"[batch][F] trellis2: {len(global_pairs)} retexture pair(s)")
+        registry.texture_pairs("trellis2", str(pairs_path))
         pairs_path.unlink(missing_ok=True)
     for job in affected:
         _grade_urdf_backend(job, backend)
@@ -637,18 +546,17 @@ def stage_judge(jobs: list[JobDir], backends: list[str]) -> None:
 def run(args: argparse.Namespace) -> int:
     stages = resolve_stages([s.strip() for s in args.stages.split(",") if s.strip()])
     backends = [b.strip() for b in args.backends.split(",") if b.strip()]
-    meshes = expand_meshes(args.meshes, args.limit)
-    if not meshes:
-        print(f"[batch] no meshes matched {args.meshes!r}")
+    assets = expand_meshes(args.assets, args.limit)
+    if not assets:
+        print(f"[batch] no assets matched {args.assets!r}")
         return 1
-    print(f"[batch] {len(meshes)} meshes | stages={stages} | backends={backends} "
+    print(f"[batch] {len(assets)} assets | stages={stages} | backends={backends} "
           f"| gpu_mode={args.gpu_mode}")
 
     job_params = {"batch": True, "backends": backends, "select": args.select,
                   "material_hint": args.material_hint, "gpu_mode": args.gpu_mode,
-                  "keep_appearance": bool(args.keep_appearance),
                   "group_by": args.group_by}
-    jobs = [find_or_create_job(args.jobs_root, m, args.resume, job_params) for m in meshes]
+    jobs = [find_or_create_job(args.jobs_root, m, args.resume, job_params) for m in assets]
 
     if "render" in stages:
         stage_render(jobs)
@@ -656,7 +564,7 @@ def run(args: argparse.Namespace) -> int:
         stage_vlm(jobs, args.material_hint, args.spec_cache_by_category)
     if "diffuse" in stages:
         stage_diffuse(jobs, args.candidates, args.seed, args.select,
-                      args.diffusion_kind, args.strict)
+                      args.canny_scale, args.strict)
     if "plan" in stages:
         stage_plan(jobs)
     if "texture" in stages:

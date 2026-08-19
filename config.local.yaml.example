@@ -7,9 +7,9 @@
 #
 # Common reasons to use this file:
 #   - Your conda envs/HF cache live on a large scratch disk instead of under the repo.
-#   - You already have the backend repos (TRELLIS.2, Hunyuan3D-2.1, Orient-Anything-V2)
-#     checked out elsewhere (e.g. with local patches/experiments) and want to point at
-#     those instead of the git submodules under this repo.
+#   - You already have the backend repos (TRELLIS.2, Orient-Anything-V2) checked out
+#     elsewhere (e.g. with local patches/experiments) and want to point at those instead
+#     of the git submodules under this repo.
 #   - `conda`/`mamba` isn't on $PATH or set as $CONDA_EXE.
 
 env:
@@ -19,5 +19,4 @@ env:
 
 repos:
   trellis2: /path/to/TRELLIS.2
-  hunyuan: /path/to/Hunyuan3D-2.1/hy3dpaint
   orient: /path/to/Orient-Anything-V2

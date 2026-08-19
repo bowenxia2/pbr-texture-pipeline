@@ -1,4 +1,4 @@
-"""Gate A10 (PRD_articulated_v2 section 12): per-group bake correctness.
+"""Gate A10 (PRD.md section 15): per-group bake correctness.
 
 On one articulated job whose global-mode Stage T has run (textured/trellis2/groups/*.glb +
 textured/trellis2/global/pass_a.json exist), this script:

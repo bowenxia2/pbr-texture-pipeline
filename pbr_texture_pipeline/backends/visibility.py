@@ -1,4 +1,4 @@
-"""Point visibility against saved multi-view depth buffers (PRD_articulated_v2).
+"""Point visibility against saved multi-view depth buffers (PRD.md section 7.6).
 
 One implementation serves both sides of global texture mode so they cannot diverge:
 Stage R computes per-group occlusion statistics from surface samples, and the global

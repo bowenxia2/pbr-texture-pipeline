@@ -70,12 +70,41 @@ def _sanitize(s: str) -> str:
     return re.sub(r"[^A-Za-z0-9._-]", "_", s)
 
 
+def _parse_primitive(geom_elem) -> Optional[dict]:
+    """Parse a URDF <geometry> element for box/cylinder/sphere primitives.
+    Returns None if the geometry is a <mesh> (handled separately)."""
+    box = geom_elem.find("box")
+    if box is not None:
+        return {"type": "box", "size": [float(v) for v in box.get("size").split()]}
+    cyl = geom_elem.find("cylinder")
+    if cyl is not None:
+        return {"type": "cylinder", "radius": float(cyl.get("radius")),
+                "length": float(cyl.get("length"))}
+    sph = geom_elem.find("sphere")
+    if sph is not None:
+        return {"type": "sphere", "radius": float(sph.get("radius"))}
+    return None
+
+
+def primitive_to_trimesh(prim: dict):
+    """Convert a primitive geometry dict to a trimesh object."""
+    import trimesh
+    if prim["type"] == "box":
+        return trimesh.creation.box(extents=prim["size"])
+    elif prim["type"] == "cylinder":
+        return trimesh.creation.cylinder(radius=prim["radius"], height=prim["length"])
+    elif prim["type"] == "sphere":
+        return trimesh.creation.icosphere(radius=prim["radius"])
+    raise ValueError(f"unknown primitive type {prim['type']!r}")
+
+
 # --- data model ---------------------------------------------------------------
 @dataclass
 class Visual:
-    obj: str                      # OBJ relpath from asset_dir (as written in the URDF)
+    obj: Optional[str]            # OBJ relpath from asset_dir (None for primitive geometry)
     origin: np.ndarray            # 4x4 link-frame transform
     name: Optional[str]           # <visual name="..."> attribute (None when absent)
+    primitive: Optional[dict] = None  # e.g. {"type": "box", "size": [x,y,z]}
 
 
 @dataclass
@@ -114,12 +143,21 @@ class Group:
     motion: str = "static"        # semantics.txt motion, or URDF-joint-type fallback
 
 
-def parse_asset(asset_dir: str | os.PathLike[str]) -> AssetInfo:
-    """Parse an asset directory. mobility.urdf is required; all other metadata optional."""
+def find_urdf(asset_dir: str | os.PathLike[str]) -> Path:
+    """Find the URDF file in an asset directory: mobility.urdf or model.urdf."""
     asset_dir = Path(asset_dir)
-    urdf_path = asset_dir / "mobility.urdf"
-    if not urdf_path.is_file():
-        raise FileNotFoundError(f"no mobility.urdf in {asset_dir}")
+    for name in ("mobility.urdf", "model.urdf"):
+        p = asset_dir / name
+        if p.is_file():
+            return p
+    raise FileNotFoundError(f"no mobility.urdf or model.urdf in {asset_dir}")
+
+
+def parse_asset(asset_dir: str | os.PathLike[str]) -> AssetInfo:
+    """Parse an asset directory. A URDF file (mobility.urdf or model.urdf) is required;
+    all other metadata optional."""
+    asset_dir = Path(asset_dir)
+    urdf_path = find_urdf(asset_dir)
     root = ET.parse(urdf_path).getroot()
 
     links: dict[str, list[Visual]] = {}
@@ -128,15 +166,24 @@ def parse_asset(asset_dir: str | os.PathLike[str]) -> AssetInfo:
         name = link.get("name")
         visuals = []
         for vis in link.findall("visual"):
-            mesh_elem = vis.find("geometry/mesh")
-            if mesh_elem is None:
+            geom = vis.find("geometry")
+            if geom is None:
                 continue
+            mesh_elem = geom.find("mesh")
+            prim = None
+            obj_path = None
+            if mesh_elem is not None:
+                obj_path = mesh_elem.get("filename")
+            else:
+                prim = _parse_primitive(geom)
+                if prim is None:
+                    continue
             vname = vis.get("name")
             if not vname:
                 all_named = False
-            visuals.append(Visual(obj=mesh_elem.get("filename"),
+            visuals.append(Visual(obj=obj_path,
                                   origin=parse_origin(vis.find("origin")),
-                                  name=vname))
+                                  name=vname, primitive=prim))
         links[name] = visuals
 
     joints: dict[str, Joint] = {}
@@ -166,6 +213,10 @@ def parse_asset(asset_dir: str | os.PathLike[str]) -> AssetInfo:
             category = json.loads(meta_path.read_text()).get("model_cat")
         except (OSError, json.JSONDecodeError):
             category = None
+    if not category:
+        robot_name = root.get("name")
+        if robot_name:
+            category = robot_name.replace("_", " ").strip() or None
 
     semantics: dict[str, tuple[str, str]] = {}
     sem_path = asset_dir / "semantics.txt"
@@ -229,11 +280,12 @@ def _mtl_maps(mtl_path: Path) -> list[str]:
 
 
 def required_files(urdf_path: str | os.PathLike[str]) -> list[str]:
-    """Transitive reference closure of a mobility.urdf, as sorted relpaths from its directory.
+    """Transitive reference closure of a URDF, as sorted relpaths from its directory.
 
     URDF <visual>/<collision> mesh files, mtllib refs inside those OBJs, and map_* image refs
-    inside those MTLs. Relpaths are normalized (`textured_objs/../images/x.jpg` ->
-    `images/x.jpg`) so they can be checked against files on disk or an upload set.
+    inside those MTLs. Primitive geometries (box/cylinder/sphere) have no file refs and are
+    skipped. Relpaths are normalized (`textured_objs/../images/x.jpg` -> `images/x.jpg`) so
+    they can be checked against files on disk or an upload set.
     """
     urdf_path = Path(urdf_path)
     asset_dir = urdf_path.parent
@@ -291,7 +343,7 @@ def motion_transform(joint: Joint, q: float) -> np.ndarray:
 
 def opened_pose_q(joint: Joint, frac: float, asset: Optional[AssetInfo] = None) -> float:
     """Opened joint value: the clamped rest value lerped by `frac` toward the OPEN limit
-    (PRD_articulated_v2 section 5). Fixed joints and joints without limits (continuous)
+    (PRD.md section 7.6). Fixed joints and joints without limits (continuous)
     stay at rest; the value stays inside the limits for any frac in [0, 1].
 
     With `asset` given, the open limit is the geometric choice from open_target_q (the
@@ -331,8 +383,11 @@ def _link_bounds_corners(asset: AssetInfo) -> dict[str, np.ndarray]:
         hi = np.full(3, -np.inf)
         for vis in visuals:
             try:
-                m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh",
-                                 process=False, skip_materials=True)
+                if vis.primitive is not None:
+                    m = primitive_to_trimesh(vis.primitive)
+                else:
+                    m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh",
+                                     process=False, skip_materials=True)
             except Exception:  # noqa: BLE001
                 continue
             v = np.asarray(m.vertices, dtype=np.float64)
@@ -496,14 +551,18 @@ def build_groups(asset: AssetInfo, group_by: str = "semantic") -> list[Group]:
 
 # --- mesh merging + normalization ---------------------------------------------
 def merge_group_mesh(asset: AssetInfo, group: Group):
-    """Load a group's OBJs, bake per-visual origins, concatenate -> one Trimesh in the link
-    frame. Materials are discarded (we re-texture); TRELLIS re-unwraps UVs anyway."""
+    """Load a group's visuals (OBJ meshes or primitives), bake per-visual origins,
+    concatenate -> one Trimesh in the link frame. Materials are discarded (we re-texture);
+    TRELLIS re-unwraps UVs anyway."""
     import trimesh
 
     parts = []
     for vis in group.visuals:
-        m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh", process=False,
-                         skip_materials=True)
+        if vis.primitive is not None:
+            m = primitive_to_trimesh(vis.primitive)
+        else:
+            m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh", process=False,
+                             skip_materials=True)
         if m.vertices.shape[0] == 0:
             continue
         m = m.copy()
@@ -579,7 +638,7 @@ def assemble_scene(job, backend: str):
     scene = trimesh.Scene()
     for g in asset_state["groups"]:
         glb = job.textured_group_glb(backend, g["group_id"])
-        if not glb.is_file():
+        if not glb.is_file() or glb.stat().st_size == 0:
             continue
         loaded = trimesh.load(str(glb))
         sub = loaded if isinstance(loaded, trimesh.Scene) else trimesh.Scene(loaded)

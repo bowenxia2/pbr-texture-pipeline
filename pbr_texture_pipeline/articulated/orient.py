@@ -1,4 +1,4 @@
-"""Orient-Anything-V2 front detection for articulated Stage R (PRD_articulated_v2 section 6).
+"""Orient-Anything-V2 front detection for articulated Stage R (PRD.md section 7.5).
 
 Runs scripts/orient_infer.py as a short-lived subprocess in the orianyv2 conda env over the
 8 pre-repose contact-sheet panels, then picks the front panel from the per-panel azimuth

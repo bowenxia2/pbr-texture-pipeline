@@ -63,9 +63,30 @@ def parse_urdf(path: Path) -> dict:
         for vis_el in link_el.findall("visual"):
             xyz, rpy = _parse_origin(vis_el.find("origin"))
             geom = vis_el.find("geometry")
-            mesh_el = geom.find("mesh") if geom is not None else None
+            if geom is None:
+                continue
+            mesh_el = geom.find("mesh")
             if mesh_el is not None:
                 visuals.append({"mesh": mesh_el.get("filename", ""), "xyz": xyz, "rpy": rpy})
+                continue
+            box_el = geom.find("box")
+            if box_el is not None:
+                visuals.append({"primitive": "box",
+                                "size": [float(v) for v in box_el.get("size").split()],
+                                "xyz": xyz, "rpy": rpy})
+                continue
+            cyl_el = geom.find("cylinder")
+            if cyl_el is not None:
+                visuals.append({"primitive": "cylinder",
+                                "radius": float(cyl_el.get("radius")),
+                                "length": float(cyl_el.get("length")),
+                                "xyz": xyz, "rpy": rpy})
+                continue
+            sph_el = geom.find("sphere")
+            if sph_el is not None:
+                visuals.append({"primitive": "sphere",
+                                "radius": float(sph_el.get("radius")),
+                                "xyz": xyz, "rpy": rpy})
         links[link_el.get("name")] = {"visuals": visuals}
 
     joints: dict[str, dict] = {}
@@ -348,6 +369,28 @@ function loadOriginal() {
     const grp = OL[lname];
     if (!grp) continue;
     for (const vis of ld.original_visuals) {
+      if (vis.primitive) {
+        const mat = new THREE.MeshStandardMaterial({color: 0x888888, roughness: 0.7});
+        let geom;
+        if (vis.primitive === 'box') {
+          geom = new THREE.BoxGeometry(vis.size[0], vis.size[1], vis.size[2]);
+        } else if (vis.primitive === 'cylinder') {
+          geom = new THREE.CylinderGeometry(vis.radius, vis.radius, vis.length, 32);
+          geom.rotateX(Math.PI / 2);
+        } else if (vis.primitive === 'sphere') {
+          geom = new THREE.SphereGeometry(vis.radius, 32, 16);
+        }
+        if (geom) {
+          const mesh = new THREE.Mesh(geom, mat);
+          mesh.position.set(...vis.xyz);
+          mesh.setRotationFromEuler(
+            new THREE.Euler(vis.rpy[0], vis.rpy[1], vis.rpy[2], 'XYZ')
+          );
+          grp.add(mesh);
+        }
+        opend--; checkDone();
+        continue;
+      }
       const slash = vis.mesh.lastIndexOf('/');
       const dir   = slash >= 0 ? vis.mesh.substring(0, slash + 1) : '';
       const objUrl = ASSET + vis.mesh;

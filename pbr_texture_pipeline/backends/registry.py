@@ -1,8 +1,8 @@
-"""Backend registry + subprocess launcher (Stage T, PRD section 6).
+"""Backend registry + subprocess launcher (Stage T, PRD section 7).
 
-Maps a backend name -> {script, env, cwd}. All adapters run via subprocess in their own
+Maps a backend name -> {script, env, cwd}. Adapters run via subprocess in their own
 conda env with the correct cwd (never in the orchestrator process): free VRAM isolation,
-crash containment, and each backend's hard cwd requirement is honored.
+crash containment, and the backend's hard cwd requirement is honored.
 """
 from __future__ import annotations
 
@@ -48,18 +48,6 @@ BACKENDS: dict[str, dict] = {
         "script": str(_HERE / "trellis2_adapter.py"),
         "env": _CFG.backend_env("trellis2"),
         "cwd": str(_CFG.repo("trellis2")),
-    },
-    # Global texture mode for articulated jobs (PRD_articulated_v2): one field decode per
-    # job, per-group bakes. Same env/cwd as trellis2; its own adapter script.
-    "trellis2_global": {
-        "script": str(_HERE / "trellis2_global_adapter.py"),
-        "env": _CFG.backend_env("trellis2"),
-        "cwd": str(_CFG.repo("trellis2")),
-    },
-    "hunyuan": {
-        "script": str(_HERE / "hunyuan_adapter.py"),
-        "env": _CFG.backend_env("hunyuan"),
-        "cwd": str(_CFG.repo("hunyuan")),   # Hunyuan3D-2.1/hy3dpaint
     },
 }
 
@@ -134,14 +122,9 @@ def texture_pairs(backend: str, pairs_file: str, params: Optional[dict] = None,
 def _param_args(backend: str, params: dict) -> list[str]:
     """Translate per-backend params dict into adapter CLI flags."""
     args: list[str] = []
-    if backend in ("trellis2", "trellis2_global"):
+    if backend == "trellis2":
         args += ["--resolution", str(params.get("resolution", _CFG.get("texture.trellis2_resolution")))]
         args += ["--texture-size", str(params.get("texture_size", _CFG.get("texture.trellis2_texture_size")))]
-    elif backend == "hunyuan":
-        args += ["--max-num-view", str(params.get("max_num_view", _CFG.get("texture.hunyuan_max_num_view")))]
-        args += ["--resolution", str(params.get("resolution", _CFG.get("texture.hunyuan_resolution")))]
-        if params.get("no_remesh"):
-            args += ["--no-remesh"]
     return args
 
 
@@ -184,11 +167,6 @@ def _run(spec: dict, extra: list[str], extra_env: Optional[dict] = None,
     results = _parse_results(stdout)
     last = results[-1] if results else {}
     glb_path = last.get("glb_path")
-    # Success is judged by the emitted result + GLB on disk, NOT by process exit code.
-    # Hunyuan's custom_rasterizer segfaults at CUDA teardown (exit 139) AFTER it has written
-    # every output and emitted ok:True; a mid-run crash instead emits ok:False (then raises)
-    # or no result at all. Keying on (ok flag AND file exists) tolerates the benign teardown
-    # crash while still catching real failures.
     ok = bool(last.get("ok") and glb_path and Path(glb_path).exists())
     teardown_crash = ok and proc.returncode != 0
     return {"glb_path": glb_path if ok else None, "ok": ok,

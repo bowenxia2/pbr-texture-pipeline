@@ -1,4 +1,4 @@
-"""Existing-appearance rendering + per-group visibility for articulated assets (WS1/WS2).
+"""Per-group visibility + colored-mesh loading for articulated assets.
 
 PartNet-Mobility OBJs carry MTL materials (map_Kd textures or flat Kd colors) but often very
 few vertices (as few as 14), so per-vertex color sampling needs subdivision first:
@@ -122,112 +122,6 @@ def _concat_colored(geoms: list, max_edge: Optional[float]) \
         raise ValueError("no non-empty geometry")
     return (np.concatenate(all_v, axis=0), np.concatenate(all_f, axis=0),
             np.concatenate(all_c, axis=0))
-
-
-# --- asset-level appearance ---------------------------------------------------
-def _load_visual_with_materials(asset, vis):
-    """Load one URDF visual's OBJ with its MTL materials (may be a Scene for multi-material)."""
-    import trimesh
-
-    return trimesh.load(str(asset.asset_dir / vis.obj), process=False)
-
-
-def load_colored_asset_arrays(asset, groups, fk: dict) \
-        -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-    """Whole-asset existing appearance at rest pose: every visual with materials, per-visual
-    origin + link FK baked, colors sampled per vertex. Returns (vertices, faces, colors)."""
-    max_edge_frac = float(_CFG.get("articulated.appearance_max_edge_frac", 0.02))
-    pending = []  # (mesh, world_T)
-    for g in groups:
-        link_T = fk.get(g.link, np.eye(4))
-        for vis in g.visuals:
-            loaded = _load_visual_with_materials(asset, vis)
-            for tm, T in _iter_geoms(loaded):
-                pending.append((tm, link_T @ vis.origin @ T))
-
-    lo = np.full(3, np.inf)
-    hi = np.full(3, -np.inf)
-    for tm, T in pending:
-        v = np.asarray(tm.vertices, dtype=np.float64)
-        if len(v):
-            v = v @ T[:3, :3].T + T[:3, 3]
-            lo = np.minimum(lo, v.min(axis=0))
-            hi = np.maximum(hi, v.max(axis=0))
-    max_edge = float((hi - lo).max()) * max_edge_frac
-    return _concat_colored(pending, max_edge)
-
-
-def group_has_real_texture(asset, group) -> bool:
-    """True when any of the group's OBJs binds an image texture (map_Kd)."""
-    for vis in group.visuals:
-        try:
-            loaded = _load_visual_with_materials(asset, vis)
-        except Exception:  # noqa: BLE001
-            continue
-        for tm, _T in _iter_geoms(loaded):
-            mat = getattr(tm.visual, "material", None)
-            if mat is not None and getattr(mat, "image", None) is not None:
-                return True
-    return False
-
-
-def dominant_color(asset, group) -> list[int]:
-    """Area-agnostic mean RGB (0-255) of a group's existing appearance (textures + flat Kd)."""
-    samples = []
-    for vis in group.visuals:
-        try:
-            loaded = _load_visual_with_materials(asset, vis)
-        except Exception:  # noqa: BLE001
-            continue
-        for tm, _T in _iter_geoms(loaded):
-            if len(tm.vertices) == 0:
-                continue
-            _v, _f, c = _mesh_color_arrays(tm, None)
-            if len(c):
-                samples.append(c.mean(axis=0))
-    if not samples:
-        return [153, 153, 153]
-    mean = np.stack(samples).mean(axis=0)
-    return [int(round(float(x) * 255)) for x in mean]
-
-
-def is_chromatic(rgb: list[int]) -> bool:
-    """True when a flat color carries real appearance information (visibly non-gray).
-
-    Blank PartNet assets (e.g. 19179) use achromatic gray Kd values, which must NOT count as
-    existing appearance; painted assets (19898's brown wood) are clearly chromatic.
-    """
-    c = np.asarray(rgb, dtype=np.float32) / 255.0
-    return float(c.max() - c.min()) > 0.06
-
-
-def render_appearance_sheet(job, vertices: np.ndarray, faces: np.ndarray,
-                            colors: np.ndarray, resolution: int = 512, ssaa: int = 2,
-                            R_mat: Optional[np.ndarray] = None):
-    """Render the existing appearance from the 8 contact-sheet yaws -> views/appearance_sheet.png.
-
-    `vertices` are in the assembled world frame; they are re-normalized into the internal
-    frame (+ the Stage R front-panel repose `R_mat`, when given), so panels line up 1:1 with
-    the clay contact sheet.
-    """
-    from PIL import Image
-
-    from pbr_texture_pipeline import rendering as R
-
-    verts = R.to_internal_frame(vertices, up="z")  # URDF world frame is Z-up
-    if R_mat is not None:
-        verts = verts @ np.asarray(R_mat, dtype=np.float64).T
-    mesh = R.colored_mesh_repr(verts, faces, colors)
-    panels = []
-    for k in range(R.CONTACT_N):
-        out = R.render_appearance(mesh, R.contact_yaw(k), R.CONTACT_PITCH, resolution, ssaa)
-        rgb = out["rgb"].copy()
-        rgb[out["mask"] <= 0.5] = 0
-        panels.append(rgb)
-    rows = [np.concatenate(panels[r * 4:(r + 1) * 4], axis=1) for r in range(2)]
-    sheet = np.concatenate(rows, axis=0)
-    Image.fromarray(sheet, mode="RGB").save(job.appearance_sheet())
-    return job.appearance_sheet()
 
 
 # --- per-group visibility at the condition camera (crop-ref policy) -----------

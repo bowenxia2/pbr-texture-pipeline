@@ -49,7 +49,7 @@ def render_judge_sheet(job: JobDir, backend: str, camera: Optional[dict]) -> Opt
     from pbr_texture_pipeline import eval as E
     from pbr_texture_pipeline import rendering as R
 
-    mesh = E.load_output_colored(str(glb), camera, up="z" if job.kind == "urdf" else "y")
+    mesh = E.load_output_colored(str(glb), camera, up="z")
     yaws_deg = [float(d) for d in _CFG.get("judge.sheet_yaws_deg", [0, 90, 180, 270])]
     res = int(_CFG.get("judge.sheet_tile_res", 512))
     pitch = math.radians(float(_CFG.get("judge.sheet_pitch_deg", 15)))
@@ -57,19 +57,17 @@ def render_judge_sheet(job: JobDir, backend: str, camera: Optional[dict]) -> Opt
              for d in yaws_deg]
     grid = np.concatenate([np.concatenate(tiles[:2], axis=1),
                            np.concatenate(tiles[2:], axis=1)], axis=0)
-    # Articulated jobs get one extra row: the object with every movable joint fully open
-    # (front + three-quarter), so the VLM sees interiors and moving-part boundaries when
-    # picking a winner (PRD_articulated_v2, Stage J).
-    if job.kind == "urdf":
-        try:
-            open_mesh = E.articulated_state_mesh(job, backend, 1.0)
-        except Exception as e:  # noqa: BLE001
-            print(f"[judge] open-state row unavailable for {backend}: {e}")
-            open_mesh = None
-        if open_mesh is not None:
-            row = [R.render_appearance(open_mesh, R.CANONICAL_YAW + math.radians(d), pitch,
-                                       res, ssaa=2)["rgb"] for d in (0.0, 45.0)]
-            grid = np.concatenate([grid, np.concatenate(row, axis=1)], axis=0)
+    # Extra row: the object with every movable joint fully open (front + three-quarter),
+    # so the VLM sees interiors and moving-part boundaries when picking a winner.
+    try:
+        open_mesh = E.articulated_state_mesh(job, backend, 1.0)
+    except Exception as e:  # noqa: BLE001
+        print(f"[judge] open-state row unavailable for {backend}: {e}")
+        open_mesh = None
+    if open_mesh is not None:
+        row = [R.render_appearance(open_mesh, R.CANONICAL_YAW + math.radians(d), pitch,
+                                   res, ssaa=2)["rgb"] for d in (0.0, 45.0)]
+        grid = np.concatenate([grid, np.concatenate(row, axis=1)], axis=0)
     Image.fromarray(grid, mode="RGB").save(out)
     return out
 

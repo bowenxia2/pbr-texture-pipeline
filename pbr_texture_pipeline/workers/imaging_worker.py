@@ -10,7 +10,7 @@ Ops (args are plain JSON; every op operates on a job dir on disk):
   render        {job_root}                     -> Stage R: normalize + contact sheet + control maps
   rerender      {job_root, front_index, yaw_nudge, pitch_nudge}
                                                -> re-pose (front != 0) / nudge, re-render control maps
-  diffuse       {job_root, prompt, negative, base_seed, n, cn_scale, guidance, kind}
+  diffuse       {job_root, prompt, negative, base_seed, n, cn_scale, canny_scale, guidance}
                                                -> N candidates into ref/
   score         {job_root, prompt, n}          -> [{index, iou, clip}]
   cutout        {job_root, index}              -> chosen.png + chosen_rgba.png
@@ -25,26 +25,14 @@ from pbr_texture_pipeline.workers.ipc import serve
 
 
 def _render(args: dict) -> dict:
-    from pbr_texture_pipeline import rendering as R
+    from pbr_texture_pipeline.articulated import stages as AS
     job = JobDir.load(args["job_root"])
-    if job.kind == "urdf":
-        from pbr_texture_pipeline.articulated import stages as AS
-        info = AS.render(job)
-        return {"contact_sheet": str(job.contact_sheet()),
-                "mask_coverage": info["mask_coverage"],
-                "control": {n: str(job.control(n)) for n in ("depth", "normal", "canny", "mask")},
-                "camera_json": str(job.camera_json()),
-                "appearance_sheet": (str(job.appearance_sheet())
-                                     if job.appearance_sheet().is_file() else None),
-                "n_groups": info.get("n_groups"), "n_tiny": info.get("n_tiny")}
-    norm = R.load_and_normalize(job.state["mesh_source"], job)
-    mesh_repr = R.to_mesh_repr(norm)
-    R.render_contact_sheet(job, mesh_repr)
-    info = R.render_control_maps(job, mesh_repr)
+    info = AS.render(job)
     return {"contact_sheet": str(job.contact_sheet()),
             "mask_coverage": info["mask_coverage"],
             "control": {n: str(job.control(n)) for n in ("depth", "normal", "canny", "mask")},
-            "camera_json": str(job.camera_json())}
+            "camera_json": str(job.camera_json()),
+            "n_groups": info.get("n_groups"), "n_tiny": info.get("n_tiny")}
 
 
 def _rerender(args: dict) -> dict:
@@ -89,8 +77,8 @@ def _diffuse(args: dict) -> dict:
     sidecars = D.generate_candidates(
         job, args["prompt"], args.get("negative", ""),
         base_seed=int(args["base_seed"]), n=int(args.get("n", 4)),
-        cn_scale=args.get("cn_scale"), guidance=args.get("guidance"),
-        kind=args.get("kind", "depth"), use_union=bool(args.get("use_union", False)))
+        cn_scale=args.get("cn_scale"), canny_scale=args.get("canny_scale"),
+        guidance=args.get("guidance"))
     return {"candidates": [str(job.candidate(s["index"])) for s in sidecars],
             "sidecars": sidecars}
 
@@ -111,7 +99,7 @@ def _cutout(args: dict) -> dict:
 
 
 def _open_ref(args: dict) -> dict:
-    """Pass B reference (PRD_articulated_v2 Stage D addition): one Qwen-Image generation from
+    """Pass B reference (PRD.md section 5.6): one Qwen-Image generation from
     control/open/depth.png at the same seed/index the rest-pose selection chose, plus its
     RMBG cutout -> ref/chosen_rgba_open.png."""
     from pbr_texture_pipeline import diffusion as D

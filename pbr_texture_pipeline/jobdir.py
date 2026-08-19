@@ -1,27 +1,26 @@
-"""Per-mesh job directory and job.json state machine (PRD sections 2, 8).
+"""Per-job directory and job.json state machine (PRD sections 2, 8).
 
 Every stage reads and writes only its job directory. `job.json` records per-stage
 status/params/timestamps/seeds, which makes stages resumable and lets interactive
 (human approves) and batch (policy approves) modes share one code path.
 
 Layout (PRD section 2):
-    jobs/<job_id>/                 job_id = <mesh-stem>_<yyyymmdd-HHMMSS>
+    jobs/<job_id>/
       job.json
-      input/   original.<ext>  mesh_norm.glb
+      input/   original.<ext>  mesh_norm.glb  asset/ (rebuilt URDF tree)
+               face_ranges.json  mesh_norm_open.glb
+      groups/<gid>/  mesh.glb  norm.json
       views/   view_{00..07}.png  contact_sheet.png
-      control/ camera.json  depth.png normal.png canny.png mask.png
-      vlm/     transcript.json  spec.json  caption.json
+      control/ camera.json  camera_open.json  depth.png normal.png canny.png mask.png
+               open/  visibility_rest.npz
+      vlm/     transcript.json  spec.json  caption.json  plan.json
       ref/     candidate_{NN}.png(+.json)  chosen.png  chosen_rgba.png
-      textured/<backend>/...
+               chosen_rgba_open.png
+      textured/<backend>/{groups/<gid>.glb, global/pass_a.json, global/pass_b.json,
+               mobility_textured.urdf, assembled.glb}
       previews/<backend>_turntable.mp4  <backend>_condview.png  <backend>_judgesheet.png
-      eval/    metrics.json
+      eval/    metrics.json  states/  diagnostics.json
       judge/   verdict.json
-
-Articulated (kind "urdf") jobs add: input/asset/ (rebuilt URDF tree), input/face_ranges.json,
-input/mesh_norm_open.glb, groups/<gid>/, control/open/ + visibility_{rest,open}.npz,
-ref/chosen_rgba_open.png, vlm/plan.json, eval/states/ + diagnostics.json, and per backend
-textured/<backend>/{groups/<gid>.glb, global/pass_a.json, global/pass_b.json,
-mobility_textured.urdf, assembled.glb}; artifact semantics are in PRD_articulated_v2.md.
 """
 from __future__ import annotations
 
@@ -33,9 +32,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable, Optional
 
-# Pipeline stages (PRD section 2; "plan" added for articulated jobs:
-# the per-group material plan must see the chosen global reference, so it sits between diffuse
-# and texture; flat mesh jobs mark it done with {"skipped": true}).
+# Pipeline stages (PRD section 2). Stage P (plan) sits between diffuse and texture:
+# the per-group material plan must see the chosen global reference.
 STAGES = ("render", "vlm", "diffuse", "plan", "texture", "eval", "judge")
 STAGE_ALIASES = {"R": "render", "V": "vlm", "D": "diffuse", "P": "plan", "T": "texture",
                  "E": "eval", "J": "judge"}
@@ -48,23 +46,15 @@ ERROR = "error"
 NEEDS_REVIEW = "needs_review"
 STATUSES = (PENDING, RUNNING, DONE, ERROR, NEEDS_REVIEW)
 
-SCHEMA_VERSION = 2  # v2 (2026-07-21): top-level "kind" (mesh|urdf) + "asset" section + plan stage
+SCHEMA_VERSION = 3  # v3: kind removed; all jobs are articulated (URDF)
 
 
 def _now() -> str:
     return datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
 
 
-def make_job_id(mesh_path: str | os.PathLike[str]) -> str:
-    """job_id = <mesh-stem>_<yyyymmdd-HHMMSS> (PRD section 2)."""
-    stem = Path(mesh_path).stem
-    # Sanitize the stem so job_id is a safe single path segment.
-    stem = re.sub(r"[^A-Za-z0-9._-]", "_", stem) or "mesh"
-    return f"{stem}_{datetime.now().strftime('%Y%m%d-%H%M%S')}"
-
-
-def make_urdf_job_id(urdf_path: str | os.PathLike[str], category: str = "") -> str:
-    """Articulated job id: <asset_id>_<cat_slug>_urdf_<timestamp>.
+def make_job_id(urdf_path: str | os.PathLike[str], category: str = "") -> str:
+    """job_id = <asset_id>_<cat_slug>_urdf_<timestamp>.
 
     Every PartNet-Mobility asset's file is `mobility.urdf`, so a stem-based id would collide;
     the asset directory name (the numeric PartNet id) disambiguates instead.
@@ -89,16 +79,9 @@ class JobDir:
         jobs_root: str | os.PathLike[str],
         mesh_path: str | os.PathLike[str],
         params: dict[str, Any] | None = None,
-        kind: str = "mesh",
         job_id: Optional[str] = None,
     ) -> "JobDir":
-        """Create a fresh job dir + skeleton subtree + initial job.json.
-
-        `kind` is "mesh" (flat, default) or "urdf" (articulated). Articulated callers pass an
-        explicit `job_id` (make_urdf_job_id) because every asset's file is `mobility.urdf`.
-        """
-        if kind not in ("mesh", "urdf"):
-            raise ValueError(f"unknown job kind {kind!r}")
+        """Create a fresh job dir + skeleton subtree + initial job.json."""
         job_id = job_id or make_job_id(mesh_path)
         job = cls(Path(jobs_root) / job_id)
         job.root.mkdir(parents=True, exist_ok=False)
@@ -109,7 +92,6 @@ class JobDir:
         job._state = {
             "schema_version": SCHEMA_VERSION,
             "job_id": job_id,
-            "kind": kind,
             "mesh_source": str(Path(mesh_path).resolve()),
             "created": now,
             "updated": now,
@@ -136,8 +118,6 @@ class JobDir:
         for s in STAGES:
             stages.setdefault(s, {"status": PENDING, "params": {}, "seed": None,
                                   "started": None, "finished": None, "error": None})
-        # Schema v1 jobs predate articulated support: they are all flat mesh jobs.
-        job._state.setdefault("kind", "mesh")
         return job
 
     @classmethod
@@ -165,11 +145,6 @@ class JobDir:
     @property
     def job_id(self) -> str:
         return self.state["job_id"]
-
-    @property
-    def kind(self) -> str:
-        """"mesh" (flat, default) or "urdf" (articulated)."""
-        return self.state.get("kind", "mesh")
 
     def _stage_key(self, stage: str) -> str:
         stage = STAGE_ALIASES.get(stage, stage)
@@ -231,7 +206,7 @@ class JobDir:
         self._touch_and_write()
 
     def set_asset(self, asset: dict[str, Any]) -> None:
-        """Write the articulated 'asset' section (Stage R fills it for kind == 'urdf')."""
+        """Write the 'asset' section (Stage R fills it after parsing the URDF)."""
         self.state["asset"] = asset
         self._touch_and_write()
 
@@ -299,21 +274,18 @@ class JobDir:
     def output_glb(self, backend: str) -> Optional[Path]:
         """The textured GLB a backend wrote, or None if absent.
 
-        Articulated jobs assemble `assembled.glb` (preferred); trellis2 writes `textured.glb`;
-        hunyuan writes `textured_mesh.glb`. Prefer the exact names, then fall back to any *.glb
-        in the backend dir (Stage E / Tab 5 browsing; non-recursive, so an articulated job's
-        per-group GLBs under groups/ never pollute the fallback).
+        The assembled rest-pose GLB is the primary output; fall back to any *.glb in the backend
+        dir (non-recursive, so per-group GLBs under groups/ never pollute the fallback).
         """
         d = self.path("textured", backend)
         if not d.is_dir():
             return None
-        for name in ("assembled.glb", "textured.glb", "textured_mesh.glb"):
-            if (d / name).is_file():
-                return d / name
+        if (d / "assembled.glb").is_file():
+            return d / "assembled.glb"
         globbed = sorted(d.glob("*.glb"))
         return globbed[0] if globbed else None
 
-    # --- articulated (kind == "urdf") path helpers (PRD.md, articulated extension) --
+    # --- articulated path helpers (PRD.md) ----------------------------------------
     def asset_dir(self) -> Path:
         """The rebuilt asset tree for app uploads (input/asset/); batch jobs reference the
         source asset dir directly via state["asset"]["asset_dir"]."""
@@ -329,10 +301,6 @@ class JobDir:
     def group_norm(self, group_id: str) -> Path:
         """center/scale/faces/area sidecar for verification (adapters recompute)."""
         return self.path("groups", group_id, "norm.json")
-
-    def appearance_sheet(self) -> Path:
-        """2x4 sheet of the existing MTL/texture appearance (skipped for blank assets)."""
-        return self.path("views", "appearance_sheet.png")
 
     def group_coverage(self) -> Path:
         """Per-group visibility at the condition camera (feeds the crop-ref policy)."""

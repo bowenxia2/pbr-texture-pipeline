@@ -155,11 +155,12 @@ class WorkerManager:
 
     def diffuse(self, job_root: str, prompt: str, negative: str, base_seed: int,
                 n: int = 4, cn_scale: Optional[float] = None,
-                guidance: Optional[float] = None, kind: str = "depth") -> dict:
+                canny_scale: Optional[float] = None,
+                guidance: Optional[float] = None) -> dict:
         self._ensure_imaging(heavy=True)
         return self.imaging.call("diffuse", job_root=job_root, prompt=prompt, negative=negative,
                                  base_seed=base_seed, n=n, cn_scale=cn_scale,
-                                 guidance=guidance, kind=kind)
+                                 canny_scale=canny_scale, guidance=guidance)
 
     def score(self, job_root: str, prompt: str, n: int = 4) -> dict:
         self._ensure_imaging()
@@ -184,8 +185,8 @@ class WorkerManager:
     # -- vlm ops --
     def vlm_open(self, contact_sheet: str, material_hint: str = "",
                  job_root: Optional[str] = None) -> dict:
-        """job_root (urdf jobs) lets the worker attach the appearance sheet + articulation
-        summary to the opening turn (WS3/WS7); flat jobs may omit it."""
+        """job_root (urdf jobs) lets the worker attach the articulation summary and metadata
+        note to the opening turn (WS3/WS7); flat jobs may omit it."""
         self._ensure_vlm()
         return self.vlm.call("open", contact_sheet=contact_sheet, material_hint=material_hint,
                              job_root=job_root)

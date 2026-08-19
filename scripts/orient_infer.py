@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Orient-Anything-V2 batch inference (Stage R front detection, PRD_articulated_v2 section 6).
+"""Orient-Anything-V2 batch inference (Stage R front detection, PRD.md section 7.5).
 
 Runs inside the orianyv2 conda env with the Orient-Anything-V2 repo importable from --repo.
 Follows the backend-adapter script contract: no pbr-texture-pipeline imports, load the model once,

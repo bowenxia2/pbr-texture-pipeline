@@ -27,16 +27,14 @@ from pbr_texture_pipeline.workers.ipc import serve
 
 def _open(args: dict) -> dict:
     from pbr_texture_pipeline import vlm
-    ctx = {"appearance_sheet": None, "articulation_note": "", "keep_appearance": False,
-           "metadata_note": ""}
+    ctx = {"articulation_note": "", "metadata_note": ""}
     if args.get("job_root"):
         # urdf jobs: the interactive opening turn gets the same articulated context as batch
-        # (appearance sheet + articulation summary + metadata note, WS3/WS7).
+        # (articulation summary + metadata note, WS3/WS7).
         ctx = vlm.articulated_context(JobDir.load(args["job_root"]))
     messages, reply, spec, caption = vlm.opening_turn(
         args["contact_sheet"], args.get("material_hint", ""),
-        appearance_sheet=ctx["appearance_sheet"], articulation_note=ctx["articulation_note"],
-        keep_appearance=ctx["keep_appearance"], metadata_note=ctx["metadata_note"])
+        articulation_note=ctx["articulation_note"], metadata_note=ctx["metadata_note"])
     return {"reply": reply, "spec": spec, "caption": caption, "messages": messages}
 
 
@@ -56,9 +54,7 @@ def _save(args: dict) -> dict:
     from pbr_texture_pipeline import vlm
     job = JobDir.load(args["job_root"])
     spec = args["spec"]
-    if job.kind == "urdf" and isinstance(spec, dict):
-        # The metadata category is authoritative: an interactive session can refine
-        # materials, but cannot persist a spec whose category contradicts the dataset.
+    if isinstance(spec, dict):
         cat = (job.state.get("asset") or {}).get("category")
         if cat:
             spec, mismatch = vlm.apply_category_metadata(spec, cat)

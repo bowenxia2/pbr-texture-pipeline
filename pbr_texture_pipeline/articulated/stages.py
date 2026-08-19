@@ -1,4 +1,4 @@
-"""Per-stage drivers for articulated (kind == "urdf") jobs.
+"""Per-stage drivers for articulated URDF jobs.
 
 batch.py and the app's workers call these so interactive and batch stay one code path
 (PRD.md, articulated extension). Heavy imports (torch, renderer, trimesh) are deferred
@@ -33,7 +33,7 @@ def merge_groups(group_world: dict) -> tuple:
     insertion order, recording the face range each group occupies in the merged face array.
 
     Returns (mesh, face_ranges) with face_ranges[gid] = [start, stop) into mesh.faces.
-    Global texture mode (PRD_articulated_v2) slices the merged mesh back into groups by
+    Global texture mode (PRD.md section 7) slices the merged mesh back into groups by
     these ranges, so they are only valid against the exact merge built here; Stage R
     persists them to input/face_ranges.json and Stage T never rebuilds the merge.
     """
@@ -61,7 +61,7 @@ def render_open_controls(job, mesh_repr, R_mat) -> dict:
     control/open/{depth,normal,canny,mask}.png and control/camera_open.json with the same
     schema as camera.json. Deliberately duplicates the file-writing glue of
     rendering.render_control_maps so that function and the JobDir path helpers stay
-    untouched for flat-mesh jobs.
+    untouched for the main render path.
     """
     import cv2
     from PIL import Image
@@ -98,34 +98,12 @@ def render_open_controls(job, mesh_repr, R_mat) -> dict:
     return {"mask_coverage_open": coverage}
 
 
-def _write_visibility_npz(path, mesh_repr, resolution: int) -> None:
-    """Depth buffers + camera matrices at the 8 contact-sheet viewpoints -> npz.
-
-    The npz is the single source of truth for point visibility in global mode: Stage R's
-    occlusion statistics and the adapter's per-texel rest-pose mask both test against it via
-    backends.visibility, so the two can never disagree.
-    """
-    from pbr_texture_pipeline import rendering as R
-    from pbr_texture_pipeline.backends import visibility as VIS
-
-    depths, extrs, intrs = [], [], []
-    for k in range(R.CONTACT_N):
-        yaw = R.contact_yaw(k)
-        depths.append(R.render_view(mesh_repr, yaw, R.CONTACT_PITCH, resolution, 1,
-                                    return_types=("depth",))["depth"])
-        extr, intr = R.get_camera(yaw, R.CONTACT_PITCH)
-        extrs.append(extr.detach().cpu().numpy())
-        intrs.append(intr.detach().cpu().numpy())
-    VIS.save_views(path, np.stack(depths), np.stack(extrs), np.stack(intrs))
-
-
 def render(job) -> dict:
-    """Articulated Stage R: group meshes, rest-pose clay assembly + control maps, existing
-    appearance sheet, per-group visibility. Requires the trellis2 env (renderer + CUDA)."""
+    """Articulated Stage R: group meshes, rest-pose clay assembly + control maps,
+    per-group occlusion stats. Requires the trellis2 env (renderer + CUDA)."""
     import trimesh
 
     from pbr_texture_pipeline import rendering as R
-    from pbr_texture_pipeline.articulated import appearance as A
     from pbr_texture_pipeline.articulated import urdf as U
 
     urdf_path = Path(job.state["mesh_source"])
@@ -173,23 +151,25 @@ def render(job) -> dict:
         group_world[g.group_id] = (v, np.asarray(m.faces))
         group_meta.append({
             "group_id": g.group_id, "link": g.link, "label": g.label,
-            "semantic_id": g.semantic_id, "objs": [vis.obj for vis in g.visuals],
+            "semantic_id": g.semantic_id,
+            "objs": [vis.obj or f"<{vis.primitive['type']}>" for vis in g.visuals],
             "n_faces": int(len(m.faces)), "area_frac": area_frac, "motion": g.motion,
-            "dominant_color": None, "tiny": bool(tiny),
+            "tiny": bool(tiny),
         })
 
     # 2. Rest-pose FK clay assembly -> mesh_norm + contact sheet + control maps (unchanged
     #    downstream: Stage D runs on this assembled depth). The URDF world frame is Z-up
     #    (verified on the test assets: cart wheels / table feet at min z), so normalize with
-    #    up="z" - no glTF axis swap - or the object lies on its side and the contact-sheet
-    #    yaw orbit tumbles over the top instead of circling the vertical axis. Azimuth is
-    #    then handled by the standard repose machinery: the canonical camera sees the front,
-    #    and camera.json records R so Stage E/J un-rotate.
+    #    up="z" (center+scale only, no axis swap for rendering). The exported mesh_norm.glb
+    #    is then swapped to Y-up glTF convention (export_yup) so TRELLIS.2's preprocess_mesh
+    #    (which assumes Y-up) correctly round-trips to Z-up internal. Azimuth is handled by
+    #    the standard repose machinery: the canonical camera sees the front, and camera.json
+    #    records R so Stage E/J un-rotate.
     assembled, face_ranges = merge_groups(group_world)
     all_v = np.asarray(assembled.vertices)
     norm0 = R.preprocess_mesh(assembled, up="z")
 
-    # Front detection (PRD_articulated_v2 section 6): render the contact sheet from the
+    # Front detection (PRD.md section 7.5): render the contact sheet from the
     # un-reposed mesh first, let Orient-Anything-V2 pick the front panel from those panel
     # files, then re-pose and re-render so Stage V keeps seeing front-aligned panels.
     # Config front_panel stays the fallback (detection disabled, unconfident, or failed).
@@ -203,9 +183,11 @@ def render(job) -> dict:
         front_panel = int(orient_decision["front_panel"])
     R_mat = R.repose_matrix(front_panel) if front_panel else None
     norm = R.apply_repose(norm0, R_mat) if R_mat is not None else norm0
-    norm.export(job.mesh_norm())
+    R.export_yup(norm, job.mesh_norm())
     mesh_repr = R.to_mesh_repr(norm)
-    R.render_contact_sheet(job, mesh_repr)
+    vis_res = int(_CFG.get("render.resolution"))
+    cs = R.render_contact_sheet(job, mesh_repr, also_depth=True,
+                                depth_resolution=vis_res)
     info = R.render_control_maps(job, mesh_repr, repose_applied=R_mat is not None,
                                  R_mat=R_mat)
     if orient_decision is not None:
@@ -215,7 +197,7 @@ def render(job) -> dict:
         info["orient_method"] = orient_decision.get("method")
         info["orient_front_panel"] = front_panel
 
-    # 2b. Open-pose merged mesh (PRD_articulated_v2 sections 4-5): the same groups merged in
+    # 2b. Open-pose merged mesh (PRD.md section 7.6): the same groups merged in
     #     the same order with movable joints opened, so the rest-pose face ranges apply to
     #     both meshes. Same normalization + re-pose machinery; its own norm params (the open
     #     bounds differ from rest).
@@ -232,7 +214,7 @@ def render(job) -> dict:
     norm_open = R.preprocess_mesh(assembled_open, up="z")
     if R_mat is not None:
         norm_open = R.apply_repose(norm_open, R_mat)
-    norm_open.export(job.path("input", "mesh_norm_open.glb"))
+    R.export_yup(norm_open, job.path("input", "mesh_norm_open.glb"))
 
     center_rest, scale_rest = U.norm_params(assembled)
     center_open, scale_open = U.norm_params(assembled_open)
@@ -244,78 +226,53 @@ def render(job) -> dict:
         "open_pose_frac": open_frac,
     })
 
-    # 2c. Open-pose control maps + per-pose visibility npz + per-group occlusion statistics
-    #     (PRD_articulated_v2, Stage R additions). The npz depth buffers back both the
-    #     occlusion stats here and the adapter's per-texel rest-visibility mask.
+    # 2c. Open-pose control maps + rest-pose visibility npz + per-group occlusion statistics
+    #     (PRD.md section 3.8). The rest-pose depth buffers were captured during the contact
+    #     sheet render above; save them as the visibility npz that the adapter reads.
     from pbr_texture_pipeline.backends import visibility as VIS
 
     mesh_repr_open = R.to_mesh_repr(norm_open)
     info.update(render_open_controls(job, mesh_repr_open, R_mat))
-    vis_res = int(_CFG.get("render.resolution"))
-    _write_visibility_npz(job.path("control", "visibility_rest.npz"), mesh_repr, vis_res)
-    _write_visibility_npz(job.path("control", "visibility_open.npz"), mesh_repr_open, vis_res)
+    VIS.save_views(job.path("control", "visibility_rest.npz"),
+                   cs["depths"], cs["extrinsics"], cs["intrinsics"])
 
     def _internal(v: np.ndarray, center: np.ndarray, scale: float) -> np.ndarray:
-        # World (Z-up) -> internal: center+scale, no axis swap; then the front-panel repose.
         w = (np.asarray(v, dtype=np.float64) - center) * scale
         return w if R_mat is None else w @ R_mat.T
 
     views_rest = VIS.load_views(job.path("control", "visibility_rest.npz"))
-    views_open = VIS.load_views(job.path("control", "visibility_open.npz"))
     n_samples = 1024
     for meta in group_meta:
         gid = meta["group_id"]
-        for key, gw, views, center, scale in (
-                ("occluded_frac_rest", group_world, views_rest, center_rest, scale_rest),
-                ("occluded_frac_open", group_world_open, views_open, center_open, scale_open)):
-            v, f = gw[gid]
-            surf = trimesh.Trimesh(vertices=v, faces=f, process=False)
-            pts, _fid = trimesh.sample.sample_surface(surf, n_samples)
-            vis = VIS.visible_from_any(_internal(pts, center, scale), views)
-            meta[key] = float(1.0 - vis.mean())
-
-    # 3. Existing appearance: sheet + per-group dominant colors, skipped for blank assets
-    #    (only image textures or chromatic flat colors count; achromatic grays do not).
-    has_texture = {g.group_id: A.group_has_real_texture(asset, g) for g in groups}
-    dominant = {g.group_id: A.dominant_color(asset, g) for g in groups}
-    has_appearance = any(has_texture.values()) or any(
-        A.is_chromatic(c) for c in dominant.values())
-    if has_appearance:
-        v, f, c = A.load_colored_asset_arrays(asset, groups, fk)
-        A.render_appearance_sheet(job, v, f, c, R_mat=R_mat)
-        for meta in group_meta:
-            meta["dominant_color"] = dominant[meta["group_id"]]
-
-    # 4. Per-group visibility at the condition camera (crop-ref policy input).
-    A.group_visibility(job, group_world, center_rest, scale_rest)
+        v, f = group_world[gid]
+        surf = trimesh.Trimesh(vertices=v, faces=f, process=False)
+        pts, _fid = trimesh.sample.sample_surface(surf, n_samples)
+        vis = VIS.visible_from_any(_internal(pts, center_rest, scale_rest), views_rest)
+        meta["occluded_frac_rest"] = float(1.0 - vis.mean())
 
     job.set_asset({
         "asset_dir": str(asset_dir), "urdf": str(urdf_path),
         "category": asset.category, "group_by": group_by,
         "semantic_labels": sorted({label for (_motion, label) in asset.semantics.values()}),
-        "has_appearance": bool(has_appearance),
         "bbox_world": {"min": [float(x) for x in all_v.min(axis=0)],
                        "max": [float(x) for x in all_v.max(axis=0)]},
         "groups": group_meta,
     })
     info["n_groups"] = len(group_meta)
     info["n_tiny"] = sum(1 for m in group_meta if m["tiny"])
-    info["has_appearance"] = bool(has_appearance)
     return info
 
 
 # --- Stage T pair construction ------------------------------------------------
 def global_texture_pair(job, seed: int):
-    """One trellis2_global pair for a job, or None when every group already has
+    """One trellis2 pair for a job, or None when every group already has
     textured/trellis2/groups/<gid>.glb (the resume rule).
 
     Everything the adapter must not compute itself arrives here as plain data: per group a
     to_link 4x4 mapping the adapter's output frame (the pipeline re-normalization of
     mesh_norm.glb, with TRELLIS's axis swap already undone by its bake) back to the link
-    frame, composed as: undo adapter normalization -> undo re-pose -> undo Stage R
-    normalization -> inverse rest-pose FK. Stage R normalizes the Z-up URDF world assembly
-    with up="z" (center+scale, no axis swap), so no swap appears in this chain. Gate A9
-    pins the frame chain this composition inverts.
+    frame. The chain inverts: adapter renorm -> Y-up-to-Z-up (undo the glTF export swap) ->
+    re-pose -> Stage R normalization -> rest-pose FK. Gate A9 pins the frame chain.
     """
     import trimesh
 
@@ -341,9 +298,13 @@ def global_texture_pair(job, seed: int):
         M[:3, 3] = t
         return M
 
-    base = (_mat4(np.eye(3) / s1, c1)          # undo Stage R normalization (up="z", no swap)
+    # Y-up (glTF file) -> Z-up (internal): same swap as preprocess_mesh(up="y")
+    _YUP_TO_ZUP = np.array([[1, 0, 0], [0, 0, -1], [0, 1, 0]], dtype=np.float64)
+
+    base = (_mat4(np.eye(3) / s1, c1)          # undo Stage R normalization (Z-up)
             @ _mat4(Rz.T, np.zeros(3))         # undo re-pose
-            @ _mat4(np.eye(3) / s2, c2))       # undo adapter normalization
+            @ _mat4(_YUP_TO_ZUP, np.zeros(3))  # undo glTF Y-up export swap
+            @ _mat4(np.eye(3) / s2, c2))       # undo adapter normalization (Y-up file)
 
     asset = U.parse_asset(asset_state["asset_dir"])
     fk = U.link_world_transforms(asset)
@@ -358,12 +319,13 @@ def global_texture_pair(job, seed: int):
             continue
         to_link = np.linalg.inv(fk.get(g["link"], np.eye(4))) @ base
         norm = job.read_json(job.group_norm(gid))
-        groups.append({
+        entry = {
             "group_id": gid, "out_glb": str(out_glb),
             "texture_size": tiny_size if g.get("tiny") else tex_size,
             "to_link": to_link.tolist(),
             "bounds_link": norm.get("bounds_link"),
-        })
+        }
+        groups.append(entry)
     if not groups:
         return None
 
@@ -390,7 +352,7 @@ def global_texture_pair(job, seed: int):
     return pair
 
 
-# --- targeted retexturing (PRD_articulated_v2 section 7) -----------------------
+# --- targeted retexturing (PRD.md section 7.7) ---------------------------------
 def select_retexture_candidates(job) -> list[dict]:
     """Apply the retexture heuristics to eval/diagnostics.json. Always runs (the selection
     is a tracked metric even while execution is disabled); writes the candidate list back

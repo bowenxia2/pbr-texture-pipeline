@@ -2,19 +2,16 @@
 # Every module reads paths and defaults from here; nothing is hardcoded (PRD risk 8, env drift).
 
 # ---------------------------------------------------------------------------
-# GPU strategy (PRD section 7)
+# GPU strategy (PRD.md section 10.2)
 # ---------------------------------------------------------------------------
 gpu_mode: dual            # dual | single. dual = current 2x A40 node; single degrades per stage-exclusion rule.
 
 # ---------------------------------------------------------------------------
 # Environment (verified empirically 2026-07-03; supersedes the PRD's single-env claim)
 #
-# The PRD assumed one `unified3d` env runs everything. Reality (see README "Environment
-# reality"): unified3d has diffusers but NOT the TRELLIS.2 renderer stack, so it cannot
-# render or run the TRELLIS.2 backend. The `trellis2` env (py3.10) has the full compiled
-# renderer stack (cumesh/o_voxel/nvdiffrast/flex_gemm/natten); we added `diffusers`,
-# `accelerate`, `requests`, `importlib_metadata` to it so ONE env now runs the whole
-# imaging + VLM + diffusion side (Stages R, V, D). Only Hunyuan needs its own env.
+# The `trellis2` env (py3.10) has the full compiled renderer stack
+# (cumesh/o_voxel/nvdiffrast/flex_gemm/natten) plus `diffusers`, `accelerate`, `requests`,
+# `importlib_metadata`, so ONE env runs the whole imaging + diffusion side (Stages R, D).
 # ---------------------------------------------------------------------------
 #
 # All paths below are portable defaults that work out of the box for a fresh clone (the
@@ -30,9 +27,9 @@ env:
   torch_cache: .cache/torch                  # torch.hub (LPIPS AlexNet etc.)
   # Stage V env (2026-07-11): the VLM worker runs Qwen3.6-35B-A3B AWQ via vLLM, which needs
   # torch >= 2.8; the trellis2 env is pinned to torch 2.6 by its compiled renderer stack, so
-  # the VLM gets its own env (same pattern as the Hunyuan backend).
+  # the VLM gets its own env.
   vlm_name: vlm
-  # Orient-Anything-V2 env (2026-07-27, PRD_articulated_v2 section 6): python 3.11 per its
+  # Orient-Anything-V2 env (2026-07-27, PRD.md section 7.5): python 3.11 per its
   # README; runs only scripts/orient_infer.py as a short-lived subprocess during Stage R.
   # See README.md "Setup" for the exact env-creation commands.
   orient_name: orianyv2
@@ -42,7 +39,6 @@ env:
 # Per-backend subprocess envs (Stage T adapters run via `conda run -n <env>`).
 backend_envs:
   trellis2: trellis2      # TRELLIS.2 texturing backend (renderer stack)
-  hunyuan:  hunyuan3d     # Hunyuan3D-2.1 paint: separate env (custom_rasterizer, torch 2.5.1)
 
 # ---------------------------------------------------------------------------
 # Model ids (all resolve inside hf_cache above; do not re-download)
@@ -58,16 +54,15 @@ models:
   # InstantX Qwen-Image ControlNet-Union (canny/soft-edge/depth/pose); Stage D uses depth mode.
   # Fetched by scripts/download_controlnet.py into the shared cache.
   controlnet: InstantX/Qwen-Image-ControlNet-Union
-  # Orient-Anything-V2 checkpoint repo (front detection, PRD_articulated_v2 section 6).
+  # Orient-Anything-V2 checkpoint repo (front detection, PRD.md section 7.5).
   # Fetched by scripts/download_orient_anything.py into the shared cache.
   orient: Viglong/OriAnyV2_ckpt
 
 # ---------------------------------------------------------------------------
-# Backend repos (subprocess adapters; hard cwd requirements per PRD section 6)
+# Backend repos (subprocess adapters; hard cwd requirements per PRD.md section 7.4)
 # ---------------------------------------------------------------------------
 repos:
   trellis2: ./TRELLIS.2                       # git submodule
-  hunyuan:  ./Hunyuan3D-2.1/hy3dpaint          # git submodule (hy3dpaint subdir is the adapter's cwd)
   orient:   ./Orient-Anything-V2               # git submodule
 
 # ---------------------------------------------------------------------------
@@ -100,7 +95,8 @@ vlm:
 diffusion:
   candidates: 4
   seed: 42
-  cn_scale: 0.9           # controlnet_conditioning_scale; InstantX union depth mode 0.8-1.0 (UI 0.5-1.0)
+  cn_scale: 0.9           # depth controlnet_conditioning_scale (UI 0.5-1.0)
+  canny_scale: 0.5        # canny controlnet_conditioning_scale (UI 0.0-1.0)
   guidance: 4.0           # Qwen-Image true_cfg_scale (real CFG; negative prompt active when > 1)
   steps: 30
   width: 1024
@@ -112,14 +108,11 @@ select:
 texture:
   trellis2_resolution: 1024
   trellis2_texture_size: 2048
-  hunyuan_max_num_view: 6
-  hunyuan_resolution: 512
 
-# Articulated (URDF) jobs: per-part texturing of PartNet-Mobility assets (see PRD.md).
+# Articulated (URDF) jobs (see PRD.md).
 articulated:
-  # Texturing (PRD_articulated_v2, sole path since 2026-07-28): one TRELLIS.2 run on the
-  # merged mesh, per-group atlases baked from the shared decoded field. trellis2-only;
-  # hunyuan has no articulated path (Stage J records a walkover).
+  # Texturing: one TRELLIS.2 run on the merged mesh, per-group atlases baked from the
+  # shared decoded field.
   global:
     open_pose_pass: true        # second pass with joints opened so interiors get evidence
     open_pose_frac: 0.8         # movable joints at this fraction of their clamped range
@@ -146,11 +139,9 @@ articulated:
   # Stage D depth is usable. Recorded in camera.json (repose_applied/R), so Stage E/J
   # un-rotate as usual.
   front_panel: 2
-  keep_appearance: false        # steer the VLM to match observed existing colors/materials
   rest_pose: zero_clamped       # joints at q=0 clamped into limits (only supported policy)
   min_group_faces: 20           # below either threshold a group is "tiny" (small atlas bake)
   min_group_area_frac: 0.0005
-  appearance_max_edge_frac: 0.02  # subdivide existing-appearance meshes until max edge <= frac*extent
   plan_max_new_tokens: 4096
   collision_mode: symlink       # textured URDF collision meshes: symlink original textured_objs
 

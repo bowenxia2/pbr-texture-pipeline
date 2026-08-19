@@ -1,15 +1,16 @@
 """Drive the entire Gradio pipeline through app.py's real tab callbacks.
 
 This is the closest E2E to a browser user without a browser: it calls the exact
-module-level callback functions each Tab wires up, in order, against a real mesh,
-using the real WorkerManager (workers + GPU + subprocess backends).
+module-level callback functions each Tab wires up, in order, against a real URDF
+asset, using the real WorkerManager (workers + GPU + subprocess backends).
 
-  conda run -n trellis2 python scripts/drive_pipeline.py --mesh meshes/mug_e5e87ddb.glb \
-      --backends trellis2 hunyuan
+  conda run -n trellis2 python scripts/drive_pipeline.py \
+      --urdf partnet_mobility/19179 --backends trellis2
 """
 from __future__ import annotations
 
 import argparse
+import json as _json
 import sys
 import time
 import traceback
@@ -34,23 +35,33 @@ def _t(label, fn):
 
 
 def _urdf_upload_files(asset_dir: Path) -> list[str]:
-    """The complete upload set for an asset: mobility.urdf + reference closure + optional
+    """The complete upload set for an asset: URDF + reference closure + optional
     metadata (mirrors what a user multi-selects in Tab 1)."""
     from pbr_texture_pipeline.articulated import urdf as U
 
-    files = [asset_dir / "mobility.urdf"]
-    files += [asset_dir / r for r in U.required_files(asset_dir / "mobility.urdf")]
-    for name in ("meta.json", "semantics.txt", "result.json", "bounding_box.json"):
+    urdf_path = U.find_urdf(asset_dir)
+    files = [urdf_path]
+    files += [asset_dir / r for r in U.required_files(urdf_path)]
+    for name in ("meta.json", "semantics.txt", "result.json", "bounding_box.json",
+                 "compile_report.json"):
         if (asset_dir / name).is_file():
             files.append(asset_dir / name)
     return [str(f) for f in files]
 
 
-def run_urdf(args) -> int:
+def main() -> int:
     """Gate A8: drive the articulated pipeline through app.py's real tab callbacks."""
-    import json as _json
-
     from pbr_texture_pipeline.jobdir import JobDir
+
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--urdf", required=True,
+                    help="articulated asset dir (gate A8), e.g. partnet_mobility/19179")
+    ap.add_argument("--jobs-root", default="jobs_pipetest")
+    ap.add_argument("--backends", nargs="+", default=["trellis2"])
+    args = ap.parse_args()
+
+    app.JOBS_ROOT = args.jobs_root
+    Path(args.jobs_root).mkdir(parents=True, exist_ok=True)
 
     asset_dir = Path(args.urdf).resolve()
     files = _urdf_upload_files(asset_dir)
@@ -70,14 +81,14 @@ def run_urdf(args) -> int:
     assert before == after, "incomplete upload created a job dir"
     print(f"[A8] negative case OK: reported missing {missing_rel}, no job created")
 
-    # --- Tab 1: complete upload -> articulated Stage R --------------------------------------
+    # --- Tab 1: complete upload -> Stage R --------------------------------------
     r = _t("Tab1 upload_urdf", lambda: app.upload_urdf(files))
     job_id, model3d, contact, front_upd, depth, canny, appearance, status = r
     assert job_id, f"no job_id from upload_urdf: {status}"
     assert contact and Path(contact).is_file(), "no contact sheet"
     assert depth and Path(depth).is_file(), "no depth control"
     job = JobDir.load(Path(args.jobs_root) / job_id)
-    assert job.kind == "urdf" and job.state.get("asset", {}).get("groups"), "no asset section"
+    assert job.state.get("asset", {}).get("groups"), "no asset section"
     print(f"[A8] job={job_id} groups={len(job.state['asset']['groups'])} "
           f"appearance={appearance}")
 
@@ -97,7 +108,7 @@ def run_urdf(args) -> int:
     # --- Tab 4: texture (Stage P runs automatically inside) ---------------------------------
     def _run_texture():
         last = None
-        for update in app.run_texture(job_id, args.backends, 1024, 2048, False, 42):
+        for update in app.run_texture(job_id, args.backends, 1024, 2048, 42):
             logs = update[0]
             tail = logs.strip().splitlines()[-1] if logs.strip() else ""
             print(f"[A8][T] {tail}", flush=True)
@@ -124,7 +135,7 @@ def run_urdf(args) -> int:
     # --- Tab 5 + viewer routes -------------------------------------------------------------
     rows5 = app.refresh_jobs()
     this = [row for row in rows5 if row[0] == job_id]
-    assert this and this[0][1] == "urdf", f"Tab 5 row wrong: {this}"
+    assert this, "job not listed in Tab 5"
 
     from fastapi import FastAPI
     from fastapi.testclient import TestClient
@@ -143,135 +154,9 @@ def run_urdf(args) -> int:
         assert sub.status_code in (200, 404), "job file route broken"
         print(f"[A8] /viewer/{job_id}/{b} OK ({len(scene_glbs)} group GLBs)")
 
-    job = JobDir.load(Path(args.jobs_root) / job_id)  # run_judge wrote job.json since our load
+    job = JobDir.load(Path(args.jobs_root) / job_id)
     print(f"\n==== A8 PASS (backends {produced}, judge={job.status('judge')}) ====")
     return 0
-
-
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--mesh", help="flat mesh input (original pipeline drive)")
-    ap.add_argument("--urdf", help="articulated asset dir (gate A8), e.g. partnet_mobility/19179")
-    ap.add_argument("--jobs-root", default="jobs_pipetest")
-    ap.add_argument("--backends", nargs="+", default=["trellis2"])
-    args = ap.parse_args()
-    if bool(args.mesh) == bool(args.urdf):
-        ap.error("pass exactly one of --mesh or --urdf")
-
-    app.JOBS_ROOT = args.jobs_root
-    Path(args.jobs_root).mkdir(parents=True, exist_ok=True)
-
-    if args.urdf:
-        return run_urdf(args)
-
-    # --- Sanity: the Blocks graph constructs (Tab wiring, gradio-6 compat) ---
-    _t("build()", lambda: app.build())
-    print("[build] Blocks constructed OK (all 5 tabs wired)", flush=True)
-
-    # === Tab 1: Mesh -> Stage R ===============================================
-    r = _t("Tab1 upload_mesh", lambda: app.upload_mesh(args.mesh))
-    job_id, model3d, contact, front_upd, depth, canny, status = r
-    assert job_id, "no job_id from upload_mesh"
-    assert contact and Path(contact).is_file(), f"no contact sheet: {contact}"
-    assert depth and Path(depth).is_file(), f"no depth control: {depth}"
-    assert canny and Path(canny).is_file(), f"no canny control: {canny}"
-    print(f"[Tab1] job={job_id}\n       {status}", flush=True)
-
-    # re-render control maps (front panel 0 = canonical, no re-pose)
-    d2 = _t("Tab1 rerender_controls",
-            lambda: app.rerender_controls(job_id, "0", 0.0, 0.0))
-    assert d2[0] and Path(d2[0]).is_file(), "rerender produced no depth"
-    print(f"[Tab1] {d2[2]}", flush=True)
-
-    # === Tab 2: Appearance chat -> Stage V ====================================
-    c1 = _t("Tab2 chat_open", lambda: app.chat_open(job_id, ""))
-    history, caption, spec_str, cstatus = c1
-    assert history, "chat_open produced no history"
-    assert caption, "chat_open produced no mesh caption"
-    print(f"[Tab2] {cstatus}\n       caption={caption[:120]}\n       spec={spec_str[:200]}",
-          flush=True)
-
-    c2 = _t("Tab2 chat_send",
-            lambda: app.chat_send(job_id, "Make it look a bit more worn and realistic.", history))
-    print(f"[Tab2] send: {c2[3]}", flush=True)
-
-    c3 = _t("Tab2 chat_finalize", lambda: app.chat_finalize(job_id))
-    final_spec = c3[1]
-    assert final_spec and "ref_prompt" in final_spec, "no finalized spec"
-    print(f"[Tab2] {c3[2]}", flush=True)
-
-    # === Tab 3: Reference image -> Stage D ====================================
-    ld = _t("Tab3 load_ref_defaults", lambda: app.load_ref_defaults(job_id))
-    prompt, negative, ctrl = ld
-    assert prompt, "spec had no ref_prompt for the UI"
-    print(f"[Tab3] prompt={prompt[:80]}", flush=True)
-
-    g = _t("Tab3 generate_ref",
-           lambda: app.generate_ref(job_id, prompt, negative, 42, 0.8, 6.0, "depth", False))
-    gallery, gstatus, seed_upd = g
-    assert gallery and len(gallery) == 4, f"expected 4 candidates, got {gallery}"
-    print(f"[Tab3] {gstatus}", flush=True)
-
-    # choose candidate #0 (simulates clicking the gallery)
-    ch = _t("Tab3 choose_candidate",
-            lambda: app.choose_candidate(job_id, FakeSelect(0)))
-    chosen, cutout, chstatus = ch
-    assert cutout and Path(cutout).is_file(), f"no cutout: {cutout}"
-    print(f"[Tab3] {chstatus}", flush=True)
-
-    ap_ = _t("Tab3 approve_ref", lambda: app.approve_ref(job_id))
-    print(f"[Tab3] {ap_}", flush=True)
-
-    # === Tab 4: Texture & review -> Stage T ===================================
-    def _run_texture():
-        last = None
-        for update in app.run_texture(job_id, args.backends, 1024, 2048, False, 42):
-            logs = update[0]
-            # print only the newest tail line to keep output readable
-            tail = logs.strip().splitlines()[-1] if logs.strip() else ""
-            print(f"[Tab4] {tail}", flush=True)
-            last = update
-        return last
-
-    tex = _t("Tab4 run_texture", _run_texture)
-    models = tex[1:]
-    produced = [m for m in models if m]
-    produced_backends = [b for b, m in zip(app.BACKENDS, models) if m]
-    print(f"[Tab4] produced {len(produced)}/{len(args.backends)} GLBs: {produced}", flush=True)
-
-    # === Tab 4: Judge -> Stage J ==============================================
-    import json as _json
-    from pbr_texture_pipeline.jobdir import JobDir
-
-    jr = _t("Tab4 run_judge", lambda: app.run_judge(job_id))
-    jstatus, verdict_str = jr[0], jr[1]
-    verdict = _json.loads(verdict_str)
-    assert verdict.get("winner"), f"judge produced no winner: {jstatus}"
-    assert verdict.get("method") in ("vlm", "walkover", "fallback_default"), verdict
-    job = JobDir.load(Path(args.jobs_root) / job_id)
-    surviving = [b for b in app.BACKENDS if job.output_glb(b) is not None]
-    assert set(surviving) == set(produced_backends), \
-        (f"expected every produced backend's GLB to still be on disk, got {surviving} "
-         f"(produced {produced_backends})")
-    assert verdict["winner"] in surviving, \
-        f"winner {verdict['winner']} has no surviving GLB, got {surviving}"
-    assert job.final_glb() is not None and job.final_glb().is_file(), "final_glb missing"
-    judged_ok = job.status("judge") in ("done", "needs_review")
-    print(f"[Tab4] {jstatus}\n       method={verdict['method']} "
-          f"final_glb={job.final_glb()}", flush=True)
-
-    # === Tab 5: Jobs browser ==================================================
-    rows = _t("Tab5 refresh_jobs", lambda: app.refresh_jobs())
-    this = [row for row in rows if row[0] == job_id]
-    assert this, "job not listed in Tab 5"
-    assert this[0][3] == verdict["winner"], f"Tab 5 winner column mismatch: {this[0]}"
-    print(f"[Tab5] row={this[0]}", flush=True)
-
-    ok = len(produced) == len(args.backends) and bool(this) and judged_ok
-    print(f"\n==== PIPELINE {'PASS' if ok else 'PARTIAL/FAIL'} "
-          f"(backends {len(produced)}/{len(args.backends)}, "
-          f"judge={job.status('judge')} winner={verdict['winner']}) ====", flush=True)
-    return 0 if ok else 1
 
 
 if __name__ == "__main__":

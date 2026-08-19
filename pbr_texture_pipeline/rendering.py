@@ -81,6 +81,21 @@ def preprocess_mesh(mesh: trimesh.Trimesh, up: str = "y") -> trimesh.Trimesh:
     return trimesh.Trimesh(vertices=vertices, faces=mesh.faces, process=False)
 
 
+def export_yup(mesh: trimesh.Trimesh, path) -> None:
+    """Export a Z-up internal-frame mesh to a Y-up glTF file.
+
+    The internal frame (after preprocess_mesh with up="z") is Z-up; glTF convention is Y-up.
+    Applying (x, y, z) -> (x, z, -y) before saving means standard viewers show the object
+    upright and TRELLIS.2's preprocess_mesh (which assumes Y-up input) correctly round-trips
+    back to Z-up internal.
+    """
+    v = np.asarray(mesh.vertices)
+    yup = trimesh.Trimesh(
+        vertices=np.column_stack([v[:, 0], v[:, 2], -v[:, 1]]),
+        faces=mesh.faces, process=False)
+    yup.export(path)
+
+
 def _flatten(mesh) -> trimesh.Trimesh:
     """Load result -> single Trimesh (pattern from pbr_compare/run_trellis2.py)."""
     if isinstance(mesh, trimesh.Scene):
@@ -120,11 +135,8 @@ def to_internal_frame(vertices: np.ndarray, up: str = "y") -> np.ndarray:
     wrapping. up="z" (already-Z-up source frames: the URDF world frame) centers and scales
     without the swap.
 
-    Used by Stage E to bring a backend's textured output (which each backend exports in a
-    different frame - trellis2 in normalized glTF Y-up, hunyuan in the original input
-    frame, articulated assemblies in the Z-up URDF world frame) back into the internal Z-up
-    frame the condition camera (yaw=pi) is defined in, so a single camera renders every
-    backend consistently.
+    Used by Stage E to bring the backend's textured output (assembled in the Z-up URDF world
+    frame) back into the internal Z-up frame the condition camera (yaw=pi) is defined in.
     """
     v = np.asarray(vertices, dtype=np.float64).copy()
     vmin, vmax = v.min(axis=0), v.max(axis=0)
@@ -216,27 +228,46 @@ def contact_yaw(k: int) -> float:
     return CANONICAL_YAW + k * CONTACT_STEP
 
 
-def render_contact_sheet(jobdir, mesh_repr: Mesh, resolution: int = 512, ssaa: int = 2) -> Path:
-    """Render 8 shaded azimuth views (+ a top view) and assemble the 2x4 contact sheet."""
+def render_contact_sheet(jobdir, mesh_repr: Mesh, resolution: int = 512, ssaa: int = 1,
+                         also_depth: bool = False,
+                         depth_resolution: Optional[int] = None) -> dict:
+    """Render 8 shaded azimuth views and assemble the 2x4 contact sheet.
+
+    When also_depth is True, depth buffers and camera matrices are captured at
+    depth_resolution (defaults to resolution) for each of the 8 viewpoints.
+    Returned dict always has 'path'; with also_depth it also has 'depths' [8,H,W],
+    'extrinsics' [8,4,4], 'intrinsics' [8,3,3].
+    """
+    render_res = depth_resolution if (also_depth and depth_resolution) else resolution
+    rt = ("mask", "depth", "normal") if also_depth else ("mask", "normal")
     panels = []
+    depths, extrs, intrs = [], [], []
     for k in range(CONTACT_N):
-        r = render_view(mesh_repr, contact_yaw(k), CONTACT_PITCH, resolution, ssaa,
-                        return_types=("mask", "normal"))
+        yaw = contact_yaw(k)
+        r = render_view(mesh_repr, yaw, CONTACT_PITCH, render_res, ssaa, return_types=rt)
         shade = headlight_shade(r["normal"], r["mask"])
+        if render_res != resolution:
+            shade = np.array(Image.fromarray(shade, mode="L").resize(
+                (resolution, resolution), Image.LANCZOS))
         Image.fromarray(shade, mode="L").save(jobdir.view(k))
         panels.append(shade)
-
-    # Extra top-down view (pitch ~ +80deg) for the VLM; saved beside the 8 panels.
-    top = render_view(mesh_repr, CANONICAL_YAW, math.radians(80), resolution, ssaa,
-                      return_types=("mask", "normal"))
-    Image.fromarray(headlight_shade(top["normal"], top["mask"]), mode="L").save(
-        jobdir.path("views", "view_top.png"))
+        if also_depth:
+            depths.append(r["depth"])
+            extr, intr = get_camera(yaw, CONTACT_PITCH)
+            extrs.append(extr.detach().cpu().numpy())
+            intrs.append(intr.detach().cpu().numpy())
 
     # 2x4 grid.
     rows = [np.concatenate(panels[r * 4:(r + 1) * 4], axis=1) for r in range(2)]
     sheet = np.concatenate(rows, axis=0)
     Image.fromarray(sheet, mode="L").convert("RGB").save(jobdir.contact_sheet())
-    return jobdir.contact_sheet()
+
+    result: dict = {"path": jobdir.contact_sheet()}
+    if also_depth:
+        result["depths"] = np.stack(depths)
+        result["extrinsics"] = np.stack(extrs)
+        result["intrinsics"] = np.stack(intrs)
+    return result
 
 
 def repose_matrix(front_index: int) -> np.ndarray:
@@ -288,7 +319,7 @@ def render_control_maps(
     # depth.png: Gate-1 confirmed inverse-depth polarity.
     Image.fromarray(depth_to_controlnet(depth, mask), mode="L").save(jobdir.control("depth"))
 
-    # normal.png: (n+1)/2 encoding (for canny + debugging; not a ControlNet input in v1).
+    # normal.png: (n+1)/2 encoding (source for canny edge detection).
     normal_img = (np.clip(normal.transpose(1, 2, 0), 0, 1) * 255).astype(np.uint8)
     Image.fromarray(normal_img, mode="RGB").save(jobdir.control("normal"))
 

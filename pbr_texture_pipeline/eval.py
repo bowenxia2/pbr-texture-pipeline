@@ -8,12 +8,11 @@ and eval/metrics.json with:
   CLIP(prompt, chosen reference)            (semantic fidelity of the reference itself)
   CLIP(prompt, condition-view render)       (semantic fidelity transferred to the output)
   LPIPS(chosen reference, condition-view)   (appearance transfer fidelity)
-  hunyuan albedo shadow-bake spot check     (PRD risk 3)
 
 Runs in the `trellis2` env (needs the TRELLIS.2 renderer for the appearance render). The
-render path is validated end-to-end: each backend exports in a different frame, so every
-output is re-normalized into the internal Z-up frame (rendering.to_internal_frame) and, if
-Stage R re-posed, re-posed by R before rendering, so one camera renders all backends.
+render path is validated end-to-end: outputs are re-normalized into the internal Z-up frame
+(rendering.to_internal_frame) and, if Stage R re-posed, re-posed by R before rendering,
+so one camera renders all backends.
 """
 from __future__ import annotations
 
@@ -48,9 +47,8 @@ def load_output_colored(glb_path: str, camera: Optional[dict], up: str = "y") ->
     Colours come from `visual.to_color()` (samples the base-color texture per vertex). Vertices
     are re-normalized into the internal Z-up frame; if Stage R re-posed, the same R is applied
     so the appearance render lines up with the condition camera and the control maps.
-    `up` names the GLB's source frame: "y" for backend outputs in glTF Y-up (flat mesh jobs),
-    "z" for articulated assembled.glb, whose baked FK vertices are in the Z-up URDF world
-    frame.
+    `up` names the GLB's source frame: "z" for assembled.glb, whose baked FK vertices are in
+    the Z-up URDF world frame.
     """
     scene = trimesh.load(glb_path)
     verts = faces = colors = None
@@ -79,7 +77,7 @@ def render_condview(job: JobDir, backend: str, camera: Optional[dict]) -> Option
     glb = job.output_glb(backend)
     if glb is None:
         return None
-    mesh = load_output_colored(str(glb), camera, up="z" if job.kind == "urdf" else "y")
+    mesh = load_output_colored(str(glb), camera, up="z")
     res = int(_CFG.get("render.resolution"))
     ssaa = int(_CFG.get("render.ssaa"))
     out = R.render_appearance(mesh, R.CANONICAL_YAW, R.CANONICAL_PITCH, res, ssaa)
@@ -93,7 +91,7 @@ def render_turntable(job: JobDir, backend: str, camera: Optional[dict],
     glb = job.output_glb(backend)
     if glb is None:
         return None
-    mesh = load_output_colored(str(glb), camera, up="z" if job.kind == "urdf" else "y")
+    mesh = load_output_colored(str(glb), camera, up="z")
     pitch = math.radians(15.0)
 
     frames = []
@@ -124,7 +122,7 @@ def _four_view_strip(mesh: "R.Mesh", pitch: float) -> np.ndarray:
     return np.concatenate(tiles, axis=1)
 
 
-# --- articulated states (PRD_articulated_v2, Stage E additions) ---------------
+# --- articulated states (PRD.md section 8) ------------------------------------
 def articulated_state_mesh(job: JobDir, backend: str, joint_frac: float,
                            only: Optional[set] = None) -> Optional["R.Mesh"]:
     """Vertex-colored Mesh of a backend's textured groups posed at joint_frac.
@@ -271,7 +269,7 @@ def _texture_blur_estimate(glb_path: str) -> Optional[float]:
 def write_diagnostics(job: JobDir, backends: list[str]) -> Optional[Path]:
     """eval/diagnostics.json: per-group occlusion (Stage R), field-voxel span and pass-B
     fraction (global adapter metadata), texture blur estimate, and bake warnings. This is
-    the input for retexturing candidate selection (PRD_articulated_v2 section 7)."""
+    the input for retexturing candidate selection (PRD.md section 7.7)."""
     asset_state = job.state.get("asset")
     if not asset_state:
         return None
@@ -365,40 +363,6 @@ def _composite_on_white(rgb: np.ndarray, mask: np.ndarray) -> np.ndarray:
     return np.where(m, rgb, white)
 
 
-def hunyuan_albedo_shadow(job: JobDir) -> Optional[dict]:
-    """Spot-check Hunyuan's exported albedo for baked shadows (PRD risk 3).
-
-    Heuristic proxy (not a hard gate): over textured (non-near-white) texels, report the
-    fraction that are markedly dark. High dark_fraction on an object the spec described as
-    light-coloured suggests shadows/AO were baked into albedo.
-    """
-    d = job.path("textured", "hunyuan")
-    albedo = None
-    for name in ("textured_mesh.jpg", "textured_mesh_albedo.jpg"):
-        if (d / name).is_file():
-            albedo = d / name
-            break
-    if albedo is None:
-        # rglob: articulated jobs write per-group albedos under textured/hunyuan/groups/.
-        cands = [p for p in sorted(d.rglob("*albedo*.jpg"))] + \
-                [p for p in sorted(d.rglob("*.jpg"))
-                 if "metallic" not in p.name and "roughness" not in p.name]
-        albedo = cands[0] if cands else None
-    if albedo is None:
-        return None
-    lum = np.asarray(Image.open(albedo).convert("L"), dtype=np.float32) / 255.0
-    textured = lum < 0.97           # drop the near-white UV-atlas background
-    if textured.sum() == 0:
-        return {"albedo": str(albedo), "dark_fraction": 0.0, "mean_luma": 1.0}
-    vals = lum[textured]
-    return {
-        "albedo": str(albedo),
-        "mean_luma": float(vals.mean()),
-        "dark_fraction": float((vals < 0.25).mean()),   # markedly dark texels
-        "note": "heuristic shadow-bake proxy; high dark_fraction on a light object = suspect",
-    }
-
-
 # --- per-job driver ----------------------------------------------------------
 def run_eval(job: JobDir, backends: list[str]) -> dict:
     """Render previews + compute metrics.json for a job's textured backends. Sets stage eval."""
@@ -431,7 +395,7 @@ def run_eval(job: JobDir, backends: list[str]) -> dict:
         entry: dict = {"glb": str(glb)}
 
         # Appearance render from the condition camera (drives IoU / CLIP / LPIPS).
-        mesh = load_output_colored(str(glb), camera, up="z" if job.kind == "urdf" else "y")
+        mesh = load_output_colored(str(glb), camera, up="z")
         res = int(_CFG.get("render.resolution"))
         cond = R.render_appearance(mesh, R.CANONICAL_YAW, R.CANONICAL_PITCH, res,
                                    int(_CFG.get("render.ssaa")))
@@ -457,23 +421,15 @@ def run_eval(job: JobDir, backends: list[str]) -> dict:
 
         metrics["backends"][backend] = entry
 
-    if "hunyuan" in backends:
-        hs = hunyuan_albedo_shadow(job)
-        if hs is not None:
-            metrics["hunyuan_albedo_shadow"] = hs
-
-    # Articulated additions (PRD_articulated_v2): joint-state renders per textured backend
-    # and the per-group diagnostics that feed retexture candidate selection.
-    if job.kind == "urdf":
-        for backend in backends:
-            if backend in metrics["backends"]:
-                try:
-                    manifest = render_articulated_states(job, backend)
-                    metrics["backends"][backend]["state_renders"] = len(manifest["renders"])
-                except Exception as e:  # noqa: BLE001
-                    print(f"[eval] state renders failed for {backend}: {e}")
-        diag = write_diagnostics(job, backends)
-        metrics["diagnostics"] = str(diag) if diag else None
+    for backend in backends:
+        if backend in metrics["backends"]:
+            try:
+                manifest = render_articulated_states(job, backend)
+                metrics["backends"][backend]["state_renders"] = len(manifest["renders"])
+            except Exception as e:  # noqa: BLE001
+                print(f"[eval] state renders failed for {backend}: {e}")
+    diag = write_diagnostics(job, backends)
+    metrics["diagnostics"] = str(diag) if diag else None
 
     job.write_json(job.metrics(), metrics)
     return metrics

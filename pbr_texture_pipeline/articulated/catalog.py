@@ -1,26 +1,11 @@
-"""Category-aware material catalog for articulated assets (port of trellis_pbr/material_catalog.py).
+"""Category-aware material catalog for articulated assets.
 
 The catalog constrains Stage P's choices to physically-plausible materials per (category,
 semantic-label) and provides the coercion fallback when the VLM's plan misses a label.
-The plan's swatch_prompt strings and this module's prompt templates are descriptive material
-metadata (kept for the plan schema and PBR hints); nothing renders swatch images anymore.
 """
 from __future__ import annotations
 
-import hashlib
-import re
 from typing import Dict, List
-
-# --- swatch prompt templates -------------------------------------------------
-SWATCH_PROMPT = (
-    "seamless tileable {material} surface texture, photorealistic material sample, "
-    "flat top-down view, even soft studio lighting, no objects, no shadows, "
-    "uniform, high detail, 4k material swatch"
-)
-SWATCH_NEGATIVE = (
-    "object, 3d shape, perspective, depth, vignette, text, watermark, logo, "
-    "people, hands, drop shadow, frame, border, blurry"
-)
 
 # --- material definitions: friendly name -> descriptive phrase for the prompt --
 MATERIALS: Dict[str, str] = {
@@ -90,10 +75,6 @@ _CATEGORY_DEFAULTS = {
 
 _FALLBACK = ["oak_wood", "brushed_steel", "white_plastic", "matte_black_metal"]
 
-# Heuristic threshold: strings longer than this (or containing the swatch boilerplate)
-# are treated as full swatch prompts rather than bare material names.
-_PROMPT_LEN_THRESHOLD = 60
-
 
 def options_for(category: str, semantic_label: str) -> List[str]:
     """Return the sensible material options for a part given its category + label."""
@@ -104,17 +85,9 @@ def options_for(category: str, semantic_label: str) -> List[str]:
     return _CATEGORY_DEFAULTS.get(category, _FALLBACK)
 
 
-def looks_like_prompt(s: str) -> bool:
-    """True if `s` is already a full swatch prompt rather than a bare material name."""
-    return len(s) > _PROMPT_LEN_THRESHOLD or "seamless tileable" in s.lower()
-
-
-def swatch_prompt(material: str) -> str:
-    """Resolve a material name (catalog key or free text) to a swatch prompt."""
-    if looks_like_prompt(material):
-        return material
-    phrase = MATERIALS.get(material, material.replace("_", " "))
-    return SWATCH_PROMPT.format(material=phrase)
+def material_phrase(material: str) -> str:
+    """Human-readable phrase for a material key (e.g. 'oak_wood' -> 'light oak wood grain')."""
+    return MATERIALS.get(material, material.replace("_", " "))
 
 
 # --- PBR hints for the constant-material fallback (tiny groups skip the backends) ------------
@@ -144,17 +117,6 @@ PBR_HINTS: Dict[str, tuple] = {
 }
 _PBR_DEFAULT = ((180, 180, 180), 0.0, 0.8)
 
-
 def pbr_hint(material: str) -> tuple:
     """(base_color RGB 0-255, metallic, roughness) for a material name; sane default otherwise."""
     return PBR_HINTS.get(material, _PBR_DEFAULT)
-
-
-def slug(material: str) -> str:
-    """Filesystem-safe cache key. Truncates long prompts and appends a short hash so distinct
-    prompts never collide while filenames stay sane."""
-    base = re.sub(r"[^a-z0-9]+", "_", material.lower()).strip("_")
-    if len(base) <= 60:
-        return base
-    digest = hashlib.sha1(material.encode("utf-8")).hexdigest()[:8]
-    return f"{base[:60].rstrip('_')}_{digest}"

@@ -12,10 +12,10 @@ A1 (PRD.md section 11), per asset under partnet_mobility/:
      bounding_box.json deleted; grouping and labels identical; required_files closure exists
      on disk.
 
-A12a (PRD_articulated_v2 section 12): the opened joint configuration keeps every joint value
+A12a (PRD.md section 15): the opened joint configuration keeps every joint value
 inside its limits and produces finite assembled bounds; runs from the asset alone.
 
-A9 (PRD_articulated_v2 section 12): slicing the persisted input/mesh_norm.glb by
+A9 (PRD.md section 15): slicing the persisted input/mesh_norm.glb by
 input/face_ranges.json reproduces each group's geometry: undoing re-pose and
 normalization on the sliced triangles matches merge_group_mesh output pushed through
 rest-pose FK (the Z-up URDF world assembly is normalized with no axis swap). Needs job dirs produced by Stage R; pass --jobs-root to enable (the newest job
@@ -57,10 +57,14 @@ BBOX_TOL = 1e-5
 A9_REL_TOL = 1e-5
 
 
-def _load_obj_vertices(asset_dir: Path, rel: str) -> np.ndarray:
+def _load_visual_vertices(asset_dir: Path, vis) -> np.ndarray:
     import trimesh
 
-    m = trimesh.load(str(asset_dir / rel), force="mesh", process=False, skip_materials=True)
+    if vis.primitive is not None:
+        m = U.primitive_to_trimesh(vis.primitive)
+    else:
+        m = trimesh.load(str(asset_dir / vis.obj), force="mesh", process=False,
+                         skip_materials=True)
     return np.asarray(m.vertices, dtype=np.float64)
 
 
@@ -83,34 +87,40 @@ def check_asset(asset_dir: Path) -> list[str]:
     seen = set()
     for g in groups:
         for vis in g.visuals:
-            key = (g.link, vis.obj, id(vis))
+            vis_key = vis.obj or f"<{vis.primitive['type']}>" if vis.primitive else "?"
+            key = (g.link, vis_key, id(vis))
             if key in seen:
-                errors.append(f"visual {vis.obj} in {g.link} grouped twice")
+                errors.append(f"visual {vis_key} in {g.link} grouped twice")
             seen.add(key)
 
-    # 2. FK: PartNet authors OBJs in one global frame, so the COMPOSED per-visual world
-    #    transform fk[link] @ visual_origin equals the base rotation R_base for every visual
-    #    at rest pose (per-link FK translations are cancelled by the visual origins).
+    # 2. FK: PartNet-Mobility authors OBJs in one global frame, so the COMPOSED per-visual
+    #    world transform fk[link] @ visual_origin equals the base rotation R_base for every
+    #    visual at rest pose. This invariant does not hold for Articraft assets (primitives
+    #    have local origins in their link frame), so skip the check when primitives are present.
+    has_primitives = any(vis.primitive is not None
+                        for vs in asset.links.values() for vis in vs)
     fk = U.link_world_transforms(asset)
     links_with_visuals = [ln for ln, vs in asset.links.items() if vs]
-    R_base = fk[links_with_visuals[0]] @ asset.links[links_with_visuals[0]][0].origin
-    spread = max(float(np.abs(fk[ln] @ vis.origin - R_base).max())
-                 for ln in links_with_visuals for vis in asset.links[ln])
-    if spread > FK_TOL:
-        errors.append(f"composed visual world transforms differ (spread {spread:.2e})")
 
-    assembled = []
-    raw = []
-    for ln in links_with_visuals:
-        for vis in asset.links[ln]:
-            v = _load_obj_vertices(asset_dir, vis.obj)
-            assembled.append(_apply(fk[ln] @ vis.origin, v))
-            raw.append(v)
-    assembled = np.concatenate(assembled, axis=0)
-    raw = np.concatenate(raw, axis=0)
-    err = float(np.abs(assembled - _apply(R_base, raw)).max())
-    if err > FK_TOL:
-        errors.append(f"assembled != R_base @ raw_concat (max err {err:.2e})")
+    if not has_primitives:
+        R_base = fk[links_with_visuals[0]] @ asset.links[links_with_visuals[0]][0].origin
+        spread = max(float(np.abs(fk[ln] @ vis.origin - R_base).max())
+                     for ln in links_with_visuals for vis in asset.links[ln])
+        if spread > FK_TOL:
+            errors.append(f"composed visual world transforms differ (spread {spread:.2e})")
+
+        assembled = []
+        raw = []
+        for ln in links_with_visuals:
+            for vis in asset.links[ln]:
+                v = _load_visual_vertices(asset_dir, vis)
+                assembled.append(_apply(fk[ln] @ vis.origin, v))
+                raw.append(v)
+        assembled = np.concatenate(assembled, axis=0)
+        raw = np.concatenate(raw, axis=0)
+        err = float(np.abs(assembled - _apply(R_base, raw)).max())
+        if err > FK_TOL:
+            errors.append(f"assembled != R_base @ raw_concat (max err {err:.2e})")
 
     # 3. bbox cross-check (skipped when bounding_box.json is absent).
     if asset.bbox is not None:
@@ -128,19 +138,20 @@ def check_asset(asset_dir: Path) -> list[str]:
                           f"(err {bbox_err:.2e}, extent {extent:.3f})")
 
     # 4. Metadata fallback: strip optional metadata, expect identical grouping + labels.
+    #    The robot-name category fallback survives stripping, so only check that grouping
+    #    and labels are stable.
     with tempfile.TemporaryDirectory(prefix="bt_a1_") as tmp:
         stripped = Path(tmp) / asset_dir.name
         shutil.copytree(asset_dir, stripped,
                         ignore=shutil.ignore_patterns(*_META_FILES))
         asset2 = U.parse_asset(stripped)
-        if asset2.category is not None:
-            errors.append("stripped asset still reports a category")
         groups2 = U.build_groups(asset2, "semantic")
         sig1 = sorted((g.group_id, g.label, len(g.visuals)) for g in groups)
         sig2 = sorted((g.group_id, g.label, len(g.visuals)) for g in groups2)
         if sig1 != sig2:
             errors.append("grouping/labels change when metadata is deleted")
-        closure = U.required_files(stripped / "mobility.urdf")
+        urdf_path = U.find_urdf(stripped)
+        closure = U.required_files(urdf_path)
         missing = [r for r in closure if not (stripped / r).is_file()]
         if missing:
             errors.append(f"required_files closure missing on disk: {missing[:5]}")
@@ -177,7 +188,7 @@ def check_opened_pose(asset_dir: Path) -> list[str]:
     pts = []
     for ln, visuals in asset.links.items():
         for vis in visuals:
-            v = _load_obj_vertices(asset_dir, vis.obj)
+            v = _load_visual_vertices(asset_dir, vis)
             pts.append(_apply(fk_open[ln] @ vis.origin, v))
     allp = np.concatenate(pts, axis=0)
     if not np.isfinite(allp).all():
@@ -195,8 +206,8 @@ def _find_job_dir(jobs_root: Path, asset_name: str) -> Path | None:
 
 def check_merge_split(asset_dir: Path, job_dir: Path) -> list[str]:
     """Gate A9: per-group slices of the persisted merged mesh reproduce merge_group_mesh
-    output after undoing normalization, re-pose, and rest-pose FK (the Z-up world
-    assembly enters the internal frame with no axis swap)."""
+    output after undoing normalization, re-pose, rest-pose FK, and the Y-up glTF export
+    swap (mesh_norm.glb stores Y-up; the Z-up world assembly was swapped before export)."""
     import trimesh
 
     errors: list[str] = []
@@ -210,9 +221,13 @@ def check_merge_split(asset_dir: Path, job_dir: Path) -> list[str]:
     if len(mf) != n_faces:
         return [f"mesh_norm.glb has {len(mf)} faces, face_ranges cover {n_faces}"]
 
+    # mesh_norm.glb is Y-up (glTF convention); convert back to Z-up internal frame first.
+    # Y-up -> Z-up: (x, y, z) -> (x, -z, y)
+    mv = np.column_stack([mv[:, 0], -mv[:, 2], mv[:, 1]])
+
     # Undo, in reverse order of Stage R: re-pose (the R recorded in the job's camera.json;
     # orientation detection may have picked a panel other than the config fallback), then
-    # center+scale. Stage R normalizes the Z-up world assembly with up="z": no axis swap.
+    # center+scale.
     cam_path = job_dir / "control" / "camera.json"
     cam = json.loads(cam_path.read_text()) if cam_path.is_file() else {}
     if cam.get("repose_applied") and cam.get("R") is not None:
@@ -298,8 +313,7 @@ def check_open_pose_artifacts(job_dir: Path) -> list[str]:
     control = job_dir / "control"
     needed = [control / "open" / n for n in ("depth.png", "normal.png", "canny.png",
                                              "mask.png")]
-    needed += [control / "camera_open.json", control / "visibility_rest.npz",
-               control / "visibility_open.npz"]
+    needed += [control / "camera_open.json", control / "visibility_rest.npz"]
     missing = [str(p.relative_to(job_dir)) for p in needed if not p.is_file()]
     if missing:
         return [f"missing artifacts: {', '.join(missing)}"]
@@ -315,8 +329,7 @@ def check_open_pose_artifacts(job_dir: Path) -> list[str]:
         errors.append("occluded_frac_rest missing from asset.groups records")
         return errors
     bad = [g["group_id"] for g in groups
-           for o in (g["occluded_frac_rest"], g["occluded_frac_open"])
-           if not (0.0 <= o <= 1.0)]
+           if not (0.0 <= g["occluded_frac_rest"] <= 1.0)]
     if bad:
         errors.append(f"occlusion fractions outside [0,1] for {sorted(set(bad))}")
     if min(occs) >= 0.5:
@@ -324,12 +337,7 @@ def check_open_pose_artifacts(job_dir: Path) -> list[str]:
                       "test likely disagrees with the renderer")
     weight = sum(g.get("n_faces", 1) for g in groups)
     mean_rest = sum(g["occluded_frac_rest"] * g.get("n_faces", 1) for g in groups) / weight
-    mean_open = sum(g["occluded_frac_open"] * g.get("n_faces", 1) for g in groups) / weight
-    if mean_open > mean_rest + 0.05:
-        errors.append(f"opening HIDES surface area (mean occluded {mean_rest:.3f} rest -> "
-                      f"{mean_open:.3f} open); wrong open direction?")
-    print(f"        occluded rest={mean_rest:.3f} open={mean_open:.3f} "
-          f"open-mask={cov_open:.3f}")
+    print(f"        occluded rest={mean_rest:.3f} open-mask={cov_open:.3f}")
     return errors
 
 
@@ -343,8 +351,6 @@ def check_spec_category(jobs_root: Path) -> int:
     for job_dir in sorted(d for d in jobs_root.iterdir()
                           if (d / "job.json").is_file()):
         job = json.loads((job_dir / "job.json").read_text())
-        if job.get("kind") != "urdf":
-            continue
         cat = (job.get("asset") or {}).get("category")
         spec_path = job_dir / "vlm" / "spec.json"
         if not cat or not spec_path.is_file():
@@ -401,7 +407,8 @@ def main() -> int:
     args = ap.parse_args()
 
     asset_dirs = sorted(d for d in ASSETS_ROOT.iterdir()
-                        if d.is_dir() and (d / "mobility.urdf").is_file())
+                        if d.is_dir() and ((d / "mobility.urdf").is_file()
+                                           or (d / "model.urdf").is_file()))
     if not asset_dirs:
         print(f"no assets under {ASSETS_ROOT}")
         return 1

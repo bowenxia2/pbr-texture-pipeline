@@ -24,10 +24,8 @@ from pathlib import Path
 MODEL_VIEWER_URL = (
     "https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js"
 )
-BACKENDS = ["trellis2", "hunyuan"]
-# Mirrors JobDir.output_glb: articulated jobs assemble assembled.glb; trellis2 writes
-# textured.glb; hunyuan writes textured_mesh.glb.
-GLB_NAMES = ("assembled.glb", "textured.glb", "textured_mesh.glb")
+BACKENDS = ["trellis2"]
+GLB_NAMES = ("assembled.glb",)
 STAGES = ["render", "vlm", "diffuse", "plan", "texture", "eval", "judge"]
 
 
@@ -116,7 +114,7 @@ def collect_jobs(jobs_root: Path):
             })
         jobs.append({
             "job_id": state.get("job_id", d.name),
-            "kind": state.get("kind", "mesh"),
+            "kind": "urdf",
             "category": spec.get("category") or (state.get("asset") or {}).get("category") or "",
             "prompt": spec.get("ref_prompt") or metrics.get("prompt") or "",
             "chosen": rel(chosen, jobs_root) if chosen.is_file() else None,
@@ -215,14 +213,11 @@ def viewer_html(job, title_id):
             parts.append("</div>")
         parts.append("</div>")
         parts.append('<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>')
-        if job.get("kind") == "urdf":
-            # Joint-slider viewer: served by the Gradio app when it is up, or standalone via
-            # scripts/articulated_viewer.py (same route shape).
-            links = " &middot; ".join(
-                f'<a href="/viewer/{html.escape(job["job_id"])}/{b["name"]}" '
-                f'title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">'
-                f'joints: {b["name"]}</a>' for b in job["backends"])
-            parts.append(f'<div class="hint">articulated &middot; {links}</div>')
+        links = " &middot; ".join(
+            f'<a href="/viewer/{html.escape(job["job_id"])}/{b["name"]}" '
+            f'title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">'
+            f'joints: {b["name"]}</a>' for b in job["backends"])
+        parts.append(f'<div class="hint">articulated &middot; {links}</div>')
         if job.get("winner") and job.get("judge_reasoning"):
             snippet = job["judge_reasoning"]
             if len(snippet) > 320:
