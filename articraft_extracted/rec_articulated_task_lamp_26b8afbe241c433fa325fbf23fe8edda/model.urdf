@@ -1,0 +1,158 @@
+<robot name="wall_task_lamp">
+  <material name="graphite">
+    <color rgba="0.16 0.16 0.18 1" />
+    </material>
+  <material name="shade_cream">
+    <color rgba="0.91 0.89 0.82 1" />
+    </material>
+  <link name="wall_plate">
+    <visual name="plate_body">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="plate_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate_ear_0.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="plate_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate_ear_1.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <collision name="plate_body">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="plate_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate_ear_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="plate_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/wall_plate_ear_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_arm">
+    <visual name="lower_link">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="lower_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_ear_0.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="lower_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_ear_1.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <collision name="lower_link">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_ear_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="lower_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_ear_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="upper_link">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="upper_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_ear_0.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="upper_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_ear_1.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <collision name="upper_link">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear_0">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_ear_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="upper_ear_1">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_ear_1.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shade">
+    <visual name="shade_bracket">
+      <geometry>
+        <mesh filename="assets/meshes/shade_bracket.obj" />
+        </geometry>
+      <material name="graphite" />
+      </visual>
+    <visual name="bell_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bell_shade.obj" />
+        </geometry>
+      <material name="shade_cream" />
+      </visual>
+    <collision name="shade_bracket">
+      <geometry>
+        <mesh filename="assets/meshes/shade_bracket.obj" />
+        </geometry>
+      </collision>
+    <collision name="bell_shell">
+      <geometry>
+        <mesh filename="assets/meshes/bell_shade.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="wall_plate_to_lower_arm" type="revolute">
+    <origin xyz="0.028 0 0" rpy="0 0 0" />
+    <parent link="wall_plate" />
+    <child link="lower_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="16" velocity="1.5" lower="-0.785398" upper="1.39626" />
+    </joint>
+  <joint name="lower_arm_to_upper_arm" type="revolute">
+    <origin xyz="0.14 0 0" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.7" lower="-1.309" upper="1.65806" />
+    </joint>
+  <joint name="upper_arm_to_shade" type="revolute">
+    <origin xyz="0.205 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="2.2" lower="-0.959931" upper="0.698132" />
+    </joint>
+  </robot>

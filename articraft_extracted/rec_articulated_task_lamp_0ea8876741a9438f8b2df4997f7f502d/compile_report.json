@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_articulated_task_lamp_0ea8876741a9438f8b2df4997f7f502d",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "d6efb4514384a7a3854596990e29643bd4f2087fd9035ec15d5fd24f7824c513",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "68943bbe7505b04f960a2c837324953da9f5b8d52e60630371c33fe60b0c663f",
+    "model_py_mtime_ns": 1777283135030999548,
+    "model_py_size_bytes": 9569,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.002025250010774471
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

@@ -1,0 +1,322 @@
+<robot name="industrial_air_pump">
+  <material name="satin_steel">
+    <color rgba="0.73 0.75 0.78 1" />
+    </material>
+  <material name="frame_steel">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="grip_rubber">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="molded_black">
+    <color rgba="0.14 0.14 0.15 1" />
+    </material>
+  <link name="body">
+    <visual name="guide_shell">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_guide_shell.obj" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="barrel_base">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.04" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="barrel_shell">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_barrel_shell.obj" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_top_collar.obj" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="pedal_tread">
+      <origin xyz="0 0.031 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.012 0.008" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="guide_shell">
+      <origin xyz="0 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_guide_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="barrel_base">
+      <origin xyz="0 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="barrel_shell">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_barrel_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_collar">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pump_top_collar.obj" />
+        </geometry>
+      </collision>
+    <collision name="pedal_tread">
+      <origin xyz="0 0.031 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.012 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="piston_rod">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.78" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="handle_stop">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="top_bar">
+      <origin xyz="0 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.34" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="top_pad_0">
+      <origin xyz="-0.115 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="top_pad_1">
+      <origin xyz="0.115 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="piston_rod">
+      <origin xyz="0 0 -0.05" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.78" />
+        </geometry>
+      </collision>
+    <collision name="handle_stop">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.012" />
+        </geometry>
+      </collision>
+    <collision name="top_bar">
+      <origin xyz="0 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.34" />
+        </geometry>
+      </collision>
+    <collision name="top_pad_0">
+      <origin xyz="-0.115 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="top_pad_1">
+      <origin xyz="0.115 0 0.34" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="stabilizer">
+    <visual name="slide_bar">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.5" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="slider_block">
+      <geometry>
+        <box size="0.1 0.04 0.028" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="web_0">
+      <origin xyz="-0.205 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.034" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="web_1">
+      <origin xyz="0.205 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.034" />
+        </geometry>
+      <material name="frame_steel">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.24 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.09 0.024" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.24 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.09 0.024" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="slide_bar">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.5" />
+        </geometry>
+      </collision>
+    <collision name="slider_block">
+      <geometry>
+        <box size="0.1 0.04 0.028" />
+        </geometry>
+      </collision>
+    <collision name="web_0">
+      <origin xyz="-0.205 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="web_1">
+      <origin xyz="0.205 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.034" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.24 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.09 0.024" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.24 0 -0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.09 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="grip">
+    <visual name="sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/pump_grip_sleeve.obj" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="bridge">
+      <geometry>
+        <mesh filename="assets/meshes/pump_grip_bridge.obj" />
+        </geometry>
+      <material name="molded_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="loop_bar">
+      <origin xyz="0 0.028 -0.068" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.11" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/pump_grip_sleeve.obj" />
+        </geometry>
+      </collision>
+    <collision name="bridge">
+      <geometry>
+        <mesh filename="assets/meshes/pump_grip_bridge.obj" />
+        </geometry>
+      </collision>
+    <collision name="loop_bar">
+      <origin xyz="0 0.028 -0.068" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_handle" type="prismatic">
+    <origin xyz="0 0 0.7" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="handle" />
+    <axis xyz="0 0 1" />
+    <limit effort="140" velocity="0.6" lower="0" upper="0.2" />
+    </joint>
+  <joint name="body_to_stabilizer" type="prismatic">
+    <origin xyz="0 0 0.025" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="stabilizer" />
+    <axis xyz="1 0 0" />
+    <limit effort="60" velocity="0.3" lower="-0.08" upper="0.08" />
+    </joint>
+  <joint name="handle_to_grip" type="continuous">
+    <origin xyz="0 0 0.34" rpy="0 0 0" />
+    <parent link="handle" />
+    <child link="grip" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  </robot>

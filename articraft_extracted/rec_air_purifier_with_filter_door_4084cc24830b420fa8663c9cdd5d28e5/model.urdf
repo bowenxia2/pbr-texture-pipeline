@@ -1,0 +1,280 @@
+<robot name="desktop_globe_air_purifier">
+  <material name="warm_white">
+    <color rgba="0.93 0.94 0.95 1" />
+    </material>
+  <material name="satin_white">
+    <color rgba="0.89 0.9 0.91 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.17 0.18 0.19 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.25 0.27 0.29 1" />
+    </material>
+  <material name="filter_gray">
+    <color rgba="0.49 0.53 0.56 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.09 0.1 0.11 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.015915" ixy="0" ixz="0" iyy="0.015915" iyz="0" izz="0.02883" />
+      </inertial>
+    <visual name="bottom_disc">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="base_skirt">
+      <origin xyz="0 -0.106 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.082 0.068" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="left_skirt_wall">
+      <origin xyz="-0.111 -0.01 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.166 0.068" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="right_skirt_wall">
+      <origin xyz="0.111 -0.01 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.166 0.068" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="left_front_cheek">
+      <origin xyz="-0.111 0.118 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.036 0.068" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="right_front_cheek">
+      <origin xyz="0.111 0.118 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.036 0.068" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="top_plate">
+      <origin xyz="0 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.155" length="0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="neck_pad">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.008" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="slot_jamb_left">
+      <origin xyz="-0.075 0.153 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.004 0.068" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slot_jamb_right">
+      <origin xyz="0.075 0.153 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.004 0.068" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slot_header">
+      <origin xyz="0 0.153 0.076" rpy="0 0 0" />
+      <geometry>
+        <box size="0.138 0.004 0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="slot_sill">
+      <origin xyz="0 0.153 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.138 0.004 0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_housing">
+    <inertial>
+      <origin xyz="0 0 -0.045" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.0104958" ixy="0" ixz="0" iyy="0.0104958" iyz="0" izz="0.0143733" />
+      </inertial>
+    <visual name="lower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/lower_shell.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="support_neck">
+      <origin xyz="0 0 -0.138" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.076" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.89 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="neck_collar">
+      <origin xyz="0 0 -0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.018" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="intake_band_upper">
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_intake_band.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="intake_band_lower">
+      <origin xyz="0 0 -0.072" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_intake_band.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="top_cap">
+    <inertial>
+      <origin xyz="0.03 0 0.07" rpy="0 0 0" />
+      <mass value="0.75" />
+      <inertia ixx="0.003625" ixy="0" ixz="0" iyy="0.007225" iyz="0" izz="0.00765" />
+      </inertial>
+    <visual name="upper_shell">
+      <geometry>
+        <mesh filename="assets/meshes/upper_shell.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="outlet_shroud">
+      <origin xyz="0.118 0 0.058" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.058" />
+        </geometry>
+      <material name="satin_white">
+        <color rgba="0.89 0.9 0.91 1" />
+        </material>
+      </visual>
+    <visual name="outlet_grille">
+      <origin xyz="0.146 0 0.058" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.018" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="top_pivot_cap">
+      <origin xyz="0 0 0.134" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.016" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.25 0.27 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_drawer">
+    <inertial>
+      <origin xyz="0 -0.058 0.027" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.000581146" ixy="0" ixz="0" iyy="0.000643679" iyz="0" izz="0.00104837" />
+      </inertial>
+    <visual name="cartridge_body">
+      <origin xyz="0 -0.062 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.124 0.045" />
+        </geometry>
+      <material name="filter_gray">
+        <color rgba="0.49 0.53 0.56 1" />
+        </material>
+      </visual>
+    <visual name="front_panel">
+      <origin xyz="0 0.001 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.138 0.006 0.052" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="pull_handle">
+      <origin xyz="0 0.008 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.008 0.01" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.09 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_lower_housing" type="fixed">
+    <origin xyz="0 0 0.271" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_housing" />
+    </joint>
+  <joint name="housing_cap_spin" type="continuous">
+    <parent link="lower_housing" />
+    <child link="top_cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="6" />
+    </joint>
+  <joint name="base_to_filter_drawer" type="prismatic">
+    <origin xyz="0 0.147 0.012" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="filter_drawer" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="0.18" lower="0" upper="0.085" />
+    </joint>
+  </robot>

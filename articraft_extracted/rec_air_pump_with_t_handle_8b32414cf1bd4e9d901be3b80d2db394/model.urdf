@@ -1,0 +1,123 @@
+<robot name="service_station_pump">
+  <material name="base_dark">
+    <color rgba="0.2 0.2 0.22 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="gauge_dark">
+    <color rgba="0.13 0.14 0.15 1" />
+    </material>
+  <material name="grip_black">
+    <color rgba="0.1 0.1 0.1 1" />
+    </material>
+  <material name="selector_red">
+    <color rgba="0.7 0.12 0.08 1" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="base_dark">
+        <color rgba="0.2 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="barrel">
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gauge_housing">
+    <visual name="gauge_housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/gauge_housing_shell.obj" />
+        </geometry>
+      <material name="gauge_dark">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="plunger">
+    <visual name="plunger_rod">
+      <geometry>
+        <mesh filename="assets/meshes/plunger_rod.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="plunger_boss">
+      <geometry>
+        <mesh filename="assets/meshes/plunger_boss.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="handle_crossbar">
+      <geometry>
+        <mesh filename="assets/meshes/handle_crossbar.obj" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="handle_left_grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle_left_grip.obj" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    <visual name="handle_right_grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle_right_grip.obj" />
+        </geometry>
+      <material name="grip_black">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector_knob">
+    <visual name="selector_knob_shell">
+      <geometry>
+        <mesh filename="assets/meshes/selector_knob_shell.obj" />
+        </geometry>
+      <material name="selector_red">
+        <color rgba="0.7 0.12 0.08 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_barrel" type="fixed">
+    <origin xyz="0 0 0.082" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="barrel" />
+    </joint>
+  <joint name="barrel_to_gauge_housing" type="fixed">
+    <origin xyz="0 0 0.43" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="gauge_housing" />
+    </joint>
+  <joint name="barrel_to_plunger" type="prismatic">
+    <origin xyz="0 0 0.736" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="plunger" />
+    <axis xyz="0 0 1" />
+    <limit effort="130" velocity="0.65" lower="0" upper="0.26" />
+    </joint>
+  <joint name="gauge_housing_to_selector_knob" type="revolute">
+    <origin xyz="0.032 0.131 -0.038" rpy="0 0 0" />
+    <parent link="gauge_housing" />
+    <child link="selector_knob" />
+    <axis xyz="0 1 0" />
+    <limit effort="2" velocity="4" lower="-1.25" upper="1.25" />
+    </joint>
+  </robot>

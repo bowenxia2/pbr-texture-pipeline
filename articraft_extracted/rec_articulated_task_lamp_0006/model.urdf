@@ -1,0 +1,213 @@
+<robot name="factory_wall_lamp">
+  <material name="steel">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.56 0.58 0.6 1" />
+    </material>
+  <material name="enamel_green">
+    <color rgba="0.18 0.28 0.2 1" />
+    </material>
+  <material name="reflector_white">
+    <color rgba="0.88 0.88 0.84 1" />
+    </material>
+  <link name="bracket">
+    <visual name="backplate">
+      <origin xyz="-0.006 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.095 0.22" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="standoff">
+      <origin xyz="0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.05 0.096" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_post">
+      <origin xyz="0.016 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.06" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="upper_anchor_cap">
+      <origin xyz="-0.004 0 0.068" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_anchor_cap">
+      <origin xyz="-0.004 0 -0.068" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="upper_rib">
+      <origin xyz="-0.002 0 0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.068 0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lower_rib">
+      <origin xyz="-0.002 0 -0.066" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.068 0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="boom">
+    <visual name="shoulder_sleeve">
+      <geometry>
+        <cylinder radius="0.012" length="0.05" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_clevis">
+      <origin xyz="0.022 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.02 0.066" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="upper_strut">
+      <origin xyz="0.173 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.014 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="lower_strut">
+      <origin xyz="0.173 0 -0.026" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.014 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="head_brace">
+      <origin xyz="0.31 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.022 0.064" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="head_sleeve">
+      <origin xyz="0.332 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.042" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="tension_rod">
+      <origin xyz="0.188 0 0.035" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.252" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="trunnion">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.036" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="neck_stem">
+      <origin xyz="0.025 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.022 0.022" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="collar">
+      <origin xyz="0.055 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.028" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.11 0 -0.02" rpy="0 0.58 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_shade_shell.obj" />
+        </geometry>
+      <material name="enamel_green">
+        <color rgba="0.18 0.28 0.2 1" />
+        </material>
+      </visual>
+    <visual name="reflector_liner">
+      <origin xyz="0.109 0 -0.02" rpy="0 0.58 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_reflector_liner.obj" />
+        </geometry>
+      <material name="reflector_white">
+        <color rgba="0.88 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0.16 0 -0.054" rpy="0 2.1508 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.006" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.56 0.58 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shoulder_swing" type="revolute">
+    <origin xyz="0.016 0 0" rpy="0 0 0" />
+    <parent link="bracket" />
+    <child link="boom" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.8" lower="-1.05" upper="1.05" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0.332 0 0" rpy="0 0 0" />
+    <parent link="boom" />
+    <child link="head" />
+    <axis xyz="0 1 0" />
+    <limit effort="6" velocity="2" lower="-0.28" upper="0.55" />
+    </joint>
+  </robot>

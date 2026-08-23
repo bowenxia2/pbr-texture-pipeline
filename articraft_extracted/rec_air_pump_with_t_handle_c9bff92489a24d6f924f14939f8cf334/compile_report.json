@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 20,
+    "tool_call_count": 21,
+    "compile_attempt_count": 5,
+    "fingerprint_inputs": {
+      "model_py_sha256": "e6729138e2b4fe1b19b4ba39e4c0e54f49c125ac7fdd65d9f0f0fcad8597d60d",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "a6ce84ba40f453fc931f2d539ddacd5b363e32420e6cbc653f22bd4d0e66f1b8"
+  }
+}

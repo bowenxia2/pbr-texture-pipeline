@@ -1,0 +1,259 @@
+<robot name="portable_camping_pump">
+  <material name="matte_black_plastic">
+    <color rgba="0.02 0.025 0.025 1" />
+    </material>
+  <material name="anodized_blue_barrel">
+    <color rgba="0.05 0.28 0.62 1" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.005 0.005 0.006 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.74 0.75 1" />
+    </material>
+  <link name="base_barrel">
+    <visual name="base_plate">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_plate.obj" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="barrel_socket">
+      <origin xyz="0 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.012" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="barrel_shell">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="anodized_blue_barrel">
+        <color rgba="0.05 0.28 0.62 1" />
+        </material>
+      </visual>
+    <visual name="top_collar">
+      <origin xyz="0 0 0.258" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_collar.obj" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="guide_bushing">
+      <origin xyz="0 0 0.26" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/guide_bushing.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="side_0_hinge_lug_0">
+      <origin xyz="-0.048 0.041 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.026" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="side_0_hinge_lug_1">
+      <origin xyz="0.048 0.041 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.026" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="side_1_hinge_lug_0">
+      <origin xyz="-0.048 -0.041 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.026" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="side_1_hinge_lug_1">
+      <origin xyz="0.048 -0.041 0.031" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.012 0.026" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="side_0_hinge_cap_0">
+      <origin xyz="-0.059 0.041 0.031" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="side_0_hinge_cap_1">
+      <origin xyz="0.059 0.041 0.031" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="side_1_hinge_cap_0">
+      <origin xyz="-0.059 -0.041 0.031" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="side_1_hinge_cap_1">
+      <origin xyz="0.059 -0.041 0.031" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.008" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="handle_rod">
+    <visual name="rod">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.38" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="t_grip">
+      <origin xyz="0 0 0.225" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.17" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="grip_end_0">
+      <origin xyz="-0.085 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0145" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="grip_end_1">
+      <origin xyz="0.085 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.0145" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    <visual name="grip_hub">
+      <origin xyz="0 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.024 0.024" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="foot_0">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.082" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="hinge_web">
+      <origin xyz="0 0.016 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.045 0.018" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="foot_plate">
+      <origin xyz="0 0.062 -0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/foot_plate.obj" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="foot_1">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.082" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.75 1" />
+        </material>
+      </visual>
+    <visual name="hinge_web">
+      <origin xyz="0 0.016 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.045 0.018" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="foot_plate">
+      <origin xyz="0 0.062 -0.025" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/foot_plate.obj" />
+        </geometry>
+      <material name="matte_black_plastic">
+        <color rgba="0.02 0.025 0.025 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="barrel_to_handle" type="prismatic">
+    <origin xyz="0 0 0.274" rpy="0 0 0" />
+    <parent link="base_barrel" />
+    <child link="handle_rod" />
+    <axis xyz="0 0 1" />
+    <limit effort="55" velocity="0.3" lower="0" upper="0.1" />
+    </joint>
+  <joint name="base_to_foot_0" type="revolute">
+    <origin xyz="0 0.047 0.031" rpy="0 0 0" />
+    <parent link="base_barrel" />
+    <child link="foot_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="2" lower="0" upper="1.55" />
+    </joint>
+  <joint name="base_to_foot_1" type="revolute">
+    <origin xyz="0 -0.047 0.031" rpy="0 0 3.14159" />
+    <parent link="base_barrel" />
+    <child link="foot_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="2" lower="0" upper="1.55" />
+    </joint>
+  </robot>

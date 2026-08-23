@@ -1,0 +1,201 @@
+<robot name="sitdown_driving_arcade_cabinet">
+  <material name="shell_blue">
+    <color rgba="0.09 0.21 0.59 1" />
+    </material>
+  <material name="trim_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="seat_black">
+    <color rgba="0.11 0.11 0.12 1" />
+    </material>
+  <material name="wheel_black">
+    <color rgba="0.07 0.07 0.08 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.58 0.6 0.63 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.27 0.29 0.31 1" />
+    </material>
+  <material name="screen_glass">
+    <color rgba="0.05 0.06 0.08 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      <material name="shell_blue">
+        <color rgba="0.09 0.21 0.59 1" />
+        </material>
+      </visual>
+    <visual name="floor_pan">
+      <origin xyz="1.25 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 1 0.05" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="console_pod">
+      <origin xyz="0.5 0 0.88" rpy="0 -0.3 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_console_pod.obj" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="column_shroud">
+      <origin xyz="0.68 0 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.16" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0.39 0 1.17" rpy="0 -0.56 0" />
+      <geometry>
+        <box size="0.08 0.68 0.45" />
+        </geometry>
+      <material name="screen_glass">
+        <color rgba="0.05 0.06 0.08 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="floor_pan">
+      <origin xyz="1.25 0 0.215" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 1 0.05" />
+        </geometry>
+      </collision>
+    <collision name="console_pod">
+      <origin xyz="0.5 0 0.88" rpy="0 -0.3 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_console_pod.obj" />
+        </geometry>
+      </collision>
+    <collision name="column_shroud">
+      <origin xyz="0.68 0 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="screen_glass">
+      <origin xyz="0.39 0 1.17" rpy="0 -0.56 0" />
+      <geometry>
+        <box size="0.08 0.68 0.45" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="seat">
+    <visual name="seat_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_seat.obj" />
+        </geometry>
+      <material name="seat_black">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="seat_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_seat.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="steering_wheel">
+    <visual name="wheel_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_steering_wheel.obj" />
+        </geometry>
+      <material name="wheel_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="wheel_assembly">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_steering_wheel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="coin_door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_door.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.58 0.6 0.63 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_barrel">
+      <origin xyz="-0.003 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.432" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_door.obj" />
+        </geometry>
+      </collision>
+    <collision name="door_hinge_barrel">
+      <origin xyz="-0.003 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.432" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="coin_return">
+    <visual name="flap_panel">
+      <origin xyz="-0.005 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.125 0.055" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.27 0.29 0.31 1" />
+        </material>
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="-0.005 0 -0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.125 0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="seat_mount" type="fixed">
+    <origin xyz="1.14 0 0.24" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="seat" />
+    </joint>
+  <joint name="steering_wheel_spin" type="continuous">
+    <origin xyz="0.76 0 0.88" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="steering_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="10" />
+    </joint>
+  <joint name="coin_door_hinge" type="revolute">
+    <origin xyz="0 -0.17 0.56" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="coin_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="1.4" lower="0" upper="1.36136" />
+    </joint>
+  <joint name="coin_return_hinge" type="revolute">
+    <origin xyz="0.0005 0.17 -0.1175" rpy="0 0 0" />
+    <parent link="coin_door" />
+    <child link="coin_return" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="3" lower="0" upper="1.25664" />
+    </joint>
+  </robot>

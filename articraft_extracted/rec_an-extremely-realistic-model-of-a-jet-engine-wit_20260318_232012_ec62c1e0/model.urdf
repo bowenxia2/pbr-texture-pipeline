@@ -1,0 +1,137 @@
+<robot name="cutaway_turbofan_engine">
+  <material name="nacelle_paint">
+    <color rgba="0.86 0.87 0.89 1" />
+    </material>
+  <material name="titanium">
+    <color rgba="0.65 0.66 0.69 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.54 0.56 0.58 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="carbon_composite">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="heat_stained">
+    <color rgba="0.46 0.41 0.36 1" />
+    </material>
+  <link name="engine_case">
+    <inertial>
+      <origin xyz="0.507 0 0" rpy="0 1.5708 0" />
+      <mass value="95" />
+      <inertia ixx="20.2589" ixy="0" ixz="0" iyy="20.2589" iyz="0" izz="11.875" />
+      </inertial>
+    <visual name="outer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/engine_case_shell.obj" />
+        </geometry>
+      <material name="nacelle_paint">
+        <color rgba="0.86 0.87 0.89 1" />
+        </material>
+      </visual>
+    <visual name="stator_frame">
+      <geometry>
+        <mesh filename="assets/meshes/engine_case_stator.obj" />
+        </geometry>
+      <material name="titanium">
+        <color rgba="0.65 0.66 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="fan_rotor">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="34" />
+      <inertia ixx="1.74186" ixy="0" ixz="0" iyy="1.74186" iyz="0" izz="3.07062" />
+      </inertial>
+    <visual name="fan_hub">
+      <geometry>
+        <mesh filename="assets/meshes/fan_hub.obj" />
+        </geometry>
+      <material name="titanium">
+        <color rgba="0.65 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="fan_blades">
+      <geometry>
+        <mesh filename="assets/meshes/fan_blades.obj" />
+        </geometry>
+      <material name="carbon_composite">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="core_casing">
+    <inertial>
+      <origin xyz="0.39 0 0" rpy="0 1.5708 0" />
+      <mass value="26" />
+      <inertia ixx="1.75061" ixy="0" ixz="0" iyy="1.75061" iyz="0" izz="0.658125" />
+      </inertial>
+    <visual name="compressor_case">
+      <geometry>
+        <mesh filename="assets/meshes/core_case_shell.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="hot_nozzle">
+      <geometry>
+        <mesh filename="assets/meshes/core_nozzle.obj" />
+        </geometry>
+      <material name="heat_stained">
+        <color rgba="0.46 0.41 0.36 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="core_rotor">
+    <inertial>
+      <origin xyz="0.395 0 0" rpy="0 1.5708 0" />
+      <mass value="19" />
+      <inertia ixx="1.15061" ixy="0" ixz="0" iyy="1.15061" iyz="0" izz="0.27455" />
+      </inertial>
+    <visual name="shaft_and_drum">
+      <geometry>
+        <mesh filename="assets/meshes/core_rotor_body.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="compressor_stages">
+      <geometry>
+        <mesh filename="assets/meshes/core_compressor.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.54 0.56 0.58 1" />
+        </material>
+      </visual>
+    <visual name="turbine_stages">
+      <geometry>
+        <mesh filename="assets/meshes/core_turbine.obj" />
+        </geometry>
+      <material name="heat_stained">
+        <color rgba="0.46 0.41 0.36 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <parent link="engine_case" />
+    <child link="fan_rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="120" />
+    </joint>
+  <joint name="engine_case_to_core_casing" type="fixed">
+    <origin xyz="0.28 0 0" rpy="0 0 0" />
+    <parent link="engine_case" />
+    <child link="core_casing" />
+    </joint>
+  <joint name="core_spin" type="continuous">
+    <parent link="core_casing" />
+    <child link="core_rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="55" velocity="260" />
+    </joint>
+  </robot>

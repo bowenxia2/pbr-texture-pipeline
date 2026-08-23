@@ -1,0 +1,735 @@
+<robot name="rounded_square_air_fryer">
+  <material name="body_finish">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <material name="band_finish">
+    <color rgba="0.06 0.06 0.07 1" />
+    </material>
+  <material name="drawer_finish">
+    <color rgba="0.11 0.12 0.13 1" />
+    </material>
+  <material name="basket_finish">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="chamber_finish">
+    <color rgba="0.72 0.73 0.74 1" />
+    </material>
+  <material name="glass_finish">
+    <color rgba="0.22 0.28 0.3 0.32" />
+    </material>
+  <material name="control_finish">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="button_finish">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <link name="body">
+    <visual name="top_shell">
+      <origin xyz="0 0 0.33275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.291 0.311 0.0045" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="back_wall">
+      <origin xyz="0 0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0045 0.335" />
+        </geometry>
+      <material name="band_finish">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="side_wall">
+      <origin xyz="-0.14775 0 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.24 0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0.14775 0 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.24 0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_corner">
+      <origin xyz="-0.11 0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_corner_1">
+      <origin xyz="0.11 0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_corner">
+      <origin xyz="-0.11 -0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_corner_1">
+      <origin xyz="0.11 -0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_side">
+      <origin xyz="-0.1355 -0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.029 0.0045 0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_side_1">
+      <origin xyz="0.1355 -0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.029 0.0045 0.335" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_lower_rail">
+      <origin xyz="0 -0.15775 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.251 0.0045 0.05" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="control_band">
+      <origin xyz="0 -0.15775 0.2655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.242 0.0045 0.139" />
+        </geometry>
+      <material name="band_finish">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <collision name="top_shell">
+      <origin xyz="0 0 0.33275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.291 0.311 0.0045" />
+        </geometry>
+      </collision>
+    <collision name="back_wall">
+      <origin xyz="0 0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.0045 0.335" />
+        </geometry>
+      </collision>
+    <collision name="side_wall">
+      <origin xyz="-0.14775 0 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.24 0.335" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_1">
+      <origin xyz="0.14775 0 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.24 0.335" />
+        </geometry>
+      </collision>
+    <collision name="rear_corner">
+      <origin xyz="-0.11 0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      </collision>
+    <collision name="rear_corner_1">
+      <origin xyz="0.11 0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      </collision>
+    <collision name="front_corner">
+      <origin xyz="-0.11 -0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      </collision>
+    <collision name="front_corner_1">
+      <origin xyz="0.11 -0.12 0.1675" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.335" />
+        </geometry>
+      </collision>
+    <collision name="front_side">
+      <origin xyz="-0.1355 -0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.029 0.0045 0.335" />
+        </geometry>
+      </collision>
+    <collision name="front_side_1">
+      <origin xyz="0.1355 -0.15775 0.1675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.029 0.0045 0.335" />
+        </geometry>
+      </collision>
+    <collision name="front_lower_rail">
+      <origin xyz="0 -0.15775 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.251 0.0045 0.05" />
+        </geometry>
+      </collision>
+    <collision name="control_band">
+      <origin xyz="0 -0.15775 0.2655" rpy="0 0 0" />
+      <geometry>
+        <box size="0.242 0.0045 0.139" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="chamber">
+    <visual name="chamber_floor">
+      <origin xyz="0 0.1455 -0.06275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.282 0.0025" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chamber_roof">
+      <origin xyz="0 0.1455 0.06275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.282 0.0025" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chamber_side">
+      <origin xyz="-0.11575 0.1455 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.282 0.128" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chamber_side_1">
+      <origin xyz="0.11575 0.1455 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.282 0.128" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="chamber_back">
+      <origin xyz="0 0.28525 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.0025 0.128" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="flange_top">
+      <origin xyz="0 0.00575 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.0025 0.007" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="flange_bottom">
+      <origin xyz="0 0.00575 -0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.0025 0.007" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="flange_side">
+      <origin xyz="-0.1205 0.00575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.0025 0.142" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <visual name="flange_side_1">
+      <origin xyz="0.1205 0.00575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.0025 0.142" />
+        </geometry>
+      <material name="chamber_finish">
+        <color rgba="0.72 0.73 0.74 1" />
+        </material>
+      </visual>
+    <collision name="chamber_floor">
+      <origin xyz="0 0.1455 -0.06275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.282 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="chamber_roof">
+      <origin xyz="0 0.1455 0.06275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.282 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="chamber_side">
+      <origin xyz="-0.11575 0.1455 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.282 0.128" />
+        </geometry>
+      </collision>
+    <collision name="chamber_side_1">
+      <origin xyz="0.11575 0.1455 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0025 0.282 0.128" />
+        </geometry>
+      </collision>
+    <collision name="chamber_back">
+      <origin xyz="0 0.28525 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.0025 0.128" />
+        </geometry>
+      </collision>
+    <collision name="flange_top">
+      <origin xyz="0 0.00575 0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.0025 0.007" />
+        </geometry>
+      </collision>
+    <collision name="flange_bottom">
+      <origin xyz="0 0.00575 -0.0675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.248 0.0025 0.007" />
+        </geometry>
+      </collision>
+    <collision name="flange_side">
+      <origin xyz="-0.1205 0.00575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.0025 0.142" />
+        </geometry>
+      </collision>
+    <collision name="flange_side_1">
+      <origin xyz="0.1205 0.00575 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.0025 0.142" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="drawer_front">
+      <origin xyz="0 -0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.252 0.01 0.154" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="window_lens">
+      <origin xyz="0 -0.00825 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.0035 0.034" />
+        </geometry>
+      <material name="glass_finish">
+        <color rgba="0.22 0.28 0.3 0.32" />
+        </material>
+      </visual>
+    <visual name="drawer_floor">
+      <origin xyz="0 0.1275 -0.0795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.255 0.003" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="drawer_side">
+      <origin xyz="-0.1155 0.1275 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.255 0.112" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="drawer_side_1">
+      <origin xyz="0.1155 0.1275 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.255 0.112" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="drawer_back">
+      <origin xyz="0 0.2535 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.003 0.112" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="drawer_inner_front">
+      <origin xyz="0 0.0015 -0.0502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.003 0.0616" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.11 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="handle">
+      <origin xyz="0 -0.06 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.048 0.026" />
+        </geometry>
+      <material name="band_finish">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="handle_arm">
+      <origin xyz="0.034 -0.024 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.018" />
+        </geometry>
+      <material name="band_finish">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="handle_arm_1">
+      <origin xyz="-0.034 -0.024 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.018" />
+        </geometry>
+      <material name="band_finish">
+        <color rgba="0.06 0.06 0.07 1" />
+        </material>
+      </visual>
+    <collision name="drawer_front">
+      <origin xyz="0 -0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.252 0.01 0.154" />
+        </geometry>
+      </collision>
+    <collision name="window_lens">
+      <origin xyz="0 -0.00825 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.078 0.0035 0.034" />
+        </geometry>
+      </collision>
+    <collision name="drawer_floor">
+      <origin xyz="0 0.1275 -0.0795" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.255 0.003" />
+        </geometry>
+      </collision>
+    <collision name="drawer_side">
+      <origin xyz="-0.1155 0.1275 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.255 0.112" />
+        </geometry>
+      </collision>
+    <collision name="drawer_side_1">
+      <origin xyz="0.1155 0.1275 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.255 0.112" />
+        </geometry>
+      </collision>
+    <collision name="drawer_back">
+      <origin xyz="0 0.2535 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.003 0.112" />
+        </geometry>
+      </collision>
+    <collision name="drawer_inner_front">
+      <origin xyz="0 0.0015 -0.0502" rpy="0 0 0" />
+      <geometry>
+        <box size="0.234 0.003 0.0616" />
+        </geometry>
+      </collision>
+    <collision name="handle">
+      <origin xyz="0 -0.06 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.048 0.026" />
+        </geometry>
+      </collision>
+    <collision name="handle_arm">
+      <origin xyz="0.034 -0.024 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.018" />
+        </geometry>
+      </collision>
+    <collision name="handle_arm_1">
+      <origin xyz="-0.034 -0.024 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.032 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_floor">
+      <origin xyz="0 0.12 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.24 0.002" />
+        </geometry>
+      <material name="basket_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="basket_side">
+      <origin xyz="-0.108 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.24 0.088" />
+        </geometry>
+      <material name="basket_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="basket_side_1">
+      <origin xyz="0.108 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.24 0.088" />
+        </geometry>
+      <material name="basket_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="basket_back">
+      <origin xyz="0 0.239 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.002 0.088" />
+        </geometry>
+      <material name="basket_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="basket_front">
+      <origin xyz="0 0.001 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.002 0.044" />
+        </geometry>
+      <material name="basket_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="basket_floor">
+      <origin xyz="0 0.12 -0.043" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.24 0.002" />
+        </geometry>
+      </collision>
+    <collision name="basket_side">
+      <origin xyz="-0.108 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.24 0.088" />
+        </geometry>
+      </collision>
+    <collision name="basket_side_1">
+      <origin xyz="0.108 0.12 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.24 0.088" />
+        </geometry>
+      </collision>
+    <collision name="basket_back">
+      <origin xyz="0 0.239 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.002 0.088" />
+        </geometry>
+      </collision>
+    <collision name="basket_front">
+      <origin xyz="0 0.001 -0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.002 0.044" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="plunger">
+    <visual name="release_plunger">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.008" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <collision name="release_plunger">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.016 0.008" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="timer_dial">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_timer_dial.obj" />
+        </geometry>
+      <material name="control_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="timer_dial">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_timer_dial.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_3">
+    <visual name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_button_0" type="prismatic">
+    <origin xyz="-0.05 -0.16 0.276" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_button_1" type="prismatic">
+    <origin xyz="0.05 -0.16 0.276" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_button_2" type="prismatic">
+    <origin xyz="-0.05 -0.16 0.22" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_2" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_button_3" type="prismatic">
+    <origin xyz="0.05 -0.16 0.22" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_3" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_chamber" type="fixed">
+    <origin xyz="0 -0.16 0.123" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="chamber" />
+    </joint>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0 -0.16 0.123" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="0 -1 0" />
+    <limit effort="60" velocity="0.25" lower="0" upper="0.155" />
+    </joint>
+  <joint name="drawer_to_basket" type="fixed">
+    <origin xyz="0 0.008 -0.034" rpy="0 0 0" />
+    <parent link="drawer" />
+    <child link="basket" />
+    </joint>
+  <joint name="drawer_to_plunger" type="prismatic">
+    <origin xyz="0 -0.06 -0.005" rpy="0 0 0" />
+    <parent link="drawer" />
+    <child link="plunger" />
+    <axis xyz="0 0 -1" />
+    <limit effort="10" velocity="0.08" lower="0" upper="0.004" />
+    </joint>
+  <joint name="body_to_dial" type="continuous">
+    <origin xyz="0 -0.16 0.248" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.25" velocity="8" />
+    </joint>
+  </robot>

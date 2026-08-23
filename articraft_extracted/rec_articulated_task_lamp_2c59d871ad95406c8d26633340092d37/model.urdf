@@ -1,0 +1,242 @@
+<robot name="magnifier_task_lamp">
+  <material name="base_finish">
+    <color rgba="0.14 0.15 0.17 1" />
+    </material>
+  <material name="arm_finish">
+    <color rgba="0.66 0.68 0.71 1" />
+    </material>
+  <material name="housing_finish">
+    <color rgba="0.9 0.91 0.89 1" />
+    </material>
+  <material name="trim_finish">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="glass">
+    <color rgba="0.82 0.9 0.95 0.4" />
+    </material>
+  <link name="base">
+    <visual name="base_disk">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.024" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.138" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="fork_bridge">
+      <origin xyz="0.028 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.016" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="fork_left">
+      <origin xyz="0.028 0.021 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.048" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="fork_right">
+      <origin xyz="0.028 -0.021 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.048" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="pivot_block">
+      <origin xyz="0.036 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.024" />
+        </geometry>
+      <material name="base_finish">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <collision name="base_disk">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.115" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="column">
+      <origin xyz="0 0 0.092" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.138" />
+        </geometry>
+      </collision>
+    <collision name="fork_bridge">
+      <origin xyz="0.028 0 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.06 0.016" />
+        </geometry>
+      </collision>
+    <collision name="fork_left">
+      <origin xyz="0.028 0.021 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.048" />
+        </geometry>
+      </collision>
+    <collision name="fork_right">
+      <origin xyz="0.028 -0.021 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.048" />
+        </geometry>
+      </collision>
+    <collision name="pivot_block">
+      <origin xyz="0.036 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.018 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lower_arm">
+    <visual name="lower_frame">
+      <geometry>
+        <mesh filename="assets/meshes/lower_frame.obj" />
+        </geometry>
+      <material name="arm_finish">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <collision name="lower_frame">
+      <geometry>
+        <mesh filename="assets/meshes/lower_frame.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="upper_arm">
+    <visual name="upper_frame">
+      <geometry>
+        <mesh filename="assets/meshes/upper_frame.obj" />
+        </geometry>
+      <material name="arm_finish">
+        <color rgba="0.66 0.68 0.71 1" />
+        </material>
+      </visual>
+    <collision name="upper_frame">
+      <geometry>
+        <mesh filename="assets/meshes/upper_frame.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="head">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/head_housing.obj" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0.066 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.005" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.82 0.9 0.95 0.4" />
+        </material>
+      </visual>
+    <visual name="bezel">
+      <origin xyz="0.068 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.071" length="0.004" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <collision name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/head_housing.obj" />
+        </geometry>
+      </collision>
+    <collision name="lens">
+      <origin xyz="0.066 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.061" length="0.005" />
+        </geometry>
+      </collision>
+    <collision name="bezel">
+      <origin xyz="0.068 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.071" length="0.004" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cover">
+    <visual name="cover_frame">
+      <geometry>
+        <mesh filename="assets/meshes/cover_frame.obj" />
+        </geometry>
+      <material name="housing_finish">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="cover_lens">
+      <origin xyz="0.002 0 -0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.003" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.82 0.9 0.95 0.4" />
+        </material>
+      </visual>
+    <collision name="cover_frame">
+      <geometry>
+        <mesh filename="assets/meshes/cover_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="cover_lens">
+      <origin xyz="0.002 0 -0.073" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="base_hinge" type="revolute">
+    <origin xyz="0.039 0 0.165" rpy="0 -1.01229 0" />
+    <parent link="base" />
+    <child link="lower_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="30" velocity="1" lower="-0.733038" upper="0.593412" />
+    </joint>
+  <joint name="elbow_hinge" type="revolute">
+    <origin xyz="0.315 0 0" rpy="0 0.383972 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.2" lower="-1.22173" upper="0.959931" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0.285 0 0" rpy="0 1.36136 0" />
+    <parent link="upper_arm" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="10" velocity="1.5" lower="-0.349066" upper="1.48353" />
+    </joint>
+  <joint name="cover_hinge" type="revolute">
+    <origin xyz="0.086 0 0.086" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="cover" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="2" lower="0" upper="2.35619" />
+    </joint>
+  </robot>

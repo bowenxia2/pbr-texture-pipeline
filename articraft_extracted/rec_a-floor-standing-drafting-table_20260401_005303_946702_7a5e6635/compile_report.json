@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-floor-standing-drafting-table_20260401_005303_946702_7a5e6635",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "fc9216e1c2a7f89a89ded12feaa8d3ec1818eb8d9b40763eecd76d17504400dc",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "2125347787b082c5f5d0938669ef5920faae0d19e9dae2d869bd1e98f3c5fd9e",
+    "model_py_mtime_ns": 1775055075732114715,
+    "model_py_size_bytes": 10218,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 2536,
+    "visual_mesh_file_count": 1,
+    "compile_elapsed_seconds": 0.0028076250018784776
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

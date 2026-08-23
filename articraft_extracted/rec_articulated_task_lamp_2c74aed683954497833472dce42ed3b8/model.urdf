@@ -1,0 +1,679 @@
+<robot name="counterbalance_spring_arm_desk_lamp">
+  <material name="cast_iron">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <material name="arm_steel">
+    <color rgba="0.3 0.32 0.34 1" />
+    </material>
+  <material name="spring_steel">
+    <color rgba="0.73 0.76 0.79 1" />
+    </material>
+  <material name="shade_enamel">
+    <color rgba="0.33 0.47 0.39 1" />
+    </material>
+  <material name="socket_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="bulb_glass">
+    <color rgba="0.97 0.92 0.76 0.92" />
+    </material>
+  <material name="felt">
+    <color rgba="0.18 0.12 0.1 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.043" rpy="0 0 0" />
+      <mass value="5.8" />
+      <inertia ixx="0.0175431" ixy="0" ixz="0" iyy="0.0291431" iyz="0" izz="0.0395367" />
+      </inertial>
+    <visual name="base_shell">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_base_shell.obj" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_block">
+      <origin xyz="-0.075 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.062 0.084 0.022" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_post">
+      <origin xyz="-0.075 0 0.043" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.028" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="clevis_left">
+      <origin xyz="-0.075 -0.025 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.014 0.052" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="clevis_right">
+      <origin xyz="-0.075 0.025 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.014 0.052" />
+        </geometry>
+      <material name="cast_iron">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin_left">
+      <origin xyz="-0.075 -0.014 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="pivot_pin_right">
+      <origin xyz="-0.075 0.014 0.07" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="rear_left_foot">
+      <origin xyz="-0.08 -0.055 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="felt">
+        <color rgba="0.18 0.12 0.1 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_foot">
+      <origin xyz="-0.08 0.055 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="felt">
+        <color rgba="0.18 0.12 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_left_foot">
+      <origin xyz="0.08 -0.055 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="felt">
+        <color rgba="0.18 0.12 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_right_foot">
+      <origin xyz="0.08 0.055 0.0015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.003" />
+        </geometry>
+      <material name="felt">
+        <color rgba="0.18 0.12 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_1">
+    <inertial>
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <mass value="0.42" />
+      <inertia ixx="0.00022204" ixy="0" ixz="0" iyy="0.00106204" iyz="0" izz="0.001183" />
+      </inertial>
+    <visual name="proximal_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="center_tie">
+      <origin xyz="0.085 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.152 0.004 0.004" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bridge">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.062 0.01" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.096 0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.096 -0.024 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.01 0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_saddle">
+      <origin xyz="0.144 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.052 0.006" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_0">
+      <origin xyz="0.17 -0.024 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_1">
+      <origin xyz="0.17 0.024 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="counterbalance_spring">
+      <origin xyz="0.03 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_1_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.73 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_inner">
+      <origin xyz="0.03 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_outer">
+      <origin xyz="0.14 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_2">
+    <inertial>
+      <origin xyz="0.08 0 0" rpy="0 0 0" />
+      <mass value="0.39" />
+      <inertia ixx="0.00019721" ixy="0" ixz="0" iyy="0.00087893" iyz="0" izz="0.00098228" />
+      </inertial>
+    <visual name="proximal_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="center_tie">
+      <origin xyz="0.08 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.004 0.004" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bridge">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.06 0.01" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.091 0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.01 0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.091 -0.023 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.01 0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_saddle">
+      <origin xyz="0.134 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.05 0.006" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_0">
+      <origin xyz="0.16 -0.023 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_1">
+      <origin xyz="0.16 0.023 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="counterbalance_spring">
+      <origin xyz="0.03 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_2_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.73 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_inner">
+      <origin xyz="0.03 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_outer">
+      <origin xyz="0.13 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_3">
+    <inertial>
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <mass value="0.34" />
+      <inertia ixx="0.000148807" ixy="0" ixz="0" iyy="0.000670253" iyz="0" izz="0.000753553" />
+      </inertial>
+    <visual name="proximal_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="center_tie">
+      <origin xyz="0.075 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.132 0.004 0.004" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bridge">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.057 0.009" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.086 0.022 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.009 0.007" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.086 -0.022 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.112 0.009 0.007" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_saddle">
+      <origin xyz="0.124 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.047 0.006" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_0">
+      <origin xyz="0.15 -0.022 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_1">
+      <origin xyz="0.15 0.022 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="counterbalance_spring">
+      <origin xyz="0.03 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_3_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.73 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_inner">
+      <origin xyz="0.03 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_outer">
+      <origin xyz="0.12 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_4">
+    <inertial>
+      <origin xyz="0.06 0 0" rpy="0 0 0" />
+      <mass value="0.26" />
+      <inertia ixx="0.000100187" ixy="0" ixz="0" iyy="0.000334187" iyz="0" izz="0.00039" />
+      </inertial>
+    <visual name="proximal_pivot">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="center_tie">
+      <origin xyz="0.06 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.102 0.004 0.004" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="proximal_bridge">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.053 0.009" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.071 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.009 0.007" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.071 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.009 0.007" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_saddle">
+      <origin xyz="0.094 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.043 0.006" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_0">
+      <origin xyz="0.12 -0.02 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="distal_lug_1">
+      <origin xyz="0.12 0.02 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.016" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="counterbalance_spring">
+      <origin xyz="0.03 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/link_4_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.73 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_inner">
+      <origin xyz="0.03 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="spring_anchor_outer">
+      <origin xyz="0.09 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="shade">
+    <inertial>
+      <origin xyz="0.07 0 -0.01" rpy="0 0 0" />
+      <mass value="0.48" />
+      <inertia ixx="0.0016" ixy="0" ixz="0" iyy="0.001732" iyz="0" izz="0.00218" />
+      </inertial>
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.02" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="yoke_block">
+      <origin xyz="0.016 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.024 0.022" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.028 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shade_shell.obj" />
+        </geometry>
+      <material name="shade_enamel">
+        <color rgba="0.33 0.47 0.39 1" />
+        </material>
+      </visual>
+    <visual name="shade_rear_collar">
+      <origin xyz="0.028 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/shade_rear_collar.obj" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="socket_mount">
+      <origin xyz="0.036 0 -0.012" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.008" />
+        </geometry>
+      <material name="arm_steel">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bulb">
+    <inertial>
+      <origin xyz="0.044 0 0" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="1.8432e-05" ixy="0" ixz="0" iyy="1.8432e-05" iyz="0" izz="1.8432e-05" />
+      </inertial>
+    <visual name="socket">
+      <origin xyz="0.009 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.018" />
+        </geometry>
+      <material name="socket_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="bulb_neck">
+      <origin xyz="0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.016" />
+        </geometry>
+      <material name="socket_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="glass_envelope">
+      <origin xyz="0.05 0 0" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.022" />
+        </geometry>
+      <material name="bulb_glass">
+        <color rgba="0.97 0.92 0.76 0.92" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_link_1" type="revolute">
+    <origin xyz="-0.075 0 0.07" rpy="0 -0.95 0" />
+    <parent link="base" />
+    <child link="link_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.6" lower="-0.8" upper="0.45" />
+    </joint>
+  <joint name="link_1_to_link_2" type="revolute">
+    <origin xyz="0.17 0 0" rpy="0 -0.3 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 -1 0" />
+    <limit effort="10" velocity="1.8" lower="-1" upper="0.75" />
+    </joint>
+  <joint name="link_2_to_link_3" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 0.42 0" />
+    <parent link="link_2" />
+    <child link="link_3" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="2" lower="-0.75" upper="0.85" />
+    </joint>
+  <joint name="link_3_to_link_4" type="revolute">
+    <origin xyz="0.15 0 0" rpy="0 0.1 0" />
+    <parent link="link_3" />
+    <child link="link_4" />
+    <axis xyz="0 -1 0" />
+    <limit effort="6" velocity="2.2" lower="-0.85" upper="0.85" />
+    </joint>
+  <joint name="link_4_to_shade" type="revolute">
+    <origin xyz="0.12 0 0" rpy="0 1.12 0" />
+    <parent link="link_4" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="2.8" lower="-0.75" upper="1.1" />
+    </joint>
+  <joint name="shade_to_bulb" type="fixed">
+    <origin xyz="0.04 0 -0.012" rpy="0 0 0" />
+    <parent link="shade" />
+    <child link="bulb" />
+    </joint>
+  </robot>

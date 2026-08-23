@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "d1c1210ab47693c24ce547a320cde696bbd9741cf152de100b421d2950a500a4",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "c8102fade15e08ad6ee169acffa6d31fc93c74646758cf47db57f287e9db9411",
+    "model_py_mtime_ns": 1774526375099512289,
+    "model_py_size_bytes": 11793,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 2201504,
+    "visual_mesh_file_count": 13,
+    "compile_elapsed_seconds": 0.19129641700419597
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

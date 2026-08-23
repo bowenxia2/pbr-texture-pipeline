@@ -1,0 +1,537 @@
+<robot name="refined_task_lamp">
+  <material name="graphite_paint">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="satin_aluminum">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.59 0.61 0.64 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="diffuser">
+    <color rgba="0.97 0.96 0.9 0.38" />
+    </material>
+  <material name="warm_led">
+    <color rgba="1 0.93 0.78 0.55" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <mass value="2.8" />
+      <inertia ixx="0.00643043" ixy="0" ixz="0" iyy="0.00643043" iyz="0" izz="0.012635" />
+      </inertial>
+    <visual name="base_shell">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/task_lamp_base_shell.obj" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="base_pad">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.088" length="0.004" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="trim_disc">
+      <origin xyz="-0.01 0 0.0215" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.06" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_block">
+      <origin xyz="-0.05 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.052 0.046" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_gusset">
+      <origin xyz="-0.048 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.07 0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_barrel">
+      <origin xyz="-0.034 0 0.068" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.054" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cap">
+      <origin xyz="-0.046 0 0.068" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_arm">
+    <inertial>
+      <origin xyz="0.0387314 0 0.0728432" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00011535" ixy="0" ixz="0" iyy="0.000810037" iyz="0" izz="0.000882187" />
+      </inertial>
+    <visual name="rear_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap_pos">
+      <origin xyz="0 0.02 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap_neg">
+      <origin xyz="0 -0.02 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.0387314 0.016 0.0728432" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.165" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_sleeve">
+      <origin xyz="0.0131452 0.016 0.0247225" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="left_front_sleeve">
+      <origin xyz="0.0643176 0.016 0.120964" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.0387314 -0.016 0.0728432" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0062" length="0.165" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_sleeve">
+      <origin xyz="0.0131452 -0.016 0.0247225" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="right_front_sleeve">
+      <origin xyz="0.0643176 -0.016 0.120964" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0074" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="tension_rod">
+      <origin xyz="0.0340367 0 0.0560137" rpy="0 0.488692 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.145" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.0263374 0 0.0475334" rpy="0 -1.0821 0" />
+      <geometry>
+        <box size="0.014 0.048 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_bridge">
+      <origin xyz="0.0526747 0 0.0970667" rpy="0 -1.0821 0" />
+      <geometry>
+        <box size="0.014 0.048 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_hub">
+      <origin xyz="0.0774628 0 0.145686" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.046" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_pos">
+      <origin xyz="0.0774628 0.02 0.145686" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0127" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_neg">
+      <origin xyz="0.0774628 -0.02 0.145686" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0127" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="center_stiffener">
+      <origin xyz="0.0402807 0 0.0697569" rpy="0 -1.0821 0" />
+      <geometry>
+        <box size="0.02 0.048 0.014" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0.0426144 0 0.0586537" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="7.58333e-05" ixy="0" ixz="0" iyy="0.000469846" iyz="0" izz="0.000517446" />
+      </inertial>
+    <visual name="rear_hub">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.044" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap_pos">
+      <origin xyz="0 0.018 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap_neg">
+      <origin xyz="0 -0.018 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="0.0426144 0.014 0.0586537" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.145" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_sleeve">
+      <origin xyz="0.016458 0.014 0.0226525" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="left_front_sleeve">
+      <origin xyz="0.0687709 0.014 0.094655" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.0426144 -0.014 0.0586537" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0054" length="0.145" />
+        </geometry>
+      <material name="satin_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_sleeve">
+      <origin xyz="0.016458 -0.014 0.0226525" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="right_front_sleeve">
+      <origin xyz="0.0687709 -0.014 0.094655" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0066" length="0.015" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="tension_rod">
+      <origin xyz="0.0367366 0 0.0425636" rpy="0 0.628319 0" />
+      <geometry>
+        <cylinder radius="0.0026" length="0.125" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.0289778 0 0.0378845" rpy="0 -0.942478 0" />
+      <geometry>
+        <box size="0.014 0.044 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_bridge">
+      <origin xyz="0.0579556 0 0.0777691" rpy="0 -0.942478 0" />
+      <geometry>
+        <box size="0.014 0.044 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_hub">
+      <origin xyz="0.0852289 0 0.117307" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.05" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_pos">
+      <origin xyz="0.0852289 0.018 0.117307" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0117" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="front_cap_neg">
+      <origin xyz="0.0852289 -0.018 0.117307" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0117" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="head_yoke_block">
+      <origin xyz="0.0752289 0 0.115307" rpy="0 -0.942478 0" />
+      <geometry>
+        <box size="0.018 0.058 0.018" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.045 0 0" rpy="0 0 0" />
+      <mass value="0.4" />
+      <inertia ixx="0.000143467" ixy="0" ixz="0" iyy="0.000347867" iyz="0" izz="0.000384667" />
+      </inertial>
+    <visual name="tilt_trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="tilt_cap_pos">
+      <origin xyz="0 0.021 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="tilt_cap_neg">
+      <origin xyz="0 -0.021 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <origin xyz="0.04 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/task_lamp_head_shell.obj" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="rear_neck">
+      <origin xyz="0.006 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.014" />
+        </geometry>
+      <material name="graphite_paint">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="bezel">
+      <origin xyz="0.084 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0.0875 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.0035" />
+        </geometry>
+      <material name="diffuser">
+        <color rgba="0.97 0.96 0.9 0.38" />
+        </material>
+      </visual>
+    <visual name="emitter">
+      <origin xyz="0.0885 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.0015" />
+        </geometry>
+      <material name="warm_led">
+        <color rgba="1 0.93 0.78 0.55" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_22">
+      <origin xyz="0.022 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.036 0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_36">
+      <origin xyz="0.036 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.036 0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_50">
+      <origin xyz="0.05 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.036 0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_64">
+      <origin xyz="0.064 0 0.0165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.036 0.005" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.59 0.61 0.64 1" />
+        </material>
+      </visual>
+    <visual name="switch">
+      <origin xyz="0.02 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.007" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shoulder_pitch" type="revolute">
+    <origin xyz="-0.034 0 0.068" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="2" lower="-0.55" upper="0.7" />
+    </joint>
+  <joint name="elbow_pitch" type="revolute">
+    <origin xyz="0.0774628 0 0.145686" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="14" velocity="2.2" lower="-0.3" upper="0.95" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0.0852289 0 0.117307" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="3" lower="-1.05" upper="0.55" />
+    </joint>
+  </robot>

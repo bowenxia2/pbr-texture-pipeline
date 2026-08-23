@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_adjustable_weight_bench_with_hinged_backrest_4774adf89f70497ca1a40b21ef462e7f",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 9,
+    "tool_call_count": 10,
+    "compile_attempt_count": 3,
+    "fingerprint_inputs": {
+      "model_py_sha256": "112a7d39f0a02c931093fb616f1a171e90f3b12cc4633a93d09fe3b7c8828a43",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "3513e41c5f8126d9f1799aa3440016a6445a3de38a5fe31d98ceaca060d8aac7"
+  }
+}

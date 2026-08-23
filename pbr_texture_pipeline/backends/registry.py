@@ -18,6 +18,7 @@ from pbr_texture_pipeline.backends._adapter_common import RESULT_MARKER
 
 _CFG = load_config()
 _HERE = Path(__file__).resolve().parent
+_PROJECT_ROOT = _HERE.parent.parent
 
 
 def _conda_bin() -> str:
@@ -116,6 +117,37 @@ def texture_pairs(backend: str, pairs_file: str, params: Optional[dict] = None,
     """Batch: one backend load over many pairs via --pairs-file (pbr_compare sweep pattern)."""
     spec = BACKENDS[backend]
     extra = ["--pairs-file", pairs_file, *_param_args(backend, params or {})]
+    return _run(spec, extra, extra_env=extra_env, on_line=on_line)
+
+
+VLM_ADAPTER: dict[str, str] = {
+    "script": str(_PROJECT_ROOT / "scripts" / "vlm_infer.py"),
+    "env": str(_CFG.get("env.vlm_name", "vlm")),
+    "cwd": str(_PROJECT_ROOT),
+}
+
+IMAGEEDIT_ADAPTER: dict[str, str] = {
+    "script": str(_PROJECT_ROOT / "scripts" / "imageedit_infer.py"),
+    "env": _CFG.backend_env("imageedit"),
+    "cwd": str(_PROJECT_ROOT),
+}
+
+
+def vlm_infer_batch(items_file: str, extra_env: Optional[dict] = None,
+                    on_line: Optional[Callable[[str, bool], None]] = None) -> dict:
+    """Batch VLM inference: one model load over many items."""
+    spec = VLM_ADAPTER
+    model = str(_CFG.model("vlm"))
+    extra = ["--model", model, "--items-file", items_file]
+    return _run(spec, extra, extra_env=extra_env, on_line=on_line)
+
+
+def imageedit_infer_batch(items_file: str, extra_env: Optional[dict] = None,
+                          on_line: Optional[Callable[[str, bool], None]] = None) -> dict:
+    """Batch ImageEdit inference: one model load over many items."""
+    spec = IMAGEEDIT_ADAPTER
+    model = str(_CFG.model("imageedit"))
+    extra = ["--model", model, "--items-file", items_file]
     return _run(spec, extra, extra_env=extra_env, on_line=on_line)
 
 

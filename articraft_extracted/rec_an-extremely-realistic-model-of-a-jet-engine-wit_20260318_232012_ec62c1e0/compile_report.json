@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_an-extremely-realistic-model-of-a-jet-engine-wit_20260318_232012_ec62c1e0",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "62121b4e6207342df6107b10e6f51c9772c28ce08cd9b406421d9f1c49133299",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "0a91002ede1f491aaa3da5316d9b4c6767d00ffe616975a8d2479d38d9555dad",
+    "model_py_mtime_ns": 1774526375106831771,
+    "model_py_size_bytes": 19542,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 313651,
+    "visual_mesh_file_count": 9,
+    "compile_elapsed_seconds": 0.016563166995183565
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

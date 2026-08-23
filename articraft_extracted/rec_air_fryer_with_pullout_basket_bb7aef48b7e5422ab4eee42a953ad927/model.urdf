@@ -1,0 +1,413 @@
+<robot name="digital_air_fryer">
+  <material name="matte_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.18 0.18 0.19 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.32 0.33 0.35 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.73 0.74 0.76 1" />
+    </material>
+  <material name="satin_metal">
+    <color rgba="0.62 0.63 0.66 1" />
+    </material>
+  <material name="glass_black">
+    <color rgba="0.05 0.05 0.06 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_body_shell.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_body_shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cavity_liner">
+    <visual name="liner_floor">
+      <origin xyz="-0.157 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.244 0.004" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="liner_roof">
+      <origin xyz="-0.157 0 0.172" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.244 0.004" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="liner_wall_0">
+      <origin xyz="-0.157 -0.12 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.004 0.17" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="liner_wall_1">
+      <origin xyz="-0.157 0.12 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.004 0.17" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="liner_back">
+      <origin xyz="-0.312 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.244 0.17" />
+        </geometry>
+      <material name="satin_metal">
+        <color rgba="0.62 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="liner_rail_0">
+      <origin xyz="-0.14 -0.114 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.016 0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="liner_rail_1">
+      <origin xyz="-0.14 0.114 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.016 0.02" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="liner_floor">
+      <origin xyz="-0.157 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.244 0.004" />
+        </geometry>
+      </collision>
+    <collision name="liner_roof">
+      <origin xyz="-0.157 0 0.172" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.244 0.004" />
+        </geometry>
+      </collision>
+    <collision name="liner_wall_0">
+      <origin xyz="-0.157 -0.12 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.004 0.17" />
+        </geometry>
+      </collision>
+    <collision name="liner_wall_1">
+      <origin xyz="-0.157 0.12 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.314 0.004 0.17" />
+        </geometry>
+      </collision>
+    <collision name="liner_back">
+      <origin xyz="-0.312 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.244 0.17" />
+        </geometry>
+      </collision>
+    <collision name="liner_rail_0">
+      <origin xyz="-0.14 -0.114 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.016 0.02" />
+        </geometry>
+      </collision>
+    <collision name="liner_rail_1">
+      <origin xyz="-0.14 0.114 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.26 0.016 0.02" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_panel">
+    <visual name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_front_panel.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <collision name="front_panel">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_front_panel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="display_window">
+    <visual name="display_window">
+      <origin xyz="0.003 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.124 0.05" />
+        </geometry>
+      <material name="glass_black">
+        <color rgba="0.05 0.05 0.06 1" />
+        </material>
+      </visual>
+    <collision name="display_window">
+      <origin xyz="0.003 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.124 0.05" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_drawer.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="drawer_rail_0">
+      <origin xyz="-0.14 -0.114 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.01 0.01" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <visual name="drawer_rail_1">
+      <origin xyz="-0.14 0.114 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.01 0.01" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_drawer.obj" />
+        </geometry>
+      </collision>
+    <collision name="drawer_rail_0">
+      <origin xyz="-0.14 -0.114 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="drawer_rail_1">
+      <origin xyz="-0.14 0.114 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.01 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_basket.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_basket.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_dial">
+    <visual name="dial_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_selector_dial.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="dial_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_selector_dial.obj" />
+        </geometry>
+      </collision>
+    <collision name="dial_shaft">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rocker_0">
+    <visual name="rocker_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_rocker_0.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rocker_pivot">
+      <origin xyz="-0.002 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.032" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="rocker_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_rocker_0.obj" />
+        </geometry>
+      </collision>
+    <collision name="rocker_pivot">
+      <origin xyz="-0.002 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rocker_1">
+    <visual name="rocker_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_rocker_1.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rocker_pivot">
+      <origin xyz="-0.002 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.032" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="rocker_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_rocker_1.obj" />
+        </geometry>
+      </collision>
+    <collision name="rocker_pivot">
+      <origin xyz="-0.002 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.032" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch_button">
+    <visual name="latch_pad">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.036 0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.73 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="latch_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.016" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.32 0.33 0.35 1" />
+        </material>
+      </visual>
+    <collision name="latch_pad">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.036 0.01" />
+        </geometry>
+      </collision>
+    <collision name="latch_stem">
+      <origin xyz="0 0 -0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.012 0.016" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_cavity_liner" type="fixed">
+    <origin xyz="0.193 -0.048 0.076" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cavity_liner" />
+    </joint>
+  <joint name="body_to_front_panel" type="fixed">
+    <origin xyz="0.205 0 0.028" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="front_panel" />
+    </joint>
+  <joint name="front_panel_to_display_window" type="fixed">
+    <origin xyz="0.003 -0.012 0.248" rpy="0 0 0" />
+    <parent link="front_panel" />
+    <child link="display_window" />
+    </joint>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0.217 -0.048 0.058" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="80" velocity="0.3" lower="-0.03" upper="0.15" />
+    </joint>
+  <joint name="drawer_to_basket" type="fixed">
+    <origin xyz="-0.006 0 0.025" rpy="0 0 0" />
+    <parent link="drawer" />
+    <child link="basket" />
+    </joint>
+  <joint name="front_panel_to_selector_dial" type="continuous">
+    <origin xyz="0.003 0.109 0.255" rpy="0 0 0" />
+    <parent link="front_panel" />
+    <child link="selector_dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="12" />
+    </joint>
+  <joint name="front_panel_to_rocker_0" type="revolute">
+    <origin xyz="0.005 0.109 0.192" rpy="0 0 0" />
+    <parent link="front_panel" />
+    <child link="rocker_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.2" velocity="4" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="front_panel_to_rocker_1" type="revolute">
+    <origin xyz="0.005 0.109 0.147" rpy="0 0 0" />
+    <parent link="front_panel" />
+    <child link="rocker_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="1.2" velocity="4" lower="-0.18" upper="0.18" />
+    </joint>
+  <joint name="drawer_to_latch_button" type="prismatic">
+    <origin xyz="0.066 0 0.093" rpy="0 0 0" />
+    <parent link="drawer" />
+    <child link="latch_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.06" lower="0" upper="0.008" />
+    </joint>
+  </robot>

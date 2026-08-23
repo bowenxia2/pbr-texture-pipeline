@@ -1,0 +1,249 @@
+<robot name="bedside_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.94 0.95 0.96 1" />
+    </material>
+  <material name="cap_charcoal">
+    <color rgba="0.23 0.25 0.28 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="filter_cream">
+    <color rgba="0.95 0.93 0.84 1" />
+    </material>
+  <material name="handle_bluegray">
+    <color rgba="0.56 0.62 0.68 1" />
+    </material>
+  <material name="accent_gray">
+    <color rgba="0.7 0.73 0.76 1" />
+    </material>
+  <link name="tower_body">
+    <inertial>
+      <origin xyz="0 0 0.139" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0137976" ixy="0" ixz="0" iyy="0.0137976" iyz="0" izz="0.00441" />
+      </inertial>
+    <visual name="tower_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_tower_shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.94 0.95 0.96 1" />
+        </material>
+      </visual>
+    <visual name="base_pad">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.004" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="filter_support_pedestal">
+      <origin xyz="0 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.112" />
+        </geometry>
+      <material name="accent_gray">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="control_button">
+      <origin xyz="0.068 0 0.212" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.004" />
+        </geometry>
+      <material name="accent_gray">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="top_cap">
+    <inertial>
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.000261765" ixy="0" ixz="0" iyy="0.000261765" iyz="0" izz="0.00050625" />
+      </inertial>
+    <visual name="cap_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_cap_shell.obj" />
+        </geometry>
+      <material name="cap_charcoal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="grip_tab_right">
+      <origin xyz="0.082 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.012 0.005" />
+        </geometry>
+      <material name="cap_charcoal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="grip_tab_left">
+      <origin xyz="-0.082 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.012 0.005" />
+        </geometry>
+      <material name="cap_charcoal">
+        <color rgba="0.23 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_cartridge">
+    <inertial>
+      <origin xyz="0 0 -0.07" rpy="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="0.000689583" ixy="0" ixz="0" iyy="0.000689583" iyz="0" izz="0.0003125" />
+      </inertial>
+    <visual name="filter_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter_shell.obj" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_00">
+      <origin xyz="0.046 0 -0.072" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_01">
+      <origin xyz="0.0398372 0.023 -0.072" rpy="0 0 0.523599" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_02">
+      <origin xyz="0.023 0.0398372 -0.072" rpy="0 0 1.0472" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_03">
+      <origin xyz="2.81669e-18 0.046 -0.072" rpy="0 0 1.5708" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_04">
+      <origin xyz="-0.023 0.0398372 -0.072" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_05">
+      <origin xyz="-0.0398372 0.023 -0.072" rpy="0 0 2.61799" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_06">
+      <origin xyz="-0.046 5.63338e-18 -0.072" rpy="0 0 3.14159" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_07">
+      <origin xyz="-0.0398372 -0.023 -0.072" rpy="0 0 3.66519" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_08">
+      <origin xyz="-0.023 -0.0398372 -0.072" rpy="0 0 4.18879" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_09">
+      <origin xyz="-8.45006e-18 -0.046 -0.072" rpy="0 0 4.71239" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_10">
+      <origin xyz="0.023 -0.0398372 -0.072" rpy="0 0 5.23599" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pleat_rib_11">
+      <origin xyz="0.0398372 -0.023 -0.072" rpy="0 0 5.75959" />
+      <geometry>
+        <box size="0.006 0.008 0.122" />
+        </geometry>
+      <material name="filter_cream">
+        <color rgba="0.95 0.93 0.84 1" />
+        </material>
+      </visual>
+    <visual name="pull_hub">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.012" />
+        </geometry>
+      <material name="handle_bluegray">
+        <color rgba="0.56 0.62 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pull_handle">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter_handle.obj" />
+        </geometry>
+      <material name="handle_bluegray">
+        <color rgba="0.56 0.62 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cap_unlock" type="revolute">
+    <origin xyz="0 0 0.278" rpy="0 0 0" />
+    <parent link="tower_body" />
+    <child link="top_cap" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="2" lower="0" upper="0.488692" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="0 0 0.266" rpy="0 0 0" />
+    <parent link="tower_body" />
+    <child link="filter_cartridge" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="0.12" lower="0" upper="0.105" />
+    </joint>
+  </robot>

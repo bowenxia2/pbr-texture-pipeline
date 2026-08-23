@@ -1,0 +1,603 @@
+<robot name="commercial_adjustable_bench">
+  <material name="black_powder_coat">
+    <color rgba="0.015 0.016 0.017 1" />
+    </material>
+  <material name="charcoal_vinyl">
+    <color rgba="0.055 0.055 0.05 1" />
+    </material>
+  <material name="stitched_seam">
+    <color rgba="0.18 0.18 0.16 1" />
+    </material>
+  <material name="matte_rubber">
+    <color rgba="0.006 0.006 0.006 1" />
+    </material>
+  <material name="brushed_hardware">
+    <color rgba="0.62 0.6 0.55 1" />
+    </material>
+  <material name="red_pop_pin">
+    <color rgba="0.82 0.035 0.025 1" />
+    </material>
+  <link name="main_frame">
+    <visual name="center_spine">
+      <origin xyz="-0.08 0 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="1.72 0.075 0.075" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor_tube">
+      <origin xyz="-0.9 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.94 0.07" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="front_floor_tube">
+      <origin xyz="0.66 0 0.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.62 0.065" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="rear_down_strut">
+      <origin xyz="-0.86 0 0.175" rpy="0 0.982794 3.14159" />
+      <geometry>
+        <box size="0.144222 0.06 0.06" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="front_down_strut">
+      <origin xyz="0.595 0 0.175" rpy="0 0.745419 0" />
+      <geometry>
+        <box size="0.176918 0.055 0.055" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tower_0">
+      <origin xyz="-0.28 -0.18 0.4075" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.345 0.052 0.052" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tower_1">
+      <origin xyz="-0.28 0.18 0.4075" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.345 0.052 0.052" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_base_yoke">
+      <origin xyz="-0.28 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.43 0.05" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_crossmember">
+      <origin xyz="-0.28 0 0.555" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.33 0.052" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_pin">
+      <origin xyz="-0.28 0 0.58" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.72" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_lug_0">
+      <origin xyz="-0.28 -0.36 0.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.09 0.035" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_lug_1">
+      <origin xyz="-0.28 0.36 0.58" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.09 0.035" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tower_0">
+      <origin xyz="0.35 -0.15 0.3825" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.295 0.047 0.047" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tower_1">
+      <origin xyz="0.35 0.15 0.3825" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.295 0.047 0.047" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_base_yoke">
+      <origin xyz="0.35 0 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.37 0.048" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_crossmember">
+      <origin xyz="0.35 0 0.505" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.34 0.047" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_pin">
+      <origin xyz="0.35 0 0.53" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.027" length="0.46" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="support_pivot_pin">
+      <origin xyz="-0.63 0 0.3" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.36" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="support_pivot_base_yoke">
+      <origin xyz="-0.63 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.43 0.04" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="support_pivot_stand_0">
+      <origin xyz="-0.63 -0.19 0.2675" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.065 0.05 0.05" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="support_pivot_stand_1">
+      <origin xyz="-0.63 0.19 0.2675" rpy="0 -1.5708 0" />
+      <geometry>
+        <box size="0.065 0.05 0.05" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_0">
+      <origin xyz="-0.93 -0.47 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.05 0.155" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle_stub_0">
+      <origin xyz="-0.93 -0.505 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.075" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="wheel_fork_1">
+      <origin xyz="-0.93 0.47 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.05 0.155" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle_stub_1">
+      <origin xyz="-0.93 0.505 0.115" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.075" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="backrest">
+    <visual name="back_pad">
+      <origin xyz="-0.5 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/back_pad.obj" />
+        </geometry>
+      <material name="charcoal_vinyl">
+        <color rgba="0.055 0.055 0.05 1" />
+        </material>
+      </visual>
+    <visual name="back_side_seam_0">
+      <origin xyz="-0.51 -0.205 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.04 0.01" />
+        </geometry>
+      <material name="stitched_seam">
+        <color rgba="0.18 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="back_side_seam_1">
+      <origin xyz="-0.51 0.205 0.108" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.04 0.01" />
+        </geometry>
+      <material name="stitched_seam">
+        <color rgba="0.18 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="back_plate">
+      <origin xyz="-0.47 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.82 0.46 0.045" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="angle_selector_rail">
+      <origin xyz="-0.5 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.075 0.038" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="selector_hole_0">
+      <origin xyz="-0.76 -0.035 -0.035" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="selector_hole_1">
+      <origin xyz="-0.64 -0.035 -0.035" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="selector_hole_2">
+      <origin xyz="-0.52 -0.035 -0.035" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="selector_hole_3">
+      <origin xyz="-0.4 -0.035 -0.035" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="selector_hole_4">
+      <origin xyz="-0.28 -0.035 -0.035" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.02" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_barrel_0">
+      <origin xyz="0 -0.26 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tab_0">
+      <origin xyz="-0.055 -0.26 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.07 0.07" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_barrel_1">
+      <origin xyz="0 0.26 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.105" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tab_1">
+      <origin xyz="-0.055 0.26 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.13 0.07 0.07" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="seat">
+    <visual name="seat_pad">
+      <origin xyz="-0.28 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/seat_pad.obj" />
+        </geometry>
+      <material name="charcoal_vinyl">
+        <color rgba="0.055 0.055 0.05 1" />
+        </material>
+      </visual>
+    <visual name="seat_plate">
+      <origin xyz="-0.27 0 -0.001" rpy="0 0 0" />
+      <geometry>
+        <box size="0.47 0.44 0.038" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="front_seam">
+      <origin xyz="-0.03 0 0.099" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.37 0.012" />
+        </geometry>
+      <material name="stitched_seam">
+        <color rgba="0.18 0.18 0.16 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_barrel_0">
+      <origin xyz="0 -0.23 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.105" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tab_0">
+      <origin xyz="-0.052 -0.23 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.065 0.065" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_barrel_1">
+      <origin xyz="0 0.23 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.105" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tab_1">
+      <origin xyz="-0.052 0.23 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.065 0.065" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_support_arm">
+    <visual name="wide_support_plate">
+      <origin xyz="-0.34 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.68 0.24 0.055" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_0">
+      <origin xyz="-0.36 -0.122 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.03 0.025" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="side_rib_1">
+      <origin xyz="-0.36 0.122 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.03 0.025" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    <visual name="lower_pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.29" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="upper_roller">
+      <origin xyz="-0.66 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.22" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="pop_pin_boss">
+      <origin xyz="-0.43 -0.125 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.052 0.07" />
+        </geometry>
+      <material name="black_powder_coat">
+        <color rgba="0.015 0.016 0.017 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector_knob">
+    <visual name="knob_cap">
+      <origin xyz="0 -0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/pop_pin_knob.obj" />
+        </geometry>
+      <material name="red_pop_pin">
+        <color rgba="0.82 0.035 0.025 1" />
+        </material>
+      </visual>
+    <visual name="pin_shaft">
+      <origin xyz="0 0.018 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.085" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="spring_collar">
+      <origin xyz="0 -0.024 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.014" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_0">
+    <visual name="wheel_hub">
+      <geometry>
+        <mesh filename="assets/meshes/transport_wheel.obj" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/transport_tire.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_1">
+    <visual name="wheel_hub">
+      <geometry>
+        <mesh filename="assets/meshes/transport_wheel.obj" />
+        </geometry>
+      <material name="brushed_hardware">
+        <color rgba="0.62 0.6 0.55 1" />
+        </material>
+      </visual>
+    <visual name="tire">
+      <geometry>
+        <mesh filename="assets/meshes/transport_tire.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.006 0.006 0.006 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="frame_to_backrest" type="revolute">
+    <origin xyz="-0.28 0 0.58" rpy="0 0.42 0" />
+    <parent link="main_frame" />
+    <child link="backrest" />
+    <axis xyz="0 1 0" />
+    <limit effort="140" velocity="1" lower="-0.42" upper="0.78" />
+    </joint>
+  <joint name="frame_to_seat" type="revolute">
+    <origin xyz="0.35 0 0.53" rpy="0 0.08 0" />
+    <parent link="main_frame" />
+    <child link="seat" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="1" lower="-0.08" upper="0.35" />
+    </joint>
+  <joint name="frame_to_rear_support_arm" type="revolute">
+    <origin xyz="-0.63 0 0.3" rpy="0 0.35 0" />
+    <parent link="main_frame" />
+    <child link="rear_support_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="120" velocity="1" lower="-0.3" upper="0.55" />
+    </joint>
+  <joint name="support_arm_to_selector_knob" type="prismatic">
+    <origin xyz="-0.43 -0.157 0.01" rpy="0 0 0" />
+    <parent link="rear_support_arm" />
+    <child link="selector_knob" />
+    <axis xyz="0 -1 0" />
+    <limit effort="35" velocity="0.2" lower="0" upper="0.035" />
+    </joint>
+  <joint name="frame_to_wheel_0" type="continuous">
+    <origin xyz="-0.93 -0.52 0.115" rpy="0 0 1.5708" />
+    <parent link="main_frame" />
+    <child link="wheel_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="25" />
+    </joint>
+  <joint name="frame_to_wheel_1" type="continuous">
+    <origin xyz="-0.93 0.52 0.115" rpy="0 0 1.5708" />
+    <parent link="main_frame" />
+    <child link="wheel_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="25" />
+    </joint>
+  </robot>

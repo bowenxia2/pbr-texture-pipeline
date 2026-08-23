@@ -117,7 +117,7 @@ def detect_front_panel(job) -> dict:
     min_agree = float(_CFG.get("articulated.orient.min_agreement_deg", 30))
     decision: dict = {"fallback_panel": fallback}
 
-    images = [job.view(k) for k in range(N_PANELS)]
+    images = [job.render_view(k) for k in range(N_PANELS)]
     missing = [str(p) for p in images if not p.is_file()]
     results = infer_panels(images) if not missing else None
     if results is None:

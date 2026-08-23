@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_bike_0001",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "cbd79669fad3a4fc6b594e58a673c4e26d376e730270275ba350cdfc3a4a9d5d",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "ce705acb9fc4374601ae677ac6d1691b1a605a3acd784e78edf8befa31c25944",
+    "model_py_mtime_ns": 1774526375104793973,
+    "model_py_size_bytes": 21806,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 101312,
+    "visual_mesh_file_count": 3,
+    "compile_elapsed_seconds": 0.009413374995347112
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

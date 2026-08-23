@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_conditioning_machine_9be960c1edc84ce786bb22715886b676",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "8ac462e7bcc66fdc78873c2d4935a807265d25297b5e3e1dc62dcc0c7a541644",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "388480e25d5e92762a52e4104399ab1c9223b62f192f310977b80d640e8a81bd",
+    "model_py_mtime_ns": 1775997694223284131,
+    "model_py_size_bytes": 11687,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.00229629100067541
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

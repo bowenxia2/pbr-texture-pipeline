@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_all_in_one_printer_with_scanner_lid_and_paper_tray_2fa487f194524ba7b35fc345b2252469",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 10,
+    "tool_call_count": 11,
+    "compile_attempt_count": 3,
+    "fingerprint_inputs": {
+      "model_py_sha256": "70e5c86e442e8680bed32325630fac34a1fa6a5c3a31ff1dde70c54d08bd6193",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "e8a18a159757586b69cfdb963f849d36a47bda06c8f39146a21af47409a2978d"
+  }
+}

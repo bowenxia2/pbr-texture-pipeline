@@ -1,0 +1,158 @@
+<robot name="wall_panel_purifier">
+  <material name="shell_finish">
+    <color rgba="0.93 0.94 0.95 1" />
+    </material>
+  <material name="door_finish">
+    <color rgba="0.96 0.97 0.98 1" />
+    </material>
+  <material name="drawer_finish">
+    <color rgba="0.87 0.89 0.91 1" />
+    </material>
+  <material name="flap_finish">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="rail_finish">
+    <color rgba="0.22 0.24 0.27 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_body.obj" />
+        </geometry>
+      <material name="shell_finish">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="guide_0">
+      <origin xyz="-0.004 0.145 -0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.024 0.051" />
+        </geometry>
+      <material name="rail_finish">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="guide_1">
+      <origin xyz="-0.004 -0.145 -0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.024 0.051" />
+        </geometry>
+      <material name="rail_finish">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_0">
+      <origin xyz="-0.004 0.145 -0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.024 0.051" />
+        </geometry>
+      </collision>
+    <collision name="guide_1">
+      <origin xyz="-0.004 -0.145 -0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.024 0.051" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_door.obj" />
+        </geometry>
+      <material name="door_finish">
+        <color rgba="0.96 0.97 0.98 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_drawer">
+    <visual name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter_drawer.obj" />
+        </geometry>
+      <material name="drawer_finish">
+        <color rgba="0.87 0.89 0.91 1" />
+        </material>
+      </visual>
+    <visual name="runner_0">
+      <origin xyz="-0.07 0.145 -0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.01" />
+        </geometry>
+      <material name="rail_finish">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="runner_1">
+      <origin xyz="-0.07 -0.145 -0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.01" />
+        </geometry>
+      <material name="rail_finish">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <collision name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter_drawer.obj" />
+        </geometry>
+      </collision>
+    <collision name="runner_0">
+      <origin xyz="-0.07 0.145 -0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.01" />
+        </geometry>
+      </collision>
+    <collision name="runner_1">
+      <origin xyz="-0.07 -0.145 -0.0575" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.018 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="latch_flap">
+    <visual name="flap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_latch_flap.obj" />
+        </geometry>
+      <material name="flap_finish">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <collision name="flap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_latch_flap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_door" type="revolute">
+    <origin xyz="0.088 0.211 0.041" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.5" lower="0" upper="1.32" />
+    </joint>
+  <joint name="body_to_filter_drawer" type="prismatic">
+    <origin xyz="0.08 0 -0.282" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.25" lower="0" upper="0.1" />
+    </joint>
+  <joint name="body_to_latch_flap" type="revolute">
+    <origin xyz="0.088 0 0.332" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="latch_flap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="4" velocity="1.8" lower="0" upper="1.05" />
+    </joint>
+  </robot>

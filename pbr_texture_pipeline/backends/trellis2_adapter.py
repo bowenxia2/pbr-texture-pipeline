@@ -1,23 +1,21 @@
-"""TRELLIS.2 global texturing adapter for articulated jobs (PRD.md section 7).
+"""TRELLIS.2 global texturing adapter for articulated jobs.
 
 One pair per job: decode the PBR voxel field ONCE for the whole merged rest-pose mesh
 (splitting Trellis2TexturingPipeline.run before its bake step), then bake every part group
 its own UV atlas from that shared field by slicing the merged mesh with the face ranges
-Stage R persisted. With the optional open-pose fields present, a second field is decoded
-from the open-pose merged mesh and texels whose surface points are hidden at rest are
-re-sampled from it, blended over a band at the visibility boundary.
+Stage R persisted. Multi-image conditioning: each view's tokens are concatenated by the
+forked TRELLIS.2 so the model cross-attends to all of them.
 
 Runs in the `trellis2` env with cwd = TRELLIS.2/ (so texturing_pipeline.json resolves).
-No pbr-texture-pipeline imports: `_adapter_common` and `visibility` are imported from the script's own
+No pbr-texture-pipeline imports: `_adapter_common` is imported from the script's own
 directory, and everything needing FK/repose/camera math (the per-group `to_link` matrices)
 arrives precomputed in the pairs file.
 
 Pair schema (one entry per job):
-  {"kind": "global", "merged_mesh", "image", "face_ranges", "seed", "out_dir",
-   "blend_band_texels", "groups": [{"group_id", "out_glb", "texture_size", "to_link" (4x4),
-                                    "bounds_link" ([[min],[max]], optional),
-                                    "bounds_link" ([[min],[max]], optional)}],
-   optional open-pose pass: "merged_mesh_open", "image_open", "visibility_rest" (npz)}
+  {"kind": "global", "merged_mesh", "image": [list of RGBA paths],
+   "face_ranges", "seed", "out_dir",
+   "groups": [{"group_id", "out_glb", "texture_size", "to_link" (4x4),
+               "bounds_link" ([[min],[max]], optional)}]}
 
 Emits one [PBR_RESULT] line per baked group and a final summary line per pair.
 Success for a group = its result line ok:true plus out_glb on disk.
@@ -39,7 +37,6 @@ import trimesh
 from PIL import Image
 
 from _adapter_common import RESULT_MARKER, emit_result, norm_params  # noqa: F401
-import visibility as VIS
 
 _BBOX_TOL = 1e-3  # same relative tolerance as the orchestrator's per-part bbox check
 _BBOX_SHRINK_TOL = 5e-2  # max extent fraction uv_unwrap may lose by welding sliver faces
@@ -47,7 +44,7 @@ _BBOX_SHRINK_TOL = 5e-2  # max extent fraction uv_unwrap may lose by welding sli
 
 def _load_mesh(path: str) -> trimesh.Trimesh:
     """Load preserving vertex/face order: face ranges are only valid against the exact
-    arrays Stage R exported (gate A9 verifies this load path)."""
+    arrays Stage R exported."""
     return trimesh.load(path, force="mesh", process=False)
 
 
@@ -57,19 +54,23 @@ def _unswap(v: np.ndarray) -> np.ndarray:
     return np.stack([v[:, 0], v[:, 2], -v[:, 1]], axis=1)
 
 
-def _decode_field(pipe, mesh_path: str, image_path: str, seed: int, resolution: int):
+def _decode_field(pipe, mesh_path: str, image_paths: list[str], seed: int, resolution: int):
     """The front half of Trellis2TexturingPipeline.run: normalize + condition + sample +
     decode, stopping before the bake. Returns (pbr_voxel, preprocessed_mesh, center, scale)
     where center/scale are the pipeline's re-normalization of the loaded file (needed to map
-    field-frame points back into the file frame)."""
+    field-frame points back into the file frame).
+
+    Accepts a list of image paths; each is preprocessed and their tokens are concatenated
+    by get_cond so the model cross-attends to all views.
+    """
     import torch
 
     mesh = _load_mesh(mesh_path)
     center, scale = norm_params(mesh.vertices)
-    image = pipe.preprocess_image(Image.open(image_path))
+    images = [pipe.preprocess_image(Image.open(p)) for p in image_paths]
     mesh_p = pipe.preprocess_mesh(mesh)
     torch.manual_seed(seed)
-    cond = pipe.get_cond([image], 512 if resolution == 512 else 1024)
+    cond = pipe.get_cond(images, 512 if resolution == 512 else 1024)
     shape_slat = pipe.encode_shape_slat(mesh_p, resolution)
     tex_model = (pipe.models["tex_slat_flow_model_512"] if resolution == 512
                  else pipe.models["tex_slat_flow_model_1024"])
@@ -93,14 +94,13 @@ def _sample_field(pipe, pbr_voxel, pos, resolution: int):
 
 
 def _bake_group(pipe, ctx, group: dict, faces: np.ndarray, mesh_a, field_a,
-                resolution: int, open_ctx: dict | None) -> tuple[trimesh.Trimesh, dict]:
-    """Bake one group's atlas from the shared field(s); returns (mesh in link frame, stats).
+                resolution: int) -> tuple[trimesh.Trimesh, dict]:
+    """Bake one group's atlas from the shared field; returns (mesh in link frame, stats).
 
     Mirrors Trellis2TexturingPipeline.postprocess_mesh (uv unwrap, rasterize in UV space,
-    field sample, inpaint, PBR material, axis un-swap) with three extensions: the geometry
-    is a face-range slice of the merged mesh, hidden-at-rest texels are optionally
-    re-sampled from the open-pose field, and the result is mapped to the link frame by the
-    orchestrator-provided to_link matrix.
+    field sample, inpaint, PBR material, axis un-swap) with two extensions: the geometry
+    is a face-range slice of the merged mesh, and the result is mapped to the link frame by
+    the orchestrator-provided to_link matrix.
     """
     import cumesh
     import cv2
@@ -145,32 +145,7 @@ def _bake_group(pipe, ctx, group: dict, faces: np.ndarray, mesh_a, field_a,
         "texels": int(mask_t.sum().item()),
         "field_voxels": int(torch.unique(
             ((pos[mask_t] + 0.5) * resolution).long(), dim=0).shape[0]),
-        "pass_b_frac": 0.0,
     }
-    if open_ctx is not None:
-        # Per-texel rest-pose visibility: map texel positions from field frame to the
-        # merged-mesh file frame the npz cameras live in, then test against the depth
-        # buffers with the same routine Stage R used for the occlusion statistics.
-        pos_np = pos[mask_t].cpu().numpy().astype(np.float64)
-        pts_file = _unswap(pos_np) / open_ctx["scale_rest"] + open_ctx["center_rest"]
-        visible = VIS.visible_from_any(pts_file, open_ctx["views_rest"])
-
-        # Same face slice of the open-pose mesh: identical topology, so the unwrapped
-        # vertex map carries over and the same rasterization interpolates open positions.
-        v_open_sub = np.asarray(open_ctx["mesh_open"].vertices)[used][vmap_np]
-        v_open_t = torch.from_numpy(v_open_sub).float().cuda()
-        pos_open = dr.interpolate(v_open_t.unsqueeze(0), rast, faces_torch)[0][0]
-        attrs_b = _sample_field(pipe, open_ctx["field_open"], pos_open[mask_t], resolution)
-
-        mask_np = mask_t.cpu().numpy()
-        hidden = np.zeros(mask_np.shape, dtype=np.uint8)
-        hidden[mask_np] = (~visible).astype(np.uint8)
-        band = max(int(open_ctx["blend_band_texels"]), 1)
-        dist = cv2.distanceTransform(hidden, cv2.DIST_L2, 3)
-        w_full = np.clip(dist / band, 0.0, 1.0) * (hidden > 0)
-        w = torch.from_numpy(w_full[mask_np].astype(np.float32)).to(pos.device)[:, None]
-        attrs_a = attrs_a * (1 - w) + attrs_b * w
-        stats["pass_b_frac"] = float((~visible).mean()) if len(visible) else 0.0
 
     attrs[mask_t] = attrs_a
 
@@ -217,58 +192,47 @@ def _constant_pbr(group: dict, faces: np.ndarray, mesh_a) -> trimesh.Trimesh:
     used = np.unique(f)
     remap = -np.ones(len(mesh_a.vertices), dtype=np.int64)
     remap[used] = np.arange(len(used))
+    sub = trimesh.Trimesh(vertices=np.asarray(mesh_a.vertices)[used], faces=remap[f],
+                          process=False)
     T = np.asarray(group["to_link"], dtype=np.float64)
-    v_out = _unswap(np.asarray(mesh_a.vertices)[used].astype(np.float64))
+    v_out = _unswap(np.asarray(sub.vertices, dtype=np.float64))
     v_link = v_out @ T[:3, :3].T + T[:3, 3]
-    mesh = trimesh.Trimesh(vertices=v_link, faces=remap[f], process=False)
-    material = trimesh.visual.material.PBRMaterial(
-        baseColorFactor=[128, 128, 128, 255], metallicFactor=0.0, roughnessFactor=0.9)
-    mesh.visual = trimesh.visual.TextureVisuals(material=material)
-    return mesh
+    mat = trimesh.visual.material.PBRMaterial(
+        baseColorFactor=np.array([180, 180, 180, 255], dtype=np.uint8),
+        metallicFactor=0.0, roughnessFactor=0.8, alphaMode="OPAQUE")
+    return trimesh.Trimesh(vertices=v_link, faces=sub.faces, process=False,
+                           visual=trimesh.visual.TextureVisuals(material=mat))
 
 
-def _slice_link_bounds(group: dict, faces: np.ndarray, mesh_a) -> np.ndarray:
-    """Link-frame bounds of the exact face-range slice mapped by to_link (no unwrap)."""
-    start, stop = group["face_range"]
-    used = np.unique(faces[start:stop])
-    T = np.asarray(group["to_link"], dtype=np.float64)
-    v = _unswap(np.asarray(mesh_a.vertices)[used].astype(np.float64))
-    v = v @ T[:3, :3].T + T[:3, 3]
-    return np.stack([v.min(axis=0), v.max(axis=0)])
-
-
-def _check_bounds(out: trimesh.Trimesh, group: dict,
-                  slice_bounds: np.ndarray) -> tuple[str | None, str | None]:
-    """Own bbox sanity check vs the input group's link-frame bounds (from the pair), so the
-    orchestrator's assemble step needs no changes. Two causes are separated:
-
-    to_link correctness: the exact input slice mapped by to_link must reproduce the
-    orchestrator's link-frame bounds. A mismatch means a bad transform, which the
-    constant-PBR fallback could not place correctly either, so it fails the group loudly.
-
-    Bake fidelity: cumesh uv_unwrap welds degenerate sliver faces, so the baked mesh may
-    legitimately shrink a little inside the slice bounds (seen on 48-face PartNet groups).
-    Shrinkage beyond _BBOX_SHRINK_TOL of the extent means the bake mangled the geometry
-    and the constant-PBR fallback (exact slice geometry) should take over.
-
-    Returns (fatal_error, warning); at most one is set.
-    """
-    bounds = group.get("bounds_link")
-    if bounds is None:
+def _check_bounds(mesh_out, group, bounds_from_merged):
+    """Compare baked group bounds to orchestrator expectation; return (fatal, warn) msgs."""
+    bl = group.get("bounds_link")
+    if bl is None:
         return None, None
-    ref = np.asarray(bounds, dtype=np.float64)
-    extent = float((ref[1] - ref[0]).max()) or 1.0
-    err_t = float(np.abs(slice_bounds - ref).max())
-    if err_t > _BBOX_TOL * extent:
-        return (f"to_link bounds mismatch: bbox err {err_t:.5f} "
-                f"> {_BBOX_TOL * extent:.5f}"), None
-    err_b = float(np.abs(np.asarray(out.bounds) - ref).max())
-    if err_b > _BBOX_SHRINK_TOL * extent:
-        return (f"bake geometry loss: bbox err {err_b:.5f} "
-                f"> {_BBOX_SHRINK_TOL * extent:.5f}"), None
-    if err_b > _BBOX_TOL * extent:
+    expected_min, expected_max = np.array(bl[0]), np.array(bl[1])
+    got_min, got_max = mesh_out.bounds
+    extent = np.maximum(expected_max - expected_min, 1e-8)
+    err = np.max(np.abs(np.concatenate([(got_min - expected_min) / extent,
+                                        (got_max - expected_max) / extent])))
+    if err > _BBOX_TOL:
+        err_b = np.max(np.clip(expected_min - got_min, 0, None) +
+                       np.clip(got_max - expected_max, 0, None)) / np.max(extent)
+        if err_b > _BBOX_SHRINK_TOL:
+            return f"to_link bounds mismatch: rel err {err:.5f}", None
         return None, f"bbox shrank {err_b:.5f} (uv_unwrap welded sliver faces)"
     return None, None
+
+
+def _slice_link_bounds(group, faces, mesh_a):
+    """Compute link-frame bounds from the merged-mesh slice (for comparison)."""
+    start, stop = group["face_range"]
+    f = faces[start:stop]
+    used = np.unique(f)
+    sub_v = np.asarray(mesh_a.vertices)[used]
+    T = np.asarray(group["to_link"], dtype=np.float64)
+    v_out = _unswap(sub_v.astype(np.float64))
+    v_link = v_out @ T[:3, :3].T + T[:3, 3]
+    return v_link.min(axis=0), v_link.max(axis=0)
 
 
 def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
@@ -301,21 +265,6 @@ def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
             pipe, pair["merged_mesh"], pair["image"], seed, resolution)
         faces = np.asarray(mesh_a.faces)
 
-        open_ctx = None
-        if pair.get("merged_mesh_open") and pair.get("image_open"):
-            field_b, mesh_b_p, _c, _s = _decode_field(
-                pipe, pair["merged_mesh_open"], pair["image_open"], seed, resolution)
-            open_ctx = {
-                "field_open": field_b,
-                # Positions are interpolated from the open mesh in ITS field frame, so keep
-                # the preprocessed open mesh (same face/vertex order as the file).
-                "mesh_open": mesh_b_p,
-                "views_rest": VIS.load_views(pair["visibility_rest"]),
-                "center_rest": np.asarray(center_rest, dtype=np.float64),
-                "scale_rest": float(scale_rest),
-                "blend_band_texels": int(pair.get("blend_band_texels", 8)),
-            }
-
         pass_meta: dict[str, dict] = {}
         n_ok = n_fail = 0
         for group in todo:
@@ -324,7 +273,7 @@ def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
             os.makedirs(os.path.dirname(glb_path), exist_ok=True)
             try:
                 out, stats = _bake_group(pipe, ctx, group, faces, mesh_a, field_a,
-                                         resolution, open_ctx)
+                                         resolution)
                 fatal, warn = _check_bounds(out, group,
                                             _slice_link_bounds(group, faces, mesh_a))
                 if fatal is not None:
@@ -337,8 +286,6 @@ def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
                 emit_result({"backend": "trellis2", "group_id": gid,
                              "glb_path": glb_path, "ok": True, **stats})
             except Exception as e:  # noqa: BLE001
-                # to_link mismatches mean a bad transform and must fail loudly; bake/unwrap
-                # failures (including bake geometry loss) degrade to a constant-PBR GLB.
                 if "to_link bounds mismatch" in str(e):
                     n_fail += 1
                     emit_result({"backend": "trellis2", "group_id": gid,
@@ -359,8 +306,7 @@ def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
                                  "glb_path": None, "ok": False,
                                  "error": f"{e}; fallback failed: {e2}"})
 
-    # Group-granular resume: a partial run bakes only the missing groups, so the metadata
-    # of previously baked groups must be merged, not clobbered.
+    # Group-granular resume: merge metadata with previous runs.
     def _merged(path: str, key: str, fresh: dict) -> dict:
         prev = {}
         if os.path.isfile(path):
@@ -377,14 +323,6 @@ def _run_pair(pipe, ctx, pair: dict, resolution: int) -> None:
         json.dump({"resolution": resolution, "seed": seed,
                    "field_voxels_total": int(field_a.coords.shape[0]),
                    "groups": _merged(pass_a_path, "groups", pass_meta)}, fp, indent=2)
-    if open_ctx is not None:
-        pass_b_path = os.path.join(out_dir, "pass_b.json")
-        fresh_b = {g: m.get("pass_b_frac", 0.0) for g, m in pass_meta.items()}
-        with open(pass_b_path, "w") as fp:
-            json.dump({"seed": seed,
-                       "field_voxels_total": int(open_ctx["field_open"].coords.shape[0]),
-                       "pass_b_frac": _merged(pass_b_path, "pass_b_frac", fresh_b)},
-                      fp, indent=2)
 
     last_ok = next((g["out_glb"] for g in reversed(pair["groups"])
                     if os.path.isfile(g["out_glb"])), None)

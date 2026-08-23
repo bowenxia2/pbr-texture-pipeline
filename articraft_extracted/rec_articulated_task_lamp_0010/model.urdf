@@ -1,0 +1,481 @@
+<robot name="tripod_pole_lamp">
+  <material name="matte_black">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <material name="warm_white">
+    <color rgba="0.89 0.88 0.84 1" />
+    </material>
+  <material name="satin_steel">
+    <color rgba="0.63 0.65 0.68 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.86 0.9 0.94 0.35" />
+    </material>
+  <material name="brass">
+    <color rgba="0.7 0.6 0.34 1" />
+    </material>
+  <material name="charcoal_rubber">
+    <color rgba="0.18 0.18 0.19 1" />
+    </material>
+  <link name="base">
+    <visual name="sleeve_shell">
+      <origin xyz="0 0 0.225" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.042" length="0.36" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="tripod_crown">
+      <origin xyz="0 0 0.149" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.058" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="collar_cheek_left">
+      <origin xyz="-0.032 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.096 0.136" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="collar_cheek_right">
+      <origin xyz="0.032 0 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.096 0.136" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="collar_backstrap">
+      <origin xyz="0 -0.032 0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.016 0.136" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="thumbscrew_shaft">
+      <origin xyz="0.055 0 0.28" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.062" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="thumbscrew_knob">
+      <origin xyz="0.097 0 0.28" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.024" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.7 0.6 0.34 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_socket">
+      <origin xyz="0.048 0 0.16325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.058 0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="front_leg_gusset">
+      <origin xyz="0.041 0 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.042 0.028 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="left_leg_socket">
+      <origin xyz="-0.024 0.0415692 0.16325" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.018 0.058 0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="left_leg_gusset">
+      <origin xyz="-0.0205 0.035507 0.126" rpy="0 0 2.0944" />
+      <geometry>
+        <box size="0.042 0.028 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="right_leg_socket">
+      <origin xyz="-0.024 -0.0415692 0.16325" rpy="0 0 -2.0944" />
+      <geometry>
+        <box size="0.018 0.058 0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="right_leg_gusset">
+      <origin xyz="-0.0205 -0.035507 0.126" rpy="0 0 -2.0944" />
+      <geometry>
+        <box size="0.042 0.028 0.028" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="pole">
+    <visual name="pole_tube">
+      <origin xyz="0 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="1.52" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.89 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="arm_collar_ring">
+      <origin xyz="0 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.1" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="arm_collar_left">
+      <origin xyz="-0.031 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.086 0.1" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="arm_collar_right">
+      <origin xyz="0.028 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.086 0.1" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="arm_collar_backstrap">
+      <origin xyz="0 -0.03 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.014 0.1" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="arm_pivot_lug">
+      <origin xyz="0.028 0 0.96" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.064 0.052" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_front">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="leg_tube">
+      <origin xyz="0.243892 0 -0.0721694" rpy="0 1.87623 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.48" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="knee_cap">
+      <origin xyz="0.105 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="foot_cap">
+      <origin xyz="0.472784 0 -0.144339" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_left">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="leg_tube">
+      <origin xyz="0.243892 0 -0.0721694" rpy="0 1.87623 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.48" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="knee_cap">
+      <origin xyz="0.105 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="foot_cap">
+      <origin xyz="0.472784 0 -0.144339" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="leg_right">
+    <visual name="hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="leg_tube">
+      <origin xyz="0.243892 0 -0.0721694" rpy="0 1.87623 0" />
+      <geometry>
+        <cylinder radius="0.0115" length="0.48" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="knee_cap">
+      <origin xyz="0.105 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="foot_cap">
+      <origin xyz="0.472784 0 -0.144339" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="charcoal_rubber">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="arm">
+    <visual name="arm_hinge_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.064" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="extension_tube">
+      <origin xyz="0.252 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.462" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="arm_root_block">
+      <origin xyz="0.028 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.034 0.034" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="yoke_core">
+      <origin xyz="0.449 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.05 0.036" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="yoke_left">
+      <origin xyz="0.494 0.08 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.016 0.118" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="yoke_right">
+      <origin xyz="0.494 -0.08 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.016 0.118" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="yoke_link_left">
+      <origin xyz="0.446 0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.05 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="yoke_link_right">
+      <origin xyz="0.446 -0.049 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.074 0.05 0.018" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="pivot_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.144" />
+        </geometry>
+      <material name="satin_steel">
+        <color rgba="0.63 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0.03 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.05" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="0.044 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.044" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="head_housing">
+      <origin xyz="0.108 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.096" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.89 0.88 0.84 1" />
+        </material>
+      </visual>
+    <visual name="bezel_ring">
+      <origin xyz="0.163 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.094" length="0.014" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="lens">
+      <origin xyz="0.174 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.008" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.86 0.9 0.94 0.35" />
+        </material>
+      </visual>
+    </link>
+  <joint name="front_leg_spread" type="revolute">
+    <origin xyz="0.072 0 0.16325" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="leg_front" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="1.2" lower="-0.12" upper="0.18" />
+    </joint>
+  <joint name="left_leg_spread" type="revolute">
+    <origin xyz="-0.036 0.0623538 0.16325" rpy="0 0 2.0944" />
+    <parent link="base" />
+    <child link="leg_left" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="1.2" lower="-0.12" upper="0.18" />
+    </joint>
+  <joint name="right_leg_spread" type="revolute">
+    <origin xyz="-0.036 -0.0623538 0.16325" rpy="0 0 -2.0944" />
+    <parent link="base" />
+    <child link="leg_right" />
+    <axis xyz="0 1 0" />
+    <limit effort="40" velocity="1.2" lower="-0.12" upper="0.18" />
+    </joint>
+  <joint name="pole_slide" type="prismatic">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="pole" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.2" lower="0" upper="0.18" />
+    </joint>
+  <joint name="arm_pitch" type="revolute">
+    <origin xyz="0.052 0 0.96" rpy="0 0 0" />
+    <parent link="pole" />
+    <child link="arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="1.1" lower="-0.45" upper="0.85" />
+    </joint>
+  <joint name="head_tilt" type="revolute">
+    <origin xyz="0.495 0 0" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="head" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.5" lower="-0.95" upper="0.55" />
+    </joint>
+  </robot>

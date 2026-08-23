@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 26,
+    "tool_call_count": 27,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "c4cc5cf3d38b5b245a41b2ffc61b4a58c1920bb44762096a11677c2cc4ba4446",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "764370f36a6bb856383bdb7212f76b061a2248dbecd35efcf05cbe3941e1fe5f"
+  }
+}

@@ -1,0 +1,691 @@
+<robot name="cocktail_table_arcade_machine">
+  <material name="cabinet_paint">
+    <color rgba="0.17 0.16 0.15 1" />
+    </material>
+  <material name="black_trim">
+    <color rgba="0.07 0.07 0.08 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.33 0.39 0.42 0.38" />
+    </material>
+  <material name="screen_black">
+    <color rgba="0.05 0.06 0.07 1" />
+    </material>
+  <material name="screen_glow">
+    <color rgba="0.12 0.53 0.68 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.72 0.73 0.75 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.78 0.18 0.17 1" />
+    </material>
+  <material name="button_yellow">
+    <color rgba="0.88 0.72 0.15 1" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.2 0.45 0.83 1" />
+    </material>
+  <material name="joystick_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="knob_black">
+    <color rgba="0.11 0.11 0.12 1" />
+    </material>
+  <material name="button_guide">
+    <color rgba="0.18 0.18 0.19 1" />
+    </material>
+  <link name="cabinet">
+    <inertial>
+      <origin xyz="0 0 0.34" rpy="0 0 0" />
+      <mass value="48" />
+      <inertia ixx="3.488" ixy="0" ixz="0" iyy="5.384" iyz="0" izz="5.1728" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.6 0.07" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="left_body_wall">
+      <origin xyz="0 0.305 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.91 0.03 0.56" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="right_body_wall">
+      <origin xyz="0 -0.305 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.91 0.03 0.56" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="rear_body_wall">
+      <origin xyz="-0.455 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.58 0.56" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="front_wall_lower">
+      <origin xyz="0.455 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.58 0.16" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="front_wall_upper">
+      <origin xyz="0.455 0 0.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.58 0.22" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="front_wall_left_jamb">
+      <origin xyz="0.455 -0.095 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.39 0.18" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="front_wall_right_jamb">
+      <origin xyz="0.455 0.275 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.18" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="player_panel_pos">
+      <origin xyz="0 0.23 0.608" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.12 0.026" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="player_panel_neg">
+      <origin xyz="0 -0.23 0.608" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.12 0.026" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_top_rail">
+      <origin xyz="0.405 0 0.608" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.58 0.026" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="rear_top_rail">
+      <origin xyz="-0.405 0 0.608" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.58 0.026" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="screen_well_left">
+      <origin xyz="0 0.165 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="screen_well_right">
+      <origin xyz="0 -0.165 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.78 0.03 0.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="screen_well_front">
+      <origin xyz="0.39 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="screen_well_rear">
+      <origin xyz="-0.39 0 0.54" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.17 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="glass_lip_left">
+      <origin xyz="0 0.17 0.609" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.02 0.022" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="glass_lip_right">
+      <origin xyz="0 -0.17 0.609" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.02 0.022" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="glass_lip_front">
+      <origin xyz="0.38 0 0.609" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.32 0.022" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="glass_lip_rear">
+      <origin xyz="-0.38 0 0.609" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.32 0.022" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="screen_shelf">
+      <origin xyz="0 0 0.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.34 0.03" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="screen_support_left">
+      <origin xyz="0 0.125 0.524" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.03 0.028" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="screen_support_right">
+      <origin xyz="0 -0.125 0.524" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.03 0.028" />
+        </geometry>
+      <material name="black_trim">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="player_one_overlay">
+      <origin xyz="-0.05 0.23 0.6225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.1 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="selector_mount_plate">
+      <origin xyz="0.25 0.19 0.6225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.06 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="player_one_joystick_collar">
+      <origin xyz="-0.18 0.19 0.629" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="player_one_button_guide_0">
+      <origin xyz="-0.04 0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="player_one_button_guide_1">
+      <origin xyz="0.02 0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="player_one_button_guide_2">
+      <origin xyz="0.08 0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="player_two_overlay">
+      <origin xyz="-0.05 -0.23 0.6225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.1 0.003" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="player_two_joystick_collar">
+      <origin xyz="-0.18 -0.19 0.629" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="player_two_button_guide_0">
+      <origin xyz="-0.04 -0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="player_two_button_guide_1">
+      <origin xyz="0.02 -0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="player_two_button_guide_2">
+      <origin xyz="0.08 -0.19 0.626" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.004" />
+        </geometry>
+      <material name="button_guide">
+        <color rgba="0.18 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="glass_top">
+    <inertial>
+      <mass value="6" />
+      <inertia ixx="0.051218" ixy="0" ixz="0" iyy="0.288818" iyz="0" izz="0.34" />
+      </inertial>
+    <visual name="glass_panel">
+      <geometry>
+        <box size="0.76 0.32 0.006" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.33 0.39 0.42 0.38" />
+        </material>
+      </visual>
+    </link>
+  <link name="screen_module">
+    <inertial>
+      <mass value="9" />
+      <inertia ixx="0.059883" ixy="0" ixz="0" iyy="0.219783" iyz="0" izz="0.2775" />
+      </inertial>
+    <visual name="screen_bezel">
+      <geometry>
+        <box size="0.54 0.28 0.038" />
+        </geometry>
+      <material name="screen_black">
+        <color rgba="0.05 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="screen_face">
+      <origin xyz="0 0 0.0205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.22 0.003" />
+        </geometry>
+      <material name="screen_glow">
+        <color rgba="0.12 0.53 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_one_joystick">
+    <inertial>
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="6e-05" ixy="0" ixz="0" iyy="6e-05" iyz="0" izz="1.2e-05" />
+      </inertial>
+    <visual name="joystick_shaft">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.05" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="joystick_ball">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.78 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_two_joystick">
+    <inertial>
+      <origin xyz="0 0 0.045" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="6e-05" ixy="0" ixz="0" iyy="6e-05" iyz="0" izz="1.2e-05" />
+      </inertial>
+    <visual name="joystick_shaft">
+      <origin xyz="0 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.05" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="joystick_ball">
+      <origin xyz="0 0 0.073" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.015" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.2 0.45 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_one_button_0">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.78 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_one_button_1">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.88 0.72 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_one_button_2">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.2 0.45 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_two_button_0">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.78 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_two_button_1">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.88 0.72 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="player_two_button_2">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.7775e-06" ixy="0" ixz="0" iyy="1.7775e-06" iyz="0" izz="3.375e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.006" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.2 0.45 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="coin_door">
+    <inertial>
+      <origin xyz="0.009 0 -0.09" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.0058" ixy="0" ixz="0" iyy="0.0032724" iyz="0" izz="0.0025924" />
+      </inertial>
+    <visual name="coin_door_panel">
+      <origin xyz="0.009 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.16 0.18" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="0.02 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.06 0.012" />
+        </geometry>
+      <material name="screen_black">
+        <color rgba="0.05 0.06 0.07 1" />
+        </material>
+      </visual>
+    <visual name="coin_return_pull">
+      <origin xyz="0.02 0 -0.115" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.01" />
+        </geometry>
+      <material name="screen_black">
+        <color rgba="0.05 0.06 0.07 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector_knob">
+    <inertial>
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="5.9415e-05" ixy="0" ixz="0" iyy="5.9415e-05" iyz="0" izz="5.808e-05" />
+      </inertial>
+    <visual name="selector_collar">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="selector_shaft">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.018" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    <visual name="selector_body">
+      <origin xyz="0 0 0.026" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.024" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="selector_cap">
+      <origin xyz="0 0 0.0405" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.005" />
+        </geometry>
+      <material name="brushed_metal">
+        <color rgba="0.72 0.73 0.75 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cabinet_to_glass_top" type="fixed">
+    <origin xyz="0 0 0.622" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="glass_top" />
+    </joint>
+  <joint name="cabinet_to_screen_module" type="fixed">
+    <origin xyz="0 0 0.557" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="screen_module" />
+    </joint>
+  <joint name="cabinet_to_player_one_joystick" type="revolute">
+    <origin xyz="-0.18 0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_one_joystick" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="2.5" lower="-0.35" upper="0.35" />
+    </joint>
+  <joint name="cabinet_to_player_two_joystick" type="revolute">
+    <origin xyz="-0.18 -0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_two_joystick" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="2.5" lower="-0.35" upper="0.35" />
+    </joint>
+  <joint name="cabinet_to_player_one_button_0" type="prismatic">
+    <origin xyz="-0.04 0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_one_button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_player_one_button_1" type="prismatic">
+    <origin xyz="0.02 0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_one_button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_player_one_button_2" type="prismatic">
+    <origin xyz="0.08 0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_one_button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_player_two_button_0" type="prismatic">
+    <origin xyz="-0.04 -0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_two_button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_player_two_button_1" type="prismatic">
+    <origin xyz="0.02 -0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_two_button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_player_two_button_2" type="prismatic">
+    <origin xyz="0.08 -0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="player_two_button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.5" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_coin_door" type="revolute">
+    <origin xyz="0.47 0.18 0.4" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="coin_door" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="2.5" lower="0" upper="1.45" />
+    </joint>
+  <joint name="cabinet_to_selector_knob" type="continuous">
+    <origin xyz="0.25 0.19 0.624" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="selector_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.3" velocity="10" />
+    </joint>
+  </robot>

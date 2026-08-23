@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_articulated_task_lamp_26b8afbe241c433fa325fbf23fe8edda",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 10,
+    "tool_call_count": 12,
+    "compile_attempt_count": 2,
+    "fingerprint_inputs": {
+      "model_py_sha256": "ec4e6272ceb02944fb4bb0a6e1d0736d4f75b2ec7a71965bc27da13dc8f19537",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "33ae3364005c78f496908a852186e22d54e0c6c99a9102a151e940cbbe52ccbc"
+  }
+}

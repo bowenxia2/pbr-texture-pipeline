@@ -1,0 +1,241 @@
+<robot name="desktop_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.93 0.94 0.92 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.17 0.18 0.19 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.23 0.24 0.25 1" />
+    </material>
+  <material name="filter_grey">
+    <color rgba="0.74 0.78 0.8 1" />
+    </material>
+  <material name="filter_frame">
+    <color rgba="0.28 0.29 0.3 1" />
+    </material>
+  <material name="soft_black">
+    <color rgba="0.12 0.13 0.14 1" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.00976213" ixy="0" ixz="0" iyy="0.00976213" iyz="0" izz="0.0101376" />
+      </inertial>
+    <visual name="plinth">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.096" length="0.018" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="drum_shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_drum_shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bezel">
+      <origin xyz="0 0.082 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.016 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_bezel">
+      <origin xyz="0 0.082 0.147" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.016 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="left_bezel">
+      <origin xyz="-0.052 0.082 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.016 0.13" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="right_bezel">
+      <origin xyz="0.052 0.082 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.016 0.13" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="latch_seat">
+      <origin xyz="0.048 0.089 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.002 0.096" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="exhaust_cap">
+    <inertial>
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <mass value="0.28" />
+      <inertia ixx="0.00049168" ixy="0" ixz="0" iyy="0.00049168" iyz="0" izz="0.00094136" />
+      </inertial>
+    <visual name="cap_flange">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.089" length="0.004" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="cap_shell">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.018" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="grille_bar_x">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.006 0.004" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="grille_bar_y">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.044 0.004" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    <visual name="grille_hub">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="soft_black">
+        <color rgba="0.12 0.13 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="access_panel">
+    <inertial>
+      <origin xyz="0.052 -0.012 0" rpy="0 0 0" />
+      <mass value="0.34" />
+      <inertia ixx="0.000453333" ixy="0" ixz="0" iyy="0.000691333" iyz="0" izz="0.000328667" />
+      </inertial>
+    <visual name="door_skin">
+      <origin xyz="0.05 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.004 0.11" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="filter_frame">
+      <origin xyz="0.056 0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.005 0.098" />
+        </geometry>
+      <material name="filter_frame">
+        <color rgba="0.28 0.29 0.3 1" />
+        </material>
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="0.056 0.0015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.004 0.086" />
+        </geometry>
+      <material name="filter_grey">
+        <color rgba="0.74 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_0">
+      <origin xyz="0.039 0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.0055 0.086" />
+        </geometry>
+      <material name="filter_frame">
+        <color rgba="0.28 0.29 0.3 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_1">
+      <origin xyz="0.05 0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.0055 0.086" />
+        </geometry>
+      <material name="filter_frame">
+        <color rgba="0.28 0.29 0.3 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_2">
+      <origin xyz="0.061 0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.0055 0.086" />
+        </geometry>
+      <material name="filter_frame">
+        <color rgba="0.28 0.29 0.3 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_3">
+      <origin xyz="0.072 0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.0055 0.086" />
+        </geometry>
+      <material name="filter_frame">
+        <color rgba="0.28 0.29 0.3 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0.088 0.0045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.007 0.007 0.026" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="latch_tongue">
+      <origin xyz="0.091 -0.0055 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.005 0.04" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.23 0.24 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="housing_to_exhaust_cap" type="fixed">
+    <origin xyz="0 0 0.16" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="exhaust_cap" />
+    </joint>
+  <joint name="housing_to_access_panel" type="revolute">
+    <origin xyz="-0.05 0.096 0.085" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="access_panel" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="2.5" lower="0" upper="1.15" />
+    </joint>
+  </robot>

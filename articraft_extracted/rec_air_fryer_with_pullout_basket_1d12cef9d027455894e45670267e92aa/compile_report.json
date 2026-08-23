@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_fryer_with_pullout_basket_1d12cef9d027455894e45670267e92aa",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 8 overlaps across 7 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 35,
+    "tool_call_count": 42,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "9e412678fbae380d39df5b0445dec818bc9d5cd9e61a762e8a138f748da43b7b",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "787d490e4014c058242037bda6ff80b89b099b355c157ec56f819ffe16bfc5b3"
+  }
+}

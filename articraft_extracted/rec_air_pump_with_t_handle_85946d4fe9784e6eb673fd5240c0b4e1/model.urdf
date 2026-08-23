@@ -1,0 +1,84 @@
+<robot name="bicycle_track_pump">
+  <material name="powder_gray">
+    <color rgba="0.28 0.3 0.32 1" />
+    </material>
+  <material name="satin_aluminum">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <material name="chrome">
+    <color rgba="0.84 0.86 0.88 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="gauge_black">
+    <color rgba="0.05 0.06 0.07 1" />
+    </material>
+  <link name="pump_body">
+    <inertial>
+      <origin xyz="0 0 0.257" rpy="0 0 0" />
+      <mass value="3.1" />
+      <inertia ixx="0.0998965" ixy="0" ixz="0" iyy="0.107543" iyz="0" izz="0.0709383" />
+      </inertial>
+    <visual name="tripod_base">
+      <geometry>
+        <mesh filename="assets/meshes/tripod_base.obj" />
+        </geometry>
+      <material name="powder_gray" />
+      </visual>
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/barrel_shell.obj" />
+        </geometry>
+      <material name="satin_aluminum" />
+      </visual>
+    <visual name="gauge_housing">
+      <origin xyz="0.033 0 0.064" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.018" />
+        </geometry>
+      <material name="powder_gray" />
+      </visual>
+    <visual name="gauge_face">
+      <origin xyz="0.04175 0 0.064" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.025" length="0.0025" />
+        </geometry>
+      <material name="gauge_black" />
+      </visual>
+    </link>
+  <link name="rod_handle">
+    <inertial>
+      <origin xyz="0 0 0.055" rpy="0 0 0" />
+      <mass value="0.55" />
+      <inertia ixx="0.00170152" ixy="0" ixz="0" iyy="0.0053774" iyz="0" izz="0.00376975" />
+      </inertial>
+    <visual name="pump_rod">
+      <origin xyz="0 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.42" />
+        </geometry>
+      <material name="chrome" />
+      </visual>
+    <visual name="piston_head">
+      <origin xyz="0 0 -0.258" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0175" length="0.012" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    <visual name="t_handle">
+      <geometry>
+        <mesh filename="assets/meshes/t_handle.obj" />
+        </geometry>
+      <material name="rubber_black" />
+      </visual>
+    </link>
+  <joint name="body_to_rod_handle" type="prismatic">
+    <origin xyz="0 0 0.514" rpy="0 0 0" />
+    <parent link="pump_body" />
+    <child link="rod_handle" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="1" lower="0" upper="0.22" />
+    </joint>
+  </robot>

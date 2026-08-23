@@ -1,15 +1,16 @@
-"""Stage R: mesh normalization, cameras, VLM contact sheet, and control maps (PRD section 3).
+"""Stage R: mesh normalization, cameras, textured view rendering.
 
-All rendering uses TRELLIS.2's nvdiffrast `MeshRenderer` (no Blender, no pyrender). This
-module MUST run in the `trellis2` env (renderer stack: cumesh/o_voxel/nvdiffrast/flex_gemm).
+Textured views use pyrender via EGL for headless GPU rendering.
+Contact-sheet rendering for Orient-V2 still uses TRELLIS.2's nvdiffrast MeshRenderer.
+This module MUST run in the `trellis2` env.
 
-Conventions are the ones empirically confirmed at Gate 1 (see README "Conventions (verified)"):
+Conventions:
   - canonical front camera = yaw=pi, pitch=0, r=2, fov=40
-  - depth = normalized inverse depth, near=white far=black, bg black
 """
 from __future__ import annotations
 
 import math
+import os
 import shutil
 import sys
 from pathlib import Path
@@ -249,7 +250,7 @@ def render_contact_sheet(jobdir, mesh_repr: Mesh, resolution: int = 512, ssaa: i
         if render_res != resolution:
             shade = np.array(Image.fromarray(shade, mode="L").resize(
                 (resolution, resolution), Image.LANCZOS))
-        Image.fromarray(shade, mode="L").save(jobdir.view(k))
+        Image.fromarray(shade, mode="L").save(jobdir.render_view(k))
         panels.append(shade)
         if also_depth:
             depths.append(r["depth"])
@@ -342,3 +343,115 @@ def render_control_maps(
     }
     jobdir.write_json(jobdir.camera_json(), cam)
     return {"mask_coverage": coverage, "camera": cam}
+
+
+# --- textured pyrender views (Stage R revision) ------------------------------
+def render_textured_views(
+    job,
+    group_meshes_textured: list[tuple[str, "trimesh.Trimesh", np.ndarray]],
+    R_mat: np.ndarray | None,
+    num_views: int = 1,
+    resolution: int = 1024,
+) -> dict:
+    """Render *num_views* RGBA views of the textured mesh at 90-degree azimuth steps.
+
+    Uses pyrender with the EGL backend for headless GPU rendering.
+    For view 0 (the front), also captures the depth buffer as an inverse-depth
+    ControlNet map and composites the RGBA onto a white background.
+
+    Args:
+        job: JobDir instance.
+        group_meshes_textured: list of (group_id, trimesh_with_materials, fk_transform_4x4).
+        R_mat: 3x3 repose rotation (from Orient-V2 / front_panel), or None.
+        num_views: number of views (default 1, front-only).
+        resolution: output image size in pixels.
+
+    Returns:
+        dict with keys: views (list of RGBA paths), depth (depth map path),
+        front_white (white-bg composite path).
+    """
+    os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
+    import pyrender
+
+    all_verts = []
+    for _gid, mesh, fk_T in group_meshes_textured:
+        v = np.asarray(mesh.vertices, dtype=np.float64) @ fk_T[:3, :3].T + fk_T[:3, 3]
+        all_verts.append(v)
+    all_v = np.concatenate(all_verts, axis=0)
+    vmin, vmax = all_v.min(axis=0), all_v.max(axis=0)
+    center = (vmin + vmax) / 2.0
+    scale = 0.99999 / (vmax - vmin).max()
+
+    scene = pyrender.Scene(bg_color=[0, 0, 0, 0], ambient_light=[0.3, 0.3, 0.3])
+    for _gid, mesh, fk_T in group_meshes_textured:
+        v = np.asarray(mesh.vertices, dtype=np.float64) @ fk_T[:3, :3].T + fk_T[:3, 3]
+        v = (v - center) * scale
+        if R_mat is not None:
+            v = v @ R_mat.T
+        norm_mesh = trimesh.Trimesh(
+            vertices=v, faces=mesh.faces, visual=mesh.visual, process=False)
+        try:
+            pr_mesh = pyrender.Mesh.from_trimesh(norm_mesh)
+        except Exception:
+            pr_mesh = pyrender.Mesh.from_trimesh(
+                trimesh.Trimesh(vertices=v, faces=mesh.faces, process=False))
+        scene.add(pr_mesh)
+
+    r = float(_CFG.get("render.r"))
+    fov = float(_CFG.get("render.fov_deg"))
+    fov_rad = math.radians(fov)
+    cam = pyrender.PerspectiveCamera(yfov=fov_rad, aspectRatio=1.0, znear=0.1, zfar=100.0)
+    light = pyrender.DirectionalLight(color=np.ones(3), intensity=3.0)
+
+    renderer = pyrender.OffscreenRenderer(resolution, resolution)
+    azimuth_step = 2.0 * math.pi / num_views
+    saved = []
+    for i in range(num_views):
+        yaw = math.pi + i * azimuth_step
+        cx, cy, cz = r * math.sin(yaw), r * math.cos(yaw), 0.0
+        eye = np.array([cx, cy, cz])
+        target = np.array([0.0, 0.0, 0.0])
+        up = np.array([0.0, 0.0, 1.0])
+        forward = target - eye
+        forward /= np.linalg.norm(forward)
+        right = np.cross(forward, up)
+        right /= np.linalg.norm(right)
+        up_actual = np.cross(right, forward)
+        cam_pose = np.eye(4)
+        cam_pose[:3, 0] = right
+        cam_pose[:3, 1] = up_actual
+        cam_pose[:3, 2] = -forward
+        cam_pose[:3, 3] = eye
+
+        cam_node = scene.add(cam, pose=cam_pose)
+        light_node = scene.add(light, pose=cam_pose)
+
+        color, depth_buf = renderer.render(scene, flags=pyrender.RenderFlags.RGBA)
+        scene.remove_node(cam_node)
+        scene.remove_node(light_node)
+
+        out_path = job.render_view(i)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        Image.fromarray(color).save(out_path)
+        saved.append(out_path)
+
+        if i == 0:
+            alpha = color[:, :, 3]
+            mask = (alpha > 0).astype(np.float32)
+            depth_cn = depth_to_controlnet(depth_buf, mask)
+            depth_path = job.render_depth(0)
+            depth_path.parent.mkdir(parents=True, exist_ok=True)
+            Image.fromarray(depth_cn, mode="L").save(depth_path)
+
+            rgb = color[:, :, :3].astype(np.float32)
+            a = color[:, :, 3:4].astype(np.float32) / 255.0
+            white_bg = (rgb * a + 255.0 * (1.0 - a)).astype(np.uint8)
+            front_white_path = job.render_front_white()
+            Image.fromarray(white_bg).save(front_white_path)
+
+    renderer.delete()
+    return {
+        "views": saved,
+        "depth": job.render_depth(0),
+        "front_white": job.render_front_white(),
+    }

@@ -1,0 +1,378 @@
+<robot name="explosion_proof_wall_lamp">
+  <material name="steel">
+    <color rgba="0.22 0.24 0.26 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.14 0.16 0.18 1" />
+    </material>
+  <material name="housing_paint">
+    <color rgba="0.52 0.55 0.5 1" />
+    </material>
+  <material name="bezel_paint">
+    <color rgba="0.4 0.42 0.38 1" />
+    </material>
+  <material name="lamp_glass">
+    <color rgba="0.82 0.9 0.97 0.35" />
+    </material>
+  <link name="wall_bracket">
+    <inertial>
+      <origin xyz="-0.034 0 0" rpy="0 0 0" />
+      <mass value="6.5" />
+      <inertia ixx="0.0541667" ixy="0" ixz="0" iyy="0.0391213" iyz="0" izz="0.0200547" />
+      </inertial>
+    <visual name="bracket_plate">
+      <origin xyz="-0.056 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.18 0.26" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="standoff_body">
+      <origin xyz="-0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.08 0.115" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_web_upper">
+      <origin xyz="-0.012 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.05 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_web_lower">
+      <origin xyz="-0.012 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.05 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_barrel_upper">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_barrel_lower">
+      <origin xyz="0 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.012" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_1">
+      <origin xyz="-0.05 -0.058 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_1_2">
+      <origin xyz="-0.05 -0.058 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_2_1">
+      <origin xyz="-0.05 0.058 -0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="mount_bolt_2_2">
+      <origin xyz="-0.05 0.058 0.085" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_arm">
+    <inertial>
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <mass value="3.2" />
+      <inertia ixx="0.00133333" ixy="0" ixz="0" iyy="0.0279733" iyz="0" izz="0.0279733" />
+      </inertial>
+    <visual name="rear_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.016" length="0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.03 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.046 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_beam">
+      <origin xyz="0.155 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.038 0.022" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="front_web_upper">
+      <origin xyz="0.278 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_web_lower">
+      <origin xyz="0.278 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.044 0.03 0.014" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_knuckle_upper">
+      <origin xyz="0.3 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="front_knuckle_lower">
+      <origin xyz="0.3 0 -0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0.145 0 0" rpy="0 0 0" />
+      <mass value="2.6" />
+      <inertia ixx="0.00132167" ixy="0" ixz="0" iyy="0.0190017" iyz="0" izz="0.0187633" />
+      </inertial>
+    <visual name="rear_hinge_barrel">
+      <geometry>
+        <cylinder radius="0.013" length="0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="0.028 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.04 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_beam">
+      <origin xyz="0.134 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.196 0.032 0.02" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.22 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="front_mount_block">
+      <origin xyz="0.228 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.024 0.044" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="yoke_rib_left">
+      <origin xyz="0.254 0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.022" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="yoke_rib_right">
+      <origin xyz="0.254 -0.017 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.022" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lamp_yoke_left">
+      <origin xyz="0.27 0.016 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="lamp_yoke_right">
+      <origin xyz="0.27 -0.016 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.14 0.16 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lamp_head">
+    <inertial>
+      <origin xyz="0.108 0 0" rpy="0 0 0" />
+      <mass value="5.8" />
+      <inertia ixx="0.0148635" ixy="0" ixz="0" iyy="0.0297738" iyz="0" izz="0.0297738" />
+      </inertial>
+    <visual name="trunnion_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.02" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="trunnion_collar">
+      <origin xyz="0.017 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.012 0.03" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="rear_cap">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.044" />
+        </geometry>
+      <material name="housing_paint">
+        <color rgba="0.52 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="housing_body">
+      <origin xyz="0.112 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.12" />
+        </geometry>
+      <material name="housing_paint">
+        <color rgba="0.52 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_1">
+      <origin xyz="0.074 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.007" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_2">
+      <origin xyz="0.098 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.007" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_3">
+      <origin xyz="0.122 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.007" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="cooling_fin_4">
+      <origin xyz="0.146 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.054" length="0.007" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="front_bezel">
+      <origin xyz="0.19 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.062" length="0.036" />
+        </geometry>
+      <material name="bezel_paint">
+        <color rgba="0.4 0.42 0.38 1" />
+        </material>
+      </visual>
+    <visual name="front_lens">
+      <origin xyz="0.203 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.047" length="0.005" />
+        </geometry>
+      <material name="lamp_glass">
+        <color rgba="0.82 0.9 0.97 0.35" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shoulder_joint" type="revolute">
+    <parent link="wall_bracket" />
+    <child link="lower_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="1.5" lower="-2.3" upper="2.3" />
+    </joint>
+  <joint name="elbow_joint" type="revolute">
+    <origin xyz="0.3 0 0" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="65" velocity="1.8" lower="-2.4" upper="2.4" />
+    </joint>
+  <joint name="lamp_tilt_joint" type="revolute">
+    <origin xyz="0.27 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="lamp_head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="40" velocity="2" lower="-0.95" upper="1.05" />
+    </joint>
+  </robot>

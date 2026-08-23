@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_a883b40a2b654059b3debfd89cc40837",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Isolated parts detected but allowed by justification: 1 part(s) ['stick'].\n- pose_index=0 at pose (body_to_door=0, body_to_stick=0), part 'stick' is disconnected from the grounded body rooted at 'body'; nearest_grounded_part='body'; approx_gap=0.004996m; backend=fcl"
+    },
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 34,
+    "tool_call_count": 36,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "babdb28266d15ee0774e2b68613bfca294c5d0e66e0c8c00883f53ab27a535cf",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "d15be33580ba21b4542aba1a334c0b7f8b5d9a2c476d9f62c5c69b3687c36939"
+  }
+}

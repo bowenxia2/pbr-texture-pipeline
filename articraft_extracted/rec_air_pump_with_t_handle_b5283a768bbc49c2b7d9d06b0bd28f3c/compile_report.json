@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "1776bfde5af9ac53482b696544cde3ebc4b3579163d34ec8bf899beb750b4ac0",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "cd03cf95347eefc4380e5e79320525c6070ff1122e82683c5e6fb9c367190630",
+    "model_py_mtime_ns": 1775918478990582979,
+    "model_py_size_bytes": 12504,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 299241,
+    "visual_mesh_file_count": 4,
+    "compile_elapsed_seconds": 1.0700143330032006
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

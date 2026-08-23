@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_adjustable_weight_bench_with_hinged_backrest_3091a84b86eb4fb8865413bdd4b51038",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "f1bf3e66ffe30241ca4a38cfbec833e655657418dc7391730cf0af133677b32e",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "cc8c0796d2010227516b54c5f1778a8adb139efc30b3f190b90a62688ae77100",
+    "model_py_mtime_ns": 1777283135010565978,
+    "model_py_size_bytes": 19918,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 858685,
+    "visual_mesh_file_count": 5,
+    "compile_elapsed_seconds": 6.323777666009846
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

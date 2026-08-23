@@ -1,0 +1,329 @@
+<robot name="pedestal_arcade_machine">
+  <material name="body_blue">
+    <color rgba="0.1 0.18 0.34 1" />
+    </material>
+  <material name="trim_black">
+    <color rgba="0.07 0.08 0.09 1" />
+    </material>
+  <material name="base_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="marquee_glow">
+    <color rgba="0.95 0.72 0.18 0.78" />
+    </material>
+  <material name="screen_glass">
+    <color rgba="0.1 0.16 0.18 0.4" />
+    </material>
+  <material name="metal_dark">
+    <color rgba="0.32 0.34 0.36 1" />
+    </material>
+  <material name="metal_light">
+    <color rgba="0.7 0.73 0.76 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.72 0.12 0.12 1" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.12 0.32 0.76 1" />
+    </material>
+  <material name="service_black">
+    <color rgba="0.03 0.03 0.04 1" />
+    </material>
+  <link name="cabinet">
+    <inertial>
+      <origin xyz="-0.02 0 0.615" rpy="0 0 0" />
+      <mass value="42" />
+      <inertia ixx="6.64055" ixy="0" ixz="0" iyy="6.24155" iyz="0" izz="2.2918" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="-0.04 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.54 0.07" />
+        </geometry>
+      <material name="base_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_body">
+      <origin xyz="-0.01 0 0.47" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.24 0.8" />
+        </geometry>
+      <material name="body_blue">
+        <color rgba="0.1 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="control_top">
+      <origin xyz="0.11 0 0.915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.44 0.022" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="control_apron">
+      <origin xyz="0.157 0 0.828" rpy="0 -0.56 0" />
+      <geometry>
+        <box size="0.02 0.4 0.185" />
+        </geometry>
+      <material name="body_blue">
+        <color rgba="0.1 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="control_front_lip">
+      <origin xyz="0.217 0 0.902" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.44 0.034" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="marquee_head">
+      <origin xyz="-0.02 0 1.115" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.62 0.29" />
+        </geometry>
+      <material name="body_blue">
+        <color rgba="0.1 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="monitor_neck">
+      <origin xyz="-0.03 0 0.915" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.28 0.12" />
+        </geometry>
+      <material name="body_blue">
+        <color rgba="0.1 0.18 0.34 1" />
+        </material>
+      </visual>
+    <visual name="marquee_lens">
+      <origin xyz="0.106 0 1.175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.5 0.09" />
+        </geometry>
+      <material name="marquee_glow">
+        <color rgba="0.95 0.72 0.18 0.78" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0.105 0 1.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.44 0.185" />
+        </geometry>
+      <material name="screen_glass">
+        <color rgba="0.1 0.16 0.18 0.4" />
+        </material>
+      </visual>
+    <visual name="screen_bezel_lower">
+      <origin xyz="0.088 0 0.992" rpy="0 -0.54 0" />
+      <geometry>
+        <box size="0.035 0.5 0.018" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="coin_door">
+      <origin xyz="0.144 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.12 0.22" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="service_bay_shadow">
+      <origin xyz="-0.147 0 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.19 0.48" />
+        </geometry>
+      <material name="service_black">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="cover_hinge_post">
+      <origin xyz="-0.15 0.11 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.02 0.52" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="spinner_bezel">
+      <origin xyz="0.1 -0.075 0.926" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/spinner_bezel_ring.obj" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="spinner_spindle_post">
+      <origin xyz="0.1 -0.075 0.929" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="left_button_guide">
+      <origin xyz="0.118 0.04 0.926" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/button_guide_sleeve.obj" />
+        </geometry>
+      <material name="metal_light">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_button_guide">
+      <origin xyz="0.118 0.105 0.926" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/button_guide_sleeve.obj" />
+        </geometry>
+      <material name="metal_light">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="spinner">
+    <inertial>
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <mass value="0.22" />
+      <inertia ixx="0.000103015" ixy="0" ixz="0" iyy="0.000103015" iyz="0" izz="0.00018491" />
+      </inertial>
+    <visual name="spinner_disc">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.041" length="0.006" />
+        </geometry>
+      <material name="metal_light">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="spinner_hub">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="spinner_grip">
+      <origin xyz="0.015 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.07 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_button">
+    <inertial>
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <mass value="0.045" />
+      <inertia ixx="3.42e-06" ixy="0" ixz="0" iyy="3.42e-06" iyz="0" izz="5.76e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.005" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.72 0.12 0.12 1" />
+        </material>
+      </visual>
+    <visual name="button_skirt">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.72 0.12 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_button">
+    <inertial>
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <mass value="0.045" />
+      <inertia ixx="3.42e-06" ixy="0" ixz="0" iyy="3.42e-06" iyz="0" izz="5.76e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0075" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.12 0.32 0.76 1" />
+        </material>
+      </visual>
+    <visual name="button_skirt">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.008" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.12 0.32 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_cover">
+    <inertial>
+      <origin xyz="-0.005 -0.1 0.24" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.02941" ixy="0" ixz="0" iyy="0.0250144" iyz="0" izz="0.0044244" />
+      </inertial>
+    <visual name="cover_panel">
+      <origin xyz="-0.005 -0.1 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.2 0.48" />
+        </geometry>
+      <material name="metal_dark">
+        <color rgba="0.32 0.34 0.36 1" />
+        </material>
+      </visual>
+    <visual name="cover_latch">
+      <origin xyz="-0.009 -0.165 0.24" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.018" />
+        </geometry>
+      <material name="metal_light">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cabinet_to_spinner" type="continuous">
+    <origin xyz="0.1 -0.075 0.926" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="spinner" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.6" velocity="14" />
+    </joint>
+  <joint name="cabinet_to_left_button" type="prismatic">
+    <origin xyz="0.118 0.04 0.93" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="left_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_right_button" type="prismatic">
+    <origin xyz="0.118 0.105 0.93" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="right_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_rear_cover" type="revolute">
+    <origin xyz="-0.16 0.1 0.21" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="rear_cover" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="1.5" lower="0" upper="1.8" />
+    </joint>
+  </robot>

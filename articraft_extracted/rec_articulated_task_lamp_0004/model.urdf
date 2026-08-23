@@ -1,0 +1,223 @@
+<robot name="single_arm_task_lamp">
+  <material name="matte_black">
+    <color rgba="0.14 0.15 0.17 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="aluminium">
+    <color rgba="0.76 0.78 0.8 1" />
+    </material>
+  <material name="warm_white">
+    <color rgba="0.93 0.94 0.95 1" />
+    </material>
+  <material name="diffuser">
+    <color rgba="0.98 0.98 0.95 0.82" />
+    </material>
+  <link name="mount">
+    <inertial>
+      <origin xyz="-0.005 0 0.045" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0136987" ixy="0" ixz="0" iyy="0.01383" iyz="0" izz="0.00229875" />
+      </inertial>
+    <visual name="clamp_top">
+      <origin xyz="0.01 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.065 0.078 0.01" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="clamp_back">
+      <origin xyz="-0.022 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.078 0.104" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="screw_collar">
+      <origin xyz="-0.014 0 -0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.046 0.022" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="screw_shaft">
+      <origin xyz="-0.014 0 -0.062" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.052" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="screw_pad">
+      <origin xyz="-0.014 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.004" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.15 0.17 1" />
+        </material>
+      </visual>
+    <visual name="column_base">
+      <origin xyz="0 0 0.068" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.034 0.016" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="column">
+      <origin xyz="0 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.102" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="mount_bridge">
+      <origin xyz="-0.012 0 0.184" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.032 0.016" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="mount_left_cheek">
+      <origin xyz="0 -0.013 0.202" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.032" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="mount_right_cheek">
+      <origin xyz="0 0.013 0.202" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.032" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="arm">
+    <inertial>
+      <origin xyz="0.225 0 0" rpy="0 0 0" />
+      <mass value="0.55" />
+      <inertia ixx="6.19667e-05" ixy="0" ixz="0" iyy="0.00931223" iyz="0" izz="0.00931223" />
+      </inertial>
+    <visual name="arm_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="aluminium">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="rear_knuckle">
+      <origin xyz="0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.018 0.01" />
+        </geometry>
+      <material name="aluminium">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="boom">
+      <origin xyz="0.231 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.388 0.02 0.012" />
+        </geometry>
+      <material name="aluminium">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="head_left_cheek">
+      <origin xyz="0.433 -0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.024" />
+        </geometry>
+      <material name="aluminium">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    <visual name="head_right_cheek">
+      <origin xyz="0.433 0.011 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.024" />
+        </geometry>
+      <material name="aluminium">
+        <color rgba="0.76 0.78 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.095 0 -0.001" rpy="0 0 0" />
+      <mass value="0.34" />
+      <inertia ixx="0.000200487" ixy="0" ixz="0" iyy="0.00104199" iyz="0" izz="0.00120417" />
+      </inertial>
+    <visual name="head_hinge">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.016" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0.018 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.012" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.105 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.156 0.07 0.018" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.93 0.94 0.95 1" />
+        </material>
+      </visual>
+    <visual name="diffuser">
+      <origin xyz="0.109 0 -0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.046 0.004" />
+        </geometry>
+      <material name="diffuser">
+        <color rgba="0.98 0.98 0.95 0.82" />
+        </material>
+      </visual>
+    </link>
+  <joint name="mount_to_arm" type="revolute">
+    <origin xyz="0 0 0.202" rpy="0 0 0" />
+    <parent link="mount" />
+    <child link="arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.55" upper="1" />
+    </joint>
+  <joint name="arm_to_head" type="revolute">
+    <origin xyz="0.436 0 0" rpy="0 0 0" />
+    <parent link="arm" />
+    <child link="head" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="3.5" lower="-0.65" upper="0.5" />
+    </joint>
+  </robot>

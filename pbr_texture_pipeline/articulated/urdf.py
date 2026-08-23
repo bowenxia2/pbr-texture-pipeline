@@ -550,10 +550,14 @@ def build_groups(asset: AssetInfo, group_by: str = "semantic") -> list[Group]:
 
 
 # --- mesh merging + normalization ---------------------------------------------
-def merge_group_mesh(asset: AssetInfo, group: Group):
+def merge_group_mesh(asset: AssetInfo, group: Group, with_materials: bool = False):
     """Load a group's visuals (OBJ meshes or primitives), bake per-visual origins,
-    concatenate -> one Trimesh in the link frame. Materials are discarded (we re-texture);
-    TRELLIS re-unwraps UVs anyway."""
+    concatenate -> one Trimesh in the link frame.
+
+    When *with_materials* is False (default), materials are stripped - the geometry-only
+    mesh is what TRELLIS re-UVs and face_ranges/norm_params operate on.
+    When True, OBJ materials and textures are preserved for pyrender textured rendering.
+    """
     import trimesh
 
     parts = []
@@ -562,7 +566,7 @@ def merge_group_mesh(asset: AssetInfo, group: Group):
             m = primitive_to_trimesh(vis.primitive)
         else:
             m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh", process=False,
-                             skip_materials=True)
+                             skip_materials=not with_materials)
         if m.vertices.shape[0] == 0:
             continue
         m = m.copy()
@@ -571,7 +575,8 @@ def merge_group_mesh(asset: AssetInfo, group: Group):
     if not parts:
         raise ValueError(f"group {group.group_id} has no loadable geometry")
     merged = trimesh.util.concatenate(parts) if len(parts) > 1 else parts[0]
-    merged.visual = trimesh.visual.ColorVisuals(mesh=merged)
+    if not with_materials:
+        merged.visual = trimesh.visual.ColorVisuals(mesh=merged)
     return merged
 
 
@@ -590,6 +595,17 @@ def denormalize(textured, center: np.ndarray, scale: float):
     """Map a TRELLIS-output (normalized) mesh back into the original link frame in place."""
     textured.vertices = textured.vertices / scale + center
     return textured
+
+
+# --- axis convention ----------------------------------------------------------
+# URDF world frame is Z-up; glTF convention is Y-up.
+# (x, y, z) -> (x, z, -y) matches rendering.export_yup.
+_Z_TO_Y = np.array([
+    [1,  0,  0, 0],
+    [0,  0,  1, 0],
+    [0, -1,  0, 0],
+    [0,  0,  0, 1],
+], dtype=np.float64)
 
 
 # --- textured URDF + assembled scene ------------------------------------------
@@ -642,12 +658,38 @@ def assemble_scene(job, backend: str):
             continue
         loaded = trimesh.load(str(glb))
         sub = loaded if isinstance(loaded, trimesh.Scene) else trimesh.Scene(loaded)
-        T = fk.get(g["link"], np.eye(4))
+        T = _Z_TO_Y @ fk.get(g["link"], np.eye(4))
         for node_name in list(sub.graph.nodes_geometry):
             transform, geom_name = sub.graph[node_name]
             scene.add_geometry(sub.geometry[geom_name], transform=T @ transform,
                                node_name=f"{g['group_id']}__{node_name}")
     out = job.assembled_glb(backend)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    scene.export(str(out))
+    return out
+
+
+def assemble_original_scene(job, backend: str):
+    """Rest-pose FK assembly of the original textured meshes -> assembled_original.glb.
+
+    Mirrors assemble_scene but loads per-group meshes from the source asset with
+    materials preserved, giving a direct visual comparison against the textured output.
+    """
+    import trimesh
+
+    asset_state = job.state["asset"]
+    asset = parse_asset(asset_state["asset_dir"])
+    groups = build_groups(asset, asset_state.get("group_by", "semantic"))
+    fk = link_world_transforms(asset)
+    scene = trimesh.Scene()
+    for g in groups:
+        try:
+            m = merge_group_mesh(asset, g, with_materials=True)
+        except Exception:
+            continue
+        T = _Z_TO_Y @ fk.get(g.link, np.eye(4))
+        scene.add_geometry(m, transform=T, node_name=g.group_id)
+    out = job.original_glb(backend)
     out.parent.mkdir(parents=True, exist_ok=True)
     scene.export(str(out))
     return out

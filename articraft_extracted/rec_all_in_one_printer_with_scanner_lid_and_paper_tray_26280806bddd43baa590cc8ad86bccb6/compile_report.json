@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_all_in_one_printer_with_scanner_lid_and_paper_tray_26280806bddd43baa590cc8ad86bccb6",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='body' connected=7/8 disconnected=[scanner_glass:Box]"
+    },
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 15 overlaps across 8 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 64,
+    "tool_call_count": 68,
+    "compile_attempt_count": 21,
+    "fingerprint_inputs": {
+      "model_py_sha256": "198485961d707664aff6182326846c7d1f2f9951d7ea07dad434559a67b97c34",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "320dc578abc7db28688ab8a4e05ba5896d9cf541bdbb5f6b410e8ea83d81da9f"
+  }
+}

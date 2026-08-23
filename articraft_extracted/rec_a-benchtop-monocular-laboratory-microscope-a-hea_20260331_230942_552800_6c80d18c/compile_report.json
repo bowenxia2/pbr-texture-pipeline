@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-benchtop-monocular-laboratory-microscope-a-hea_20260331_230942_552800_6c80d18c",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "873440592f15072459a5a6bdcce2d03d4c7da259f7985c509b3de7a25d24e9e1",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "520aba3853ef081b786764e447b149c7d8aa6690d5fb9c3367bcd22e6646c7d6",
+    "model_py_mtime_ns": 1775055075728957087,
+    "model_py_size_bytes": 13335,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 253860,
+    "visual_mesh_file_count": 5,
+    "compile_elapsed_seconds": 12.12635816699185
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

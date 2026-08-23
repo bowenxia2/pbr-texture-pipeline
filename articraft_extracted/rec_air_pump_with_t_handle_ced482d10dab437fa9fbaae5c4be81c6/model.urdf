@@ -1,0 +1,63 @@
+<robot name="industrial_air_pump">
+  <link name="base">
+    <visual name="guide">
+      <geometry>
+        <mesh filename="assets/meshes/base_guide.obj" />
+        </geometry>
+      </visual>
+    <visual name="cylinder">
+      <geometry>
+        <mesh filename="assets/meshes/cylinder.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="stabilizer_bar">
+    <visual name="bar">
+      <origin xyz="0 0 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.07 0.025" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="piston">
+    <visual name="rod">
+      <origin xyz="0 0 0.355" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.61" />
+        </geometry>
+      </visual>
+    <visual name="t_bar">
+      <origin xyz="0 0 0.65" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.3" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="grip">
+    <visual name="sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/grip_tube.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="stabilizer_slide" type="prismatic">
+    <parent link="base" />
+    <child link="stabilizer_bar" />
+    <axis xyz="1 0 0" />
+    <limit effort="100" velocity="1" lower="-0.15" upper="0.15" />
+    </joint>
+  <joint name="piston_pump" type="prismatic">
+    <parent link="base" />
+    <child link="piston" />
+    <axis xyz="0 0 1" />
+    <limit effort="100" velocity="2" lower="0" upper="0.5" />
+    </joint>
+  <joint name="grip_spin" type="continuous">
+    <origin xyz="0 0.1 0.65" rpy="0 0 0" />
+    <parent link="piston" />
+    <child link="grip" />
+    <axis xyz="0 1 0" />
+    <limit effort="10" velocity="5" />
+    </joint>
+  </robot>

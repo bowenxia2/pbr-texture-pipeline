@@ -1,0 +1,336 @@
+<robot name="factory_wall_lamp">
+  <material name="bracket_steel">
+    <color rgba="0.33 0.35 0.38 1" />
+    </material>
+  <material name="arm_gray">
+    <color rgba="0.55 0.57 0.6 1" />
+    </material>
+  <material name="hardware_steel">
+    <color rgba="0.7 0.71 0.73 1" />
+    </material>
+  <material name="matte_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="backplate">
+    <inertial>
+      <origin xyz="0.024 0 0.18" rpy="0 0 0" />
+      <mass value="2.6" />
+      <inertia ixx="0.0167267" ixy="0" ixz="0" iyy="0.01326" iyz="0" izz="0.00502667" />
+      </inertial>
+    <visual name="plate">
+      <origin xyz="0.006 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.14 0.24" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="flange_1">
+      <origin xyz="0.016 -0.05 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.024 0.024" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="bolt_1">
+      <origin xyz="0.026 -0.05 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="flange_2">
+      <origin xyz="0.016 0.05 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.024 0.024" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="bolt_2">
+      <origin xyz="0.026 0.05 0.09" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="flange_3">
+      <origin xyz="0.016 -0.05 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.024 0.024" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="bolt_3">
+      <origin xyz="0.026 -0.05 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="flange_4">
+      <origin xyz="0.016 0.05 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.024 0.024" />
+        </geometry>
+      <material name="bracket_steel">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="bolt_4">
+      <origin xyz="0.026 0.05 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.01" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="pivot_mount">
+      <origin xyz="0.028 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.06 0.09" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="pivot_post">
+      <origin xyz="0.044 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.09" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="inner_boom">
+    <inertial>
+      <origin xyz="0.16 0 0" rpy="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.000416667" ixy="0" ixz="0" iyy="0.00928333" iyz="0" izz="0.00928333" />
+      </inertial>
+    <visual name="pivot_hub">
+      <geometry>
+        <cylinder radius="0.024" length="0.05" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="inner_tube">
+      <origin xyz="0.162 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.276 0.034 0.034" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="elbow_mount">
+      <origin xyz="0.3 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.05" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="outer_boom">
+    <inertial>
+      <origin xyz="0.14 0 -0.01" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.00078" ixy="0" ixz="0" iyy="0.00576667" iyz="0" izz="0.00546667" />
+      </inertial>
+    <visual name="outer_hub">
+      <geometry>
+        <cylinder radius="0.022" length="0.048" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="outer_tube">
+      <origin xyz="0.132 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.034 0.034" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_left">
+      <origin xyz="0.24 0.021 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.008 0.07" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_right">
+      <origin xyz="0.24 -0.021 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.008 0.07" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_inner">
+      <origin xyz="0.219 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.034 0.07" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="socket_outer">
+      <origin xyz="0.261 0 -0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.034 0.07" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="drop_rod">
+    <inertial>
+      <origin xyz="0 0 -0.08" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.000819583" ixy="0" ixz="0" iyy="0.000819583" iyz="0" izz="0.000145833" />
+      </inertial>
+    <visual name="drop_tube">
+      <origin xyz="0 0 -0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.022 0.14" />
+        </geometry>
+      <material name="arm_gray">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="locking_ring">
+      <origin xyz="0 0 -0.077" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.014" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 -0.14" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.036" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="shade">
+    <inertial>
+      <origin xyz="0.045 0 -0.03" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.002535" ixy="0" ixz="0" iyy="0.0031875" iyz="0" izz="0.0031875" />
+      </inertial>
+    <visual name="shade_hinge">
+      <origin xyz="0.009 0.021 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.008 0.024" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="shade_pivot_pin">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.046" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="shade_hinge_mate">
+      <origin xyz="0.009 -0.021 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.008 0.024" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="yoke_link_left">
+      <origin xyz="0.025 0.021 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.008 0.014" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="yoke_link_right">
+      <origin xyz="0.025 -0.021 -0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.008 0.014" />
+        </geometry>
+      <material name="hardware_steel">
+        <color rgba="0.7 0.71 0.73 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.098 0 -0.05" rpy="0 1.8208 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.124" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_swing" type="revolute">
+    <origin xyz="0.044 0 0.18" rpy="0 0 0" />
+    <parent link="backplate" />
+    <child link="inner_boom" />
+    <axis xyz="0 0 1" />
+    <limit effort="18" velocity="2.5" lower="-1.5708" upper="1.5708" />
+    </joint>
+  <joint name="elbow_fold" type="revolute">
+    <origin xyz="0.3 0 0" rpy="0 0 0" />
+    <parent link="inner_boom" />
+    <child link="outer_boom" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="2.5" lower="-1.7" upper="0.15" />
+    </joint>
+  <joint name="drop_height" type="prismatic">
+    <origin xyz="0.24 0 0" rpy="0 0 0" />
+    <parent link="outer_boom" />
+    <child link="drop_rod" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="0.2" lower="-0.045" upper="0" />
+    </joint>
+  <joint name="shade_tilt" type="revolute">
+    <origin xyz="0 0 -0.14" rpy="0 0 0" />
+    <parent link="drop_rod" />
+    <child link="shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="2.5" lower="-0.35" upper="0.85" />
+    </joint>
+  </robot>

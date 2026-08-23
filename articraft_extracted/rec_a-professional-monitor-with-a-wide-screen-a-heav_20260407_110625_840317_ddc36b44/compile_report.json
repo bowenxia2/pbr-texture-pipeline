@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "ecd98b6422df16280e11c90b4223b34d5441eadd3ac0b4fb785d5283e1928492",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "479b890f1cf4ecfe4a932de3bdb1ce6b206b9e686c81325d186ef720459476c6",
+    "model_py_mtime_ns": 1775560383443776549,
+    "model_py_size_bytes": 10175,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 97376,
+    "visual_mesh_file_count": 3,
+    "compile_elapsed_seconds": 1.347769874992082
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

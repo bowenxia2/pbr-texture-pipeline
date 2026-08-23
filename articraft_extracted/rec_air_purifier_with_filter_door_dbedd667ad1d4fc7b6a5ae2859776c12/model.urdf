@@ -1,0 +1,544 @@
+<robot name="duct_mounted_air_purifier">
+  <material name="warm_powder_coated_metal">
+    <color rgba="0.72 0.75 0.76 1" />
+    </material>
+  <material name="dark_rubber_and_handles">
+    <color rgba="0.02 0.025 0.028 1" />
+    </material>
+  <material name="brushed_hinge_metal">
+    <color rgba="0.5 0.52 0.53 1" />
+    </material>
+  <material name="blue_filter_frame">
+    <color rgba="0.08 0.23 0.42 1" />
+    </material>
+  <material name="pleated_white_filter_media">
+    <color rgba="0.92 0.95 0.93 1" />
+    </material>
+  <material name="pale_blue_pleat_shadow">
+    <color rgba="0.56 0.7 0.82 1" />
+    </material>
+  <link name="housing">
+    <visual name="top_wall">
+      <origin xyz="0 0 0.2125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 1.2 0.035" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="0 0 -0.2125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 1.2 0.035" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="0 -0.5775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.045 0.46" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0 0.5775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.045 0.46" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_top">
+      <origin xyz="0.362 0 0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 1.2 0.095" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_bottom">
+      <origin xyz="0.362 0 -0.1825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 1.2 0.095" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_side_0">
+      <origin xyz="0.362 -0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.19 0.29" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="front_ring_side_1">
+      <origin xyz="0.362 0.505 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.19 0.29" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="duct_sleeve_top">
+      <origin xyz="0.435 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.86 0.026" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="duct_sleeve_bottom">
+      <origin xyz="0.435 0 -0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.86 0.026" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="duct_sleeve_side_0">
+      <origin xyz="0.435 -0.417 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.026 0.28" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="duct_sleeve_side_1">
+      <origin xyz="0.435 0.417 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.155 0.026 0.28" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="mount_flange_top">
+      <origin xyz="0.508 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.99 0.06" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="mount_flange_bottom">
+      <origin xyz="0.508 0 -0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.99 0.06" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="mount_flange_side_0">
+      <origin xyz="0.508 -0.4775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.035 0.39" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="mount_flange_side_1">
+      <origin xyz="0.508 0.4775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.035 0.39" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_lip_top">
+      <origin xyz="-0.362 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 1.2 0.05" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_lip_bottom">
+      <origin xyz="-0.362 0 -0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 1.2 0.05" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_lip_side_0">
+      <origin xyz="-0.362 -0.545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.11 0.36" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="rear_lip_side_1">
+      <origin xyz="-0.362 0.545 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.11 0.36" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_guide_0">
+      <origin xyz="-0.125 -0.5 -0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.11 0.022" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_guide_1">
+      <origin xyz="-0.125 0.5 -0.153" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.11 0.022" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_guide_0">
+      <origin xyz="-0.125 -0.5 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.11 0.018" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_guide_1">
+      <origin xyz="-0.125 0.5 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.11 0.018" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_split_seam">
+      <origin xyz="-0.02 0 0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.012 0.01" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="front_top_gasket">
+      <origin xyz="0.52 0 0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.92 0.014" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_gasket">
+      <origin xyz="0.52 0 -0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.92 0.014" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_base_0">
+      <origin xyz="-0.37 -0.465 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.03" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fixed_pin_boss_0">
+      <origin xyz="-0.397 -0.4 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.13" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="hinge_base_1">
+      <origin xyz="-0.37 0.465 0.205" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.03" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="fixed_pin_boss_1">
+      <origin xyz="-0.397 0.4 0.205" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.13" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_door">
+    <visual name="door_panel">
+      <origin xyz="0 0 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 1 0.335" />
+        </geometry>
+      <material name="warm_powder_coated_metal">
+        <color rgba="0.72 0.75 0.76 1" />
+        </material>
+      </visual>
+    <visual name="top_gasket">
+      <origin xyz="0.017 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.94 0.018" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="bottom_gasket">
+      <origin xyz="0.017 0 -0.335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.94 0.018" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="gasket_0">
+      <origin xyz="0.017 -0.47 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.32" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="gasket_1">
+      <origin xyz="0.017 0.47 -0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.32" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="0.002 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.48 0.036" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="-0.002 -0.34 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.145" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="-0.002 0.34 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.145" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.5 0.52 0.53 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_0">
+      <origin xyz="-0.037 -0.155 -0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.03 0.07" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="handle_post_1">
+      <origin xyz="-0.037 0.155 -0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.03 0.07" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    <visual name="pull_handle">
+      <origin xyz="-0.072 0 -0.235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.34 0.03" />
+        </geometry>
+      <material name="dark_rubber_and_handles">
+        <color rgba="0.02 0.025 0.028 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_frame">
+    <visual name="media_block">
+      <origin xyz="0.175 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.8 0.235" />
+        </geometry>
+      <material name="pleated_white_filter_media">
+        <color rgba="0.92 0.95 0.93 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0.175 0 0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.9 0.03" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0.175 0 -0.127" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.9 0.03" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="0.175 -0.415 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.3" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="0.175 0.415 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.03 0.3" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="-0.004 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.032 0.27 0.075" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="rear_crossbar">
+      <origin xyz="0.018 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.79 0.018" />
+        </geometry>
+      <material name="blue_filter_frame">
+        <color rgba="0.08 0.23 0.42 1" />
+        </material>
+      </visual>
+    <visual name="pleat_0">
+      <origin xyz="0.014 -0.315 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_1">
+      <origin xyz="0.014 -0.21 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_2">
+      <origin xyz="0.014 -0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_3">
+      <origin xyz="0.014 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_4">
+      <origin xyz="0.014 0.105 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_5">
+      <origin xyz="0.014 0.21 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pleat_6">
+      <origin xyz="0.014 0.315 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.218" />
+        </geometry>
+      <material name="pale_blue_pleat_shadow">
+        <color rgba="0.56 0.7 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="-0.392 0 0.205" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="rear_door" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="1.5" lower="0" upper="1.85" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="-0.335 0 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="filter_frame" />
+    <axis xyz="-1 0 0" />
+    <limit effort="45" velocity="0.35" lower="0" upper="0.285" />
+    </joint>
+  </robot>

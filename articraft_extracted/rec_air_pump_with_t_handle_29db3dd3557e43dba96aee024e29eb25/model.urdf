@@ -1,0 +1,330 @@
+<robot name="compact_training_pump">
+  <material name="satin_black_frame">
+    <color rgba="0.015 0.017 0.02 1" />
+    </material>
+  <material name="soft_black_rubber">
+    <color rgba="0.005 0.005 0.004 1" />
+    </material>
+  <material name="short_blue_barrel">
+    <color rgba="0.03 0.18 0.42 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.72 0.68 1" />
+    </material>
+  <material name="warm_white_dial">
+    <color rgba="0.92 0.9 0.82 1" />
+    </material>
+  <material name="release_red">
+    <color rgba="0.82 0.04 0.03 1" />
+    </material>
+  <material name="needle_black">
+    <color rgba="0.02 0.018 0.015 1" />
+    </material>
+  <link name="base_frame">
+    <visual name="low_base_plate">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.16 0.032" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="raised_center_spine">
+      <origin xyz="-0.025 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.038 0.026" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="-0.04 0.066 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.01" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="-0.04 -0.066 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.03 0.01" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="barrel_tube">
+      <origin xyz="-0.075 0 0.206" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/short_hollow_barrel.obj" />
+        </geometry>
+      <material name="short_blue_barrel">
+        <color rgba="0.03 0.18 0.42 1" />
+        </material>
+      </visual>
+    <visual name="barrel_socket">
+      <origin xyz="-0.075 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.07 0.045" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_brace_0">
+      <origin xyz="-0.115 0.05 0.095" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.032 0.014 0.125" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="rear_brace_1">
+      <origin xyz="-0.115 -0.05 0.095" rpy="0 0.314159 0" />
+      <geometry>
+        <box size="0.032 0.014 0.125" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_brace_0">
+      <origin xyz="-0.04 0.05 0.091" rpy="0 -0.279253 0" />
+      <geometry>
+        <box size="0.032 0.014 0.115" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="front_brace_1">
+      <origin xyz="-0.04 -0.05 0.091" rpy="0 -0.279253 0" />
+      <geometry>
+        <box size="0.032 0.014 0.115" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="gauge_body">
+      <origin xyz="0.105 0 0.056" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.068" length="0.032" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    <visual name="gauge_face">
+      <origin xyz="0.105 0 0.074" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.052" length="0.004" />
+        </geometry>
+      <material name="warm_white_dial">
+        <color rgba="0.92 0.9 0.82 1" />
+        </material>
+      </visual>
+    <visual name="gauge_bezel">
+      <origin xyz="0.105 0 0.078" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/gauge_bezel.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_0">
+      <origin xyz="0.0751243 -0.0250687 0.0762" rpy="0 0 -2.44346" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_1">
+      <origin xyz="0.0949061 -0.0376711 0.0762" rpy="0 0 -1.8326" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_2">
+      <origin xyz="0.118339 -0.036648 0.0762" rpy="0 0 -1.22173" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_3">
+      <origin xyz="0.136947 -0.0223695 0.0762" rpy="0 0 -0.610865" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_4">
+      <origin xyz="0.144 0 0.0762" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_5">
+      <origin xyz="0.136947 0.0223695 0.0762" rpy="0 0 0.610865" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_6">
+      <origin xyz="0.118339 0.036648 0.0762" rpy="0 0 1.22173" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_7">
+      <origin xyz="0.0949061 0.0376711 0.0762" rpy="0 0 1.8326" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="gauge_tick_8">
+      <origin xyz="0.0751243 0.0250687 0.0762" rpy="0 0 2.44346" />
+      <geometry>
+        <box size="0.011 0.0022 0.0012" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="handle_rod">
+    <visual name="pump_rod">
+      <origin xyz="0 0 -0.073" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.335" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="sliding_stop_collar">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    <visual name="t_handle_bar">
+      <origin xyz="0 0 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.21" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_0">
+      <origin xyz="0 0.104 0.105" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="handle_end_1">
+      <origin xyz="0 -0.104 0.105" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.018" />
+        </geometry>
+      <material name="soft_black_rubber">
+        <color rgba="0.005 0.005 0.004 1" />
+        </material>
+      </visual>
+    <visual name="handle_hub">
+      <origin xyz="0 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.022 0.028" />
+        </geometry>
+      <material name="satin_black_frame">
+        <color rgba="0.015 0.017 0.02 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="gauge_needle">
+    <visual name="pointer">
+      <origin xyz="0.023 0 0.0016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.004 0.0025" />
+        </geometry>
+      <material name="needle_black">
+        <color rgba="0.02 0.018 0.015 1" />
+        </material>
+      </visual>
+    <visual name="pivot_cap">
+      <geometry>
+        <cylinder radius="0.008" length="0.004" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.72 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="release_button">
+    <visual name="button_plunger">
+      <origin xyz="0.0095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.019" />
+        </geometry>
+      <material name="release_red">
+        <color rgba="0.82 0.04 0.03 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="barrel_to_handle" type="prismatic">
+    <origin xyz="-0.075 0 0.372" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="handle_rod" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.35" lower="0" upper="0.16" />
+    </joint>
+  <joint name="gauge_to_needle" type="revolute">
+    <origin xyz="0.105 0 0.078" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="gauge_needle" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.05" velocity="5" lower="-0.65" upper="2.45" />
+    </joint>
+  <joint name="gauge_to_button" type="prismatic">
+    <origin xyz="0.173 0 0.061" rpy="0 0 0" />
+    <parent link="base_frame" />
+    <child link="release_button" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="0.08" lower="0" upper="0.007" />
+    </joint>
+  </robot>

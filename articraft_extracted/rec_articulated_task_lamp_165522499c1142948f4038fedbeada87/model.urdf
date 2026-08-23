@@ -1,0 +1,264 @@
+<robot name="headboard_swing_lamp">
+  <material name="black_metal">
+    <color rgba="0.16 0.16 0.17 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.63 0.54 0.32 1" />
+    </material>
+  <material name="ivory_enamel">
+    <color rgba="0.9 0.88 0.82 1" />
+    </material>
+  <link name="wall_bracket">
+    <inertial>
+      <origin xyz="-0.01 0 0" rpy="0 0 0" />
+      <mass value="0.85" />
+      <inertia ixx="0.00136708" ixy="0" ixz="0" iyy="0.001275" iyz="0" izz="0.000602083" />
+      </inertial>
+    <visual name="bracket_plate">
+      <origin xyz="-0.02 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.06 0.112" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="pivot_block">
+      <origin xyz="-0.015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.028 0.056" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_ear_lower">
+      <origin xyz="0 0 -0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.007" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_ear_upper">
+      <origin xyz="0 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.007" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="upper_screw">
+      <origin xyz="-0.014 0 0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="lower_screw">
+      <origin xyz="-0.014 0 -0.03" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.004" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="first_link">
+    <inertial>
+      <origin xyz="0.1 0 0" rpy="0 0 0" />
+      <mass value="0.38" />
+      <inertia ixx="3.648e-05" ixy="0" ixz="0" iyy="0.00141474" iyz="0" izz="0.00141474" />
+      </inertial>
+    <visual name="shoulder_barrel">
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="link1_bar_left">
+      <origin xyz="0.1 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.184 0.004 0.01" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="link1_bar_right">
+      <origin xyz="0.1 0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.184 0.004 0.01" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="link1_spacer">
+      <origin xyz="0.098 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.008" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="elbow_ear_lower">
+      <origin xyz="0.2 0 -0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.007" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="elbow_ear_upper">
+      <origin xyz="0.2 0 0.0085" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.007" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="second_link">
+    <inertial>
+      <origin xyz="0.096 0 0" rpy="0 0 0" />
+      <mass value="0.32" />
+      <inertia ixx="5.46133e-05" ixy="0" ixz="0" iyy="0.00109397" iyz="0" izz="0.00109397" />
+      </inertial>
+    <visual name="elbow_barrel">
+      <geometry>
+        <cylinder radius="0.01" length="0.01" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="link2_bar_left">
+      <origin xyz="0.096 -0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.182 0.004 0.009" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="link2_bar_right">
+      <origin xyz="0.096 0.007 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.182 0.004 0.009" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="link2_spacer">
+      <origin xyz="0.096 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.008" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="tip_yoke_block">
+      <origin xyz="0.17 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.018 0.012" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="tip_yoke_left">
+      <origin xyz="0.189 -0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.028" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="tip_yoke_right">
+      <origin xyz="0.189 0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.006 0.028" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="shade">
+    <inertial>
+      <origin xyz="0.08 0 0" rpy="0 0 0" />
+      <mass value="0.42" />
+      <inertia ixx="0.000847" ixy="0" ixz="0" iyy="0.001435" iyz="0" izz="0.001435" />
+      </inertial>
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0075" length="0.01" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="shade_neck">
+      <origin xyz="0.008 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.016" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.63 0.54 0.32 1" />
+        </material>
+      </visual>
+    <visual name="shade_collar">
+      <origin xyz="0.026 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.024" />
+        </geometry>
+      <material name="black_metal">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.022 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_shade_shell.obj" />
+        </geometry>
+      <material name="ivory_enamel">
+        <color rgba="0.9 0.88 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bracket_to_first_link" type="revolute">
+    <parent link="wall_bracket" />
+    <child link="first_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="2.5" lower="-1.45" upper="1.45" />
+    </joint>
+  <joint name="first_to_second_link" type="revolute">
+    <origin xyz="0.2 0 0" rpy="0 0 0" />
+    <parent link="first_link" />
+    <child link="second_link" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="2.5" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="second_to_shade" type="revolute">
+    <origin xyz="0.189 0 0" rpy="0 0 0" />
+    <parent link="second_link" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="2" lower="-1.05" upper="0.7" />
+    </joint>
+  </robot>

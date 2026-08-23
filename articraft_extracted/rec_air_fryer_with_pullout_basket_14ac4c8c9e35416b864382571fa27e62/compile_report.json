@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_fryer_with_pullout_basket_14ac4c8c9e35416b864382571fa27e62",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Isolated parts detected but allowed by justification: 4 part(s) ['basket', 'drawer', 'handle', 'release_button'].\n- pose_index=0 at pose (body_to_control_panel=0, body_to_drawer=0, body_to_keep_warm_bezel=0, control_panel_to_temperature_dial=0, control_panel_to_time_dial=0, drawer_to_basket=0, drawer_to_handle=0, handle_to_release_button=0, keep_warm_bezel_to_button=0), floating group ['basket', 'drawer', 'handle', 'release_button'] is disconnected from the grounded body rooted at 'body'; nearest_grounded_part='body'; approx_gap=0.001m; backend=fcl"
+    },
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 44,
+    "tool_call_count": 48,
+    "compile_attempt_count": 11,
+    "fingerprint_inputs": {
+      "model_py_sha256": "0b3888076ee7ff7d84a86f1653d985eb6b85d6d7746fc2426300139ea2dac882",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "ad695396482271cef2b3b2026bd1672b7acd06bc0390f43b209e9ff24430c7b2"
+  }
+}

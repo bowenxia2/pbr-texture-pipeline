@@ -1,0 +1,149 @@
+<robot name="wall_console_air_conditioner">
+  <material name="shell_white">
+    <color rgba="0.92 0.93 0.95 1" />
+    </material>
+  <material name="grille_white">
+    <color rgba="0.88 0.89 0.91 1" />
+    </material>
+  <material name="shadow_dark">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="rail_gray">
+    <color rgba="0.66 0.69 0.72 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/console_body_shell.obj" />
+        </geometry>
+      <material name="shell_white" />
+      </visual>
+    <visual name="guide_0">
+      <origin xyz="0.057 -0.351 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.038 0.014" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <visual name="guide_1">
+      <origin xyz="0.057 0.351 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.038 0.014" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/console_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="guide_0">
+      <origin xyz="0.057 -0.351 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.038 0.014" />
+        </geometry>
+      </collision>
+    <collision name="guide_1">
+      <origin xyz="0.057 0.351 0.312" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.038 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="discharge_flap">
+    <visual name="flap_panel">
+      <origin xyz="-0.029 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.742 0.006" />
+        </geometry>
+      <material name="grille_white" />
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="-0.029 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.742 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_drawer">
+    <visual name="grille_face">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/filter_drawer_grille.obj" />
+        </geometry>
+      <material name="grille_white" />
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.678 0.276" />
+        </geometry>
+      <material name="shadow_dark" />
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0.005 0 -0.146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.09 0.012" />
+        </geometry>
+      <material name="grille_white" />
+      </visual>
+    <visual name="runner_0">
+      <origin xyz="-0.052 -0.351 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.014" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <visual name="runner_1">
+      <origin xyz="-0.052 0.351 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.014" />
+        </geometry>
+      <material name="rail_gray" />
+      </visual>
+    <collision name="grille_face">
+      <origin xyz="0 0 0" rpy="1.5708 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/filter_drawer_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="filter_media">
+      <origin xyz="-0.005 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.678 0.276" />
+        </geometry>
+      </collision>
+    <collision name="pull_tab">
+      <origin xyz="0.005 0 -0.146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.09 0.012" />
+        </geometry>
+      </collision>
+    <collision name="runner_0">
+      <origin xyz="-0.052 -0.351 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.014" />
+        </geometry>
+      </collision>
+    <collision name="runner_1">
+      <origin xyz="-0.052 0.351 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.016 0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_discharge_flap" type="revolute">
+    <origin xyz="0.106 0 0.6" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="discharge_flap" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.25" />
+    </joint>
+  <joint name="body_to_filter_drawer" type="prismatic">
+    <origin xyz="0.113 0 0.28" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="30" velocity="0.2" lower="0" upper="0.075" />
+    </joint>
+  </robot>

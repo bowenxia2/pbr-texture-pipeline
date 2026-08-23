@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_87443820b4fc4268988fdca6d253e43d",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 12,
+    "tool_call_count": 12,
+    "compile_attempt_count": 3,
+    "fingerprint_inputs": {
+      "model_py_sha256": "e4cb8eb5b97fe19c51261bee783cfa0592480c19be62b96aee367a4541c44cfd",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "a51cc14824d8056d7f39843a51204cb4d63bcfe2c464b695fea16be3270bf6f0"
+  }
+}

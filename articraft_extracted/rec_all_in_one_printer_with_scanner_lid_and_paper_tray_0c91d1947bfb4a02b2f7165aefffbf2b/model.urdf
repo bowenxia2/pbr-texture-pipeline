@@ -1,0 +1,308 @@
+<robot name="office_all_in_one_printer">
+  <material name="body_light">
+    <color rgba="0.84 0.85 0.86 1" />
+    </material>
+  <material name="panel_dark">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="trim_mid">
+    <color rgba="0.34 0.37 0.4 1" />
+    </material>
+  <material name="glass_blue">
+    <color rgba="0.42 0.58 0.7 0.35" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.22 0.31 0.42 1" />
+    </material>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_body.obj" />
+        </geometry>
+      <material name="body_light">
+        <color rgba="0.84 0.85 0.86 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_body.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="scanner_glass">
+    <visual name="glass">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.215 0.003" />
+        </geometry>
+      <material name="glass_blue">
+        <color rgba="0.42 0.58 0.7 0.35" />
+        </material>
+      </visual>
+    <collision name="glass">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.28 0.215 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid_mount">
+    <visual name="hinge_pad">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.296 0.018 0.003" />
+        </geometry>
+      <material name="trim_mid">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <collision name="hinge_pad">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.296 0.018 0.003" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_lid.obj" />
+        </geometry>
+      <material name="body_light">
+        <color rgba="0.84 0.85 0.86 1" />
+        </material>
+      </visual>
+    <collision name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_lid.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="adf_lid">
+    <visual name="adf_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_adf_lid.obj" />
+        </geometry>
+      <material name="panel_dark">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="adf_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_adf_lid.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cassette">
+    <visual name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_cassette.obj" />
+        </geometry>
+      <material name="panel_dark">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="tray_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_cassette.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray_flap">
+    <visual name="flap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/printer_tray_flap.obj" />
+        </geometry>
+      <material name="trim_mid">
+        <color rgba="0.34 0.37 0.4 1" />
+        </material>
+      </visual>
+    <collision name="flap_panel">
+      <geometry>
+        <mesh filename="assets/meshes/printer_tray_flap.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="dial">
+    <visual name="dial_knob">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.012" />
+        </geometry>
+      <material name="panel_dark">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="dial_knob">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.22 0.31 0.42 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.22 0.31 0.42 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.22 0.31 0.42 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_3">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.22 0.31 0.42 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_4">
+    <visual name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.22 0.31 0.42 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <origin xyz="0 0 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_scanner_glass" type="fixed">
+    <origin xyz="-0.075 -0.005 0.171" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="scanner_glass" />
+    </joint>
+  <joint name="body_to_lid_mount" type="fixed">
+    <origin xyz="-0.075 0.0985 0.185" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid_mount" />
+    </joint>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="-0.075 0.1075 0.188" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="1.4" lower="0" upper="1.24" />
+    </joint>
+  <joint name="lid_to_adf_lid" type="revolute">
+    <origin xyz="0 -0.035 0.054" rpy="0 0 0" />
+    <parent link="lid" />
+    <child link="adf_lid" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="1.5" lower="0" upper="1.1" />
+    </joint>
+  <joint name="body_to_cassette" type="prismatic">
+    <origin xyz="0 -0.225 0.012" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cassette" />
+    <axis xyz="0 -1 0" />
+    <limit effort="70" velocity="0.18" lower="0" upper="0.13" />
+    </joint>
+  <joint name="body_to_tray_flap" type="revolute">
+    <origin xyz="-0.01 -0.205 0.078" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tray_flap" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2.2" lower="0" upper="1.28" />
+    </joint>
+  <joint name="body_to_dial" type="continuous">
+    <origin xyz="0.184 -0.112 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.3" velocity="4" />
+    </joint>
+  <joint name="body_to_button_0" type="prismatic">
+    <origin xyz="0.156 -0.149 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.0025" />
+    </joint>
+  <joint name="body_to_button_1" type="prismatic">
+    <origin xyz="0.184 -0.149 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.0025" />
+    </joint>
+  <joint name="body_to_button_2" type="prismatic">
+    <origin xyz="0.212 -0.149 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.0025" />
+    </joint>
+  <joint name="body_to_button_3" type="prismatic">
+    <origin xyz="0.17 -0.085 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.0025" />
+    </joint>
+  <joint name="body_to_button_4" type="prismatic">
+    <origin xyz="0.198 -0.085 0.205" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.0025" />
+    </joint>
+  </robot>

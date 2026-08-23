@@ -54,9 +54,33 @@ def _mtl_from_obj(obj_path: Path) -> Optional[str]:
     return None
 
 
+def _parse_color(vis_el, robot_materials: dict) -> Optional[list[float]]:
+    """Extract RGBA color from a visual's <material> element, falling back to
+    robot-level material definitions by name."""
+    mat_el = vis_el.find("material")
+    if mat_el is None:
+        return None
+    color_el = mat_el.find("color")
+    if color_el is not None:
+        return [float(v) for v in color_el.get("rgba", "0.5 0.5 0.5 1").split()]
+    name = mat_el.get("name")
+    if name and name in robot_materials:
+        return robot_materials[name]
+    return None
+
+
 def parse_urdf(path: Path) -> dict:
     """Parse a URDF file into {links, joints} with raw xyz/rpy (Three.js consumes these)."""
     root = ET.parse(path).getroot()
+
+    robot_materials: dict[str, list[float]] = {}
+    for mat_el in root.findall("material"):
+        name = mat_el.get("name")
+        color_el = mat_el.find("color")
+        if name and color_el is not None:
+            robot_materials[name] = [float(v) for v in
+                                     color_el.get("rgba", "0.5 0.5 0.5 1").split()]
+
     links: dict[str, dict] = {}
     for link_el in root.findall("link"):
         visuals = []
@@ -65,28 +89,41 @@ def parse_urdf(path: Path) -> dict:
             geom = vis_el.find("geometry")
             if geom is None:
                 continue
+            color = _parse_color(vis_el, robot_materials)
             mesh_el = geom.find("mesh")
             if mesh_el is not None:
-                visuals.append({"mesh": mesh_el.get("filename", ""), "xyz": xyz, "rpy": rpy})
+                entry = {"mesh": mesh_el.get("filename", ""), "xyz": xyz, "rpy": rpy}
+                if color:
+                    entry["color"] = color
+                visuals.append(entry)
                 continue
             box_el = geom.find("box")
             if box_el is not None:
-                visuals.append({"primitive": "box",
-                                "size": [float(v) for v in box_el.get("size").split()],
-                                "xyz": xyz, "rpy": rpy})
+                entry = {"primitive": "box",
+                         "size": [float(v) for v in box_el.get("size").split()],
+                         "xyz": xyz, "rpy": rpy}
+                if color:
+                    entry["color"] = color
+                visuals.append(entry)
                 continue
             cyl_el = geom.find("cylinder")
             if cyl_el is not None:
-                visuals.append({"primitive": "cylinder",
-                                "radius": float(cyl_el.get("radius")),
-                                "length": float(cyl_el.get("length")),
-                                "xyz": xyz, "rpy": rpy})
+                entry = {"primitive": "cylinder",
+                         "radius": float(cyl_el.get("radius")),
+                         "length": float(cyl_el.get("length")),
+                         "xyz": xyz, "rpy": rpy}
+                if color:
+                    entry["color"] = color
+                visuals.append(entry)
                 continue
             sph_el = geom.find("sphere")
             if sph_el is not None:
-                visuals.append({"primitive": "sphere",
-                                "radius": float(sph_el.get("radius")),
-                                "xyz": xyz, "rpy": rpy})
+                entry = {"primitive": "sphere",
+                         "radius": float(sph_el.get("radius")),
+                         "xyz": xyz, "rpy": rpy}
+                if color:
+                    entry["color"] = color
+                visuals.append(entry)
         links[link_el.get("name")] = {"visuals": visuals}
 
     joints: dict[str, dict] = {}
@@ -131,11 +168,15 @@ def build_scene_data(job, backend: str) -> dict:
     for link_name, orig_link in orig["links"].items():
         rich_visuals = []
         for vis in orig_link["visuals"]:
-            rich_visuals.append({**vis, "mtl": _mtl_from_obj(asset_dir / vis["mesh"])})
+            if "mesh" in vis:
+                rich_visuals.append({**vis, "mtl": _mtl_from_obj(asset_dir / vis["mesh"])})
+            else:
+                rich_visuals.append(vis)
         result_link = textured["links"].get(link_name, {"visuals": []})
         # N textured GLBs per link (one per group), relpaths relative to textured/<backend>/.
         result_glbs = [f"textured/{backend}/{v['mesh']}"
-                       for v in result_link["visuals"] if v["mesh"].endswith(".glb")]
+                       for v in result_link["visuals"]
+                       if "mesh" in v and v["mesh"].endswith(".glb")]
         links[link_name] = {"original_visuals": rich_visuals, "result_glbs": result_glbs}
 
     bbox = asset_state.get("bbox_world") or {"min": [-0.5] * 3, "max": [0.5] * 3}
@@ -234,7 +275,7 @@ input[type=range]{flex:1;accent-color:#e94560;cursor:pointer}
 
 <div class="viewers">
   <div class="pane">
-    <div class="pane-label orig">Original &#8212; untextured OBJ</div>
+    <div class="pane-label orig">Original &#8212; source textures</div>
     <div class="wrap" id="ow">
       <canvas id="oc"></canvas>
       <div class="overlay" id="ol">Loading&#8230;</div>
@@ -370,7 +411,12 @@ function loadOriginal() {
     if (!grp) continue;
     for (const vis of ld.original_visuals) {
       if (vis.primitive) {
-        const mat = new THREE.MeshStandardMaterial({color: 0x888888, roughness: 0.7});
+        const c = vis.color
+          ? new THREE.Color(vis.color[0], vis.color[1], vis.color[2])
+          : new THREE.Color(0x888888);
+        const matOpts = {color: c, roughness: 0.7};
+        if (vis.color && vis.color[3] < 1) { matOpts.transparent = true; matOpts.opacity = vis.color[3]; }
+        const mat = new THREE.MeshStandardMaterial(matOpts);
         let geom;
         if (vis.primitive === 'box') {
           geom = new THREE.BoxGeometry(vis.size[0], vis.size[1], vis.size[2]);
@@ -400,6 +446,14 @@ function loadOriginal() {
         if (mats) ol.setMaterials(mats);
         ol.load(objUrl,
           (obj) => {
+            if (!mats && vis.color) {
+              const fallback = new THREE.MeshStandardMaterial({
+                color: new THREE.Color(vis.color[0], vis.color[1], vis.color[2]),
+                roughness: 0.7
+              });
+              if (vis.color[3] < 1) { fallback.transparent = true; fallback.opacity = vis.color[3]; }
+              obj.traverse(ch => { if (ch.isMesh) ch.material = fallback; });
+            }
             obj.position.set(...vis.xyz);
             obj.setRotationFromEuler(
               new THREE.Euler(vis.rpy[0], vis.rpy[1], vis.rpy[2], 'XYZ')
@@ -408,7 +462,7 @@ function loadOriginal() {
             opend--; checkDone();
           },
           undefined,
-          () => { opend--; checkDone(); }
+          (err) => { console.warn('OBJ load failed:', objUrl, err); opend--; checkDone(); }
         );
       };
 
@@ -422,7 +476,7 @@ function loadOriginal() {
             ml.load(vis.mtl,
               (m) => { m.preload(); res(m); },
               undefined,
-              () => res(null)
+              (err) => { console.warn('MTL load failed:', vis.mtl, err); res(null); }
             );
           });
         }

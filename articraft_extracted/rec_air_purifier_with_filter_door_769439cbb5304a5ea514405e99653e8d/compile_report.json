@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_purifier_with_filter_door_769439cbb5304a5ea514405e99653e8d",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Isolated parts detected but allowed by justification: 2 part(s) ['filter_door', 'top_grille'].\n- pose_index=0 at pose (housing_to_carry_handle=0, housing_to_filter_cartridge=0, housing_to_filter_door=0, housing_to_top_grille=0), part 'filter_door' is disconnected from the grounded body rooted at 'housing'; nearest_grounded_part='housing'; approx_gap=0.004m; backend=fcl\n- pose_index=0 at pose (housing_to_carry_handle=0, housing_to_filter_cartridge=0, housing_to_filter_door=0, housing_to_top_grille=0), part 'top_grille' is disconnected from the grounded body rooted at 'housing'; nearest_grounded_part='housing'; approx_gap=1.6e-05m; backend=fcl"
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 35,
+    "tool_call_count": 40,
+    "compile_attempt_count": 6,
+    "fingerprint_inputs": {
+      "model_py_sha256": "de42a949c4ddd290ba819b4d08e75059e4a0bec0fc993bdf3f2140d2fd7b8b3d",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "c164fb2ad7efe03a7c647ff98463592f2cc60c349e81cbdcf399f47c3e8600a9"
+  }
+}

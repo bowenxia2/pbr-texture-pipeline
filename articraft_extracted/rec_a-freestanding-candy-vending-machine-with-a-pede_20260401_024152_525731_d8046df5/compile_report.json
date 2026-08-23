@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "292c6e1c073ace7f543ca62cf24a8cd58401d883ee52e91e24a45e30b1cfe595",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "9060551aa59f16f2730ffaa2f9553f4d872978ca099b56b273b37b5709883109",
+    "model_py_mtime_ns": 1775055075732825465,
+    "model_py_size_bytes": 9909,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 76726,
+    "visual_mesh_file_count": 2,
+    "compile_elapsed_seconds": 0.004536791006103158
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}
