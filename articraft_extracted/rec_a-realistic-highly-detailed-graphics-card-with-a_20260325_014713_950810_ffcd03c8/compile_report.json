@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "ec0ee4d2ec83d90b8701a29e73b23a55e292d5a41cb120423322c7e908fa2a0a",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "2e76cebe796d79137d44a6bc06816325d021ff6dae3331bc831ef4a4aef0a803",
+    "model_py_mtime_ns": 1774526375100040374,
+    "model_py_size_bytes": 22746,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 24912,
+    "visual_mesh_file_count": 2,
+    "compile_elapsed_seconds": 0.057389791996683925
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

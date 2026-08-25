@@ -1,0 +1,88 @@
+<robot name="precision_roll_axis_module">
+  <material name="frame_gray">
+    <color rgba="0.72 0.74 0.77 1" />
+    </material>
+  <material name="steel_dark">
+    <color rgba="0.33 0.35 0.38 1" />
+    </material>
+  <material name="bearing_black">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="bracket_gray">
+    <color rgba="0.58 0.6 0.63 1" />
+    </material>
+  <link name="support_frame">
+    <inertial>
+      <mass value="2" />
+      <inertia ixx="0.00568133" ixy="0" ixz="0" iyy="0.00950467" iyz="0" izz="0.00846467" />
+      </inertial>
+    <visual name="frame_shell">
+      <geometry>
+        <mesh filename="assets/meshes/support_frame_shell.obj" />
+        </geometry>
+      <material name="frame_gray">
+        <color rgba="0.72 0.74 0.77 1" />
+        </material>
+      </visual>
+    <visual name="left_bearing_cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/left_bearing_cartridge.obj" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_bearing_cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/right_bearing_cartridge.obj" />
+        </geometry>
+      <material name="bearing_black">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rotor">
+    <inertial>
+      <mass value="0.85" />
+      <inertia ixx="0.000392133" ixy="0" ixz="0" iyy="0.00380913" iyz="0" izz="0.00369127" />
+      </inertial>
+    <visual name="shaft">
+      <geometry>
+        <mesh filename="assets/meshes/rotary_shaft.obj" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="left_collar">
+      <geometry>
+        <mesh filename="assets/meshes/left_retaining_collar.obj" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="right_collar">
+      <geometry>
+        <mesh filename="assets/meshes/right_retaining_collar.obj" />
+        </geometry>
+      <material name="steel_dark">
+        <color rgba="0.33 0.35 0.38 1" />
+        </material>
+      </visual>
+    <visual name="payload_bracket">
+      <geometry>
+        <mesh filename="assets/meshes/payload_bracket.obj" />
+        </geometry>
+      <material name="bracket_gray">
+        <color rgba="0.58 0.6 0.63 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="frame_to_rotor" type="revolute">
+    <parent link="support_frame" />
+    <child link="rotor" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="6" lower="-3.14159" upper="3.14159" />
+    </joint>
+  </robot>

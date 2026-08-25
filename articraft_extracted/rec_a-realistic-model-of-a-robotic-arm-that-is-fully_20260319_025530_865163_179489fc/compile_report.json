@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-realistic-model-of-a-robotic-arm-that-is-fully_20260319_025530_865163_179489fc",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "173e422c00566b6811b42710de9b4b82c7a64f7b250cdc0c60f3e2cd10968a30",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "a5b59e6fd416071fc769c6139ea2c86a21b5e9e228a2d1ad83c3f6a28455535f",
+    "model_py_mtime_ns": 1774526375102724716,
+    "model_py_size_bytes": 17167,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 151237,
+    "visual_mesh_file_count": 6,
+    "compile_elapsed_seconds": 0.015674666996346787
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

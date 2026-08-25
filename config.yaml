@@ -1,20 +1,17 @@
 # pbr-texture-pipeline configuration
-# Every module reads paths and defaults from here; nothing is hardcoded (PRD risk 8, env drift).
+# Every module reads paths and defaults from here; nothing is hardcoded.
 
 # ---------------------------------------------------------------------------
-# GPU strategy (PRD section 7)
+# GPU strategy
 # ---------------------------------------------------------------------------
 gpu_mode: dual            # dual | single. dual = current 2x A40 node; single degrades per stage-exclusion rule.
 
 # ---------------------------------------------------------------------------
-# Environment (verified empirically 2026-07-03; supersedes the PRD's single-env claim)
+# Environment
 #
-# The PRD assumed one `unified3d` env runs everything. Reality (see README "Environment
-# reality"): unified3d has diffusers but NOT the TRELLIS.2 renderer stack, so it cannot
-# render or run the TRELLIS.2 backend. The `trellis2` env (py3.10) has the full compiled
-# renderer stack (cumesh/o_voxel/nvdiffrast/flex_gemm/natten); we added `diffusers`,
-# `accelerate`, `requests`, `importlib_metadata` to it so ONE env now runs the whole
-# imaging + VLM + diffusion side (Stages R, V, D). Only Hunyuan needs its own env.
+# The `trellis2` env (py3.10) has the full compiled renderer stack
+# (cumesh/o_voxel/nvdiffrast/flex_gemm/natten) plus `diffusers`, `accelerate`, `requests`,
+# `importlib_metadata`, so ONE env runs Stages R, U, and T.
 # ---------------------------------------------------------------------------
 #
 # All paths below are portable defaults that work out of the box for a fresh clone (the
@@ -23,16 +20,13 @@ gpu_mode: dual            # dual | single. dual = current 2x A40 node; single de
 # config.local.yaml.example to config.local.yaml (gitignored) and override values there;
 # it is deep-merged on top of this file at load time.
 env:
-  # Primary env: Stage R (render), Stage D (Qwen-Image+ControlNet+RMBG), app, batch.
+  # Primary env: Stage R (render), Stage T (texture), Stage E (imageedit), app, batch.
   name: trellis2
+  vlm_name: vlm                                        # Stage V (vlm) conda env
   python: python                            # informational only; `conda run -n <name>` is what actually runs code
   hf_cache: .cache/huggingface               # shared HF hub cache; override in config.local.yaml to use a larger disk
   torch_cache: .cache/torch                  # torch.hub (LPIPS AlexNet etc.)
-  # Stage V env (2026-07-11): the VLM worker runs Qwen3.6-35B-A3B AWQ via vLLM, which needs
-  # torch >= 2.8; the trellis2 env is pinned to torch 2.6 by its compiled renderer stack, so
-  # the VLM gets its own env (same pattern as the Hunyuan backend).
-  vlm_name: vlm
-  # Orient-Anything-V2 env (2026-07-27, PRD_articulated_v2 section 6): python 3.11 per its
+  # Orient-Anything-V2 env (PRD.md section 7.5): python 3.11 per its
   # README; runs only scripts/orient_infer.py as a short-lived subprocess during Stage R.
   # See README.md "Setup" for the exact env-creation commands.
   orient_name: orianyv2
@@ -42,123 +36,70 @@ env:
 # Per-backend subprocess envs (Stage T adapters run via `conda run -n <env>`).
 backend_envs:
   trellis2: trellis2      # TRELLIS.2 texturing backend (renderer stack)
-  hunyuan:  hunyuan3d     # Hunyuan3D-2.1 paint: separate env (custom_rasterizer, torch 2.5.1)
+  imageedit: trellis2     # Qwen-Image-Edit-2511 (diffusers 0.38.0 in trellis2 env)
 
 # ---------------------------------------------------------------------------
 # Model ids (all resolve inside hf_cache above; do not re-download)
 # ---------------------------------------------------------------------------
 models:
-  # Stage V captioner/prompter (multimodal MoE, 35B total / 3B active, AWQ 4-bit ~20 GB).
-  # Fetched by scripts/download_vlm.py. Previous model: Qwen/Qwen2.5-VL-7B-Instruct.
-  vlm: cyankiwi/Qwen3.6-35B-A3B-AWQ-4bit
-  qwen_image: Qwen/Qwen-Image                          # 20B MMDiT T2I base for Stage D; cached
-  rmbg: briaai/RMBG-2.0                                # cached
   trellis2: microsoft/TRELLIS.2-4B                     # cached
   clip: openai/clip-vit-large-patch14                  # candidate scoring + eval (auto-downloaded)
-  # InstantX Qwen-Image ControlNet-Union (canny/soft-edge/depth/pose); Stage D uses depth mode.
-  # Fetched by scripts/download_controlnet.py into the shared cache.
-  controlnet: InstantX/Qwen-Image-ControlNet-Union
-  # Orient-Anything-V2 checkpoint repo (front detection, PRD_articulated_v2 section 6).
+  # Orient-Anything-V2 checkpoint repo (front detection).
   # Fetched by scripts/download_orient_anything.py into the shared cache.
   orient: Viglong/OriAnyV2_ckpt
+  vlm: Qwen/Qwen2.5-VL-7B-Instruct                    # Stage V material analysis
+  imageedit: Qwen/Qwen-Image-Edit-2511                # Stage E image enhancement
+
 
 # ---------------------------------------------------------------------------
-# Backend repos (subprocess adapters; hard cwd requirements per PRD section 6)
+# Backend repos (subprocess adapters; hard cwd requirements)
 # ---------------------------------------------------------------------------
 repos:
   trellis2: ./TRELLIS.2                       # git submodule
-  hunyuan:  ./Hunyuan3D-2.1/hy3dpaint          # git submodule (hy3dpaint subdir is the adapter's cwd)
   orient:   ./Orient-Anything-V2               # git submodule
 
 # ---------------------------------------------------------------------------
 # Stage defaults
 # ---------------------------------------------------------------------------
 render:
-  resolution: 1024        # control maps
+  num_views: 1            # front-only for VLM+ImageEdit pipeline (was 4)
+  resolution: 1024
   ssaa: 2
   r: 2.0                  # matches TRELLIS.2 render defaults so framing stats match backend training
   fov_deg: 40
-  # canonical front (verified in Gate 1; PRD section 3). glTF forward maps to internal -Y after axis swap.
+  # canonical front (verified in Gate 1). glTF forward maps to internal -Y after axis swap.
   canonical_yaw: 3.141592653589793   # pi
   canonical_pitch: 0.0
   contact_pitch_deg: 15
   canny_thresholds: [100, 200]
 
-vlm:
-  # vLLM engine knobs. The AWQ weights are ~23 GB, so the pre-allocated pool needs
-  # 0.85 * 46 GB; in dual mode GPU 0 is the VLM's alone, and in single mode the manager
-  # kills the worker process before texturing (vLLM only frees its pool on exit).
-  max_model_len: 16384
-  gpu_memory_utilization: 0.85
-  caption_max_new_tokens: 512
-  spec_max_new_tokens: 1024
-  # Max images per prompt: Stage J sends 3 (sheet A, sheet B, reference); Stage V sends 1.
-  # A 1024x1024 sheet is ~1.3k vision tokens, so 3 images + prompt + 1k output fits well
-  # inside max_model_len; the higher limit is harmless for Stage V calls.
-  limit_mm_per_prompt_images: 3
-
-diffusion:
-  candidates: 4
-  seed: 42
-  cn_scale: 0.9           # controlnet_conditioning_scale; InstantX union depth mode 0.8-1.0 (UI 0.5-1.0)
-  guidance: 4.0           # Qwen-Image true_cfg_scale (real CFG; negative prompt active when > 1)
-  steps: 30
-  width: 1024
-  height: 1024
-
-select:
-  iou_threshold: 0.85     # batch auto-select gate (silhouette IoU vs control mask)
-
 texture:
   trellis2_resolution: 1024
   trellis2_texture_size: 2048
-  hunyuan_max_num_view: 6
-  hunyuan_resolution: 512
 
-# Articulated (URDF) jobs: per-part texturing of PartNet-Mobility assets (see PRD.md).
+# Articulated (URDF) jobs.
 articulated:
-  # Texturing (PRD_articulated_v2, sole path since 2026-07-28): one TRELLIS.2 run on the
-  # merged mesh, per-group atlases baked from the shared decoded field. trellis2-only;
-  # hunyuan has no articulated path (Stage J records a walkover).
   global:
-    open_pose_pass: true        # second pass with joints opened so interiors get evidence
-    open_pose_frac: 0.8         # movable joints at this fraction of their clamped range
     per_link_texture_size: 1024
     tiny_texture_size: 256
-    blend_band_texels: 8        # width of the pass A/B blend at visibility boundaries
-    persist_field: false        # decoded field is GBs; re-decode instead of persisting
-    multi_ref: false            # phase-2 experiment, TRELLIS only
   orient:
     enabled: true               # Orient-Anything-V2 front detection; front_panel is the fallback
     env: orianyv2
     ckpt_file: demo_ckpts/rotmod_realrotaug_best.pt   # file inside models.orient HF repo
     min_agreement_deg: 30       # cross-panel consistency required; else fall back
-  refine:
-    enabled: false              # targeted retexturing execution (selection always runs)
-    blur_flag_ratio: 0.35       # group blur estimate vs object median
-    occluded_frac_threshold: 0.6  # flag groups this occluded whose hidden faces had no open-pose bake
-    min_field_voxels: 8         # flag groups spanning fewer field voxels than this
   group_by: semantic            # semantic (per URDF visual name) | link (collapse per link)
   # PartNet-Mobility assets face contact-sheet panel 2 in the assembled URDF world frame.
   # That frame is Z-up, so Stage R normalizes it with up="z" (center+scale, no glTF axis
-  # swap; re-verified visually on all 5 test assets in the Z-up frame, 2026-07-28). Stage R
-  # pre-poses by repose_matrix(front_panel) so the canonical camera sees the front and
-  # Stage D depth is usable. Recorded in camera.json (repose_applied/R), so Stage E/J
-  # un-rotate as usual.
+  # swap). Stage R pre-poses by repose_matrix(front_panel) so the canonical camera sees the
+  # front. Recorded in camera.json (repose_applied/R).
   front_panel: 2
-  keep_appearance: false        # steer the VLM to match observed existing colors/materials
   rest_pose: zero_clamped       # joints at q=0 clamped into limits (only supported policy)
   min_group_faces: 20           # below either threshold a group is "tiny" (small atlas bake)
   min_group_area_frac: 0.0005
-  appearance_max_edge_frac: 0.02  # subdivide existing-appearance meshes until max edge <= frac*extent
-  plan_max_new_tokens: 4096
   collision_mode: symlink       # textured URDF collision meshes: symlink original textured_objs
 
-# Stage J: the VLM compares multi-view sheets of both textured outputs and picks one winner
-# with reasoning (verdict.json); both textured/<backend>/ dirs are kept (2026-07-20).
-judge:
-  default_winner: trellis2      # fallback when the VLM fails twice / refuses
-  max_new_tokens: 1024
-  sheet_yaws_deg: [0, 90, 180, 270]   # relative to canonical front
-  sheet_tile_res: 512                 # 2x2 grid -> 1024x1024 sheet
-  sheet_pitch_deg: 15
+# Stage E (imageedit) defaults.
+imageedit:
+  num_inference_steps: 40
+  guidance_scale: 1.0
+  true_cfg_scale: 4.0

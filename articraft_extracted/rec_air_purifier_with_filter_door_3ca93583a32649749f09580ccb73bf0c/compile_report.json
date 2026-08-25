@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 1 overlaps across 1 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 25,
+    "tool_call_count": 27,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "eb9fc6ab30ddce1eaa0ada106f19cdbfaac790e786396a5fed02f49b0d2b16df",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "c90c5165fe7d7f90946c49b8dc70b11e2b463fe81a08e3968a71eb6db523a4fe"
+  }
+}

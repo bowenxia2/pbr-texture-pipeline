@@ -1,0 +1,25 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 3189095,
+  "groups": {
+    "mount_base": {
+      "texture_size": 1024,
+      "n_faces": 1608,
+      "texels": 821444,
+      "field_voxels": 780274
+    },
+    "turret_housing": {
+      "texture_size": 1024,
+      "n_faces": 1444,
+      "texels": 822055,
+      "field_voxels": 803974
+    },
+    "weapon_cradle": {
+      "texture_size": 1024,
+      "n_faces": 2160,
+      "texels": 809892,
+      "field_voxels": 769363
+    }
+  }
+}

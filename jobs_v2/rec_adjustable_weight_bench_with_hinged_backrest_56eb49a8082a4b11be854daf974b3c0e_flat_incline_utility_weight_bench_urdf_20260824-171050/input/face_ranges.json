@@ -1,0 +1,304 @@
+{
+  "group_order": [
+    "frame__rectangular_base",
+    "frame__side_rail_0",
+    "frame__side_rail_1",
+    "frame__front_crossmember",
+    "frame__rear_crossmember",
+    "frame__middle_crossmember",
+    "frame__front_upright_0",
+    "frame__front_upright_1",
+    "frame__front_outer_upright_0",
+    "frame__front_outer_upright_1",
+    "frame__front_hinge_bridge",
+    "frame__seat_hinge_pin",
+    "frame__junction_upright_0",
+    "frame__junction_upright_1",
+    "frame__backrest_hinge_bridge",
+    "frame__backrest_hinge_pin",
+    "frame__rear_pivot_bridge",
+    "frame__rear_pivot_lug_0",
+    "frame__rear_pivot_lug_1",
+    "frame__rear_support_pin",
+    "frame__incline_ladder_rail",
+    "frame__ladder_stanchion_0_0",
+    "frame__ladder_stanchion_0_1",
+    "frame__ladder_stanchion_1_0",
+    "frame__ladder_stanchion_1_1",
+    "frame__ladder_tooth_0",
+    "frame__ladder_tooth_1",
+    "frame__ladder_tooth_2",
+    "frame__ladder_tooth_3",
+    "frame__ladder_tooth_spine",
+    "frame__front_handle",
+    "frame__handle_mount_0",
+    "frame__handle_mount_1",
+    "frame__wheel_mount_0",
+    "frame__wheel_bracket_web_0",
+    "frame__axle_stub_0",
+    "frame__wheel_mount_1",
+    "frame__wheel_bracket_web_1",
+    "frame__axle_stub_1",
+    "backrest__back_pad",
+    "backrest__back_seam_0",
+    "backrest__back_seam_1",
+    "backrest__back_hinge_barrel",
+    "backrest__back_under_rail",
+    "seat__seat_pad",
+    "seat__seat_seam_0",
+    "seat__seat_seam_1",
+    "seat__seat_hinge_barrel",
+    "seat__seat_under_rail",
+    "rear_support_arm__arm_tube",
+    "rear_support_arm__lower_bushing",
+    "rear_support_arm__upper_roller",
+    "wheel_0__tire",
+    "wheel_0__rim",
+    "wheel_0__hub_sleeve",
+    "wheel_1__tire",
+    "wheel_1__rim",
+    "wheel_1__hub_sleeve"
+  ],
+  "face_ranges": {
+    "frame__rectangular_base": [
+      0,
+      12
+    ],
+    "frame__side_rail_0": [
+      12,
+      24
+    ],
+    "frame__side_rail_1": [
+      24,
+      36
+    ],
+    "frame__front_crossmember": [
+      36,
+      48
+    ],
+    "frame__rear_crossmember": [
+      48,
+      60
+    ],
+    "frame__middle_crossmember": [
+      60,
+      72
+    ],
+    "frame__front_upright_0": [
+      72,
+      84
+    ],
+    "frame__front_upright_1": [
+      84,
+      96
+    ],
+    "frame__front_outer_upright_0": [
+      96,
+      108
+    ],
+    "frame__front_outer_upright_1": [
+      108,
+      120
+    ],
+    "frame__front_hinge_bridge": [
+      120,
+      132
+    ],
+    "frame__seat_hinge_pin": [
+      132,
+      260
+    ],
+    "frame__junction_upright_0": [
+      260,
+      272
+    ],
+    "frame__junction_upright_1": [
+      272,
+      284
+    ],
+    "frame__backrest_hinge_bridge": [
+      284,
+      296
+    ],
+    "frame__backrest_hinge_pin": [
+      296,
+      424
+    ],
+    "frame__rear_pivot_bridge": [
+      424,
+      436
+    ],
+    "frame__rear_pivot_lug_0": [
+      436,
+      448
+    ],
+    "frame__rear_pivot_lug_1": [
+      448,
+      460
+    ],
+    "frame__rear_support_pin": [
+      460,
+      588
+    ],
+    "frame__incline_ladder_rail": [
+      588,
+      600
+    ],
+    "frame__ladder_stanchion_0_0": [
+      600,
+      612
+    ],
+    "frame__ladder_stanchion_0_1": [
+      612,
+      624
+    ],
+    "frame__ladder_stanchion_1_0": [
+      624,
+      636
+    ],
+    "frame__ladder_stanchion_1_1": [
+      636,
+      648
+    ],
+    "frame__ladder_tooth_0": [
+      648,
+      660
+    ],
+    "frame__ladder_tooth_1": [
+      660,
+      672
+    ],
+    "frame__ladder_tooth_2": [
+      672,
+      684
+    ],
+    "frame__ladder_tooth_3": [
+      684,
+      696
+    ],
+    "frame__ladder_tooth_spine": [
+      696,
+      708
+    ],
+    "frame__front_handle": [
+      708,
+      3048
+    ],
+    "frame__handle_mount_0": [
+      3048,
+      3060
+    ],
+    "frame__handle_mount_1": [
+      3060,
+      3072
+    ],
+    "frame__wheel_mount_0": [
+      3072,
+      3084
+    ],
+    "frame__wheel_bracket_web_0": [
+      3084,
+      3096
+    ],
+    "frame__axle_stub_0": [
+      3096,
+      3224
+    ],
+    "frame__wheel_mount_1": [
+      3224,
+      3236
+    ],
+    "frame__wheel_bracket_web_1": [
+      3236,
+      3248
+    ],
+    "frame__axle_stub_1": [
+      3248,
+      3376
+    ],
+    "backrest__back_pad": [
+      3376,
+      3618
+    ],
+    "backrest__back_seam_0": [
+      3618,
+      3630
+    ],
+    "backrest__back_seam_1": [
+      3630,
+      3642
+    ],
+    "backrest__back_hinge_barrel": [
+      3642,
+      3770
+    ],
+    "backrest__back_under_rail": [
+      3770,
+      3782
+    ],
+    "seat__seat_pad": [
+      3782,
+      4024
+    ],
+    "seat__seat_seam_0": [
+      4024,
+      4036
+    ],
+    "seat__seat_seam_1": [
+      4036,
+      4048
+    ],
+    "seat__seat_hinge_barrel": [
+      4048,
+      4176
+    ],
+    "seat__seat_under_rail": [
+      4176,
+      4188
+    ],
+    "rear_support_arm__arm_tube": [
+      4188,
+      4860
+    ],
+    "rear_support_arm__lower_bushing": [
+      4860,
+      4988
+    ],
+    "rear_support_arm__upper_roller": [
+      4988,
+      5116
+    ],
+    "wheel_0__tire": [
+      5116,
+      9528
+    ],
+    "wheel_0__rim": [
+      9528,
+      24376
+    ],
+    "wheel_0__hub_sleeve": [
+      24376,
+      24504
+    ],
+    "wheel_1__tire": [
+      24504,
+      28916
+    ],
+    "wheel_1__rim": [
+      28916,
+      43764
+    ],
+    "wheel_1__hub_sleeve": [
+      43764,
+      43892
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.08861149999999995,
+      0.0,
+      0.2540085
+    ],
+    "scale": 0.6789826294136859
+  }
+}

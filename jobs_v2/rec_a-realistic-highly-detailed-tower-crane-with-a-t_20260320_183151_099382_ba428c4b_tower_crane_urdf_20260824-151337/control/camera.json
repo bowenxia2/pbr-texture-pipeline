@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_0.png",
+        "ok": true,
+        "az": 272.0,
+        "el": 15.0,
+        "ro": 16.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_1.png",
+        "ok": true,
+        "az": 309.0,
+        "el": 12.0,
+        "ro": 21.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_2.png",
+        "ok": true,
+        "az": 272.0,
+        "el": 13.0,
+        "ro": -17.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_3.png",
+        "ok": true,
+        "az": 42.0,
+        "el": 13.0,
+        "ro": -18.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_4.png",
+        "ok": true,
+        "az": 272.0,
+        "el": 21.0,
+        "ro": 16.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_5.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 13.0,
+        "ro": 16.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_6.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 24.0,
+        "ro": -18.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260320_183151_099382_ba428c4b_tower_crane_urdf_20260824-151337/render/view_7.png",
+        "ok": true,
+        "az": 220.0,
+        "el": 12.0,
+        "ro": -17.0,
+        "alpha": 4.0
+      }
+    ],
+    "sign": -1,
+    "front_deg": 141.2883679544222,
+    "agreement_err_deg": 76.5,
+    "implied_front_deg": [
+      88.0,
+      96.0,
+      178.0,
+      93.0,
+      268.0,
+      269.0,
+      269.0,
+      95.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 76.5 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 3
+  }
+}

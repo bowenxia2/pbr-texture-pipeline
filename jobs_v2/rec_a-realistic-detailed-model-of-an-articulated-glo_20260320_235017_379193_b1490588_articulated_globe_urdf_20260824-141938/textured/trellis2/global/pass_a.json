@@ -1,0 +1,25 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2793708,
+  "groups": {
+    "base": {
+      "texture_size": 1024,
+      "n_faces": 1192,
+      "texels": 667732,
+      "field_voxels": 641020
+    },
+    "meridian": {
+      "texture_size": 1024,
+      "n_faces": 10980,
+      "texels": 642272,
+      "field_voxels": 247148
+    },
+    "globe": {
+      "texture_size": 1024,
+      "n_faces": 56514,
+      "texels": 691924,
+      "field_voxels": 674516
+    }
+  }
+}

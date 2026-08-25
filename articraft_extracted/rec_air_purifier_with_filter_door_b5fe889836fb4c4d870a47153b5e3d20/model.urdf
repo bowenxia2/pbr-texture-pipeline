@@ -1,0 +1,423 @@
+<robot name="floor_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.92 0.93 0.91 1" />
+    </material>
+  <material name="trim_gray">
+    <color rgba="0.62 0.65 0.66 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="filter_black">
+    <color rgba="0.14 0.15 0.16 1" />
+    </material>
+  <material name="filter_gray">
+    <color rgba="0.36 0.39 0.41 1" />
+    </material>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_body_shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.91 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 0.1118 0.225" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/purifier_front_grille.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="badge_strip">
+      <origin xyz="0 0.1135 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.003 0.008" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="base_rail">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.21 0.006" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 0.1118 0.225" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/purifier_front_grille.obj" />
+        </geometry>
+      </collision>
+    <collision name="badge_strip">
+      <origin xyz="0 0.1135 0.425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.088 0.003 0.008" />
+        </geometry>
+      </collision>
+    <collision name="base_rail">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.21 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_carrier">
+    <visual name="carrier_plate">
+      <origin xyz="0 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.186 0.006 0.032" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="carrier_mount_0">
+      <origin xyz="-0.094 -0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.01 0.028" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="carrier_mount_1">
+      <origin xyz="0.094 -0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.01 0.028" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_0_0">
+      <origin xyz="-0.07575 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_0_1">
+      <origin xyz="-0.02825 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_1_0">
+      <origin xyz="-0.02375 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_1_1">
+      <origin xyz="0.02375 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_2_0">
+      <origin xyz="0.02825 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="button_guide_2_1">
+      <origin xyz="0.07575 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <collision name="carrier_plate">
+      <origin xyz="0 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.186 0.006 0.032" />
+        </geometry>
+      </collision>
+    <collision name="carrier_mount_0">
+      <origin xyz="-0.094 -0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.01 0.028" />
+        </geometry>
+      </collision>
+    <collision name="carrier_mount_1">
+      <origin xyz="0.094 -0.001 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.01 0.028" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_0_0">
+      <origin xyz="-0.07575 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_0_1">
+      <origin xyz="-0.02825 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_1_0">
+      <origin xyz="-0.02375 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_1_1">
+      <origin xyz="0.02375 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_2_0">
+      <origin xyz="0.02825 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    <collision name="button_guide_2_1">
+      <origin xyz="0.07575 -0.006 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.012 0.022" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_door">
+    <visual name="door_panel">
+      <origin xyz="-0.147 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.294 0.008 0.456" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.91 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_top">
+      <origin xyz="0 -0.004 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.135" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_bottom">
+      <origin xyz="0 -0.004 -0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.135" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <visual name="door_handle">
+      <origin xyz="-0.264 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.09" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="-0.147 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.294 0.008 0.456" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_top">
+      <origin xyz="0 -0.004 0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.135" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_bottom">
+      <origin xyz="0 -0.004 -0.145" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.135" />
+        </geometry>
+      </collision>
+    <collision name="door_handle">
+      <origin xyz="-0.264 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.014 0.09" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_pack">
+    <visual name="filter_frame">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.272 0.038 0.428" />
+        </geometry>
+      <material name="filter_gray">
+        <color rgba="0.36 0.39 0.41 1" />
+        </material>
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.028 0.404" />
+        </geometry>
+      <material name="filter_black">
+        <color rgba="0.14 0.15 0.16 1" />
+        </material>
+      </visual>
+    <visual name="guide_tail">
+      <origin xyz="0 0.093 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.11 0.308" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0 -0.0035 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.007 0.028" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.62 0.65 0.66 1" />
+        </material>
+      </visual>
+    <collision name="filter_frame">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.272 0.038 0.428" />
+        </geometry>
+      </collision>
+    <collision name="filter_media">
+      <origin xyz="0 0.019 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.028 0.404" />
+        </geometry>
+      </collision>
+    <collision name="guide_tail">
+      <origin xyz="0 0.093 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.212 0.11 0.308" />
+        </geometry>
+      </collision>
+    <collision name="pull_tab">
+      <origin xyz="0 -0.0035 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="0.085 0.007 0.028" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_0">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_1">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="button_2">
+    <visual name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_filter_door" type="revolute">
+    <origin xyz="0.147 -0.1165 0.29" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.2" lower="0" upper="1.91986" />
+    </joint>
+  <joint name="body_to_button_carrier" type="fixed">
+    <origin xyz="0 0.1105 0.47" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_carrier" />
+    </joint>
+  <joint name="body_to_filter_pack" type="prismatic">
+    <origin xyz="0 -0.1095 0.29" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_pack" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="0.16" lower="0" upper="0.102" />
+    </joint>
+  <joint name="body_to_button_0" type="prismatic">
+    <origin xyz="-0.052 0.115 0.47" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_0" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="0.06" lower="0" upper="0.0045" />
+    </joint>
+  <joint name="body_to_button_1" type="prismatic">
+    <origin xyz="0 0.115 0.47" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_1" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="0.06" lower="0" upper="0.0045" />
+    </joint>
+  <joint name="body_to_button_2" type="prismatic">
+    <origin xyz="0.052 0.115 0.47" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="button_2" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="0.06" lower="0" upper="0.0045" />
+    </joint>
+  </robot>

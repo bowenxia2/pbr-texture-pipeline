@@ -1,0 +1,214 @@
+{
+  "group_order": [
+    "center_frame__lower_rail_0",
+    "center_frame__lower_rail_1",
+    "center_frame__front_crossmember",
+    "center_frame__rear_crossmember",
+    "center_frame__front_brace_0",
+    "center_frame__front_brace_1",
+    "center_frame__seat_post_0",
+    "center_frame__seat_post_1",
+    "center_frame__seat_crossmember",
+    "center_frame__back_post_0",
+    "center_frame__back_post_1",
+    "center_frame__back_crossmember",
+    "center_frame__rear_brace_0",
+    "center_frame__rear_brace_1",
+    "center_frame__support_post_0",
+    "center_frame__support_post_1",
+    "center_frame__handle_support_0",
+    "center_frame__handle_support_1",
+    "center_frame__handle_bar",
+    "center_frame__seat_tab_0",
+    "center_frame__seat_tab_1",
+    "center_frame__back_tab_0",
+    "center_frame__back_tab_1",
+    "center_frame__support_tab_0",
+    "center_frame__support_tab_1",
+    "backrest__hinge_barrel",
+    "backrest__support_plate",
+    "backrest__cushion",
+    "backrest__support_rail",
+    "seat__hinge_barrel",
+    "seat__support_plate",
+    "seat__cushion",
+    "seat__front_bracket",
+    "support_link__pivot_barrel",
+    "support_link__pivot_web",
+    "support_link__side_bar_0",
+    "support_link__side_bar_1",
+    "support_link__top_bar",
+    "wheel_0__tire",
+    "wheel_1__tire"
+  ],
+  "face_ranges": {
+    "center_frame__lower_rail_0": [
+      0,
+      128
+    ],
+    "center_frame__lower_rail_1": [
+      128,
+      256
+    ],
+    "center_frame__front_crossmember": [
+      256,
+      384
+    ],
+    "center_frame__rear_crossmember": [
+      384,
+      512
+    ],
+    "center_frame__front_brace_0": [
+      512,
+      640
+    ],
+    "center_frame__front_brace_1": [
+      640,
+      768
+    ],
+    "center_frame__seat_post_0": [
+      768,
+      896
+    ],
+    "center_frame__seat_post_1": [
+      896,
+      1024
+    ],
+    "center_frame__seat_crossmember": [
+      1024,
+      1152
+    ],
+    "center_frame__back_post_0": [
+      1152,
+      1280
+    ],
+    "center_frame__back_post_1": [
+      1280,
+      1408
+    ],
+    "center_frame__back_crossmember": [
+      1408,
+      1536
+    ],
+    "center_frame__rear_brace_0": [
+      1536,
+      1664
+    ],
+    "center_frame__rear_brace_1": [
+      1664,
+      1792
+    ],
+    "center_frame__support_post_0": [
+      1792,
+      1920
+    ],
+    "center_frame__support_post_1": [
+      1920,
+      2048
+    ],
+    "center_frame__handle_support_0": [
+      2048,
+      2176
+    ],
+    "center_frame__handle_support_1": [
+      2176,
+      2304
+    ],
+    "center_frame__handle_bar": [
+      2304,
+      2432
+    ],
+    "center_frame__seat_tab_0": [
+      2432,
+      2444
+    ],
+    "center_frame__seat_tab_1": [
+      2444,
+      2456
+    ],
+    "center_frame__back_tab_0": [
+      2456,
+      2468
+    ],
+    "center_frame__back_tab_1": [
+      2468,
+      2480
+    ],
+    "center_frame__support_tab_0": [
+      2480,
+      2492
+    ],
+    "center_frame__support_tab_1": [
+      2492,
+      2504
+    ],
+    "backrest__hinge_barrel": [
+      2504,
+      2632
+    ],
+    "backrest__support_plate": [
+      2632,
+      2644
+    ],
+    "backrest__cushion": [
+      2644,
+      2656
+    ],
+    "backrest__support_rail": [
+      2656,
+      2668
+    ],
+    "seat__hinge_barrel": [
+      2668,
+      2796
+    ],
+    "seat__support_plate": [
+      2796,
+      2808
+    ],
+    "seat__cushion": [
+      2808,
+      2820
+    ],
+    "seat__front_bracket": [
+      2820,
+      2832
+    ],
+    "support_link__pivot_barrel": [
+      2832,
+      2960
+    ],
+    "support_link__pivot_web": [
+      2960,
+      2972
+    ],
+    "support_link__side_bar_0": [
+      2972,
+      3100
+    ],
+    "support_link__side_bar_1": [
+      3100,
+      3228
+    ],
+    "support_link__top_bar": [
+      3228,
+      3356
+    ],
+    "wheel_0__tire": [
+      3356,
+      3484
+    ],
+    "wheel_1__tire": [
+      3484,
+      3612
+    ]
+  },
+  "norm": {
+    "center": [
+      0.08399990816991287,
+      0.0,
+      0.2574999742877498
+    ],
+    "scale": 0.7621873933052825
+  }
+}

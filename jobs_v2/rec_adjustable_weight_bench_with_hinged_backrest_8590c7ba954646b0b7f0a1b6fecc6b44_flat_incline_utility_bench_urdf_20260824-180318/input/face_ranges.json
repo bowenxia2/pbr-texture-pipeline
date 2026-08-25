@@ -1,0 +1,229 @@
+{
+  "group_order": [
+    "base__front_crossmember",
+    "base__rear_crossmember",
+    "base__side_rail_0",
+    "base__front_upright_0",
+    "base__rear_upright_0",
+    "base__seat_hinge_tab_0",
+    "base__ladder_pivot_tab_0",
+    "base__side_rail_1",
+    "base__front_upright_1",
+    "base__rear_upright_1",
+    "base__seat_hinge_tab_1",
+    "base__ladder_pivot_tab_1",
+    "base__seat_hinge_crossmember",
+    "base__center_crossmember",
+    "base__ladder_pivot_crossmember",
+    "base__wheel_axle",
+    "base__wheel_bracket_0",
+    "base__wheel_0",
+    "base__wheel_bracket_1",
+    "base__wheel_1",
+    "base__front_handle_grip",
+    "base__front_handle_leg_0",
+    "base__front_handle_leg_1",
+    "base__rear_gusset_0",
+    "base__rear_gusset_1",
+    "seat__seat_pad",
+    "seat__seat_pan",
+    "seat__seat_stringer_0",
+    "seat__seat_stringer_1",
+    "seat__seat_hinge_barrel",
+    "seat__seat_hinge_bridge",
+    "backrest__back_pad",
+    "backrest__back_pan",
+    "backrest__support_arm_0",
+    "backrest__support_arm_1",
+    "backrest__support_catch",
+    "backrest__back_hinge_bridge",
+    "support_ladder__ladder_rail_0",
+    "support_ladder__ladder_rail_1",
+    "support_ladder__rung_0",
+    "support_ladder__rung_1",
+    "support_ladder__rung_2",
+    "support_ladder__top_rung"
+  ],
+  "face_ranges": {
+    "base__front_crossmember": [
+      0,
+      12
+    ],
+    "base__rear_crossmember": [
+      12,
+      24
+    ],
+    "base__side_rail_0": [
+      24,
+      36
+    ],
+    "base__front_upright_0": [
+      36,
+      48
+    ],
+    "base__rear_upright_0": [
+      48,
+      60
+    ],
+    "base__seat_hinge_tab_0": [
+      60,
+      72
+    ],
+    "base__ladder_pivot_tab_0": [
+      72,
+      84
+    ],
+    "base__side_rail_1": [
+      84,
+      96
+    ],
+    "base__front_upright_1": [
+      96,
+      108
+    ],
+    "base__rear_upright_1": [
+      108,
+      120
+    ],
+    "base__seat_hinge_tab_1": [
+      120,
+      132
+    ],
+    "base__ladder_pivot_tab_1": [
+      132,
+      144
+    ],
+    "base__seat_hinge_crossmember": [
+      144,
+      156
+    ],
+    "base__center_crossmember": [
+      156,
+      168
+    ],
+    "base__ladder_pivot_crossmember": [
+      168,
+      180
+    ],
+    "base__wheel_axle": [
+      180,
+      308
+    ],
+    "base__wheel_bracket_0": [
+      308,
+      320
+    ],
+    "base__wheel_0": [
+      320,
+      448
+    ],
+    "base__wheel_bracket_1": [
+      448,
+      460
+    ],
+    "base__wheel_1": [
+      460,
+      588
+    ],
+    "base__front_handle_grip": [
+      588,
+      716
+    ],
+    "base__front_handle_leg_0": [
+      716,
+      844
+    ],
+    "base__front_handle_leg_1": [
+      844,
+      972
+    ],
+    "base__rear_gusset_0": [
+      972,
+      984
+    ],
+    "base__rear_gusset_1": [
+      984,
+      996
+    ],
+    "seat__seat_pad": [
+      996,
+      1008
+    ],
+    "seat__seat_pan": [
+      1008,
+      1020
+    ],
+    "seat__seat_stringer_0": [
+      1020,
+      1032
+    ],
+    "seat__seat_stringer_1": [
+      1032,
+      1044
+    ],
+    "seat__seat_hinge_barrel": [
+      1044,
+      1172
+    ],
+    "seat__seat_hinge_bridge": [
+      1172,
+      1184
+    ],
+    "backrest__back_pad": [
+      1184,
+      1196
+    ],
+    "backrest__back_pan": [
+      1196,
+      1208
+    ],
+    "backrest__support_arm_0": [
+      1208,
+      1220
+    ],
+    "backrest__support_arm_1": [
+      1220,
+      1232
+    ],
+    "backrest__support_catch": [
+      1232,
+      1244
+    ],
+    "backrest__back_hinge_bridge": [
+      1244,
+      1256
+    ],
+    "support_ladder__ladder_rail_0": [
+      1256,
+      1268
+    ],
+    "support_ladder__ladder_rail_1": [
+      1268,
+      1280
+    ],
+    "support_ladder__rung_0": [
+      1280,
+      1292
+    ],
+    "support_ladder__rung_1": [
+      1292,
+      1304
+    ],
+    "support_ladder__rung_2": [
+      1304,
+      1316
+    ],
+    "support_ladder__top_rung": [
+      1316,
+      1328
+    ]
+  },
+  "norm": {
+    "center": [
+      0.6849999999999999,
+      0.0,
+      0.225
+    ],
+    "scale": 0.6410192307692308
+  }
+}

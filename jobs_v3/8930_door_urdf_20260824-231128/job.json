@@ -1,0 +1,209 @@
+{
+  "schema_version": 6,
+  "job_id": "8930_door_urdf_20260824-231128",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/8930/mobility.urdf",
+  "created": "2026-08-24T23:11:28",
+  "updated": "2026-08-25T01:11:08",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 9,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-25T00:21:39",
+      "finished": "2026-08-25T00:22:39",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "dark brown wood grain on the door panels; clear glass in the oval windows; light brown wood grain on the door handles"
+      },
+      "seed": null,
+      "started": "2026-08-25T00:22:40",
+      "finished": "2026-08-25T00:26:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/8930_door_urdf_20260824-231128/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-25T00:26:48",
+      "finished": "2026-08-25T00:55:44",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 9,
+            "n_total": 9,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/8930_door_urdf_20260824-231128/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-25T00:55:44",
+      "finished": "2026-08-25T01:11:08",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/8930",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/8930/mobility.urdf",
+    "category": "Door",
+    "group_by": "semantic",
+    "semantic_labels": [
+      "door_frame",
+      "rotation_door"
+    ],
+    "bbox_world": {
+      "min": [
+        -0.04931499999999992,
+        -0.765265,
+        -0.648303
+      ],
+      "max": [
+        0.015142000000000539,
+        0.762527,
+        0.65032
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "link_0__outside_frame-16",
+        "link": "link_0",
+        "label": "outside_frame",
+        "semantic_id": 16,
+        "objs": [
+          "textured_objs/new-9.obj"
+        ],
+        "n_faces": 742,
+        "area_frac": 0.4593895174122639,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__movable_part-10",
+        "link": "link_1",
+        "label": "movable_part",
+        "semantic_id": 10,
+        "objs": [
+          "textured_objs/new-2.obj"
+        ],
+        "n_faces": 8378,
+        "area_frac": 0.0006750880519119433,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__movable_part-8",
+        "link": "link_2",
+        "label": "movable_part",
+        "semantic_id": 8,
+        "objs": [
+          "textured_objs/new-0.obj"
+        ],
+        "n_faces": 8344,
+        "area_frac": 0.0006740502250619063,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__glass-12",
+        "link": "link_3",
+        "label": "glass",
+        "semantic_id": 12,
+        "objs": [
+          "textured_objs/new-7.obj",
+          "textured_objs/new-4.obj"
+        ],
+        "n_faces": 200,
+        "area_frac": 0.04149131975257124,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__surface_board-14",
+        "link": "link_3",
+        "label": "surface_board",
+        "semantic_id": 14,
+        "objs": [
+          "textured_objs/new-12.obj",
+          "textured_objs/new-11.obj"
+        ],
+        "n_faces": 898,
+        "area_frac": 0.2549113481033294,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__fixed_part-9",
+        "link": "link_3",
+        "label": "fixed_part",
+        "semantic_id": 9,
+        "objs": [
+          "textured_objs/new-3.obj"
+        ],
+        "n_faces": 9192,
+        "area_frac": 0.0013325795275010844,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__glass-13",
+        "link": "link_4",
+        "label": "glass",
+        "semantic_id": 13,
+        "objs": [
+          "textured_objs/new-5.obj",
+          "textured_objs/new-6.obj"
+        ],
+        "n_faces": 648,
+        "area_frac": 0.052112672079918945,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__surface_board-15",
+        "link": "link_4",
+        "label": "surface_board",
+        "semantic_id": 15,
+        "objs": [
+          "textured_objs/new-10.obj"
+        ],
+        "n_faces": 266,
+        "area_frac": 0.18809778930212925,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__fixed_part-7",
+        "link": "link_4",
+        "label": "fixed_part",
+        "semantic_id": 7,
+        "objs": [
+          "textured_objs/new-1.obj"
+        ],
+        "n_faces": 9238,
+        "area_frac": 0.0013156355453122763,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

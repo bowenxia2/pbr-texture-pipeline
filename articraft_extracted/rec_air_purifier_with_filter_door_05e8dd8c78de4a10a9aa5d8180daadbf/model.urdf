@@ -1,0 +1,285 @@
+<robot name="cup_holder_air_purifier">
+  <material name="body_dark">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="body_black">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="satin_silver">
+    <color rgba="0.62 0.65 0.68 1" />
+    </material>
+  <material name="accent_blue">
+    <color rgba="0.3 0.58 0.82 1" />
+    </material>
+  <material name="filter_media">
+    <color rgba="0.86 0.89 0.88 1" />
+    </material>
+  <link name="body">
+    <inertial>
+      <origin xyz="0 0 0.08" rpy="0 0 0" />
+      <mass value="0.85" />
+      <inertia ixx="0.00320167" ixy="0" ixz="0" iyy="0.00320167" iyz="0" izz="0.00277667" />
+      </inertial>
+    <visual name="cup_holder_stem">
+      <origin xyz="0 0 0.0375" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.075" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="mount_collar">
+      <origin xyz="0 0 0.083" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.039" length="0.016" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="neck_post">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.02" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="lower_disc_cover">
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.006" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_disc_cover">
+      <origin xyz="0 0 0.153" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.066" length="0.006" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="outer_rim">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_outer_rim.obj" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="opening_upper_rail">
+      <origin xyz="0.043 0 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.046 0.004" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="opening_lower_rail">
+      <origin xyz="0.043 0 0.114" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.046 0.004" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="opening_left_rail">
+      <origin xyz="0.045 0.024 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.004 0.036" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="opening_right_rail">
+      <origin xyz="0.045 -0.024 0.132" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.004 0.036" />
+        </geometry>
+      <material name="body_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_grille_ring">
+      <origin xyz="0 0 0.157" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.002" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="status_disc">
+      <origin xyz="0 0 0.1585" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.003" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.3 0.58 0.82 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_cap">
+    <inertial>
+      <origin xyz="0.011 0 0" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="3.05333e-05" ixy="0" ixz="0" iyy="1.28533e-05" iyz="0" izz="2.41333e-05" />
+      </inertial>
+    <visual name="cap_shell">
+      <origin xyz="0.008 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter_cap_shell.obj" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="cap_grip_tab">
+      <origin xyz="0.016 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.022 0.01" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="cap_twist_rib_upper">
+      <origin xyz="0.016 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.004" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="cap_twist_rib_lower">
+      <origin xyz="0.016 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.016 0.004" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_cartridge">
+    <inertial>
+      <origin xyz="0.037 0 0" rpy="0 0 0" />
+      <mass value="0.1" />
+      <inertia ixx="1.89667e-05" ixy="0" ixz="0" iyy="5.12667e-05" iyz="0" izz="5.89667e-05" />
+      </inertial>
+    <visual name="cartridge_frame">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.068 0.036 0.024" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="filter_core">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.028 0.018" />
+        </geometry>
+      <material name="filter_media">
+        <color rgba="0.86 0.89 0.88 1" />
+        </material>
+      </visual>
+    <visual name="upper_runner">
+      <origin xyz="0.034 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.03 0.004" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_runner">
+      <origin xyz="0.034 0 -0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.03 0.004" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_0">
+      <origin xyz="0.034 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.0015 0.017" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_1">
+      <origin xyz="0.034 -0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.0015 0.017" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_2">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.0015 0.017" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_3">
+      <origin xyz="0.034 0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.0015 0.017" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_4">
+      <origin xyz="0.034 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.046 0.0015 0.017" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    <visual name="pull_tab">
+      <origin xyz="0.065 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.026 0.016" />
+        </geometry>
+      <material name="satin_silver">
+        <color rgba="0.62 0.65 0.68 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_filter_cap" type="prismatic">
+    <origin xyz="0.066 0 0.132" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_cap" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="0.08" lower="0" upper="0.022" />
+    </joint>
+  <joint name="body_to_filter_cartridge" type="prismatic">
+    <origin xyz="-0.008 0 0.132" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_cartridge" />
+    <axis xyz="1 0 0" />
+    <limit effort="12" velocity="0.1" lower="0" upper="0.048" />
+    </joint>
+  </robot>

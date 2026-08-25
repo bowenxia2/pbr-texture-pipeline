@@ -1,4 +1,4 @@
-"""One-time Orient-Anything-V2 checkpoint download (PRD_articulated_v2 section 6).
+"""One-time Orient-Anything-V2 checkpoint download (PRD.md section 7.5).
 
 Fetches the single checkpoint file (config articulated.orient.ckpt_file, ~5 GB) from the
 models.orient Hugging Face repo into the shared HF cache at config.env.hf_cache (never

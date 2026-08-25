@@ -1,0 +1,266 @@
+<robot name="articulated_globe">
+  <material name="wood">
+    <color rgba="0.38 0.24 0.14 1" />
+    </material>
+  <material name="dark_wood">
+    <color rgba="0.24 0.15 0.09 1" />
+    </material>
+  <material name="brass">
+    <color rgba="0.78 0.66 0.34 1" />
+    </material>
+  <material name="aged_brass">
+    <color rgba="0.63 0.53 0.28 1" />
+    </material>
+  <material name="ocean">
+    <color rgba="0.16 0.38 0.62 1" />
+    </material>
+  <material name="land">
+    <color rgba="0.7 0.73 0.55 1" />
+    </material>
+  <material name="paper">
+    <color rgba="0.91 0.88 0.77 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.027" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.0058824" ixy="0" ixz="0" iyy="0.0058824" iyz="0" izz="0.01089" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/globe_base.obj" />
+        </geometry>
+      <material name="wood">
+        <color rgba="0.38 0.24 0.14 1" />
+        </material>
+      </visual>
+    <visual name="collar">
+      <origin xyz="0 0 0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.012" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="stem">
+      <origin xyz="0 0 0.097" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.062" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="socket">
+      <origin xyz="0 0 0.121" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.014" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="nameplate">
+      <origin xyz="0 0.084 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.003 0.018" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="nameplate_inlay">
+      <origin xyz="0 0.083 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.002 0.024" />
+        </geometry>
+      <material name="paper">
+        <color rgba="0.91 0.88 0.77 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="meridian">
+    <inertial>
+      <origin xyz="0 0 0.118" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00136969" ixy="0" ixz="0" iyy="0.00136969" iyz="0" izz="0.0027225" />
+      </inertial>
+    <visual name="meridian_collar">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.012" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_1">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_1.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_2">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_2.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_3">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_3.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_4">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_4.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_5">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_5.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="meridian_segment_6">
+      <geometry>
+        <mesh filename="assets/meshes/meridian_segment_6.obj" />
+        </geometry>
+      <material name="brass">
+        <color rgba="0.78 0.66 0.34 1" />
+        </material>
+      </visual>
+    <visual name="saddle">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.004 0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cup_1">
+      <origin xyz="0.0394762 0 0.208789" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.016" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="bearing_cup_2">
+      <origin xyz="-0.0394762 0 0.0272111" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.016" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="globe">
+    <inertial>
+      <mass value="0.95" />
+      <inertia ixx="0.003078" ixy="0" ixz="0" iyy="0.003078" iyz="0" izz="0.003078" />
+      </inertial>
+    <visual name="ocean_shell">
+      <geometry>
+        <sphere radius="0.09" />
+        </geometry>
+      <material name="ocean">
+        <color rgba="0.16 0.38 0.62 1" />
+        </material>
+      </visual>
+    <visual name="north_america">
+      <geometry>
+        <mesh filename="assets/meshes/north_america.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="south_america">
+      <geometry>
+        <mesh filename="assets/meshes/south_america.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="eurasia">
+      <geometry>
+        <mesh filename="assets/meshes/eurasia.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="africa">
+      <geometry>
+        <mesh filename="assets/meshes/africa.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="australia">
+      <geometry>
+        <mesh filename="assets/meshes/australia.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="greenland">
+      <geometry>
+        <mesh filename="assets/meshes/greenland.obj" />
+        </geometry>
+      <material name="land">
+        <color rgba="0.7 0.73 0.55 1" />
+        </material>
+      </visual>
+    <visual name="polar_pin_1">
+      <origin xyz="0.0374824 0 0.0862036" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    <visual name="polar_pin_2">
+      <origin xyz="-0.0374824 0 -0.0862036" rpy="0 0.410152 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.01" />
+        </geometry>
+      <material name="aged_brass">
+        <color rgba="0.63 0.53 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_meridian" type="fixed">
+    <origin xyz="0 0 0.1265" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="meridian" />
+    </joint>
+  <joint name="globe_spin" type="continuous">
+    <origin xyz="0 0 0.118" rpy="0 0 0" />
+    <parent link="meridian" />
+    <child link="globe" />
+    <axis xyz="0.398749 0 0.91706" />
+    <limit effort="2.5" velocity="3" />
+    </joint>
+  </robot>

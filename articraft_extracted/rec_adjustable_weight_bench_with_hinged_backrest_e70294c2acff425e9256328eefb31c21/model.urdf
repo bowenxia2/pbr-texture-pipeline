@@ -1,0 +1,370 @@
+<robot name="adjustable_decline_bench">
+  <link name="frame">
+    <visual name="center_spine">
+      <origin xyz="-0.05 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="1.78 0.06 0.05" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_0">
+      <origin xyz="-0.22 0.185 0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="1.16 0.04 0.04" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="side_rail_1">
+      <origin xyz="-0.22 -0.185 0.37" rpy="0 0 0" />
+      <geometry>
+        <box size="1.16 0.04 0.04" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor_bar">
+      <origin xyz="-0.94 0 0.065" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.7" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="rear_support">
+      <origin xyz="-0.91 0 0.165" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.07 0.215" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="front_crossmember">
+      <origin xyz="0.78 0 0.105" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.54" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="front_support">
+      <origin xyz="0.75 0 0.185" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.07 0.22" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle">
+      <origin xyz="0.8 0 0.085" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.74" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_stand">
+      <origin xyz="-0.04 0 0.352" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.07 0.23" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="back_top_crossbar">
+      <origin xyz="-0.04 0 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.45" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_pin">
+      <origin xyz="-0.04 0 0.485" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.45" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_stand">
+      <origin xyz="0.04 0 0.352" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.07 0.23" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="seat_top_crossbar">
+      <origin xyz="0.25 0 0.37" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.45" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_pin">
+      <origin xyz="0.04 0 0.485" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.39" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="seat_pin_saddle">
+      <origin xyz="0.04 0 0.467" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.058 0.018" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="front_upright">
+      <origin xyz="0.58 0 0.405" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.07 0.455" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="roller_axle">
+      <origin xyz="0.6 0 0.635" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.54" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="front_brace">
+      <origin xyz="0.43 0 0.265" rpy="0 -0.55 0" />
+      <geometry>
+        <box size="0.34 0.04 0.04" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="carry_handle">
+      <geometry>
+        <mesh filename="assets/meshes/front_carry_handle.obj" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_0">
+      <origin xyz="0.775 -0.145 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.055 0.038" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    <visual name="handle_mount_1">
+      <origin xyz="0.775 0.145 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.055 0.038" />
+        </geometry>
+      <material name="satin_black_steel">
+        <color rgba="0.02 0.022 0.022 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="back_pad">
+    <visual name="back_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/back_cushion.obj" />
+        </geometry>
+      <material name="black_vinyl_pad">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="back_plate">
+      <origin xyz="-0.515 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.255 0.02" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_sleeve">
+      <origin xyz="-0.015 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.25" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tab">
+      <origin xyz="-0.055 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.06 0.026" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="seat">
+    <visual name="seat_cushion">
+      <geometry>
+        <mesh filename="assets/meshes/seat_cushion.obj" />
+        </geometry>
+      <material name="black_vinyl_pad">
+        <color rgba="0.015 0.014 0.013 1" />
+        </material>
+      </visual>
+    <visual name="seat_plate">
+      <origin xyz="0.245 0 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.255 0.02" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_sleeve">
+      <origin xyz="0.015 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.22" />
+        </geometry>
+      <material name="brushed_pin_metal">
+        <color rgba="0.55 0.55 0.5 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tab">
+      <origin xyz="0.05 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.076 0.06 0.026" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="roller_0">
+    <visual name="foam">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/foam_roller_0.obj" />
+        </geometry>
+      <material name="dense_black_foam">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="roller_1">
+    <visual name="foam">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/foam_roller_1.obj" />
+        </geometry>
+      <material name="dense_black_foam">
+        <color rgba="0.025 0.024 0.022 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_0">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/transport_tire_0.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.01 0.01 0.009 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/transport_rim_0.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="wheel_1">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/transport_tire_1.obj" />
+        </geometry>
+      <material name="matte_rubber">
+        <color rgba="0.01 0.01 0.009 1" />
+        </material>
+      </visual>
+    <visual name="rim">
+      <origin xyz="0 0 0" rpy="0 0 1.5708" />
+      <geometry>
+        <mesh filename="assets/meshes/transport_rim_1.obj" />
+        </geometry>
+      <material name="dark_grey_plastic">
+        <color rgba="0.18 0.18 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="frame_to_roller_0" type="continuous">
+    <origin xyz="0.6 -0.155 0.635" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="roller_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="8" />
+    </joint>
+  <joint name="frame_to_roller_1" type="continuous">
+    <origin xyz="0.6 0.155 0.635" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="roller_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="8" />
+    </joint>
+  <joint name="frame_to_wheel_0" type="continuous">
+    <origin xyz="0.8 -0.33 0.085" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="12" />
+    </joint>
+  <joint name="frame_to_wheel_1" type="continuous">
+    <origin xyz="0.8 0.33 0.085" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="12" />
+    </joint>
+  <joint name="frame_to_back_pad" type="revolute">
+    <origin xyz="-0.04 0 0.485" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="back_pad" />
+    <axis xyz="0 1 0" />
+    <limit effort="90" velocity="1.2" lower="-0.2" upper="0.85" />
+    </joint>
+  <joint name="frame_to_seat" type="revolute">
+    <origin xyz="0.04 0 0.485" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="seat" />
+    <axis xyz="0 -1 0" />
+    <limit effort="60" velocity="1.2" lower="0" upper="0.55" />
+    </joint>
+  </robot>

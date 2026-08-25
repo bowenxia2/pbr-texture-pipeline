@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="fold_out_support_arm">
+	<material name="steel">
+		<color rgba="0.28 0.3 0.33 1" />
+	</material>
+	<material name="zinc">
+		<color rgba="0.68 0.7 0.72 1" />
+	</material>
+	<link name="base_plate">
+		<visual name="base_plate__plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="base_plate__hinge_reinforcement">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__hinge_reinforcement.glb" />
+			</geometry>
+		</visual>
+		<visual name="base_plate__hinge_bridge_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__hinge_bridge_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="base_plate__hinge_bridge_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__hinge_bridge_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="base_plate__fork_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__fork_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="base_plate__fork_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base_plate__fork_lower.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="link1">
+		<visual name="link1__tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link1__tongue.glb" />
+			</geometry>
+		</visual>
+		<visual name="link1__core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link1__core.glb" />
+			</geometry>
+		</visual>
+		<visual name="link1__fork_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link1__fork_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="link1__fork_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link1__fork_lower.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="link2">
+		<visual name="link2__tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link2__tongue.glb" />
+			</geometry>
+		</visual>
+		<visual name="link2__core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link2__core.glb" />
+			</geometry>
+		</visual>
+		<visual name="link2__fork_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link2__fork_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="link2__fork_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link2__fork_lower.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="link3">
+		<visual name="link3__tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link3__tongue.glb" />
+			</geometry>
+		</visual>
+		<visual name="link3__core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link3__core.glb" />
+			</geometry>
+		</visual>
+		<visual name="link3__fork_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link3__fork_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="link3__fork_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link3__fork_lower.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="link4">
+		<visual name="link4__tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link4__tongue.glb" />
+			</geometry>
+		</visual>
+		<visual name="link4__core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link4__core.glb" />
+			</geometry>
+		</visual>
+		<visual name="link4__end_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/link4__end_pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="platform_bracket">
+		<visual name="platform_bracket__bracket_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/platform_bracket__bracket_shell.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="base_to_link1" type="revolute">
+		<origin xyz="0.014 0 0" rpy="0 0 0" />
+		<parent link="base_plate" />
+		<child link="link1" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+	</joint>
+	<joint name="link1_to_link2" type="revolute">
+		<origin xyz="0.068 0 0" rpy="0 0 0" />
+		<parent link="link1" />
+		<child link="link2" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+	</joint>
+	<joint name="link2_to_link3" type="revolute">
+		<origin xyz="0.064 0 0" rpy="0 0 0" />
+		<parent link="link2" />
+		<child link="link3" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+	</joint>
+	<joint name="link3_to_link4" type="revolute">
+		<origin xyz="0.06 0 0" rpy="0 0 0" />
+		<parent link="link3" />
+		<child link="link4" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+	</joint>
+	<joint name="link4_to_platform_bracket" type="fixed">
+		<origin xyz="0.066 0 0" rpy="0 0 0" />
+		<parent link="link4" />
+		<child link="platform_bracket" />
+	</joint>
+</robot>

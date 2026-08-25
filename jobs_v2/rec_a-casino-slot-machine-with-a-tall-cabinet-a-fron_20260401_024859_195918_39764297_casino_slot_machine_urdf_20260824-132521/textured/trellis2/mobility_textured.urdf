@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="casino_slot_machine">
+	<material name="cabinet_red">
+		<color rgba="0.66 0.08 0.1 1" />
+	</material>
+	<material name="trim_gold">
+		<color rgba="0.83 0.69 0.18 1" />
+	</material>
+	<material name="smoked_glass">
+		<color rgba="0.18 0.24 0.28 0.36" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.11 0.11 0.12 1" />
+	</material>
+	<material name="steel">
+		<color rgba="0.78 0.8 0.83 1" />
+	</material>
+	<material name="satin_black">
+		<color rgba="0.12 0.12 0.13 1" />
+	</material>
+	<material name="ivory">
+		<color rgba="0.93 0.92 0.86 1" />
+	</material>
+	<material name="reel_red">
+		<color rgba="0.7 0.14 0.14 1" />
+	</material>
+	<link name="cabinet">
+		<inertial>
+			<origin xyz="0 0 0.86" rpy="0 0 0" />
+			<mass value="85" />
+			<inertia ixx="23.3382" ixy="0" ixz="0" iyy="24.8342" iyz="0" izz="6.26167" />
+		</inertial>
+		<visual name="cabinet__base_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__base_plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__back_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__back_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__left_side_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__left_side_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__right_side_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__right_side_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__lower_body_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__lower_body_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__upper_body_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__upper_body_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__roof_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__roof_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__lower_front_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__lower_front_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__tray_support_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__tray_support_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__deck_ledge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__deck_ledge.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_bottom">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_bottom.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_top.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_mullion_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_mullion_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_mullion_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_mullion_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__window_glass">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__window_glass.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__upper_front_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__upper_front_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_header">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_header.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_front">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_front.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_glass">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_glass.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_top.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__pivot_boss">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__pivot_boss.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__pivot_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__pivot_plinth.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="reel_bank">
+		<inertial>
+			<origin xyz="0 0.2 0.27" rpy="0 0 0" />
+			<mass value="7" />
+			<inertia ixx="0.263433" ixy="0" ixz="0" iyy="0.315933" iyz="0" izz="0.239167" />
+		</inertial>
+		<visual name="reel_bank__backplate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__backplate.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__left_bracket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__left_bracket.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__right_bracket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__right_bracket.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__lower_crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__lower_crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__upper_crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__upper_crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__reel_shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__reel_shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__left_reel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__left_reel.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__left_reel_symbol_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__left_reel_symbol_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__center_reel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__center_reel.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__center_reel_symbol_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__center_reel_symbol_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__right_reel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__right_reel.glb" />
+			</geometry>
+		</visual>
+		<visual name="reel_bank__right_reel_symbol_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/reel_bank__right_reel_symbol_band.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="coin_tray">
+		<inertial>
+			<origin xyz="0 0.09 0.025" rpy="0 0 0" />
+			<mass value="1.2" />
+			<inertia ixx="0.00349" ixy="0" ixz="0" iyy="0.01181" iyz="0" izz="0.0148" />
+		</inertial>
+		<visual name="coin_tray__tray_back">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/coin_tray__tray_back.glb" />
+			</geometry>
+		</visual>
+		<visual name="coin_tray__tray_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/coin_tray__tray_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="coin_tray__tray_left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/coin_tray__tray_left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="coin_tray__tray_right_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/coin_tray__tray_right_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="coin_tray__tray_front_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/coin_tray__tray_front_lip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="pull_handle">
+		<inertial>
+			<origin xyz="0.07 0.1 0.28" rpy="0 0 0" />
+			<mass value="1.8" />
+			<inertia ixx="0.05568" ixy="0" ixz="0" iyy="0.04998" iyz="0" izz="0.01158" />
+		</inertial>
+		<visual name="pull_handle__handle_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pull_handle__handle_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="pull_handle__handle_arm">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pull_handle__handle_arm.glb" />
+			</geometry>
+		</visual>
+		<visual name="pull_handle__pull_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pull_handle__pull_grip.glb" />
+			</geometry>
+		</visual>
+		<visual name="pull_handle__grip_lower_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pull_handle__grip_lower_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="pull_handle__grip_upper_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pull_handle__grip_upper_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="cabinet_to_reel_bank" type="fixed">
+		<origin xyz="0 -0.24 0.6" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="reel_bank" />
+	</joint>
+	<joint name="cabinet_to_coin_tray" type="fixed">
+		<origin xyz="0 0.27 0.12" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="coin_tray" />
+	</joint>
+	<joint name="cabinet_to_pull_handle" type="revolute">
+		<origin xyz="0.385 0.08 0.8" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="pull_handle" />
+		<axis xyz="-1 0 0" />
+		<limit effort="12" velocity="2.5" lower="0" upper="0.95" />
+	</joint>
+</robot>

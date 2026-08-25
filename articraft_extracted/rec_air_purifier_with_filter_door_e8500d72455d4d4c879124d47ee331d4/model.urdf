@@ -1,0 +1,144 @@
+<robot name="wall_panel_air_purifier">
+  <material name="body_finish">
+    <color rgba="0.87 0.89 0.9 1" />
+    </material>
+  <material name="door_finish">
+    <color rgba="0.95 0.96 0.96 1" />
+    </material>
+  <material name="filter_finish">
+    <color rgba="0.29 0.33 0.36 1" />
+    </material>
+  <link name="body">
+    <visual name="back_panel">
+      <origin xyz="0 -0.0675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.01 0.78" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="-0.266 0.0045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.136 0.78" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0.266 0.0045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.136 0.78" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="top_wall">
+      <origin xyz="0 0.0045 0.3675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.506 0.136 0.045" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="0 0.0045 -0.365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.506 0.136 0.05" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="-0.21 -0.003 -0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.104 0.005" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="0.21 -0.003 -0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.104 0.005" />
+        </geometry>
+      <material name="body_finish" />
+      </visual>
+    <collision name="back_panel">
+      <origin xyz="0 -0.0675 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.01 0.78" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_0">
+      <origin xyz="-0.266 0.0045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.136 0.78" />
+        </geometry>
+      </collision>
+    <collision name="side_wall_1">
+      <origin xyz="0.266 0.0045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.136 0.78" />
+        </geometry>
+      </collision>
+    <collision name="top_wall">
+      <origin xyz="0 0.0045 0.3675" rpy="0 0 0" />
+      <geometry>
+        <box size="0.506 0.136 0.045" />
+        </geometry>
+      </collision>
+    <collision name="bottom_wall">
+      <origin xyz="0 0.0045 -0.365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.506 0.136 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="-0.21 -0.003 -0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.104 0.005" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="0.21 -0.003 -0.338" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.104 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_door.obj" />
+        </geometry>
+      <material name="door_finish" />
+      </visual>
+    <collision name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter">
+    <visual name="cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter.obj" />
+        </geometry>
+      <material name="filter_finish" />
+      </visual>
+    <collision name="cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/purifier_filter.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="-0.27 0.0725 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.2" lower="0" upper="1.55" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="0 0.052 -0.0045" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="0.18" lower="0" upper="0.072" />
+    </joint>
+  </robot>

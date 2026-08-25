@@ -1,0 +1,410 @@
+<robot name="portable_bedside_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.95 0.96 0.94 1" />
+    </material>
+  <material name="grille_grey">
+    <color rgba="0.84 0.86 0.86 1" />
+    </material>
+  <material name="interior_charcoal">
+    <color rgba="0.16 0.18 0.19 1" />
+    </material>
+  <material name="tray_grey">
+    <color rgba="0.82 0.84 0.85 1" />
+    </material>
+  <material name="filter_green">
+    <color rgba="0.72 0.8 0.72 1" />
+    </material>
+  <material name="filter_shadow">
+    <color rgba="0.56 0.63 0.56 1" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <origin xyz="0 0 0.1525" rpy="0 0 0" />
+      <mass value="2.3" />
+      <inertia ixx="0.0275329" ixy="0" ixz="0" iyy="0.027969" iyz="0" izz="0.0198423" />
+      </inertial>
+    <visual name="left_shell_wall">
+      <origin xyz="-0.112 -0.003 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.219 0.299" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="right_shell_wall">
+      <origin xyz="0.112 -0.003 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.219 0.299" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="back_shell_wall">
+      <origin xyz="0 -0.1095 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.218 0.006 0.299" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.302" rpy="0 0 0" />
+      <geometry>
+        <box size="0.23 0.225 0.006" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_left_post">
+      <origin xyz="-0.106 0.1095 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.299" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_right_post">
+      <origin xyz="0.106 0.1095 0.1495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.299" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_lower_band">
+      <origin xyz="0 0.1095 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.194 0.006 0.042" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_mid_rail">
+      <origin xyz="0 0.1095 0.057" rpy="0 0 0" />
+      <geometry>
+        <box size="0.194 0.006 0.03" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="front_top_rail">
+      <origin xyz="0 0.1095 0.2755" rpy="0 0 0" />
+      <geometry>
+        <box size="0.194 0.006 0.047" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="left_tray_runner">
+      <origin xyz="-0.094 0.011 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.008" />
+        </geometry>
+      <material name="interior_charcoal">
+        <color rgba="0.16 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="right_tray_runner">
+      <origin xyz="0.094 0.011 0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.18 0.008" />
+        </geometry>
+      <material name="interior_charcoal">
+        <color rgba="0.16 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor">
+      <origin xyz="0 -0.0885 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.206 0.048 0.006" />
+        </geometry>
+      <material name="interior_charcoal">
+        <color rgba="0.16 0.18 0.19 1" />
+        </material>
+      </visual>
+    <visual name="grille_left_rail">
+      <origin xyz="-0.092 0.1105 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.18" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_right_rail">
+      <origin xyz="0.092 0.1105 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.004 0.18" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_lower_rail">
+      <origin xyz="0 0.1105 0.077" rpy="0 0 0" />
+      <geometry>
+        <box size="0.194 0.004 0.01" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_upper_rail">
+      <origin xyz="0 0.1105 0.247" rpy="0 0 0" />
+      <geometry>
+        <box size="0.194 0.004 0.01" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_0">
+      <origin xyz="0 0.1105 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_1">
+      <origin xyz="0 0.1105 0.10425" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_2">
+      <origin xyz="0 0.1105 0.1235" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_3">
+      <origin xyz="0 0.1105 0.14275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_4">
+      <origin xyz="0 0.1105 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_5">
+      <origin xyz="0 0.1105 0.18125" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_6">
+      <origin xyz="0 0.1105 0.2005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_7">
+      <origin xyz="0 0.1105 0.21975" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="grille_slat_8">
+      <origin xyz="0 0.1105 0.239" rpy="0 0 0" />
+      <geometry>
+        <box size="0.174 0.004 0.006" />
+        </geometry>
+      <material name="grille_grey">
+        <color rgba="0.84 0.86 0.86 1" />
+        </material>
+      </visual>
+    <visual name="intake_shadow">
+      <origin xyz="0 0.102 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.014 0.172" />
+        </geometry>
+      <material name="interior_charcoal">
+        <color rgba="0.16 0.18 0.19 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_tray">
+    <inertial>
+      <origin xyz="0 0 0.0205" rpy="0 0 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00112144" ixy="0" ixz="0" iyy="0.00153319" iyz="0" izz="0.00252855" />
+      </inertial>
+    <visual name="tray_base">
+      <origin xyz="0 0 0.0015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.168 0.003" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="tray_left_wall">
+      <origin xyz="-0.0975 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.168 0.024" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="tray_right_wall">
+      <origin xyz="0.0975 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.168 0.024" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="tray_rear_wall">
+      <origin xyz="0 -0.0825 0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.003 0.024" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="tray_front_lip">
+      <origin xyz="0 0.082 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.188 0.004 0.038" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="tray_pull_ridge">
+      <origin xyz="0 0.077 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.008 0.006" />
+        </geometry>
+      <material name="tray_grey">
+        <color rgba="0.82 0.84 0.85 1" />
+        </material>
+      </visual>
+    <visual name="filter_block">
+      <origin xyz="0 -0.002 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.184 0.142 0.032" />
+        </geometry>
+      <material name="filter_green">
+        <color rgba="0.72 0.8 0.72 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_0">
+      <origin xyz="-0.074 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_1">
+      <origin xyz="-0.053 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_2">
+      <origin xyz="-0.032 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_3">
+      <origin xyz="-0.011 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_4">
+      <origin xyz="0.011 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_5">
+      <origin xyz="0.032 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_6">
+      <origin xyz="0.053 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    <visual name="filter_pleat_7">
+      <origin xyz="0.074 -0.002 0.0325" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.142 0.007" />
+        </geometry>
+      <material name="filter_shadow">
+        <color rgba="0.56 0.63 0.56 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="housing_to_filter_tray" type="prismatic">
+    <origin xyz="0 0.0285 0.008" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="filter_tray" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="0.2" lower="0" upper="0.125" />
+    </joint>
+  </robot>

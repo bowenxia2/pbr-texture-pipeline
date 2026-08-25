@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_all_in_one_printer_with_scanner_lid_and_paper_tray_cb7e4f12c514462289f0bfbd9827ee8f",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 27,
+    "tool_call_count": 30,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "588545159eef7f9fd6c687823adb35cc6908bd838527f1868b6fa805d6cec45a",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "fcd7db319fae2fb6db0883864ca4e6bb5de7ab9c6b4dfe4babed6d667bf1b32d"
+  }
+}

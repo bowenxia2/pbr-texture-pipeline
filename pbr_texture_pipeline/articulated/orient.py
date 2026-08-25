@@ -1,4 +1,4 @@
-"""Orient-Anything-V2 front detection for articulated Stage R (PRD_articulated_v2 section 6).
+"""Orient-Anything-V2 front detection for articulated Stage R (PRD.md section 7.5).
 
 Runs scripts/orient_infer.py as a short-lived subprocess in the orianyv2 conda env over the
 8 pre-repose contact-sheet panels, then picks the front panel from the per-panel azimuth
@@ -117,7 +117,7 @@ def detect_front_panel(job) -> dict:
     min_agree = float(_CFG.get("articulated.orient.min_agreement_deg", 30))
     decision: dict = {"fallback_panel": fallback}
 
-    images = [job.view(k) for k in range(N_PANELS)]
+    images = [job.render_view(k) for k in range(N_PANELS)]
     missing = [str(p) for p in images if not p.is_file()]
     results = infer_panels(images) if not missing else None
     if results is None:

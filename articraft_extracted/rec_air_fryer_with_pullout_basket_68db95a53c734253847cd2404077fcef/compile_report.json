@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_fryer_with_pullout_basket_68db95a53c734253847cd2404077fcef",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 22,
+    "tool_call_count": 24,
+    "compile_attempt_count": 5,
+    "fingerprint_inputs": {
+      "model_py_sha256": "3b7e538dca8754ee485b46b60d4d0aabcae5c964f95238e06eb31427e61bfd51",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "de990cbf2d854cf579689b6833254fdeceb1e37c25ecccab22117d70034cef5a"
+  }
+}

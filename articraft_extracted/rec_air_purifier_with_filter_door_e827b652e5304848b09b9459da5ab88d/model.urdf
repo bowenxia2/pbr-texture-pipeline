@@ -1,0 +1,75 @@
+<robot name="air_purifier">
+  <link name="chassis">
+    <visual name="back_panel">
+      <origin xyz="0 -0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.02 0.6" />
+        </geometry>
+      </visual>
+    <visual name="left_wall">
+      <origin xyz="-0.19 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.6" />
+        </geometry>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="0.19 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.6" />
+        </geometry>
+      </visual>
+    <visual name="top_wall">
+      <origin xyz="0 0.01 0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.08 0.02" />
+        </geometry>
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="0 0.01 -0.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.08 0.02" />
+        </geometry>
+      </visual>
+    <visual name="left_rail">
+      <origin xyz="-0.1 0.01 -0.275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.01" />
+        </geometry>
+      </visual>
+    <visual name="right_rail">
+      <origin xyz="0.1 0.01 -0.275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.08 0.01" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="door">
+    <visual name="door_panel">
+      <origin xyz="0.2 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.02 0.6" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="filter_cartridge">
+    <visual name="filter_body">
+      <geometry>
+        <box size="0.34 0.058 0.538" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="chassis_to_door" type="revolute">
+    <origin xyz="-0.2 0.051 0" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" lower="0" upper="2" />
+    </joint>
+  <joint name="chassis_to_filter" type="prismatic">
+    <origin xyz="0 0.02 0" rpy="0 0 0" />
+    <parent link="chassis" />
+    <child link="filter_cartridge" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1" lower="0" upper="0.04" />
+    </joint>
+  </robot>

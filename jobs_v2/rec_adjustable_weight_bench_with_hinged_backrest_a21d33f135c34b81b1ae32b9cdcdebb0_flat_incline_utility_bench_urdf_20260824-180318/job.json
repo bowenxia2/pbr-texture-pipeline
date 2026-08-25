@@ -1,0 +1,775 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0_flat_incline_utility_bench_urdf_20260824-180318",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0/model.urdf",
+  "created": "2026-08-24T18:03:18",
+  "updated": "2026-08-24T20:23:40",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 53,
+        "n_tiny": 45
+      },
+      "seed": null,
+      "started": "2026-08-24T18:11:07",
+      "finished": "2026-08-24T18:12:06",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray metal on the entire structure"
+      },
+      "seed": null,
+      "started": "2026-08-24T18:12:06",
+      "finished": "2026-08-24T18:13:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0_flat_incline_utility_bench_urdf_20260824-180318/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T18:13:48",
+      "finished": "2026-08-24T18:36:18",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 53,
+            "n_total": 53,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0_flat_incline_utility_bench_urdf_20260824-180318/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:40",
+      "finished": "2026-08-24T19:44:33",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_a21d33f135c34b81b1ae32b9cdcdebb0/model.urdf",
+    "category": "flat incline utility bench",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.7150000000000001,
+        -0.315,
+        0.0
+      ],
+      "max": [
+        1.04,
+        0.315,
+        0.623
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base_frame__side_rail_0",
+        "link": "base_frame",
+        "label": "side_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05932419423925914,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__side_rail_1",
+        "link": "base_frame",
+        "label": "side_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05932419423925914,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__center_floor_rail",
+        "link": "base_frame",
+        "label": "center_floor_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06249906697034031,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__front_crossbar",
+        "link": "base_frame",
+        "label": "front_crossbar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.025578691625880508,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_crossbar",
+        "link": "base_frame",
+        "label": "rear_crossbar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.025578691625880508,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__foot_0",
+        "link": "base_frame",
+        "label": "foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004959989851575892,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__foot_1",
+        "link": "base_frame",
+        "label": "foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004959989851575892,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__foot_2",
+        "link": "base_frame",
+        "label": "foot_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004959989851575892,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__foot_3",
+        "link": "base_frame",
+        "label": "foot_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004959989851575892,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__top_spine",
+        "link": "base_frame",
+        "label": "top_spine",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.048162220297910834,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__front_upright",
+        "link": "base_frame",
+        "label": "front_upright",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020606721122489208,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__middle_upright",
+        "link": "base_frame",
+        "label": "middle_upright",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020606721122489197,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__diagonal_brace",
+        "link": "base_frame",
+        "label": "diagonal_brace",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.025249223700956978,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__front_hinge_bridge",
+        "link": "base_frame",
+        "label": "front_hinge_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.029552274477988413,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__front_hinge_lug_0",
+        "link": "base_frame",
+        "label": "front_hinge_lug_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004776286523739749,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__front_hinge_lug_1",
+        "link": "base_frame",
+        "label": "front_hinge_lug_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004776286523739749,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__back_hinge_bridge",
+        "link": "base_frame",
+        "label": "back_hinge_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.031588985286606516,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__back_hinge_lug_0",
+        "link": "base_frame",
+        "label": "back_hinge_lug_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004776286523739745,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__back_hinge_lug_1",
+        "link": "base_frame",
+        "label": "back_hinge_lug_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004776286523739745,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_stand_0",
+        "link": "base_frame",
+        "label": "rear_pivot_stand_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014376782178480853,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_stand_1",
+        "link": "base_frame",
+        "label": "rear_pivot_stand_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014376782178480853,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_yoke_0",
+        "link": "base_frame",
+        "label": "rear_pivot_yoke_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004792260726160283,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_yoke_1",
+        "link": "base_frame",
+        "label": "rear_pivot_yoke_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004792260726160283,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_lug_0",
+        "link": "base_frame",
+        "label": "rear_pivot_lug_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0053992804181405805,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_pivot_lug_1",
+        "link": "base_frame",
+        "label": "rear_pivot_lug_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0053992804181405805,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_lug_foot_0",
+        "link": "base_frame",
+        "label": "rear_lug_foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005750712871392338,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__rear_lug_foot_1",
+        "link": "base_frame",
+        "label": "rear_lug_foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005750712871392338,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "seat__seat_pad",
+        "link": "seat",
+        "label": "seat_pad",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/seat_rounded_pad.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.10804645531863828,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "seat__seat_side_piping_0",
+        "link": "seat",
+        "label": "seat_side_piping_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005051042805372939,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "seat__seat_side_piping_1",
+        "link": "seat",
+        "label": "seat_side_piping_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005051042805372939,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "seat__front_hinge_tube",
+        "link": "seat",
+        "label": "front_hinge_tube",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.009963703614779027,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "seat__front_hinge_leaf",
+        "link": "seat",
+        "label": "front_hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.024041174642904076,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__backrest_pad",
+        "link": "backrest",
+        "label": "backrest_pad",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/backrest_rounded_pad.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.17504868355650516,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "backrest__backrest_side_piping_0",
+        "link": "backrest",
+        "label": "backrest_side_piping_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008996670803244906,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__backrest_side_piping_1",
+        "link": "backrest",
+        "label": "backrest_side_piping_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008996670803244906,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__back_hinge_tube",
+        "link": "backrest",
+        "label": "back_hinge_tube",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.009963703614779027,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "backrest__under_rail_0",
+        "link": "backrest",
+        "label": "under_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.023681755088442044,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__under_rail_1",
+        "link": "backrest",
+        "label": "under_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.023681755088442044,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__back_hinge_leaf",
+        "link": "backrest",
+        "label": "back_hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0204869146043352,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__selector_plate",
+        "link": "backrest",
+        "label": "selector_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014576459708737523,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__selector_hole_0",
+        "link": "backrest",
+        "label": "selector_hole_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0003083719990411984,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__selector_hole_1",
+        "link": "backrest",
+        "label": "selector_hole_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0003083719990411984,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__selector_hole_2",
+        "link": "backrest",
+        "label": "selector_hole_2",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0003083719990411984,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__selector_hole_3",
+        "link": "backrest",
+        "label": "selector_hole_3",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00030837199904119834,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__pivot_tube",
+        "link": "ladder_support",
+        "label": "pivot_tube",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008385432009350264,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "ladder_support__side_rail_0",
+        "link": "ladder_support",
+        "label": "side_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008592747120839263,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__side_rail_1",
+        "link": "ladder_support",
+        "label": "side_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008592747120839263,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__ladder_rung_0",
+        "link": "ladder_support",
+        "label": "ladder_rung_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006423226793296827,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__ladder_rung_1",
+        "link": "ladder_support",
+        "label": "ladder_rung_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006423226793296827,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__ladder_rung_2",
+        "link": "ladder_support",
+        "label": "ladder_rung_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006423226793296827,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "ladder_support__upper_roller",
+        "link": "ladder_support",
+        "label": "upper_roller",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.006030960714760734,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "pop_pin__pin_stem",
+        "link": "pop_pin",
+        "label": "pin_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006810264806084494,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "pop_pin__knob_cap",
+        "link": "pop_pin",
+        "label": "knob_cap",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pop_pin_lobed_knob.obj"
+        ],
+        "n_faces": 7826,
+        "area_frac": 0.001973723124077211,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

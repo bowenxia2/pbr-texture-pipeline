@@ -1,0 +1,101 @@
+<robot name="portable_camping_pump">
+  <material name="body_gray">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="polymer_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="rod_silver">
+    <color rgba="0.76 0.78 0.81 1" />
+    </material>
+  <material name="foot_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <link name="pump_body">
+    <inertial>
+      <origin xyz="0 0 0.111" rpy="0 0 0" />
+      <mass value="0.72" />
+      <inertia ixx="0.00368304" ixy="0" ixz="0" iyy="0.00344304" iyz="0" izz="0.001212" />
+      </inertial>
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/pump_body_shell.obj" />
+        </geometry>
+      <material name="body_gray" />
+      </visual>
+    </link>
+  <link name="shaft_handle">
+    <inertial>
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <mass value="0.16" />
+      <inertia ixx="0.00111168" ixy="0" ixz="0" iyy="0.00111168" iyz="0" izz="1.152e-05" />
+      </inertial>
+    <visual name="pump_rod">
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.24" />
+        </geometry>
+      <material name="rod_silver" />
+      </visual>
+    <visual name="t_grip">
+      <geometry>
+        <mesh filename="assets/meshes/pump_t_grip.obj" />
+        </geometry>
+      <material name="polymer_black" />
+      </visual>
+    <visual name="rod_collar">
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01425" length="0.002" />
+        </geometry>
+      <material name="rod_silver" />
+      </visual>
+    </link>
+  <link name="left_foot">
+    <inertial>
+      <origin xyz="-0.039 0 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.81667e-06" ixy="0" ixz="0" iyy="2.55e-05" iyz="0" izz="2.70167e-05" />
+      </inertial>
+    <visual name="left_foot_visual">
+      <geometry>
+        <mesh filename="assets/meshes/left_stabilizer_foot.obj" />
+        </geometry>
+      <material name="foot_black" />
+      </visual>
+    </link>
+  <link name="right_foot">
+    <inertial>
+      <origin xyz="0.039 0 0" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.81667e-06" ixy="0" ixz="0" iyy="2.55e-05" iyz="0" izz="2.70167e-05" />
+      </inertial>
+    <visual name="right_foot_visual">
+      <geometry>
+        <mesh filename="assets/meshes/right_stabilizer_foot.obj" />
+        </geometry>
+      <material name="foot_black" />
+      </visual>
+    </link>
+  <joint name="shaft_slide" type="prismatic">
+    <origin xyz="0 0 0.216" rpy="0 0 0" />
+    <parent link="pump_body" />
+    <child link="shaft_handle" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="0.3" lower="0" upper="0.09" />
+    </joint>
+  <joint name="left_foot_fold" type="revolute">
+    <origin xyz="-0.0215 0 0.003" rpy="0 0 0" />
+    <parent link="pump_body" />
+    <child link="left_foot" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="3" lower="0" upper="1.35" />
+    </joint>
+  <joint name="right_foot_fold" type="revolute">
+    <origin xyz="0.0215 0 0.003" rpy="0 0 0" />
+    <parent link="pump_body" />
+    <child link="right_foot" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="3" lower="0" upper="1.35" />
+    </joint>
+  </robot>

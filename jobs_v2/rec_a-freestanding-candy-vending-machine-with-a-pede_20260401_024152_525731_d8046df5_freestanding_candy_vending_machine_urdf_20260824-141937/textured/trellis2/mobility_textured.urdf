@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="freestanding_candy_vending_machine">
+	<material name="pedestal_black">
+		<color rgba="0.14 0.14 0.15 1" />
+	</material>
+	<material name="enamel_red">
+		<color rgba="0.7 0.07 0.1 1" />
+	</material>
+	<material name="chrome">
+		<color rgba="0.76 0.78 0.82 1" />
+	</material>
+	<material name="clear_acrylic">
+		<color rgba="0.77 0.9 0.98 0.28" />
+	</material>
+	<material name="grip_black">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<link name="machine_body">
+		<visual name="machine_body__pedestal_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__pedestal_foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__pedestal_column">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__pedestal_column.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__lower_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__lower_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__coin_box_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__coin_box_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__front_service_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__front_service_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__coin_slot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__coin_slot.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__knob_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__knob_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__chute_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__chute_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__chute_roof">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__chute_roof.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__chute_side_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__chute_side_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__chute_side_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__chute_side_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__upper_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__upper_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__reservoir_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__reservoir_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__lid">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__lid.glb" />
+			</geometry>
+		</visual>
+		<visual name="machine_body__lid_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/machine_body__lid_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="dispense_knob">
+		<visual name="dispense_knob__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dispense_knob__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="dispense_knob__wheel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dispense_knob__wheel.glb" />
+			</geometry>
+		</visual>
+		<visual name="dispense_knob__finger_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dispense_knob__finger_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="dispense_knob__finger_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dispense_knob__finger_grip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="knob_rotation" type="continuous">
+		<origin xyz="0.152 0 0.998" rpy="0 0 0" />
+		<parent link="machine_body" />
+		<child link="dispense_knob" />
+		<axis xyz="1 0 0" />
+		<limit effort="4" velocity="10" />
+	</joint>
+</robot>

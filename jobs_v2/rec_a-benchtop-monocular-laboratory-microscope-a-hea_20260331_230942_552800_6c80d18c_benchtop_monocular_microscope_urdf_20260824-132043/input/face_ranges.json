@@ -1,0 +1,154 @@
+{
+  "group_order": [
+    "frame__base_shell",
+    "frame__base_neck",
+    "frame__column_pedestal",
+    "frame__column_spine",
+    "frame__guide_rail",
+    "frame__column_cap",
+    "frame__stage_support_bridge",
+    "frame__stage_support_rib",
+    "frame__stage_plate",
+    "frame__mechanical_stage_pad",
+    "optical_carriage__sleeve",
+    "optical_carriage__slide_shoe",
+    "optical_carriage__carriage_arm",
+    "optical_carriage__head_body",
+    "optical_carriage__nose_bridge",
+    "optical_carriage__focus_bearing",
+    "optical_carriage__eyepiece_tube",
+    "optical_carriage__eyepiece_collar",
+    "optical_carriage__objective_turret",
+    "optical_carriage__objective_primary",
+    "optical_carriage__objective_side_left",
+    "optical_carriage__objective_side_right",
+    "optical_carriage__objective_tip",
+    "focus_knob_pair__knob_shaft",
+    "focus_knob_pair__knob_hub_right",
+    "focus_knob_pair__knob_hub_left",
+    "focus_knob_pair__knob_right",
+    "focus_knob_pair__knob_left"
+  ],
+  "face_ranges": {
+    "frame__base_shell": [
+      0,
+      7422
+    ],
+    "frame__base_neck": [
+      7422,
+      7434
+    ],
+    "frame__column_pedestal": [
+      7434,
+      7446
+    ],
+    "frame__column_spine": [
+      7446,
+      7458
+    ],
+    "frame__guide_rail": [
+      7458,
+      7554
+    ],
+    "frame__column_cap": [
+      7554,
+      7566
+    ],
+    "frame__stage_support_bridge": [
+      7566,
+      7578
+    ],
+    "frame__stage_support_rib": [
+      7578,
+      7590
+    ],
+    "frame__stage_plate": [
+      7590,
+      7834
+    ],
+    "frame__mechanical_stage_pad": [
+      7834,
+      7846
+    ],
+    "optical_carriage__sleeve": [
+      7846,
+      8078
+    ],
+    "optical_carriage__slide_shoe": [
+      8078,
+      8090
+    ],
+    "optical_carriage__carriage_arm": [
+      8090,
+      8102
+    ],
+    "optical_carriage__head_body": [
+      8102,
+      8114
+    ],
+    "optical_carriage__nose_bridge": [
+      8114,
+      8126
+    ],
+    "optical_carriage__focus_bearing": [
+      8126,
+      8370
+    ],
+    "optical_carriage__eyepiece_tube": [
+      8370,
+      8498
+    ],
+    "optical_carriage__eyepiece_collar": [
+      8498,
+      8626
+    ],
+    "optical_carriage__objective_turret": [
+      8626,
+      8754
+    ],
+    "optical_carriage__objective_primary": [
+      8754,
+      8882
+    ],
+    "optical_carriage__objective_side_left": [
+      8882,
+      9010
+    ],
+    "optical_carriage__objective_side_right": [
+      9010,
+      9138
+    ],
+    "optical_carriage__objective_tip": [
+      9138,
+      9266
+    ],
+    "focus_knob_pair__knob_shaft": [
+      9266,
+      9394
+    ],
+    "focus_knob_pair__knob_hub_right": [
+      9394,
+      9522
+    ],
+    "focus_knob_pair__knob_hub_left": [
+      9522,
+      9650
+    ],
+    "focus_knob_pair__knob_right": [
+      9650,
+      9778
+    ],
+    "focus_knob_pair__knob_left": [
+      9778,
+      9906
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.16
+    ],
+    "scale": 3.1249687500000003
+  }
+}

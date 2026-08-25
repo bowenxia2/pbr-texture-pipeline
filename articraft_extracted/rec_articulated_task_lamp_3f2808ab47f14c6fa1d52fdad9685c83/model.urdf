@@ -1,0 +1,385 @@
+<robot name="telescoping_gooseneck_desk_lamp">
+  <material name="matte_black">
+    <color rgba="0.14 0.14 0.15 1" />
+    </material>
+  <material name="satin_graphite">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.74 0.76 0.79 1" />
+    </material>
+  <material name="warm_white">
+    <color rgba="0.9 0.9 0.87 1" />
+    </material>
+  <material name="soft_rubber">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="-0.02 0 0.11" rpy="0 0 0" />
+      <mass value="3.8" />
+      <inertia ixx="0.0234333" ixy="0" ixz="0" iyy="0.0335667" iyz="0" izz="0.0263467" />
+      </inertial>
+    <visual name="base_plate">
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_base_plate.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="counterweight_block">
+      <origin xyz="-0.06 0 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.07 0.018" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="mast_plinth">
+      <origin xyz="-0.07 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.04 0.012" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_0">
+      <origin xyz="-0.078 -0.046 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.005" />
+        </geometry>
+      <material name="soft_rubber">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_1">
+      <origin xyz="-0.078 0.046 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.005" />
+        </geometry>
+      <material name="soft_rubber">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_2">
+      <origin xyz="0.078 -0.046 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.005" />
+        </geometry>
+      <material name="soft_rubber">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="foot_pad_3">
+      <origin xyz="0.078 0.046 0.0025" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.005" />
+        </geometry>
+      <material name="soft_rubber">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="base_receiver">
+      <origin xyz="-0.07 0 0.033" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_receiver_shell.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="base_collar_lower">
+      <origin xyz="-0.07 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0225" length="0.016" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="base_collar_upper">
+      <origin xyz="-0.07 0 0.173" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_collar_upper_ring.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="base_tension_knob">
+      <origin xyz="-0.047 0 0.155" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.026" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_stage">
+    <inertial>
+      <origin xyz="0 0 0.005" rpy="0 0 0" />
+      <mass value="0.34" />
+      <inertia ixx="0.00242817" ixy="0" ixz="0" iyy="0.00242817" iyz="0" izz="9.06667e-05" />
+      </inertial>
+    <visual name="lower_sleeve">
+      <origin xyz="0 0 -0.13" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_stage_shell.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar_bottom">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_collar_bottom_ring.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar_top">
+      <origin xyz="0 0 0.122" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_collar_top_ring.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="lower_tension_knob">
+      <origin xyz="0.0185 0 0.086" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.022" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="middle_stage">
+    <inertial>
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <mass value="0.24" />
+      <inertia ixx="0.00132098" ixy="0" ixz="0" iyy="0.00132098" iyz="0" izz="4.096e-05" />
+      </inertial>
+    <visual name="middle_sleeve">
+      <origin xyz="0 0 -0.11" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_stage_shell.obj" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_bottom">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_collar_bottom_ring.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="middle_collar_top">
+      <origin xyz="0 0 0.112" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/middle_collar_top_ring.obj" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_stage">
+    <inertial>
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.00080214" ixy="0" ixz="0" iyy="0.00080886" iyz="0" izz="2.4e-05" />
+      </inertial>
+    <visual name="upper_mast">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0087" length="0.208" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.74 0.76 0.79 1" />
+        </material>
+      </visual>
+    <visual name="upper_stop_collar">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0116" length="0.014" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_mount_block">
+      <origin xyz="0 0 0.102" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.02 0.015" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_arm">
+    <inertial>
+      <origin xyz="0.115 0 0.01" rpy="0 0 0" />
+      <mass value="0.24" />
+      <inertia ixx="7.25e-05" ixy="0" ixz="0" iyy="0.0012905" iyz="0" izz="0.001282" />
+      </inertial>
+    <visual name="shoulder_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.03" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_tube.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="lower_arm_tip_block">
+      <origin xyz="0.2155 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.016 0.016" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0.098 0 0.008" rpy="0 0 0" />
+      <mass value="0.19" />
+      <inertia ixx="4.47292e-05" ixy="0" ixz="0" iyy="0.000791667" iyz="0" izz="0.000785729" />
+      </inertial>
+    <visual name="elbow_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0095" length="0.028" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_tube.obj" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    <visual name="upper_arm_tip_block">
+      <origin xyz="0.19 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.014 0.014" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="shade">
+    <inertial>
+      <origin xyz="0.055 0 0" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="0.0003375" ixy="0" ixz="0" iyy="0.000355875" iyz="0" izz="0.000450375" />
+      </inertial>
+    <visual name="shade_barrel">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.024" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="shade_neck">
+      <origin xyz="0.014 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0135" length="0.028" />
+        </geometry>
+      <material name="satin_graphite">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.016 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lamp_shade_shell.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.9 0.9 0.87 1" />
+        </material>
+      </visual>
+    <visual name="lamp_socket">
+      <origin xyz="0.038 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.03" />
+        </geometry>
+      <material name="matte_black">
+        <color rgba="0.14 0.14 0.15 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_lower_stage" type="prismatic">
+    <origin xyz="-0.07 0 0.193" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="0.1" lower="0" upper="0.08" />
+    </joint>
+  <joint name="lower_to_middle_stage" type="prismatic">
+    <origin xyz="0 0 0.14" rpy="0 0 0" />
+    <parent link="lower_stage" />
+    <child link="middle_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="40" velocity="0.1" lower="0" upper="0.06" />
+    </joint>
+  <joint name="middle_to_upper_stage" type="prismatic">
+    <origin xyz="0 0 0.13" rpy="0 0 0" />
+    <parent link="middle_stage" />
+    <child link="upper_stage" />
+    <axis xyz="0 0 1" />
+    <limit effort="30" velocity="0.1" lower="0" upper="0.06" />
+    </joint>
+  <joint name="upper_stage_to_lower_arm" type="revolute">
+    <origin xyz="0 0 0.12" rpy="0 0 0" />
+    <parent link="upper_stage" />
+    <child link="lower_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.5" lower="-0.45" upper="1.15" />
+    </joint>
+  <joint name="lower_arm_to_upper_arm" type="revolute">
+    <origin xyz="0.236 0 0.02" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="1.8" lower="-1.4" upper="1.4" />
+    </joint>
+  <joint name="upper_arm_to_shade" type="revolute">
+    <origin xyz="0.21 0 0.015" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="shade" />
+    <axis xyz="0 -1 0" />
+    <limit effort="3" velocity="2.5" lower="-0.8" upper="0.95" />
+    </joint>
+  </robot>

@@ -1,0 +1,51 @@
+<robot name="task_lamp">
+  <link name="clamp">
+    <visual name="clamp_visual">
+      <geometry>
+        <mesh filename="assets/meshes/clamp_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="lower_arm">
+    <visual name="lower_arm_visual">
+      <geometry>
+        <mesh filename="assets/meshes/lower_arm_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <visual name="upper_arm_visual">
+      <geometry>
+        <mesh filename="assets/meshes/upper_arm_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <link name="shade">
+    <visual name="shade_visual">
+      <geometry>
+        <mesh filename="assets/meshes/shade_mesh.obj" />
+        </geometry>
+      </visual>
+    </link>
+  <joint name="clamp_to_lower_arm" type="revolute">
+    <origin xyz="0.01 0 0.15" rpy="0 0 0" />
+    <parent link="clamp" />
+    <child link="lower_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="1" lower="-1" upper="1" />
+    </joint>
+  <joint name="lower_arm_to_upper_arm" type="revolute">
+    <origin xyz="0 0 0.37" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="1" lower="-2" upper="2" />
+    </joint>
+  <joint name="upper_arm_to_shade" type="revolute">
+    <origin xyz="0 0 0.37" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="1" velocity="1" lower="-1.5" upper="1.5" />
+    </joint>
+  </robot>

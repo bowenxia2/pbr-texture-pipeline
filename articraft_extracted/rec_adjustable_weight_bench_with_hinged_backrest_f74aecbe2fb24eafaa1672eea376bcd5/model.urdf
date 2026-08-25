@@ -1,0 +1,682 @@
+<robot name="adjustable_weight_bench">
+  <material name="powder_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="vinyl_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="board_gray">
+    <color rgba="0.21 0.21 0.22 1" />
+    </material>
+  <material name="hub_gray">
+    <color rgba="0.62 0.64 0.66 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <link name="frame">
+    <visual name="rear_base">
+      <origin xyz="-0.56 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.64 0.08" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_spine">
+      <origin xyz="-0.49 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.12 0.08" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="main_spine">
+      <origin xyz="0.08 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.08" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_base">
+      <origin xyz="0.46 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.34 0.08" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_post">
+      <origin xyz="0.4 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 0.24" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="seat_tower">
+      <origin xyz="0.16 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.3" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="seat_top_bar">
+      <origin xyz="0.28 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.1 0.06" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_bridge">
+      <origin xyz="0.31 0 0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.04" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_bridge">
+      <origin xyz="-0.27 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 0.06" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_0">
+      <origin xyz="-0.09 0.085 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.04 0.05" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="top_rail_1">
+      <origin xyz="-0.09 -0.085 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.04 0.05" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_0">
+      <origin xyz="-0.24 0.085 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.24" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_post_1">
+      <origin xyz="-0.24 -0.085 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.24" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_bridge">
+      <origin xyz="-0.01 0 0.365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 0.08" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="wheel_bracket_0">
+      <origin xyz="0.56 0.1725 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.12" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="wheel_bracket_1">
+      <origin xyz="0.56 -0.1725 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.12" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="front_axle">
+      <origin xyz="0.56 0 0.092" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <collision name="rear_base">
+      <origin xyz="-0.56 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.64 0.08" />
+        </geometry>
+      </collision>
+    <collision name="rear_spine">
+      <origin xyz="-0.49 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.12 0.08" />
+        </geometry>
+      </collision>
+    <collision name="main_spine">
+      <origin xyz="0.08 0 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.1 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_base">
+      <origin xyz="0.46 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.34 0.08" />
+        </geometry>
+      </collision>
+    <collision name="front_post">
+      <origin xyz="0.4 0 0.2" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.08 0.24" />
+        </geometry>
+      </collision>
+    <collision name="seat_tower">
+      <origin xyz="0.16 0 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.3" />
+        </geometry>
+      </collision>
+    <collision name="seat_top_bar">
+      <origin xyz="0.28 0 0.34" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.1 0.06" />
+        </geometry>
+      </collision>
+    <collision name="seat_hinge_bridge">
+      <origin xyz="0.31 0 0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.24 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_bridge">
+      <origin xyz="-0.27 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 0.06" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_0">
+      <origin xyz="-0.09 0.085 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.04 0.05" />
+        </geometry>
+      </collision>
+    <collision name="top_rail_1">
+      <origin xyz="-0.09 -0.085 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.04 0.05" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_0">
+      <origin xyz="-0.24 0.085 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.24" />
+        </geometry>
+      </collision>
+    <collision name="rear_post_1">
+      <origin xyz="-0.24 -0.085 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.05 0.24" />
+        </geometry>
+      </collision>
+    <collision name="back_hinge_bridge">
+      <origin xyz="-0.01 0 0.365" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.26 0.08" />
+        </geometry>
+      </collision>
+    <collision name="wheel_bracket_0">
+      <origin xyz="0.56 0.1725 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.12" />
+        </geometry>
+      </collision>
+    <collision name="wheel_bracket_1">
+      <origin xyz="0.56 -0.1725 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.12" />
+        </geometry>
+      </collision>
+    <collision name="front_axle">
+      <origin xyz="0.56 0 0.092" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.3" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="back_pad">
+    <visual name="back_board">
+      <origin xyz="-0.45 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.28 0.012" />
+        </geometry>
+      <material name="board_gray">
+        <color rgba="0.21 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="back_cushion">
+      <origin xyz="-0.46 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.3 0.05" />
+        </geometry>
+      <material name="vinyl_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="back_rail">
+      <origin xyz="-0.32 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.1 0.04" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="back_hinge_tube">
+      <origin xyz="-0.01 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.22" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="back_latch_bar">
+      <origin xyz="-0.24 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.16 0.035" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <collision name="back_board">
+      <origin xyz="-0.45 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.9 0.28 0.012" />
+        </geometry>
+      </collision>
+    <collision name="back_cushion">
+      <origin xyz="-0.46 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.92 0.3 0.05" />
+        </geometry>
+      </collision>
+    <collision name="back_rail">
+      <origin xyz="-0.32 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.1 0.04" />
+        </geometry>
+      </collision>
+    <collision name="back_hinge_tube">
+      <origin xyz="-0.01 0 0.018" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.22" />
+        </geometry>
+      </collision>
+    <collision name="back_latch_bar">
+      <origin xyz="-0.24 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.16 0.035" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="seat_pad">
+    <visual name="seat_board">
+      <origin xyz="-0.155 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.27 0.012" />
+        </geometry>
+      <material name="board_gray">
+        <color rgba="0.21 0.21 0.22 1" />
+        </material>
+      </visual>
+    <visual name="seat_cushion">
+      <origin xyz="-0.155 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.29 0.05" />
+        </geometry>
+      <material name="vinyl_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="seat_rail">
+      <origin xyz="-0.16 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.035" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="seat_hinge_tube">
+      <origin xyz="-0.01 0 0.016" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.2" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="seat_rear_block">
+      <origin xyz="-0.25 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.14 0.025" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <collision name="seat_board">
+      <origin xyz="-0.155 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.27 0.012" />
+        </geometry>
+      </collision>
+    <collision name="seat_cushion">
+      <origin xyz="-0.155 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.29 0.05" />
+        </geometry>
+      </collision>
+    <collision name="seat_rail">
+      <origin xyz="-0.16 0 0.019" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.035" />
+        </geometry>
+      </collision>
+    <collision name="seat_hinge_tube">
+      <origin xyz="-0.01 0 0.016" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.2" />
+        </geometry>
+      </collision>
+    <collision name="seat_rear_block">
+      <origin xyz="-0.25 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.14 0.025" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_brace">
+    <visual name="brace_pivot_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.12" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_beam">
+      <origin xyz="0.16 0 0.04" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.4 0.045 0.04" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_step_0">
+      <origin xyz="0.16 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_step_1">
+      <origin xyz="0.2 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.02" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_step_2">
+      <origin xyz="0.24 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_step_3">
+      <origin xyz="0.28 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.024" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_step_web">
+      <origin xyz="0.2 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.03" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="brace_top_step">
+      <origin xyz="0.26 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.04" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <collision name="brace_pivot_tube">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="brace_beam">
+      <origin xyz="0.16 0 0.04" rpy="0 -0.08 0" />
+      <geometry>
+        <box size="0.4 0.045 0.04" />
+        </geometry>
+      </collision>
+    <collision name="brace_step_0">
+      <origin xyz="0.16 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="brace_step_1">
+      <origin xyz="0.2 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.045 0.02" />
+        </geometry>
+      </collision>
+    <collision name="brace_step_2">
+      <origin xyz="0.24 0 0.035" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.024" />
+        </geometry>
+      </collision>
+    <collision name="brace_step_3">
+      <origin xyz="0.28 0 0.055" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.045 0.024" />
+        </geometry>
+      </collision>
+    <collision name="brace_step_web">
+      <origin xyz="0.2 0 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.08 0.03" />
+        </geometry>
+      </collision>
+    <collision name="brace_top_step">
+      <origin xyz="0.26 0 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.04" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_0">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.035" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.041" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.041" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="front_wheel_1">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.035" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.041" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      <material name="hub_gray">
+        <color rgba="0.62 0.64 0.66 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.035" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.041" />
+        </geometry>
+      </collision>
+    <collision name="hub_cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="back_hinge" type="revolute">
+    <origin xyz="0 0 0.405" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="back_pad" />
+    <axis xyz="0 1 0" />
+    <limit effort="120" velocity="1.8" lower="0" upper="1.35" />
+    </joint>
+  <joint name="seat_hinge" type="revolute">
+    <origin xyz="0.32 0 0.405" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="seat_pad" />
+    <axis xyz="0 1 0" />
+    <limit effort="80" velocity="1.5" lower="0" upper="0.4" />
+    </joint>
+  <joint name="brace_hinge" type="revolute">
+    <origin xyz="-0.36 0 0.18" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="rear_brace" />
+    <axis xyz="0 -1 0" />
+    <limit effort="150" velocity="1.5" lower="0" upper="0.72" />
+    </joint>
+  <joint name="front_wheel_0_spin" type="continuous">
+    <origin xyz="0.56 0.21 0.1" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="front_wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  <joint name="front_wheel_1_spin" type="continuous">
+    <origin xyz="0.56 -0.21 0.1" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="front_wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="8" velocity="20" />
+    </joint>
+  </robot>

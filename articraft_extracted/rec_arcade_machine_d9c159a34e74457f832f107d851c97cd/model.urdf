@@ -1,0 +1,416 @@
+<robot name="bartop_arcade_machine">
+  <material name="body_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="trim_black">
+    <color rgba="0.04 0.04 0.05 1" />
+    </material>
+  <material name="control_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="screen_glass">
+    <color rgba="0.09 0.16 0.2 0.92" />
+    </material>
+  <material name="marquee_glow">
+    <color rgba="0.76 0.18 0.84 0.82" />
+    </material>
+  <material name="knob_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="knob_indicator">
+    <color rgba="0.82 0.82 0.83 1" />
+    </material>
+  <material name="coin_metal">
+    <color rgba="0.62 0.64 0.67 1" />
+    </material>
+  <material name="coin_dark">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.72 0.14 0.16 1" />
+    </material>
+  <material name="button_yellow">
+    <color rgba="0.84 0.68 0.12 1" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.12 0.4 0.74 1" />
+    </material>
+  <link name="cabinet">
+    <inertial>
+      <origin xyz="0 -0.02 0.225" rpy="0 0 0" />
+      <mass value="7.5" />
+      <inertia ixx="0.175563" ixy="0" ixz="0" iyy="0.236813" iyz="0" izz="0.15925" />
+      </inertial>
+    <visual name="left_side">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_left_side_panel.obj" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_side">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_right_side_panel.obj" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bottom_panel">
+      <origin xyz="0 -0.02 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.396 0.28 0.012" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_panel_lower">
+      <origin xyz="0 0.114 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.396 0.012 0.34" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_panel_upper">
+      <origin xyz="0 0.08 0.395" rpy="2.19959 0 0" />
+      <geometry>
+        <box size="0.396 0.136015 0.012" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="top_panel">
+      <origin xyz="0 0.01 0.444" rpy="0 0 0" />
+      <geometry>
+        <box size="0.396 0.06 0.012" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="marquee_panel_backer">
+      <origin xyz="0 -0.035 0.385" rpy="-1.7976 0 0" />
+      <geometry>
+        <box size="0.396 0.133417 0.012" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="marquee_face">
+      <origin xyz="0 -0.0311024 0.384101" rpy="-1.7976 0 0" />
+      <geometry>
+        <box size="0.38016 0.123417 0.004" />
+        </geometry>
+      <material name="marquee_glow">
+        <color rgba="0.76 0.18 0.84 0.82" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <origin xyz="0 -0.113 0.1185" rpy="0.520458 0 0" />
+      <geometry>
+        <box size="0.396 0.0945145 0.012" />
+        </geometry>
+      <material name="control_black">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="front_kick_panel">
+      <origin xyz="0 -0.157 0.048" rpy="1.06 0 0" />
+      <geometry>
+        <box size="0.396 0.095 0.012" />
+        </geometry>
+      <material name="body_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bezel_top_bar">
+      <origin xyz="0 -0.0694637 0.162521" rpy="-1.69377 0 0" />
+      <geometry>
+        <box size="0.396 0.016 0.01" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bezel_bottom_bar">
+      <origin xyz="0 -0.0525363 0.299479" rpy="-1.69377 0 0" />
+      <geometry>
+        <box size="0.396 0.016 0.01" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bezel_left_bar">
+      <origin xyz="-0.1275 -0.061 0.231" rpy="-1.69377 0 0" />
+      <geometry>
+        <box size="0.016 0.138 0.01" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="bezel_right_bar">
+      <origin xyz="0.1275 -0.061 0.231" rpy="-1.69377 0 0" />
+      <geometry>
+        <box size="0.016 0.138 0.01" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="knob_mount">
+      <origin xyz="0.09 0.004 0.447" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="red_button_guide">
+      <origin xyz="-0.06 -0.116978 0.125441" rpy="0.520458 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.004" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="yellow_button_guide">
+      <origin xyz="-0.018 -0.116978 0.125441" rpy="0.520458 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.004" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    <visual name="blue_button_guide">
+      <origin xyz="0.024 -0.116978 0.125441" rpy="0.520458 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.004" />
+        </geometry>
+      <material name="trim_black">
+        <color rgba="0.04 0.04 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="screen">
+    <inertial>
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <mass value="0.28" />
+      <inertia ixx="0.000383787" ixy="0" ixz="0" iyy="0.00121445" iyz="0" izz="0.00159525" />
+      </inertial>
+    <visual name="screen_panel">
+      <origin xyz="0 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.228 0.128 0.008" />
+        </geometry>
+      <material name="screen_glass">
+        <color rgba="0.09 0.16 0.2 0.92" />
+        </material>
+      </visual>
+    </link>
+  <link name="control_knob">
+    <inertial>
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <mass value="0.07" />
+      <inertia ixx="1.32008e-05" ixy="0" ixz="0" iyy="1.32008e-05" iyz="0" izz="1.8515e-05" />
+      </inertial>
+    <visual name="knob_skirt">
+      <origin xyz="0 0 0.002" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.004" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="knob_body">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.019" length="0.016" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="knob_cap">
+      <origin xyz="0 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.004" />
+        </geometry>
+      <material name="knob_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="knob_pointer">
+      <origin xyz="0 0.01 0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.018 0.002" />
+        </geometry>
+      <material name="knob_indicator">
+        <color rgba="0.82 0.82 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="red_button">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.3575e-06" ixy="0" ixz="0" iyy="1.3575e-06" iyz="0" izz="2.535e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.72 0.14 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="yellow_button">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.3575e-06" ixy="0" ixz="0" iyy="1.3575e-06" iyz="0" izz="2.535e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.84 0.68 0.12 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="blue_button">
+    <inertial>
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <mass value="0.03" />
+      <inertia ixx="1.3575e-06" ixy="0" ixz="0" iyy="1.3575e-06" iyz="0" izz="2.535e-06" />
+      </inertial>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.007" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.006" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.12 0.4 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="coin_acceptor">
+    <inertial>
+      <origin xyz="0.007 0 0.05" rpy="0 0 0" />
+      <mass value="0.14" />
+      <inertia ixx="0.000148213" ixy="0" ixz="0" iyy="0.000118953" iyz="0" izz="3.38333e-05" />
+      </inertial>
+    <visual name="acceptor_base">
+      <origin xyz="0.003 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.052 0.1" />
+        </geometry>
+      <material name="coin_metal">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="0.01 0 0.071" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.04 0.01" />
+        </geometry>
+      <material name="coin_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="return_bezel">
+      <origin xyz="0.0085 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.005 0.034 0.02" />
+        </geometry>
+      <material name="coin_dark">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_lip">
+      <origin xyz="0.008 0 0.095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.052 0.01" />
+        </geometry>
+      <material name="coin_metal">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="coin_return_flap">
+    <inertial>
+      <origin xyz="0.0015 0 -0.009" rpy="0 0 0" />
+      <mass value="0.02" />
+      <inertia ixx="1.84667e-06" ixy="0" ixz="0" iyy="5.55e-07" iyz="0" izz="1.32167e-06" />
+      </inertial>
+    <visual name="coin_flap">
+      <origin xyz="0.0015 0 -0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.028 0.018" />
+        </geometry>
+      <material name="coin_metal">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cabinet_to_screen" type="fixed">
+    <origin xyz="0 -0.061 0.231" rpy="-1.69377 0 0" />
+    <parent link="cabinet" />
+    <child link="screen" />
+    </joint>
+  <joint name="cabinet_to_control_knob" type="continuous">
+    <origin xyz="0.09 0.004 0.45" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="control_knob" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.3" velocity="12" />
+    </joint>
+  <joint name="cabinet_to_red_button" type="prismatic">
+    <origin xyz="-0.06 -0.115984 0.123706" rpy="0.520458 0 0" />
+    <parent link="cabinet" />
+    <child link="red_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.4" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_yellow_button" type="prismatic">
+    <origin xyz="-0.018 -0.115984 0.123706" rpy="0.520458 0 0" />
+    <parent link="cabinet" />
+    <child link="yellow_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.4" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_blue_button" type="prismatic">
+    <origin xyz="0.024 -0.115984 0.123706" rpy="0.520458 0 0" />
+    <parent link="cabinet" />
+    <child link="blue_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="0.4" velocity="0.1" lower="0" upper="0.003" />
+    </joint>
+  <joint name="cabinet_to_coin_acceptor" type="fixed">
+    <origin xyz="0.21 -0.114 0.082" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="coin_acceptor" />
+    </joint>
+  <joint name="coin_acceptor_to_return_flap" type="revolute">
+    <origin xyz="0.006 0 0.026" rpy="0 0 0" />
+    <parent link="coin_acceptor" />
+    <child link="coin_return_flap" />
+    <axis xyz="0 -1 0" />
+    <limit effort="0.08" velocity="3" lower="0" upper="1.1" />
+    </joint>
+  </robot>

@@ -1,0 +1,361 @@
+<robot name="artisan_stand_mixer">
+  <material name="cream">
+    <color rgba="0.92 0.87 0.78 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.82 0.84 0.86 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <link name="base">
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/base_shell.obj" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="pedestal_foot">
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.34 0.028" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_riser">
+      <origin xyz="0.012 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.095 0.024" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="carriage_track">
+      <origin xyz="0.05 0 0.048" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.078 0.014" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_column">
+      <origin xyz="-0.086 0 0.247" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.092 0.054" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge">
+      <origin xyz="-0.104 0 0.279" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.082 0.01" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="button_pad">
+      <origin xyz="-0.086 -0.056 0.271" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.032 0.006" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lever_mount">
+      <origin xyz="-0.05 0.073 0.193" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.03 0.024" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="carriage">
+    <visual name="carriage_saddle">
+      <origin xyz="0.043 0 0.008" rpy="0 0 0" />
+      <geometry>
+        <box size="0.086 0.072 0.016" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="carriage_upright">
+      <origin xyz="0.06 0 0.037" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.052 0.046" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="carriage_plate">
+      <origin xyz="0.088 0 0.065" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.056" length="0.01" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="bowl">
+    <visual name="bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/mixing_bowl_shell.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="bowl_foot">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.046" length="0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <visual name="head_shell">
+      <geometry>
+        <mesh filename="assets/meshes/head_shell.obj" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="drive_housing">
+      <origin xyz="0.218 0 -0.06" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.012" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="front_neck">
+      <geometry>
+        <mesh filename="assets/meshes/front_neck_shell.obj" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="nose_cap">
+      <origin xyz="0.296 0 -0.018" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.022" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    <visual name="rear_hinge_knuckle">
+      <origin xyz="0 0 -0.002" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.08 0.038" />
+        </geometry>
+      <material name="cream">
+        <color rgba="0.92 0.87 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="whisk">
+    <visual name="whisk_shaft">
+      <origin xyz="0 0 -0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0048" length="0.028" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_upper_hub">
+      <origin xyz="0 0 -0.034" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0082" length="0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_lower_hub">
+      <origin xyz="0 0 -0.049" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_tip">
+      <origin xyz="0 0 -0.101" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.01" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_0">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_0.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_1">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_1.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_2">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_2.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_3">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_3.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_4">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_4.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    <visual name="whisk_loop_5">
+      <geometry>
+        <mesh filename="assets/meshes/whisk_loop_5.obj" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.82 0.84 0.86 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="speed_lever">
+    <visual name="lever_pivot">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.02" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lever_arm">
+      <origin xyz="0 0.024 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.044 0.008" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="lever_knob">
+      <origin xyz="0 0.047 0.004" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.005" length="0.018" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lock_button">
+    <visual name="button_plunger">
+      <origin xyz="0 0 0.006" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="button_cap">
+      <origin xyz="0 0 0.012" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="0.004" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="button_latch">
+      <origin xyz="0 0.008 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.016 0.018" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_carriage" type="prismatic">
+    <origin xyz="0.03 0 0.055" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="carriage" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="0.08" lower="0" upper="0.028" />
+    </joint>
+  <joint name="carriage_to_bowl" type="fixed">
+    <origin xyz="0.095 0 0.07" rpy="0 0 0" />
+    <parent link="carriage" />
+    <child link="bowl" />
+    </joint>
+  <joint name="base_to_head" type="revolute">
+    <origin xyz="-0.09 0 0.305" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="head" />
+    <axis xyz="0 -1 0" />
+    <limit effort="15" velocity="1" lower="0" upper="1.0821" />
+    </joint>
+  <joint name="head_to_whisk" type="continuous">
+    <origin xyz="0.218 0 -0.068" rpy="0 0 0" />
+    <parent link="head" />
+    <child link="whisk" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="20" />
+    </joint>
+  <joint name="base_to_speed_lever" type="revolute">
+    <origin xyz="-0.03 0.073 0.193" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="speed_lever" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="3" lower="0" upper="0.663225" />
+    </joint>
+  <joint name="base_to_lock_button" type="prismatic">
+    <origin xyz="-0.086 -0.056 0.281" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lock_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.0045" />
+    </joint>
+  </robot>

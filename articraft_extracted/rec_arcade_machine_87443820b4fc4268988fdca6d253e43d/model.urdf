@@ -1,0 +1,332 @@
+<robot name="upright_arcade_machine">
+  <material name="cabinet_finish">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <material name="bezel_finish">
+    <color rgba="0.03 0.03 0.04 1" />
+    </material>
+  <material name="screen_finish">
+    <color rgba="0.06 0.08 0.12 1" />
+    </material>
+  <material name="marquee_finish">
+    <color rgba="0.82 0.72 0.22 1" />
+    </material>
+  <material name="coin_finish">
+    <color rgba="0.56 0.58 0.62 1" />
+    </material>
+  <material name="door_finish">
+    <color rgba="0.54 0.08 0.1 1" />
+    </material>
+  <material name="joystick_finish">
+    <color rgba="0.85 0.1 0.12 1" />
+    </material>
+  <material name="joystick_alt">
+    <color rgba="0.1 0.35 0.8 1" />
+    </material>
+  <material name="button_finish">
+    <color rgba="0.9 0.9 0.92 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      <material name="cabinet_finish">
+        <color rgba="0.09 0.09 0.1 1" />
+        </material>
+      </visual>
+    <visual name="screen_bezel">
+      <origin xyz="0 -0.008 1.36" rpy="0.226799 0 0" />
+      <geometry>
+        <box size="0.64 0.02 0.48" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0 -0.003 1.36" rpy="0.226799 0 0" />
+      <geometry>
+        <box size="0.55 0.01 0.4" />
+        </geometry>
+      <material name="screen_finish">
+        <color rgba="0.06 0.08 0.12 1" />
+        </material>
+      </visual>
+    <visual name="marquee_panel">
+      <origin xyz="0 -0.01 1.6" rpy="0.1 0 0" />
+      <geometry>
+        <box size="0.7 0.016 0.2" />
+        </geometry>
+      <material name="marquee_finish">
+        <color rgba="0.82 0.72 0.22 1" />
+        </material>
+      </visual>
+    <visual name="coin_plate">
+      <origin xyz="0.11 0.392 0.72" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.004 0.1" />
+        </geometry>
+      <material name="coin_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <visual name="coin_slot">
+      <origin xyz="0.075 0.394 0.758" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.003 0.007" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="door_jamb">
+      <origin xyz="-0.225 0.381 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.016 0.32" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="joystick_0_washer">
+      <origin xyz="-0.22 0.175 1.03" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.003" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="joystick_0_shaft">
+      <origin xyz="-0.22 0.205972 1.07904" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.12" />
+        </geometry>
+      <material name="coin_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <visual name="joystick_0_ball">
+      <origin xyz="-0.22 0.246021 1.14245" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      <material name="joystick_finish">
+        <color rgba="0.85 0.1 0.12 1" />
+        </material>
+      </visual>
+    <visual name="joystick_1_washer">
+      <origin xyz="0.22 0.175 1.03" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.003" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="joystick_1_shaft">
+      <origin xyz="0.22 0.205972 1.07904" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.12" />
+        </geometry>
+      <material name="coin_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <visual name="joystick_1_ball">
+      <origin xyz="0.22 0.246021 1.14245" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      <material name="joystick_alt">
+        <color rgba="0.1 0.35 0.8 1" />
+        </material>
+      </visual>
+    <visual name="start_button_0">
+      <origin xyz="-0.08 0.15392 1.04923" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.9 0.9 0.92 1" />
+        </material>
+      </visual>
+    <visual name="start_button_1">
+      <origin xyz="0.08 0.15392 1.04923" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      <material name="button_finish">
+        <color rgba="0.9 0.9 0.92 1" />
+        </material>
+      </visual>
+    <collision name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="screen_bezel">
+      <origin xyz="0 -0.008 1.36" rpy="0.226799 0 0" />
+      <geometry>
+        <box size="0.64 0.02 0.48" />
+        </geometry>
+      </collision>
+    <collision name="screen_glass">
+      <origin xyz="0 -0.003 1.36" rpy="0.226799 0 0" />
+      <geometry>
+        <box size="0.55 0.01 0.4" />
+        </geometry>
+      </collision>
+    <collision name="marquee_panel">
+      <origin xyz="0 -0.01 1.6" rpy="0.1 0 0" />
+      <geometry>
+        <box size="0.7 0.016 0.2" />
+        </geometry>
+      </collision>
+    <collision name="coin_plate">
+      <origin xyz="0.11 0.392 0.72" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.004 0.1" />
+        </geometry>
+      </collision>
+    <collision name="coin_slot">
+      <origin xyz="0.075 0.394 0.758" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.003 0.007" />
+        </geometry>
+      </collision>
+    <collision name="door_jamb">
+      <origin xyz="-0.225 0.381 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.016 0.32" />
+        </geometry>
+      </collision>
+    <collision name="joystick_0_washer">
+      <origin xyz="-0.22 0.175 1.03" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="joystick_0_shaft">
+      <origin xyz="-0.22 0.205972 1.07904" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="joystick_0_ball">
+      <origin xyz="-0.22 0.246021 1.14245" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      </collision>
+    <collision name="joystick_1_washer">
+      <origin xyz="0.22 0.175 1.03" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.003" />
+        </geometry>
+      </collision>
+    <collision name="joystick_1_shaft">
+      <origin xyz="0.22 0.205972 1.07904" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="joystick_1_ball">
+      <origin xyz="0.22 0.246021 1.14245" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.026" />
+        </geometry>
+      </collision>
+    <collision name="start_button_0">
+      <origin xyz="-0.08 0.15392 1.04923" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      </collision>
+    <collision name="start_button_1">
+      <origin xyz="0.08 0.15392 1.04923" rpy="-0.563316 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.014" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cashbox_door">
+    <visual name="door_panel">
+      <origin xyz="0.21 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.018 0.34" />
+        </geometry>
+      <material name="door_finish">
+        <color rgba="0.54 0.08 0.1 1" />
+        </material>
+      </visual>
+    <visual name="door_pull">
+      <origin xyz="0.365 0.009 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.02" />
+        </geometry>
+      <material name="coin_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <visual name="door_leaf">
+      <origin xyz="0.005 -0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.016 0.32" />
+        </geometry>
+      <material name="bezel_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.21 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.42 0.018 0.34" />
+        </geometry>
+      </collision>
+    <collision name="door_pull">
+      <origin xyz="0.365 0.009 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.02" />
+        </geometry>
+      </collision>
+    <collision name="door_leaf">
+      <origin xyz="0.005 -0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.016 0.32" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="return_flap">
+    <visual name="flap_panel">
+      <origin xyz="0 -0.006 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.012 0.045" />
+        </geometry>
+      <material name="coin_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <collision name="flap_panel">
+      <origin xyz="0 -0.006 -0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.075 0.012 0.045" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_cashbox_door" type="revolute">
+    <origin xyz="-0.21 0.389 0.45" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="cashbox_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="15" velocity="1.2" lower="0" upper="1.45" />
+    </joint>
+  <joint name="cabinet_to_return_flap" type="revolute">
+    <origin xyz="0.145 0.402 0.722" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="return_flap" />
+    <axis xyz="1 0 0" />
+    <limit effort="3" velocity="2" lower="0" upper="0.85" />
+    </joint>
+  </robot>

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-compact-office-monitor-with-a-slim-bezel-a-tel_20260407_110625_768142_efe2ae03",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "2285427025b041b6f245d98b928d901b11c05e26c35171a3554d2125e78df6f4",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "07bebf47cdf5ce707311c4c75856ab059cb7d24f241f7509df948f5588a74464",
+    "model_py_mtime_ns": 1775561293740967216,
+    "model_py_size_bytes": 11866,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 64371,
+    "visual_mesh_file_count": 2,
+    "compile_elapsed_seconds": 7.788055542012444
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

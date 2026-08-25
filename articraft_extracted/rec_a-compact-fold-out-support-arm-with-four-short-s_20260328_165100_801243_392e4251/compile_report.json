@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-compact-fold-out-support-arm-with-four-short-s_20260328_165100_801243_392e4251",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "24552d3f0bddb2dfa7f8f81b6849b94e2a7ffd70d04e5e3f78a9d8731b347177",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "d7f0402053b96b9b948afffba56ba208dbc8b03671f6e5922bcd66e3e9ec6899",
+    "model_py_mtime_ns": 1775918478973003473,
+    "model_py_size_bytes": 11110,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 65248,
+    "visual_mesh_file_count": 1,
+    "compile_elapsed_seconds": 0.33338525000726804
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

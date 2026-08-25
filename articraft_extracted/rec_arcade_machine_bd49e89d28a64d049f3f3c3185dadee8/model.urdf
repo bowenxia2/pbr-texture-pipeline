@@ -1,0 +1,851 @@
+<robot name="two_player_arcade_machine">
+  <material name="cabinet_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="trim_grey">
+    <color rgba="0.21 0.22 0.24 1" />
+    </material>
+  <material name="dark_grey">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="speaker_grey">
+    <color rgba="0.3 0.32 0.34 1" />
+    </material>
+  <material name="screen_glass">
+    <color rgba="0.07 0.16 0.2 0.42" />
+    </material>
+  <material name="marquee_glow">
+    <color rgba="0.82 0.23 0.2 0.9" />
+    </material>
+  <material name="joystick_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="joystick_red">
+    <color rgba="0.78 0.1 0.11 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.74 0.16 0.15 1" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.16 0.31 0.7 1" />
+    </material>
+  <material name="button_yellow">
+    <color rgba="0.83 0.69 0.16 1" />
+    </material>
+  <material name="hinge_black">
+    <color rgba="0.07 0.07 0.08 1" />
+    </material>
+  <material name="cashbox_grey">
+    <color rgba="0.36 0.38 0.4 1" />
+    </material>
+  <link name="cabinet">
+    <visual name="left_side">
+      <origin xyz="-0.38 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.82 0.95" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_side">
+      <origin xyz="0.38 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.82 0.95" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_lower">
+      <origin xyz="0 -0.4 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.02 0.95" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.78 0.02" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="lower_top_back">
+      <origin xyz="0 -0.18 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.44 0.02" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_frame_left">
+      <origin xyz="-0.275 0.4 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.82" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_frame_right">
+      <origin xyz="0.275 0.4 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.82" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_frame_bottom">
+      <origin xyz="0 0.4 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.02 0.18" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_frame_top">
+      <origin xyz="0 0.4 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.02 0.26" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="coin_tray_band">
+      <origin xyz="0 0.4 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.02 0.12" />
+        </geometry>
+      <material name="trim_grey">
+        <color rgba="0.21 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="upper_body">
+      <origin xyz="0 -0.12 1.335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.4 0.77" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_upper">
+      <origin xyz="0 -0.31 1.335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.02 0.77" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 -0.12 1.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.4 0.02" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <origin xyz="0 0.19 0.97" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_control_deck.obj" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="deck_apron">
+      <origin xyz="0 0.27 0.88" rpy="-0.244346 0 0" />
+      <geometry>
+        <box size="0.74 0.055 0.11" />
+        </geometry>
+      <material name="trim_grey">
+        <color rgba="0.21 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="joystick_support_0">
+      <origin xyz="-0.215 0.199945 0.968551" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_joystick_support_ring.obj" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="joystick_support_1">
+      <origin xyz="0.215 0.199945 0.968551" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_joystick_support_ring.obj" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="button_red_0">
+      <origin xyz="-0.155 0.221523 0.980692" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.74 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="button_blue_0">
+      <origin xyz="-0.11 0.24481 0.974885" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.16 0.31 0.7 1" />
+        </material>
+      </visual>
+    <visual name="button_yellow_0">
+      <origin xyz="-0.065 0.266156 0.969563" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.83 0.69 0.16 1" />
+        </material>
+      </visual>
+    <visual name="button_yellow_1">
+      <origin xyz="0.065 0.266156 0.969563" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_yellow">
+        <color rgba="0.83 0.69 0.16 1" />
+        </material>
+      </visual>
+    <visual name="button_blue_1">
+      <origin xyz="0.11 0.24481 0.974885" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.16 0.31 0.7 1" />
+        </material>
+      </visual>
+    <visual name="button_red_1">
+      <origin xyz="0.155 0.221523 0.980692" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.74 0.16 0.15 1" />
+        </material>
+      </visual>
+    <visual name="start_button_0">
+      <origin xyz="-0.055 0.10606 1.00536" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="speaker_grey">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="start_button_1">
+      <origin xyz="0.055 0.10606 1.00536" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      <material name="speaker_grey">
+        <color rgba="0.3 0.32 0.34 1" />
+        </material>
+      </visual>
+    <visual name="screen_bezel">
+      <origin xyz="0 0.105 1.24" rpy="0.20944 0 0" />
+      <geometry>
+        <box size="0.6 0.032 0.48" />
+        </geometry>
+      <material name="trim_grey">
+        <color rgba="0.21 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0 0.112 1.234" rpy="0.20944 0 0" />
+      <geometry>
+        <box size="0.5 0.01 0.4" />
+        </geometry>
+      <material name="screen_glass">
+        <color rgba="0.07 0.16 0.2 0.42" />
+        </material>
+      </visual>
+    <visual name="marquee_box">
+      <origin xyz="0 0.015 1.585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.1 0.16" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="marquee_face">
+      <origin xyz="0 0.072 1.585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.012 0.1" />
+        </geometry>
+      <material name="marquee_glow">
+        <color rgba="0.82 0.23 0.2 0.9" />
+        </material>
+      </visual>
+    <visual name="coin_mech_left">
+      <origin xyz="-0.18 0.4 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.08" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="coin_mech_right">
+      <origin xyz="0.18 0.4 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.08" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_hinge_mid">
+      <origin xyz="-0.165 0.4 0.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.07" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="left_side">
+      <origin xyz="-0.38 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.82 0.95" />
+        </geometry>
+      </collision>
+    <collision name="right_side">
+      <origin xyz="0.38 0 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.82 0.95" />
+        </geometry>
+      </collision>
+    <collision name="rear_lower">
+      <origin xyz="0 -0.4 0.475" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.02 0.95" />
+        </geometry>
+      </collision>
+    <collision name="floor">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.78 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_top_back">
+      <origin xyz="0 -0.18 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.44 0.02" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_frame_left">
+      <origin xyz="-0.275 0.4 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.82" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_frame_right">
+      <origin xyz="0.275 0.4 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.21 0.02 0.82" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_frame_bottom">
+      <origin xyz="0 0.4 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.02 0.18" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_frame_top">
+      <origin xyz="0 0.4 0.69" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.02 0.26" />
+        </geometry>
+      </collision>
+    <collision name="coin_tray_band">
+      <origin xyz="0 0.4 0.88" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.02 0.12" />
+        </geometry>
+      </collision>
+    <collision name="upper_body">
+      <origin xyz="0 -0.12 1.335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.4 0.77" />
+        </geometry>
+      </collision>
+    <collision name="rear_upper">
+      <origin xyz="0 -0.31 1.335" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.02 0.77" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 -0.12 1.71" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.4 0.02" />
+        </geometry>
+      </collision>
+    <collision name="control_deck">
+      <origin xyz="0 0.19 0.97" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_control_deck.obj" />
+        </geometry>
+      </collision>
+    <collision name="deck_apron">
+      <origin xyz="0 0.27 0.88" rpy="-0.244346 0 0" />
+      <geometry>
+        <box size="0.74 0.055 0.11" />
+        </geometry>
+      </collision>
+    <collision name="joystick_support_0">
+      <origin xyz="-0.215 0.199945 0.968551" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_joystick_support_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="joystick_support_1">
+      <origin xyz="0.215 0.199945 0.968551" rpy="-0.244346 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_joystick_support_ring.obj" />
+        </geometry>
+      </collision>
+    <collision name="button_red_0">
+      <origin xyz="-0.155 0.221523 0.980692" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="button_blue_0">
+      <origin xyz="-0.11 0.24481 0.974885" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="button_yellow_0">
+      <origin xyz="-0.065 0.266156 0.969563" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="button_yellow_1">
+      <origin xyz="0.065 0.266156 0.969563" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="button_blue_1">
+      <origin xyz="0.11 0.24481 0.974885" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="button_red_1">
+      <origin xyz="0.155 0.221523 0.980692" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.018" />
+        </geometry>
+      </collision>
+    <collision name="start_button_0">
+      <origin xyz="-0.055 0.10606 1.00536" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="start_button_1">
+      <origin xyz="0.055 0.10606 1.00536" rpy="-0.244346 0 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.01" />
+        </geometry>
+      </collision>
+    <collision name="screen_bezel">
+      <origin xyz="0 0.105 1.24" rpy="0.20944 0 0" />
+      <geometry>
+        <box size="0.6 0.032 0.48" />
+        </geometry>
+      </collision>
+    <collision name="screen_glass">
+      <origin xyz="0 0.112 1.234" rpy="0.20944 0 0" />
+      <geometry>
+        <box size="0.5 0.01 0.4" />
+        </geometry>
+      </collision>
+    <collision name="marquee_box">
+      <origin xyz="0 0.015 1.585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.1 0.16" />
+        </geometry>
+      </collision>
+    <collision name="marquee_face">
+      <origin xyz="0 0.072 1.585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.012 0.1" />
+        </geometry>
+      </collision>
+    <collision name="coin_mech_left">
+      <origin xyz="-0.18 0.4 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.08" />
+        </geometry>
+      </collision>
+    <collision name="coin_mech_right">
+      <origin xyz="0.18 0.4 0.87" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.02 0.08" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_hinge_mid">
+      <origin xyz="-0.165 0.4 0.37" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.07" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cashbox_door">
+    <visual name="door_panel">
+      <origin xyz="0.16 -0.009 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.018 0.38" />
+        </geometry>
+      <material name="cashbox_grey">
+        <color rgba="0.36 0.38 0.4 1" />
+        </material>
+      </visual>
+    <visual name="door_inset">
+      <origin xyz="0.16 -0.003 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.006 0.33" />
+        </geometry>
+      <material name="trim_grey">
+        <color rgba="0.21 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="cashbox_pull">
+      <origin xyz="0.23 -0.005 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.018" />
+        </geometry>
+      <material name="dark_grey">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hinge_lower">
+      <origin xyz="0 -0.009 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.11" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="hinge_upper">
+      <origin xyz="0 -0.009 0.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.11" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <origin xyz="0.16 -0.009 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.018 0.38" />
+        </geometry>
+      </collision>
+    <collision name="door_inset">
+      <origin xyz="0.16 -0.003 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.27 0.006 0.33" />
+        </geometry>
+      </collision>
+    <collision name="cashbox_pull">
+      <origin xyz="0.23 -0.005 0.13" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.01 0.018" />
+        </geometry>
+      </collision>
+    <collision name="hinge_lower">
+      <origin xyz="0 -0.009 0.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.11" />
+        </geometry>
+      </collision>
+    <collision name="hinge_upper">
+      <origin xyz="0 -0.009 0.29" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.11" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="joystick_gimbal_0">
+    <visual name="rear_cheek">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_cheek">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0.015 0 -0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.006" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="rear_cheek">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      </collision>
+    <collision name="front_cheek">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="0.015 0 -0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="joystick_0">
+    <visual name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.024" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0 0 0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="ball">
+      <origin xyz="0 0 0.12545" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="joystick_red">
+        <color rgba="0.78 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="actuator">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.03" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0 0 0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="ball">
+      <origin xyz="0 0 0.12545" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      </collision>
+    <collision name="actuator">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="joystick_gimbal_1">
+    <visual name="rear_cheek">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="front_cheek">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <visual name="lower_bridge">
+      <origin xyz="0.015 0 -0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.006" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.07 0.07 0.08 1" />
+        </material>
+      </visual>
+    <collision name="rear_cheek">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      </collision>
+    <collision name="front_cheek">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.006 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lower_bridge">
+      <origin xyz="0.015 0 -0.013" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.036 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="joystick_1">
+    <visual name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.024" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0 0 0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="ball">
+      <origin xyz="0 0 0.12545" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      <material name="joystick_red">
+        <color rgba="0.78 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="actuator">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.03" />
+        </geometry>
+      <material name="joystick_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="trunnion">
+      <origin xyz="0 0 0" rpy="-1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.024" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0 0 0.0575" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.115" />
+        </geometry>
+      </collision>
+    <collision name="ball">
+      <origin xyz="0 0 0.12545" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.019" />
+        </geometry>
+      </collision>
+    <collision name="actuator">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.03" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_cashbox_door" type="revolute">
+    <origin xyz="-0.16 0.41 0.18" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="cashbox_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.4" lower="0" upper="1.74533" />
+    </joint>
+  <joint name="cabinet_to_joystick_gimbal_0" type="revolute">
+    <origin xyz="-0.215 0.194865 0.948175" rpy="-0.244346 0 0" />
+    <parent link="cabinet" />
+    <child link="joystick_gimbal_0" />
+    <axis xyz="1 0 0" />
+    <limit effort="2.5" velocity="3" lower="-0.32" upper="0.32" />
+    </joint>
+  <joint name="joystick_gimbal_0_to_joystick_0" type="revolute">
+    <parent link="joystick_gimbal_0" />
+    <child link="joystick_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.5" velocity="3" lower="-0.32" upper="0.32" />
+    </joint>
+  <joint name="cabinet_to_joystick_gimbal_1" type="revolute">
+    <origin xyz="0.215 0.194865 0.948175" rpy="-0.244346 0 0" />
+    <parent link="cabinet" />
+    <child link="joystick_gimbal_1" />
+    <axis xyz="1 0 0" />
+    <limit effort="2.5" velocity="3" lower="-0.32" upper="0.32" />
+    </joint>
+  <joint name="joystick_gimbal_1_to_joystick_1" type="revolute">
+    <parent link="joystick_gimbal_1" />
+    <child link="joystick_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="2.5" velocity="3" lower="-0.32" upper="0.32" />
+    </joint>
+  </robot>

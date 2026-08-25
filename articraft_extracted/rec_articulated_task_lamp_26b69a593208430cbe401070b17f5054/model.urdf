@@ -1,0 +1,322 @@
+<robot name="portable_uv_inspection_wand">
+  <material name="housing_dark">
+    <color rgba="0.16 0.17 0.19 1" />
+    </material>
+  <material name="grip_rubber">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="fin_silver">
+    <color rgba="0.62 0.65 0.69 1" />
+    </material>
+  <material name="lens_uv">
+    <color rgba="0.47 0.31 0.88 0.58" />
+    </material>
+  <material name="accent_blue">
+    <color rgba="0.17 0.4 0.63 1" />
+    </material>
+  <link name="handle_body">
+    <inertial>
+      <origin xyz="0 -0.01 0.12" rpy="0 0 0" />
+      <mass value="0.7" />
+      <inertia ixx="0.00739667" ixy="0" ixz="0" iyy="0.00515667" iyz="0" izz="0.00340667" />
+      </inertial>
+    <visual name="grip_left_shell">
+      <origin xyz="0.02 -0.028 0.09" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.006 0.068 0.156" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="grip_right_shell">
+      <origin xyz="-0.02 -0.028 0.09" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.006 0.068 0.156" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="grip_top_bridge">
+      <origin xyz="0 -0.008 0.112" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.03 0.028 0.102" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="grip_butt">
+      <origin xyz="0 -0.074 0.029" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.044" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="front_finger_swell">
+      <origin xyz="0 0.003 0.093" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.046" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="upper_body">
+      <origin xyz="0 0.01 0.164" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.102 0.06" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="head_bridge">
+      <origin xyz="0 0.047 0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.036 0.028 0.046" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="knuckle_pod">
+      <origin xyz="0 0.046 0.188" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.036" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    <visual name="head_left_ear">
+      <origin xyz="0.024 0.076 0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.03 0.06" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="head_right_ear">
+      <origin xyz="-0.024 0.076 0.188" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.03 0.06" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cover_left_lug">
+      <origin xyz="0.013 -0.006 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.012 0.012" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cover_right_lug">
+      <origin xyz="-0.013 -0.006 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.012 0.012" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="compartment_left_guide">
+      <origin xyz="0.021 -0.042 0.026" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.004 0.08 0.012" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="compartment_right_guide">
+      <origin xyz="-0.021 -0.042 0.026" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.004 0.08 0.012" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="trigger">
+      <origin xyz="0 0.025 0.132" rpy="0.15 0 0" />
+      <geometry>
+        <box size="0.018 0.034 0.03" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="uv_head">
+    <inertial>
+      <origin xyz="0 0.07 0.02" rpy="0 0 0" />
+      <mass value="0.24" />
+      <inertia ixx="0.00036" ixy="0" ixz="0" iyy="0.000584" iyz="0" izz="0.0008" />
+      </inertial>
+    <visual name="head_pivot_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.036" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    <visual name="head_neck">
+      <origin xyz="0 0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.046 0.032" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="head_shell">
+      <origin xyz="0 0.074 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.148 0.074 0.05" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="uv_window">
+      <origin xyz="0 0.109 0.02" rpy="0 0 0" />
+      <geometry>
+        <box size="0.136 0.01 0.038" />
+        </geometry>
+      <material name="lens_uv">
+        <color rgba="0.47 0.31 0.88 0.58" />
+        </material>
+      </visual>
+    <visual name="emitter_bezel">
+      <origin xyz="0 0.086 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.126 0.012 0.014" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    <visual name="heat_fin_1">
+      <origin xyz="0 0.054 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.006 0.01" />
+        </geometry>
+      <material name="fin_silver">
+        <color rgba="0.62 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="heat_fin_2">
+      <origin xyz="0 0.068 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.006 0.01" />
+        </geometry>
+      <material name="fin_silver">
+        <color rgba="0.62 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="heat_fin_3">
+      <origin xyz="0 0.082 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.006 0.01" />
+        </geometry>
+      <material name="fin_silver">
+        <color rgba="0.62 0.65 0.69 1" />
+        </material>
+      </visual>
+    <visual name="heat_fin_4">
+      <origin xyz="0 0.096 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.122 0.006 0.01" />
+        </geometry>
+      <material name="fin_silver">
+        <color rgba="0.62 0.65 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="battery_cover">
+    <inertial>
+      <origin xyz="0 -0.05 -0.02" rpy="0 0 0" />
+      <mass value="0.06" />
+      <inertia ixx="5.2e-05" ixy="0" ixz="0" iyy="1.45e-05" iyz="0" izz="6.25e-05" />
+      </inertial>
+    <visual name="cover_hinge_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.016" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    <visual name="cover_spine">
+      <origin xyz="0 -0.014 -0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.018 0.014" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cover_front_web">
+      <origin xyz="0 -0.017 -0.013" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.024 0.012 0.008" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cover_panel">
+      <origin xyz="0 -0.04 -0.03" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.032 0.07 0.006" />
+        </geometry>
+      <material name="housing_dark">
+        <color rgba="0.16 0.17 0.19 1" />
+        </material>
+      </visual>
+    <visual name="cover_rib">
+      <origin xyz="0 -0.043 -0.03" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.018 0.04 0.008" />
+        </geometry>
+      <material name="grip_rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="cover_latch">
+      <origin xyz="0 -0.066 -0.039" rpy="0.47 0 0" />
+      <geometry>
+        <box size="0.018 0.02 0.01" />
+        </geometry>
+      <material name="accent_blue">
+        <color rgba="0.17 0.4 0.63 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="head_pivot" type="revolute">
+    <origin xyz="0 0.072 0.188" rpy="0 0 0" />
+    <parent link="handle_body" />
+    <child link="uv_head" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2" lower="-0.6" upper="0.95" />
+    </joint>
+  <joint name="battery_cover_hinge" type="revolute">
+    <origin xyz="0 -0.006 0.03" rpy="0 0 0" />
+    <parent link="handle_body" />
+    <child link="battery_cover" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.2" velocity="2" lower="0" upper="1.65" />
+    </joint>
+  </robot>

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 13,
+    "tool_call_count": 17,
+    "compile_attempt_count": 4,
+    "fingerprint_inputs": {
+      "model_py_sha256": "fe0dcdbb599dc2f3a2fde6a866dcc7868879e2a2901602fb856043b33f8e9e81",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "930a06dec66b4e6217867cb4ac6fde5dbb8ab8512425fa52ec230ac865e55c63"
+  }
+}

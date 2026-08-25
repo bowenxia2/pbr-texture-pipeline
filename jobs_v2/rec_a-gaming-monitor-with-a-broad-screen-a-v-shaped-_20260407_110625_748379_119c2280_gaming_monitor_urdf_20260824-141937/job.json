@@ -1,0 +1,632 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280_gaming_monitor_urdf_20260824-141937",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280/model.urdf",
+  "created": "2026-08-24T14:19:37",
+  "updated": "2026-08-24T20:23:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 42,
+        "n_tiny": 31
+      },
+      "seed": null,
+      "started": "2026-08-24T14:24:08",
+      "finished": "2026-08-24T14:25:24",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray metal on the stand; gray metal on the monitor arm; gray metal on the monitor base; gray metal on the monitor back;"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:34:30",
+      "finished": "2026-08-24T14:36:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280_gaming_monitor_urdf_20260824-141937/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:36:48",
+      "finished": "2026-08-24T15:01:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 42,
+            "n_total": 42,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280_gaming_monitor_urdf_20260824-141937/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:37",
+      "finished": "2026-08-24T19:42:13",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280/model.urdf",
+    "category": "gaming monitor",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.31,
+        -0.167,
+        -0.002999999999999999
+      ],
+      "max": [
+        0.31,
+        0.228,
+        0.647
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base__base_hub",
+        "link": "base",
+        "label": "base_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.01604099607733475,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__swivel_plinth",
+        "link": "base",
+        "label": "swivel_plinth",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008165265537828951,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__left_leg",
+        "link": "base",
+        "label": "left_leg",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/left_leg.obj"
+        ],
+        "n_faces": 1332,
+        "area_frac": 0.017769023788145114,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__left_leg_foot",
+        "link": "base",
+        "label": "left_leg_foot",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0013901113187898707,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__right_leg",
+        "link": "base",
+        "label": "right_leg",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/right_leg.obj"
+        ],
+        "n_faces": 1332,
+        "area_frac": 0.017769023788145172,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__right_leg_foot",
+        "link": "base",
+        "label": "right_leg_foot",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0013901113187898707,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__rear_spur",
+        "link": "base",
+        "label": "rear_spur",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/rear_spur.obj"
+        ],
+        "n_faces": 1332,
+        "area_frac": 0.007946755807656174,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__rear_spur_foot",
+        "link": "base",
+        "label": "rear_spur_foot",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0011844735497381147,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "swivel_stage__rotating_collar",
+        "link": "swivel_stage",
+        "label": "rotating_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.009691723171098439,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "swivel_stage__sleeve_front_wall",
+        "link": "swivel_stage",
+        "label": "sleeve_front_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020325537302761286,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__sleeve_rear_wall",
+        "link": "swivel_stage",
+        "label": "sleeve_rear_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020325537302761286,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__sleeve_left_wall",
+        "link": "swivel_stage",
+        "label": "sleeve_left_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012454192802390879,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__outer_sleeve",
+        "link": "swivel_stage",
+        "label": "outer_sleeve",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012454192802390879,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__cap_front_lip",
+        "link": "swivel_stage",
+        "label": "cap_front_lip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002372978856729315,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__cap_rear_lip",
+        "link": "swivel_stage",
+        "label": "cap_rear_lip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002372978856729315,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__cap_left_lip",
+        "link": "swivel_stage",
+        "label": "cap_left_lip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014785078907781325,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "swivel_stage__sleeve_cap",
+        "link": "swivel_stage",
+        "label": "sleeve_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014785078907781325,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__mast_shaft",
+        "link": "mast",
+        "label": "mast_shaft",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02558186962620382,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__mast_front_trim",
+        "link": "mast",
+        "label": "mast_front_trim",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011743877623547297,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__left_slider_rail",
+        "link": "mast",
+        "label": "left_slider_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004919590312731504,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__right_slider_rail",
+        "link": "mast",
+        "label": "right_slider_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004919590312731504,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__left_slider_bridge",
+        "link": "mast",
+        "label": "left_slider_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004072473692036561,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__right_slider_bridge",
+        "link": "mast",
+        "label": "right_slider_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004072473692036561,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__yoke_bridge",
+        "link": "mast",
+        "label": "yoke_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004435523672334396,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__left_yoke_ear",
+        "link": "mast",
+        "label": "left_yoke_ear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0021362071304481174,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "mast__right_yoke_ear",
+        "link": "mast",
+        "label": "right_yoke_ear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0021362071304481174,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "tilt_head__tilt_barrel",
+        "link": "tilt_head",
+        "label": "tilt_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0020451308308348714,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "tilt_head__tilt_bridge",
+        "link": "tilt_head",
+        "label": "tilt_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0031516947564985778,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "tilt_head__tilt_neck",
+        "link": "tilt_head",
+        "label": "tilt_neck",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006498068487939474,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "tilt_head__portrait_housing",
+        "link": "tilt_head",
+        "label": "portrait_housing",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007051429099385346,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "tilt_head__vesa_plate",
+        "link": "tilt_head",
+        "label": "vesa_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014758770938194509,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__rear_shell",
+        "link": "screen",
+        "label": "rear_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.3472915065153401,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__top_bezel",
+        "link": "screen",
+        "label": "top_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.027949586889015793,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__left_bezel",
+        "link": "screen",
+        "label": "left_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008897355314255593,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__right_bezel",
+        "link": "screen",
+        "label": "right_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008897355314255593,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__lower_left_bezel",
+        "link": "screen",
+        "label": "lower_left_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01345915724060663,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__lower_right_bezel",
+        "link": "screen",
+        "label": "lower_right_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01345915724060663,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__display_panel",
+        "link": "screen",
+        "label": "display_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.2625272285066721,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__rear_bulge",
+        "link": "screen",
+        "label": "rear_bulge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05881146601129025,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "screen__rear_vent_strip",
+        "link": "screen",
+        "label": "rear_vent_strip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0061481724924350445,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "power_button__button_cap",
+        "link": "power_button",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00032095722895895376,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "power_button__button_plunger",
+        "link": "power_button",
+        "label": "button_plunger",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00010523187834719798,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

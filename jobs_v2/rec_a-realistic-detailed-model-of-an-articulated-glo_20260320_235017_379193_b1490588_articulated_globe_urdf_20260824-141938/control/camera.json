@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_0.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 10.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_1.png",
+        "ok": true,
+        "az": 337.0,
+        "el": 11.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_2.png",
+        "ok": true,
+        "az": 182.0,
+        "el": 10.0,
+        "ro": -28.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_3.png",
+        "ok": true,
+        "az": 18.0,
+        "el": 11.0,
+        "ro": -24.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_4.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 10.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_5.png",
+        "ok": true,
+        "az": 339.0,
+        "el": 11.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_6.png",
+        "ok": true,
+        "az": 182.0,
+        "el": 9.0,
+        "ro": -28.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260824-141938/render/view_7.png",
+        "ok": true,
+        "az": 18.0,
+        "el": 13.0,
+        "ro": -33.0,
+        "alpha": 2.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 293.00000000000045,
+    "agreement_err_deg": 89.75,
+    "implied_front_deg": [
+      1.0,
+      22.0,
+      272.0,
+      153.0,
+      181.0,
+      204.0,
+      92.0,
+      333.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 89.8 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 7
+  }
+}

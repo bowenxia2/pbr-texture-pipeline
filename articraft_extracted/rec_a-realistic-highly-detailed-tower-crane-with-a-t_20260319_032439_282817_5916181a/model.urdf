@@ -1,0 +1,361 @@
+<robot name="tower_crane">
+  <material name="concrete">
+    <color rgba="0.64 0.64 0.61 1" />
+    </material>
+  <material name="safety_yellow">
+    <color rgba="0.9 0.74 0.16 1" />
+    </material>
+  <material name="painted_steel">
+    <color rgba="0.57 0.59 0.62 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.25 0.27 0.3 1" />
+    </material>
+  <material name="rope_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="cab_glass">
+    <color rgba="0.62 0.77 0.85 0.42" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 3.46" rpy="0 0 0" />
+      <mass value="6800" />
+      <inertia ixx="31578.3" ixy="0" ixz="0" iyy="31578.3" iyz="0" izz="8885.33" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0 0.25" rpy="0 0 0" />
+      <geometry>
+        <box size="2.8 2.8 0.5" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.64 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 0.59" rpy="0 0 0" />
+      <geometry>
+        <box size="1 1 0.18" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 0.68" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/tower_mast.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.9 0.74 0.16 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 6.89" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.88 0.06" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upperworks">
+    <inertial>
+      <origin xyz="1.88 0 0.68" rpy="0 0 0" />
+      <mass value="1680" />
+      <inertia ixx="890.75" ixy="0" ixz="0" iyy="10061.1" iyz="0" izz="9887.15" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/slew_ring.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <geometry>
+        <cylinder radius="0.18" length="0.14" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <geometry>
+        <box size="1.3 1.15 0.28" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.3 -0.18 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.58 0.46" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.58 0.74 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.36 0.34" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.7 0.78 0.24" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.26 0.24" />
+        </geometry>
+      <material name="cab_glass">
+        <color rgba="0.62 0.77 0.85 0.42" />
+        </material>
+      </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/jib_truss.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.9 0.74 0.16 1" />
+        </material>
+      </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/counter_jib_truss.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.9 0.74 0.16 1" />
+        </material>
+      </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/tower_head_and_stays.obj" />
+        </geometry>
+      <material name="safety_yellow">
+        <color rgba="0.9 0.74 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="counterweight">
+    <inertial>
+      <origin xyz="-0.24 0 0.28" rpy="0 0 0" />
+      <mass value="1850" />
+      <inertia ixx="202.513" ixy="0" ixz="0" iyy="167.733" iyz="0" izz="273.553" />
+      </inertial>
+    <visual>
+      <origin xyz="0.1 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.62 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.24 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 1 0.2" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.28 0 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.92 0.18" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.64 0.64 0.61 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.3 0 0.44" rpy="0 0 0" />
+      <geometry>
+        <box size="0.64 0.84 0.18" />
+        </geometry>
+      <material name="concrete">
+        <color rgba="0.64 0.64 0.61 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="trolley">
+    <inertial>
+      <origin xyz="0 0 -0.12" rpy="0 0 0" />
+      <mass value="260" />
+      <inertia ixx="5.31267" ixy="0" ixz="0" iyy="8.36333" iyz="0" izz="8.66667" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.36 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 -0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.2 0.2" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 -0.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.12 0.2" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.16 -0.12 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.16 0.12 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.16 -0.12 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0.16 0.12 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.06" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="hook_block">
+    <inertial>
+      <origin xyz="0 0 -1.4" rpy="0 0 0" />
+      <mass value="180" />
+      <inertia ixx="118.2" ixy="0" ixz="0" iyy="118.776" iyz="0" izz="1.776" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.18 0.08" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 -0.055 -0.94" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="1.88" />
+        </geometry>
+      <material name="rope_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0.055 -0.94" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="1.88" />
+        </geometry>
+      <material name="rope_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 -2.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.14 0.44" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 -0.08 -2.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.42" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0.08 -2.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.02 0.42" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.57 0.59 0.62 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="0 0 -2.39" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.18" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/hook_curve.obj" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.25 0.27 0.3 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="slew_rotation" type="continuous">
+    <origin xyz="0 0 6.89" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="upperworks" />
+    <axis xyz="0 0 1" />
+    <limit effort="35000" velocity="0.45" />
+    </joint>
+  <joint name="jib_trolley" type="prismatic">
+    <origin xyz="0.96 0 0.32" rpy="0 0 0" />
+    <parent link="upperworks" />
+    <child link="trolley" />
+    <axis xyz="1 0 0" />
+    <limit effort="12000" velocity="0.9" lower="0" upper="3.96" />
+    </joint>
+  <joint name="upperworks_to_counterweight" type="fixed">
+    <origin xyz="-1.52 0 0.32" rpy="0 0 0" />
+    <parent link="upperworks" />
+    <child link="counterweight" />
+    </joint>
+  <joint name="trolley_to_hook" type="fixed">
+    <origin xyz="0 0 -0.16" rpy="0 0 0" />
+    <parent link="trolley" />
+    <child link="hook_block" />
+    </joint>
+  </robot>

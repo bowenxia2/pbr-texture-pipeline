@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="benchtop_monocular_microscope">
+	<material name="enamel">
+		<color rgba="0.86 0.88 0.84 1" />
+	</material>
+	<material name="enamel_shadow">
+		<color rgba="0.74 0.76 0.72 1" />
+	</material>
+	<material name="stage_black">
+		<color rgba="0.11 0.11 0.12 1" />
+	</material>
+	<material name="knob_black">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<material name="dark_metal">
+		<color rgba="0.24 0.25 0.27 1" />
+	</material>
+	<material name="objective_metal">
+		<color rgba="0.63 0.65 0.68 1" />
+	</material>
+	<material name="glass_black">
+		<color rgba="0.09 0.1 0.12 1" />
+	</material>
+	<link name="frame">
+		<inertial>
+			<origin xyz="0 0 0.155" rpy="0 0 0" />
+			<mass value="9.5" />
+			<inertia ixx="0.107746" ixy="0" ixz="0" iyy="0.121679" iyz="0" izz="0.0772667" />
+		</inertial>
+		<visual name="frame__base_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__base_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__base_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__base_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__column_pedestal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__column_pedestal.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__column_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__column_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__guide_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__guide_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__column_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__column_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__stage_support_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__stage_support_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__stage_support_rib">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__stage_support_rib.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__stage_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__stage_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__mechanical_stage_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__mechanical_stage_pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="optical_carriage">
+		<inertial>
+			<origin xyz="0 -0.01 0.01" rpy="0 0 0" />
+			<mass value="1.9" />
+			<inertia ixx="0.00810667" ixy="0" ixz="0" iyy="0.00596917" iyz="0" izz="0.00596917" />
+		</inertial>
+		<visual name="optical_carriage__sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__slide_shoe">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__slide_shoe.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__carriage_arm">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__carriage_arm.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__head_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__head_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__nose_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__nose_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__focus_bearing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__focus_bearing.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__eyepiece_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__eyepiece_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__eyepiece_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__eyepiece_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__objective_turret">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__objective_turret.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__objective_primary">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__objective_primary.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__objective_side_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__objective_side_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__objective_side_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__objective_side_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="optical_carriage__objective_tip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/optical_carriage__objective_tip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="focus_knob_pair">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<mass value="0.22" />
+			<inertia ixx="0.000177173" ixy="0" ixz="0" iyy="0.000177173" iyz="0" izz="4.4e-05" />
+		</inertial>
+		<visual name="focus_knob_pair__knob_shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/focus_knob_pair__knob_shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="focus_knob_pair__knob_hub_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/focus_knob_pair__knob_hub_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="focus_knob_pair__knob_hub_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/focus_knob_pair__knob_hub_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="focus_knob_pair__knob_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/focus_knob_pair__knob_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="focus_knob_pair__knob_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/focus_knob_pair__knob_left.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="focus_slide" type="prismatic">
+		<origin xyz="0 0.048 0.198" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="optical_carriage" />
+		<axis xyz="0 0 1" />
+		<limit effort="45" velocity="0.08" lower="0" upper="0.055" />
+	</joint>
+	<joint name="focus_knob_spin" type="continuous">
+		<origin xyz="0 -0.05 -0.002" rpy="0 0 0" />
+		<parent link="optical_carriage" />
+		<child link="focus_knob_pair" />
+		<axis xyz="1 0 0" />
+		<limit effort="2.5" velocity="20" />
+	</joint>
+</robot>

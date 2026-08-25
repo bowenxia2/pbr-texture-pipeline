@@ -1,0 +1,449 @@
+<robot name="desktop_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.93 0.94 0.92 1" />
+    </material>
+  <material name="warm_grey">
+    <color rgba="0.78 0.79 0.77 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="filter_green">
+    <color rgba="0.54 0.68 0.55 1" />
+    </material>
+  <link name="body">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_purifier_body_shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="front_intake_backing">
+      <origin xyz="0 0.083 0.141" rpy="0 0 0" />
+      <geometry>
+        <box size="0.164 0.004 0.122" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_outlet_backing">
+      <origin xyz="0 -0.002 0.333" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.064 0.004" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="guide_0">
+      <origin xyz="0.092 -0.035 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.25" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="guide_1">
+      <origin xyz="-0.092 -0.035 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.25" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_0">
+      <origin xyz="0.099 -0.0865 0.0435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_rib_0">
+      <origin xyz="0.096 -0.081 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_1">
+      <origin xyz="0.099 -0.0865 0.1715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_rib_1">
+      <origin xyz="0.096 -0.081 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_knuckle_2">
+      <origin xyz="0.099 -0.0865 0.2995" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="hinge_rib_2">
+      <origin xyz="0.096 -0.081 0.2995" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="knob_seat">
+      <origin xyz="0.1 0.014 0.214" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="-0.045 -0.04 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.018 0.005" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="0.045 -0.04 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.018 0.005" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_purifier_body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_intake_backing">
+      <origin xyz="0 0.083 0.141" rpy="0 0 0" />
+      <geometry>
+        <box size="0.164 0.004 0.122" />
+        </geometry>
+      </collision>
+    <collision name="top_outlet_backing">
+      <origin xyz="0 -0.002 0.333" rpy="0 0 0" />
+      <geometry>
+        <box size="0.142 0.064 0.004" />
+        </geometry>
+      </collision>
+    <collision name="guide_0">
+      <origin xyz="0.092 -0.035 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.25" />
+        </geometry>
+      </collision>
+    <collision name="guide_1">
+      <origin xyz="-0.092 -0.035 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.06 0.25" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_0">
+      <origin xyz="0.099 -0.0865 0.0435" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      </collision>
+    <collision name="hinge_rib_0">
+      <origin xyz="0.096 -0.081 0.0435" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_1">
+      <origin xyz="0.099 -0.0865 0.1715" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      </collision>
+    <collision name="hinge_rib_1">
+      <origin xyz="0.096 -0.081 0.1715" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      </collision>
+    <collision name="hinge_knuckle_2">
+      <origin xyz="0.099 -0.0865 0.2995" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      </collision>
+    <collision name="hinge_rib_2">
+      <origin xyz="0.096 -0.081 0.2995" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.004 0.068" />
+        </geometry>
+      </collision>
+    <collision name="knob_seat">
+      <origin xyz="0.1 0.014 0.214" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      </collision>
+    <collision name="foot_0">
+      <origin xyz="-0.045 -0.04 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.018 0.005" />
+        </geometry>
+      </collision>
+    <collision name="foot_1">
+      <origin xyz="0.045 -0.04 0.0025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.018 0.005" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_panel">
+    <visual name="panel_face">
+      <origin xyz="-0.099 -0.0025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.004 0.333" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="panel_pull">
+      <origin xyz="-0.164 -0.007 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.05" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="panel_knuckle_0">
+      <origin xyz="0 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <visual name="panel_knuckle_1">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      <material name="warm_grey">
+        <color rgba="0.78 0.79 0.77 1" />
+        </material>
+      </visual>
+    <collision name="panel_face">
+      <origin xyz="-0.099 -0.0025 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.004 0.333" />
+        </geometry>
+      </collision>
+    <collision name="panel_pull">
+      <origin xyz="-0.164 -0.007 -0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.008 0.05" />
+        </geometry>
+      </collision>
+    <collision name="panel_knuckle_0">
+      <origin xyz="0 0 -0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      </collision>
+    <collision name="panel_knuckle_1">
+      <origin xyz="0 0 0.064" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0035" length="0.068" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_tray">
+    <visual name="tray_side_0">
+      <origin xyz="0.084 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.108 0.3" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="-0.084 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.108 0.3" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_top">
+      <origin xyz="0 0.006 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.012 0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_bottom">
+      <origin xyz="0 0.006 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.012 0.01" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="0 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.158 0.072 0.27" />
+        </geometry>
+      <material name="filter_green">
+        <color rgba="0.54 0.68 0.55 1" />
+        </material>
+      </visual>
+    <visual name="tray_spine">
+      <origin xyz="0 0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.022 0.06" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_pull">
+      <origin xyz="0 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.006 0.024" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="tray_side_0">
+      <origin xyz="0.084 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.108 0.3" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_1">
+      <origin xyz="-0.084 0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.108 0.3" />
+        </geometry>
+      </collision>
+    <collision name="tray_top">
+      <origin xyz="0 0.006 0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="tray_bottom">
+      <origin xyz="0 0.006 -0.145" rpy="0 0 0" />
+      <geometry>
+        <box size="0.166 0.012 0.01" />
+        </geometry>
+      </collision>
+    <collision name="filter_media">
+      <origin xyz="0 0.052 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.158 0.072 0.27" />
+        </geometry>
+      </collision>
+    <collision name="tray_spine">
+      <origin xyz="0 0.005 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.022 0.06" />
+        </geometry>
+      </collision>
+    <collision name="tray_pull">
+      <origin xyz="0 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.054 0.006 0.024" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="speed_knob">
+    <visual name="knob_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_purifier_speed_knob.obj" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="shaft">
+      <origin xyz="0.003 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.006" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <collision name="knob_body">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_purifier_speed_knob.obj" />
+        </geometry>
+      </collision>
+    <collision name="shaft">
+      <origin xyz="0.003 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.004" length="0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_service_panel" type="revolute">
+    <origin xyz="0.099 -0.0865 0.1715" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="service_panel" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.6" lower="0" upper="2.00713" />
+    </joint>
+  <joint name="body_to_filter_tray" type="prismatic">
+    <origin xyz="0 -0.065 0.1715" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_tray" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="0.1" lower="0" upper="0.062" />
+    </joint>
+  <joint name="body_to_speed_knob" type="continuous">
+    <origin xyz="0.102 0.014 0.214" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="speed_knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.25" velocity="8" />
+    </joint>
+  </robot>

@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="apartment_gym_bench">
+	<material name="frame_mat">
+		<color rgba="0.18 0.19 0.21 1" />
+	</material>
+	<material name="pad_mat">
+		<color rgba="0.12 0.12 0.13 1" />
+	</material>
+	<material name="wheel_mat">
+		<color rgba="0.09 0.09 0.1 1" />
+	</material>
+	<material name="trim_mat">
+		<color rgba="0.44 0.46 0.48 1" />
+	</material>
+	<link name="frame">
+		<collision name="rail_0">
+			<origin xyz="-0.02 -0.105 0.315" rpy="0 0 0" />
+			<geometry>
+				<box size="0.88 0.03 0.04" />
+			</geometry>
+		</collision>
+		<collision name="rail_1">
+			<origin xyz="-0.02 0.105 0.315" rpy="0 0 0" />
+			<geometry>
+				<box size="0.88 0.03 0.04" />
+			</geometry>
+		</collision>
+		<collision name="front_cross">
+			<origin xyz="0.36 0 0.315" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.22 0.04" />
+			</geometry>
+		</collision>
+		<collision name="seat_cross">
+			<origin xyz="0.02 0 0.315" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.22 0.04" />
+			</geometry>
+		</collision>
+		<collision name="rear_cross">
+			<origin xyz="-0.34 0 0.315" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1 0.22 0.04" />
+			</geometry>
+		</collision>
+		<collision name="ladder_ear_0">
+			<origin xyz="-0.28 -0.09 0.24" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.02 0.15" />
+			</geometry>
+		</collision>
+		<collision name="ladder_ear_1">
+			<origin xyz="-0.28 0.09 0.24" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.02 0.15" />
+			</geometry>
+		</collision>
+		<collision name="wheel_bracket_0">
+			<origin xyz="-0.43 -0.105 0.195" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03 0.22" />
+			</geometry>
+		</collision>
+		<collision name="wheel_bracket_1">
+			<origin xyz="-0.43 0.105 0.195" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03 0.22" />
+			</geometry>
+		</collision>
+		<collision name="rear_axle">
+			<origin xyz="-0.43 0 0.085" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.011" length="0.26" />
+			</geometry>
+		</collision>
+		<visual name="frame__rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__ladder_ear_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__ladder_ear_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__ladder_ear_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__ladder_ear_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_bracket_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_bracket_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_bracket_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_bracket_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_axle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="back_pad">
+		<collision name="back_board">
+			<origin xyz="-0.332 0 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.64 0.23 0.016" />
+			</geometry>
+		</collision>
+		<collision name="back_cushion">
+			<origin xyz="-0.342 0 0.043" rpy="0 0 0" />
+			<geometry>
+				<box size="0.66 0.25 0.056" />
+			</geometry>
+		</collision>
+		<visual name="back_pad__back_board">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__back_board.glb" />
+			</geometry>
+		</visual>
+		<visual name="back_pad__back_cushion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__back_cushion.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat_pad">
+		<collision name="seat_board">
+			<origin xyz="0.147 0 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.27 0.23 0.016" />
+			</geometry>
+		</collision>
+		<collision name="seat_cushion">
+			<origin xyz="0.157 0 0.043" rpy="0 0 0" />
+			<geometry>
+				<box size="0.29 0.25 0.056" />
+			</geometry>
+		</collision>
+		<visual name="seat_pad__seat_board">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat_pad__seat_board.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat_pad__seat_cushion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat_pad__seat_cushion.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="ladder_support">
+		<collision name="ladder_base">
+			<origin xyz="0 0 0.009" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.16 0.018" />
+			</geometry>
+		</collision>
+		<collision name="ladder_strut_0">
+			<origin xyz="0 -0.07 0.0825" rpy="0 0 0" />
+			<geometry>
+				<box size="0.022 0.02 0.165" />
+			</geometry>
+		</collision>
+		<collision name="ladder_strut_1">
+			<origin xyz="0 0.07 0.0825" rpy="0 0 0" />
+			<geometry>
+				<box size="0.022 0.02 0.165" />
+			</geometry>
+		</collision>
+		<collision name="ladder_rung_0">
+			<origin xyz="0 0 0.055" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.16 0.014" />
+			</geometry>
+		</collision>
+		<collision name="ladder_rung_1">
+			<origin xyz="0 0 0.105" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.16 0.014" />
+			</geometry>
+		</collision>
+		<collision name="ladder_top">
+			<origin xyz="0 0 0.155" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.16 0.018" />
+			</geometry>
+		</collision>
+		<visual name="ladder_support__ladder_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_base.glb" />
+			</geometry>
+		</visual>
+		<visual name="ladder_support__ladder_strut_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_strut_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="ladder_support__ladder_strut_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_strut_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="ladder_support__ladder_rung_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_rung_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="ladder_support__ladder_rung_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_rung_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="ladder_support__ladder_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder_support__ladder_top.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_foot">
+		<collision name="top_block">
+			<origin xyz="0 0 -0.009" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.18 0.018" />
+			</geometry>
+		</collision>
+		<collision name="foot_leg_0">
+			<origin xyz="0 -0.075 -0.12" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.018 0.22" />
+			</geometry>
+		</collision>
+		<collision name="foot_leg_1">
+			<origin xyz="0 0.075 -0.12" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.018 0.22" />
+			</geometry>
+		</collision>
+		<collision name="foot_bar">
+			<origin xyz="0.02 0 -0.235" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.2 0.035" />
+			</geometry>
+		</collision>
+		<visual name="front_foot__top_block">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_foot__top_block.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_foot__foot_leg_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_foot__foot_leg_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_foot__foot_leg_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_foot__foot_leg_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_foot__foot_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_foot__foot_bar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_0">
+		<collision name="wheel">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.042" length="0.028" />
+			</geometry>
+		</collision>
+		<visual name="wheel_0__wheel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__wheel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_1">
+		<collision name="wheel">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.042" length="0.028" />
+			</geometry>
+		</collision>
+		<visual name="wheel_1__wheel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__wheel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="back_hinge" type="revolute">
+		<origin xyz="-0.015 0 0.335" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="back_pad" />
+		<axis xyz="0 1 0" />
+		<limit effort="60" velocity="1.8" lower="0" upper="1.15" />
+	</joint>
+	<joint name="seat_hinge" type="revolute">
+		<origin xyz="0.015 0 0.335" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="seat_pad" />
+		<axis xyz="0 -1 0" />
+		<limit effort="40" velocity="1.5" lower="0" upper="0.38" />
+	</joint>
+	<joint name="rear_support_hinge" type="revolute">
+		<origin xyz="-0.28 0 0.18" rpy="0 0.5 0" />
+		<parent link="frame" />
+		<child link="ladder_support" />
+		<axis xyz="0 1 0" />
+		<limit effort="50" velocity="1.5" lower="-0.45" upper="0.35" />
+	</joint>
+	<joint name="front_foot_hinge" type="revolute">
+		<origin xyz="0.36 0 0.295" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="front_foot" />
+		<axis xyz="0 1 0" />
+		<limit effort="30" velocity="1.8" lower="0" upper="1.1" />
+	</joint>
+	<joint name="wheel_0_spin" type="continuous">
+		<origin xyz="-0.43 -0.144 0.085" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="wheel_0" />
+		<axis xyz="0 1 0" />
+		<limit effort="10" velocity="12" />
+	</joint>
+	<joint name="wheel_1_spin" type="continuous">
+		<origin xyz="-0.43 0.144 0.085" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="wheel_1" />
+		<axis xyz="0 1 0" />
+		<limit effort="10" velocity="12" />
+	</joint>
+</robot>

@@ -1,0 +1,333 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5_freestanding_candy_vending_machine_urdf_20260824-141937",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5/model.urdf",
+  "created": "2026-08-24T14:19:37",
+  "updated": "2026-08-24T20:23:36",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 19,
+        "n_tiny": 7
+      },
+      "seed": null,
+      "started": "2026-08-24T14:19:40",
+      "finished": "2026-08-24T14:22:54",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the entire object;"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:34:30",
+      "finished": "2026-08-24T14:36:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5_freestanding_candy_vending_machine_urdf_20260824-141937/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:36:48",
+      "finished": "2026-08-24T15:01:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 19,
+            "n_total": 19,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5_freestanding_candy_vending_machine_urdf_20260824-141937/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:36",
+      "finished": "2026-08-24T19:42:07",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-freestanding-candy-vending-machine-with-a-pede_20260401_024152_525731_d8046df5/model.urdf",
+    "category": "freestanding candy vending machine",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.22,
+        -0.22,
+        0.0
+      ],
+      "max": [
+        0.26,
+        0.22,
+        1.512
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "machine_body__pedestal_foot",
+        "link": "machine_body",
+        "label": "pedestal_foot",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pedestal_foot.obj"
+        ],
+        "n_faces": 672,
+        "area_frac": 0.1805828123602405,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__pedestal_column",
+        "link": "machine_body",
+        "label": "pedestal_column",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.132734819011184,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__lower_collar",
+        "link": "machine_body",
+        "label": "lower_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.05592140200098943,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__coin_box_shell",
+        "link": "machine_body",
+        "label": "coin_box_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1803568927527528,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__front_service_plate",
+        "link": "machine_body",
+        "label": "front_service_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03265492639708431,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__coin_slot",
+        "link": "machine_body",
+        "label": "coin_slot",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0033926164407676426,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__knob_bezel",
+        "link": "machine_body",
+        "label": "knob_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008936864354413187,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__chute_floor",
+        "link": "machine_body",
+        "label": "chute_floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013228820547723934,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__chute_roof",
+        "link": "machine_body",
+        "label": "chute_roof",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009683258283806936,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__chute_side_left",
+        "link": "machine_body",
+        "label": "chute_side_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006127764472932188,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__chute_side_right",
+        "link": "machine_body",
+        "label": "chute_side_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006127764472932188,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "machine_body__upper_collar",
+        "link": "machine_body",
+        "label": "upper_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04343428923281326,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__reservoir_shell",
+        "link": "machine_body",
+        "label": "reservoir_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/reservoir_shell.obj"
+        ],
+        "n_faces": 2016,
+        "area_frac": 0.2829411152259921,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__lid",
+        "link": "machine_body",
+        "label": "lid",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03139762837438557,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "machine_body__lid_cap",
+        "link": "machine_body",
+        "label": "lid_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003579929724949243,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "dispense_knob__axle",
+        "link": "dispense_knob",
+        "label": "axle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0011192680372949678,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dispense_knob__wheel",
+        "link": "dispense_knob",
+        "label": "wheel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0065799651451052535,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dispense_knob__finger_post",
+        "link": "dispense_knob",
+        "label": "finger_post",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006968174441823478,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dispense_knob__finger_grip",
+        "link": "dispense_knob",
+        "label": "finger_grip",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0005030457204499708,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

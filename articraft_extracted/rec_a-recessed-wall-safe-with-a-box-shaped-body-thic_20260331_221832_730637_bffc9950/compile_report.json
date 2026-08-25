@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "ec0c744fbe67eae2655a01e5bfd916a1061fa1cee4af83c8d92dc09875e8a63a",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "062d664578e54869c18cf3802b3b938735078ecc2d948d837692e8b4bdf0ce8e",
+    "model_py_mtime_ns": 1775055075734114300,
+    "model_py_size_bytes": 11759,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.003100750007433817
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

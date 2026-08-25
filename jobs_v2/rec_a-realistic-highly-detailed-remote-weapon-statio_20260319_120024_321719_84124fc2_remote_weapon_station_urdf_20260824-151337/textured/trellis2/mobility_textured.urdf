@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="remote_weapon_station">
+	<material name="olive_paint">
+		<color rgba="0.34 0.38 0.28 1" />
+	</material>
+	<material name="dark_steel">
+		<color rgba="0.23 0.24 0.25 1" />
+	</material>
+	<material name="parkerized">
+		<color rgba="0.16 0.17 0.15 1" />
+	</material>
+	<material name="black_polymer">
+		<color rgba="0.1 0.11 0.11 1" />
+	</material>
+	<material name="sensor_glass">
+		<color rgba="0.3 0.42 0.46 0.45" />
+	</material>
+	<material name="fastener_steel">
+		<color rgba="0.52 0.54 0.56 1" />
+	</material>
+	<link name="mount_base">
+		<inertial>
+			<origin xyz="0 0 0.14" rpy="0 0 0" />
+			<mass value="110" />
+			<inertia ixx="1.60967" ixy="0" ixz="0" iyy="1.60967" iyz="0" izz="1.782" />
+		</inertial>
+		<visual name="mount_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mount_base.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="turret_housing">
+		<inertial>
+			<origin xyz="0.02 0 0.13" rpy="0 0 0" />
+			<mass value="58" />
+			<inertia ixx="0.705667" ixy="0" ixz="0" iyy="0.821667" iyz="0" izz="0.873867" />
+		</inertial>
+		<visual name="turret_housing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/turret_housing.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="weapon_cradle">
+		<inertial>
+			<origin xyz="0.27 0 -0.01" rpy="0 0 0" />
+			<mass value="42" />
+			<inertia ixx="0.406" ixy="0" ixz="0" iyy="2.2988" iyz="0" izz="2.366" />
+		</inertial>
+		<visual name="weapon_cradle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/weapon_cradle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="turret_pan" type="continuous">
+		<origin xyz="0 0 0.28" rpy="0 0 0" />
+		<parent link="mount_base" />
+		<child link="turret_housing" />
+		<axis xyz="0 0 1" />
+		<limit effort="8000" velocity="1" />
+	</joint>
+	<joint name="cradle_elevation" type="revolute">
+		<origin xyz="0.08 0 0.155" rpy="0 0 0" />
+		<parent link="turret_housing" />
+		<child link="weapon_cradle" />
+		<axis xyz="0 -1 0" />
+		<limit effort="4000" velocity="1.2" lower="-0.35" upper="1.05" />
+	</joint>
+</robot>

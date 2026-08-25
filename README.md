@@ -1,15 +1,9 @@
 # pbr-texture-pipeline
 
-This pipeline adds textures and materials to 3D meshes that don't have any.
-Given a blank mesh, it renders an image of the mesh, then a vision-language model (a VLM - an AI model that can look at an image and generate text about it) writes a caption and a text prompt describing what the object's surface should look like, based on what kind of object it is.
-It generates a reference image from that prompt, showing the described surface from the same camera angle as the rendered mesh.
-It feeds the mesh and the reference image into two different texturing tools (TRELLIS.2 and Hunyuan3D-2.1, referred to in this repo as "backends"), each of which produces its own textured version of the mesh.
-Finally, the same VLM compares the two textured results and picks the one it judges better; both are kept.
-
-It supports two kinds of input.
-The first is simple, single-piece meshes.
-The second is articulated assets: multi-part objects with moving joints (for example, a cabinet whose doors open), described using the URDF format (a standard file format for objects and robots with movable parts) and drawn from the PartNet-Mobility dataset.
-For articulated assets, all the parts are textured together in one pass and then split back out into separate per-part textures.
+This pipeline enhances textures on articulated 3D assets (URDF-format objects with moving joints, such as a cabinet whose doors open, drawn from the PartNet-Mobility and Articraft-10K datasets).
+It keeps the assets' original textures as a starting point: it renders the textured mesh from the front via pyrender, runs a VLM to describe the visible materials, enhances the rendered view with an image-editing model conditioned on those materials and a depth map, and feeds the enhanced image to a forked TRELLIS.2 that supports multi-reference-image conditioning.
+TRELLIS.2 decodes a PBR texture field for the whole object, cleans each part's mesh (merging coincident vertices, splitting at hard edges for correct normals), and bakes a separate UV atlas for each part.
+The parts are reassembled into a textured URDF and a combined GLB.
 
 See `PRD.md` for the full design spec.
 This README only covers setup and running it.
@@ -18,16 +12,15 @@ This README only covers setup and running it.
 
 - Linux with an NVIDIA GPU.
   Developed and verified on 2x NVIDIA A40 (46 GB of GPU memory, also called VRAM, each).
-  A single GPU also works, using a reduced-memory strategy (`gpu_mode: single` in `config.yaml`), but a GPU with less than ~40 GB of VRAM will struggle to fit the VLM and the image-generation (diffusion) models at the same time.
+  A single GPU also works, using a reduced-memory strategy (`gpu_mode: single` in `config.yaml`), but a GPU with less than ~40 GB of VRAM will struggle to fit the TRELLIS.2 texturing backend.
 - ~50 GB free disk for the conda environments, plus space for model weights.
-  The VLM alone is ~24 GB; the full set of cached weights is well over 100 GB.
 - `conda` (or `mamba`) and `git` with submodule support.
 
 ## Setup
 
 ### 1. Clone with submodules
 
-The two texturing tools and the front-detection model each live in their own separate repository.
+The texturing tool and the front-detection model each live in their own separate repository.
 Rather than copying their code into this repo, we reference them as git submodules - a git feature that links a repo to a specific commit of another repo - pinned to commits verified to work with this pipeline.
 This keeps this repo small:
 
@@ -38,20 +31,20 @@ cd pbr-texture-pipeline
 
 If you already cloned without `--recurse-submodules`, run `git submodule update --init`.
 
-A few small patches on top of the pinned upstream commits are required: a fix for a broken attribute path, a fix for a config path that only resolved correctly when run from one specific working directory, and a couple of pinned dependency version bumps.
+The TRELLIS.2 submodule points to a fork that includes multi-reference-image conditioning support.
+A few small patches on top of the pinned fork are still required.
 Apply them once after checkout:
 
 ```bash
 git apply patches/trellis2.patch --directory=TRELLIS.2
-git apply patches/hunyuan3d-2.1.patch --directory=Hunyuan3D-2.1
 ```
 
-### 2. Create the four conda environments
+### 2. Create the three conda environments
 
-Each of the four environments exists because a different part of the pipeline needs a Python or library version that conflicts with the others.
+Each environment exists because a different part of the pipeline needs a Python or library version that conflicts with the others.
 The pipeline always reads which environment to use from `config.yaml`; the names are never hardcoded elsewhere.
 
-**`trellis2`** (Python 3.10) - runs the rendering step, the reference-image generation step (which uses a diffusion model), the Gradio web app, the batch command-line tool, and the TRELLIS.2 texturing tool itself:
+**`trellis2`** (Python 3.10) - runs stages R (render), E (imageedit), and T (texture), the Gradio web app, the batch command-line tool, and the TRELLIS.2 texturing backend:
 
 ```bash
 cd TRELLIS.2
@@ -62,26 +55,12 @@ pip install -r ../environments/trellis2-extra.txt
 cd ..
 ```
 
-**`vlm`** (Python 3.12) - runs only the captioning and prompt-writing step: the Qwen3.6-35B-A3B model, compressed with a technique called AWQ and served with vLLM (a fast engine for running large language models).
-This needs torch >= 2.8, which conflicts with the `trellis2` environment's pinned torch 2.6:
+**`vlm`** (Python 3.12) - runs only `scripts/vlm_infer.py`, a subprocess that uses Qwen2.5-VL-7B-Instruct via transformers to analyze the materials visible in a rendered view (Stage V):
 
 ```bash
 conda create -n vlm python=3.12 -y
 conda activate vlm
 pip install -r environments/vlm-requirements.txt
-```
-
-**`hunyuan3d`** (Python 3.11) - runs only the Hunyuan3D-2.1 texturing tool, which needs its own rasterizer (the component that converts 3D geometry into 2D pixels) and torch 2.5.1:
-
-```bash
-conda create -n hunyuan3d python=3.11 -y
-conda activate hunyuan3d
-cd Hunyuan3D-2.1
-pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
-pip install -r requirements.txt
-cd hy3dpaint/custom_rasterizer && pip install -e . && cd ../..
-cd hy3dpaint/DifferentiableRenderer && bash compile_mesh_painter.sh && cd ../../..
-wget https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth -P Hunyuan3D-2.1/hy3dpaint/ckpt
 ```
 
 **`orianyv2`** (Python 3.11) - runs only `scripts/orient_infer.py`, a short-lived helper process that detects which side of an articulated object faces forward, used while rendering articulated assets:
@@ -93,7 +72,7 @@ pip install $(grep -vE '^(bpy|gradio)' Orient-Anything-V2/requirements.txt)
 ```
 
 These installs are sensitive to your CUDA driver/toolkit version.
-If a pinned package fails to install, check the corresponding upstream repo's own install docs (`TRELLIS.2/README.md`, `Hunyuan3D-2.1/README.md`, `Orient-Anything-V2/README.md`) for current guidance.
+If a pinned package fails to install, check the corresponding upstream repo's own install docs (`TRELLIS.2/README.md`, `Orient-Anything-V2/README.md`) for current guidance.
 
 ### 3. Point config at your machine (if needed)
 
@@ -104,22 +83,27 @@ It's merged on top of `config.yaml` at load time, so any key you don't set keeps
 ### 4. Download model weights
 
 ```bash
-conda run -n trellis2 python -m scripts.download_vlm            # VLM, ~24 GB
-conda run -n trellis2 python -m scripts.download_controlnet     # Qwen-Image + ControlNet
 conda run -n trellis2 python -m scripts.download_orient_anything  # Orient-Anything-V2 checkpoint, ~5 GB
 ```
 
-Every other model (TRELLIS.2, RMBG-2.0, CLIP) is fetched automatically on first use via `huggingface_hub`, into the same cache.
+Every other model (TRELLIS.2, CLIP, Qwen2.5-VL for Stage V, Qwen-Image-Edit for Stage E) is fetched automatically on first use via `huggingface_hub`, into the same cache.
 
-### 5. Get test data (optional)
+### 5. Get test data
 
-`partnet_mobility/` (articulated URDF test assets) is not included in this repo: it's a subset of the SAPIEN PartNet-Mobility dataset, which requires agreeing to its own terms before you can download it.
+**PartNet-Mobility**: `partnet_mobility/` (articulated URDF test assets) is not included in this repo: it's a subset of the SAPIEN PartNet-Mobility dataset, which requires agreeing to its own terms before you can download it.
 Get it from https://sapien.ucsd.edu/downloads and place object folders (e.g. `partnet_mobility/8930/`) directly under `partnet_mobility/`.
-This is only needed for articulated (URDF) jobs; flat-mesh jobs just need your own `.glb`/`.obj` files.
+
+**Articraft-10K**: extract assets from the Articraft-10K tar.gz archives:
+
+```bash
+bash scripts/extract_articraft.sh --limit 100  # extract up to 100 assets
+```
+
+This places object folders under `articraft_extracted/`.
 
 ## Running
 
-**Gradio app** (interactive, 5-tab wizard):
+**Gradio app** (interactive, 3-tab wizard):
 
 ```bash
 conda run -n trellis2 python -m pbr_texture_pipeline.app
@@ -127,42 +111,41 @@ conda run -n trellis2 python -m pbr_texture_pipeline.app
 
 Opens on `0.0.0.0:7860`.
 
-**Batch CLI** (runs one stage at a time across all meshes, so each model is loaded into memory once instead of once per mesh):
+**Batch CLI** (runs one stage at a time across all assets, so each model is loaded into memory once instead of once per asset):
 
 ```bash
+# PartNet-Mobility assets
 conda run -n trellis2 python -m pbr_texture_pipeline.batch \
-  --meshes 'meshes_run/*.glb' --jobs-root jobs/ \
-  --backends trellis2,hunyuan --stages render,vlm,diffuse,plan,texture,eval,judge --resume
+  --assets 'partnet_mobility/*/mobility.urdf' --jobs-root jobs/ \
+  --stages render,vlm,imageedit,texture --resume
+
+# Articraft-10K assets
+conda run -n trellis2 python -m pbr_texture_pipeline.batch \
+  --assets 'articraft_extracted/*/model.urdf' --jobs-root jobs_v2/ \
+  --stages render,vlm,imageedit,texture --resume
 ```
 
-For articulated assets, point `--meshes` at a `mobility.urdf` glob instead (Hunyuan has no articulated support, so those jobs only use the TRELLIS.2 backend):
-
-```bash
-conda run -n trellis2 python -m pbr_texture_pipeline.batch \
-  --meshes 'partnet_mobility/*/mobility.urdf' --jobs-root jobs/ \
-  --backends trellis2 --stages render,vlm,diffuse,plan,texture,eval,judge --resume
-```
-
-Job outputs land under `jobs/<job_id>/`, one directory per mesh.
+Stage names accept aliases R, V, E, T.
+Stages V (vlm) and E (imageedit) are optional: Stage T falls back to the raw rendered front view if the enhanced image is absent.
+Job outputs land under `jobs/<job_id>/`, one directory per asset.
 If a run is interrupted, rerunning with `--resume` picks up from the last completed stage instead of starting over.
 
 ## Verification
 
-There's no automated test suite.
-Verification instead relies on a set of standalone checking scripts (referred to in this repo as "gates") plus a script that drives the pipeline end-to-end (see `CLAUDE.md`'s "Commands" section for the full list).
-For example:
+There is no automated test suite.
+Verify results by inspecting the per-job outputs (rendered views, textured GLBs) and the HTML gallery:
 
 ```bash
-conda run -n trellis2 python scripts/verify_conventions.py --out jobs/_gate1_conventions
-conda run -n trellis2 python scripts/verify_articulated.py --jobs-root jobs/
+python scripts/build_viewer.py jobs/
+cd jobs/ && python -m http.server 8080
 ```
 
 ## Repo layout
 
-- `pbr_texture_pipeline/` - the pipeline package: the pipeline stages, the Gradio app, the batch CLI, the backend adapters (code that connects to each texturing tool), and articulated-asset support.
-- `scripts/` - one-off tools: model downloads, verification/gate scripts, mesh prep, viewers.
-- `TRELLIS.2/`, `Hunyuan3D-2.1/`, `Orient-Anything-V2/` - git submodules for the texturing tools and the front-detection model.
-- `patches/` - small patches applied to the submodules (see Setup step 1).
+- `pbr_texture_pipeline/` - the pipeline package: the pipeline stages, the Gradio app, the batch CLI, the backend adapter (code that connects to the TRELLIS.2 texturing tool), and articulated-asset support.
+- `scripts/` - one-off tools: model downloads, mesh prep, viewers, dataset extraction, VLM inference (`vlm_infer.py`), and image-edit inference (`imageedit_infer.py`).
+- `TRELLIS.2/`, `Orient-Anything-V2/` - git submodules for the texturing tool and the front-detection model.
+- `patches/` - small patches applied to the TRELLIS.2 submodule (see Setup step 1).
 - `environments/` - pip requirements layered on top of each backend's own install steps.
 - `config.yaml` / `config.local.yaml` - single source of truth for paths, model ids, and stage defaults; see `config.local.yaml.example`.
-- `PRD.md` - the full design spec for the pipeline, both job kinds, and the app.
+- `PRD.md` - the full design spec for the pipeline and the app.

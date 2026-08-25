@@ -1,0 +1,322 @@
+<robot name="desktop_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.95 0.96 0.94 1" />
+    </material>
+  <material name="intake_gray">
+    <color rgba="0.83 0.84 0.8 1" />
+    </material>
+  <material name="filter_charcoal">
+    <color rgba="0.24 0.26 0.28 1" />
+    </material>
+  <material name="tray_dark">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <link name="body">
+    <visual name="front_shell">
+      <origin xyz="0 0.0535 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.39" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_0">
+      <origin xyz="0.1045 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.125 0.39" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="side_shell_1">
+      <origin xyz="-0.1045 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.125 0.39" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.125 0.02" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_rear_deck">
+      <origin xyz="0 -0.0295 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.066 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_shoulder_0">
+      <origin xyz="0.0845 0.027 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.051 0.046 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_shoulder_1">
+      <origin xyz="-0.0845 0.027 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.051 0.046 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_front_lip">
+      <origin xyz="0 0.056 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.013 0.014" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame_bottom">
+      <origin xyz="0 -0.0595 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.006 0.036" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame_top">
+      <origin xyz="0 -0.0595 0.367" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.006 0.046" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame_hinge">
+      <origin xyz="0.1045 -0.0595 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.006 0.308" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="rear_frame_latch">
+      <origin xyz="-0.1045 -0.0595 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.006 0.308" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="guide_0">
+      <origin xyz="0.095 -0.036 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.038 0.004" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="guide_1">
+      <origin xyz="-0.095 -0.036 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.038 0.004" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="hinge_boss">
+      <origin xyz="0.104 -0.0575 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.308" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <visual name="latch_boss">
+      <origin xyz="-0.102 -0.0585 0.1735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.008 0.055" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.95 0.96 0.94 1" />
+        </material>
+      </visual>
+    <collision name="front_shell">
+      <origin xyz="0 0.0535 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.018 0.39" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_0">
+      <origin xyz="0.1045 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.125 0.39" />
+        </geometry>
+      </collision>
+    <collision name="side_shell_1">
+      <origin xyz="-0.1045 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.125 0.39" />
+        </geometry>
+      </collision>
+    <collision name="bottom_shell">
+      <origin xyz="0 0 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.125 0.02" />
+        </geometry>
+      </collision>
+    <collision name="top_rear_deck">
+      <origin xyz="0 -0.0295 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.066 0.014" />
+        </geometry>
+      </collision>
+    <collision name="top_shoulder_0">
+      <origin xyz="0.0845 0.027 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.051 0.046 0.014" />
+        </geometry>
+      </collision>
+    <collision name="top_shoulder_1">
+      <origin xyz="-0.0845 0.027 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.051 0.046 0.014" />
+        </geometry>
+      </collision>
+    <collision name="top_front_lip">
+      <origin xyz="0 0.056 0.383" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.013 0.014" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame_bottom">
+      <origin xyz="0 -0.0595 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.006 0.036" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame_top">
+      <origin xyz="0 -0.0595 0.367" rpy="0 0 0" />
+      <geometry>
+        <box size="0.198 0.006 0.046" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame_hinge">
+      <origin xyz="0.1045 -0.0595 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.006 0.308" />
+        </geometry>
+      </collision>
+    <collision name="rear_frame_latch">
+      <origin xyz="-0.1045 -0.0595 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.011 0.006 0.308" />
+        </geometry>
+      </collision>
+    <collision name="guide_0">
+      <origin xyz="0.095 -0.036 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.038 0.004" />
+        </geometry>
+      </collision>
+    <collision name="guide_1">
+      <origin xyz="-0.095 -0.036 0.046" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.038 0.004" />
+        </geometry>
+      </collision>
+    <collision name="hinge_boss">
+      <origin xyz="0.104 -0.0575 0.19" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.308" />
+        </geometry>
+      </collision>
+    <collision name="latch_boss">
+      <origin xyz="-0.102 -0.0585 0.1735" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.008 0.055" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="rear_panel">
+    <visual name="rear_cover">
+      <geometry>
+        <mesh filename="assets/meshes/rear_panel.obj" />
+        </geometry>
+      <material name="intake_gray">
+        <color rgba="0.83 0.84 0.8 1" />
+        </material>
+      </visual>
+    <collision name="rear_cover">
+      <geometry>
+        <mesh filename="assets/meshes/rear_panel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cassette_filter">
+    <visual name="cassette">
+      <geometry>
+        <mesh filename="assets/meshes/cassette_filter.obj" />
+        </geometry>
+      <material name="filter_charcoal">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <collision name="cassette">
+      <geometry>
+        <mesh filename="assets/meshes/cassette_filter.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="fragrance_tray">
+    <visual name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/fragrance_tray.obj" />
+        </geometry>
+      <material name="tray_dark">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="tray">
+      <geometry>
+        <mesh filename="assets/meshes/fragrance_tray.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="rear_panel_hinge" type="revolute">
+    <origin xyz="0.099 -0.0655 0.036" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="rear_panel" />
+    <axis xyz="0 0 1" />
+    <limit effort="5" velocity="2" lower="0" upper="2.0944" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="0 -0.0565 0.048" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cassette_filter" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="0.1" lower="0" upper="0.042" />
+    </joint>
+  <joint name="tray_hinge" type="revolute">
+    <origin xyz="0 -0.006 0.39" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="fragrance_tray" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.5" velocity="2.5" lower="0" upper="1.65806" />
+    </joint>
+  </robot>

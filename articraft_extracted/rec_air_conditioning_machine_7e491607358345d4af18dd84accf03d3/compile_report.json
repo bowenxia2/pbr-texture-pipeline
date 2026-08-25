@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 2 overlaps across 2 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 15,
+    "tool_call_count": 16,
+    "compile_attempt_count": 3,
+    "fingerprint_inputs": {
+      "model_py_sha256": "26bf6f4cee483a9f7a86f7c5ec03cc92f07abfb949513aae73e97553e6719ee7",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "f890772ff6523116191e48ce07601d2998aca70271e03c84316e0776b2279fa4"
+  }
+}

@@ -1,0 +1,249 @@
+{
+  "group_order": [
+    "frame__front_foot",
+    "frame__rear_foot",
+    "frame__spine",
+    "frame__front_riser",
+    "frame__rear_riser",
+    "frame__hinge_tower",
+    "frame__tower_web",
+    "frame__seat_bridge",
+    "frame__hinge_bridge",
+    "frame__pivot_bridge",
+    "frame__pivot_web",
+    "frame__pivot_lug_0",
+    "frame__pivot_lug_1",
+    "frame__hinge_lug_0",
+    "frame__hinge_lug_1",
+    "frame__selector_mount",
+    "frame__front_axle",
+    "frame__pivot_axle",
+    "back_pad__back_cushion",
+    "back_pad__hinge_strap_0",
+    "back_pad__hinge_strap_1",
+    "back_pad__hinge_tab_0",
+    "back_pad__hinge_tab_1",
+    "back_pad__ladder_rail",
+    "back_pad__ladder_tooth_0",
+    "back_pad__ladder_tooth_1",
+    "back_pad__ladder_tooth_2",
+    "back_pad__ladder_tooth_3",
+    "seat_pad__seat_cushion",
+    "rear_support__support_arm_0",
+    "rear_support__support_arm_1",
+    "rear_support__support_bridge",
+    "rear_support__support_head",
+    "rear_support__support_roller",
+    "rear_support__support_hub",
+    "transport_wheel_0__tire",
+    "transport_wheel_0__hub",
+    "transport_wheel_1__tire",
+    "transport_wheel_1__hub",
+    "selector_body__selector_plate",
+    "selector_body__selector_plate_lower",
+    "selector_body__selector_guide_top",
+    "selector_body__selector_guide_bottom",
+    "selector_body__selector_boss",
+    "selector_knob__selector_shaft",
+    "selector_knob__selector_pull",
+    "selector_knob__selector_tip"
+  ],
+  "face_ranges": {
+    "frame__front_foot": [
+      0,
+      12
+    ],
+    "frame__rear_foot": [
+      12,
+      24
+    ],
+    "frame__spine": [
+      24,
+      36
+    ],
+    "frame__front_riser": [
+      36,
+      48
+    ],
+    "frame__rear_riser": [
+      48,
+      60
+    ],
+    "frame__hinge_tower": [
+      60,
+      72
+    ],
+    "frame__tower_web": [
+      72,
+      84
+    ],
+    "frame__seat_bridge": [
+      84,
+      96
+    ],
+    "frame__hinge_bridge": [
+      96,
+      108
+    ],
+    "frame__pivot_bridge": [
+      108,
+      120
+    ],
+    "frame__pivot_web": [
+      120,
+      132
+    ],
+    "frame__pivot_lug_0": [
+      132,
+      144
+    ],
+    "frame__pivot_lug_1": [
+      144,
+      156
+    ],
+    "frame__hinge_lug_0": [
+      156,
+      168
+    ],
+    "frame__hinge_lug_1": [
+      168,
+      180
+    ],
+    "frame__selector_mount": [
+      180,
+      192
+    ],
+    "frame__front_axle": [
+      192,
+      204
+    ],
+    "frame__pivot_axle": [
+      204,
+      332
+    ],
+    "back_pad__back_cushion": [
+      332,
+      9304
+    ],
+    "back_pad__hinge_strap_0": [
+      9304,
+      9316
+    ],
+    "back_pad__hinge_strap_1": [
+      9316,
+      9328
+    ],
+    "back_pad__hinge_tab_0": [
+      9328,
+      9340
+    ],
+    "back_pad__hinge_tab_1": [
+      9340,
+      9352
+    ],
+    "back_pad__ladder_rail": [
+      9352,
+      9364
+    ],
+    "back_pad__ladder_tooth_0": [
+      9364,
+      9376
+    ],
+    "back_pad__ladder_tooth_1": [
+      9376,
+      9388
+    ],
+    "back_pad__ladder_tooth_2": [
+      9388,
+      9400
+    ],
+    "back_pad__ladder_tooth_3": [
+      9400,
+      9412
+    ],
+    "seat_pad__seat_cushion": [
+      9412,
+      16152
+    ],
+    "rear_support__support_arm_0": [
+      16152,
+      16164
+    ],
+    "rear_support__support_arm_1": [
+      16164,
+      16176
+    ],
+    "rear_support__support_bridge": [
+      16176,
+      16188
+    ],
+    "rear_support__support_head": [
+      16188,
+      16200
+    ],
+    "rear_support__support_roller": [
+      16200,
+      16212
+    ],
+    "rear_support__support_hub": [
+      16212,
+      16340
+    ],
+    "transport_wheel_0__tire": [
+      16340,
+      16468
+    ],
+    "transport_wheel_0__hub": [
+      16468,
+      16596
+    ],
+    "transport_wheel_1__tire": [
+      16596,
+      16724
+    ],
+    "transport_wheel_1__hub": [
+      16724,
+      16852
+    ],
+    "selector_body__selector_plate": [
+      16852,
+      16864
+    ],
+    "selector_body__selector_plate_lower": [
+      16864,
+      16876
+    ],
+    "selector_body__selector_guide_top": [
+      16876,
+      16888
+    ],
+    "selector_body__selector_guide_bottom": [
+      16888,
+      16900
+    ],
+    "selector_body__selector_boss": [
+      16900,
+      16912
+    ],
+    "selector_knob__selector_shaft": [
+      16912,
+      17040
+    ],
+    "selector_knob__selector_pull": [
+      17040,
+      17168
+    ],
+    "selector_knob__selector_tip": [
+      17168,
+      17296
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.20499999999999996,
+      0.23099999999999998
+    ],
+    "scale": 0.8403277310924371
+  }
+}

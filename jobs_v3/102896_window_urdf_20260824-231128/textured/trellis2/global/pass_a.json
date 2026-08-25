@@ -1,0 +1,25 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 5801054,
+  "groups": {
+    "link_0__translation-1": {
+      "texture_size": 1024,
+      "n_faces": 3272,
+      "texels": 418478,
+      "field_voxels": 392626
+    },
+    "link_1__translation-2": {
+      "texture_size": 1024,
+      "n_faces": 3624,
+      "texels": 400858,
+      "field_voxels": 380065
+    },
+    "link_2__base_body-3": {
+      "texture_size": 1024,
+      "n_faces": 3394,
+      "texels": 99443,
+      "field_voxels": 96194
+    }
+  }
+}

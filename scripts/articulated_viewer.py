@@ -54,14 +54,11 @@ class Handler(BaseHTTPRequestHandler):
 def main() -> int:
     ap = argparse.ArgumentParser(description="Joint-slider viewer for an articulated job.")
     ap.add_argument("job_dir", help="path to the job dir, e.g. jobs/8930_door_urdf_...")
-    ap.add_argument("--backend", default="trellis2", choices=["trellis2", "hunyuan"])
+    ap.add_argument("--backend", default="trellis2")
     ap.add_argument("--port", type=int, default=8090)
     args = ap.parse_args()
 
     job = JobDir.load(args.job_dir)
-    if job.kind != "urdf":
-        print(f"error: {job.job_id} is not an articulated (urdf) job")
-        return 1
     if not job.textured_urdf(args.backend).is_file():
         print(f"error: no textured URDF for backend {args.backend} "
               f"({job.textured_urdf(args.backend)})")

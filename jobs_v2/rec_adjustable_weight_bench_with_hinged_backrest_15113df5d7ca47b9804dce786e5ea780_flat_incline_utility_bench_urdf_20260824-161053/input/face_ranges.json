@@ -1,0 +1,39 @@
+{
+  "group_order": [
+    "base",
+    "seat",
+    "backrest",
+    "ladder",
+    "selector_knob"
+  ],
+  "face_ranges": {
+    "base": [
+      0,
+      2424
+    ],
+    "seat": [
+      2424,
+      2600
+    ],
+    "backrest": [
+      2600,
+      2976
+    ],
+    "ladder": [
+      2976,
+      3872
+    ],
+    "selector_knob": [
+      3872,
+      4256
+    ]
+  },
+  "norm": {
+    "center": [
+      0.2925000000000001,
+      0.0,
+      0.23600000000000002
+    ],
+    "scale": 0.8657922077922078
+  }
+}

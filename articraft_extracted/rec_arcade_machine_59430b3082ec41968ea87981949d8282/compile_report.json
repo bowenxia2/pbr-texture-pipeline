@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_59430b3082ec41968ea87981949d8282",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Isolated parts detected but allowed by justification: 1 part(s) ['coin_return'].\n- pose_index=0 at pose (coin_door_hinge=0, coin_return_hinge=0, seat_mount=0, steering_wheel_spin=0), part 'coin_return' is disconnected from the grounded body rooted at 'cabinet'; nearest_grounded_part='coin_door'; approx_gap=0.0005m; backend=fcl"
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 28,
+    "tool_call_count": 28,
+    "compile_attempt_count": 7,
+    "fingerprint_inputs": {
+      "model_py_sha256": "141d6213b3df15704ee54cd96a9bf9c1460fa65d45fc768649847adb81851992",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "b5b542458f855b99eac1872ec5bbfdf6c085c52dd779fbff695b9581749b6969"
+  }
+}

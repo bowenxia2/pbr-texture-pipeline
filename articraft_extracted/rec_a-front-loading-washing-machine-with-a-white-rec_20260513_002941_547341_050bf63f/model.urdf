@@ -1,0 +1,88 @@
+<robot name="washing_machine">
+  <link name="cabinet">
+    <visual name="cabinet_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_mesh.obj" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.9 0.9 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="drum">
+    <visual name="drum_shell">
+      <geometry>
+        <mesh filename="assets/meshes/drum_mesh.obj" />
+        </geometry>
+      <material name="metal">
+        <color rgba="0.7 0.7 0.7 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="door">
+    <visual name="door_frame">
+      <geometry>
+        <mesh filename="assets/meshes/door_frame_mesh.obj" />
+        </geometry>
+      <material name="dark_gray">
+        <color rgba="0.3 0.3 0.3 1" />
+        </material>
+      </visual>
+    <visual name="door_glass">
+      <geometry>
+        <mesh filename="assets/meshes/door_glass_mesh.obj" />
+        </geometry>
+      <material name="glass">
+        <color rgba="0.8 0.9 0.9 0.5" />
+        </material>
+      </visual>
+    </link>
+  <link name="detergent_drawer">
+    <visual name="drawer_body">
+      <geometry>
+        <mesh filename="assets/meshes/drawer_mesh.obj" />
+        </geometry>
+      <material name="white_plastic">
+        <color rgba="0.9 0.9 0.9 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="knob">
+    <visual name="knob_body">
+      <geometry>
+        <mesh filename="assets/meshes/knob_mesh.obj" />
+        </geometry>
+      <material name="black_plastic">
+        <color rgba="0.1 0.1 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="drum_axle" type="continuous">
+    <origin xyz="0.05 0 0.4" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="drum" />
+    <axis xyz="1 0 0" />
+    <limit effort="5" velocity="10" />
+    </joint>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="0.3 0.24 0.4" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="1" lower="0" upper="2.5" />
+    </joint>
+  <joint name="drawer_slide" type="prismatic">
+    <origin xyz="0.3 0.15 0.775" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="detergent_drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="1" lower="0" upper="0.2" />
+    </joint>
+  <joint name="knob_dial" type="continuous">
+    <origin xyz="0.3 -0.15 0.775" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="knob" />
+    <axis xyz="1 0 0" />
+    <limit effort="1" velocity="5" />
+    </joint>
+  </robot>

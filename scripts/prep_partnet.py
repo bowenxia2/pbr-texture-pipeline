@@ -20,8 +20,23 @@ import numpy as np
 import trimesh
 
 
+def _zup_to_yup(vertices: np.ndarray) -> np.ndarray:
+    """Rotate vertices from Z-up (PartNet-Mobility convention) to Y-up (glTF convention).
+
+    (x, y, z) -> (x, z, -y): old Z (up) becomes new Y (up)."""
+    out = np.empty_like(vertices)
+    out[:, 0] = vertices[:, 0]
+    out[:, 1] = vertices[:, 2]
+    out[:, 2] = -vertices[:, 1]
+    return out
+
+
 def combine_object(obj_dir: Path) -> trimesh.Trimesh:
-    """Merge every part OBJ under textured_objs/ into one Trimesh (geometry only)."""
+    """Merge every part OBJ under textured_objs/ into one Trimesh (geometry only).
+
+    PartNet-Mobility OBJs are Z-up; the merged GLB is rotated to Y-up so the
+    pipeline's standard normalization (preprocess_mesh with up='y') and TRELLIS.2's
+    own preprocess_mesh both produce an upright object."""
     part_dir = obj_dir / "textured_objs"
     parts = sorted(part_dir.glob("*.obj"))
     if not parts:
@@ -36,6 +51,7 @@ def combine_object(obj_dir: Path) -> trimesh.Trimesh:
     if not geoms:
         raise ValueError(f"all parts empty in {part_dir}")
     merged = trimesh.util.concatenate(geoms)
+    merged.vertices = _zup_to_yup(merged.vertices)
     return merged
 
 

@@ -1,0 +1,196 @@
+<robot name="torchiere_floor_lamp">
+  <material name="dark_bronze">
+    <color rgba="0.12 0.1 0.075 1" />
+    </material>
+  <material name="brushed_metal">
+    <color rgba="0.62 0.58 0.5 1" />
+    </material>
+  <material name="warm_cream">
+    <color rgba="0.94 0.9 0.78 1" />
+    </material>
+  <material name="warm_light">
+    <color rgba="1 0.78 0.36 0.65" />
+    </material>
+  <material name="black_rubber">
+    <color rgba="0.035 0.035 0.032 1" />
+    </material>
+  <link name="stand">
+    <visual name="round_base">
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.034" />
+        </geometry>
+      <material name="dark_bronze" />
+      </visual>
+    <visual name="base_step">
+      <origin xyz="0 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.118" length="0.01" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="base_bead">
+      <origin xyz="0 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/base_bead.obj" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="post">
+      <origin xyz="0 0 0.835" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="1.585" />
+        </geometry>
+      <material name="dark_bronze" />
+      </visual>
+    <visual name="lower_stop">
+      <origin xyz="0 0 1.066" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="upper_stop">
+      <origin xyz="0 0 1.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.036" length="0.012" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="top_socket">
+      <origin xyz="0 0 1.61" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.029" length="0.075" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="shade_neck_ring">
+      <origin xyz="0 0 1.624" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.016" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="main_dome_shade">
+      <origin xyz="0 0 1.62" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/main_dome_shade.obj" />
+        </geometry>
+      <material name="warm_cream" />
+      </visual>
+    <visual name="main_bulb">
+      <origin xyz="0 0 1.666" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.036" />
+        </geometry>
+      <material name="warm_light" />
+      </visual>
+    </link>
+  <link name="reading_arm">
+    <visual name="pivot_sleeve">
+      <geometry>
+        <mesh filename="assets/meshes/pivot_sleeve.obj" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="curved_arm">
+      <geometry>
+        <mesh filename="assets/meshes/curved_reading_arm.obj" />
+        </geometry>
+      <material name="dark_bronze" />
+      </visual>
+    <visual name="tip_barrel">
+      <origin xyz="0.455 0 0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.068" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    </link>
+  <link name="reading_shade">
+    <visual name="hinge_lug_0">
+      <origin xyz="0 0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="hinge_lug_1">
+      <origin xyz="0 -0.04 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.012" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="side_yoke_0">
+      <origin xyz="0.0247232 0.04 -0.0151579" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.055 0.012 0.014" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="side_yoke_1">
+      <origin xyz="0.0247232 -0.04 -0.0151579" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.055 0.012 0.014" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="shade_yoke">
+      <origin xyz="0.0494464 0 -0.0303159" rpy="0 0.55 0" />
+      <geometry>
+        <box size="0.02 0.086 0.014" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="shade_socket">
+      <origin xyz="0.0596767 0 -0.0365881" rpy="0 2.1208 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.045" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="reading_fitter">
+      <origin xyz="0.0750222 0 -0.0459965" rpy="0 2.1208 0" />
+      <geometry>
+        <cylinder radius="0.034" length="0.018" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="reading_shade_shell">
+      <origin xyz="0.0750222 0 -0.0459965" rpy="0 0.55 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reading_shade_shell.obj" />
+        </geometry>
+      <material name="warm_cream" />
+      </visual>
+    <visual name="bulb_stem">
+      <origin xyz="0.115091 0 -0.0705628" rpy="0 2.1208 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.09" />
+        </geometry>
+      <material name="brushed_metal" />
+      </visual>
+    <visual name="reading_bulb">
+      <origin xyz="0.149192 0 -0.0914703" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.023" />
+        </geometry>
+      <material name="warm_light" />
+      </visual>
+    </link>
+  <joint name="shoulder_swivel" type="revolute">
+    <origin xyz="0 0 1.1" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="reading_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.5" lower="-1.65" upper="1.65" />
+    </joint>
+  <joint name="shade_tilt" type="revolute">
+    <origin xyz="0.455 0 0.055" rpy="0 0 0" />
+    <parent link="reading_arm" />
+    <child link="reading_shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="1.2" lower="-0.65" upper="0.75" />
+    </joint>
+  </robot>

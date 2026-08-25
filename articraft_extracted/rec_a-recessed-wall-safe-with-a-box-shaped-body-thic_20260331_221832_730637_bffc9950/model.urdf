@@ -1,0 +1,267 @@
+<robot name="recessed_wall_safe">
+  <material name="safe_body">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="safe_door">
+    <color rgba="0.15 0.16 0.18 1" />
+    </material>
+  <material name="hardware">
+    <color rgba="0.7 0.72 0.74 1" />
+    </material>
+  <material name="handle_grip">
+    <color rgba="0.26 0.27 0.29 1" />
+    </material>
+  <link name="body">
+    <visual name="back_wall">
+      <origin xyz="-0.234 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.42 0.54" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="left_wall">
+      <origin xyz="-0.13 -0.204 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.54" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="-0.13 0.204 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.012 0.54" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="top_wall">
+      <origin xyz="-0.13 0 0.264" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.396 0.012" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="-0.13 0 -0.264" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.396 0.012" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="frame_left">
+      <origin xyz="-0.01 -0.185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.44" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="frame_right">
+      <origin xyz="-0.01 0.185 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.44" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="frame_top">
+      <origin xyz="-0.01 0 0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.32 0.05" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="frame_bottom">
+      <origin xyz="-0.01 0 -0.245" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.32 0.05" />
+        </geometry>
+      <material name="safe_body">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <visual name="hinge_support">
+      <origin xyz="0.001 -0.176 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.026 0.4" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="upper_hinge_knuckle">
+      <origin xyz="0.018 -0.17 0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.1" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_knuckle">
+      <origin xyz="0.018 -0.17 -0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.1" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="door">
+    <visual name="door_slab">
+      <origin xyz="0.002 0.177 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.334 0.454" />
+        </geometry>
+      <material name="safe_door">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="trim_top">
+      <origin xyz="0.025 0.177 0.192" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.264 0.07" />
+        </geometry>
+      <material name="safe_door">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="trim_bottom">
+      <origin xyz="0.025 0.177 -0.192" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.264 0.07" />
+        </geometry>
+      <material name="safe_door">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="trim_hinge_side">
+      <origin xyz="0.025 0.045 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.07 0.314" />
+        </geometry>
+      <material name="safe_door">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="trim_latch_side">
+      <origin xyz="0.025 0.309 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.07 0.314" />
+        </geometry>
+      <material name="safe_door">
+        <color rgba="0.15 0.16 0.18 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="-0.011 0.016 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.016 0.26" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="middle_hinge_knuckle">
+      <geometry>
+        <cylinder radius="0.01" length="0.16" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="dial">
+    <visual name="dial_base">
+      <origin xyz="0.003 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.044" length="0.006" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="dial_ring">
+      <origin xyz="0.013 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.014" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="dial_center">
+      <origin xyz="0.023 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.006" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="handle">
+    <visual name="handle_boss">
+      <origin xyz="0.005 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.01" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="handle_spindle">
+      <origin xyz="0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.03" />
+        </geometry>
+      <material name="hardware">
+        <color rgba="0.7 0.72 0.74 1" />
+        </material>
+      </visual>
+    <visual name="handle_bar">
+      <origin xyz="0.022 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.12 0.018" />
+        </geometry>
+      <material name="handle_grip">
+        <color rgba="0.26 0.27 0.29 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_door" type="revolute">
+    <origin xyz="0.018 -0.17 0" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="60" velocity="1.5" lower="0" upper="1.55" />
+    </joint>
+  <joint name="door_to_dial" type="continuous">
+    <origin xyz="0.022 0.181 0.085" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="1.5" velocity="6" />
+    </joint>
+  <joint name="door_to_handle" type="revolute">
+    <origin xyz="0.022 0.181 -0.085" rpy="0 0 0" />
+    <parent link="door" />
+    <child link="handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="4" lower="-1.1" upper="1.1" />
+    </joint>
+  </robot>

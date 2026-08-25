@@ -1,0 +1,459 @@
+<robot name="office_printer">
+  <material name="body_color">
+    <color rgba="0.81 0.83 0.85 1" />
+    </material>
+  <material name="trim_color">
+    <color rgba="0.38 0.4 0.44 1" />
+    </material>
+  <material name="dark_trim">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="glass_color">
+    <color rgba="0.1 0.15 0.18 0.55" />
+    </material>
+  <material name="button_color">
+    <color rgba="0.3 0.32 0.35 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_body.obj" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/printer_body.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="flatbed_lid">
+    <visual name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/flatbed_lid.obj" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <collision name="lid_shell">
+      <geometry>
+        <mesh filename="assets/meshes/flatbed_lid.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="adf_lid">
+    <visual name="adf_cover">
+      <geometry>
+        <mesh filename="assets/meshes/adf_lid.obj" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.38 0.4 0.44 1" />
+        </material>
+      </visual>
+    <collision name="adf_cover">
+      <geometry>
+        <mesh filename="assets/meshes/adf_lid.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="cassette">
+    <visual name="cassette_floor">
+      <origin xyz="-0.16 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.374 0.006" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_wall_0">
+      <origin xyz="-0.16 -0.183 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.072" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_wall_1">
+      <origin xyz="-0.16 0.183 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.072" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_back">
+      <origin xyz="-0.316 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.374 0.072" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_runner_0">
+      <origin xyz="-0.16 -0.191 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.01 0.016" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_runner_1">
+      <origin xyz="-0.16 0.191 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.01 0.016" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_front">
+      <origin xyz="0.007 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.028" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <visual name="cassette_fascia">
+      <origin xyz="0.038 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.388 0.108" />
+        </geometry>
+      <material name="body_color">
+        <color rgba="0.81 0.83 0.85 1" />
+        </material>
+      </visual>
+    <collision name="cassette_floor">
+      <origin xyz="-0.16 0 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.374 0.006" />
+        </geometry>
+      </collision>
+    <collision name="cassette_wall_0">
+      <origin xyz="-0.16 -0.183 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.072" />
+        </geometry>
+      </collision>
+    <collision name="cassette_wall_1">
+      <origin xyz="-0.16 0.183 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.008 0.072" />
+        </geometry>
+      </collision>
+    <collision name="cassette_back">
+      <origin xyz="-0.316 0 0.039" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.374 0.072" />
+        </geometry>
+      </collision>
+    <collision name="cassette_runner_0">
+      <origin xyz="-0.16 -0.191 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.01 0.016" />
+        </geometry>
+      </collision>
+    <collision name="cassette_runner_1">
+      <origin xyz="-0.16 0.191 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.24 0.01 0.016" />
+        </geometry>
+      </collision>
+    <collision name="cassette_front">
+      <origin xyz="0.007 0 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.3 0.028" />
+        </geometry>
+      </collision>
+    <collision name="cassette_fascia">
+      <origin xyz="0.038 0 0.054" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.388 0.108" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_shell">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.38 0.4 0.44 1" />
+        </material>
+      </visual>
+    <collision name="door_shell">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="control_panel">
+    <visual name="panel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/control_panel.obj" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.38 0.4 0.44 1" />
+        </material>
+      </visual>
+    <visual name="touchscreen">
+      <origin xyz="0.025 -0.018 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.09 0.046" />
+        </geometry>
+      <material name="glass_color">
+        <color rgba="0.1 0.15 0.18 0.55" />
+        </material>
+      </visual>
+    <collision name="panel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/control_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="touchscreen">
+      <origin xyz="0.025 -0.018 0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.002 0.09 0.046" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="selector_dial">
+    <visual name="dial_knob">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.016" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="dial_shaft">
+      <origin xyz="0.001 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.012" />
+        </geometry>
+      <material name="dark_trim">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="dial_knob">
+      <origin xyz="0.01 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.016" />
+        </geometry>
+      </collision>
+    <collision name="dial_shaft">
+      <origin xyz="0.001 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.012" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_0">
+    <visual name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <visual name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      </collision>
+    <collision name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_1">
+    <visual name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <visual name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      </collision>
+    <collision name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_2">
+    <visual name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <visual name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      </collision>
+    <collision name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_3">
+    <visual name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <visual name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      <material name="button_color">
+        <color rgba="0.3 0.32 0.35 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0.0015 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.017 0.01" />
+        </geometry>
+      </collision>
+    <collision name="key_stem">
+      <origin xyz="-0.001 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.009 0.006" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="control_panel_to_key_0" type="prismatic">
+    <origin xyz="0.03 -0.048 0.018" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="key_0" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.0012" />
+    </joint>
+  <joint name="control_panel_to_key_1" type="prismatic">
+    <origin xyz="0.03 -0.022 0.018" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="key_1" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.0012" />
+    </joint>
+  <joint name="control_panel_to_key_2" type="prismatic">
+    <origin xyz="0.03 0.004 0.018" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="key_2" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.0012" />
+    </joint>
+  <joint name="control_panel_to_key_3" type="prismatic">
+    <origin xyz="0.03 0.03 0.018" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="key_3" />
+    <axis xyz="-1 0 0" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.0012" />
+    </joint>
+  <joint name="body_to_flatbed_lid" type="revolute">
+    <origin xyz="-0.18 0 0.62" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="flatbed_lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="18" velocity="1.2" lower="0" upper="1.28" />
+    </joint>
+  <joint name="flatbed_lid_to_adf_lid" type="revolute">
+    <origin xyz="0.01 0 0.088" rpy="0 0 0" />
+    <parent link="flatbed_lid" />
+    <child link="adf_lid" />
+    <axis xyz="0 -1 0" />
+    <limit effort="12" velocity="1.2" lower="0" upper="1.22" />
+    </joint>
+  <joint name="body_to_cassette" type="prismatic">
+    <origin xyz="0.219 0 0.033" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="cassette" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="0.3" lower="0" upper="0.19" />
+    </joint>
+  <joint name="body_to_service_door" type="revolute">
+    <origin xyz="-0.108 0.235 0.195" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="service_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.8" lower="0" upper="1.55" />
+    </joint>
+  <joint name="body_to_control_panel" type="revolute">
+    <origin xyz="0.284 0.08 0.384" rpy="0 -0.35 0" />
+    <parent link="body" />
+    <child link="control_panel" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="1.6" lower="0" upper="0.45" />
+    </joint>
+  <joint name="control_panel_to_selector_dial" type="continuous">
+    <origin xyz="0.031 0.058 0.026" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="selector_dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.3" velocity="7" />
+    </joint>
+  </robot>

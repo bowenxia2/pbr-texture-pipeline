@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-realistic-highly-detailed-tower-crane-with-a-t_20260318_192043_5916181a",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "00b9eaacfc3beecd5c1c1338dedc6a8a7539b5218d7a0051ba66dc53755922be",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "e48b5521cff0c11dce112acc1ca320162f54673d4267535e6c6b94c226222260",
+    "model_py_mtime_ns": 1774526375100778626,
+    "model_py_size_bytes": 18834,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 120699,
+    "visual_mesh_file_count": 1,
+    "compile_elapsed_seconds": 0.011879540994414128
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

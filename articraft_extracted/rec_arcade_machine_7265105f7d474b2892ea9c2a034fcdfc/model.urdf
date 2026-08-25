@@ -1,0 +1,155 @@
+<robot name="sit_down_arcade_cabinet">
+  <material name="body_finish">
+    <color rgba="0.18 0.2 0.24 1" />
+    </material>
+  <material name="trim_finish">
+    <color rgba="0.08 0.09 0.1 1" />
+    </material>
+  <material name="seat_finish">
+    <color rgba="0.12 0.14 0.18 1" />
+    </material>
+  <material name="screen_finish">
+    <color rgba="0.03 0.03 0.04 1" />
+    </material>
+  <link name="cabinet_body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_body.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.18 0.2 0.24 1" />
+        </material>
+      </visual>
+    <visual name="seat_shell">
+      <origin xyz="-0.06 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/seat.obj" />
+        </geometry>
+      <material name="seat_finish">
+        <color rgba="0.12 0.14 0.18 1" />
+        </material>
+      </visual>
+    <visual name="console_shell">
+      <origin xyz="0.26 0 0.59" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_console.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.18 0.2 0.24 1" />
+        </material>
+      </visual>
+    <visual name="screen_panel">
+      <origin xyz="0.39 0 1.21" rpy="0 -0.55 0" />
+      <geometry>
+        <box size="0.03 0.52 0.33" />
+        </geometry>
+      <material name="screen_finish">
+        <color rgba="0.03 0.03 0.04 1" />
+        </material>
+      </visual>
+    <visual name="screen_housing">
+      <origin xyz="0.39 0 1.21" rpy="0 -0.55 0" />
+      <geometry>
+        <box size="0.14 0.42 0.24" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/cabinet_body.obj" />
+        </geometry>
+      </collision>
+    <collision name="seat_shell">
+      <origin xyz="-0.06 0 0.12" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/seat.obj" />
+        </geometry>
+      </collision>
+    <collision name="console_shell">
+      <origin xyz="0.26 0 0.59" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/control_console.obj" />
+        </geometry>
+      </collision>
+    <collision name="screen_panel">
+      <origin xyz="0.39 0 1.21" rpy="0 -0.55 0" />
+      <geometry>
+        <box size="0.03 0.52 0.33" />
+        </geometry>
+      </collision>
+    <collision name="screen_housing">
+      <origin xyz="0.39 0 1.21" rpy="0 -0.55 0" />
+      <geometry>
+        <box size="0.14 0.42 0.24" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="steering_wheel">
+    <visual name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/steering_wheel.obj" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="wheel_rim">
+      <geometry>
+        <mesh filename="assets/meshes/steering_wheel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gear_shifter">
+    <visual name="shifter_lever">
+      <geometry>
+        <mesh filename="assets/meshes/gear_shifter.obj" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.09 0.1 1" />
+        </material>
+      </visual>
+    <collision name="shifter_lever">
+      <geometry>
+        <mesh filename="assets/meshes/gear_shifter.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      <material name="body_finish">
+        <color rgba="0.18 0.2 0.24 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_steering_wheel" type="continuous">
+    <origin xyz="0.135 0 0.958" rpy="0 0 0" />
+    <parent link="cabinet_body" />
+    <child link="steering_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="8" velocity="8" />
+    </joint>
+  <joint name="body_to_gear_shifter" type="revolute">
+    <origin xyz="0.2 -0.25 0.7" rpy="0 0 0" />
+    <parent link="cabinet_body" />
+    <child link="gear_shifter" />
+    <axis xyz="0 1 0" />
+    <limit effort="5" velocity="4" lower="-0.3" upper="0.38" />
+    </joint>
+  <joint name="body_to_service_door" type="revolute">
+    <origin xyz="-0.744 -0.21 0.3" rpy="0 0 0" />
+    <parent link="cabinet_body" />
+    <child link="service_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="2" lower="0" upper="1.55" />
+    </joint>
+  </robot>

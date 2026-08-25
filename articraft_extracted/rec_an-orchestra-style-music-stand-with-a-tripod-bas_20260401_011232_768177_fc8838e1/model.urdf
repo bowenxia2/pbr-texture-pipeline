@@ -1,0 +1,247 @@
+<robot name="orchestra_music_stand">
+  <material name="powder_black">
+    <color rgba="0.16 0.16 0.17 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.23 0.24 0.26 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.36" rpy="0 0 0" />
+      <mass value="3.2" />
+      <inertia ixx="0.292267" ixy="0" ixz="0" iyy="0.292267" iyz="0" izz="0.308053" />
+      </inertial>
+    <visual name="tripod_hub">
+      <origin xyz="0 0 0.1" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.05" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="lower_collar">
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.06" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="outer_tube">
+      <origin xyz="0 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0145" length="0.34" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="top_socket">
+      <origin xyz="0 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.05" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="clamp_stem">
+      <origin xyz="0.03 0 0.55" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.028" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="clamp_knob">
+      <origin xyz="0.048 0 0.55" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="leg_0">
+      <geometry>
+        <mesh filename="assets/meshes/music_stand_leg_0.obj" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="foot_0">
+      <origin xyz="0.36 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="leg_1">
+      <geometry>
+        <mesh filename="assets/meshes/music_stand_leg_1.obj" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="foot_1">
+      <origin xyz="-0.18 0.311769 0.015" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="leg_2">
+      <geometry>
+        <mesh filename="assets/meshes/music_stand_leg_2.obj" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="foot_2">
+      <origin xyz="-0.18 -0.311769 0.015" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_pole">
+    <inertial>
+      <origin xyz="0 0 0.155" rpy="0 0 0" />
+      <mass value="1" />
+      <inertia ixx="0.0920083" ixy="0" ixz="0" iyy="0.0920083" iyz="0" izz="0.000266667" />
+      </inertial>
+    <visual name="inner_tube">
+      <origin xyz="0 0 0.14" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0105" length="1.02" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.665" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.03" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="desk">
+    <inertial>
+      <origin xyz="0 -0.09 0.205" rpy="0 0 0" />
+      <mass value="1.4" />
+      <inertia ixx="0.0272183" ixy="0" ixz="0" iyy="0.0581583" iyz="0" izz="0.0422333" />
+      </inertial>
+    <visual name="receiver_block">
+      <origin xyz="0 0 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.064 0.03 0.036" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="support_arm">
+      <geometry>
+        <mesh filename="assets/meshes/music_stand_support_arm.obj" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="panel">
+      <origin xyz="0 -0.145 0.23" rpy="0.33 0 0" />
+      <geometry>
+        <box size="0.54 0.006 0.35" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="center_reinforcement">
+      <origin xyz="0 -0.141 0.205" rpy="0.33 0 0" />
+      <geometry>
+        <box size="0.1 0.018 0.22" />
+        </geometry>
+      <material name="powder_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="left_flange">
+      <origin xyz="-0.263 -0.14 0.23" rpy="0.33 0 0" />
+      <geometry>
+        <box size="0.014 0.028 0.35" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="right_flange">
+      <origin xyz="0.263 -0.14 0.23" rpy="0.33 0 0" />
+      <geometry>
+        <box size="0.014 0.028 0.35" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="lower_back_rail">
+      <origin xyz="0 -0.096 0.076" rpy="0.33 0 0" />
+      <geometry>
+        <box size="0.5 0.022 0.03" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="retaining_shelf">
+      <origin xyz="0 -0.012 0.062" rpy="0.08 0 0" />
+      <geometry>
+        <box size="0.5 0.055 0.012" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    <visual name="retaining_fence">
+      <origin xyz="0 0.014 0.068" rpy="0.08 0 0" />
+      <geometry>
+        <box size="0.5 0.006 0.022" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.23 0.24 0.26 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_upper_pole" type="prismatic">
+    <origin xyz="0 0 0.54" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="upper_pole" />
+    <axis xyz="0 0 1" />
+    <limit effort="60" velocity="0.15" lower="0" upper="0.3" />
+    </joint>
+  <joint name="upper_pole_to_desk" type="fixed">
+    <origin xyz="0 0 0.68" rpy="0 0 0" />
+    <parent link="upper_pole" />
+    <child link="desk" />
+    </joint>
+  </robot>

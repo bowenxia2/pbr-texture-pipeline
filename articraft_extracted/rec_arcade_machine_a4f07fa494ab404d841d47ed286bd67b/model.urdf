@@ -1,0 +1,299 @@
+<robot name="sit_down_arcade_racer">
+  <material name="cabinet_finish">
+    <color rgba="0.1 0.16 0.28 1" />
+    </material>
+  <material name="trim_finish">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="seat_finish">
+    <color rgba="0.16 0.16 0.17 1" />
+    </material>
+  <material name="wheel_finish">
+    <color rgba="0.06 0.06 0.06 1" />
+    </material>
+  <material name="glass_finish">
+    <color rgba="0.09 0.15 0.18 0.55" />
+    </material>
+  <material name="metal_finish">
+    <color rgba="0.56 0.58 0.62 1" />
+    </material>
+  <material name="button_red">
+    <color rgba="0.88 0.14 0.16 0.95" />
+    </material>
+  <material name="button_amber">
+    <color rgba="0.95 0.6 0.1 0.95" />
+    </material>
+  <material name="button_green">
+    <color rgba="0.2 0.82 0.34 0.95" />
+    </material>
+  <material name="button_blue">
+    <color rgba="0.16 0.56 0.96 0.95" />
+    </material>
+  <link name="cabinet">
+    <visual name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      <material name="cabinet_finish">
+        <color rgba="0.1 0.16 0.28 1" />
+        </material>
+      </visual>
+    <visual name="seat_pedestal">
+      <origin xyz="0 1.24 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.36 0.2" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="seat_base">
+      <origin xyz="0 1.22 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.4 0.09" />
+        </geometry>
+      <material name="seat_finish">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="seat_back">
+      <origin xyz="0 1.43 0.72" rpy="-0.3 0 0" />
+      <geometry>
+        <box size="0.41 0.14 0.54" />
+        </geometry>
+      <material name="seat_finish">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="screen_shroud">
+      <origin xyz="0 0.56 1.02" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.64 0.22 0.52" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screen">
+      <origin xyz="0 0.49 1.06" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.5 0.04 0.32" />
+        </geometry>
+      <material name="glass_finish">
+        <color rgba="0.09 0.15 0.18 0.55" />
+        </material>
+      </visual>
+    <visual name="dash_plate">
+      <origin xyz="0 0.73 0.76" rpy="-0.383972 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_dash_plate.obj" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="coin_frame">
+      <origin xyz="0 0 0.335" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_frame.obj" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="steering_column">
+      <origin xyz="0 0.99 0.75" rpy="-0.698132 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.28" />
+        </geometry>
+      <material name="trim_finish">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="shell">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_cabinet_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="seat_pedestal">
+      <origin xyz="0 1.24 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.37 0.36 0.2" />
+        </geometry>
+      </collision>
+    <collision name="seat_base">
+      <origin xyz="0 1.22 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.43 0.4 0.09" />
+        </geometry>
+      </collision>
+    <collision name="seat_back">
+      <origin xyz="0 1.43 0.72" rpy="-0.3 0 0" />
+      <geometry>
+        <box size="0.41 0.14 0.54" />
+        </geometry>
+      </collision>
+    <collision name="screen_shroud">
+      <origin xyz="0 0.56 1.02" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.64 0.22 0.52" />
+        </geometry>
+      </collision>
+    <collision name="screen">
+      <origin xyz="0 0.49 1.06" rpy="-0.2 0 0" />
+      <geometry>
+        <box size="0.5 0.04 0.32" />
+        </geometry>
+      </collision>
+    <collision name="dash_plate">
+      <origin xyz="0 0.73 0.76" rpy="-0.383972 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_dash_plate.obj" />
+        </geometry>
+      </collision>
+    <collision name="coin_frame">
+      <origin xyz="0 0 0.335" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="steering_column">
+      <origin xyz="0 0.99 0.75" rpy="-0.698132 0 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.28" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="steering_wheel">
+    <visual name="wheel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_steering_wheel.obj" />
+        </geometry>
+      <material name="wheel_finish">
+        <color rgba="0.06 0.06 0.06 1" />
+        </material>
+      </visual>
+    <collision name="wheel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_steering_wheel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="coin_door">
+    <visual name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_door.obj" />
+        </geometry>
+      <material name="metal_finish">
+        <color rgba="0.56 0.58 0.62 1" />
+        </material>
+      </visual>
+    <collision name="door_panel">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_coin_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gear_button_0">
+    <visual name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      <material name="button_red">
+        <color rgba="0.88 0.14 0.16 0.95" />
+        </material>
+      </visual>
+    <collision name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gear_button_1">
+    <visual name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      <material name="button_amber">
+        <color rgba="0.95 0.6 0.1 0.95" />
+        </material>
+      </visual>
+    <collision name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gear_button_2">
+    <visual name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      <material name="button_green">
+        <color rgba="0.2 0.82 0.34 0.95" />
+        </material>
+      </visual>
+    <collision name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="gear_button_3">
+    <visual name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      <material name="button_blue">
+        <color rgba="0.16 0.56 0.96 0.95" />
+        </material>
+      </visual>
+    <collision name="button">
+      <geometry>
+        <mesh filename="assets/meshes/arcade_gear_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="cabinet_to_steering_wheel" type="continuous">
+    <origin xyz="0 1.09 0.87" rpy="-0.698132 0 0" />
+    <parent link="cabinet" />
+    <child link="steering_wheel" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="8" />
+    </joint>
+  <joint name="cabinet_to_coin_door" type="revolute">
+    <origin xyz="-0.145 0 0.13" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="coin_door" />
+    <axis xyz="0 0 -1" />
+    <limit effort="12" velocity="1.6" lower="0" upper="1.35" />
+    </joint>
+  <joint name="cabinet_to_gear_button_0" type="prismatic">
+    <origin xyz="-0.15 0.73 0.76" rpy="-0.383972 0 0" />
+    <parent link="cabinet" />
+    <child link="gear_button_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.008" />
+    </joint>
+  <joint name="cabinet_to_gear_button_1" type="prismatic">
+    <origin xyz="-0.05 0.73 0.76" rpy="-0.383972 0 0" />
+    <parent link="cabinet" />
+    <child link="gear_button_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.008" />
+    </joint>
+  <joint name="cabinet_to_gear_button_2" type="prismatic">
+    <origin xyz="0.05 0.73 0.76" rpy="-0.383972 0 0" />
+    <parent link="cabinet" />
+    <child link="gear_button_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.008" />
+    </joint>
+  <joint name="cabinet_to_gear_button_3" type="prismatic">
+    <origin xyz="0.15 0.73 0.76" rpy="-0.383972 0 0" />
+    <parent link="cabinet" />
+    <child link="gear_button_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.08" lower="0" upper="0.008" />
+    </joint>
+  </robot>

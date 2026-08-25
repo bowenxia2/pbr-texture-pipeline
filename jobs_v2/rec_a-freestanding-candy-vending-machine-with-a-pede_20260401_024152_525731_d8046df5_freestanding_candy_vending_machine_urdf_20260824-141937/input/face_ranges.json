@@ -1,0 +1,109 @@
+{
+  "group_order": [
+    "machine_body__pedestal_foot",
+    "machine_body__pedestal_column",
+    "machine_body__lower_collar",
+    "machine_body__coin_box_shell",
+    "machine_body__front_service_plate",
+    "machine_body__coin_slot",
+    "machine_body__knob_bezel",
+    "machine_body__chute_floor",
+    "machine_body__chute_roof",
+    "machine_body__chute_side_left",
+    "machine_body__chute_side_right",
+    "machine_body__upper_collar",
+    "machine_body__reservoir_shell",
+    "machine_body__lid",
+    "machine_body__lid_cap",
+    "dispense_knob__axle",
+    "dispense_knob__wheel",
+    "dispense_knob__finger_post",
+    "dispense_knob__finger_grip"
+  ],
+  "face_ranges": {
+    "machine_body__pedestal_foot": [
+      0,
+      672
+    ],
+    "machine_body__pedestal_column": [
+      672,
+      800
+    ],
+    "machine_body__lower_collar": [
+      800,
+      928
+    ],
+    "machine_body__coin_box_shell": [
+      928,
+      940
+    ],
+    "machine_body__front_service_plate": [
+      940,
+      952
+    ],
+    "machine_body__coin_slot": [
+      952,
+      964
+    ],
+    "machine_body__knob_bezel": [
+      964,
+      1092
+    ],
+    "machine_body__chute_floor": [
+      1092,
+      1104
+    ],
+    "machine_body__chute_roof": [
+      1104,
+      1116
+    ],
+    "machine_body__chute_side_left": [
+      1116,
+      1128
+    ],
+    "machine_body__chute_side_right": [
+      1128,
+      1140
+    ],
+    "machine_body__upper_collar": [
+      1140,
+      1268
+    ],
+    "machine_body__reservoir_shell": [
+      1268,
+      3284
+    ],
+    "machine_body__lid": [
+      3284,
+      3412
+    ],
+    "machine_body__lid_cap": [
+      3412,
+      3540
+    ],
+    "dispense_knob__axle": [
+      3540,
+      3668
+    ],
+    "dispense_knob__wheel": [
+      3668,
+      3796
+    ],
+    "dispense_knob__finger_post": [
+      3796,
+      3924
+    ],
+    "dispense_knob__finger_grip": [
+      3924,
+      5204
+    ]
+  },
+  "norm": {
+    "center": [
+      0.020000000000000004,
+      0.0,
+      0.756
+    ],
+    "scale": 0.6613690476190477
+  }
+}

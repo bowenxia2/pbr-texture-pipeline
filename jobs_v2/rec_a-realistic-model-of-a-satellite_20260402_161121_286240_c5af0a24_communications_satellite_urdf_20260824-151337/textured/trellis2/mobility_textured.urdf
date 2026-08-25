@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="communications_satellite">
+	<material name="blanket_gold">
+		<color rgba="0.78 0.66 0.2 1" />
+	</material>
+	<material name="radiator_black">
+		<color rgba="0.12 0.13 0.15 1" />
+	</material>
+	<material name="solar_blue">
+		<color rgba="0.08 0.17 0.36 1" />
+	</material>
+	<material name="frame_aluminum">
+		<color rgba="0.72 0.74 0.78 1" />
+	</material>
+	<material name="antenna_white">
+		<color rgba="0.9 0.92 0.95 1" />
+	</material>
+	<material name="sensor_white">
+		<color rgba="0.83 0.86 0.9 1" />
+	</material>
+	<material name="dark_metal">
+		<color rgba="0.24 0.25 0.28 1" />
+	</material>
+	<link name="bus">
+		<inertial>
+			<origin xyz="0 0 -0.03" rpy="0 0 0" />
+			<mass value="860" />
+			<inertia ixx="587.609" ixy="0" ixz="0" iyy="606.873" iyz="0" izz="180.313" />
+		</inertial>
+		<visual name="bus__main_bus">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__main_bus.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__top_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__top_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__bottom_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__bottom_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__radiator_plus_x">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__radiator_plus_x.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__radiator_minus_x">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__radiator_minus_x.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__antenna_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__antenna_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__left_array_clevis">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__left_array_clevis.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__right_array_clevis">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__right_array_clevis.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__sensor_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__sensor_plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__sensor_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__sensor_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__star_tracker_dome">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__star_tracker_dome.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__engine_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__engine_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="bus__apogee_nozzle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bus__apogee_nozzle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="left_solar_wing">
+		<inertial>
+			<origin xyz="0 1.05 0" rpy="0 0 0" />
+			<mass value="42" />
+			<inertia ixx="49.5054" ixy="0" ixz="0" iyy="34.0876" iyz="0" izz="15.4522" />
+		</inertial>
+		<visual name="left_solar_wing__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__root_yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__root_yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__inner_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__inner_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__mid_hinge_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__mid_hinge_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__outer_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__outer_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__top_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__top_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__bottom_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__bottom_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__inner_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__inner_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__outer_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__outer_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__inner_upper_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__inner_upper_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__inner_lower_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__inner_lower_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__outer_upper_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__outer_upper_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_solar_wing__outer_lower_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_solar_wing__outer_lower_cells.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="right_solar_wing">
+		<inertial>
+			<origin xyz="0 1.05 0" rpy="0 0 0" />
+			<mass value="42" />
+			<inertia ixx="49.5054" ixy="0" ixz="0" iyy="34.0876" iyz="0" izz="15.4522" />
+		</inertial>
+		<visual name="right_solar_wing__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__root_yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__root_yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__inner_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__inner_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__mid_hinge_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__mid_hinge_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__outer_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__outer_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__top_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__top_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__bottom_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__bottom_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__inner_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__inner_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__outer_frame_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__outer_frame_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__inner_upper_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__inner_upper_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__inner_lower_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__inner_lower_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__outer_upper_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__outer_upper_cells.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_solar_wing__outer_lower_cells">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_solar_wing__outer_lower_cells.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="high_gain_antenna">
+		<inertial>
+			<origin xyz="0.55 0 0" rpy="0 0 0" />
+			<mass value="34" />
+			<inertia ixx="4.79627" ixy="0" ixz="0" iyy="5.82647" iyz="0" izz="5.82647" />
+		</inertial>
+		<visual name="high_gain_antenna__mount_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__mount_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__support_boom">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__support_boom.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__transceiver_box">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__transceiver_box.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__dish_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__dish_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__dish_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__dish_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__dish_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__dish_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_ring">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_ring.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_support_boom">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_support_boom.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_strut_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_strut_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_strut_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_strut_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_strut_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_strut_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="high_gain_antenna__feed_horn">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/high_gain_antenna__feed_horn.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="bus_to_left_solar_wing" type="revolute">
+		<origin xyz="0 0.578 0" rpy="0 0 0" />
+		<parent link="bus" />
+		<child link="left_solar_wing" />
+		<axis xyz="0 0 1" />
+		<limit effort="180" velocity="0.35" lower="0" upper="1.45" />
+	</joint>
+	<joint name="bus_to_right_solar_wing" type="revolute">
+		<origin xyz="0 -0.578 0" rpy="0 0 3.14159" />
+		<parent link="bus" />
+		<child link="right_solar_wing" />
+		<axis xyz="0 0 1" />
+		<limit effort="180" velocity="0.35" lower="0" upper="1.45" />
+	</joint>
+	<joint name="bus_to_high_gain_antenna" type="fixed">
+		<origin xyz="0.67 0 0.04" rpy="0 0 0" />
+		<parent link="bus" />
+		<child link="high_gain_antenna" />
+	</joint>
+</robot>

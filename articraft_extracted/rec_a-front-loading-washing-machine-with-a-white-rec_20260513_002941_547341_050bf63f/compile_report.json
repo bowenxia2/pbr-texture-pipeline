@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "ca4f81edbef7409729630b87475af348220098f04ee1e5b9933664f574290ea7",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "d27628b1a55bc5a5709103238dba85bcfef5c766194b03336468f24ce6fd318d",
+    "model_py_mtime_ns": 1778769468280779797,
+    "model_py_size_bytes": 5789,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 184028,
+    "visual_mesh_file_count": 6,
+    "compile_elapsed_seconds": 0.575161125001614
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "b5f32be02edd506a7061794659d7ce9625757f065d61df9a6c76f64a179a9fc0",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "74e125e44f5110ce44abac3ba6a520de3296fda97161850f0ff896a6812bfa13",
+    "model_py_mtime_ns": 1775055075731245422,
+    "model_py_size_bytes": 13324,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 76834,
+    "visual_mesh_file_count": 1,
+    "compile_elapsed_seconds": 0.009016958007123321
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

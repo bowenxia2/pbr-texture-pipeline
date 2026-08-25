@@ -1,0 +1,259 @@
+{
+  "group_order": [
+    "base__side_rail_0",
+    "base__side_rail_1",
+    "base__front_crossmember",
+    "base__rear_crossmember",
+    "base__center_crossmember",
+    "base__front_handle_arm_0",
+    "base__front_handle_arm_1",
+    "base__front_handle_grip",
+    "base__front_axle",
+    "base__wheel_tire_0",
+    "base__wheel_hub_0",
+    "base__wheel_tire_1",
+    "base__wheel_hub_1",
+    "base__upper_rail_0",
+    "base__front_brace_0",
+    "base__rear_brace_0",
+    "base__upper_rail_1",
+    "base__front_brace_1",
+    "base__rear_brace_1",
+    "base__seat_hinge_plate_0",
+    "base__seat_hinge_plate_1",
+    "base__seat_hinge_pin",
+    "base__back_hinge_plate_0",
+    "base__back_hinge_plate_1",
+    "base__back_hinge_pin",
+    "base__rear_pivot_plate_0",
+    "base__rear_pivot_plate_1",
+    "base__rear_pivot_cap_0",
+    "base__rear_pivot_cap_1",
+    "backrest__back_pad",
+    "backrest__back_center_seam",
+    "backrest__back_hinge_sleeve",
+    "backrest__back_hinge_leaf",
+    "backrest__adjust_bracket_rail_0",
+    "backrest__adjust_bracket_rail_1",
+    "backrest__adjust_ladder_catch_0",
+    "backrest__adjust_ladder_catch_1",
+    "backrest__adjust_ladder_catch_2",
+    "backrest__adjust_ladder_catch_3",
+    "seat__seat_pad",
+    "seat__seat_center_seam",
+    "seat__seat_hinge_sleeve",
+    "seat__seat_hinge_leaf",
+    "support_ladder__ladder_pivot_sleeve",
+    "support_ladder__ladder_side_rail_0",
+    "support_ladder__ladder_side_rail_1",
+    "support_ladder__ladder_rung_0",
+    "support_ladder__ladder_rung_1",
+    "support_ladder__ladder_rung_2"
+  ],
+  "face_ranges": {
+    "base__side_rail_0": [
+      0,
+      12
+    ],
+    "base__side_rail_1": [
+      12,
+      24
+    ],
+    "base__front_crossmember": [
+      24,
+      36
+    ],
+    "base__rear_crossmember": [
+      36,
+      48
+    ],
+    "base__center_crossmember": [
+      48,
+      60
+    ],
+    "base__front_handle_arm_0": [
+      60,
+      72
+    ],
+    "base__front_handle_arm_1": [
+      72,
+      84
+    ],
+    "base__front_handle_grip": [
+      84,
+      96
+    ],
+    "base__front_axle": [
+      96,
+      224
+    ],
+    "base__wheel_tire_0": [
+      224,
+      352
+    ],
+    "base__wheel_hub_0": [
+      352,
+      480
+    ],
+    "base__wheel_tire_1": [
+      480,
+      608
+    ],
+    "base__wheel_hub_1": [
+      608,
+      736
+    ],
+    "base__upper_rail_0": [
+      736,
+      748
+    ],
+    "base__front_brace_0": [
+      748,
+      760
+    ],
+    "base__rear_brace_0": [
+      760,
+      772
+    ],
+    "base__upper_rail_1": [
+      772,
+      784
+    ],
+    "base__front_brace_1": [
+      784,
+      796
+    ],
+    "base__rear_brace_1": [
+      796,
+      808
+    ],
+    "base__seat_hinge_plate_0": [
+      808,
+      820
+    ],
+    "base__seat_hinge_plate_1": [
+      820,
+      832
+    ],
+    "base__seat_hinge_pin": [
+      832,
+      960
+    ],
+    "base__back_hinge_plate_0": [
+      960,
+      972
+    ],
+    "base__back_hinge_plate_1": [
+      972,
+      984
+    ],
+    "base__back_hinge_pin": [
+      984,
+      1112
+    ],
+    "base__rear_pivot_plate_0": [
+      1112,
+      1124
+    ],
+    "base__rear_pivot_plate_1": [
+      1124,
+      1136
+    ],
+    "base__rear_pivot_cap_0": [
+      1136,
+      1264
+    ],
+    "base__rear_pivot_cap_1": [
+      1264,
+      1392
+    ],
+    "backrest__back_pad": [
+      1392,
+      2044
+    ],
+    "backrest__back_center_seam": [
+      2044,
+      2056
+    ],
+    "backrest__back_hinge_sleeve": [
+      2056,
+      2184
+    ],
+    "backrest__back_hinge_leaf": [
+      2184,
+      2196
+    ],
+    "backrest__adjust_bracket_rail_0": [
+      2196,
+      2208
+    ],
+    "backrest__adjust_bracket_rail_1": [
+      2208,
+      2220
+    ],
+    "backrest__adjust_ladder_catch_0": [
+      2220,
+      2232
+    ],
+    "backrest__adjust_ladder_catch_1": [
+      2232,
+      2244
+    ],
+    "backrest__adjust_ladder_catch_2": [
+      2244,
+      2256
+    ],
+    "backrest__adjust_ladder_catch_3": [
+      2256,
+      2268
+    ],
+    "seat__seat_pad": [
+      2268,
+      2920
+    ],
+    "seat__seat_center_seam": [
+      2920,
+      2932
+    ],
+    "seat__seat_hinge_sleeve": [
+      2932,
+      3060
+    ],
+    "seat__seat_hinge_leaf": [
+      3060,
+      3072
+    ],
+    "support_ladder__ladder_pivot_sleeve": [
+      3072,
+      3200
+    ],
+    "support_ladder__ladder_side_rail_0": [
+      3200,
+      3212
+    ],
+    "support_ladder__ladder_side_rail_1": [
+      3212,
+      3224
+    ],
+    "support_ladder__ladder_rung_0": [
+      3224,
+      3236
+    ],
+    "support_ladder__ladder_rung_1": [
+      3236,
+      3248
+    ],
+    "support_ladder__ladder_rung_2": [
+      3248,
+      3260
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.01694816436552571,
+      0.0,
+      0.2524999559217681
+    ],
+    "scale": 0.45684667056832023
+  }
+}

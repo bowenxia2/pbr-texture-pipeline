@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-compact-on-camera-flash-with-a-narrow-body-a-r_20260426_045857_759417_bff0fdec",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "908fe12fde8f9a4176b524c87894fb9c9e2cc829a172980de4b3f3894725aab7",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "9a27a959e92d00fb15e93c3c8446a04c3a30bf12c56dcc74e3820c28a064ace9",
+    "model_py_mtime_ns": 1777208304361581962,
+    "model_py_size_bytes": 4443,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.0017937500088009983
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

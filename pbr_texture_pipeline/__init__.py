@@ -1,8 +1,8 @@
-"""pbr-texture-pipeline: VLM-guided texturing of untextured 3D meshes.
+"""pbr-texture-pipeline: VLM-guided texturing of untextured articulated 3D assets.
 
-Given only a blank mesh, generate a category-aware, realistic, pose-matched
-reference image, then drive the existing TRELLIS.2 / Hunyuan3D-2.1
-texturing backends with it. See PRD.md for the full spec.
+Given a URDF-described articulated object, generate a category-aware, realistic,
+pose-matched reference image, then drive the TRELLIS.2 texturing backend with it.
+See PRD.md for the full spec.
 """
 
 import os as _os

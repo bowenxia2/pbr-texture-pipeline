@@ -1,0 +1,229 @@
+<robot name="cylindrical_air_fryer">
+  <material name="body_matte">
+    <color rgba="0.17 0.18 0.19 1" />
+    </material>
+  <material name="drawer_matte">
+    <color rgba="0.13 0.14 0.15 1" />
+    </material>
+  <material name="basket_dark">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="handle_dark">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="dial_dark">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="control_accent">
+    <color rgba="0.52 0.53 0.54 1" />
+    </material>
+  <material name="release_accent">
+    <color rgba="0.72 0.17 0.14 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_body.obj" />
+        </geometry>
+      <material name="body_matte">
+        <color rgba="0.17 0.18 0.19 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_body.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="drawer">
+    <visual name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_drawer.obj" />
+        </geometry>
+      <material name="drawer_matte">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    <collision name="drawer_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_drawer.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="basket">
+    <visual name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_basket.obj" />
+        </geometry>
+      <material name="basket_dark">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="basket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_basket.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_handle.obj" />
+        </geometry>
+      <material name="handle_dark">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="handle_shell">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_handle.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="release_button">
+    <visual name="release_button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_release_button.obj" />
+        </geometry>
+      <material name="release_accent">
+        <color rgba="0.72 0.17 0.14 1" />
+        </material>
+      </visual>
+    <collision name="release_button_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_release_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="control_panel">
+    <visual name="control_panel">
+      <origin xyz="0.002 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.074 0.092" />
+        </geometry>
+      <material name="drawer_matte">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    <collision name="control_panel">
+      <origin xyz="0.002 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.074 0.092" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="temperature_dial">
+    <visual name="temperature_dial">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_temperature_dial.obj" />
+        </geometry>
+      <material name="dial_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="temperature_dial">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_temperature_dial.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="time_dial">
+    <visual name="time_dial">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_time_dial.obj" />
+        </geometry>
+      <material name="dial_dark">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="time_dial">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_time_dial.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="keep_warm_bezel">
+    <visual name="keep_warm_bezel">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_keep_warm_bezel.obj" />
+        </geometry>
+      <material name="drawer_matte">
+        <color rgba="0.13 0.14 0.15 1" />
+        </material>
+      </visual>
+    <collision name="keep_warm_bezel">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_keep_warm_bezel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="keep_warm_button">
+    <visual name="keep_warm_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_keep_warm_button.obj" />
+        </geometry>
+      <material name="control_accent">
+        <color rgba="0.52 0.53 0.54 1" />
+        </material>
+      </visual>
+    <collision name="keep_warm_cap">
+      <geometry>
+        <mesh filename="assets/meshes/air_fryer_keep_warm_button.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_drawer" type="prismatic">
+    <origin xyz="0.1035 0 0.105" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="drawer" />
+    <axis xyz="1 0 0" />
+    <limit effort="35" velocity="0.18" lower="0" upper="0.112" />
+    </joint>
+  <joint name="drawer_to_basket" type="fixed">
+    <parent link="drawer" />
+    <child link="basket" />
+    </joint>
+  <joint name="drawer_to_handle" type="fixed">
+    <origin xyz="0.02 0 -0.002" rpy="0 0 0" />
+    <parent link="drawer" />
+    <child link="handle" />
+    </joint>
+  <joint name="handle_to_release_button" type="prismatic">
+    <origin xyz="0.022 0 0.028" rpy="0 0 0" />
+    <parent link="handle" />
+    <child link="release_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  <joint name="body_to_control_panel" type="fixed">
+    <origin xyz="0.108 0 0.306" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="control_panel" />
+    </joint>
+  <joint name="control_panel_to_temperature_dial" type="continuous">
+    <origin xyz="0.004 0 -0.021" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="temperature_dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.12" velocity="4" />
+    </joint>
+  <joint name="control_panel_to_time_dial" type="continuous">
+    <origin xyz="0.004 0 0.021" rpy="0 0 0" />
+    <parent link="control_panel" />
+    <child link="time_dial" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.12" velocity="4" />
+    </joint>
+  <joint name="body_to_keep_warm_bezel" type="fixed">
+    <origin xyz="0.04 0 0.362" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="keep_warm_bezel" />
+    </joint>
+  <joint name="keep_warm_bezel_to_button" type="prismatic">
+    <origin xyz="0 0 0.006" rpy="0 0 0" />
+    <parent link="keep_warm_bezel" />
+    <child link="keep_warm_button" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="0.05" lower="0" upper="0.003" />
+    </joint>
+  </robot>

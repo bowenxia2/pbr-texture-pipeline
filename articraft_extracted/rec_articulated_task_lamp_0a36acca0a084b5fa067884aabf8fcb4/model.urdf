@@ -1,0 +1,243 @@
+<robot name="under_cabinet_led_strip_lamp">
+  <material name="brushed_aluminum">
+    <color rgba="0.75 0.77 0.79 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.28 0.3 0.33 1" />
+    </material>
+  <material name="housing_white">
+    <color rgba="0.95 0.96 0.97 1" />
+    </material>
+  <material name="warm_diffuser">
+    <color rgba="1 0.97 0.86 0.78" />
+    </material>
+  <link name="wall_bracket">
+    <inertial>
+      <origin xyz="0.02 0 0.085" rpy="0 0 0" />
+      <mass value="0.65" />
+      <inertia ixx="0.00210708" ixy="0" ixz="0" iyy="0.00170083" iyz="0" izz="0.000677083" />
+      </inertial>
+    <visual name="mount_plate">
+      <origin xyz="0.005 0 0.08" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.09 0.16" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="lower_stem">
+      <origin xyz="0.015 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.04 0.036" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_left">
+      <origin xyz="0.019 0.015 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.034" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_cheek_right">
+      <origin xyz="0.019 -0.015 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.012 0.034" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_ear_left">
+      <origin xyz="0.033 0.014 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.036" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_ear_right">
+      <origin xyz="0.033 -0.014 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.01 0.036" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="first_arm">
+    <inertial>
+      <origin xyz="0.085 0 0" rpy="0 0 0" />
+      <mass value="0.28" />
+      <inertia ixx="4.2e-05" ixy="0" ixz="0" iyy="0.000695333" iyz="0" izz="0.000695333" />
+      </inertial>
+    <visual name="shoulder_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="first_arm_beam">
+      <origin xyz="0.075 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.15 0.018 0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.144 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.028 0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="elbow_ear_left">
+      <origin xyz="0.16 0.014 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.028" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="elbow_ear_right">
+      <origin xyz="0.16 -0.014 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.01 0.028" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="second_arm">
+    <inertial>
+      <origin xyz="0.073 0 0" rpy="0 0 0" />
+      <mass value="0.24" />
+      <inertia ixx="4.25e-05" ixy="0" ixz="0" iyy="0.000505" iyz="0" izz="0.0004985" />
+      </inertial>
+    <visual name="elbow_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="second_arm_beam">
+      <origin xyz="0.0675 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.135 0.018 0.008" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="head_bridge">
+      <origin xyz="0.13 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.03 0.012" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.75 0.77 0.79 1" />
+        </material>
+      </visual>
+    <visual name="head_ear_left">
+      <origin xyz="0.145 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.008 0.024" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="head_ear_right">
+      <origin xyz="0.145 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.008 0.024" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="led_bar">
+    <inertial>
+      <origin xyz="0 0 -0.02" rpy="0 0 0" />
+      <mass value="0.36" />
+      <inertia ixx="0.002775" ixy="0" ixz="0" iyy="0.000102" iyz="0" izz="0.002727" />
+      </inertial>
+    <visual name="terminal_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="terminal_web">
+      <origin xyz="0 0 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.012 0.018" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="bar_housing">
+      <origin xyz="0 0 -0.023" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.29 0.012" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.95 0.96 0.97 1" />
+        </material>
+      </visual>
+    <visual name="diffuser">
+      <origin xyz="0 0 -0.029" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.27 0.004" />
+        </geometry>
+      <material name="warm_diffuser">
+        <color rgba="1 0.97 0.86 0.78" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bracket_to_first_arm" type="revolute">
+    <origin xyz="0.033 0 0.07" rpy="0 0 0" />
+    <parent link="wall_bracket" />
+    <child link="first_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="10" velocity="1.5" lower="-1.3" upper="1.1" />
+    </joint>
+  <joint name="first_to_second_arm" type="revolute">
+    <origin xyz="0.16 0 0" rpy="0 0 0" />
+    <parent link="first_arm" />
+    <child link="second_arm" />
+    <axis xyz="0 -1 0" />
+    <limit effort="8" velocity="1.8" lower="-2.1" upper="1.2" />
+    </joint>
+  <joint name="second_arm_to_led_bar" type="revolute">
+    <origin xyz="0.145 0 0" rpy="0 0 0" />
+    <parent link="second_arm" />
+    <child link="led_bar" />
+    <axis xyz="1 0 0" />
+    <limit effort="4" velocity="2" lower="-1.2" upper="1.2" />
+    </joint>
+  </robot>

@@ -1,0 +1,970 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3_midi_keyboard_urdf_20260824-141938",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3/model.urdf",
+  "created": "2026-08-24T14:19:38",
+  "updated": "2026-08-24T20:23:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 68,
+        "n_tiny": 33
+      },
+      "seed": null,
+      "started": "2026-08-24T14:25:24",
+      "finished": "2026-08-24T14:26:57",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the body; gray plastic on the head; white plastic on the eyes"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:34:30",
+      "finished": "2026-08-24T14:36:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3_midi_keyboard_urdf_20260824-141938/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:36:48",
+      "finished": "2026-08-24T15:01:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 68,
+            "n_total": 68,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3_midi_keyboard_urdf_20260824-141938/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:37",
+      "finished": "2026-08-24T19:42:23",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3/model.urdf",
+    "category": "midi keyboard",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.25,
+        -0.1,
+        0.0
+      ],
+      "max": [
+        0.25,
+        0.095,
+        0.05525911764617862
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "chassis__rear_housing",
+        "link": "chassis",
+        "label": "rear_housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_keyboard_rear_housing.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.21471318308315362,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__front_base",
+        "link": "chassis",
+        "label": "front_base",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1895200096133033,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__rear_key_wall",
+        "link": "chassis",
+        "label": "rear_key_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.036345449212024934,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__left_key_cheek",
+        "link": "chassis",
+        "label": "left_key_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012935987498276461,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__right_key_cheek",
+        "link": "chassis",
+        "label": "right_key_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012935987498276461,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__keybed_seat",
+        "link": "chassis",
+        "label": "keybed_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13015785397061005,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__black_key_seat",
+        "link": "chassis",
+        "label": "black_key_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.036345449212024934,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__front_trim",
+        "link": "chassis",
+        "label": "front_trim",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021794801105529883,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chassis__white_key_support",
+        "link": "chassis",
+        "label": "white_key_support",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13015785397061005,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "white_key_0_part__white_key",
+        "link": "white_key_0_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_01.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.008495011811508671,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_1_part__white_key",
+        "link": "white_key_1_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_2_part__white_key",
+        "link": "white_key_2_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_10.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.008495011811508675,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_3_part__white_key",
+        "link": "white_key_3_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_01.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.008495011811508671,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_4_part__white_key",
+        "link": "white_key_4_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_5_part__white_key",
+        "link": "white_key_5_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_6_part__white_key",
+        "link": "white_key_6_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_10.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.008495011811508675,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_7_part__white_key",
+        "link": "white_key_7_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_01.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.008495011811508671,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_8_part__white_key",
+        "link": "white_key_8_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_9_part__white_key",
+        "link": "white_key_9_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_10.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.008495011811508675,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_10_part__white_key",
+        "link": "white_key_10_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_01.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.008495011811508671,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_11_part__white_key",
+        "link": "white_key_11_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_12_part__white_key",
+        "link": "white_key_12_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_11.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007907934890246758,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_13_part__white_key",
+        "link": "white_key_13_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_10.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.008495011811508675,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "white_key_14_part__white_key",
+        "link": "white_key_14_part",
+        "label": "white_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/white_key_00.obj"
+        ],
+        "n_faces": 48,
+        "area_frac": 0.009082088732770586,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_0_part__black_key_filler",
+        "link": "black_key_0_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_0_part__black_key",
+        "link": "black_key_0_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_1_part__black_key_filler",
+        "link": "black_key_1_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_1_part__black_key",
+        "link": "black_key_1_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_2_part__black_key_filler",
+        "link": "black_key_2_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_2_part__black_key",
+        "link": "black_key_2_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_3_part__black_key_filler",
+        "link": "black_key_3_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_3_part__black_key",
+        "link": "black_key_3_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_4_part__black_key_filler",
+        "link": "black_key_4_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_4_part__black_key",
+        "link": "black_key_4_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_5_part__black_key_filler",
+        "link": "black_key_5_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_5_part__black_key",
+        "link": "black_key_5_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_6_part__black_key_filler",
+        "link": "black_key_6_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_6_part__black_key",
+        "link": "black_key_6_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_7_part__black_key_filler",
+        "link": "black_key_7_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_7_part__black_key",
+        "link": "black_key_7_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_8_part__black_key_filler",
+        "link": "black_key_8_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_8_part__black_key",
+        "link": "black_key_8_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "black_key_9_part__black_key_filler",
+        "link": "black_key_9_part",
+        "label": "black_key_filler",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012493358528455913,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "black_key_9_part__black_key",
+        "link": "black_key_9_part",
+        "label": "black_key",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/midi_black_key.obj"
+        ],
+        "n_faces": 68,
+        "area_frac": 0.00345113160163712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "display_module__display",
+        "link": "display_module",
+        "label": "display",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00512452131257024,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "knob_0_0_part__knob",
+        "link": "knob_0_0_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_0_1_part__knob",
+        "link": "knob_0_1_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_0_2_part__knob",
+        "link": "knob_0_2_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_0_3_part__knob",
+        "link": "knob_0_3_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_1_0_part__knob",
+        "link": "knob_1_0_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_1_1_part__knob",
+        "link": "knob_1_1_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_1_2_part__knob",
+        "link": "knob_1_2_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "knob_1_3_part__knob",
+        "link": "knob_1_3_part",
+        "label": "knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00140486809512044,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "pad_0_0_part__pad",
+        "link": "pad_0_0_part",
+        "label": "pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025435580237574912,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "pad_0_1_part__pad",
+        "link": "pad_0_1_part",
+        "label": "pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025435580237574912,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "pad_1_0_part__pad",
+        "link": "pad_1_0_part",
+        "label": "pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025435580237574912,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "pad_1_1_part__pad",
+        "link": "pad_1_1_part",
+        "label": "pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025435580237574912,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "transport_button_0_part__transport_button",
+        "link": "transport_button_0_part",
+        "label": "transport_button",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012593105901936598,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "transport_button_1_part__transport_button",
+        "link": "transport_button_1_part",
+        "label": "transport_button",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012593105901936598,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "transport_button_2_part__transport_button",
+        "link": "transport_button_2_part",
+        "label": "transport_button",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012593105901936598,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "pitch_wheel_housing_part__pitch_wheel_floor",
+        "link": "pitch_wheel_housing_part",
+        "label": "pitch_wheel_floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001608426397376061,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pitch_wheel_housing_part__pitch_wheel_left_cheek",
+        "link": "pitch_wheel_housing_part",
+        "label": "pitch_wheel_left_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013902290178870603,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pitch_wheel_housing_part__pitch_wheel_right_cheek",
+        "link": "pitch_wheel_housing_part",
+        "label": "pitch_wheel_right_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013902290178870603,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pitch_wheel_part__pitch_wheel",
+        "link": "pitch_wheel_part",
+        "label": "pitch_wheel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0022527794597986704,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "mod_wheel_housing_part__mod_wheel_floor",
+        "link": "mod_wheel_housing_part",
+        "label": "mod_wheel_floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001608426397376061,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "mod_wheel_housing_part__mod_wheel_left_cheek",
+        "link": "mod_wheel_housing_part",
+        "label": "mod_wheel_left_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013902290178870603,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "mod_wheel_housing_part__mod_wheel_right_cheek",
+        "link": "mod_wheel_housing_part",
+        "label": "mod_wheel_right_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013902290178870603,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "mod_wheel_part__mod_wheel",
+        "link": "mod_wheel_part",
+        "label": "mod_wheel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0022527794597986704,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

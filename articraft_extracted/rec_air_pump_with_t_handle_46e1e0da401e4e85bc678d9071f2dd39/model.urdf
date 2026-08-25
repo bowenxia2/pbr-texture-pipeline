@@ -1,0 +1,67 @@
+<robot name="double_barrel_floor_pump">
+  <material name="base_black">
+    <color rgba="0.13 0.14 0.15 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.73 0.75 0.78 1" />
+    </material>
+  <material name="gauge_gray">
+    <color rgba="0.84 0.85 0.86 1" />
+    </material>
+  <material name="handle_black">
+    <color rgba="0.09 0.09 0.1 1" />
+    </material>
+  <link name="pump_body">
+    <visual name="base_plate">
+      <geometry>
+        <mesh filename="assets/meshes/pump_base_plate.obj" />
+        </geometry>
+      <material name="base_black" />
+      </visual>
+    <visual name="left_barrel">
+      <geometry>
+        <mesh filename="assets/meshes/left_barrel_shell.obj" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="right_barrel">
+      <geometry>
+        <mesh filename="assets/meshes/right_barrel_shell.obj" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="front_gauge">
+      <geometry>
+        <mesh filename="assets/meshes/front_gauge_housing.obj" />
+        </geometry>
+      <material name="gauge_gray" />
+      </visual>
+    </link>
+  <link name="handle_assembly">
+    <visual name="handle_bridge">
+      <geometry>
+        <mesh filename="assets/meshes/t_handle_bridge.obj" />
+        </geometry>
+      <material name="handle_black" />
+      </visual>
+    <visual name="left_rod">
+      <geometry>
+        <mesh filename="assets/meshes/left_pump_rod.obj" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    <visual name="right_rod">
+      <geometry>
+        <mesh filename="assets/meshes/right_pump_rod.obj" />
+        </geometry>
+      <material name="steel" />
+      </visual>
+    </link>
+  <joint name="body_to_handle" type="prismatic">
+    <origin xyz="0 0 0.567" rpy="0 0 0" />
+    <parent link="pump_body" />
+    <child link="handle_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.7" lower="-0.15" upper="0" />
+    </joint>
+  </robot>

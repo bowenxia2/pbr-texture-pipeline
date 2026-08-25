@@ -1,0 +1,347 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="gaming_monitor">
+	<material name="matte_black">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<material name="graphite">
+		<color rgba="0.18 0.19 0.21 1" />
+	</material>
+	<material name="dark_gray">
+		<color rgba="0.24 0.25 0.27 1" />
+	</material>
+	<material name="screen_black">
+		<color rgba="0.03 0.04 0.05 1" />
+	</material>
+	<material name="indicator_white">
+		<color rgba="0.85 0.86 0.88 1" />
+	</material>
+	<link name="base">
+		<inertial>
+			<origin xyz="0 0.035 0.024" rpy="0 0 0" />
+			<mass value="3.4" />
+			<inertia ixx="0.0465304" ixy="0" ixz="0" iyy="0.0778104" iyz="0" izz="0.121947" />
+		</inertial>
+		<visual name="base__base_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__base_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__swivel_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__swivel_plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__left_leg">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__left_leg.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__left_leg_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__left_leg_foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__right_leg">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__right_leg.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__right_leg_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__right_leg_foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__rear_spur">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__rear_spur.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__rear_spur_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__rear_spur_foot.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="swivel_stage">
+		<inertial>
+			<origin xyz="0 0 0.108" rpy="0 0 0" />
+			<mass value="1.1" />
+			<inertia ixx="0.00468646" ixy="0" ixz="0" iyy="0.00497979" iyz="0" izz="0.00119167" />
+		</inertial>
+		<visual name="swivel_stage__rotating_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__rotating_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__sleeve_front_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__sleeve_front_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__sleeve_rear_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__sleeve_rear_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__sleeve_left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__sleeve_left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__outer_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__outer_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__cap_front_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__cap_front_lip.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__cap_rear_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__cap_rear_lip.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__cap_left_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__cap_left_lip.glb" />
+			</geometry>
+		</visual>
+		<visual name="swivel_stage__sleeve_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/swivel_stage__sleeve_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="mast">
+		<inertial>
+			<origin xyz="0 0.005 0.08" rpy="0 0 0" />
+			<mass value="1" />
+			<inertia ixx="0.00976667" ixy="0" ixz="0" iyy="0.0101667" iyz="0" izz="0.000666667" />
+		</inertial>
+		<visual name="mast__mast_shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__mast_shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__mast_front_trim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__mast_front_trim.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__left_slider_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__left_slider_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__right_slider_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__right_slider_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__left_slider_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__left_slider_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__right_slider_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__right_slider_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__left_yoke_ear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__left_yoke_ear.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__right_yoke_ear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__right_yoke_ear.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="tilt_head">
+		<inertial>
+			<origin xyz="0 -0.036 0" rpy="0 0 0" />
+			<mass value="0.55" />
+			<inertia ixx="0.000925833" ixy="0" ixz="0" iyy="0.00110917" iyz="0" izz="0.000925833" />
+		</inertial>
+		<visual name="tilt_head__tilt_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tilt_head__tilt_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="tilt_head__tilt_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tilt_head__tilt_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="tilt_head__tilt_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tilt_head__tilt_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="tilt_head__portrait_housing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tilt_head__portrait_housing.glb" />
+			</geometry>
+		</visual>
+		<visual name="tilt_head__vesa_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tilt_head__vesa_plate.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="screen">
+		<inertial>
+			<origin xyz="0 -0.012 0" rpy="0 0 0" />
+			<mass value="3.2" />
+			<inertia ixx="0.0409867" ixy="0" ixz="0" iyy="0.143067" iyz="0" izz="0.102933" />
+		</inertial>
+		<visual name="screen__rear_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__rear_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__top_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__top_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__left_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__left_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__right_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__right_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__lower_left_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__lower_left_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__lower_right_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__lower_right_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__display_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__display_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__rear_bulge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__rear_bulge.glb" />
+			</geometry>
+		</visual>
+		<visual name="screen__rear_vent_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/screen__rear_vent_strip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="power_button">
+		<inertial>
+			<origin xyz="0 -0.0015 0" rpy="0 0 0" />
+			<mass value="0.01" />
+			<inertia ixx="9.75e-08" ixy="0" ixz="0" iyy="2.80833e-07" iyz="0" izz="2.43333e-07" />
+		</inertial>
+		<visual name="power_button__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_button__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="power_button__button_plunger">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_button__button_plunger.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="base_to_swivel" type="revolute">
+		<origin xyz="0 0 0.058" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="swivel_stage" />
+		<axis xyz="0 0 1" />
+		<limit effort="12" velocity="1.2" lower="-0.65" upper="0.65" />
+	</joint>
+	<joint name="swivel_to_mast" type="prismatic">
+		<origin xyz="0 0 0.194" rpy="0 0 0" />
+		<parent link="swivel_stage" />
+		<child link="mast" />
+		<axis xyz="0 0 1" />
+		<limit effort="80" velocity="0.12" lower="0" upper="0.08" />
+	</joint>
+	<joint name="mast_to_tilt_head" type="revolute">
+		<origin xyz="0 0.015 0.2" rpy="0 0 0" />
+		<parent link="mast" />
+		<child link="tilt_head" />
+		<axis xyz="-1 0 0" />
+		<limit effort="10" velocity="1.5" lower="-0.25" upper="0.4" />
+	</joint>
+	<joint name="tilt_head_to_screen" type="revolute">
+		<origin xyz="0 -0.071 0" rpy="0 0 0" />
+		<parent link="tilt_head" />
+		<child link="screen" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="2" lower="-1.5708" upper="1.5708" />
+	</joint>
+	<joint name="screen_to_power_button" type="prismatic">
+		<origin xyz="0 -0.023 -0.181" rpy="0 0 0" />
+		<parent link="screen" />
+		<child link="power_button" />
+		<axis xyz="0 1 0" />
+		<limit effort="1" velocity="0.03" lower="0" upper="0.001" />
+	</joint>
+</robot>

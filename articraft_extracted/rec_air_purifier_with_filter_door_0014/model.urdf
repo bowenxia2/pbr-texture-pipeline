@@ -1,0 +1,394 @@
+<robot name="double_bay_air_purifier">
+  <material name="housing">
+    <color rgba="0.89 0.91 0.93 1" />
+    </material>
+  <material name="trim">
+    <color rgba="0.77 0.8 0.84 1" />
+    </material>
+  <material name="door_finish">
+    <color rgba="0.54 0.58 0.61 1" />
+    </material>
+  <material name="handle_finish">
+    <color rgba="0.2 0.23 0.25 1" />
+    </material>
+  <material name="filter_media">
+    <color rgba="0.6 0.72 0.64 1" />
+    </material>
+  <material name="filter_ribs">
+    <color rgba="0.87 0.92 0.88 1" />
+    </material>
+  <material name="vent_finish">
+    <color rgba="0.7 0.75 0.79 1" />
+    </material>
+  <link name="body">
+    <visual name="rear_shell">
+      <origin xyz="0 -0.129 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.022 0.62" />
+        </geometry>
+      <material name="housing">
+        <color rgba="0.89 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="left_shell">
+      <origin xyz="-0.349 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.28 0.62" />
+        </geometry>
+      <material name="housing">
+        <color rgba="0.89 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="right_shell">
+      <origin xyz="0.349 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.28 0.62" />
+        </geometry>
+      <material name="housing">
+        <color rgba="0.89 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 0.011" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.28 0.022" />
+        </geometry>
+      <material name="housing">
+        <color rgba="0.89 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="top_shell">
+      <origin xyz="0 0 0.609" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.28 0.022" />
+        </geometry>
+      <material name="housing">
+        <color rgba="0.89 0.91 0.93 1" />
+        </material>
+      </visual>
+    <visual name="center_partition">
+      <origin xyz="0 0 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.28 0.62" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_top_strip">
+      <origin xyz="0 0.131 0.59" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.018 0.06" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_strip">
+      <origin xyz="0 0.131 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.72 0.018 0.06" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="left_frame_strip">
+      <origin xyz="-0.34 0.131 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.5" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="center_frame_strip">
+      <origin xyz="0 0.131 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.018 0.5" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="right_frame_strip">
+      <origin xyz="0.34 0.131 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.018 0.5" />
+        </geometry>
+      <material name="trim">
+        <color rgba="0.77 0.8 0.84 1" />
+        </material>
+      </visual>
+    <visual name="left_filter_core">
+      <origin xyz="-0.1675 -0.001 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.271 0.238 0.466" />
+        </geometry>
+      <material name="filter_media">
+        <color rgba="0.6 0.72 0.64 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_1">
+      <origin xyz="-0.269125 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_2">
+      <origin xyz="-0.23525 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_3">
+      <origin xyz="-0.201375 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_4">
+      <origin xyz="-0.1675 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_5">
+      <origin xyz="-0.133625 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_6">
+      <origin xyz="-0.09975 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_rib_7">
+      <origin xyz="-0.065875 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_filter_core">
+      <origin xyz="0.1675 -0.001 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.271 0.238 0.466" />
+        </geometry>
+      <material name="filter_media">
+        <color rgba="0.6 0.72 0.64 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_1">
+      <origin xyz="0.065875 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_2">
+      <origin xyz="0.09975 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_3">
+      <origin xyz="0.133625 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_4">
+      <origin xyz="0.1675 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_5">
+      <origin xyz="0.201375 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_6">
+      <origin xyz="0.23525 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_rib_7">
+      <origin xyz="0.269125 0.114 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.008 0.44" />
+        </geometry>
+      <material name="filter_ribs">
+        <color rgba="0.87 0.92 0.88 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_1">
+      <origin xyz="-0.22 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_2">
+      <origin xyz="-0.146667 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_3">
+      <origin xyz="-0.0733333 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_4">
+      <origin xyz="0 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_5">
+      <origin xyz="0.0733333 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_6">
+      <origin xyz="0.146667 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="top_vent_bar_7">
+      <origin xyz="0.22 -0.01 0.623" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.15 0.006" />
+        </geometry>
+      <material name="vent_finish">
+        <color rgba="0.7 0.75 0.79 1" />
+        </material>
+      </visual>
+    <visual name="control_panel">
+      <origin xyz="0 0.085 0.622" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.055 0.004" />
+        </geometry>
+      <material name="handle_finish">
+        <color rgba="0.2 0.23 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_door">
+    <visual name="door_panel">
+      <origin xyz="0.1595 0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.319 0.018 0.514" />
+        </geometry>
+      <material name="door_finish">
+        <color rgba="0.54 0.58 0.61 1" />
+        </material>
+      </visual>
+    <visual name="handle">
+      <origin xyz="0.285 0.031 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.026 0.15" />
+        </geometry>
+      <material name="handle_finish">
+        <color rgba="0.2 0.23 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_door">
+    <visual name="door_panel">
+      <origin xyz="-0.1595 0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.319 0.018 0.514" />
+        </geometry>
+      <material name="door_finish">
+        <color rgba="0.54 0.58 0.61 1" />
+        </material>
+      </visual>
+    <visual name="handle">
+      <origin xyz="-0.285 0.031 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.026 0.15" />
+        </geometry>
+      <material name="handle_finish">
+        <color rgba="0.2 0.23 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="left_door_hinge" type="revolute">
+    <origin xyz="-0.32 0.14 0.31" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="left_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.8" lower="0" upper="1.45" />
+    </joint>
+  <joint name="right_door_hinge" type="revolute">
+    <origin xyz="0.32 0.14 0.31" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="right_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.8" lower="-1.45" upper="0" />
+    </joint>
+  </robot>

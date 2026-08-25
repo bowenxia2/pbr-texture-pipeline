@@ -1,0 +1,398 @@
+<robot name="upright_arcade_cabinet">
+  <material name="cabinet_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="trim_gray">
+    <color rgba="0.34 0.35 0.37 1" />
+    </material>
+  <material name="deck_blue">
+    <color rgba="0.16 0.21 0.29 1" />
+    </material>
+  <material name="screen_dark">
+    <color rgba="0.03 0.05 0.07 1" />
+    </material>
+  <material name="door_gray">
+    <color rgba="0.26 0.27 0.29 1" />
+    </material>
+  <link name="body">
+    <visual name="left_side">
+      <geometry>
+        <mesh filename="assets/meshes/left_side.obj" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="right_side">
+      <geometry>
+        <mesh filename="assets/meshes/right_side.obj" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="coin_panel">
+      <geometry>
+        <mesh filename="assets/meshes/coin_panel.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="front_base">
+      <origin xyz="0 0.051 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.082" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="-0.232 0.051 0.1095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.284 0.018 0.055" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="0.232 0.051 0.1095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.284 0.018 0.055" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="mid_rail">
+      <origin xyz="0 0.051 0.1785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.083" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="door_stile_0">
+      <origin xyz="-0.317 0.051 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.018 0.46" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="door_stile_1">
+      <origin xyz="0.317 0.051 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.018 0.46" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="front_top">
+      <origin xyz="0 0.051 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.28" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="tray_surround">
+      <geometry>
+        <mesh filename="assets/meshes/tray_surround.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="control_apron">
+      <origin xyz="0 0.132 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.12" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="control_deck">
+      <origin xyz="0 0.04 1.035" rpy="-0.314159 0 0" />
+      <geometry>
+        <box size="0.748 0.3 0.024" />
+        </geometry>
+      <material name="deck_blue">
+        <color rgba="0.16 0.21 0.29 1" />
+        </material>
+      </visual>
+    <visual name="monitor_frame">
+      <geometry>
+        <mesh filename="assets/meshes/monitor_frame.obj" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="monitor_mount">
+      <origin xyz="0 -0.055 1.31" rpy="-0.279253 0 0" />
+      <geometry>
+        <box size="0.58 0.06 0.48" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="screen_glass">
+      <origin xyz="0 -0.012 1.325" rpy="-0.279253 0 0" />
+      <geometry>
+        <box size="0.5 0.018 0.38" />
+        </geometry>
+      <material name="screen_dark">
+        <color rgba="0.03 0.05 0.07 1" />
+        </material>
+      </visual>
+    <visual name="marquee_face">
+      <origin xyz="0 0.01 1.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.22" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <visual name="roof">
+      <origin xyz="0 -0.1 1.731" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.26 0.018" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_lower">
+      <origin xyz="0 -0.451 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.96" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="rear_upper">
+      <origin xyz="0 -0.31 1.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.72" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="floor">
+      <origin xyz="0 -0.2 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.49 0.018" />
+        </geometry>
+      <material name="cabinet_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <collision name="left_side">
+      <geometry>
+        <mesh filename="assets/meshes/left_side.obj" />
+        </geometry>
+      </collision>
+    <collision name="right_side">
+      <geometry>
+        <mesh filename="assets/meshes/right_side.obj" />
+        </geometry>
+      </collision>
+    <collision name="coin_panel">
+      <geometry>
+        <mesh filename="assets/meshes/coin_panel.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_base">
+      <origin xyz="0 0.051 0.041" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.082" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_0">
+      <origin xyz="-0.232 0.051 0.1095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.284 0.018 0.055" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_1">
+      <origin xyz="0.232 0.051 0.1095" rpy="0 0 0" />
+      <geometry>
+        <box size="0.284 0.018 0.055" />
+        </geometry>
+      </collision>
+    <collision name="mid_rail">
+      <origin xyz="0 0.051 0.1785" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.083" />
+        </geometry>
+      </collision>
+    <collision name="door_stile_0">
+      <origin xyz="-0.317 0.051 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.018 0.46" />
+        </geometry>
+      </collision>
+    <collision name="door_stile_1">
+      <origin xyz="0.317 0.051 0.45" rpy="0 0 0" />
+      <geometry>
+        <box size="0.114 0.018 0.46" />
+        </geometry>
+      </collision>
+    <collision name="front_top">
+      <origin xyz="0 0.051 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.28" />
+        </geometry>
+      </collision>
+    <collision name="tray_surround">
+      <geometry>
+        <mesh filename="assets/meshes/tray_surround.obj" />
+        </geometry>
+      </collision>
+    <collision name="control_apron">
+      <origin xyz="0 0.132 0.94" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.12" />
+        </geometry>
+      </collision>
+    <collision name="control_deck">
+      <origin xyz="0 0.04 1.035" rpy="-0.314159 0 0" />
+      <geometry>
+        <box size="0.748 0.3 0.024" />
+        </geometry>
+      </collision>
+    <collision name="monitor_frame">
+      <geometry>
+        <mesh filename="assets/meshes/monitor_frame.obj" />
+        </geometry>
+      </collision>
+    <collision name="monitor_mount">
+      <origin xyz="0 -0.055 1.31" rpy="-0.279253 0 0" />
+      <geometry>
+        <box size="0.58 0.06 0.48" />
+        </geometry>
+      </collision>
+    <collision name="screen_glass">
+      <origin xyz="0 -0.012 1.325" rpy="-0.279253 0 0" />
+      <geometry>
+        <box size="0.5 0.018 0.38" />
+        </geometry>
+      </collision>
+    <collision name="marquee_face">
+      <origin xyz="0 0.01 1.6" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.22" />
+        </geometry>
+      </collision>
+    <collision name="roof">
+      <origin xyz="0 -0.1 1.731" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.26 0.018" />
+        </geometry>
+      </collision>
+    <collision name="rear_lower">
+      <origin xyz="0 -0.451 0.48" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.96" />
+        </geometry>
+      </collision>
+    <collision name="rear_upper">
+      <origin xyz="0 -0.31 1.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.018 0.72" />
+        </geometry>
+      </collision>
+    <collision name="floor">
+      <origin xyz="0 -0.2 0.009" rpy="0 0 0" />
+      <geometry>
+        <box size="0.748 0.49 0.018" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_door">
+    <visual name="service_panel">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      <material name="door_gray">
+        <color rgba="0.26 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="service_handle">
+      <origin xyz="0.4086 0.008 0.2576" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.028 0.12" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <collision name="service_panel">
+      <geometry>
+        <mesh filename="assets/meshes/service_door.obj" />
+        </geometry>
+      </collision>
+    <collision name="service_handle">
+      <origin xyz="0.4086 0.008 0.2576" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.028 0.12" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray_flap">
+    <visual name="tray_panel">
+      <geometry>
+        <mesh filename="assets/meshes/tray_flap.obj" />
+        </geometry>
+      <material name="door_gray">
+        <color rgba="0.26 0.27 0.29 1" />
+        </material>
+      </visual>
+    <visual name="tray_pull">
+      <origin xyz="0 0.006 0.0341" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.018 0.01" />
+        </geometry>
+      <material name="trim_gray">
+        <color rgba="0.34 0.35 0.37 1" />
+        </material>
+      </visual>
+    <collision name="tray_panel">
+      <geometry>
+        <mesh filename="assets/meshes/tray_flap.obj" />
+        </geometry>
+      </collision>
+    <collision name="tray_pull">
+      <origin xyz="0 0.006 0.0341" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.018 0.01" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_service_door" type="revolute">
+    <origin xyz="-0.263 0.064 0.22" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="service_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="20" velocity="1.2" lower="0" upper="1.22" />
+    </joint>
+  <joint name="body_to_tray_flap" type="revolute">
+    <origin xyz="0 0.072 0.082" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tray_flap" />
+    <axis xyz="-1 0 0" />
+    <limit effort="4" velocity="1.5" lower="0" upper="1.12" />
+    </joint>
+  </robot>

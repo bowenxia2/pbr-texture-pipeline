@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "01f7f7f0b8689a48dcff462d03142135e3aef90602ddbffe9915be4a0f82b143",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "83c445d6a8c71474ee3ce37e4aa2d651e66b95e7251564b50502e6bca1782a9e",
+    "model_py_mtime_ns": 1775918478981024449,
+    "model_py_size_bytes": 11709,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 408339,
+    "visual_mesh_file_count": 7,
+    "compile_elapsed_seconds": 1.0821887499914737
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

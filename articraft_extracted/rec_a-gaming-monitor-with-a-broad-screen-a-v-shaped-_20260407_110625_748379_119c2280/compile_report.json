@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-gaming-monitor-with-a-broad-screen-a-v-shaped-_20260407_110625_748379_119c2280",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "b1010fe5d6748c5e1c835d0121fb9d461c29dd7784f95876b3d3a4c69c66df43",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "330c201fbf4c6630a34208a519f346a6dd4f4f929721b1e6d450bc5a5244f9c1",
+    "model_py_mtime_ns": 1775560655740798786,
+    "model_py_size_bytes": 15421,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 114006,
+    "visual_mesh_file_count": 3,
+    "compile_elapsed_seconds": 0.011655791007797234
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

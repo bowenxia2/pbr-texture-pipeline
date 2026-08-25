@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_pump_with_t_handle_86b4c129fb0c469da84a6061811f8b68",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 21,
+    "tool_call_count": 23,
+    "compile_attempt_count": 5,
+    "fingerprint_inputs": {
+      "model_py_sha256": "4deb80c38910c444d2d5f4d28f49be888edf205f3d6fc3c03e2e7d724f48245e",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "a92cb4cecaf595740868334955cb26fbf416e934559da3cfa91250525c8d9977"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_b1e034f7e0434758aa30cbdb8951c32e",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "e2734e62662a53821817012098725caa93364acb1750a527f8323d3d904d98cd",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "6148a5d88b3e4a98d5bfda55ce1ff6b893fa2f922ad3bfa59677a4aa6aed26b4",
+    "model_py_mtime_ns": 1775396010258084385,
+    "model_py_size_bytes": 22865,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.003731958000571467
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

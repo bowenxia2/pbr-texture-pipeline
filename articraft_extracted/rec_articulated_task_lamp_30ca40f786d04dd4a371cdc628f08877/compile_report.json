@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_articulated_task_lamp_30ca40f786d04dd4a371cdc628f08877",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 3 overlaps across 3 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 23,
+    "tool_call_count": 26,
+    "compile_attempt_count": 6,
+    "fingerprint_inputs": {
+      "model_py_sha256": "85a355c1f909862b68880eae57074a2d3b869f9f1b9b6c69666f1446daba8de1",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "1ad71c30a7e2e0ad77a89cdd6f7319266b7d72ce5105c19dcbfaaa1d42382e72"
+  }
+}

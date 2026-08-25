@@ -1,0 +1,233 @@
+<robot name="under_cabinet_led_folding_arm">
+  <material name="powder_coated_white">
+    <color rgba="0.86 0.86 0.82 1" />
+    </material>
+  <material name="brushed_aluminum">
+    <color rgba="0.62 0.64 0.62 1" />
+    </material>
+  <material name="dark_hinge_hardware">
+    <color rgba="0.06 0.065 0.07 1" />
+    </material>
+  <material name="warm_led_diffuser">
+    <color rgba="1 0.86 0.46 0.78" />
+    </material>
+  <material name="recessed_screw_shadow">
+    <color rgba="0.025 0.025 0.025 1" />
+    </material>
+  <link name="wall_bracket">
+    <visual name="mount_plate">
+      <origin xyz="0 -0.034 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.105 0.012 0.16" />
+        </geometry>
+      <material name="powder_coated_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="boss_standoff">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.034 0.03 0.018" />
+        </geometry>
+      <material name="powder_coated_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="pivot_boss">
+      <geometry>
+        <cylinder radius="0.021" length="0.018" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="upper_screw">
+      <origin xyz="0 -0.0272 0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.002" />
+        </geometry>
+      <material name="recessed_screw_shadow">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    <visual name="lower_screw">
+      <origin xyz="0 -0.0272 -0.055" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.0085" length="0.002" />
+        </geometry>
+      <material name="recessed_screw_shadow">
+        <color rgba="0.025 0.025 0.025 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_1">
+    <visual name="arm_blade">
+      <origin xyz="0 0.14 0.016" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.28 0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="base_hub">
+      <origin xyz="0 0 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="distal_hub">
+      <origin xyz="0 0.28 0.016" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link_2">
+    <visual name="arm_blade">
+      <origin xyz="0 0.125 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.25 0.014" />
+        </geometry>
+      <material name="brushed_aluminum">
+        <color rgba="0.62 0.64 0.62 1" />
+        </material>
+      </visual>
+    <visual name="proximal_hub">
+      <origin xyz="0 0 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="terminal_hub">
+      <origin xyz="0 0.25 0.03" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="led_bar">
+    <visual name="pivot_cap">
+      <origin xyz="0 0 0.044" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.024" length="0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="front_lug">
+      <origin xyz="0 0.024 0.044" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.018 0.014" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="drop_yoke">
+      <origin xyz="0 0.055 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.05 0.045" />
+        </geometry>
+      <material name="dark_hinge_hardware">
+        <color rgba="0.06 0.065 0.07 1" />
+        </material>
+      </visual>
+    <visual name="light_housing">
+      <origin xyz="0 0.095 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.04 0.02" />
+        </geometry>
+      <material name="powder_coated_white">
+        <color rgba="0.86 0.86 0.82 1" />
+        </material>
+      </visual>
+    <visual name="led_diffuser">
+      <origin xyz="0 0.1 -0.0058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.29 0.025 0.004" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    <visual name="led_chip_0">
+      <origin xyz="-0.105 0.1 -0.0087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.002" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    <visual name="led_chip_1">
+      <origin xyz="-0.0525 0.1 -0.0087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.002" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    <visual name="led_chip_2">
+      <origin xyz="0 0.1 -0.0087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.002" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    <visual name="led_chip_3">
+      <origin xyz="0.0525 0.1 -0.0087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.002" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    <visual name="led_chip_4">
+      <origin xyz="0.105 0.1 -0.0087" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.018 0.002" />
+        </geometry>
+      <material name="warm_led_diffuser">
+        <color rgba="1 0.86 0.46 0.78" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_yaw" type="revolute">
+    <parent link="wall_bracket" />
+    <child link="link_1" />
+    <axis xyz="0 0 1" />
+    <limit effort="5" velocity="2" lower="-1.25" upper="1.25" />
+    </joint>
+  <joint name="elbow_yaw" type="revolute">
+    <origin xyz="0 0.28 0" rpy="0 0 0" />
+    <parent link="link_1" />
+    <child link="link_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="4" velocity="2" lower="-2.35" upper="2.35" />
+    </joint>
+  <joint name="bar_yaw" type="revolute">
+    <origin xyz="0 0.25 0" rpy="0 0 0" />
+    <parent link="link_2" />
+    <child link="led_bar" />
+    <axis xyz="0 0 1" />
+    <limit effort="2.5" velocity="2.5" lower="-1.8" upper="1.8" />
+    </joint>
+  </robot>

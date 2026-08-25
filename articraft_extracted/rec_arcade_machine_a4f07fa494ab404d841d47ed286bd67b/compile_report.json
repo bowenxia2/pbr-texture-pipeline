@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_a4f07fa494ab404d841d47ed286bd67b",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "warn_if_part_contains_disconnected_geometry_islands(tol=1e-06): Disconnected geometry islands detected:\npart='cabinet' connected=6/10 disconnected=[shell__component_002:Mesh, screen_shroud:Box, screen:Box, coin_frame:Mesh]"
+    },
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 5 overlaps across 5 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 29,
+    "tool_call_count": 31,
+    "compile_attempt_count": 8,
+    "fingerprint_inputs": {
+      "model_py_sha256": "13739dbe056cef8a5bfa6f0af52d6e8f49188fdc186b0243d207363800d0658c",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "20e23830e1baf72e1e3ef62caa0914a2eaed9a6bf2a67cbb882fb46285afe741"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_air_purifier_with_filter_door_175540017da2409b84242de75f70ccdd",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "3f1b14b853096885bfd0229d6b3976bf3b8e13df800683bf0672227cb0c83b39",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "2cdb4f6fcd10a881563f6a2adc8bb862fc5ff7691f6339e5e061f7623c46006f",
+    "model_py_mtime_ns": 1775396010244896755,
+    "model_py_size_bytes": 13621,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 0,
+    "visual_mesh_file_count": 0,
+    "compile_elapsed_seconds": 0.0025547080003889278
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

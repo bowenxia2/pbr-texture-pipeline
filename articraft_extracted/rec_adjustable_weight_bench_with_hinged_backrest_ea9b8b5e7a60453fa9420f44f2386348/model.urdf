@@ -1,0 +1,622 @@
+<robot name="utility_weight_bench">
+  <material name="frame_paint">
+    <color rgba="0.15 0.16 0.17 1" />
+    </material>
+  <material name="vinyl">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="underside">
+    <color rgba="0.18 0.19 0.2 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <material name="grip">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="hub">
+    <color rgba="0.34 0.36 0.39 1" />
+    </material>
+  <link name="frame">
+    <visual name="base_rail_0">
+      <origin xyz="0 -0.205 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.05 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="base_rail_1">
+      <origin xyz="0 0.205 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.05 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="crossbar_0">
+      <origin xyz="-0.56 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="crossbar_1">
+      <origin xyz="-0.2 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="crossbar_2">
+      <origin xyz="0.1 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="crossbar_3">
+      <origin xyz="0.34 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="crossbar_4">
+      <origin xyz="0.57 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="center_beam">
+      <origin xyz="-0.02 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.08 0.04" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="rear_post">
+      <origin xyz="0.05 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.24" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="front_post">
+      <origin xyz="0.39 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.1 0.24" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="upper_deck">
+      <origin xyz="0.22 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.04" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="arm_pivot_block">
+      <origin xyz="-0.19 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.068" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="wheel_mount_0">
+      <origin xyz="0.57 -0.203 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.07 0.08" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="wheel_mount_1">
+      <origin xyz="0.57 0.203 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.07 0.08" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="handle_brace_0">
+      <origin xyz="0.55 -0.085 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.03" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="handle_brace_1">
+      <origin xyz="0.55 0.085 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.03" />
+        </geometry>
+      <material name="frame_paint">
+        <color rgba="0.15 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="handle">
+      <origin xyz="0.51 0 0.065" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.2" />
+        </geometry>
+      <material name="grip">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <collision name="base_rail_0">
+      <origin xyz="0 -0.205 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="base_rail_1">
+      <origin xyz="0 0.205 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="1.24 0.05 0.05" />
+        </geometry>
+      </collision>
+    <collision name="crossbar_0">
+      <origin xyz="-0.56 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      </collision>
+    <collision name="crossbar_1">
+      <origin xyz="-0.2 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      </collision>
+    <collision name="crossbar_2">
+      <origin xyz="0.1 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      </collision>
+    <collision name="crossbar_3">
+      <origin xyz="0.34 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      </collision>
+    <collision name="crossbar_4">
+      <origin xyz="0.57 0 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.36 0.05" />
+        </geometry>
+      </collision>
+    <collision name="center_beam">
+      <origin xyz="-0.02 0 0.07" rpy="0 0 0" />
+      <geometry>
+        <box size="0.88 0.08 0.04" />
+        </geometry>
+      </collision>
+    <collision name="rear_post">
+      <origin xyz="0.05 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.12 0.24" />
+        </geometry>
+      </collision>
+    <collision name="front_post">
+      <origin xyz="0.39 0 0.21" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.1 0.24" />
+        </geometry>
+      </collision>
+    <collision name="upper_deck">
+      <origin xyz="0.22 0 0.35" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.1 0.04" />
+        </geometry>
+      </collision>
+    <collision name="arm_pivot_block">
+      <origin xyz="-0.19 0 0.058" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.1 0.068" />
+        </geometry>
+      </collision>
+    <collision name="wheel_mount_0">
+      <origin xyz="0.57 -0.203 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.07 0.08" />
+        </geometry>
+      </collision>
+    <collision name="wheel_mount_1">
+      <origin xyz="0.57 0.203 0.085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.07 0.08" />
+        </geometry>
+      </collision>
+    <collision name="handle_brace_0">
+      <origin xyz="0.55 -0.085 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="handle_brace_1">
+      <origin xyz="0.55 0.085 0.065" rpy="0 0 0" />
+      <geometry>
+        <box size="0.08 0.03 0.03" />
+        </geometry>
+      </collision>
+    <collision name="handle">
+      <origin xyz="0.51 0 0.065" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.017" length="0.2" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="backrest">
+    <visual name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="-0.05 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 0.04" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="back_plate">
+      <origin xyz="-0.37 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.25 0.014" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="brace">
+      <origin xyz="-0.28 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.085 0.04" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="pad">
+      <origin xyz="-0.38 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.29 0.072" />
+        </geometry>
+      <material name="vinyl">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.18" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="-0.05 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.18 0.04" />
+        </geometry>
+      </collision>
+    <collision name="back_plate">
+      <origin xyz="-0.37 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.25 0.014" />
+        </geometry>
+      </collision>
+    <collision name="brace">
+      <origin xyz="-0.28 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.085 0.04" />
+        </geometry>
+      </collision>
+    <collision name="pad">
+      <origin xyz="-0.38 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.76 0.29 0.072" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="seat">
+    <visual name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.16" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="hinge_block">
+      <origin xyz="-0.03 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.16 0.04" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="seat_plate">
+      <origin xyz="-0.16 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.26 0.014" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="brace">
+      <origin xyz="-0.14 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.09 0.04" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="pad">
+      <origin xyz="-0.17 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.3 0.072" />
+        </geometry>
+      <material name="vinyl">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <collision name="hinge_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.16" />
+        </geometry>
+      </collision>
+    <collision name="hinge_block">
+      <origin xyz="-0.03 0 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.16 0.04" />
+        </geometry>
+      </collision>
+    <collision name="seat_plate">
+      <origin xyz="-0.16 0 0.021" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.26 0.014" />
+        </geometry>
+      </collision>
+    <collision name="brace">
+      <origin xyz="-0.14 0 0.032" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.09 0.04" />
+        </geometry>
+      </collision>
+    <collision name="pad">
+      <origin xyz="-0.17 0 0.063" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.3 0.072" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="support_arm">
+    <visual name="pivot_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.12" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rail_0">
+      <origin xyz="-0.15 -0.04 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.032 0.032" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="rail_1">
+      <origin xyz="-0.15 0.04 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.032 0.032" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <visual name="saddle">
+      <origin xyz="-0.285 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.14 0.036" />
+        </geometry>
+      <material name="underside">
+        <color rgba="0.18 0.19 0.2 1" />
+        </material>
+      </visual>
+    <collision name="pivot_sleeve">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.12" />
+        </geometry>
+      </collision>
+    <collision name="rail_0">
+      <origin xyz="-0.15 -0.04 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.032 0.032" />
+        </geometry>
+      </collision>
+    <collision name="rail_1">
+      <origin xyz="-0.15 0.04 0.018" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.032 0.032" />
+        </geometry>
+      </collision>
+    <collision name="saddle">
+      <origin xyz="-0.285 0 0.036" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.14 0.036" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel_0">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.046" />
+        </geometry>
+      <material name="hub">
+        <color rgba="0.34 0.36 0.39 1" />
+        </material>
+      </visual>
+    <visual name="cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      <material name="hub">
+        <color rgba="0.34 0.36 0.39 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="wheel_1">
+    <visual name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.046" />
+        </geometry>
+      <material name="hub">
+        <color rgba="0.34 0.36 0.39 1" />
+        </material>
+      </visual>
+    <visual name="cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      <material name="hub">
+        <color rgba="0.34 0.36 0.39 1" />
+        </material>
+      </visual>
+    <collision name="tire">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.04" />
+        </geometry>
+      </collision>
+    <collision name="hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.046" />
+        </geometry>
+      </collision>
+    <collision name="cap">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.016" length="0.052" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="backrest_hinge" type="revolute">
+    <origin xyz="0.05 0 0.388" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="backrest" />
+    <axis xyz="0 1 0" />
+    <limit effort="35" velocity="1.5" lower="0" upper="1.18" />
+    </joint>
+  <joint name="seat_hinge" type="revolute">
+    <origin xyz="0.39 0 0.388" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="seat" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="1.2" lower="0" upper="0.3" />
+    </joint>
+  <joint name="support_arm_hinge" type="revolute">
+    <origin xyz="-0.19 0 0.108" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="support_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="30" velocity="1.4" lower="0" upper="1.1" />
+    </joint>
+  <joint name="wheel_0_spin" type="continuous">
+    <origin xyz="0.61 -0.264 0.055" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="wheel_0" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  <joint name="wheel_1_spin" type="continuous">
+    <origin xyz="0.61 0.264 0.055" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="wheel_1" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="25" />
+    </joint>
+  </robot>

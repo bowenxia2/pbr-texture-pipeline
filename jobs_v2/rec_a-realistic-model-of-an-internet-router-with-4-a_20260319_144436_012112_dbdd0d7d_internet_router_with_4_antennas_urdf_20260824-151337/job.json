@@ -1,0 +1,684 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d/model.urdf",
+  "created": "2026-08-24T15:13:37",
+  "updated": "2026-08-24T20:23:38",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 46,
+        "n_tiny": 28
+      },
+      "seed": null,
+      "started": "2026-08-24T15:25:48",
+      "finished": "2026-08-24T15:27:44",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the base; gray plastic on the vertical rods; gray plastic on the horizontal rod; gray plastic on the small spheres at the top of the vertical rods"
+      },
+      "seed": null,
+      "started": "2026-08-24T15:27:44",
+      "finished": "2026-08-24T15:31:20",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T15:31:20",
+      "finished": "2026-08-24T15:56:19",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 46,
+            "n_total": 46,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:38",
+      "finished": "2026-08-24T19:42:57",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d/model.urdf",
+    "category": "internet router with 4 antennas",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.156,
+        -0.101,
+        0.0
+      ],
+      "max": [
+        0.156,
+        0.1060000220391969,
+        0.181134
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/router_body_shell.obj"
+        ],
+        "n_faces": 324,
+        "area_frac": 0.4483022397055635,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__underside_plate",
+        "link": "body",
+        "label": "underside_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.31790179024358894,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_led_strip",
+        "link": "body",
+        "label": "front_led_strip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011170266954119651,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_io_panel",
+        "link": "body",
+        "label": "rear_io_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.027925667385299117,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__lan_port_-0.068",
+        "link": "body",
+        "label": "lan_port_-0.068",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003982225214585255,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__lan_port_-0.038",
+        "link": "body",
+        "label": "lan_port_-0.038",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003982225214585256,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__lan_port_-0.008",
+        "link": "body",
+        "label": "lan_port_-0.008",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003982225214585256,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__lan_port__0.022",
+        "link": "body",
+        "label": "lan_port_+0.022",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003982225214585256,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__wan_port",
+        "link": "body",
+        "label": "wan_port",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0039822252145852565,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__usb_port",
+        "link": "body",
+        "label": "usb_port",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0021413852568996205,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__power_jack",
+        "link": "body",
+        "label": "power_jack",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0018819453811869356,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__foot_l_f",
+        "link": "body",
+        "label": "foot_l_f",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004858815670626034,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_l_b",
+        "link": "body",
+        "label": "foot_l_b",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004858815670626034,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_r_f",
+        "link": "body",
+        "label": "foot_r_f",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004858815670626034,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_r_b",
+        "link": "body",
+        "label": "foot_r_b",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004858815670626034,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib_-0.054",
+        "link": "body",
+        "label": "vent_rib_-0.054",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007037769089927399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib_-0.036",
+        "link": "body",
+        "label": "vent_rib_-0.036",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0070377690899274,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib_-0.018",
+        "link": "body",
+        "label": "vent_rib_-0.018",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007037769089927402,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib__0.000",
+        "link": "body",
+        "label": "vent_rib_+0.000",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007037769089927402,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib__0.018",
+        "link": "body",
+        "label": "vent_rib_+0.018",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007037769089927402,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib__0.036",
+        "link": "body",
+        "label": "vent_rib_+0.036",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0070377690899274,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vent_rib__0.054",
+        "link": "body",
+        "label": "vent_rib_+0.054",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007037769089927399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__antenna_left_outer_pedestal",
+        "link": "body",
+        "label": "antenna_left_outer_pedestal",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006035951425880796,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__antenna_left_inner_pedestal",
+        "link": "body",
+        "label": "antenna_left_inner_pedestal",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006035951425880792,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__antenna_right_inner_pedestal",
+        "link": "body",
+        "label": "antenna_right_inner_pedestal",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006035951425880792,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__antenna_right_outer_pedestal",
+        "link": "body",
+        "label": "antenna_right_outer_pedestal",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006035951425880796,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "antenna_left_outer__hinge_barrel",
+        "link": "antenna_left_outer",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003531626464219946,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_outer__hinge_collar",
+        "link": "antenna_left_outer",
+        "label": "hinge_collar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026047259265211727,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "antenna_left_outer__main_mast",
+        "link": "antenna_left_outer",
+        "label": "main_mast",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.011008264051698668,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_outer__upper_tip",
+        "link": "antenna_left_outer",
+        "label": "upper_tip",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0018284816776699192,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_outer__end_cap",
+        "link": "antenna_left_outer",
+        "label": "end_cap",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0005074336261145444,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_inner__hinge_barrel",
+        "link": "antenna_left_inner",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003531626464219946,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_inner__hinge_collar",
+        "link": "antenna_left_inner",
+        "label": "hinge_collar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026047259265211727,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "antenna_left_inner__main_mast",
+        "link": "antenna_left_inner",
+        "label": "main_mast",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.011008264051698668,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_inner__upper_tip",
+        "link": "antenna_left_inner",
+        "label": "upper_tip",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0018284816776699192,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_left_inner__end_cap",
+        "link": "antenna_left_inner",
+        "label": "end_cap",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0005074336261145445,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_inner__hinge_barrel",
+        "link": "antenna_right_inner",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003531626464219946,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_inner__hinge_collar",
+        "link": "antenna_right_inner",
+        "label": "hinge_collar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026047259265211727,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "antenna_right_inner__main_mast",
+        "link": "antenna_right_inner",
+        "label": "main_mast",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.011008264051698668,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_inner__upper_tip",
+        "link": "antenna_right_inner",
+        "label": "upper_tip",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0018284816776699192,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_inner__end_cap",
+        "link": "antenna_right_inner",
+        "label": "end_cap",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0005074336261145444,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_outer__hinge_barrel",
+        "link": "antenna_right_outer",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003531626464219946,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_outer__hinge_collar",
+        "link": "antenna_right_outer",
+        "label": "hinge_collar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026047259265211727,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "antenna_right_outer__main_mast",
+        "link": "antenna_right_outer",
+        "label": "main_mast",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.011008264051698668,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_outer__upper_tip",
+        "link": "antenna_right_outer",
+        "label": "upper_tip",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0018284816776699192,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "antenna_right_outer__end_cap",
+        "link": "antenna_right_outer",
+        "label": "end_cap",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0005074336261145444,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

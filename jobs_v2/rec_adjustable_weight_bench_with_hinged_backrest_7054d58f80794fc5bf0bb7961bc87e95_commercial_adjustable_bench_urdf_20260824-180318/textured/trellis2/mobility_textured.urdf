@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="commercial_adjustable_bench">
+	<material name="black_powder_coat">
+		<color rgba="0.015 0.016 0.017 1" />
+	</material>
+	<material name="charcoal_vinyl">
+		<color rgba="0.055 0.055 0.05 1" />
+	</material>
+	<material name="stitched_seam">
+		<color rgba="0.18 0.18 0.16 1" />
+	</material>
+	<material name="matte_rubber">
+		<color rgba="0.006 0.006 0.006 1" />
+	</material>
+	<material name="brushed_hardware">
+		<color rgba="0.62 0.6 0.55 1" />
+	</material>
+	<material name="red_pop_pin">
+		<color rgba="0.82 0.035 0.025 1" />
+	</material>
+	<link name="main_frame">
+		<visual name="main_frame__center_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__center_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__rear_floor_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__rear_floor_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__front_floor_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__front_floor_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__rear_down_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__rear_down_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__front_down_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__front_down_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_tower_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_tower_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_tower_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_tower_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_base_yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_base_yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_crossmember">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_crossmember.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_lug_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_lug_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__back_hinge_lug_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__back_hinge_lug_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__seat_hinge_tower_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__seat_hinge_tower_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__seat_hinge_tower_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__seat_hinge_tower_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__seat_hinge_base_yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__seat_hinge_base_yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__seat_hinge_crossmember">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__seat_hinge_crossmember.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__seat_hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__seat_hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__support_pivot_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__support_pivot_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__support_pivot_base_yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__support_pivot_base_yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__support_pivot_stand_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__support_pivot_stand_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__support_pivot_stand_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__support_pivot_stand_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__wheel_fork_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__wheel_fork_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__wheel_axle_stub_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__wheel_axle_stub_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__wheel_fork_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__wheel_fork_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="main_frame__wheel_axle_stub_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/main_frame__wheel_axle_stub_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="backrest">
+		<visual name="backrest__back_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_pad.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_side_seam_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_side_seam_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_side_seam_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_side_seam_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__angle_selector_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__angle_selector_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_hole_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_hole_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_hole_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_hole_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_hole_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_hole_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_hole_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_hole_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_hole_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_hole_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_hinge_barrel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_barrel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_hinge_tab_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_tab_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_hinge_barrel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_barrel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_hinge_tab_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_tab_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat">
+		<visual name="seat__seat_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_pad.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__front_seam">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__front_seam.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_hinge_barrel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_barrel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_hinge_tab_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_tab_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_hinge_barrel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_barrel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_hinge_tab_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_tab_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rear_support_arm">
+		<visual name="rear_support_arm__wide_support_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__wide_support_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_support_arm__side_rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__side_rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_support_arm__side_rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__side_rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_support_arm__lower_pivot_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__lower_pivot_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_support_arm__upper_roller">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__upper_roller.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_support_arm__pop_pin_boss">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_support_arm__pop_pin_boss.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="selector_knob">
+		<visual name="selector_knob__knob_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__knob_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="selector_knob__pin_shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__pin_shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="selector_knob__spring_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__spring_collar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_0">
+		<visual name="wheel_0__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__wheel_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_0__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__tire.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_1">
+		<visual name="wheel_1__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__wheel_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_1__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__tire.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="frame_to_backrest" type="revolute">
+		<origin xyz="-0.28 0 0.58" rpy="0 0.42 0" />
+		<parent link="main_frame" />
+		<child link="backrest" />
+		<axis xyz="0 1 0" />
+		<limit effort="140" velocity="1" lower="-0.42" upper="0.78" />
+	</joint>
+	<joint name="frame_to_seat" type="revolute">
+		<origin xyz="0.35 0 0.53" rpy="0 0.08 0" />
+		<parent link="main_frame" />
+		<child link="seat" />
+		<axis xyz="0 1 0" />
+		<limit effort="80" velocity="1" lower="-0.08" upper="0.35" />
+	</joint>
+	<joint name="frame_to_rear_support_arm" type="revolute">
+		<origin xyz="-0.63 0 0.3" rpy="0 0.35 0" />
+		<parent link="main_frame" />
+		<child link="rear_support_arm" />
+		<axis xyz="0 -1 0" />
+		<limit effort="120" velocity="1" lower="-0.3" upper="0.55" />
+	</joint>
+	<joint name="support_arm_to_selector_knob" type="prismatic">
+		<origin xyz="-0.43 -0.157 0.01" rpy="0 0 0" />
+		<parent link="rear_support_arm" />
+		<child link="selector_knob" />
+		<axis xyz="0 -1 0" />
+		<limit effort="35" velocity="0.2" lower="0" upper="0.035" />
+	</joint>
+	<joint name="frame_to_wheel_0" type="continuous">
+		<origin xyz="-0.93 -0.52 0.115" rpy="0 0 1.5708" />
+		<parent link="main_frame" />
+		<child link="wheel_0" />
+		<axis xyz="1 0 0" />
+		<limit effort="8" velocity="25" />
+	</joint>
+	<joint name="frame_to_wheel_1" type="continuous">
+		<origin xyz="-0.93 0.52 0.115" rpy="0 0 1.5708" />
+		<parent link="main_frame" />
+		<child link="wheel_1" />
+		<axis xyz="1 0 0" />
+		<limit effort="8" velocity="25" />
+	</joint>
+</robot>

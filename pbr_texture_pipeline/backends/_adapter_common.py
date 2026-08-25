@@ -1,10 +1,10 @@
 """Shared helpers for backend adapter scripts (Stage T).
 
-Adapter scripts run INSIDE a backend's conda env (trellis2 / hunyuan3d) with cwd = the
-backend repo. They must not import the heavy pbr_texture_pipeline.rendering module (the Hunyuan env has
-no TRELLIS.2 renderer). Re-pose un-rotation here is therefore trimesh+numpy only.
+Adapter scripts run INSIDE a backend's conda env (trellis2) with cwd = the backend repo.
+They must not import the heavy pbr_texture_pipeline.rendering module. Re-pose un-rotation
+here is therefore trimesh+numpy only.
 
-CLI contract shared by every adapter (single pair or --pairs-file):
+CLI contract (single pair or --pairs-file):
   --mesh <path> --image <rgba> --out-dir <dir> --seed N --camera-json <path>
 Emits one machine-readable result line per pair:  [PBR_RESULT] {json}
 """

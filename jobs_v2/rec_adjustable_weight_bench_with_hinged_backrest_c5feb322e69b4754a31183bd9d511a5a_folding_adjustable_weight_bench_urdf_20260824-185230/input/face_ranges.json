@@ -1,0 +1,264 @@
+{
+  "group_order": [
+    "center_frame__side_rail_0",
+    "center_frame__side_rail_1",
+    "center_frame__front_crossmember",
+    "center_frame__rear_floor_tube",
+    "center_frame__center_spine",
+    "center_frame__front_wheel_axle",
+    "center_frame__back_hinge_pin",
+    "center_frame__seat_hinge_pin",
+    "center_frame__rear_pivot_pin",
+    "center_frame__seat_upright_0",
+    "center_frame__back_upright_0",
+    "center_frame__axle_strut_0",
+    "center_frame__seat_upright_1",
+    "center_frame__back_upright_1",
+    "center_frame__axle_strut_1",
+    "center_frame__back_hinge_cheek_0",
+    "center_frame__seat_hinge_cheek_0",
+    "center_frame__rear_pivot_cheek_0",
+    "center_frame__back_hinge_cheek_1",
+    "center_frame__seat_hinge_cheek_1",
+    "center_frame__rear_pivot_cheek_1",
+    "center_frame__rear_foot_cap_0",
+    "center_frame__rear_foot_cap_1",
+    "center_frame__spine_tie_0_0",
+    "center_frame__spine_tie_0_1",
+    "center_frame__spine_tie_1_0",
+    "center_frame__spine_tie_1_1",
+    "center_frame__front_handle",
+    "backrest__cushion",
+    "backrest__center_stitch",
+    "backrest__support_rail_0",
+    "backrest__support_rail_1",
+    "backrest__pivot_sleeve",
+    "backrest__hinge_plate",
+    "seat_pad__cushion",
+    "seat_pad__center_stitch",
+    "seat_pad__support_rail_0",
+    "seat_pad__support_rail_1",
+    "seat_pad__pivot_sleeve",
+    "seat_pad__hinge_plate",
+    "rear_support__pivot_sleeve",
+    "rear_support__link_lug_0",
+    "rear_support__side_link_0",
+    "rear_support__link_lug_1",
+    "rear_support__side_link_1",
+    "rear_support__upper_roller",
+    "wheel_0__hub",
+    "wheel_0__tire",
+    "wheel_1__hub",
+    "wheel_1__tire"
+  ],
+  "face_ranges": {
+    "center_frame__side_rail_0": [
+      0,
+      128
+    ],
+    "center_frame__side_rail_1": [
+      128,
+      256
+    ],
+    "center_frame__front_crossmember": [
+      256,
+      384
+    ],
+    "center_frame__rear_floor_tube": [
+      384,
+      512
+    ],
+    "center_frame__center_spine": [
+      512,
+      640
+    ],
+    "center_frame__front_wheel_axle": [
+      640,
+      768
+    ],
+    "center_frame__back_hinge_pin": [
+      768,
+      896
+    ],
+    "center_frame__seat_hinge_pin": [
+      896,
+      1024
+    ],
+    "center_frame__rear_pivot_pin": [
+      1024,
+      1152
+    ],
+    "center_frame__seat_upright_0": [
+      1152,
+      1280
+    ],
+    "center_frame__back_upright_0": [
+      1280,
+      1408
+    ],
+    "center_frame__axle_strut_0": [
+      1408,
+      1536
+    ],
+    "center_frame__seat_upright_1": [
+      1536,
+      1664
+    ],
+    "center_frame__back_upright_1": [
+      1664,
+      1792
+    ],
+    "center_frame__axle_strut_1": [
+      1792,
+      1920
+    ],
+    "center_frame__back_hinge_cheek_0": [
+      1920,
+      1932
+    ],
+    "center_frame__seat_hinge_cheek_0": [
+      1932,
+      1944
+    ],
+    "center_frame__rear_pivot_cheek_0": [
+      1944,
+      1956
+    ],
+    "center_frame__back_hinge_cheek_1": [
+      1956,
+      1968
+    ],
+    "center_frame__seat_hinge_cheek_1": [
+      1968,
+      1980
+    ],
+    "center_frame__rear_pivot_cheek_1": [
+      1980,
+      1992
+    ],
+    "center_frame__rear_foot_cap_0": [
+      1992,
+      2120
+    ],
+    "center_frame__rear_foot_cap_1": [
+      2120,
+      2248
+    ],
+    "center_frame__spine_tie_0_0": [
+      2248,
+      2376
+    ],
+    "center_frame__spine_tie_0_1": [
+      2376,
+      2504
+    ],
+    "center_frame__spine_tie_1_0": [
+      2504,
+      2632
+    ],
+    "center_frame__spine_tie_1_1": [
+      2632,
+      2760
+    ],
+    "center_frame__front_handle": [
+      2760,
+      4236
+    ],
+    "backrest__cushion": [
+      4236,
+      4396
+    ],
+    "backrest__center_stitch": [
+      4396,
+      4408
+    ],
+    "backrest__support_rail_0": [
+      4408,
+      4420
+    ],
+    "backrest__support_rail_1": [
+      4420,
+      4432
+    ],
+    "backrest__pivot_sleeve": [
+      4432,
+      4560
+    ],
+    "backrest__hinge_plate": [
+      4560,
+      4572
+    ],
+    "seat_pad__cushion": [
+      4572,
+      4732
+    ],
+    "seat_pad__center_stitch": [
+      4732,
+      4744
+    ],
+    "seat_pad__support_rail_0": [
+      4744,
+      4756
+    ],
+    "seat_pad__support_rail_1": [
+      4756,
+      4768
+    ],
+    "seat_pad__pivot_sleeve": [
+      4768,
+      4896
+    ],
+    "seat_pad__hinge_plate": [
+      4896,
+      4908
+    ],
+    "rear_support__pivot_sleeve": [
+      4908,
+      5036
+    ],
+    "rear_support__link_lug_0": [
+      5036,
+      5048
+    ],
+    "rear_support__side_link_0": [
+      5048,
+      5176
+    ],
+    "rear_support__link_lug_1": [
+      5176,
+      5188
+    ],
+    "rear_support__side_link_1": [
+      5188,
+      5316
+    ],
+    "rear_support__upper_roller": [
+      5316,
+      5444
+    ],
+    "wheel_0__hub": [
+      5444,
+      17808
+    ],
+    "wheel_0__tire": [
+      17808,
+      23260
+    ],
+    "wheel_1__hub": [
+      23260,
+      35624
+    ],
+    "wheel_1__tire": [
+      35624,
+      41076
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.01749700000000004,
+      0.0,
+      0.2322615
+    ],
+    "scale": 0.5221896256594015
+  }
+}

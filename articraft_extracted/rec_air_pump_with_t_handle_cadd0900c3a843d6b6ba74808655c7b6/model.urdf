@@ -1,0 +1,94 @@
+<robot name="garage_floor_pump">
+  <material name="base_steel">
+    <color rgba="0.19 0.2 0.22 1" />
+    </material>
+  <material name="barrel_alloy">
+    <color rgba="0.72 0.74 0.77 1" />
+    </material>
+  <material name="rod_steel">
+    <color rgba="0.8 0.81 0.82 1" />
+    </material>
+  <material name="handle_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="clip_black">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.017" rpy="0 0 0" />
+      <mass value="2.3" />
+      <inertia ixx="0.00512823" ixy="0" ixz="0" iyy="0.0174716" iyz="0" izz="0.0221567" />
+      </inertial>
+    <visual name="base_shell">
+      <geometry>
+        <mesh filename="assets/meshes/pump_base.obj" />
+        </geometry>
+      <material name="base_steel" />
+      </visual>
+    </link>
+  <link name="barrel">
+    <inertial>
+      <origin xyz="0 0 0.274" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.0302741" ixy="0" ixz="0" iyy="0.0302741" iyz="0" izz="0.00048735" />
+      </inertial>
+    <visual name="barrel_shell">
+      <geometry>
+        <mesh filename="assets/meshes/pump_barrel.obj" />
+        </geometry>
+      <material name="barrel_alloy" />
+      </visual>
+    </link>
+  <link name="handle_assembly">
+    <inertial>
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <mass value="0.55" />
+      <inertia ixx="0.0115145" ixy="0" ixz="0" iyy="0.0143229" iyz="0" izz="0.00292073" />
+      </inertial>
+    <visual name="handle_rod">
+      <geometry>
+        <mesh filename="assets/meshes/pump_handle_rod.obj" />
+        </geometry>
+      <material name="rod_steel" />
+      </visual>
+    <visual name="handle_grip">
+      <geometry>
+        <mesh filename="assets/meshes/pump_handle_grip.obj" />
+        </geometry>
+      <material name="handle_black" />
+      </visual>
+    </link>
+  <link name="hose_clip">
+    <inertial>
+      <origin xyz="0.022 0 -0.038" rpy="0 0 0" />
+      <mass value="0.08" />
+      <inertia ixx="4.91267e-05" ixy="0" ixz="0" iyy="5.88333e-05" iyz="0" izz="1.16267e-05" />
+      </inertial>
+    <visual name="clip_body">
+      <geometry>
+        <mesh filename="assets/meshes/pump_hose_clip.obj" />
+        </geometry>
+      <material name="clip_black" />
+      </visual>
+    </link>
+  <joint name="base_to_barrel" type="fixed">
+    <origin xyz="0 0 0.034" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="barrel" />
+    </joint>
+  <joint name="barrel_to_handle" type="prismatic">
+    <origin xyz="0 0 0.548" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="handle_assembly" />
+    <axis xyz="0 0 1" />
+    <limit effort="120" velocity="0.8" lower="0" upper="0.24" />
+    </joint>
+  <joint name="barrel_to_hose_clip" type="revolute">
+    <origin xyz="0.032 0 0.125" rpy="0 0 0" />
+    <parent link="barrel" />
+    <child link="hose_clip" />
+    <axis xyz="0 -1 0" />
+    <limit effort="2" velocity="1.5" lower="0" upper="1.35" />
+    </joint>
+  </robot>

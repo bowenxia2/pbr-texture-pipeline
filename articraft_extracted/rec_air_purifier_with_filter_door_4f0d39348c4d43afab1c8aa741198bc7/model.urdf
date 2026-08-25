@@ -1,0 +1,382 @@
+<robot name="bathroom_wall_air_purifier">
+  <material name="warm_white_plastic">
+    <color rgba="0.92 0.94 0.91 1" />
+    </material>
+  <material name="slightly_darker_cover">
+    <color rgba="0.86 0.89 0.86 1" />
+    </material>
+  <material name="charcoal_filter_media">
+    <color rgba="0.08 0.09 0.09 1" />
+    </material>
+  <material name="washable_blue_filter">
+    <color rgba="0.45 0.7 0.82 1" />
+    </material>
+  <material name="powder_coated_bracket">
+    <color rgba="0.56 0.58 0.58 1" />
+    </material>
+  <material name="brushed_hinge_metal">
+    <color rgba="0.65 0.66 0.62 1" />
+    </material>
+  <material name="dark_screw_heads">
+    <color rgba="0.08 0.08 0.075 1" />
+    </material>
+  <link name="wall_bracket">
+    <visual name="wall_plate">
+      <origin xyz="0 -0.012 0.2704" rpy="0 0 0" />
+      <geometry>
+        <box size="0.25 0.006 0.41" />
+        </geometry>
+      <material name="powder_coated_bracket">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="hook_rail_0">
+      <origin xyz="0 -0.006 0.112" rpy="0 0 0" />
+      <geometry>
+        <box size="0.226 0.012 0.018" />
+        </geometry>
+      <material name="powder_coated_bracket">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="hook_rail_1">
+      <origin xyz="0 -0.006 0.438" rpy="0 0 0" />
+      <geometry>
+        <box size="0.226 0.012 0.018" />
+        </geometry>
+      <material name="powder_coated_bracket">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_0">
+      <origin xyz="0 -0.0165 0.126" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      <material name="dark_screw_heads">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_0">
+      <origin xyz="0 -0.019 0.126" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.0015 0.003" />
+        </geometry>
+      <material name="powder_coated_bracket">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    <visual name="screw_head_1">
+      <origin xyz="0 -0.0165 0.424" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.004" />
+        </geometry>
+      <material name="dark_screw_heads">
+        <color rgba="0.08 0.08 0.075 1" />
+        </material>
+      </visual>
+    <visual name="screw_slot_1">
+      <origin xyz="0 -0.019 0.424" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.0015 0.003" />
+        </geometry>
+      <material name="powder_coated_bracket">
+        <color rgba="0.56 0.58 0.58 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="housing">
+    <visual name="rear_panel">
+      <origin xyz="0 0.006 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.012 0.52" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_0">
+      <origin xyz="-0.154 0.06 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.12 0.52" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="side_wall_1">
+      <origin xyz="0.154 0.06 0.26" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.12 0.52" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="top_wall">
+      <origin xyz="0 0.06 0.514" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.12 0.012" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="bottom_wall">
+      <origin xyz="0 0.06 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.32 0.12 0.012" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="tray_slide_0">
+      <origin xyz="-0.129 0.06 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.11 0.006" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tray_slide_1">
+      <origin xyz="0.129 0.06 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.11 0.006" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="base_fascia">
+      <origin xyz="0 0.117 0.014" rpy="0 0 0" />
+      <geometry>
+        <box size="0.285 0.006 0.008" />
+        </geometry>
+      <material name="warm_white_plastic">
+        <color rgba="0.92 0.94 0.91 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf_0">
+      <origin xyz="0.166 0.123 0.146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.006 0.078" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_0_0">
+      <origin xyz="0.174 0.128 0.12" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_0_1">
+      <origin xyz="0.174 0.128 0.172" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf_1">
+      <origin xyz="0.166 0.123 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.006 0.078" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_1_0">
+      <origin xyz="0.174 0.128 0.394" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="fixed_knuckle_1_1">
+      <origin xyz="0.174 0.128 0.446" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0055" length="0.022" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_cover">
+    <visual name="cover_side_stile">
+      <origin xyz="-0.307 0 0.2825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.012 0.455" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="cover_hinge_stile">
+      <origin xyz="-0.027 0 0.2825" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.012 0.455" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="cover_bottom_rail">
+      <origin xyz="-0.165 0 0.067" rpy="0 0 0" />
+      <geometry>
+        <box size="0.306 0.012 0.024" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="cover_top_rail">
+      <origin xyz="-0.165 0 0.498" rpy="0 0 0" />
+      <geometry>
+        <box size="0.306 0.012 0.024" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="-0.165 0.0045 0.2905" rpy="-1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_cover_grille.obj" />
+        </geometry>
+      <material name="charcoal_filter_media">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="finger_pull">
+      <origin xyz="-0.296 0.0075 0.2725" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.005 0.19" />
+        </geometry>
+      <material name="charcoal_filter_media">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    <visual name="moving_knuckle_0">
+      <origin xyz="0 0 0.146" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.026" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_leaf_0">
+      <origin xyz="-0.009 0 0.146" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.005 0.03" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_knuckle_1">
+      <origin xyz="0 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.0052" length="0.026" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    <visual name="moving_leaf_1">
+      <origin xyz="-0.009 0 0.42" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.005 0.03" />
+        </geometry>
+      <material name="brushed_hinge_metal">
+        <color rgba="0.65 0.66 0.62 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_tray">
+    <visual name="tray_side_0">
+      <origin xyz="-0.119 0.045 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.12 0.018" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="0.119 0.045 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.12 0.018" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tray_rear_rail">
+      <origin xyz="0 -0.008 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.252 0.014 0.018" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="tray_front_rail">
+      <origin xyz="0 0.098 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.252 0.014 0.018" />
+        </geometry>
+      <material name="slightly_darker_cover">
+        <color rgba="0.86 0.89 0.86 1" />
+        </material>
+      </visual>
+    <visual name="filter_mesh">
+      <origin xyz="0 0.045 0.037" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/washable_filter_mesh.obj" />
+        </geometry>
+      <material name="washable_blue_filter">
+        <color rgba="0.45 0.7 0.82 1" />
+        </material>
+      </visual>
+    <visual name="tray_pull_lip">
+      <origin xyz="0 0.112 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.014 0.018" />
+        </geometry>
+      <material name="charcoal_filter_media">
+        <color rgba="0.08 0.09 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bracket_to_housing" type="fixed">
+    <parent link="wall_bracket" />
+    <child link="housing" />
+    </joint>
+  <joint name="cover_hinge" type="revolute">
+    <origin xyz="0.174 0.128 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="front_cover" />
+    <axis xyz="0 0 -1" />
+    <limit effort="8" velocity="1.2" lower="0" upper="1.75" />
+    </joint>
+  <joint name="tray_slide" type="prismatic">
+    <origin xyz="0 0.025 0" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="filter_tray" />
+    <axis xyz="0 1 0" />
+    <limit effort="18" velocity="0.35" lower="0" upper="0.075" />
+    </joint>
+  </robot>

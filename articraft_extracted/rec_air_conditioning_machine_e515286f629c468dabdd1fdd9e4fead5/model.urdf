@@ -1,0 +1,67 @@
+<robot name="portable_air_conditioner">
+  <material name="housing_white">
+    <color rgba="0.91 0.92 0.9 1" />
+    </material>
+  <material name="panel_white">
+    <color rgba="0.95 0.95 0.94 1" />
+    </material>
+  <link name="housing">
+    <visual name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_housing.obj" />
+        </geometry>
+      <material name="housing_white">
+        <color rgba="0.91 0.92 0.9 1" />
+        </material>
+      </visual>
+    <collision name="housing_shell">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_housing.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="vent_door">
+    <visual name="door_leaf">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_vent_door.obj" />
+        </geometry>
+      <material name="panel_white">
+        <color rgba="0.95 0.95 0.94 1" />
+        </material>
+      </visual>
+    <collision name="door_leaf">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_vent_door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="service_panel">
+    <visual name="panel_cover">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_service_panel.obj" />
+        </geometry>
+      <material name="panel_white">
+        <color rgba="0.95 0.95 0.94 1" />
+        </material>
+      </visual>
+    <collision name="panel_cover">
+      <geometry>
+        <mesh filename="assets/meshes/portable_ac_service_panel.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="top_vent_hinge" type="revolute">
+    <origin xyz="0 0.0885 0.79" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="vent_door" />
+    <axis xyz="-1 0 0" />
+    <limit effort="12" velocity="1.4" lower="0" upper="1.2" />
+    </joint>
+  <joint name="service_panel_hinge" type="revolute">
+    <origin xyz="0.22 0.154 0.105" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="service_panel" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.2" lower="0" upper="1.55" />
+    </joint>
+  </robot>

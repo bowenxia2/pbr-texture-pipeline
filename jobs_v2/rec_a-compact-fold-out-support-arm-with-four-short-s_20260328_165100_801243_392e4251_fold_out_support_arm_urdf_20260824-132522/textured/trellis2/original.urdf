@@ -1,0 +1,250 @@
+<robot name="fold_out_support_arm">
+  <material name="steel">
+    <color rgba="0.28 0.3 0.33 1" />
+    </material>
+  <material name="zinc">
+    <color rgba="0.68 0.7 0.72 1" />
+    </material>
+  <link name="base_plate">
+    <visual name="plate">
+      <origin xyz="-0.003 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.045 0.09" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_reinforcement">
+      <origin xyz="-0.0033 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0045 0.0315 0.0182" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge_upper">
+      <origin xyz="0.007 0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="hinge_bridge_lower">
+      <origin xyz="0.007 -0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_upper">
+      <origin xyz="0.018 0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_lower">
+      <origin xyz="0.018 -0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link1">
+    <visual name="tongue">
+      <origin xyz="0.004 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.011 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="core">
+      <origin xyz="0.038 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.013 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_upper">
+      <origin xyz="0.072 0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_lower">
+      <origin xyz="0.072 -0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link2">
+    <visual name="tongue">
+      <origin xyz="0.004 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.011 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="core">
+      <origin xyz="0.036 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.013 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_upper">
+      <origin xyz="0.068 0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_lower">
+      <origin xyz="0.068 -0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link3">
+    <visual name="tongue">
+      <origin xyz="0.004 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.011 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="core">
+      <origin xyz="0.034 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.013 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_upper">
+      <origin xyz="0.064 0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="fork_lower">
+      <origin xyz="0.064 -0.00775 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.0045 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="link4">
+    <visual name="tongue">
+      <origin xyz="0.004 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.011 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="core">
+      <origin xyz="0.032 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.048 0.013 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    <visual name="end_pad">
+      <origin xyz="0.061 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.02 0.014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.28 0.3 0.33 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="platform_bracket">
+    <visual name="bracket_shell">
+      <geometry>
+        <mesh filename="assets/meshes/platform_bracket.obj" />
+        </geometry>
+      <material name="zinc">
+        <color rgba="0.68 0.7 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_link1" type="revolute">
+    <origin xyz="0.014 0 0" rpy="0 0 0" />
+    <parent link="base_plate" />
+    <child link="link1" />
+    <axis xyz="0 1 0" />
+    <limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="link1_to_link2" type="revolute">
+    <origin xyz="0.068 0 0" rpy="0 0 0" />
+    <parent link="link1" />
+    <child link="link2" />
+    <axis xyz="0 1 0" />
+    <limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="link2_to_link3" type="revolute">
+    <origin xyz="0.064 0 0" rpy="0 0 0" />
+    <parent link="link2" />
+    <child link="link3" />
+    <axis xyz="0 1 0" />
+    <limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="link3_to_link4" type="revolute">
+    <origin xyz="0.06 0 0" rpy="0 0 0" />
+    <parent link="link3" />
+    <child link="link4" />
+    <axis xyz="0 1 0" />
+    <limit effort="15" velocity="2" lower="-0.75" upper="0.75" />
+    </joint>
+  <joint name="link4_to_platform_bracket" type="fixed">
+    <origin xyz="0.066 0 0" rpy="0 0 0" />
+    <parent link="link4" />
+    <child link="platform_bracket" />
+    </joint>
+  </robot>

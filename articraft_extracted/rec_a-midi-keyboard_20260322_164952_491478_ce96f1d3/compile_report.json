@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_a-midi-keyboard_20260322_164952_491478_ce96f1d3",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [],
+  "checks_run": [
+    "compile_visual"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "visual",
+    "validation_level": "none",
+    "fingerprint_inputs": {
+      "model_py_sha256": "5e8c6330b3e129b58a6ed367f3b81b0241e15cbc43740a87f97859579cb93785",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "57c7deba17c35821e770ef2d8f3d8e4d93eac01154f420fa08c2c85a06a82121",
+    "model_py_mtime_ns": 1774526375095189358,
+    "model_py_size_bytes": 28129,
+    "materialization_status": "available",
+    "visual_mesh_bytes": 7867,
+    "visual_mesh_file_count": 6,
+    "compile_elapsed_seconds": 0.017965082995942794
+  },
+  "signal_bundle": {
+    "status": "success",
+    "summary": "status=success failures=0 warnings=0 notes=0\nCompile passed cleanly.",
+    "signals": []
+  }
+}

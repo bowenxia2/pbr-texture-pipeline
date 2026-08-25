@@ -1,0 +1,484 @@
+<robot name="casino_slot_machine">
+  <material name="cabinet_red">
+    <color rgba="0.66 0.08 0.1 1" />
+    </material>
+  <material name="trim_gold">
+    <color rgba="0.83 0.69 0.18 1" />
+    </material>
+  <material name="smoked_glass">
+    <color rgba="0.18 0.24 0.28 0.36" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.11 0.11 0.12 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.78 0.8 0.83 1" />
+    </material>
+  <material name="satin_black">
+    <color rgba="0.12 0.12 0.13 1" />
+    </material>
+  <material name="ivory">
+    <color rgba="0.93 0.92 0.86 1" />
+    </material>
+  <material name="reel_red">
+    <color rgba="0.7 0.14 0.14 1" />
+    </material>
+  <link name="cabinet">
+    <inertial>
+      <origin xyz="0 0 0.86" rpy="0 0 0" />
+      <mass value="85" />
+      <inertia ixx="23.3382" ixy="0" ixz="0" iyy="24.8342" iyz="0" izz="6.26167" />
+      </inertial>
+    <visual name="base_plinth">
+      <origin xyz="0 0 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.74 0.58 0.1" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="back_wall">
+      <origin xyz="0 -0.25 0.89" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.02 1.58" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_side_wall">
+      <origin xyz="-0.31 0 0.89" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.54 1.58" />
+        </geometry>
+      <material name="cabinet_red">
+        <color rgba="0.66 0.08 0.1 1" />
+        </material>
+      </visual>
+    <visual name="right_side_wall">
+      <origin xyz="0.31 0 0.89" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.54 1.58" />
+        </geometry>
+      <material name="cabinet_red">
+        <color rgba="0.66 0.08 0.1 1" />
+        </material>
+      </visual>
+    <visual name="lower_body_core">
+      <origin xyz="0 -0.07 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.34 0.46" />
+        </geometry>
+      <material name="cabinet_red">
+        <color rgba="0.66 0.08 0.1 1" />
+        </material>
+      </visual>
+    <visual name="upper_body_core">
+      <origin xyz="0 -0.1 1.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.28 0.3" />
+        </geometry>
+      <material name="cabinet_red">
+        <color rgba="0.66 0.08 0.1 1" />
+        </material>
+      </visual>
+    <visual name="roof_deck">
+      <origin xyz="0 0 1.51" rpy="0 0 0" />
+      <geometry>
+        <box size="0.58 0.52 0.06" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_front_panel">
+      <origin xyz="0 0.255 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.62 0.03 0.32" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tray_support_panel">
+      <origin xyz="0 0.255 0.44" rpy="0 0 0" />
+      <geometry>
+        <box size="0.46 0.03 0.12" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="deck_ledge">
+      <origin xyz="0 0.17 0.53" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.16 0.06" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_bottom">
+      <origin xyz="0 0.245 0.585" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.04 0.07" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_left">
+      <origin xyz="-0.205 0.245 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.04 0.5" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_right">
+      <origin xyz="0.205 0.245 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.04 0.5" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_top">
+      <origin xyz="0 0.245 1.135" rpy="0 0 0" />
+      <geometry>
+        <box size="0.5 0.04 0.07" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_mullion_left">
+      <origin xyz="-0.055 0.24 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.46" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_mullion_right">
+      <origin xyz="0.055 0.24 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.03 0.46" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="window_glass">
+      <origin xyz="0 0.228 0.86" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.01 0.4" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.18 0.24 0.28 0.36" />
+        </material>
+      </visual>
+    <visual name="upper_front_panel">
+      <origin xyz="0 0.255 1.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.03 0.12" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marquee_header">
+      <origin xyz="0 0.2 1.29" rpy="0 0 0" />
+      <geometry>
+        <box size="0.56 0.16 0.06" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marquee_front">
+      <origin xyz="0 0.215 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.07 0.36" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    <visual name="marquee_glass">
+      <origin xyz="0 0.226 1.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.01 0.24" />
+        </geometry>
+      <material name="smoked_glass">
+        <color rgba="0.18 0.24 0.28 0.36" />
+        </material>
+      </visual>
+    <visual name="marquee_top">
+      <origin xyz="0 0 1.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.6 0.5 0.04" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="pivot_boss">
+      <origin xyz="0.355 0.08 0.8" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.06" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="pivot_plinth">
+      <origin xyz="0.355 0.08 0.8" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.14 0.22" />
+        </geometry>
+      <material name="trim_gold">
+        <color rgba="0.83 0.69 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="reel_bank">
+    <inertial>
+      <origin xyz="0 0.2 0.27" rpy="0 0 0" />
+      <mass value="7" />
+      <inertia ixx="0.263433" ixy="0" ixz="0" iyy="0.315933" iyz="0" izz="0.239167" />
+      </inertial>
+    <visual name="backplate">
+      <origin xyz="0 0.01 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.02 0.54" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="left_bracket">
+      <origin xyz="-0.235 0.15 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.54" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="right_bracket">
+      <origin xyz="0.235 0.15 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.3 0.54" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_crossbar">
+      <origin xyz="0 0.15 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.04" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="upper_crossbar">
+      <origin xyz="0 0.15 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.3 0.04" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.11 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="reel_shaft">
+      <origin xyz="0 0.26 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.44" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="left_reel">
+      <origin xyz="-0.13 0.26 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.1" />
+        </geometry>
+      <material name="ivory">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="left_reel_symbol_band">
+      <origin xyz="-0.13 0.363 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.14 0.025" />
+        </geometry>
+      <material name="reel_red">
+        <color rgba="0.7 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="center_reel">
+      <origin xyz="0 0.26 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.1" />
+        </geometry>
+      <material name="ivory">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="center_reel_symbol_band">
+      <origin xyz="0 0.363 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.14 0.025" />
+        </geometry>
+      <material name="reel_red">
+        <color rgba="0.7 0.14 0.14 1" />
+        </material>
+      </visual>
+    <visual name="right_reel">
+      <origin xyz="0.13 0.26 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.1" />
+        </geometry>
+      <material name="ivory">
+        <color rgba="0.93 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="right_reel_symbol_band">
+      <origin xyz="0.13 0.363 0.27" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.14 0.025" />
+        </geometry>
+      <material name="reel_red">
+        <color rgba="0.7 0.14 0.14 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="coin_tray">
+    <inertial>
+      <origin xyz="0 0.09 0.025" rpy="0 0 0" />
+      <mass value="1.2" />
+      <inertia ixx="0.00349" ixy="0" ixz="0" iyy="0.01181" iyz="0" izz="0.0148" />
+      </inertial>
+    <visual name="tray_back">
+      <origin xyz="0 0.01 0.025" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="tray_floor">
+      <origin xyz="0 0.1 0.0075" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.16 0.015" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="tray_left_wall">
+      <origin xyz="-0.1625 0.1 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.16 0.045" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="tray_right_wall">
+      <origin xyz="0.1625 0.1 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.015 0.16 0.045" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    <visual name="tray_front_lip">
+      <origin xyz="0 0.19 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.02 0.03" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.78 0.8 0.83 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="pull_handle">
+    <inertial>
+      <origin xyz="0.07 0.1 0.28" rpy="0 0 0" />
+      <mass value="1.8" />
+      <inertia ixx="0.05568" ixy="0" ixz="0" iyy="0.04998" iyz="0" izz="0.01158" />
+      </inertial>
+    <visual name="handle_hub">
+      <origin xyz="0.015 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.035" length="0.03" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="handle_arm">
+      <geometry>
+        <mesh filename="assets/meshes/slot_machine_pull_handle_arm.obj" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="pull_grip">
+      <origin xyz="0.06 0.12 0.46" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.032" length="0.14" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="grip_lower_cap">
+      <origin xyz="0.06 0.05 0.46" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    <visual name="grip_upper_cap">
+      <origin xyz="0.06 0.19 0.46" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.032" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.12 0.12 0.13 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="cabinet_to_reel_bank" type="fixed">
+    <origin xyz="0 -0.24 0.6" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="reel_bank" />
+    </joint>
+  <joint name="cabinet_to_coin_tray" type="fixed">
+    <origin xyz="0 0.27 0.12" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="coin_tray" />
+    </joint>
+  <joint name="cabinet_to_pull_handle" type="revolute">
+    <origin xyz="0.385 0.08 0.8" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="pull_handle" />
+    <axis xyz="-1 0 0" />
+    <limit effort="12" velocity="2.5" lower="0" upper="0.95" />
+    </joint>
+  </robot>

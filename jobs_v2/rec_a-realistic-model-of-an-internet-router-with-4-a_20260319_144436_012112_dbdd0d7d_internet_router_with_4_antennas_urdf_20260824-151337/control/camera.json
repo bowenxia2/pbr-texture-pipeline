@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_0.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 17.0,
+        "ro": 21.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_1.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 13.0,
+        "ro": 19.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_2.png",
+        "ok": true,
+        "az": 271.0,
+        "el": 15.0,
+        "ro": 14.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_3.png",
+        "ok": true,
+        "az": 223.0,
+        "el": 14.0,
+        "ro": -18.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_4.png",
+        "ok": true,
+        "az": 0.0,
+        "el": 23.0,
+        "ro": -22.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_5.png",
+        "ok": true,
+        "az": 318.0,
+        "el": 14.0,
+        "ro": 21.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_6.png",
+        "ok": true,
+        "az": 271.0,
+        "el": 15.0,
+        "ro": 15.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-model-of-an-internet-router-with-4-a_20260319_144436_012112_dbdd0d7d_internet_router_with_4_antennas_urdf_20260824-151337/render/view_7.png",
+        "ok": true,
+        "az": 41.0,
+        "el": 14.0,
+        "ro": -18.0,
+        "alpha": 2.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 356.5033446115304,
+    "agreement_err_deg": 67.625,
+    "implied_front_deg": [
+      1.0,
+      1.0,
+      1.0,
+      358.0,
+      180.0,
+      183.0,
+      181.0,
+      356.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 67.6 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 0
+  }
+}

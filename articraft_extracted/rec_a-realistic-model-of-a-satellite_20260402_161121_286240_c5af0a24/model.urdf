@@ -1,0 +1,525 @@
+<robot name="communications_satellite">
+  <material name="blanket_gold">
+    <color rgba="0.78 0.66 0.2 1" />
+    </material>
+  <material name="radiator_black">
+    <color rgba="0.12 0.13 0.15 1" />
+    </material>
+  <material name="solar_blue">
+    <color rgba="0.08 0.17 0.36 1" />
+    </material>
+  <material name="frame_aluminum">
+    <color rgba="0.72 0.74 0.78 1" />
+    </material>
+  <material name="antenna_white">
+    <color rgba="0.9 0.92 0.95 1" />
+    </material>
+  <material name="sensor_white">
+    <color rgba="0.83 0.86 0.9 1" />
+    </material>
+  <material name="dark_metal">
+    <color rgba="0.24 0.25 0.28 1" />
+    </material>
+  <link name="bus">
+    <inertial>
+      <origin xyz="0 0 -0.03" rpy="0 0 0" />
+      <mass value="860" />
+      <inertia ixx="587.609" ixy="0" ixz="0" iyy="606.873" iyz="0" izz="180.313" />
+      </inertial>
+    <visual name="main_bus">
+      <geometry>
+        <box size="1.1 0.98 1.52" />
+        </geometry>
+      <material name="blanket_gold">
+        <color rgba="0.78 0.66 0.2 1" />
+        </material>
+      </visual>
+    <visual name="top_deck">
+      <origin xyz="0 0 0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 1.06 0.14" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_deck">
+      <origin xyz="0 0 -0.83" rpy="0 0 0" />
+      <geometry>
+        <box size="1.18 1.06 0.14" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="radiator_plus_x">
+      <origin xyz="0.575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.88 1.34" />
+        </geometry>
+      <material name="radiator_black">
+        <color rgba="0.12 0.13 0.15 1" />
+        </material>
+      </visual>
+    <visual name="radiator_minus_x">
+      <origin xyz="-0.575 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.88 1.34" />
+        </geometry>
+      <material name="radiator_black">
+        <color rgba="0.12 0.13 0.15 1" />
+        </material>
+      </visual>
+    <visual name="antenna_mount">
+      <origin xyz="0.61 0 0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.26 0.36" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="left_array_clevis">
+      <origin xyz="0 0.52 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.06 0.72" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="right_array_clevis">
+      <origin xyz="0 -0.52 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.06 0.72" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="sensor_plinth">
+      <origin xyz="0 0 0.95" rpy="0 0 0" />
+      <geometry>
+        <box size="0.3 0.3 0.1" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="sensor_mast">
+      <origin xyz="0 0 1.09" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.18" />
+        </geometry>
+      <material name="sensor_white">
+        <color rgba="0.83 0.86 0.9 1" />
+        </material>
+      </visual>
+    <visual name="star_tracker_dome">
+      <origin xyz="0 0 1.24" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.06" />
+        </geometry>
+      <material name="sensor_white">
+        <color rgba="0.83 0.86 0.9 1" />
+        </material>
+      </visual>
+    <visual name="engine_collar">
+      <origin xyz="0 0 -0.96" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.17" length="0.12" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="apogee_nozzle">
+      <origin xyz="0 0 -1.02" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/satellite_apogee_nozzle.obj" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_solar_wing">
+    <inertial>
+      <origin xyz="0 1.05 0" rpy="0 0 0" />
+      <mass value="42" />
+      <inertia ixx="49.5054" ixy="0" ixz="0" iyy="34.0876" iyz="0" izz="15.4522" />
+      </inertial>
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.028" length="0.72" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="root_yoke">
+      <origin xyz="0 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.82" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_panel">
+      <origin xyz="0 0.56 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.96 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="mid_hinge_strip">
+      <origin xyz="0 1.09 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.1 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="outer_panel">
+      <origin xyz="0 1.6 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.92 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_frame_rail">
+      <origin xyz="0 1.07 1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 1.98 0.07" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_frame_rail">
+      <origin xyz="0 1.07 -1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 1.98 0.07" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_frame_rail">
+      <origin xyz="0 0.08 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.08 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="outer_frame_rail">
+      <origin xyz="0 2.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.08 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_upper_cells">
+      <origin xyz="0.011 0.56 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="inner_lower_cells">
+      <origin xyz="0.011 0.56 -0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="outer_upper_cells">
+      <origin xyz="0.011 1.6 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="outer_lower_cells">
+      <origin xyz="0.011 1.6 -0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_solar_wing">
+    <inertial>
+      <origin xyz="0 1.05 0" rpy="0 0 0" />
+      <mass value="42" />
+      <inertia ixx="49.5054" ixy="0" ixz="0" iyy="34.0876" iyz="0" izz="15.4522" />
+      </inertial>
+    <visual name="hinge_barrel">
+      <geometry>
+        <cylinder radius="0.028" length="0.72" />
+        </geometry>
+      <material name="dark_metal">
+        <color rgba="0.24 0.25 0.28 1" />
+        </material>
+      </visual>
+    <visual name="root_yoke">
+      <origin xyz="0 0.04 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.08 0.82" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_panel">
+      <origin xyz="0 0.56 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.96 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="mid_hinge_strip">
+      <origin xyz="0 1.09 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.1 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="outer_panel">
+      <origin xyz="0 1.6 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.92 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="top_frame_rail">
+      <origin xyz="0 1.07 1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 1.98 0.07" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="bottom_frame_rail">
+      <origin xyz="0 1.07 -1.495" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 1.98 0.07" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_frame_rail">
+      <origin xyz="0 0.08 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.08 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="outer_frame_rail">
+      <origin xyz="0 2.06 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.08 3.06" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="inner_upper_cells">
+      <origin xyz="0.011 0.56 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="inner_lower_cells">
+      <origin xyz="0.011 0.56 -0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="outer_upper_cells">
+      <origin xyz="0.011 1.6 0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    <visual name="outer_lower_cells">
+      <origin xyz="0.011 1.6 -0.76" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.82 1.36" />
+        </geometry>
+      <material name="solar_blue">
+        <color rgba="0.08 0.17 0.36 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="high_gain_antenna">
+    <inertial>
+      <origin xyz="0.55 0 0" rpy="0 0 0" />
+      <mass value="34" />
+      <inertia ixx="4.79627" ixy="0" ixz="0" iyy="5.82647" iyz="0" izz="5.82647" />
+      </inertial>
+    <visual name="mount_collar">
+      <origin xyz="0.04 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.09" length="0.08" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="support_boom">
+      <origin xyz="0.19 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.055" length="0.38" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="transceiver_box">
+      <origin xyz="0.24 0 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.2 0.18 0.18" />
+        </geometry>
+      <material name="radiator_black">
+        <color rgba="0.12 0.13 0.15 1" />
+        </material>
+      </visual>
+    <visual name="dish_hub">
+      <origin xyz="0.47 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.18" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="dish_neck">
+      <origin xyz="0.62 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.08" length="0.12" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="dish_shell">
+      <origin xyz="0.74 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/satellite_high_gain_dish.obj" />
+        </geometry>
+      <material name="antenna_white">
+        <color rgba="0.9 0.92 0.95 1" />
+        </material>
+      </visual>
+    <visual name="feed_ring">
+      <origin xyz="0.93 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.07" length="0.04" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="feed_support_boom">
+      <origin xyz="0.785 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.34" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_0">
+      <geometry>
+        <mesh filename="assets/meshes/satellite_feed_strut.obj" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_1">
+      <origin xyz="0 0 0" rpy="2.0944 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/satellite_feed_strut.obj" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="feed_strut_2">
+      <origin xyz="0 0 0" rpy="4.18879 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/satellite_feed_strut.obj" />
+        </geometry>
+      <material name="frame_aluminum">
+        <color rgba="0.72 0.74 0.78 1" />
+        </material>
+      </visual>
+    <visual name="feed_horn">
+      <origin xyz="0.98 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.04" length="0.16" />
+        </geometry>
+      <material name="antenna_white">
+        <color rgba="0.9 0.92 0.95 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="bus_to_left_solar_wing" type="revolute">
+    <origin xyz="0 0.578 0" rpy="0 0 0" />
+    <parent link="bus" />
+    <child link="left_solar_wing" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.35" lower="0" upper="1.45" />
+    </joint>
+  <joint name="bus_to_right_solar_wing" type="revolute">
+    <origin xyz="0 -0.578 0" rpy="0 0 3.14159" />
+    <parent link="bus" />
+    <child link="right_solar_wing" />
+    <axis xyz="0 0 1" />
+    <limit effort="180" velocity="0.35" lower="0" upper="1.45" />
+    </joint>
+  <joint name="bus_to_high_gain_antenna" type="fixed">
+    <origin xyz="0.67 0 0.04" rpy="0 0 0" />
+    <parent link="bus" />
+    <child link="high_gain_antenna" />
+    </joint>
+  </robot>

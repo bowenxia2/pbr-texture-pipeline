@@ -1,0 +1,623 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_adjustable_weight_bench_with_hinged_backrest_e67f07519b304cc0837dab6a26d5e857_adjustable_gym_bench_urdf_20260824-194526",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_e67f07519b304cc0837dab6a26d5e857/model.urdf",
+  "created": "2026-08-24T19:45:26",
+  "updated": "2026-08-24T20:23:41",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 42,
+        "n_tiny": 31
+      },
+      "seed": null,
+      "started": "2026-08-24T19:49:30",
+      "finished": "2026-08-24T19:50:32",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the base; gray plastic on the arm; gray plastic on the wheel; gray plastic on the support structure;"
+      },
+      "seed": null,
+      "started": "2026-08-24T19:56:37",
+      "finished": "2026-08-24T19:59:34",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_e67f07519b304cc0837dab6a26d5e857_adjustable_gym_bench_urdf_20260824-194526/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T19:59:34",
+      "finished": "2026-08-24T20:23:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {},
+      "seed": 42,
+      "started": "2026-08-24T20:23:41",
+      "finished": null,
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_e67f07519b304cc0837dab6a26d5e857",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_e67f07519b304cc0837dab6a26d5e857/model.urdf",
+    "category": "adjustable gym bench",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.37,
+        -0.7,
+        -5.509767177919178e-08
+      ],
+      "max": [
+        0.37,
+        1.1,
+        0.495
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "main_frame__front_stabilizer",
+        "link": "main_frame",
+        "label": "front_stabilizer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04914371432780186,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__rear_stabilizer",
+        "link": "main_frame",
+        "label": "rear_stabilizer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.058689264403395766,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__front_leg_0",
+        "link": "main_frame",
+        "label": "front_leg_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02403476738982658,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__upper_rail_0",
+        "link": "main_frame",
+        "label": "upper_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0377915895575943,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__rear_post_0",
+        "link": "main_frame",
+        "label": "rear_post_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04399253513099799,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__hinge_upright_0",
+        "link": "main_frame",
+        "label": "hinge_upright_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012499543833002757,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__support_cheek_0",
+        "link": "main_frame",
+        "label": "support_cheek_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021678896335364153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__front_leg_1",
+        "link": "main_frame",
+        "label": "front_leg_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02403476738982658,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__upper_rail_1",
+        "link": "main_frame",
+        "label": "upper_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0377915895575943,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__rear_post_1",
+        "link": "main_frame",
+        "label": "rear_post_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04399253513099799,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__hinge_upright_1",
+        "link": "main_frame",
+        "label": "hinge_upright_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012499543833002757,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__support_cheek_1",
+        "link": "main_frame",
+        "label": "support_cheek_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021678896335364153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__wheel_mount_0",
+        "link": "main_frame",
+        "label": "wheel_mount_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0049314606528643706,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__wheel_brace_0",
+        "link": "main_frame",
+        "label": "wheel_brace_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006835688033673385,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__wheel_mount_1",
+        "link": "main_frame",
+        "label": "wheel_mount_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0049314606528643706,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__wheel_brace_1",
+        "link": "main_frame",
+        "label": "wheel_brace_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006835688033673385,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__seat_crossmember",
+        "link": "main_frame",
+        "label": "seat_crossmember",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0337878294235856,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__support_bridge",
+        "link": "main_frame",
+        "label": "support_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014159639498323443,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__hinge_bridge",
+        "link": "main_frame",
+        "label": "hinge_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.019725842611457486,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "main_frame__backrest_stop",
+        "link": "main_frame",
+        "label": "backrest_stop",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021483590962973493,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "seat__seat_pad",
+        "link": "seat",
+        "label": "seat_pad",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/seat_pad.obj"
+        ],
+        "n_faces": 9460,
+        "area_frac": 0.07097666089458818,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "seat__seat_plate",
+        "link": "seat",
+        "label": "seat_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.031541817641092894,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "seat__seat_brace",
+        "link": "seat",
+        "label": "seat_brace",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011523016971049413,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__back_pad",
+        "link": "backrest",
+        "label": "back_pad",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/backrest_pad.obj"
+        ],
+        "n_faces": 9460,
+        "area_frac": 0.17713440212095918,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "backrest__back_plate",
+        "link": "backrest",
+        "label": "back_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1034630210239564,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "backrest__hinge_block",
+        "link": "backrest",
+        "label": "hinge_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01708922008418346,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "support_arm__pivot_tube",
+        "link": "support_arm",
+        "label": "pivot_tube",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008823777336279657,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "support_arm__arm_side_0",
+        "link": "support_arm",
+        "label": "arm_side_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.010326771565156578,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "support_arm__arm_side_1",
+        "link": "support_arm",
+        "label": "arm_side_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.010326771565156578,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "support_arm__arm_web",
+        "link": "support_arm",
+        "label": "arm_web",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011523016971049413,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "support_arm__support_roller",
+        "link": "support_arm",
+        "label": "support_roller",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00499762981637538,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_handle__handle_bracket_0",
+        "link": "front_handle",
+        "label": "handle_bracket_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026854488703716866,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_handle__handle_bracket_1",
+        "link": "front_handle",
+        "label": "handle_bracket_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026854488703716866,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_handle__handle_strut_0",
+        "link": "front_handle",
+        "label": "handle_strut_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030760596151530226,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_handle__handle_strut_1",
+        "link": "front_handle",
+        "label": "handle_strut_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030760596151530226,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_handle__handle_bar",
+        "link": "front_handle",
+        "label": "handle_bar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004158005210945828,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_0__tire",
+        "link": "wheel_0",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008243346540082819,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_0__hub",
+        "link": "wheel_0",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0034229233238596258,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_0__axle_cap",
+        "link": "wheel_0",
+        "label": "axle_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0013707445030438736,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_1__tire",
+        "link": "wheel_1",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008243346540082819,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_1__hub",
+        "link": "wheel_1",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0034229233238596258,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "wheel_1__axle_cap",
+        "link": "wheel_1",
+        "label": "axle_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0013707445030438736,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

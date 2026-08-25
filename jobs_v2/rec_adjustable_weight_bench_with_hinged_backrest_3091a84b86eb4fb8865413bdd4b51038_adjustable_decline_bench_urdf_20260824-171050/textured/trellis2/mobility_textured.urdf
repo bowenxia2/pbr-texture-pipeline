@@ -1,0 +1,431 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="adjustable_decline_bench">
+	<material name="powder_coated_steel">
+		<color rgba="0.07 0.075 0.08 1" />
+	</material>
+	<material name="dark_steel">
+		<color rgba="0.015 0.017 0.018 1" />
+	</material>
+	<material name="black_textured_vinyl">
+		<color rgba="0.015 0.018 0.022 1" />
+	</material>
+	<material name="slightly_raised_seam">
+		<color rgba="0.055 0.058 0.064 1" />
+	</material>
+	<material name="dense_black_foam">
+		<color rgba="0.02 0.021 0.023 1" />
+	</material>
+	<material name="matte_rubber">
+		<color rgba="0.006 0.006 0.006 1" />
+	</material>
+	<material name="satin_wheel_rim">
+		<color rgba="0.52 0.54 0.55 1" />
+	</material>
+	<link name="frame">
+		<visual name="frame__lower_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__lower_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_floor_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_floor_foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_floor_foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_floor_foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_stanchion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_stanchion.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_stanchion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_stanchion.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__middle_stanchion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__middle_stanchion.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__middle_crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__middle_crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_side_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_side_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_side_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_side_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_side_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_side_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_side_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_side_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_diagonal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_diagonal.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_diagonal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_diagonal.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_rail_gusset_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_rail_gusset_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_rail_gusset_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_rail_gusset_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_hinge_knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_hinge_knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_hinge_knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_hinge_knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_web">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_web.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_sideweb_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_sideweb_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_sideweb_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_sideweb_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_lug_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_lug_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__brace_hinge_lug_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__brace_hinge_lug_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__transport_axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__transport_axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_fork_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_fork_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_fork_strut_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_fork_strut_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_fork_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_fork_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__wheel_fork_strut_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__wheel_fork_strut_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__roller_yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__roller_yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__roller_axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__roller_axle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="back_pad">
+		<visual name="back_pad__hinge_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__hinge_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="back_pad__hinge_tab_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__hinge_tab_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="back_pad__hinge_tab_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__hinge_tab_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="back_pad__back_cushion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__back_cushion.glb" />
+			</geometry>
+		</visual>
+		<visual name="back_pad__center_seam">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/back_pad__center_seam.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat">
+		<visual name="seat__hinge_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__hinge_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__hinge_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__hinge_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_cushion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_cushion.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__center_seam">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__center_seam.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="mid_brace">
+		<visual name="mid_brace__hinge_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mid_brace__hinge_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="mid_brace__brace_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mid_brace__brace_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="mid_brace__seat_stop_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mid_brace__seat_stop_pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="leg_roller_0">
+		<visual name="leg_roller_0__foam_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/leg_roller_0__foam_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="leg_roller_0__bearing_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/leg_roller_0__bearing_sleeve.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="leg_roller_1">
+		<visual name="leg_roller_1__foam_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/leg_roller_1__foam_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="leg_roller_1__bearing_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/leg_roller_1__bearing_sleeve.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="transport_wheel_0">
+		<visual name="transport_wheel_0__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_0__tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="transport_wheel_0__rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_0__rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="transport_wheel_0__hub_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_0__hub_sleeve.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="transport_wheel_1">
+		<visual name="transport_wheel_1__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_1__tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="transport_wheel_1__rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_1__rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="transport_wheel_1__hub_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/transport_wheel_1__hub_sleeve.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="back_hinge" type="revolute">
+		<origin xyz="-0.1 0 0.52" rpy="0 -0.18 0" />
+		<parent link="frame" />
+		<child link="back_pad" />
+		<axis xyz="0 1 0" />
+		<limit effort="85" velocity="1.5" lower="-0.22" upper="0.82" />
+	</joint>
+	<joint name="seat_hinge" type="revolute">
+		<origin xyz="0.35 0 0.545" rpy="0 -0.04 0" />
+		<parent link="frame" />
+		<child link="seat" />
+		<axis xyz="0 1 0" />
+		<limit effort="50" velocity="1.5" lower="-0.18" upper="0.62" />
+	</joint>
+	<joint name="brace_hinge" type="revolute">
+		<origin xyz="0.02 0 0.235" rpy="0 -0.46 0" />
+		<parent link="frame" />
+		<child link="mid_brace" />
+		<axis xyz="0 1 0" />
+		<limit effort="30" velocity="1.2" lower="-0.75" upper="0.25" />
+	</joint>
+	<joint name="leg_roller_joint_0" type="continuous">
+		<origin xyz="0.88 -0.205 0.585" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="leg_roller_0" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="12" />
+	</joint>
+	<joint name="leg_roller_joint_1" type="continuous">
+		<origin xyz="0.88 0.205 0.585" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="leg_roller_1" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="12" />
+	</joint>
+	<joint name="transport_wheel_joint_0" type="continuous">
+		<origin xyz="-1.12 -0.285 0.086" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="transport_wheel_0" />
+		<axis xyz="0 1 0" />
+		<limit effort="6" velocity="18" />
+	</joint>
+	<joint name="transport_wheel_joint_1" type="continuous">
+		<origin xyz="-1.12 0.285 0.086" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="transport_wheel_1" />
+		<axis xyz="0 1 0" />
+		<limit effort="6" velocity="18" />
+	</joint>
+</robot>

@@ -1,0 +1,408 @@
+<robot name="architect_desk_lamp">
+  <material name="painted_steel">
+    <color rgba="0.22 0.24 0.27 1" />
+    </material>
+  <material name="lamp_enamel">
+    <color rgba="0.8 0.82 0.76 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.6 0.63 0.66 1" />
+    </material>
+  <material name="spring_steel">
+    <color rgba="0.72 0.75 0.78 1" />
+    </material>
+  <material name="warm_bulb">
+    <color rgba="0.98 0.92 0.72 0.92" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0.014" rpy="0 0 0" />
+      <mass value="3.4" />
+      <inertia ixx="0.00959338" ixy="0" ixz="0" iyy="0.00959338" iyz="0" izz="0.0187425" />
+      </inertial>
+    <visual name="base_disk">
+      <origin xyz="0 0 0.009" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.018" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="base_cap">
+      <origin xyz="0 0 0.023" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.082" length="0.01" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.22 0.24 0.27 1" />
+        </material>
+      </visual>
+    <visual name="pedestal">
+      <origin xyz="0 0 0.048" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pivot_washer_left">
+      <origin xyz="0 -0.013 0.078" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="pivot_washer_right">
+      <origin xyz="0 0.013 0.078" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="lower_arm">
+    <inertial>
+      <origin xyz="0.105 0 0.078" rpy="0 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.000901979" ixy="0" ixz="0" iyy="0.00219115" iyz="0" izz="0.00140729" />
+      </inertial>
+    <visual name="lower_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_spine">
+      <origin xyz="0.0904508 0 0.067066" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.225204 0.008 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_left">
+      <origin xyz="0.111336 -0.01 0.0825516" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.233204 0.006 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_rear_tab_left">
+      <origin xyz="0.040164 -0.015 0.0297801" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_front_tab_left">
+      <origin xyz="0.164836 -0.015 0.12222" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_spring_left">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.72 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_yoke_left">
+      <origin xyz="0.205 -0.013 0.152" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_rail_right">
+      <origin xyz="0.111336 0.01 0.0825516" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.233204 0.006 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_rear_tab_right">
+      <origin xyz="0.040164 0.015 0.0297801" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_front_tab_right">
+      <origin xyz="0.164836 0.015 0.12222" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_spring_right">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/lower_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.72 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="lower_yoke_right">
+      <origin xyz="0.205 0.013 0.152" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="lower_crossbar_rear">
+      <origin xyz="0.0361476 0 0.0268021" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.01 0.024 0.006" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="lower_crossbar_front">
+      <origin xyz="0.168852 0 0.125198" rpy="0 -0.638015 0" />
+      <geometry>
+        <box size="0.01 0.024 0.006" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0.095 0 0.066" rpy="0 0 0" />
+      <mass value="0.28" />
+      <inertia ixx="0.000537833" ixy="0" ixz="0" iyy="0.00137783" iyz="0" izz="0.0009345" />
+      </inertial>
+    <visual name="upper_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="upper_spine">
+      <origin xyz="0.0801647 0 0.0554653" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.194964 0.008 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_left">
+      <origin xyz="0.101546 -0.01 0.0702588" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.202964 0.006 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_rear_tab_left">
+      <origin xyz="0.0411176 -0.015 0.0284489" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_front_tab_left">
+      <origin xyz="0.143882 -0.015 0.0995511" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_spring_left">
+      <origin xyz="0 -0.015 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.72 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="upper_yoke_left">
+      <origin xyz="0.185 -0.013 0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="upper_rail_right">
+      <origin xyz="0.101546 0.01 0.0702588" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.202964 0.006 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_rear_tab_right">
+      <origin xyz="0.0411176 0.015 0.0284489" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_front_tab_right">
+      <origin xyz="0.143882 0.015 0.0995511" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.014 0.004 0.004" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_spring_right">
+      <origin xyz="0 0.015 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/upper_spring.obj" />
+        </geometry>
+      <material name="spring_steel">
+        <color rgba="0.72 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="upper_yoke_right">
+      <origin xyz="0.185 0.013 0.128" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.006" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="upper_crossbar_rear">
+      <origin xyz="0.0370058 0 0.025604" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.01 0.024 0.006" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="upper_crossbar_front">
+      <origin xyz="0.147994 0 0.102396" rpy="0 -0.605264 0" />
+      <geometry>
+        <box size="0.01 0.024 0.006" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="head">
+    <inertial>
+      <origin xyz="0.07 0 -0.02" rpy="0 0 0" />
+      <mass value="0.32" />
+      <inertia ixx="0.000288667" ixy="0" ixz="0" iyy="0.000715333" iyz="0" izz="0.000618667" />
+      </inertial>
+    <visual name="head_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="head_neck">
+      <origin xyz="0.018 0 -0.006" rpy="0 -0.34 0" />
+      <geometry>
+        <box size="0.03 0.012 0.012" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.03 0 -0.006" rpy="0 -0.34 0" />
+      <geometry>
+        <mesh filename="assets/meshes/architect_lamp_shade.obj" />
+        </geometry>
+      <material name="lamp_enamel">
+        <color rgba="0.8 0.82 0.76 1" />
+        </material>
+      </visual>
+    <visual name="socket">
+      <origin xyz="0.034 0 -0.008" rpy="0 -0.34 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.6 0.63 0.66 1" />
+        </material>
+      </visual>
+    <visual name="bulb">
+      <origin xyz="0.078 0 -0.022" rpy="0 0 0" />
+      <geometry>
+        <sphere radius="0.014" />
+        </geometry>
+      <material name="warm_bulb">
+        <color rgba="0.98 0.92 0.72 0.92" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_lower" type="revolute">
+    <origin xyz="0 0 0.078" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="lower_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="2.5" lower="-0.35" upper="1.05" />
+    </joint>
+  <joint name="lower_to_upper" type="revolute">
+    <origin xyz="0.205 0 0.152" rpy="0 0 0" />
+    <parent link="lower_arm" />
+    <child link="upper_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="9" velocity="2.8" lower="-1.1" upper="0.85" />
+    </joint>
+  <joint name="upper_to_head" type="revolute">
+    <origin xyz="0.185 0 0.128" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="head" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="3" lower="-0.9" upper="0.8" />
+    </joint>
+  </robot>

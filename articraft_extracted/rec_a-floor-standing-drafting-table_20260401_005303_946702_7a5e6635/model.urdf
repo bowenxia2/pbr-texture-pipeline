@@ -1,0 +1,296 @@
+<robot name="floor_standing_drafting_table">
+  <material name="powder_coat">
+    <color rgba="0.24 0.26 0.28 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.72 0.74 0.76 1" />
+    </material>
+  <material name="beech">
+    <color rgba="0.79 0.67 0.49 1" />
+    </material>
+  <material name="dark_rubber">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="stand">
+    <inertial>
+      <origin xyz="0 0.02 0.55" rpy="0 0 0" />
+      <mass value="24" />
+      <inertia ixx="3.4" ixy="0" ixz="0" iyy="4.04" iyz="0" izz="2.6" />
+      </inertial>
+    <visual name="left_floor_rail">
+      <origin xyz="-0.5 0.03 0.035" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.7" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_floor_rail">
+      <origin xyz="0.5 0.03 0.035" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.7" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="front_floor_stretcher">
+      <origin xyz="0 -0.32 0.035" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor_stretcher">
+      <origin xyz="0 0.38 0.035" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_front_post">
+      <origin xyz="-0.5 -0.27 0.3775" rpy="0 0.144961 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.692261" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_front_post">
+      <origin xyz="0.5 -0.27 0.3775" rpy="0 0.144961 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.692261" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_post">
+      <origin xyz="-0.5 0.3 0.4175" rpy="0 0.206178 -1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.781553" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_post">
+      <origin xyz="0.5 0.3 0.4175" rpy="0 0.206178 -1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.781553" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_top_rail">
+      <origin xyz="-0.5 0 0.76" rpy="0 1.39094 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.447214" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_top_rail">
+      <origin xyz="0.5 0 0.76" rpy="0 1.39094 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.447214" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="rear_head_rail">
+      <origin xyz="0 0.22 0.8" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="1" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_pivot_pin">
+      <origin xyz="-0.482 -0.22 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.08" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_pivot_pin">
+      <origin xyz="0.482 -0.22 0.88" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.08" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_support">
+      <origin xyz="-0.51 -0.22 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.07 0.18" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_support">
+      <origin xyz="0.51 -0.22 0.81" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.07 0.18" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="front_mid_stretcher">
+      <origin xyz="0 -0.27 0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="1.02 0.03 0.03" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_front_glide">
+      <origin xyz="-0.5 -0.32 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.07 0.03" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_glide">
+      <origin xyz="-0.5 0.38 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.07 0.03" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_front_glide">
+      <origin xyz="0.5 -0.32 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.07 0.03" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_glide">
+      <origin xyz="0.5 0.38 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.07 0.03" />
+        </geometry>
+      <material name="dark_rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="tabletop">
+    <inertial>
+      <origin xyz="0 0.4 0.02" rpy="0 0 0" />
+      <mass value="16" />
+      <inertia ixx="0.866667" ixy="0" ixz="0" iyy="1.62667" iyz="0" izz="2.46667" />
+      </inertial>
+    <visual name="work_surface">
+      <origin xyz="0 0.39 0.024" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/drafting_table_top_surface.obj" />
+        </geometry>
+      <material name="beech">
+        <color rgba="0.79 0.67 0.49 1" />
+        </material>
+      </visual>
+    <visual name="rear_subframe">
+      <origin xyz="0 0.725 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.94 0.05 0.04" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_subframe">
+      <origin xyz="-0.455 0.375 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.65 0.04" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_subframe">
+      <origin xyz="0.455 0.375 -0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.65 0.04" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_barrel">
+      <origin xyz="-0.452 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.084" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_barrel">
+      <origin xyz="0.452 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.084" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.72 0.74 0.76 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_bracket">
+      <origin xyz="-0.452 0.085 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.15 0.09" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_bracket">
+      <origin xyz="0.452 0.085 -0.04" rpy="0 0 0" />
+      <geometry>
+        <box size="0.04 0.15 0.09" />
+        </geometry>
+      <material name="powder_coat">
+        <color rgba="0.24 0.26 0.28 1" />
+        </material>
+      </visual>
+    <visual name="paper_stop">
+      <origin xyz="0 0.03 0.045" rpy="0 0 0" />
+      <geometry>
+        <box size="0.86 0.02 0.014" />
+        </geometry>
+      <material name="beech">
+        <color rgba="0.79 0.67 0.49 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_tabletop" type="revolute">
+    <origin xyz="0 -0.22 0.88" rpy="0.314159 0 0" />
+    <parent link="stand" />
+    <child link="tabletop" />
+    <axis xyz="1 0 0" />
+    <limit effort="45" velocity="1.5" lower="-0.174533" upper="0.698132" />
+    </joint>
+  </robot>

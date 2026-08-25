@@ -1,0 +1,177 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad_precision_roll_axis_module_urdf_20260824-141938",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad/model.urdf",
+  "created": "2026-08-24T14:19:38",
+  "updated": "2026-08-24T20:23:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 7,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-24T14:26:57",
+      "finished": "2026-08-24T14:29:38",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray matte plastic on the entire object"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:34:30",
+      "finished": "2026-08-24T14:36:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad_precision_roll_axis_module_urdf_20260824-141938/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:36:48",
+      "finished": "2026-08-24T15:01:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 7,
+            "n_total": 7,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad_precision_roll_axis_module_urdf_20260824-141938/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:37",
+      "finished": "2026-08-24T19:42:26",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_150117_610361_d39ce0ad/model.urdf",
+    "category": "precision roll axis module",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.112,
+        -0.059,
+        -0.071
+      ],
+      "max": [
+        0.112,
+        0.059,
+        0.071
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "support_frame__frame_shell",
+        "link": "support_frame",
+        "label": "frame_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/support_frame_shell.obj"
+        ],
+        "n_faces": 1300,
+        "area_frac": 0.7537537527413571,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "support_frame__left_bearing_cartridge",
+        "link": "support_frame",
+        "label": "left_bearing_cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/left_bearing_cartridge.obj"
+        ],
+        "n_faces": 2040,
+        "area_frac": 0.05398855920922898,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "support_frame__right_bearing_cartridge",
+        "link": "support_frame",
+        "label": "right_bearing_cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/right_bearing_cartridge.obj"
+        ],
+        "n_faces": 1536,
+        "area_frac": 0.05398855920922898,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "rotor__shaft",
+        "link": "rotor",
+        "label": "shaft",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/rotary_shaft.obj"
+        ],
+        "n_faces": 752,
+        "area_frac": 0.07303529329710012,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "rotor__left_collar",
+        "link": "rotor",
+        "label": "left_collar",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/left_retaining_collar.obj"
+        ],
+        "n_faces": 1512,
+        "area_frac": 0.013522129538042306,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "rotor__right_collar",
+        "link": "rotor",
+        "label": "right_collar",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/right_retaining_collar.obj"
+        ],
+        "n_faces": 1512,
+        "area_frac": 0.013522129538042306,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "rotor__payload_bracket",
+        "link": "rotor",
+        "label": "payload_bracket",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/payload_bracket.obj"
+        ],
+        "n_faces": 300,
+        "area_frac": 0.03818957646700011,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

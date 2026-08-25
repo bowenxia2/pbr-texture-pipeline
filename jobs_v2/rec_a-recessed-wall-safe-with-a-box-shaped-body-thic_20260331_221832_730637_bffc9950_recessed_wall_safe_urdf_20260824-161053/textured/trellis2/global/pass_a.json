@@ -1,0 +1,157 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 7445627,
+  "groups": {
+    "body__back_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53096,
+      "field_voxels": 53096
+    },
+    "body__left_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55561,
+      "field_voxels": 55561
+    },
+    "body__right_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55561,
+      "field_voxels": 55561
+    },
+    "body__top_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55360,
+      "field_voxels": 55360
+    },
+    "body__bottom_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55360,
+      "field_voxels": 55360
+    },
+    "body__frame_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54622,
+      "field_voxels": 54613
+    },
+    "body__frame_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54622,
+      "field_voxels": 54622
+    },
+    "body__frame_top": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54210,
+      "field_voxels": 53983
+    },
+    "body__frame_bottom": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54210,
+      "field_voxels": 53983
+    },
+    "body__hinge_support": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54044,
+      "field_voxels": 38944
+    },
+    "body__upper_hinge_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 810086,
+      "field_voxels": 29619
+    },
+    "body__lower_hinge_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 810174,
+      "field_voxels": 29616
+    },
+    "door__door_slab": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57392,
+      "field_voxels": 57392
+    },
+    "door__trim_top": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60590,
+      "field_voxels": 60560
+    },
+    "door__trim_bottom": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60590,
+      "field_voxels": 60560
+    },
+    "door__trim_hinge_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59387,
+      "field_voxels": 59376
+    },
+    "door__trim_latch_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59387,
+      "field_voxels": 59276
+    },
+    "door__hinge_leaf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52710,
+      "field_voxels": 37045
+    },
+    "door__middle_hinge_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 766954,
+      "field_voxels": 46192
+    },
+    "dial__dial_base": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 623166,
+      "field_voxels": 50330
+    },
+    "dial__dial_ring": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 694799,
+      "field_voxels": 50633
+    },
+    "dial__dial_center": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 770544,
+      "field_voxels": 5347
+    },
+    "handle__handle_boss": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 632513,
+      "field_voxels": 19219
+    },
+    "handle__handle_spindle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 706439,
+      "field_voxels": 6873
+    },
+    "handle__handle_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54500,
+      "field_voxels": 29470
+    }
+  }
+}

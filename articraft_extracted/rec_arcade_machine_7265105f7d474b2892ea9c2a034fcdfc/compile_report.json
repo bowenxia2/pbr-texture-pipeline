@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "record_id": "rec_arcade_machine_7265105f7d474b2892ea9c2a034fcdfc",
+  "status": "success",
+  "urdf_path": "model.urdf",
+  "warnings": [
+    {
+      "code": "warning",
+      "message": "Overlaps detected but allowed by justification: 3 overlaps across 3 part pair(s)."
+    }
+  ],
+  "checks_run": [
+    "compile_urdf"
+  ],
+  "overlap_allowances": [],
+  "metrics": {
+    "compile_level": "full",
+    "turn_count": 48,
+    "tool_call_count": 48,
+    "compile_attempt_count": 15,
+    "fingerprint_inputs": {
+      "model_py_sha256": "816def4ebc54d0ffd0a739be783683c5ace4123072c4ddecd9e157c21c0b57b9",
+      "sdk_fingerprint": null
+    },
+    "materialization_fingerprint": "e0a2bc96ce73ec893e4b5091f11890feee254233684fbd85f7c113b9a79fdcc8"
+  }
+}

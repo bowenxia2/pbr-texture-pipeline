@@ -1,0 +1,286 @@
+<robot name="tower_purifier">
+  <material name="shell_white">
+    <color rgba="0.92 0.93 0.94 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="charcoal">
+    <color rgba="0.24 0.25 0.26 1" />
+    </material>
+  <material name="satin">
+    <color rgba="0.7 0.73 0.76 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="top_shoulder">
+      <origin xyz="0 0 0.924" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_shoulder.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="front_grille">
+      <origin xyz="0 0.094 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.004 0.43" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="body_mount_0">
+      <origin xyz="0.086 -0.097 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.17" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="body_knuckle_0">
+      <origin xyz="0.092 -0.097 0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.17" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="body_mount_1">
+      <origin xyz="0.086 -0.097 0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.17" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="body_knuckle_1">
+      <origin xyz="0.092 -0.097 0.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.17" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="top_shoulder">
+      <origin xyz="0 0 0.924" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/top_shoulder.obj" />
+        </geometry>
+      </collision>
+    <collision name="front_grille">
+      <origin xyz="0 0.094 0.41" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.004 0.43" />
+        </geometry>
+      </collision>
+    <collision name="body_mount_0">
+      <origin xyz="0.086 -0.097 0.15" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.17" />
+        </geometry>
+      </collision>
+    <collision name="body_knuckle_0">
+      <origin xyz="0.092 -0.097 0.15" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.17" />
+        </geometry>
+      </collision>
+    <collision name="body_mount_1">
+      <origin xyz="0.086 -0.097 0.7" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.01 0.17" />
+        </geometry>
+      </collision>
+    <collision name="body_knuckle_1">
+      <origin xyz="0.092 -0.097 0.7" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.17" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_door">
+    <visual name="door_leaf">
+      <origin xyz="-0.117 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.214 0.008 0.73" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="door_pull">
+      <origin xyz="-0.212 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.01 0.12" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="door_mount">
+      <origin xyz="-0.007 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.28" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="door_knuckle">
+      <origin xyz="0 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.28" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="door_leaf">
+      <origin xyz="-0.117 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.214 0.008 0.73" />
+        </geometry>
+      </collision>
+    <collision name="door_pull">
+      <origin xyz="-0.212 -0.009 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.024 0.01 0.12" />
+        </geometry>
+      </collision>
+    <collision name="door_mount">
+      <origin xyz="-0.007 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.28" />
+        </geometry>
+      </collision>
+    <collision name="door_knuckle">
+      <origin xyz="0 -0.004 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.28" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_pack">
+    <visual name="filter_frame">
+      <origin xyz="0 0.0825 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.165 0.66" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="0 0.0865 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.151 0.61" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.24 0.25 0.26 1" />
+        </material>
+      </visual>
+    <collision name="filter_frame">
+      <origin xyz="0 0.0825 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.19 0.165 0.66" />
+        </geometry>
+      </collision>
+    <collision name="filter_media">
+      <origin xyz="0 0.0865 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.168 0.151 0.61" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="control_ring">
+    <visual name="ring_shell">
+      <geometry>
+        <mesh filename="assets/meshes/control_ring.obj" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.7 0.73 0.76 1" />
+        </material>
+      </visual>
+    <collision name="ring_shell">
+      <geometry>
+        <mesh filename="assets/meshes/control_ring.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="timer_slider">
+    <visual name="slider_runner">
+      <geometry>
+        <box size="0.026 0.01 0.01" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="slider_thumb">
+      <origin xyz="0.012 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.026" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <collision name="slider_runner">
+      <geometry>
+        <box size="0.026 0.01 0.01" />
+        </geometry>
+      </collision>
+    <collision name="slider_thumb">
+      <origin xyz="0.012 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.016 0.026" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_filter_door" type="revolute">
+    <origin xyz="0.092 -0.095 0.425" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="10" velocity="1.5" lower="0" upper="2.1" />
+    </joint>
+  <joint name="body_to_filter_pack" type="prismatic">
+    <origin xyz="0 -0.095 0.425" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="filter_pack" />
+    <axis xyz="0 -1 0" />
+    <limit effort="20" velocity="0.12" lower="0" upper="0.11" />
+    </joint>
+  <joint name="body_to_control_ring" type="continuous">
+    <origin xyz="0 0 0.939" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="control_ring" />
+    <axis xyz="0 0 1" />
+    <limit effort="2" velocity="6" />
+    </joint>
+  <joint name="body_to_timer_slider" type="prismatic">
+    <origin xyz="0.113 0 0.66" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="timer_slider" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="0.08" lower="-0.022" upper="0.022" />
+    </joint>
+  </robot>

@@ -1,0 +1,234 @@
+{
+  "group_order": [
+    "frame__base_rail_0",
+    "frame__base_rail_1",
+    "frame__rear_crossbar",
+    "frame__front_crossbar",
+    "frame__middle_crossbar",
+    "frame__front_center_rail",
+    "frame__back_hinge_strut_0",
+    "frame__seat_hinge_post_0",
+    "frame__top_side_rail_0",
+    "frame__back_hinge_strut_1",
+    "frame__seat_hinge_post_1",
+    "frame__top_side_rail_1",
+    "frame__back_hinge_axle",
+    "frame__seat_hinge_axle",
+    "frame__front_upright",
+    "frame__front_upright_brace_0",
+    "frame__front_upright_brace_1",
+    "frame__front_roller_axle",
+    "frame__roller_axle_block",
+    "frame__rear_wheel_axle",
+    "frame__rear_wheel_mount_0",
+    "frame__rear_wheel_mount_1",
+    "backrest__back_cushion",
+    "backrest__back_hinge_sleeve",
+    "backrest__back_spine",
+    "backrest__back_pad_strap",
+    "backrest__back_pad_mount_0",
+    "backrest__back_pad_mount_1",
+    "seat__seat_cushion",
+    "seat__seat_hinge_sleeve",
+    "seat__seat_spine",
+    "seat__seat_pad_strap",
+    "seat__seat_pad_mount_0",
+    "seat__seat_pad_mount_1",
+    "roller_0__foam_roller",
+    "roller_0__end_cap_0",
+    "roller_0__end_cap_1",
+    "roller_1__foam_roller",
+    "roller_1__end_cap_0",
+    "roller_1__end_cap_1",
+    "wheel_0__tire",
+    "wheel_0__hub",
+    "wheel_1__tire",
+    "wheel_1__hub"
+  ],
+  "face_ranges": {
+    "frame__base_rail_0": [
+      0,
+      128
+    ],
+    "frame__base_rail_1": [
+      128,
+      256
+    ],
+    "frame__rear_crossbar": [
+      256,
+      384
+    ],
+    "frame__front_crossbar": [
+      384,
+      512
+    ],
+    "frame__middle_crossbar": [
+      512,
+      640
+    ],
+    "frame__front_center_rail": [
+      640,
+      768
+    ],
+    "frame__back_hinge_strut_0": [
+      768,
+      896
+    ],
+    "frame__seat_hinge_post_0": [
+      896,
+      1024
+    ],
+    "frame__top_side_rail_0": [
+      1024,
+      1152
+    ],
+    "frame__back_hinge_strut_1": [
+      1152,
+      1280
+    ],
+    "frame__seat_hinge_post_1": [
+      1280,
+      1408
+    ],
+    "frame__top_side_rail_1": [
+      1408,
+      1536
+    ],
+    "frame__back_hinge_axle": [
+      1536,
+      1664
+    ],
+    "frame__seat_hinge_axle": [
+      1664,
+      1792
+    ],
+    "frame__front_upright": [
+      1792,
+      1920
+    ],
+    "frame__front_upright_brace_0": [
+      1920,
+      2048
+    ],
+    "frame__front_upright_brace_1": [
+      2048,
+      2176
+    ],
+    "frame__front_roller_axle": [
+      2176,
+      2304
+    ],
+    "frame__roller_axle_block": [
+      2304,
+      2316
+    ],
+    "frame__rear_wheel_axle": [
+      2316,
+      2444
+    ],
+    "frame__rear_wheel_mount_0": [
+      2444,
+      2572
+    ],
+    "frame__rear_wheel_mount_1": [
+      2572,
+      2700
+    ],
+    "backrest__back_cushion": [
+      2700,
+      2860
+    ],
+    "backrest__back_hinge_sleeve": [
+      2860,
+      2988
+    ],
+    "backrest__back_spine": [
+      2988,
+      3116
+    ],
+    "backrest__back_pad_strap": [
+      3116,
+      3244
+    ],
+    "backrest__back_pad_mount_0": [
+      3244,
+      3372
+    ],
+    "backrest__back_pad_mount_1": [
+      3372,
+      3500
+    ],
+    "seat__seat_cushion": [
+      3500,
+      3660
+    ],
+    "seat__seat_hinge_sleeve": [
+      3660,
+      3788
+    ],
+    "seat__seat_spine": [
+      3788,
+      3916
+    ],
+    "seat__seat_pad_strap": [
+      3916,
+      4044
+    ],
+    "seat__seat_pad_mount_0": [
+      4044,
+      4172
+    ],
+    "seat__seat_pad_mount_1": [
+      4172,
+      4300
+    ],
+    "roller_0__foam_roller": [
+      4300,
+      4428
+    ],
+    "roller_0__end_cap_0": [
+      4428,
+      4716
+    ],
+    "roller_0__end_cap_1": [
+      4716,
+      5004
+    ],
+    "roller_1__foam_roller": [
+      5004,
+      5132
+    ],
+    "roller_1__end_cap_0": [
+      5132,
+      5420
+    ],
+    "roller_1__end_cap_1": [
+      5420,
+      5708
+    ],
+    "wheel_0__tire": [
+      5708,
+      11160
+    ],
+    "wheel_0__hub": [
+      11160,
+      25392
+    ],
+    "wheel_1__tire": [
+      25392,
+      30844
+    ],
+    "wheel_1__hub": [
+      30844,
+      45076
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.1262293313738327,
+      0.0022469393902640467,
+      0.33949043172817917
+    ],
+    "scale": 0.45777421822361525
+  }
+}
