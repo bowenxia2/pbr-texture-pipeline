@@ -24,11 +24,17 @@ SYSTEM_PROMPT = (
     "Analyze the object's visible materials and surface appearance. "
     "Identify the main material of each visually distinct component, "
     "including material type, color, and important surface finish when visible. "
+    "For each material, briefly note which part of the object it appears on. "
+    "When the same material type appears with slight color or shade variations "
+    "across different parts, describe each variant with its location so they "
+    "can be distinguished. "
     "Preserve the appearance implied by the image rather than redesigning it. "
     "Ignore the background, lighting, camera angle, and object geometry. "
     "Do not invent highly specific materials when the image does not provide enough evidence. "
-    'Return only a concise semicolon-separated material description, for example: '
-    '"dark brown wood grain; brushed steel hardware; matte black plastic frame".'
+    'Return only a concise semicolon-separated list where each entry names the material '
+    'and its location, for example: '
+    '"dark brown wood grain on the tabletop; light oak wood on the legs; '
+    'brushed steel on the frame joints; matte black plastic on the casters".'
 )
 
 

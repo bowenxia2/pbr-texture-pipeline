@@ -180,6 +180,7 @@ def render(job) -> dict:
 
 
 # --- Stage V ------------------------------------------------------------------
+
 def vlm(job) -> dict:
     """Stage V: VLM material analysis of the front-panel image."""
     front_white = job.render_front_white()
@@ -212,11 +213,11 @@ def vlm(job) -> dict:
 def imageedit(job) -> dict:
     """Stage E: enhance front-panel image with VLM-derived material description."""
     front_white = job.render_front_white()
-    depth = job.render_depth(0)
+    canny = job.render_canny(0)
     materials_path = job.vlm_materials()
 
     for p, label in [(front_white, "front_white.png"),
-                     (depth, "depth_0.png"),
+                     (canny, "canny_0.png"),
                      (materials_path, "materials.txt")]:
         if not p.is_file():
             raise FileNotFoundError(
@@ -231,7 +232,7 @@ def imageedit(job) -> dict:
 
     items = [{
         "source": str(front_white),
-        "depth": str(depth),
+        "canny": str(canny),
         "materials": materials,
         "output": str(out_path),
     }]

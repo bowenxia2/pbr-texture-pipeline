@@ -1,0 +1,119 @@
+{
+  "group_order": [
+    "frame__rear_foot",
+    "frame__front_foot",
+    "frame__main_spine",
+    "frame__front_post",
+    "frame__rear_post",
+    "frame__seat_hinge_block",
+    "frame__backrest_hinge_block",
+    "frame__front_roller_post",
+    "frame__front_roller_axle",
+    "frame__rear_wheel_bracket",
+    "frame__rear_axle",
+    "seat__seat_board",
+    "seat__seat_cushion",
+    "seat__seat_support",
+    "backrest__backrest_board",
+    "backrest__backrest_cushion",
+    "backrest__backrest_support",
+    "leg_roller_0__roller_body",
+    "leg_roller_1__roller_body",
+    "wheel_0__wheel_body",
+    "wheel_1__wheel_body"
+  ],
+  "face_ranges": {
+    "frame__rear_foot": [
+      0,
+      12
+    ],
+    "frame__front_foot": [
+      12,
+      24
+    ],
+    "frame__main_spine": [
+      24,
+      36
+    ],
+    "frame__front_post": [
+      36,
+      48
+    ],
+    "frame__rear_post": [
+      48,
+      60
+    ],
+    "frame__seat_hinge_block": [
+      60,
+      72
+    ],
+    "frame__backrest_hinge_block": [
+      72,
+      84
+    ],
+    "frame__front_roller_post": [
+      84,
+      96
+    ],
+    "frame__front_roller_axle": [
+      96,
+      108
+    ],
+    "frame__rear_wheel_bracket": [
+      108,
+      120
+    ],
+    "frame__rear_axle": [
+      120,
+      132
+    ],
+    "seat__seat_board": [
+      132,
+      144
+    ],
+    "seat__seat_cushion": [
+      144,
+      156
+    ],
+    "seat__seat_support": [
+      156,
+      168
+    ],
+    "backrest__backrest_board": [
+      168,
+      180
+    ],
+    "backrest__backrest_cushion": [
+      180,
+      192
+    ],
+    "backrest__backrest_support": [
+      192,
+      204
+    ],
+    "leg_roller_0__roller_body": [
+      204,
+      332
+    ],
+    "leg_roller_1__roller_body": [
+      332,
+      460
+    ],
+    "wheel_0__wheel_body": [
+      460,
+      588
+    ],
+    "wheel_1__wheel_body": [
+      588,
+      716
+    ]
+  },
+  "norm": {
+    "center": [
+      0.11749999999999994,
+      0.0,
+      0.24
+    ],
+    "scale": 0.6825870307167236
+  }
+}

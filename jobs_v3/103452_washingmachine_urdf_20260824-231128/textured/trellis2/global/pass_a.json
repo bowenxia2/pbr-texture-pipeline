@@ -1,0 +1,91 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 7134764,
+  "groups": {
+    "link_0__door-1": {
+      "texture_size": 1024,
+      "n_faces": 14156,
+      "texels": 613363,
+      "field_voxels": 530245
+    },
+    "link_1__button-2": {
+      "texture_size": 256,
+      "n_faces": 146,
+      "texels": 47074,
+      "field_voxels": 793
+    },
+    "link_2__button-3": {
+      "texture_size": 256,
+      "n_faces": 116,
+      "texels": 47431,
+      "field_voxels": 927
+    },
+    "link_3__button-4": {
+      "texture_size": 256,
+      "n_faces": 116,
+      "texels": 46755,
+      "field_voxels": 895
+    },
+    "link_4__button-5": {
+      "texture_size": 256,
+      "n_faces": 116,
+      "texels": 46606,
+      "field_voxels": 809
+    },
+    "link_5__button-6": {
+      "texture_size": 256,
+      "n_faces": 668,
+      "texels": 32978,
+      "field_voxels": 1806
+    },
+    "link_6__button-7": {
+      "texture_size": 1024,
+      "n_faces": 1496,
+      "texels": 646016,
+      "field_voxels": 6317
+    },
+    "link_7__button-8": {
+      "texture_size": 256,
+      "n_faces": 848,
+      "texels": 37098,
+      "field_voxels": 1443
+    },
+    "link_8__button-9": {
+      "texture_size": 256,
+      "n_faces": 522,
+      "texels": 45963,
+      "field_voxels": 1073
+    },
+    "link_9__button-10": {
+      "texture_size": 256,
+      "n_faces": 522,
+      "texels": 45963,
+      "field_voxels": 1075
+    },
+    "link_10__button-11": {
+      "texture_size": 256,
+      "n_faces": 522,
+      "texels": 45870,
+      "field_voxels": 1073
+    },
+    "link_11__button-12": {
+      "texture_size": 256,
+      "n_faces": 587,
+      "texels": 28174,
+      "field_voxels": 671
+    },
+    "link_12__button-13": {
+      "texture_size": 256,
+      "n_faces": 864,
+      "texels": 33555,
+      "field_voxels": 3621
+    },
+    "link_13__base_body-14": {
+      "texture_size": 1024,
+      "n_faces": 29968,
+      "texels": 740952,
+      "field_voxels": 714237
+    }
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "group_order": [
+    "frame__center_spine",
+    "frame__wide_rear_base",
+    "frame__rear_spine_socket",
+    "frame__rear_foot_0",
+    "frame__rear_foot_1",
+    "frame__back_hinge_strut",
+    "frame__seat_hinge_strut",
+    "frame__front_axle",
+    "frame__front_axle_block",
+    "frame__back_hinge_plate_0",
+    "frame__back_hinge_plate_1",
+    "frame__back_hinge_pin",
+    "frame__back_hinge_mast",
+    "frame__seat_hinge_plate_0",
+    "frame__seat_hinge_plate_1",
+    "frame__seat_hinge_pin",
+    "frame__seat_hinge_mast",
+    "frame__brace_pivot_plate_0",
+    "frame__brace_pivot_plate_1",
+    "frame__brace_pivot_pin",
+    "frame__brace_pivot_mast",
+    "back_pad__long_back_cushion",
+    "back_pad__back_side_piping_0",
+    "back_pad__back_side_piping_1",
+    "back_pad__back_under_rail",
+    "back_pad__back_hinge_sleeve",
+    "back_pad__back_hinge_tongue",
+    "seat_pad__short_seat_cushion",
+    "seat_pad__seat_side_piping_0",
+    "seat_pad__seat_side_piping_1",
+    "seat_pad__seat_under_rail",
+    "seat_pad__seat_hinge_sleeve",
+    "seat_pad__seat_hinge_tongue",
+    "rear_brace__lower_pivot_sleeve",
+    "rear_brace__brace_rail_0",
+    "rear_brace__brace_rail_1",
+    "rear_brace__incline_step_0",
+    "rear_brace__step_lip_0",
+    "rear_brace__incline_step_1",
+    "rear_brace__step_lip_1",
+    "rear_brace__incline_step_2",
+    "rear_brace__step_lip_2",
+    "rear_brace__incline_step_3",
+    "rear_brace__step_lip_3",
+    "rear_brace__incline_step_4",
+    "rear_brace__step_lip_4",
+    "rear_brace__upper_catch_roller",
+    "front_wheel_0__tire",
+    "front_wheel_0__hub",
+    "front_wheel_1__tire",
+    "front_wheel_1__hub"
+  ],
+  "face_ranges": {
+    "frame__center_spine": [
+      0,
+      12
+    ],
+    "frame__wide_rear_base": [
+      12,
+      24
+    ],
+    "frame__rear_spine_socket": [
+      24,
+      36
+    ],
+    "frame__rear_foot_0": [
+      36,
+      48
+    ],
+    "frame__rear_foot_1": [
+      48,
+      60
+    ],
+    "frame__back_hinge_strut": [
+      60,
+      72
+    ],
+    "frame__seat_hinge_strut": [
+      72,
+      84
+    ],
+    "frame__front_axle": [
+      84,
+      212
+    ],
+    "frame__front_axle_block": [
+      212,
+      224
+    ],
+    "frame__back_hinge_plate_0": [
+      224,
+      236
+    ],
+    "frame__back_hinge_plate_1": [
+      236,
+      248
+    ],
+    "frame__back_hinge_pin": [
+      248,
+      376
+    ],
+    "frame__back_hinge_mast": [
+      376,
+      388
+    ],
+    "frame__seat_hinge_plate_0": [
+      388,
+      400
+    ],
+    "frame__seat_hinge_plate_1": [
+      400,
+      412
+    ],
+    "frame__seat_hinge_pin": [
+      412,
+      540
+    ],
+    "frame__seat_hinge_mast": [
+      540,
+      552
+    ],
+    "frame__brace_pivot_plate_0": [
+      552,
+      564
+    ],
+    "frame__brace_pivot_plate_1": [
+      564,
+      576
+    ],
+    "frame__brace_pivot_pin": [
+      576,
+      704
+    ],
+    "frame__brace_pivot_mast": [
+      704,
+      716
+    ],
+    "back_pad__long_back_cushion": [
+      716,
+      728
+    ],
+    "back_pad__back_side_piping_0": [
+      728,
+      740
+    ],
+    "back_pad__back_side_piping_1": [
+      740,
+      752
+    ],
+    "back_pad__back_under_rail": [
+      752,
+      764
+    ],
+    "back_pad__back_hinge_sleeve": [
+      764,
+      892
+    ],
+    "back_pad__back_hinge_tongue": [
+      892,
+      904
+    ],
+    "seat_pad__short_seat_cushion": [
+      904,
+      916
+    ],
+    "seat_pad__seat_side_piping_0": [
+      916,
+      928
+    ],
+    "seat_pad__seat_side_piping_1": [
+      928,
+      940
+    ],
+    "seat_pad__seat_under_rail": [
+      940,
+      952
+    ],
+    "seat_pad__seat_hinge_sleeve": [
+      952,
+      1080
+    ],
+    "seat_pad__seat_hinge_tongue": [
+      1080,
+      1092
+    ],
+    "rear_brace__lower_pivot_sleeve": [
+      1092,
+      1220
+    ],
+    "rear_brace__brace_rail_0": [
+      1220,
+      1232
+    ],
+    "rear_brace__brace_rail_1": [
+      1232,
+      1244
+    ],
+    "rear_brace__incline_step_0": [
+      1244,
+      1372
+    ],
+    "rear_brace__step_lip_0": [
+      1372,
+      1384
+    ],
+    "rear_brace__incline_step_1": [
+      1384,
+      1512
+    ],
+    "rear_brace__step_lip_1": [
+      1512,
+      1524
+    ],
+    "rear_brace__incline_step_2": [
+      1524,
+      1652
+    ],
+    "rear_brace__step_lip_2": [
+      1652,
+      1664
+    ],
+    "rear_brace__incline_step_3": [
+      1664,
+      1792
+    ],
+    "rear_brace__step_lip_3": [
+      1792,
+      1804
+    ],
+    "rear_brace__incline_step_4": [
+      1804,
+      1932
+    ],
+    "rear_brace__step_lip_4": [
+      1932,
+      1944
+    ],
+    "rear_brace__upper_catch_roller": [
+      1944,
+      2072
+    ],
+    "front_wheel_0__tire": [
+      2072,
+      9132
+    ],
+    "front_wheel_0__hub": [
+      9132,
+      17954
+    ],
+    "front_wheel_1__tire": [
+      17954,
+      25014
+    ],
+    "front_wheel_1__hub": [
+      25014,
+      33836
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.04291246914541169,
+      0.0,
+      0.31575
+    ],
+    "scale": 0.4455935800473613
+  }
+}

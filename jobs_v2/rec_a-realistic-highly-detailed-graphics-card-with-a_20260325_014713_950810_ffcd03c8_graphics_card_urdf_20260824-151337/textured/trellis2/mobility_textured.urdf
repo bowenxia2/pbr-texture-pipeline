@@ -1,0 +1,732 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="graphics_card">
+	<material name="shroud_black">
+		<color rgba="0.12 0.13 0.14 1" />
+	</material>
+	<material name="shroud_trim">
+		<color rgba="0.2 0.22 0.24 1" />
+	</material>
+	<material name="pcb_black">
+		<color rgba="0.07 0.09 0.07 1" />
+	</material>
+	<material name="fin_aluminum">
+		<color rgba="0.55 0.58 0.62 1" />
+	</material>
+	<material name="bracket_metal">
+		<color rgba="0.66 0.68 0.71 1" />
+	</material>
+	<material name="backplate_metal">
+		<color rgba="0.3 0.33 0.36 1" />
+	</material>
+	<material name="fan_black">
+		<color rgba="0.1 0.1 0.11 1" />
+	</material>
+	<material name="gold">
+		<color rgba="0.82 0.69 0.25 1" />
+	</material>
+	<link name="core">
+		<inertial>
+			<origin xyz="0.005 0 0.012" rpy="0 0 0" />
+			<mass value="1.45" />
+			<inertia ixx="0.00175208" ixy="0" ixz="0" iyy="0.0109446" iyz="0" izz="0.0125575" />
+		</inertial>
+		<visual name="core__pcb">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__pcb.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__pcie_fingers">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__pcie_fingers.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__power_socket_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__power_socket_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__power_socket_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__power_socket_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__top_edge_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__top_edge_bar.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__rear_stiffener">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__rear_stiffener.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_base.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__top_spreader">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__top_spreader.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_8.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_9">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_9.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_10">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_10.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_11">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_11.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_12">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_12.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_13">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_13.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__fin_14">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__fin_14.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__left_cold_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__left_cold_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="core__right_cold_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/core__right_cold_plate.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="shroud">
+		<inertial>
+			<origin xyz="0.002 0 0.03" rpy="0 0 0" />
+			<mass value="0.42" />
+			<inertia ixx="0.00047992" ixy="0" ixz="0" iyy="0.0029932" iyz="0" izz="0.0034552" />
+		</inertial>
+		<visual name="shroud__top_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__top_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bottom_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bottom_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__left_endcap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__left_endcap.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__right_endcap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__right_endcap.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bridge_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bridge_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bridge_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bridge_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bezel_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bezel_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_top_strut_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_top_strut_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_bottom_strut_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_bottom_strut_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bezel_center">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bezel_center.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_center">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_center.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_top_strut_center">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_top_strut_center.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_bottom_strut_center">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_bottom_strut_center.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bezel_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bezel_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_top_strut_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_top_strut_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__bearing_bottom_strut_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__bearing_bottom_strut_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__accent_upper_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__accent_upper_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__accent_upper_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__accent_upper_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__accent_lower_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__accent_lower_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__accent_lower_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__accent_lower_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__center_ref_x">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__center_ref_x.glb" />
+			</geometry>
+		</visual>
+		<visual name="shroud__center_ref_y">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/shroud__center_ref_y.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="backplate">
+		<inertial>
+			<origin xyz="0.003 0 -0.002" rpy="0 0 0" />
+			<mass value="0.28" />
+			<inertia ixx="0.000293067" ixy="0" ixz="0" iyy="0.00204475" iyz="0" izz="0.00233707" />
+		</inertial>
+		<visual name="backplate__plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="backplate__rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backplate__rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backplate__rib_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__rib_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="backplate__vrm_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__vrm_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="backplate__logo_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backplate__logo_bar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="bracket">
+		<inertial>
+			<origin xyz="-0.145 0 0.013" rpy="0 0 0" />
+			<mass value="0.08" />
+			<inertia ixx="9.73333e-05" ixy="0" ixz="0" iyy="5.46667e-06" iyz="0" izz="9.37867e-05" />
+		</inertial>
+		<visual name="bracket__front_edge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__front_edge.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__rear_edge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__rear_edge.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__top_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__top_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__middle_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__middle_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__bottom_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__bottom_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__mount_tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__mount_tongue.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__screw_ear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__screw_ear.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__upper_port_liner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__upper_port_liner.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__lower_port_liner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__lower_port_liner.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="fan_left">
+		<inertial>
+			<origin xyz="0 0 0.033" rpy="0 0 0" />
+			<mass value="0.08" />
+			<inertia ixx="3.296e-05" ixy="0" ixz="0" iyy="3.296e-05" iyz="0" izz="6.4e-05" />
+		</inertial>
+		<visual name="fan_left__rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_left__blade_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_left__blade_8.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="fan_center">
+		<inertial>
+			<origin xyz="0 0 0.033" rpy="0 0 0" />
+			<mass value="0.08" />
+			<inertia ixx="3.296e-05" ixy="0" ixz="0" iyy="3.296e-05" iyz="0" izz="6.4e-05" />
+		</inertial>
+		<visual name="fan_center__rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__blade_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__blade_8.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_center__timing_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_center__timing_tab.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="fan_right">
+		<inertial>
+			<origin xyz="0 0 0.033" rpy="0 0 0" />
+			<mass value="0.08" />
+			<inertia ixx="3.296e-05" ixy="0" ixz="0" iyy="3.296e-05" iyz="0" izz="6.4e-05" />
+		</inertial>
+		<visual name="fan_right__rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_right__blade_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_right__blade_8.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="core_to_shroud" type="fixed">
+		<parent link="core" />
+		<child link="shroud" />
+	</joint>
+	<joint name="core_to_backplate" type="fixed">
+		<parent link="core" />
+		<child link="backplate" />
+	</joint>
+	<joint name="core_to_bracket" type="fixed">
+		<parent link="core" />
+		<child link="bracket" />
+	</joint>
+	<joint name="shroud_to_fan_left" type="continuous">
+		<origin xyz="-0.092 0 0" rpy="0 0 0" />
+		<parent link="shroud" />
+		<child link="fan_left" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.3" velocity="50" />
+	</joint>
+	<joint name="shroud_to_fan_center" type="continuous">
+		<parent link="shroud" />
+		<child link="fan_center" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.3" velocity="50" />
+	</joint>
+	<joint name="shroud_to_fan_right" type="continuous">
+		<origin xyz="0.092 0 0" rpy="0 0 0" />
+		<parent link="shroud" />
+		<child link="fan_right" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.3" velocity="50" />
+	</joint>
+</robot>

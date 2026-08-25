@@ -1,0 +1,164 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f_washing_machine_urdf_20260824-141937",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f/model.urdf",
+  "created": "2026-08-24T14:19:37",
+  "updated": "2026-08-24T20:23:36",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 6,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-24T14:22:54",
+      "finished": "2026-08-24T14:24:08",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray paper on the entire object; thin black line on the top right corner; thin black line on the top left corner; thin black line on the bottom center; thin black line on the top center"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:34:30",
+      "finished": "2026-08-24T14:36:48",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f_washing_machine_urdf_20260824-141937/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T14:36:48",
+      "finished": "2026-08-24T15:01:36",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 6,
+            "n_total": 6,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f_washing_machine_urdf_20260824-141937/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:36",
+      "finished": "2026-08-24T19:42:10",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-front-loading-washing-machine-with-a-white-rec_20260513_002941_547341_050bf63f/model.urdf",
+    "category": "washing machine",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.3,
+        -0.3,
+        0.0
+      ],
+      "max": [
+        0.33999999999999997,
+        0.3,
+        0.85
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "cabinet__cabinet_shell",
+        "link": "cabinet",
+        "label": "cabinet_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cabinet_mesh.obj"
+        ],
+        "n_faces": 532,
+        "area_frac": 0.6449240690320469,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "drum__drum_shell",
+        "link": "drum",
+        "label": "drum_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/drum_mesh.obj"
+        ],
+        "n_faces": 1508,
+        "area_frac": 0.22818581463799212,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "door__door_frame",
+        "link": "door",
+        "label": "door_frame",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/door_frame_mesh.obj"
+        ],
+        "n_faces": 1008,
+        "area_frac": 0.05914474593625052,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "door__door_glass",
+        "link": "door",
+        "label": "door_glass",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/door_glass_mesh.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.0336999130536946,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "detergent_drawer__drawer_body",
+        "link": "detergent_drawer",
+        "label": "drawer_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/drawer_mesh.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.032191844127939594,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "knob__knob_body",
+        "link": "knob",
+        "label": "knob_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/knob_mesh.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.0018536132120763578,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

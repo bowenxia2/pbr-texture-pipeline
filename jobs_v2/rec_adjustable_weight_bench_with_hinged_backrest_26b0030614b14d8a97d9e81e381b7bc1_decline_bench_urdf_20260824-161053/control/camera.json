@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_0.png",
+        "ok": true,
+        "az": 88.0,
+        "el": 16.0,
+        "ro": 20.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_1.png",
+        "ok": true,
+        "az": 43.0,
+        "el": 16.0,
+        "ro": -30.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_2.png",
+        "ok": true,
+        "az": 181.0,
+        "el": 20.0,
+        "ro": 20.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_3.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 16.0,
+        "ro": -31.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_4.png",
+        "ok": true,
+        "az": 269.0,
+        "el": 15.0,
+        "ro": -23.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_5.png",
+        "ok": true,
+        "az": 218.0,
+        "el": 16.0,
+        "ro": -23.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_6.png",
+        "ok": true,
+        "az": 181.0,
+        "el": 12.0,
+        "ro": 20.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_adjustable_weight_bench_with_hinged_backrest_26b0030614b14d8a97d9e81e381b7bc1_decline_bench_urdf_20260824-161053/render/view_7.png",
+        "ok": true,
+        "az": 321.0,
+        "el": 16.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 85.76132863993098,
+    "agreement_err_deg": 45.684667840017255,
+    "implied_front_deg": [
+      88.0,
+      88.0,
+      271.0,
+      91.0,
+      89.0,
+      83.0,
+      91.0,
+      276.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 45.7 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 2
+  }
+}

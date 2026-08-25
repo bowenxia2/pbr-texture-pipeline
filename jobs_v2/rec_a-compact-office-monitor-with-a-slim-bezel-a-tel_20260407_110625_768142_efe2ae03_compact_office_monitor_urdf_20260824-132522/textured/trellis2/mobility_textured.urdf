@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="compact_office_monitor">
+	<material name="charcoal">
+		<color rgba="0.16 0.17 0.18 1" />
+	</material>
+	<material name="graphite">
+		<color rgba="0.22 0.23 0.25 1" />
+	</material>
+	<material name="black">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<material name="satin">
+		<color rgba="0.36 0.37 0.39 1" />
+	</material>
+	<material name="screen_glass">
+		<color rgba="0.06 0.09 0.11 0.94" />
+	</material>
+	<link name="base">
+		<inertial>
+			<origin xyz="0 -0.002 0.099" rpy="0 0 0" />
+			<mass value="3.4" />
+			<inertia ixx="0.0213361" ixy="0" ixz="0" iyy="0.0260961" iyz="0" izz="0.0252167" />
+		</inertial>
+		<visual name="base__foot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__foot.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__foot_riser">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__foot_riser.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__sleeve_left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__sleeve_left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__sleeve_right_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__sleeve_right_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__sleeve_front_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__sleeve_front_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__sleeve_back_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__sleeve_back_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__sleeve_rear_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__sleeve_rear_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__height_lock_knob">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__height_lock_knob.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="mast">
+		<inertial>
+			<origin xyz="0 0.008 0.098" rpy="0 0 0" />
+			<mass value="1.1" />
+			<inertia ixx="0.0141684" ixy="0" ixz="0" iyy="0.0143733" iyz="0" izz="0.000369967" />
+		</inertial>
+		<visual name="mast__inner_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__inner_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__tilt_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__tilt_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__tilt_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__tilt_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__left_tilt_cheek">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__left_tilt_cheek.glb" />
+			</geometry>
+		</visual>
+		<visual name="mast__right_tilt_cheek">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/mast__right_tilt_cheek.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="panel">
+		<inertial>
+			<origin xyz="0 -0.004 0" rpy="0 0 0" />
+			<mass value="2.7" />
+			<inertia ixx="0.0241389" ixy="0" ixz="0" iyy="0.0889389" iyz="0" izz="0.06642" />
+		</inertial>
+		<visual name="panel__rear_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__rear_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__top_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__top_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__bottom_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__bottom_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__left_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__left_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__right_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__right_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__screen">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__screen.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__mount_block">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__mount_block.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__tilt_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__tilt_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__tilt_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__tilt_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__wheel_left_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__wheel_left_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__wheel_right_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__wheel_right_tab.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="control_wheel">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<mass value="0.03" />
+			<inertia ixx="3.1675e-06" ixy="0" ixz="0" iyy="3.1675e-06" iyz="0" izz="1.215e-06" />
+		</inertial>
+		<visual name="control_wheel__wheel_tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/control_wheel__wheel_tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="control_wheel__wheel_axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/control_wheel__wheel_axle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="base_to_mast" type="prismatic">
+		<origin xyz="0 0.025 0.202" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="mast" />
+		<axis xyz="0 0 1" />
+		<limit effort="80" velocity="0.12" lower="0" upper="0.1" />
+	</joint>
+	<joint name="mast_to_panel" type="revolute">
+		<origin xyz="0 0 0.224" rpy="0 0 0" />
+		<parent link="mast" />
+		<child link="panel" />
+		<axis xyz="-1 0 0" />
+		<limit effort="18" velocity="1.5" lower="-0.18" upper="0.34" />
+	</joint>
+	<joint name="panel_to_control_wheel" type="continuous">
+		<origin xyz="0.222 -0.05 -0.171" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="control_wheel" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.4" velocity="8" />
+	</joint>
+</robot>

@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="professional_monitor">
+	<material name="stand_dark">
+		<color rgba="0.17 0.18 0.19 1" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.22 0.23 0.24 1" />
+	</material>
+	<material name="housing_black">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<material name="screen_black">
+		<color rgba="0.03 0.04 0.05 1" />
+	</material>
+	<material name="joystick_dark">
+		<color rgba="0.12 0.12 0.12 1" />
+	</material>
+	<link name="pedestal">
+		<inertial>
+			<origin xyz="0 0 0.035" rpy="0 0 0" />
+			<mass value="6.8" />
+			<inertia ixx="0.0327533" ixy="0" ixz="0" iyy="0.0504333" iyz="0" izz="0.0776333" />
+		</inertial>
+		<visual name="pedestal__base_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pedestal__base_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="pedestal__pedestal_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pedestal__pedestal_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="pedestal__pedestal_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pedestal__pedestal_collar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="stand">
+		<inertial>
+			<origin xyz="0 -0.008 0.175" rpy="0 0 0" />
+			<mass value="2.4" />
+			<inertia ixx="0.02578" ixy="0" ixz="0" iyy="0.02962" iyz="0" izz="0.0064" />
+		</inertial>
+		<visual name="stand__rotating_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stand__rotating_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="stand__upright_column">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stand__upright_column.glb" />
+			</geometry>
+		</visual>
+		<visual name="stand__head_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stand__head_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="stand__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stand__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="display">
+		<inertial>
+			<origin xyz="0 -0.02 0" rpy="0 0 0" />
+			<mass value="4.9" />
+			<inertia ixx="0.0599842" ixy="0" ixz="0" iyy="0.215927" iyz="0" izz="0.157984" />
+		</inertial>
+		<visual name="display__display_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/display__display_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="display__screen_glass">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/display__screen_glass.glb" />
+			</geometry>
+		</visual>
+		<visual name="display__rear_bulge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/display__rear_bulge.glb" />
+			</geometry>
+		</visual>
+		<visual name="display__rear_mount_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/display__rear_mount_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="display__joystick_support">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/display__joystick_support.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="joystick">
+		<inertial>
+			<origin xyz="0 0.012 -0.004" rpy="0 0 0" />
+			<mass value="0.03" />
+			<inertia ixx="2.33e-06" ixy="0" ixz="0" iyy="1.13e-06" iyz="0" izz="2.18e-06" />
+		</inertial>
+		<visual name="joystick__pivot_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick__pivot_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick__joystick_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick__joystick_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick__joystick_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick__joystick_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="pedestal_to_stand_swivel" type="revolute">
+		<origin xyz="0 0 0.07" rpy="0 0 0" />
+		<parent link="pedestal" />
+		<child link="stand" />
+		<axis xyz="0 0 1" />
+		<limit effort="35" velocity="1.6" lower="-0.959931" upper="0.959931" />
+	</joint>
+	<joint name="stand_to_display_tilt" type="revolute">
+		<origin xyz="0 -0.026 0.338" rpy="0 0 0" />
+		<parent link="stand" />
+		<child link="display" />
+		<axis xyz="-1 0 0" />
+		<limit effort="12" velocity="1.2" lower="-0.0872665" upper="0.383972" />
+	</joint>
+	<joint name="display_to_joystick" type="revolute">
+		<origin xyz="0.128 0 -0.155" rpy="0 0 0" />
+		<parent link="display" />
+		<child link="joystick" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.5" velocity="4" lower="-0.35" upper="0.35" />
+	</joint>
+</robot>

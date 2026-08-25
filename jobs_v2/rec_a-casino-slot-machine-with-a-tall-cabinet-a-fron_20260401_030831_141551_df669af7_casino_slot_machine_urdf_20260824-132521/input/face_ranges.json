@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "cabinet__left_side_panel",
+    "cabinet__right_side_panel",
+    "cabinet__back_panel",
+    "cabinet__bottom_panel",
+    "cabinet__roof_panel",
+    "cabinet__front_lower_panel",
+    "cabinet__window_sill",
+    "cabinet__left_jamb",
+    "cabinet__right_jamb",
+    "cabinet__separator_left",
+    "cabinet__separator_right",
+    "cabinet__window_brow",
+    "cabinet__upper_front_marquee",
+    "cabinet__marquee_panel",
+    "cabinet__handle_mount_pad",
+    "cabinet__left_reel_bearing",
+    "cabinet__center_reel_bearing",
+    "cabinet__right_reel_bearing",
+    "coin_tray__mount_flange",
+    "coin_tray__tray_floor",
+    "coin_tray__left_tray_wall",
+    "coin_tray__right_tray_wall",
+    "coin_tray__front_lip",
+    "pull_handle__hub_block",
+    "pull_handle__handle_arm",
+    "pull_handle__handle_knob",
+    "left_reel__drum",
+    "left_reel__axle",
+    "left_reel__front_ring",
+    "center_reel__drum",
+    "center_reel__axle",
+    "center_reel__front_ring",
+    "right_reel__drum",
+    "right_reel__axle",
+    "right_reel__front_ring"
+  ],
+  "face_ranges": {
+    "cabinet__left_side_panel": [
+      0,
+      12
+    ],
+    "cabinet__right_side_panel": [
+      12,
+      24
+    ],
+    "cabinet__back_panel": [
+      24,
+      36
+    ],
+    "cabinet__bottom_panel": [
+      36,
+      48
+    ],
+    "cabinet__roof_panel": [
+      48,
+      60
+    ],
+    "cabinet__front_lower_panel": [
+      60,
+      72
+    ],
+    "cabinet__window_sill": [
+      72,
+      84
+    ],
+    "cabinet__left_jamb": [
+      84,
+      96
+    ],
+    "cabinet__right_jamb": [
+      96,
+      108
+    ],
+    "cabinet__separator_left": [
+      108,
+      120
+    ],
+    "cabinet__separator_right": [
+      120,
+      132
+    ],
+    "cabinet__window_brow": [
+      132,
+      144
+    ],
+    "cabinet__upper_front_marquee": [
+      144,
+      156
+    ],
+    "cabinet__marquee_panel": [
+      156,
+      168
+    ],
+    "cabinet__handle_mount_pad": [
+      168,
+      180
+    ],
+    "cabinet__left_reel_bearing": [
+      180,
+      192
+    ],
+    "cabinet__center_reel_bearing": [
+      192,
+      204
+    ],
+    "cabinet__right_reel_bearing": [
+      204,
+      216
+    ],
+    "coin_tray__mount_flange": [
+      216,
+      228
+    ],
+    "coin_tray__tray_floor": [
+      228,
+      240
+    ],
+    "coin_tray__left_tray_wall": [
+      240,
+      252
+    ],
+    "coin_tray__right_tray_wall": [
+      252,
+      264
+    ],
+    "coin_tray__front_lip": [
+      264,
+      276
+    ],
+    "pull_handle__hub_block": [
+      276,
+      288
+    ],
+    "pull_handle__handle_arm": [
+      288,
+      2916
+    ],
+    "pull_handle__handle_knob": [
+      2916,
+      4196
+    ],
+    "left_reel__drum": [
+      4196,
+      4324
+    ],
+    "left_reel__axle": [
+      4324,
+      4452
+    ],
+    "left_reel__front_ring": [
+      4452,
+      4580
+    ],
+    "center_reel__drum": [
+      4580,
+      4708
+    ],
+    "center_reel__axle": [
+      4708,
+      4836
+    ],
+    "center_reel__front_ring": [
+      4836,
+      4964
+    ],
+    "right_reel__drum": [
+      4964,
+      5092
+    ],
+    "right_reel__axle": [
+      5092,
+      5220
+    ],
+    "right_reel__front_ring": [
+      5220,
+      5348
+    ]
+  },
+  "norm": {
+    "center": [
+      0.08399999999999999,
+      0.06500000000000002,
+      0.76
+    ],
+    "scale": 0.6578881578947369
+  }
+}

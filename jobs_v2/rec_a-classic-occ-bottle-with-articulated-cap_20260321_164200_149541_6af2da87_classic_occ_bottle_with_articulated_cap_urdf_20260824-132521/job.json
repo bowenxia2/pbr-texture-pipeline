@@ -1,0 +1,113 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87_classic_occ_bottle_with_articulated_cap_urdf_20260824-132521",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87/model.urdf",
+  "created": "2026-08-24T13:25:21",
+  "updated": "2026-08-24T20:23:36",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 2,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-24T13:29:14",
+      "finished": "2026-08-24T13:31:22",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the bottle body; gray plastic on the cap"
+      },
+      "seed": null,
+      "started": "2026-08-24T13:40:22",
+      "finished": "2026-08-24T13:42:56",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87_classic_occ_bottle_with_articulated_cap_urdf_20260824-132521/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T13:42:56",
+      "finished": "2026-08-24T14:06:49",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 2,
+            "n_total": 2,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87_classic_occ_bottle_with_articulated_cap_urdf_20260824-132521/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:36",
+      "finished": "2026-08-24T19:41:57",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-classic-occ-bottle-with-articulated-cap_20260321_164200_149541_6af2da87/model.urdf",
+    "category": "classic occ bottle with articulated cap",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.0408,
+        -0.03078,
+        -0.0018
+      ],
+      "max": [
+        0.0408,
+        0.03078,
+        0.156
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "bottle",
+        "link": "bottle",
+        "label": "bottle",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/bottle_glass.obj",
+          "assets/meshes/bottle_frame.obj"
+        ],
+        "n_faces": 20048,
+        "area_frac": 0.9090792560597429,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "cap",
+        "link": "cap",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cap.obj"
+        ],
+        "n_faces": 8424,
+        "area_frac": 0.09092074394025704,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

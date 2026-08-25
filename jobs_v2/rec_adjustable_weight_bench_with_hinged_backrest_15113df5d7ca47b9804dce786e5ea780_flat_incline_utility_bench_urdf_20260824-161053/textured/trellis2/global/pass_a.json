@@ -1,0 +1,37 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2159145,
+  "groups": {
+    "base": {
+      "texture_size": 1024,
+      "n_faces": 2424,
+      "texels": 846489,
+      "field_voxels": 809609
+    },
+    "seat": {
+      "texture_size": 1024,
+      "n_faces": 176,
+      "texels": 929823,
+      "field_voxels": 218577
+    },
+    "backrest": {
+      "texture_size": 1024,
+      "n_faces": 376,
+      "texels": 956335,
+      "field_voxels": 764799
+    },
+    "ladder": {
+      "texture_size": 1024,
+      "n_faces": 896,
+      "texels": 796728,
+      "field_voxels": 50317
+    },
+    "selector_knob": {
+      "texture_size": 1024,
+      "n_faces": 384,
+      "texels": 703274,
+      "field_voxels": 5310
+    }
+  }
+}

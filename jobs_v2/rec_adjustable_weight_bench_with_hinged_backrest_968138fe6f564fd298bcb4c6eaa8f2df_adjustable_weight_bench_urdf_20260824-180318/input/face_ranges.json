@@ -1,0 +1,174 @@
+{
+  "group_order": [
+    "frame__front_foot",
+    "frame__rear_foot",
+    "frame__front_post",
+    "frame__rear_post",
+    "frame__spine",
+    "frame__seat_mount",
+    "frame__backrest_mount",
+    "frame__ladder_tab_0",
+    "frame__ladder_tab_1",
+    "frame__front_axle",
+    "frame__wheel_bracket_0",
+    "frame__wheel_bracket_1",
+    "seat__seat_board",
+    "seat__seat_pad",
+    "seat__seat_hinge_tube",
+    "backrest__backrest_board",
+    "backrest__backrest_pad",
+    "backrest__support_bar",
+    "backrest__backrest_hinge_tube",
+    "support_ladder__pivot_tube",
+    "support_ladder__side_rail_0",
+    "support_ladder__side_rail_1",
+    "support_ladder__rung_0",
+    "support_ladder__rung_1",
+    "support_ladder__rung_2",
+    "support_ladder__top_rung",
+    "front_wheel_0__tire",
+    "front_wheel_0__hub",
+    "front_wheel_0__cap",
+    "front_wheel_1__tire",
+    "front_wheel_1__hub",
+    "front_wheel_1__cap"
+  ],
+  "face_ranges": {
+    "frame__front_foot": [
+      0,
+      12
+    ],
+    "frame__rear_foot": [
+      12,
+      24
+    ],
+    "frame__front_post": [
+      24,
+      36
+    ],
+    "frame__rear_post": [
+      36,
+      48
+    ],
+    "frame__spine": [
+      48,
+      60
+    ],
+    "frame__seat_mount": [
+      60,
+      72
+    ],
+    "frame__backrest_mount": [
+      72,
+      84
+    ],
+    "frame__ladder_tab_0": [
+      84,
+      96
+    ],
+    "frame__ladder_tab_1": [
+      96,
+      108
+    ],
+    "frame__front_axle": [
+      108,
+      236
+    ],
+    "frame__wheel_bracket_0": [
+      236,
+      248
+    ],
+    "frame__wheel_bracket_1": [
+      248,
+      260
+    ],
+    "seat__seat_board": [
+      260,
+      272
+    ],
+    "seat__seat_pad": [
+      272,
+      284
+    ],
+    "seat__seat_hinge_tube": [
+      284,
+      412
+    ],
+    "backrest__backrest_board": [
+      412,
+      424
+    ],
+    "backrest__backrest_pad": [
+      424,
+      436
+    ],
+    "backrest__support_bar": [
+      436,
+      448
+    ],
+    "backrest__backrest_hinge_tube": [
+      448,
+      576
+    ],
+    "support_ladder__pivot_tube": [
+      576,
+      704
+    ],
+    "support_ladder__side_rail_0": [
+      704,
+      716
+    ],
+    "support_ladder__side_rail_1": [
+      716,
+      728
+    ],
+    "support_ladder__rung_0": [
+      728,
+      856
+    ],
+    "support_ladder__rung_1": [
+      856,
+      984
+    ],
+    "support_ladder__rung_2": [
+      984,
+      1112
+    ],
+    "support_ladder__top_rung": [
+      1112,
+      1240
+    ],
+    "front_wheel_0__tire": [
+      1240,
+      1368
+    ],
+    "front_wheel_0__hub": [
+      1368,
+      1496
+    ],
+    "front_wheel_0__cap": [
+      1496,
+      1624
+    ],
+    "front_wheel_1__tire": [
+      1624,
+      1752
+    ],
+    "front_wheel_1__hub": [
+      1752,
+      1880
+    ],
+    "front_wheel_1__cap": [
+      1880,
+      2008
+    ]
+  },
+  "norm": {
+    "center": [
+      0.14749360653770804,
+      0.0,
+      0.3955739034927772
+    ],
+    "scale": 0.6514647102476345
+  }
+}

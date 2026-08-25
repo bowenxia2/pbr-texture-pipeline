@@ -218,6 +218,19 @@ def depth_to_controlnet(depth: np.ndarray, mask: np.ndarray) -> np.ndarray:
     return (np.clip(out, 0, 1) * 255).astype(np.uint8)
 
 
+def rgba_to_canny(color: np.ndarray, low: int = 100, high: int = 200) -> np.ndarray:
+    """Canny edge map from RGBA render: white edges on black background.
+
+    Composites onto white first so silhouette edges appear naturally,
+    then runs Canny with the given thresholds.
+    """
+    rgb = color[:, :, :3].astype(np.float32)
+    a = color[:, :, 3:4].astype(np.float32) / 255.0
+    white_bg = (rgb * a + 255.0 * (1.0 - a)).astype(np.uint8)
+    gray = cv2.cvtColor(white_bg, cv2.COLOR_RGB2GRAY)
+    return cv2.Canny(gray, low, high)
+
+
 # --- contact sheet + re-pose (Task 1.3) --------------------------------------
 CONTACT_N = 8                         # 8 azimuth panels, front + k*45deg
 CONTACT_STEP = math.pi / 4            # 45 deg
@@ -443,6 +456,11 @@ def render_textured_views(
             depth_path.parent.mkdir(parents=True, exist_ok=True)
             Image.fromarray(depth_cn, mode="L").save(depth_path)
 
+            canny_map = rgba_to_canny(color)
+            canny_path = job.render_canny(0)
+            canny_path.parent.mkdir(parents=True, exist_ok=True)
+            Image.fromarray(canny_map, mode="L").save(canny_path)
+
             rgb = color[:, :, :3].astype(np.float32)
             a = color[:, :, 3:4].astype(np.float32) / 255.0
             white_bg = (rgb * a + 255.0 * (1.0 - a)).astype(np.uint8)
@@ -453,5 +471,6 @@ def render_textured_views(
     return {
         "views": saved,
         "depth": job.render_depth(0),
+        "canny": job.render_canny(0),
         "front_white": job.render_front_white(),
     }

@@ -167,15 +167,15 @@ def stage_imageedit(jobs: list[JobDir]) -> None:
     for job in approved:
         job.start("imageedit")
         front = job.render_front_white()
-        depth = job.render_depth(0)
+        canny = job.render_canny(0)
         mat_path = job.vlm_materials()
-        if not front.is_file() or not depth.is_file() or not mat_path.is_file():
-            job.fail("imageedit", "missing front_white, depth, or materials")
+        if not front.is_file() or not canny.is_file() or not mat_path.is_file():
+            job.fail("imageedit", "missing front_white, canny, or materials")
             continue
         materials = mat_path.read_text().strip()
         items.append({
             "source": str(front),
-            "depth": str(depth),
+            "canny": str(canny),
             "materials": materials,
             "output": str(job.enhanced_view(0)),
             "job_id": job.job_id,

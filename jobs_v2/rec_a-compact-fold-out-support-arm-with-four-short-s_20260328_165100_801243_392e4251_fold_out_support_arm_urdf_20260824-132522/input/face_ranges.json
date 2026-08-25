@@ -1,0 +1,124 @@
+{
+  "group_order": [
+    "base_plate__plate",
+    "base_plate__hinge_reinforcement",
+    "base_plate__hinge_bridge_upper",
+    "base_plate__hinge_bridge_lower",
+    "base_plate__fork_upper",
+    "base_plate__fork_lower",
+    "link1__tongue",
+    "link1__core",
+    "link1__fork_upper",
+    "link1__fork_lower",
+    "link2__tongue",
+    "link2__core",
+    "link2__fork_upper",
+    "link2__fork_lower",
+    "link3__tongue",
+    "link3__core",
+    "link3__fork_upper",
+    "link3__fork_lower",
+    "link4__tongue",
+    "link4__core",
+    "link4__end_pad",
+    "platform_bracket__bracket_shell"
+  ],
+  "face_ranges": {
+    "base_plate__plate": [
+      0,
+      12
+    ],
+    "base_plate__hinge_reinforcement": [
+      12,
+      24
+    ],
+    "base_plate__hinge_bridge_upper": [
+      24,
+      36
+    ],
+    "base_plate__hinge_bridge_lower": [
+      36,
+      48
+    ],
+    "base_plate__fork_upper": [
+      48,
+      60
+    ],
+    "base_plate__fork_lower": [
+      60,
+      72
+    ],
+    "link1__tongue": [
+      72,
+      84
+    ],
+    "link1__core": [
+      84,
+      96
+    ],
+    "link1__fork_upper": [
+      96,
+      108
+    ],
+    "link1__fork_lower": [
+      108,
+      120
+    ],
+    "link2__tongue": [
+      120,
+      132
+    ],
+    "link2__core": [
+      132,
+      144
+    ],
+    "link2__fork_upper": [
+      144,
+      156
+    ],
+    "link2__fork_lower": [
+      156,
+      168
+    ],
+    "link3__tongue": [
+      168,
+      180
+    ],
+    "link3__core": [
+      180,
+      192
+    ],
+    "link3__fork_upper": [
+      192,
+      204
+    ],
+    "link3__fork_lower": [
+      204,
+      216
+    ],
+    "link4__tongue": [
+      216,
+      228
+    ],
+    "link4__core": [
+      228,
+      240
+    ],
+    "link4__end_pad": [
+      240,
+      252
+    ],
+    "platform_bracket__bracket_shell": [
+      252,
+      1696
+    ]
+  },
+  "norm": {
+    "center": [
+      0.151,
+      0.0,
+      0.0
+    ],
+    "scale": 3.1846815286624204
+  }
+}

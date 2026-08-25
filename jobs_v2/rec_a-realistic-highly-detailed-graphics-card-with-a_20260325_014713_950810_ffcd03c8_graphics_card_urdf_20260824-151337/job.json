@@ -1,0 +1,1438 @@
+{
+  "schema_version": 6,
+  "job_id": "rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8_graphics_card_urdf_20260824-151337",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8/model.urdf",
+  "created": "2026-08-24T15:13:37",
+  "updated": "2026-08-24T20:23:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 104,
+        "n_tiny": 86
+      },
+      "seed": null,
+      "started": "2026-08-24T15:13:37",
+      "finished": "2026-08-24T15:16:04",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the body; gray plastic on the handle; gray plastic on the base"
+      },
+      "seed": null,
+      "started": "2026-08-24T15:27:44",
+      "finished": "2026-08-24T15:31:20",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8_graphics_card_urdf_20260824-151337/imageedit/enhanced_0.png"
+      },
+      "seed": null,
+      "started": "2026-08-24T15:31:20",
+      "finished": "2026-08-24T15:56:19",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 104,
+            "n_total": 104,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8_graphics_card_urdf_20260824-151337/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-24T20:23:37",
+      "finished": "2026-08-24T19:42:39",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-graphics-card-with-a_20260325_014713_950810_ffcd03c8/model.urdf",
+    "category": "graphics card",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.15,
+        -0.057,
+        -0.0039
+      ],
+      "max": [
+        0.155,
+        0.071,
+        0.041
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "core__pcb",
+        "link": "core",
+        "label": "pcb",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11240836708864367,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__pcie_fingers",
+        "link": "core",
+        "label": "pcie_fingers",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030376803329927723,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__power_socket_left",
+        "link": "core",
+        "label": "power_socket_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0018311250605423704,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__power_socket_right",
+        "link": "core",
+        "label": "power_socket_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0018311250605423704,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__top_edge_bar",
+        "link": "core",
+        "label": "top_edge_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006032776362252001,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__rear_stiffener",
+        "link": "core",
+        "label": "rear_stiffener",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005010753072646951,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_base",
+        "link": "core",
+        "label": "fin_base",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.10150678533285655,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__top_spreader",
+        "link": "core",
+        "label": "top_spreader",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.089710933198665,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_0",
+        "link": "core",
+        "label": "fin_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01589388163014955,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_1",
+        "link": "core",
+        "label": "fin_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01589388163014955,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_2",
+        "link": "core",
+        "label": "fin_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_3",
+        "link": "core",
+        "label": "fin_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149556,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_4",
+        "link": "core",
+        "label": "fin_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149556,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_5",
+        "link": "core",
+        "label": "fin_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_6",
+        "link": "core",
+        "label": "fin_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_7",
+        "link": "core",
+        "label": "fin_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149556,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_8",
+        "link": "core",
+        "label": "fin_8",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_9",
+        "link": "core",
+        "label": "fin_9",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_10",
+        "link": "core",
+        "label": "fin_10",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149556,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_11",
+        "link": "core",
+        "label": "fin_11",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149556,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_12",
+        "link": "core",
+        "label": "fin_12",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015893881630149553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_13",
+        "link": "core",
+        "label": "fin_13",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01589388163014955,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__fin_14",
+        "link": "core",
+        "label": "fin_14",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01589388163014955,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__left_cold_plate",
+        "link": "core",
+        "label": "left_cold_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013910872552957549,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "core__right_cold_plate",
+        "link": "core",
+        "label": "right_cold_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013910872552957549,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__top_rail",
+        "link": "shroud",
+        "label": "top_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.028701820716408318,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bottom_rail",
+        "link": "shroud",
+        "label": "bottom_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.028701820716408318,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__left_endcap",
+        "link": "shroud",
+        "label": "left_endcap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.010163453824405722,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__right_endcap",
+        "link": "shroud",
+        "label": "right_endcap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01293143356708605,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bridge_left",
+        "link": "shroud",
+        "label": "bridge_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006075360665985544,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bridge_right",
+        "link": "shroud",
+        "label": "bridge_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006075360665985544,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bezel_left",
+        "link": "shroud",
+        "label": "bezel_left",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_shroud_bezel.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.019306003701169,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_left",
+        "link": "shroud",
+        "label": "bearing_left",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.001775543405076594,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_top_strut_left",
+        "link": "shroud",
+        "label": "bearing_top_strut_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174879,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bearing_bottom_strut_left",
+        "link": "shroud",
+        "label": "bearing_bottom_strut_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174879,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bezel_center",
+        "link": "shroud",
+        "label": "bezel_center",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_shroud_bezel.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.019306003701168997,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_center",
+        "link": "shroud",
+        "label": "bearing_center",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.001775543405076594,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_top_strut_center",
+        "link": "shroud",
+        "label": "bearing_top_strut_center",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174868,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bearing_bottom_strut_center",
+        "link": "shroud",
+        "label": "bearing_bottom_strut_center",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174868,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bezel_right",
+        "link": "shroud",
+        "label": "bezel_right",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_shroud_bezel.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.019306003701168997,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_right",
+        "link": "shroud",
+        "label": "bearing_right",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.001775543405076594,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shroud__bearing_top_strut_right",
+        "link": "shroud",
+        "label": "bearing_top_strut_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174879,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__bearing_bottom_strut_right",
+        "link": "shroud",
+        "label": "bearing_bottom_strut_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012917238799174879,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__accent_upper_left",
+        "link": "shroud",
+        "label": "accent_upper_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038467821039300997,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__accent_upper_right",
+        "link": "shroud",
+        "label": "accent_upper_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038467821039300997,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__accent_lower_left",
+        "link": "shroud",
+        "label": "accent_lower_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038467821039300997,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__accent_lower_right",
+        "link": "shroud",
+        "label": "accent_lower_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038467821039300997,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__center_ref_x",
+        "link": "shroud",
+        "label": "center_ref_x",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00034067442986834845,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "shroud__center_ref_y",
+        "link": "shroud",
+        "label": "center_ref_y",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00034067442986834845,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__plate",
+        "link": "backplate",
+        "label": "plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11705857305634668,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__rib_0",
+        "link": "backplate",
+        "label": "rib_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00772905112763815,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__rib_1",
+        "link": "backplate",
+        "label": "rib_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007729051127638148,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__rib_2",
+        "link": "backplate",
+        "label": "rib_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00772905112763815,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__vrm_plate",
+        "link": "backplate",
+        "label": "vrm_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005098760633696278,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "backplate__logo_bar",
+        "link": "backplate",
+        "label": "logo_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0042229434535763985,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__front_edge",
+        "link": "bracket",
+        "label": "front_edge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002413110544900798,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__rear_edge",
+        "link": "bracket",
+        "label": "rear_edge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0024131105449007994,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__top_cross",
+        "link": "bracket",
+        "label": "top_cross",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009226599142267758,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__middle_cross",
+        "link": "bracket",
+        "label": "middle_cross",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009226599142267764,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__bottom_cross",
+        "link": "bracket",
+        "label": "bottom_cross",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009226599142267758,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__mount_tongue",
+        "link": "bracket",
+        "label": "mount_tongue",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009226599142267771,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__screw_ear",
+        "link": "bracket",
+        "label": "screw_ear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009794389858715008,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__upper_port_liner",
+        "link": "bracket",
+        "label": "upper_port_liner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002256968097877807,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "bracket__lower_port_liner",
+        "link": "bracket",
+        "label": "lower_port_liner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002256968097877807,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__rim",
+        "link": "fan_left",
+        "label": "rim",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_fan_rim.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.007881499983570467,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_left__hub",
+        "link": "fan_left",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0030296080301919965,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_left__axle",
+        "link": "fan_left",
+        "label": "axle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006659091725468532,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_left__cap",
+        "link": "fan_left",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0012640563313040907,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_left__blade_0",
+        "link": "fan_left",
+        "label": "blade_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_1",
+        "link": "fan_left",
+        "label": "blade_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_2",
+        "link": "fan_left",
+        "label": "blade_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_3",
+        "link": "fan_left",
+        "label": "blade_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_4",
+        "link": "fan_left",
+        "label": "blade_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_5",
+        "link": "fan_left",
+        "label": "blade_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_6",
+        "link": "fan_left",
+        "label": "blade_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_7",
+        "link": "fan_left",
+        "label": "blade_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_left__blade_8",
+        "link": "fan_left",
+        "label": "blade_8",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__rim",
+        "link": "fan_center",
+        "label": "rim",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_fan_rim.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.007881499983570467,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_center__hub",
+        "link": "fan_center",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0030296080301919965,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_center__axle",
+        "link": "fan_center",
+        "label": "axle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006659091725468532,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_center__cap",
+        "link": "fan_center",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0012640563313040907,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_center__blade_0",
+        "link": "fan_center",
+        "label": "blade_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_1",
+        "link": "fan_center",
+        "label": "blade_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_2",
+        "link": "fan_center",
+        "label": "blade_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_3",
+        "link": "fan_center",
+        "label": "blade_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_4",
+        "link": "fan_center",
+        "label": "blade_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_5",
+        "link": "fan_center",
+        "label": "blade_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_6",
+        "link": "fan_center",
+        "label": "blade_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_7",
+        "link": "fan_center",
+        "label": "blade_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__blade_8",
+        "link": "fan_center",
+        "label": "blade_8",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_center__timing_tab",
+        "link": "fan_center",
+        "label": "timing_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00015614244702299304,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__rim",
+        "link": "fan_right",
+        "label": "rim",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gpu_fan_rim.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.007881499983570467,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_right__hub",
+        "link": "fan_right",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0030296080301919965,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_right__axle",
+        "link": "fan_right",
+        "label": "axle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006659091725468532,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_right__cap",
+        "link": "fan_right",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0012640563313040907,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "fan_right__blade_0",
+        "link": "fan_right",
+        "label": "blade_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_1",
+        "link": "fan_right",
+        "label": "blade_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_2",
+        "link": "fan_right",
+        "label": "blade_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_3",
+        "link": "fan_right",
+        "label": "blade_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_4",
+        "link": "fan_right",
+        "label": "blade_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_5",
+        "link": "fan_right",
+        "label": "blade_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477845,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_6",
+        "link": "fan_right",
+        "label": "blade_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_7",
+        "link": "fan_right",
+        "label": "blade_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011270645721477848,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "fan_right__blade_8",
+        "link": "fan_right",
+        "label": "blade_8",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001127064572147785,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

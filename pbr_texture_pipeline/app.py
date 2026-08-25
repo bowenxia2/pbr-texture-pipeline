@@ -122,8 +122,8 @@ def upload_urdf(file_paths: Optional[list]):
         gallery.append((str(job.render_view(0)), "Front view"))
     if job.render_front_white().is_file():
         gallery.append((str(job.render_front_white()), "Front (white bg)"))
-    if job.render_depth(0).is_file():
-        gallery.append((str(job.render_depth(0)), "Depth map"))
+    if job.render_canny(0).is_file():
+        gallery.append((str(job.render_canny(0)), "Canny map"))
     status = (f"Job {job.job_id} - Stage R done. "
               f"{info['n_groups']} groups ({info['n_tiny']} tiny). "
               f"Click 'Enhance' to run VLM + ImageEdit, then proceed to texturing.")

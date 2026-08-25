@@ -1,0 +1,74 @@
+{
+  "group_order": [
+    "body__shoe_plate",
+    "body__shoe_stem",
+    "body__main_body",
+    "swivel__swivel_cylinder",
+    "swivel__cradle_left",
+    "swivel__cradle_right",
+    "swivel__tilt_pin",
+    "head__head_body",
+    "head__flash_window",
+    "button_0__button_0_visual",
+    "button_1__button_1_visual",
+    "button_2__button_2_visual"
+  ],
+  "face_ranges": {
+    "body__shoe_plate": [
+      0,
+      12
+    ],
+    "body__shoe_stem": [
+      12,
+      24
+    ],
+    "body__main_body": [
+      24,
+      36
+    ],
+    "swivel__swivel_cylinder": [
+      36,
+      164
+    ],
+    "swivel__cradle_left": [
+      164,
+      176
+    ],
+    "swivel__cradle_right": [
+      176,
+      188
+    ],
+    "swivel__tilt_pin": [
+      188,
+      316
+    ],
+    "head__head_body": [
+      316,
+      328
+    ],
+    "head__flash_window": [
+      328,
+      340
+    ],
+    "button_0__button_0_visual": [
+      340,
+      352
+    ],
+    "button_1__button_1_visual": [
+      352,
+      364
+    ],
+    "button_2__button_2_visual": [
+      364,
+      376
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0020000000000000018,
+      0.0,
+      0.0775
+    ],
+    "scale": 6.451548387096775
+  }
+}

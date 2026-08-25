@@ -1,0 +1,264 @@
+{
+  "group_order": [
+    "frame__side_rail_0",
+    "frame__side_rail_1",
+    "frame__front_crossbar",
+    "frame__mid_crossbar",
+    "frame__rear_crossbar",
+    "frame__seat_hinge_post_0",
+    "frame__seat_hinge_tab_0",
+    "frame__seat_hinge_post_1",
+    "frame__seat_hinge_tab_1",
+    "frame__backrest_hinge_post_0",
+    "frame__backrest_hinge_tab_0",
+    "frame__backrest_hinge_post_1",
+    "frame__backrest_hinge_tab_1",
+    "frame__seat_hinge_pin_line",
+    "frame__backrest_hinge_pin_line",
+    "frame__ladder_pivot_tab_0",
+    "frame__ladder_pivot_tab_1",
+    "frame__ladder_pivot_pin",
+    "frame__yoke_neck",
+    "frame__yoke_stem",
+    "frame__yoke_bridge",
+    "frame__yoke_cheek_0",
+    "frame__yoke_cheek_1",
+    "frame__roller_axle",
+    "seat__seat_hinge_barrel",
+    "seat__seat_under_rail",
+    "seat__seat_pad",
+    "seat__seat_center_seam",
+    "backrest__backrest_hinge_barrel",
+    "backrest__backrest_bracket",
+    "backrest__backrest_pad",
+    "backrest__backrest_seam_0",
+    "backrest__backrest_seam_1",
+    "backrest__backrest_seam_2",
+    "backrest__ladder_catch",
+    "ladder__ladder_pivot_barrel",
+    "ladder__ladder_lower_arm_0",
+    "ladder__ladder_side_0",
+    "ladder__ladder_lower_arm_1",
+    "ladder__ladder_side_1",
+    "ladder__ladder_rung_0",
+    "ladder__ladder_rung_1",
+    "ladder__ladder_rung_2",
+    "ladder__ladder_rung_3",
+    "roller_0__foam_roller",
+    "roller_0__roller_end_0",
+    "roller_0__roller_end_1",
+    "roller_1__foam_roller",
+    "roller_1__roller_end_0",
+    "roller_1__roller_end_1"
+  ],
+  "face_ranges": {
+    "frame__side_rail_0": [
+      0,
+      12
+    ],
+    "frame__side_rail_1": [
+      12,
+      24
+    ],
+    "frame__front_crossbar": [
+      24,
+      36
+    ],
+    "frame__mid_crossbar": [
+      36,
+      48
+    ],
+    "frame__rear_crossbar": [
+      48,
+      60
+    ],
+    "frame__seat_hinge_post_0": [
+      60,
+      72
+    ],
+    "frame__seat_hinge_tab_0": [
+      72,
+      84
+    ],
+    "frame__seat_hinge_post_1": [
+      84,
+      96
+    ],
+    "frame__seat_hinge_tab_1": [
+      96,
+      108
+    ],
+    "frame__backrest_hinge_post_0": [
+      108,
+      120
+    ],
+    "frame__backrest_hinge_tab_0": [
+      120,
+      132
+    ],
+    "frame__backrest_hinge_post_1": [
+      132,
+      144
+    ],
+    "frame__backrest_hinge_tab_1": [
+      144,
+      156
+    ],
+    "frame__seat_hinge_pin_line": [
+      156,
+      284
+    ],
+    "frame__backrest_hinge_pin_line": [
+      284,
+      412
+    ],
+    "frame__ladder_pivot_tab_0": [
+      412,
+      424
+    ],
+    "frame__ladder_pivot_tab_1": [
+      424,
+      436
+    ],
+    "frame__ladder_pivot_pin": [
+      436,
+      564
+    ],
+    "frame__yoke_neck": [
+      564,
+      576
+    ],
+    "frame__yoke_stem": [
+      576,
+      588
+    ],
+    "frame__yoke_bridge": [
+      588,
+      600
+    ],
+    "frame__yoke_cheek_0": [
+      600,
+      612
+    ],
+    "frame__yoke_cheek_1": [
+      612,
+      624
+    ],
+    "frame__roller_axle": [
+      624,
+      752
+    ],
+    "seat__seat_hinge_barrel": [
+      752,
+      880
+    ],
+    "seat__seat_under_rail": [
+      880,
+      892
+    ],
+    "seat__seat_pad": [
+      892,
+      904
+    ],
+    "seat__seat_center_seam": [
+      904,
+      916
+    ],
+    "backrest__backrest_hinge_barrel": [
+      916,
+      1044
+    ],
+    "backrest__backrest_bracket": [
+      1044,
+      1056
+    ],
+    "backrest__backrest_pad": [
+      1056,
+      1068
+    ],
+    "backrest__backrest_seam_0": [
+      1068,
+      1080
+    ],
+    "backrest__backrest_seam_1": [
+      1080,
+      1092
+    ],
+    "backrest__backrest_seam_2": [
+      1092,
+      1104
+    ],
+    "backrest__ladder_catch": [
+      1104,
+      1116
+    ],
+    "ladder__ladder_pivot_barrel": [
+      1116,
+      1244
+    ],
+    "ladder__ladder_lower_arm_0": [
+      1244,
+      1256
+    ],
+    "ladder__ladder_side_0": [
+      1256,
+      1268
+    ],
+    "ladder__ladder_lower_arm_1": [
+      1268,
+      1280
+    ],
+    "ladder__ladder_side_1": [
+      1280,
+      1292
+    ],
+    "ladder__ladder_rung_0": [
+      1292,
+      1304
+    ],
+    "ladder__ladder_rung_1": [
+      1304,
+      1316
+    ],
+    "ladder__ladder_rung_2": [
+      1316,
+      1328
+    ],
+    "ladder__ladder_rung_3": [
+      1328,
+      1340
+    ],
+    "roller_0__foam_roller": [
+      1340,
+      1468
+    ],
+    "roller_0__roller_end_0": [
+      1468,
+      1596
+    ],
+    "roller_0__roller_end_1": [
+      1596,
+      1724
+    ],
+    "roller_1__foam_roller": [
+      1724,
+      1852
+    ],
+    "roller_1__roller_end_0": [
+      1852,
+      1980
+    ],
+    "roller_1__roller_end_1": [
+      1980,
+      2108
+    ]
+  },
+  "norm": {
+    "center": [
+      0.01100000000000001,
+      0.0,
+      0.42775
+    ],
+    "scale": 0.4984995014955134
+  }
+}

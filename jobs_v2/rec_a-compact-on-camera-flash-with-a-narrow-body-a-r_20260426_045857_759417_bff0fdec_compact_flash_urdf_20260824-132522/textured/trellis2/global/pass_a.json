@@ -1,0 +1,79 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1309082,
+  "groups": {
+    "body__shoe_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55341,
+      "field_voxels": 48273
+    },
+    "body__shoe_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58804,
+      "field_voxels": 40242
+    },
+    "body__main_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53824,
+      "field_voxels": 53824
+    },
+    "swivel__swivel_cylinder": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 695495,
+      "field_voxels": 117699
+    },
+    "swivel__cradle_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53454,
+      "field_voxels": 50457
+    },
+    "swivel__cradle_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53454,
+      "field_voxels": 50457
+    },
+    "swivel__tilt_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 796204,
+      "field_voxels": 39337
+    },
+    "head__head_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54024,
+      "field_voxels": 53950
+    },
+    "head__flash_window": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56107,
+      "field_voxels": 55859
+    },
+    "button_0__button_0_visual": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53988,
+      "field_voxels": 13344
+    },
+    "button_1__button_1_visual": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53988,
+      "field_voxels": 13317
+    },
+    "button_2__button_2_visual": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54926,
+      "field_voxels": 13158
+    }
+  }
+}

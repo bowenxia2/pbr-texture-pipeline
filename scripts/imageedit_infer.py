@@ -1,12 +1,12 @@
 """Qwen-Image-Edit enhancement (Stage E).
 
 Runs inside the trellis2 conda env (or qwen_edit) via subprocess.
-Uses QwenImageEditPlusPipeline with native ControlNet depth conditioning.
+Uses QwenImageEditPlusPipeline with Canny edge ControlNet conditioning.
 
 CLI:
     python scripts/imageedit_infer.py --model <hf_id> --items-file <path>
 
-Items file: [{"source": "...", "depth": "...", "materials": "...", "output": "..."}, ...]
+Items file: [{"source": "...", "canny": "...", "materials": "...", "output": "..."}, ...]
 
 Emits [PBR_RESULT] JSON lines per the adapter contract.
 """
@@ -21,9 +21,9 @@ RESULT_MARKER = "[PBR_RESULT]"
 
 PROMPT_TEMPLATE = (
     "Preserve the object's geometry, proportions, colors, patterns, and design. "
-    "Materials: {MATERIAL_DESCRIPTION}. "
-    "Enhance these materials with realistic surface properties and fine texture detail "
-    "while maintaining the original appearance. "
+    "The object's materials are: {MATERIAL_DESCRIPTION}. "
+    "Apply each material to its described location with realistic surface properties "
+    "and fine texture detail while maintaining the original appearance. "
     "Do not add, remove, reshape, or redesign any components. "
     "Keep the background clean and empty."
 )
@@ -33,7 +33,7 @@ def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser(description="Qwen-Image-Edit enhancement (Stage E)")
     ap.add_argument("--model", required=True, help="HuggingFace model id")
     ap.add_argument("--items-file", required=True,
-                    help="JSON list of {source, depth, materials, output}")
+                    help="JSON list of {source, canny, materials, output}")
     ap.add_argument("--num-inference-steps", type=int, default=40)
     ap.add_argument("--guidance-scale", type=float, default=1.0)
     ap.add_argument("--true-cfg-scale", type=float, default=4.0)
@@ -60,7 +60,7 @@ def main(argv: list[str] | None = None) -> int:
 
     for i, item in enumerate(items):
         source_img = Image.open(item["source"]).convert("RGB")
-        depth_img = Image.open(item["depth"]).convert("RGB")
+        canny_img = Image.open(item["canny"]).convert("RGB")
         materials = item["materials"]
 
         prompt = PROMPT_TEMPLATE.replace("{MATERIAL_DESCRIPTION}", materials)
@@ -68,7 +68,7 @@ def main(argv: list[str] | None = None) -> int:
         print(f"[imageedit] [{i+1}/{len(items)}] {Path(item['source']).name} ...")
         with torch.inference_mode():
             output = pipeline(
-                image=[source_img, depth_img],
+                image=[source_img, canny_img],
                 prompt=prompt,
                 negative_prompt=" ",
                 guidance_scale=args.guidance_scale,

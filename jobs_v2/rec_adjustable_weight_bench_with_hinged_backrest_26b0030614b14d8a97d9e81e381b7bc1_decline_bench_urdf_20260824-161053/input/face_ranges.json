@@ -1,0 +1,234 @@
+{
+  "group_order": [
+    "frame__rear_foot",
+    "frame__rear_riser_0",
+    "frame__rear_riser_1",
+    "frame__rail_0",
+    "frame__rail_1",
+    "frame__rear_brace_0",
+    "frame__rear_brace_1",
+    "frame__rear_gusset_0",
+    "frame__rear_gusset_1",
+    "frame__back_bridge",
+    "frame__back_support",
+    "frame__seat_bridge",
+    "frame__seat_support",
+    "frame__front_base",
+    "frame__upright_0",
+    "frame__upright_1",
+    "frame__roller_yoke",
+    "frame__roller_cheek_0",
+    "frame__roller_cheek_1",
+    "frame__handle_stem_0",
+    "frame__handle_stem_1",
+    "frame__handle_grip",
+    "frame__wheel_bracket_0",
+    "frame__wheel_bracket_1",
+    "back_pad__pad_shell",
+    "back_pad__backer_plate",
+    "back_pad__mount_block",
+    "seat__pad_shell",
+    "seat__backer_plate",
+    "seat__mount_block",
+    "leg_roller_0__foam",
+    "leg_roller_0__end_cap_0",
+    "leg_roller_0__end_cap_1",
+    "leg_roller_1__foam",
+    "leg_roller_1__end_cap_0",
+    "leg_roller_1__end_cap_1",
+    "front_wheel_0__tire",
+    "front_wheel_0__hub",
+    "front_wheel_0__hub_cap_0",
+    "front_wheel_0__hub_cap_1",
+    "front_wheel_1__tire",
+    "front_wheel_1__hub",
+    "front_wheel_1__hub_cap_0",
+    "front_wheel_1__hub_cap_1"
+  ],
+  "face_ranges": {
+    "frame__rear_foot": [
+      0,
+      12
+    ],
+    "frame__rear_riser_0": [
+      12,
+      24
+    ],
+    "frame__rear_riser_1": [
+      24,
+      36
+    ],
+    "frame__rail_0": [
+      36,
+      48
+    ],
+    "frame__rail_1": [
+      48,
+      60
+    ],
+    "frame__rear_brace_0": [
+      60,
+      72
+    ],
+    "frame__rear_brace_1": [
+      72,
+      84
+    ],
+    "frame__rear_gusset_0": [
+      84,
+      96
+    ],
+    "frame__rear_gusset_1": [
+      96,
+      108
+    ],
+    "frame__back_bridge": [
+      108,
+      120
+    ],
+    "frame__back_support": [
+      120,
+      132
+    ],
+    "frame__seat_bridge": [
+      132,
+      144
+    ],
+    "frame__seat_support": [
+      144,
+      156
+    ],
+    "frame__front_base": [
+      156,
+      168
+    ],
+    "frame__upright_0": [
+      168,
+      180
+    ],
+    "frame__upright_1": [
+      180,
+      192
+    ],
+    "frame__roller_yoke": [
+      192,
+      204
+    ],
+    "frame__roller_cheek_0": [
+      204,
+      216
+    ],
+    "frame__roller_cheek_1": [
+      216,
+      228
+    ],
+    "frame__handle_stem_0": [
+      228,
+      240
+    ],
+    "frame__handle_stem_1": [
+      240,
+      252
+    ],
+    "frame__handle_grip": [
+      252,
+      380
+    ],
+    "frame__wheel_bracket_0": [
+      380,
+      392
+    ],
+    "frame__wheel_bracket_1": [
+      392,
+      404
+    ],
+    "back_pad__pad_shell": [
+      404,
+      9864
+    ],
+    "back_pad__backer_plate": [
+      9864,
+      9876
+    ],
+    "back_pad__mount_block": [
+      9876,
+      9888
+    ],
+    "seat__pad_shell": [
+      9888,
+      19348
+    ],
+    "seat__backer_plate": [
+      19348,
+      19360
+    ],
+    "seat__mount_block": [
+      19360,
+      19372
+    ],
+    "leg_roller_0__foam": [
+      19372,
+      19500
+    ],
+    "leg_roller_0__end_cap_0": [
+      19500,
+      19628
+    ],
+    "leg_roller_0__end_cap_1": [
+      19628,
+      19756
+    ],
+    "leg_roller_1__foam": [
+      19756,
+      19884
+    ],
+    "leg_roller_1__end_cap_0": [
+      19884,
+      20012
+    ],
+    "leg_roller_1__end_cap_1": [
+      20012,
+      20140
+    ],
+    "front_wheel_0__tire": [
+      20140,
+      20268
+    ],
+    "front_wheel_0__hub": [
+      20268,
+      20396
+    ],
+    "front_wheel_0__hub_cap_0": [
+      20396,
+      20524
+    ],
+    "front_wheel_0__hub_cap_1": [
+      20524,
+      20652
+    ],
+    "front_wheel_1__tire": [
+      20652,
+      20780
+    ],
+    "front_wheel_1__hub": [
+      20780,
+      20908
+    ],
+    "front_wheel_1__hub_cap_0": [
+      20908,
+      21036
+    ],
+    "front_wheel_1__hub_cap_1": [
+      21036,
+      21164
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.07567871995118786,
+      0.0,
+      0.335
+    ],
+    "scale": 0.6470930117391948
+  }
+}

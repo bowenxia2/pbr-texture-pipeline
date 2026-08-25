@@ -1,0 +1,764 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="folding_adjustable_weight_bench">
+	<material name="frame_paint">
+		<color rgba="0.13 0.13 0.14 1" />
+	</material>
+	<material name="pad_vinyl">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<material name="bracket_steel">
+		<color rgba="0.58 0.6 0.63 1" />
+	</material>
+	<material name="wheel_rubber">
+		<color rgba="0.05 0.05 0.05 1" />
+	</material>
+	<material name="wheel_hub">
+		<color rgba="0.34 0.35 0.37 1" />
+	</material>
+	<material name="selector_metal">
+		<color rgba="0.77 0.79 0.82 1" />
+	</material>
+	<material name="foot_rubber">
+		<color rgba="0.1 0.1 0.1 1" />
+	</material>
+	<link name="frame">
+		<collision name="rear_cross">
+			<origin xyz="-0.42 0 0.03" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.015" length="0.3" />
+			</geometry>
+		</collision>
+		<collision name="front_cross">
+			<origin xyz="0.4 0 0.05" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.015" length="0.24" />
+			</geometry>
+		</collision>
+		<collision name="side_rail_0">
+			<origin xyz="-0.08 0.15 0.04" rpy="0 1.54139 0" />
+			<geometry>
+				<cylinder radius="0.015" length="0.680294" />
+			</geometry>
+		</collision>
+		<collision name="side_rail_1">
+			<origin xyz="-0.08 -0.15 0.04" rpy="0 1.54139 0" />
+			<geometry>
+				<cylinder radius="0.015" length="0.680294" />
+			</geometry>
+		</collision>
+		<collision name="support_brace_0">
+			<origin xyz="-0.2225 0.1 0.055" rpy="0 1.35725 -0.572966" />
+			<geometry>
+				<cylinder radius="0.013" length="0.188746" />
+			</geometry>
+		</collision>
+		<collision name="support_brace_1">
+			<origin xyz="-0.2225 -0.1 0.055" rpy="0 1.35725 0.572966" />
+			<geometry>
+				<cylinder radius="0.013" length="0.188746" />
+			</geometry>
+		</collision>
+		<collision name="support_bridge">
+			<origin xyz="-0.145 0 0.075" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.013" length="0.1" />
+			</geometry>
+		</collision>
+		<collision name="back_hinge_brace">
+			<origin xyz="-0.05 0 0.33" rpy="0 1.5708 -1.5708" />
+			<geometry>
+				<cylinder radius="0.013" length="0.24" />
+			</geometry>
+		</collision>
+		<collision name="seat_cross">
+			<origin xyz="0.1 0 0.29" rpy="0 1.5708 -1.5708" />
+			<geometry>
+				<cylinder radius="0.013" length="0.2" />
+			</geometry>
+		</collision>
+		<collision name="back_upright_0">
+			<origin xyz="-0.135 0.135 0.19" rpy="0 2.58911 2.96692" />
+			<geometry>
+				<cylinder radius="0.013" length="0.328938" />
+			</geometry>
+		</collision>
+		<collision name="back_upright_1">
+			<origin xyz="-0.135 -0.135 0.19" rpy="0 2.58911 -2.96692" />
+			<geometry>
+				<cylinder radius="0.013" length="0.328938" />
+			</geometry>
+		</collision>
+		<collision name="front_rise_0">
+			<origin xyz="0.18 0.125 0.17" rpy="0 2.5319 0.302885" />
+			<geometry>
+				<cylinder radius="0.013" length="0.292746" />
+			</geometry>
+		</collision>
+		<collision name="front_rise_1">
+			<origin xyz="0.18 -0.125 0.17" rpy="0 2.5319 -0.302885" />
+			<geometry>
+				<cylinder radius="0.013" length="0.292746" />
+			</geometry>
+		</collision>
+		<collision name="front_reach_0">
+			<origin xyz="0.25 0.105 0.2" rpy="0 2.11097 0.033321" />
+			<geometry>
+				<cylinder radius="0.012" length="0.35" />
+			</geometry>
+		</collision>
+		<collision name="front_reach_1">
+			<origin xyz="0.25 -0.105 0.2" rpy="0 2.11097 -0.033321" />
+			<geometry>
+				<cylinder radius="0.012" length="0.35" />
+			</geometry>
+		</collision>
+		<collision name="support_clevis_0">
+			<origin xyz="-0.122 0.048 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.02 0.09" />
+			</geometry>
+		</collision>
+		<collision name="support_clevis_1">
+			<origin xyz="-0.122 -0.048 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.02 0.09" />
+			</geometry>
+		</collision>
+		<collision name="back_hinge_plate_0">
+			<origin xyz="-0.022 0.11 0.36" rpy="0 0 0" />
+			<geometry>
+				<box size="0.055 0.02 0.08" />
+			</geometry>
+		</collision>
+		<collision name="back_hinge_plate_1">
+			<origin xyz="-0.022 -0.11 0.36" rpy="0 0 0" />
+			<geometry>
+				<box size="0.055 0.02 0.08" />
+			</geometry>
+		</collision>
+		<collision name="seat_hinge_plate_0">
+			<origin xyz="0.082 0.1 0.305" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.02 0.065" />
+			</geometry>
+		</collision>
+		<collision name="seat_hinge_plate_1">
+			<origin xyz="0.082 -0.1 0.305" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.02 0.065" />
+			</geometry>
+		</collision>
+		<collision name="front_fork_0">
+			<origin xyz="0.42 0.105 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.05 0.038 0.08" />
+			</geometry>
+		</collision>
+		<collision name="front_fork_1">
+			<origin xyz="0.42 -0.105 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.05 0.038 0.08" />
+			</geometry>
+		</collision>
+		<collision name="rear_foot_0">
+			<origin xyz="-0.42 0.12 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.05 0.016" />
+			</geometry>
+		</collision>
+		<collision name="rear_foot_1">
+			<origin xyz="-0.42 -0.12 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.05 0.016" />
+			</geometry>
+		</collision>
+		<visual name="frame__rear_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__side_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__side_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__side_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__side_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__support_brace_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__support_brace_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__support_brace_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__support_brace_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__support_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__support_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_brace">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_brace.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_cross">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_cross.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_upright_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_upright_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_upright_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_upright_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_rise_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_rise_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_rise_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_rise_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_reach_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_reach_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_reach_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_reach_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__support_clevis_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__support_clevis_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__support_clevis_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__support_clevis_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_plate_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_plate_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__back_hinge_plate_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__back_hinge_plate_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_hinge_plate_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_hinge_plate_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_hinge_plate_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_hinge_plate_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_fork_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_fork_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_fork_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_fork_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_foot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_foot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_foot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_foot_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="backrest">
+		<collision name="back_hinge_barrel">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.2" />
+			</geometry>
+		</collision>
+		<collision name="back_hinge_plate">
+			<origin xyz="-0.0707066 0 0.0250115" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.14 0.18 0.018" />
+			</geometry>
+		</collision>
+		<collision name="back_rail_0">
+			<origin xyz="-0.272353 0.09 0.0846735" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.46 0.03 0.024" />
+			</geometry>
+		</collision>
+		<collision name="back_rail_1">
+			<origin xyz="-0.272353 -0.09 0.0846735" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.46 0.03 0.024" />
+			</geometry>
+		</collision>
+		<collision name="back_mount_0">
+			<origin xyz="-0.251209 0.09 0.0994691" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.3 0.03 0.03" />
+			</geometry>
+		</collision>
+		<collision name="back_mount_1">
+			<origin xyz="-0.251209 -0.09 0.0994691" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.3 0.03 0.03" />
+			</geometry>
+		</collision>
+		<collision name="selector_rack">
+			<origin xyz="-0.233598 0 0.0592963" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.19 0.06 0.012" />
+			</geometry>
+		</collision>
+		<collision name="selector_spine">
+			<origin xyz="-0.141702 0 0.0342143" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.17 0.06 0.016" />
+			</geometry>
+		</collision>
+		<collision name="selector_boss_0">
+			<origin xyz="-0.177033 0 0.0392871" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.013" length="0.02" />
+			</geometry>
+		</collision>
+		<collision name="selector_boss_1">
+			<origin xyz="-0.233598 0 0.0592963" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.013" length="0.02" />
+			</geometry>
+		</collision>
+		<collision name="selector_boss_2">
+			<origin xyz="-0.290163 0 0.0793055" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.013" length="0.02" />
+			</geometry>
+		</collision>
+		<collision name="back_board">
+			<origin xyz="-0.344862 0 0.149569" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.63 0.29 0.014" />
+			</geometry>
+		</collision>
+		<collision name="back_pad">
+			<origin xyz="-0.334191 0 0.179737" rpy="0 0.34 0" />
+			<geometry>
+				<box size="0.61 0.27 0.05" />
+			</geometry>
+		</collision>
+		<visual name="backrest__back_hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_hinge_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_hinge_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_mount_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_mount_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_mount_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_mount_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_rack">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_rack.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_boss_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_boss_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_boss_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_boss_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__selector_boss_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__selector_boss_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_board">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_board.glb" />
+			</geometry>
+		</visual>
+		<visual name="backrest__back_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest__back_pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat">
+		<collision name="seat_hinge_barrel">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.016" length="0.194" />
+			</geometry>
+		</collision>
+		<collision name="seat_hinge_plate">
+			<origin xyz="0.0405988 0 -0.0039667" rpy="0 -0.1 0" />
+			<geometry>
+				<box size="0.12 0.164 0.018" />
+			</geometry>
+		</collision>
+		<collision name="seat_rail_0">
+			<origin xyz="0.0906485 0.075 -0.00196004" rpy="0 -0.1 0" />
+			<geometry>
+				<box size="0.24 0.028 0.022" />
+			</geometry>
+		</collision>
+		<collision name="seat_rail_1">
+			<origin xyz="0.0906485 -0.075 -0.00196004" rpy="0 -0.1 0" />
+			<geometry>
+				<box size="0.24 0.028 0.022" />
+			</geometry>
+		</collision>
+		<collision name="seat_board">
+			<origin xyz="0.132529 0 0.0313876" rpy="0 -0.1 0" />
+			<geometry>
+				<box size="0.34 0.28 0.014" />
+			</geometry>
+		</collision>
+		<collision name="seat_pad">
+			<origin xyz="0.129534 0 0.0612377" rpy="0 -0.1 0" />
+			<geometry>
+				<box size="0.32 0.26 0.048" />
+			</geometry>
+		</collision>
+		<visual name="seat__seat_hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_hinge_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_hinge_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_board">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_board.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="support_link">
+		<collision name="lower_pivot">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.016" length="0.1" />
+			</geometry>
+		</collision>
+		<collision name="support_arm">
+			<origin xyz="-0.0633156 0 0.141478" rpy="0 1.15 0" />
+			<geometry>
+				<box size="0.31 0.032 0.018" />
+			</geometry>
+		</collision>
+		<collision name="support_cap">
+			<origin xyz="-0.12007 0 0.258504" rpy="0 1.15 0" />
+			<geometry>
+				<box size="0.026 0.082 0.018" />
+			</geometry>
+		</collision>
+		<collision name="selector_guide">
+			<origin xyz="-0.0490185 0 0.109532" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.011" length="0.05" />
+			</geometry>
+		</collision>
+		<visual name="support_link__lower_pivot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_link__lower_pivot.glb" />
+			</geometry>
+		</visual>
+		<visual name="support_link__support_arm">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_link__support_arm.glb" />
+			</geometry>
+		</visual>
+		<visual name="support_link__support_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_link__support_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="support_link__selector_guide">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_link__selector_guide.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_0">
+		<collision name="tire">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.04" length="0.034" />
+			</geometry>
+		</collision>
+		<collision name="hub">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.038" />
+			</geometry>
+		</collision>
+		<collision name="axle_cap">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.018" />
+			</geometry>
+		</collision>
+		<visual name="wheel_0__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_0__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_0__axle_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_0__axle_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="wheel_1">
+		<collision name="tire">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.04" length="0.034" />
+			</geometry>
+		</collision>
+		<collision name="hub">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.038" />
+			</geometry>
+		</collision>
+		<collision name="axle_cap">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.018" />
+			</geometry>
+		</collision>
+		<visual name="wheel_1__tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_1__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="wheel_1__axle_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wheel_1__axle_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="selector_knob">
+		<collision name="selector_pin">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.06" />
+			</geometry>
+		</collision>
+		<collision name="knob_head">
+			<origin xyz="0 0.042 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.014" />
+			</geometry>
+		</collision>
+		<collision name="knob_stem">
+			<origin xyz="0 0.032 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.012" />
+			</geometry>
+		</collision>
+		<visual name="selector_knob__selector_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__selector_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="selector_knob__knob_head">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__knob_head.glb" />
+			</geometry>
+		</visual>
+		<visual name="selector_knob__knob_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob__knob_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="frame_to_backrest" type="revolute">
+		<origin xyz="0 0 0.37" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="backrest" />
+		<axis xyz="0 1 0" />
+		<limit effort="140" velocity="1.4" lower="-0.32" upper="0.88" />
+	</joint>
+	<joint name="frame_to_seat" type="revolute">
+		<origin xyz="0.06 0 0.34" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="seat" />
+		<axis xyz="0 -1 0" />
+		<limit effort="80" velocity="1.2" lower="-0.12" upper="0.35" />
+	</joint>
+	<joint name="frame_to_support_link" type="revolute">
+		<origin xyz="-0.1 0 0.1" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="support_link" />
+		<axis xyz="0 1 0" />
+		<limit effort="120" velocity="1" lower="-0.55" upper="0.12" />
+	</joint>
+	<joint name="frame_to_wheel_0" type="continuous">
+		<origin xyz="0.44 0.141 0.04" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="wheel_0" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="20" />
+	</joint>
+	<joint name="frame_to_wheel_1" type="continuous">
+		<origin xyz="0.44 -0.141 0.04" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="wheel_1" />
+		<axis xyz="0 1 0" />
+		<limit effort="15" velocity="20" />
+	</joint>
+	<joint name="support_link_to_selector_knob" type="prismatic">
+		<origin xyz="-0.0490185 0 0.109532" rpy="0 0 0" />
+		<parent link="support_link" />
+		<child link="selector_knob" />
+		<axis xyz="0 1 0" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.018" />
+	</joint>
+</robot>

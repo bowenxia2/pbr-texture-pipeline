@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="precision_roll_axis_module">
+	<material name="frame_gray">
+		<color rgba="0.72 0.74 0.77 1" />
+	</material>
+	<material name="steel_dark">
+		<color rgba="0.33 0.35 0.38 1" />
+	</material>
+	<material name="bearing_black">
+		<color rgba="0.16 0.17 0.18 1" />
+	</material>
+	<material name="bracket_gray">
+		<color rgba="0.58 0.6 0.63 1" />
+	</material>
+	<link name="support_frame">
+		<inertial>
+			<mass value="2" />
+			<inertia ixx="0.00568133" ixy="0" ixz="0" iyy="0.00950467" iyz="0" izz="0.00846467" />
+		</inertial>
+		<visual name="support_frame__frame_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_frame__frame_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="support_frame__left_bearing_cartridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_frame__left_bearing_cartridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="support_frame__right_bearing_cartridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/support_frame__right_bearing_cartridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rotor">
+		<inertial>
+			<mass value="0.85" />
+			<inertia ixx="0.000392133" ixy="0" ixz="0" iyy="0.00380913" iyz="0" izz="0.00369127" />
+		</inertial>
+		<visual name="rotor__shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rotor__shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="rotor__left_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rotor__left_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="rotor__right_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rotor__right_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="rotor__payload_bracket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rotor__payload_bracket.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="frame_to_rotor" type="revolute">
+		<parent link="support_frame" />
+		<child link="rotor" />
+		<axis xyz="1 0 0" />
+		<limit effort="18" velocity="6" lower="-3.14159" upper="3.14159" />
+	</joint>
+</robot>

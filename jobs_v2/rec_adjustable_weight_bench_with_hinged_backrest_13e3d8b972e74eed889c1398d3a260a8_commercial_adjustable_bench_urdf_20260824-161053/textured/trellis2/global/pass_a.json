@@ -1,0 +1,361 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1821017,
+  "groups": {
+    "frame__side_rail_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61212,
+      "field_voxels": 32551
+    },
+    "frame__side_rail_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61212,
+      "field_voxels": 32551
+    },
+    "frame__center_spine": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54999,
+      "field_voxels": 38655
+    },
+    "frame__front_crossmember": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52839,
+      "field_voxels": 46685
+    },
+    "frame__rear_crossmember": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52839,
+      "field_voxels": 46592
+    },
+    "frame__front_floor_foot": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54566,
+      "field_voxels": 48034
+    },
+    "frame__front_floor_foot_post_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52718,
+      "field_voxels": 10680
+    },
+    "frame__front_floor_foot_post_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52718,
+      "field_voxels": 10680
+    },
+    "frame__front_floor_foot_rubber_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57760,
+      "field_voxels": 9855
+    },
+    "frame__front_floor_foot_rubber_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57760,
+      "field_voxels": 9855
+    },
+    "frame__rear_floor_foot": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54566,
+      "field_voxels": 48034
+    },
+    "frame__rear_floor_foot_post_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52718,
+      "field_voxels": 10680
+    },
+    "frame__rear_floor_foot_post_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52718,
+      "field_voxels": 10680
+    },
+    "frame__rear_floor_foot_rubber_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57760,
+      "field_voxels": 9855
+    },
+    "frame__rear_floor_foot_rubber_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57760,
+      "field_voxels": 9855
+    },
+    "frame__seat_hinge_post_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55035,
+      "field_voxels": 27586
+    },
+    "frame__seat_hinge_post_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55035,
+      "field_voxels": 27586
+    },
+    "frame__backrest_hinge_post_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55035,
+      "field_voxels": 27332
+    },
+    "frame__backrest_hinge_post_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55035,
+      "field_voxels": 27332
+    },
+    "frame__backrest_hinge_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 867206,
+      "field_voxels": 15596
+    },
+    "frame__seat_hinge_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 732362,
+      "field_voxels": 12234
+    },
+    "frame__support_pivot_bracket_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55976,
+      "field_voxels": 14622
+    },
+    "frame__support_pivot_bracket_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55976,
+      "field_voxels": 14622
+    },
+    "frame__support_pivot_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 899718,
+      "field_voxels": 12752
+    },
+    "frame__wheel_mount_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57346,
+      "field_voxels": 13082
+    },
+    "frame__axle_fork_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52169,
+      "field_voxels": 12794
+    },
+    "frame__axle_stub_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 728436,
+      "field_voxels": 2924
+    },
+    "frame__wheel_mount_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57346,
+      "field_voxels": 13082
+    },
+    "frame__axle_fork_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52169,
+      "field_voxels": 12794
+    },
+    "frame__axle_stub_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 728436,
+      "field_voxels": 2924
+    },
+    "frame__handle_side_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 749404,
+      "field_voxels": 12200
+    },
+    "frame__handle_side_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 759095,
+      "field_voxels": 12201
+    },
+    "frame__front_carry_handle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 779576,
+      "field_voxels": 10449
+    },
+    "backrest__pad": {
+      "texture_size": 1024,
+      "n_faces": 160,
+      "texels": 978861,
+      "field_voxels": 238019
+    },
+    "backrest__seam_22": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43758,
+      "field_voxels": 3544
+    },
+    "backrest__seam_48": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43757,
+      "field_voxels": 3188
+    },
+    "backrest__seam_74": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43757,
+      "field_voxels": 3188
+    },
+    "backrest__backrest_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57762,
+      "field_voxels": 57534
+    },
+    "backrest__center_channel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53898,
+      "field_voxels": 19908
+    },
+    "backrest__adjust_notch_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55666,
+      "field_voxels": 3088
+    },
+    "backrest__adjust_notch_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55666,
+      "field_voxels": 3088
+    },
+    "backrest__adjust_notch_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55666,
+      "field_voxels": 3088
+    },
+    "backrest__adjust_notch_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55666,
+      "field_voxels": 3194
+    },
+    "backrest__adjust_notch_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55666,
+      "field_voxels": 3088
+    },
+    "backrest__hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 813972,
+      "field_voxels": 22645
+    },
+    "seat__pad": {
+      "texture_size": 1024,
+      "n_faces": 160,
+      "texels": 875099,
+      "field_voxels": 121906
+    },
+    "seat__center_seam": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43748,
+      "field_voxels": 3332
+    },
+    "seat__seat_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57972,
+      "field_voxels": 56920
+    },
+    "seat__hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 811825,
+      "field_voxels": 17512
+    },
+    "support_arm__side_tube_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50270,
+      "field_voxels": 20941
+    },
+    "support_arm__side_tube_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50270,
+      "field_voxels": 20941
+    },
+    "support_arm__lower_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52829,
+      "field_voxels": 20725
+    },
+    "support_arm__upper_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52444,
+      "field_voxels": 21651
+    },
+    "support_arm__pivot_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 740824,
+      "field_voxels": 14472
+    },
+    "support_arm__top_roller": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 735311,
+      "field_voxels": 11853
+    },
+    "wheel_0__tire": {
+      "texture_size": 1024,
+      "n_faces": 7204,
+      "texels": 545355,
+      "field_voxels": 23264
+    },
+    "wheel_0__rim": {
+      "texture_size": 1024,
+      "n_faces": 5208,
+      "texels": 578543,
+      "field_voxels": 15864
+    },
+    "wheel_1__tire": {
+      "texture_size": 1024,
+      "n_faces": 7204,
+      "texels": 556448,
+      "field_voxels": 23311
+    },
+    "wheel_1__rim": {
+      "texture_size": 1024,
+      "n_faces": 5208,
+      "texels": 580479,
+      "field_voxels": 15835
+    }
+  }
+}

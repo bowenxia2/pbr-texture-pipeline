@@ -1,0 +1,144 @@
+{
+  "group_order": [
+    "frame__rail_0",
+    "frame__rail_1",
+    "frame__front_cross",
+    "frame__seat_cross",
+    "frame__rear_cross",
+    "frame__ladder_ear_0",
+    "frame__ladder_ear_1",
+    "frame__wheel_bracket_0",
+    "frame__wheel_bracket_1",
+    "frame__rear_axle",
+    "back_pad__back_board",
+    "back_pad__back_cushion",
+    "seat_pad__seat_board",
+    "seat_pad__seat_cushion",
+    "ladder_support__ladder_base",
+    "ladder_support__ladder_strut_0",
+    "ladder_support__ladder_strut_1",
+    "ladder_support__ladder_rung_0",
+    "ladder_support__ladder_rung_1",
+    "ladder_support__ladder_top",
+    "front_foot__top_block",
+    "front_foot__foot_leg_0",
+    "front_foot__foot_leg_1",
+    "front_foot__foot_bar",
+    "wheel_0__wheel",
+    "wheel_1__wheel"
+  ],
+  "face_ranges": {
+    "frame__rail_0": [
+      0,
+      12
+    ],
+    "frame__rail_1": [
+      12,
+      24
+    ],
+    "frame__front_cross": [
+      24,
+      36
+    ],
+    "frame__seat_cross": [
+      36,
+      48
+    ],
+    "frame__rear_cross": [
+      48,
+      60
+    ],
+    "frame__ladder_ear_0": [
+      60,
+      72
+    ],
+    "frame__ladder_ear_1": [
+      72,
+      84
+    ],
+    "frame__wheel_bracket_0": [
+      84,
+      96
+    ],
+    "frame__wheel_bracket_1": [
+      96,
+      108
+    ],
+    "frame__rear_axle": [
+      108,
+      236
+    ],
+    "back_pad__back_board": [
+      236,
+      248
+    ],
+    "back_pad__back_cushion": [
+      248,
+      260
+    ],
+    "seat_pad__seat_board": [
+      260,
+      272
+    ],
+    "seat_pad__seat_cushion": [
+      272,
+      284
+    ],
+    "ladder_support__ladder_base": [
+      284,
+      296
+    ],
+    "ladder_support__ladder_strut_0": [
+      296,
+      308
+    ],
+    "ladder_support__ladder_strut_1": [
+      308,
+      320
+    ],
+    "ladder_support__ladder_rung_0": [
+      320,
+      332
+    ],
+    "ladder_support__ladder_rung_1": [
+      332,
+      344
+    ],
+    "ladder_support__ladder_top": [
+      344,
+      356
+    ],
+    "front_foot__top_block": [
+      356,
+      368
+    ],
+    "front_foot__foot_leg_0": [
+      368,
+      380
+    ],
+    "front_foot__foot_leg_1": [
+      380,
+      392
+    ],
+    "front_foot__foot_bar": [
+      392,
+      404
+    ],
+    "wheel_0__wheel": [
+      404,
+      532
+    ],
+    "wheel_1__wheel": [
+      532,
+      660
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.13350000000000004,
+      0.0,
+      0.22425
+    ],
+    "scale": 0.9033333333333334
+  }
+}

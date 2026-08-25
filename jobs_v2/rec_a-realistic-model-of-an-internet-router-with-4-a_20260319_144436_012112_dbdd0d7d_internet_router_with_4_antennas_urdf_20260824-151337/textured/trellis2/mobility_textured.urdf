@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="internet_router_with_4_antennas">
+	<material name="body_black">
+		<color rgba="0.12 0.12 0.13 1" />
+	</material>
+	<material name="trim_gray">
+		<color rgba="0.23 0.24 0.25 1" />
+	</material>
+	<material name="rubber">
+		<color rgba="0.05 0.05 0.06 1" />
+	</material>
+	<material name="led_glass">
+		<color rgba="0.4 0.86 0.9 0.45" />
+	</material>
+	<material name="io_black">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<material name="antenna_black">
+		<color rgba="0.09 0.09 0.1 1" />
+	</material>
+	<link name="body">
+		<inertial>
+			<origin xyz="0 0 0.014" rpy="0 0 0" />
+			<mass value="0.95" />
+			<inertia ixx="0.00329238" ixy="0" ixz="0" iyy="0.00776847" iyz="0" izz="0.0109367" />
+		</inertial>
+		<visual name="body__shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__underside_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__underside_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_led_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_led_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_io_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_io_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lan_port_-0.068">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lan_port_-0.068.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lan_port_-0.038">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lan_port_-0.038.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lan_port_-0.008">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lan_port_-0.008.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lan_port__0.022">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lan_port__0.022.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__wan_port">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__wan_port.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__usb_port">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__usb_port.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__power_jack">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__power_jack.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_l_f">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_l_f.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_l_b">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_l_b.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_r_f">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_r_f.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_r_b">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_r_b.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib_-0.054">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib_-0.054.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib_-0.036">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib_-0.036.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib_-0.018">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib_-0.018.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib__0.000">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib__0.000.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib__0.018">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib__0.018.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib__0.036">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib__0.036.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vent_rib__0.054">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vent_rib__0.054.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__antenna_left_outer_pedestal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__antenna_left_outer_pedestal.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__antenna_left_inner_pedestal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__antenna_left_inner_pedestal.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__antenna_right_inner_pedestal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__antenna_right_inner_pedestal.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__antenna_right_outer_pedestal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__antenna_right_outer_pedestal.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="antenna_left_outer">
+		<inertial>
+			<origin xyz="0 0 0.07" rpy="0 0 0" />
+			<mass value="0.06" />
+			<inertia ixx="9.8375e-05" ixy="0" ixz="0" iyy="9.8375e-05" iyz="0" izz="7.5e-07" />
+		</inertial>
+		<visual name="antenna_left_outer__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_outer__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_outer__hinge_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_outer__hinge_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_outer__main_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_outer__main_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_outer__upper_tip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_outer__upper_tip.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_outer__end_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_outer__end_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="antenna_left_inner">
+		<inertial>
+			<origin xyz="0 0 0.07" rpy="0 0 0" />
+			<mass value="0.06" />
+			<inertia ixx="9.8375e-05" ixy="0" ixz="0" iyy="9.8375e-05" iyz="0" izz="7.5e-07" />
+		</inertial>
+		<visual name="antenna_left_inner__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_inner__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_inner__hinge_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_inner__hinge_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_inner__main_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_inner__main_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_inner__upper_tip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_inner__upper_tip.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_left_inner__end_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_left_inner__end_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="antenna_right_inner">
+		<inertial>
+			<origin xyz="0 0 0.07" rpy="0 0 0" />
+			<mass value="0.06" />
+			<inertia ixx="9.8375e-05" ixy="0" ixz="0" iyy="9.8375e-05" iyz="0" izz="7.5e-07" />
+		</inertial>
+		<visual name="antenna_right_inner__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_inner__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_inner__hinge_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_inner__hinge_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_inner__main_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_inner__main_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_inner__upper_tip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_inner__upper_tip.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_inner__end_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_inner__end_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="antenna_right_outer">
+		<inertial>
+			<origin xyz="0 0 0.07" rpy="0 0 0" />
+			<mass value="0.06" />
+			<inertia ixx="9.8375e-05" ixy="0" ixz="0" iyy="9.8375e-05" iyz="0" izz="7.5e-07" />
+		</inertial>
+		<visual name="antenna_right_outer__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_outer__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_outer__hinge_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_outer__hinge_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_outer__main_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_outer__main_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_outer__upper_tip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_outer__upper_tip.glb" />
+			</geometry>
+		</visual>
+		<visual name="antenna_right_outer__end_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/antenna_right_outer__end_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_antenna_left_outer" type="revolute">
+		<origin xyz="-0.118 0.078 0.032" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="antenna_left_outer" />
+		<axis xyz="1 0 0" />
+		<limit effort="1.5" velocity="2.5" lower="-1.15" upper="0.35" />
+	</joint>
+	<joint name="body_to_antenna_left_inner" type="revolute">
+		<origin xyz="-0.04 0.078 0.032" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="antenna_left_inner" />
+		<axis xyz="1 0 0" />
+		<limit effort="1.5" velocity="2.5" lower="-1.15" upper="0.35" />
+	</joint>
+	<joint name="body_to_antenna_right_inner" type="revolute">
+		<origin xyz="0.04 0.078 0.032" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="antenna_right_inner" />
+		<axis xyz="1 0 0" />
+		<limit effort="1.5" velocity="2.5" lower="-1.15" upper="0.35" />
+	</joint>
+	<joint name="body_to_antenna_right_outer" type="revolute">
+		<origin xyz="0.118 0.078 0.032" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="antenna_right_outer" />
+		<axis xyz="1 0 0" />
+		<limit effort="1.5" velocity="2.5" lower="-1.15" upper="0.35" />
+	</joint>
+</robot>

@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="flat_incline_utility_bench">
+	<material name="frame">
+		<color rgba="0.13 0.14 0.15 1" />
+	</material>
+	<material name="accent">
+		<color rgba="0.28 0.29 0.31 1" />
+	</material>
+	<material name="upholstery">
+		<color rgba="0.1 0.1 0.11 1" />
+	</material>
+	<material name="steel">
+		<color rgba="0.63 0.64 0.66 1" />
+	</material>
+	<material name="rubber">
+		<color rgba="0.05 0.05 0.05 1" />
+	</material>
+	<material name="knob_red">
+		<color rgba="0.67 0.14 0.1 1" />
+	</material>
+	<link name="base">
+		<collision name="front_foot">
+			<origin xyz="-0.24 0 0.025" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.58 0.05" />
+			</geometry>
+		</collision>
+		<collision name="rear_foot">
+			<origin xyz="0.53 0 0.025" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1 0.64 0.05" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="-0.24 -0.25 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.05 0.06 0.008" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="-0.24 0.25 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.05 0.06 0.008" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.53 -0.27 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.07 0.008" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.53 0.27 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.07 0.008" />
+			</geometry>
+		</collision>
+		<collision name="lower_rail_0">
+			<origin xyz="0.145 -0.11 0.068" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.77" />
+			</geometry>
+		</collision>
+		<collision name="lower_rail_1">
+			<origin xyz="0.145 0.11 0.068" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.77" />
+			</geometry>
+		</collision>
+		<collision name="front_post_0">
+			<origin xyz="-0.19 -0.11 0.22" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.34" />
+			</geometry>
+		</collision>
+		<collision name="front_post_1">
+			<origin xyz="-0.19 0.11 0.22" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.34" />
+			</geometry>
+		</collision>
+		<collision name="junction_post_0">
+			<origin xyz="0.05 -0.11 0.229" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.322" />
+			</geometry>
+		</collision>
+		<collision name="junction_post_1">
+			<origin xyz="0.05 0.11 0.229" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.322" />
+			</geometry>
+		</collision>
+		<collision name="seat_rail_0">
+			<origin xyz="-0.07 -0.11 0.39" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.24" />
+			</geometry>
+		</collision>
+		<collision name="seat_rail_1">
+			<origin xyz="-0.07 0.11 0.39" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.24" />
+			</geometry>
+		</collision>
+		<collision name="front_hinge_crossbar">
+			<origin xyz="-0.19 0 0.39" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.016" length="0.22" />
+			</geometry>
+		</collision>
+		<collision name="backrest_hinge_crossbar">
+			<origin xyz="0.05 0 0.39" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.016" length="0.22" />
+			</geometry>
+		</collision>
+		<collision name="front_lower_crossbar">
+			<origin xyz="-0.19 0 0.068" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.014" length="0.22" />
+			</geometry>
+		</collision>
+		<collision name="center_lower_crossbar">
+			<origin xyz="0.05 0 0.068" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.014" length="0.22" />
+			</geometry>
+		</collision>
+		<collision name="rear_brace_0">
+			<origin xyz="0.25 -0.11 0.27" rpy="0 2.11122 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.466476" />
+			</geometry>
+		</collision>
+		<collision name="rear_brace_1">
+			<origin xyz="0.25 0.11 0.27" rpy="0 2.11122 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.466476" />
+			</geometry>
+		</collision>
+		<collision name="rear_drop_0">
+			<origin xyz="0.49 -0.11 0.109" rpy="0 2.36854 0" />
+			<geometry>
+				<cylinder radius="0.016" length="0.11456" />
+			</geometry>
+		</collision>
+		<collision name="rear_drop_1">
+			<origin xyz="0.49 0.11 0.109" rpy="0 2.36854 0" />
+			<geometry>
+				<cylinder radius="0.016" length="0.11456" />
+			</geometry>
+		</collision>
+		<collision name="ladder_mount_outtrigger">
+			<origin xyz="0.18 0.155 0.068" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.016" length="0.09" />
+			</geometry>
+		</collision>
+		<collision name="rear_lower_crossbar">
+			<origin xyz="0.53 0 0.068" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.014" length="0.22" />
+			</geometry>
+		</collision>
+		<collision name="seat_platform">
+			<origin xyz="-0.07 0 0.349" rpy="0 0 0" />
+			<geometry>
+				<box size="0.22 0.22 0.022" />
+			</geometry>
+		</collision>
+		<collision name="ladder_pivot_mount">
+			<origin xyz="0.18 0.2 0.076" rpy="0 0 0" />
+			<geometry>
+				<box size="0.085 0.1 0.048" />
+			</geometry>
+		</collision>
+		<collision name="ladder_clevis_inner">
+			<origin xyz="0.18 0.162 0.126" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.012 0.072" />
+			</geometry>
+		</collision>
+		<collision name="ladder_clevis_outer">
+			<origin xyz="0.18 0.238 0.126" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.012 0.072" />
+			</geometry>
+		</collision>
+		<visual name="base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat">
+		<collision name="hinge_tube">
+			<origin xyz="0 0 0.014" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.014" length="0.18" />
+			</geometry>
+		</collision>
+		<collision name="hinge_lug_0">
+			<origin xyz="0.015 -0.06 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.02 0.028" />
+			</geometry>
+		</collision>
+		<collision name="hinge_lug_1">
+			<origin xyz="0.015 0.06 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.02 0.028" />
+			</geometry>
+		</collision>
+		<collision name="backer">
+			<origin xyz="0.1175 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<box size="0.205 0.285 0.012" />
+			</geometry>
+		</collision>
+		<collision name="upholstery">
+			<origin xyz="0.1225 0 0.0395" rpy="0 0 0" />
+			<geometry>
+				<box size="0.215 0.295 0.055" />
+			</geometry>
+		</collision>
+		<visual name="seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="backrest">
+		<collision name="hinge_tube">
+			<origin xyz="0.024 0 0.014" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.014" length="0.18" />
+			</geometry>
+		</collision>
+		<collision name="hinge_lug_0">
+			<origin xyz="0.024 -0.06 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.02 0.028" />
+			</geometry>
+		</collision>
+		<collision name="hinge_lug_1">
+			<origin xyz="0.024 0.06 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.02 0.028" />
+			</geometry>
+		</collision>
+		<collision name="backer">
+			<origin xyz="0.405 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<box size="0.77 0.29 0.012" />
+			</geometry>
+		</collision>
+		<collision name="upholstery">
+			<origin xyz="0.42 0 0.0395" rpy="0 0 0" />
+			<geometry>
+				<box size="0.8 0.3 0.055" />
+			</geometry>
+		</collision>
+		<collision name="selector_plate_upper">
+			<origin xyz="0.25 0.145 -0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.46 0.014 0.04" />
+			</geometry>
+		</collision>
+		<collision name="selector_plate_lower">
+			<origin xyz="0.31 0.145 -0.11" rpy="0 0 0" />
+			<geometry>
+				<box size="0.4 0.014 0.034" />
+			</geometry>
+		</collision>
+		<collision name="selector_plate_front_bridge">
+			<origin xyz="0.07 0.145 -0.058" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1 0.014 0.076" />
+			</geometry>
+		</collision>
+		<collision name="selector_plate_rear_bridge">
+			<origin xyz="0.49 0.145 -0.066" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.014 0.06" />
+			</geometry>
+		</collision>
+		<collision name="selector_bushing">
+			<origin xyz="0.29 0.145 -0.068" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.011" length="0.02" />
+			</geometry>
+		</collision>
+		<collision name="selector_boss">
+			<origin xyz="0.29 0.144 -0.068" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.018 0.03" />
+			</geometry>
+		</collision>
+		<collision name="selector_stem_block">
+			<origin xyz="0.29 0.144 -0.046" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.018 0.028" />
+			</geometry>
+		</collision>
+		<visual name="backrest">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/backrest.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="ladder">
+		<collision name="pivot_barrel">
+			<origin xyz="0 0 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.013" length="0.064" />
+			</geometry>
+		</collision>
+		<collision name="ladder_rail_inner">
+			<origin xyz="0.11 -0.022 0.095" rpy="0 0.858439 0" />
+			<geometry>
+				<cylinder radius="0.009" length="0.290689" />
+			</geometry>
+		</collision>
+		<collision name="ladder_rail_outer">
+			<origin xyz="0.11 0.022 0.095" rpy="0 0.858439 0" />
+			<geometry>
+				<cylinder radius="0.009" length="0.290689" />
+			</geometry>
+		</collision>
+		<collision name="rung_0">
+			<origin xyz="0.0484 0 0.0418" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.007" length="0.044" />
+			</geometry>
+		</collision>
+		<collision name="rung_1">
+			<origin xyz="0.099 0 0.0855" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.007" length="0.044" />
+			</geometry>
+		</collision>
+		<collision name="rung_2">
+			<origin xyz="0.1496 0 0.1292" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.007" length="0.044" />
+			</geometry>
+		</collision>
+		<collision name="rung_3">
+			<origin xyz="0.1936 0 0.1672" rpy="0 1.5708 1.5708" />
+			<geometry>
+				<cylinder radius="0.007" length="0.044" />
+			</geometry>
+		</collision>
+		<visual name="ladder">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/ladder.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="selector_knob">
+		<collision name="collar">
+			<origin xyz="0 0.005 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="shaft">
+			<origin xyz="0 0.01 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.02" />
+			</geometry>
+		</collision>
+		<collision name="pull_knob">
+			<origin xyz="0 0.031 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.016" length="0.022" />
+			</geometry>
+		</collision>
+		<visual name="selector_knob">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_knob.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="base_to_backrest" type="revolute">
+		<origin xyz="0.05 0 0.405" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="backrest" />
+		<axis xyz="0 -1 0" />
+		<limit effort="160" velocity="1" lower="0" upper="1.15" />
+	</joint>
+	<joint name="base_to_seat" type="revolute">
+		<origin xyz="-0.18 0 0.405" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="seat" />
+		<axis xyz="0 -1 0" />
+		<limit effort="120" velocity="0.8" lower="0" upper="0.32" />
+	</joint>
+	<joint name="base_to_ladder" type="revolute">
+		<origin xyz="0.2 0.2 0.14" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="ladder" />
+		<axis xyz="0 -1 0" />
+		<limit effort="80" velocity="0.8" lower="-0.35" upper="0.45" />
+	</joint>
+	<joint name="backrest_to_selector_knob" type="prismatic">
+		<origin xyz="0.29 0.155 -0.068" rpy="0 0 0" />
+		<parent link="backrest" />
+		<child link="selector_knob" />
+		<axis xyz="0 1 0" />
+		<limit effort="20" velocity="0.1" lower="0" upper="0.028" />
+	</joint>
+</robot>

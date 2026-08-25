@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="tower_crane">
+	<material name="tower_yellow">
+		<color rgba="0.89 0.75 0.16 1" />
+	</material>
+	<material name="dark_grey">
+		<color rgba="0.22 0.24 0.27 1" />
+	</material>
+	<material name="steel">
+		<color rgba="0.56 0.58 0.6 1" />
+	</material>
+	<material name="concrete">
+		<color rgba="0.63 0.63 0.61 1" />
+	</material>
+	<material name="ballast">
+		<color rgba="0.5 0.5 0.48 1" />
+	</material>
+	<material name="cable">
+		<color rgba="0.15 0.15 0.16 1" />
+	</material>
+	<material name="cab_glass">
+		<color rgba="0.66 0.8 0.88 0.35" />
+	</material>
+	<material name="safety_red">
+		<color rgba="0.75 0.14 0.1 1" />
+	</material>
+	<link name="tower_base">
+		<inertial>
+			<origin xyz="0 0 0.825" rpy="0 0 0" />
+			<mass value="35" />
+			<inertia ixx="8.99062" ixy="0" ixz="0" iyy="8.99062" iyz="0" izz="2.1" />
+		</inertial>
+		<visual name="tower_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_base.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="upperworks">
+		<inertial>
+			<origin xyz="0.5 0 0.2" rpy="0 0 0" />
+			<mass value="10" />
+			<inertia ixx="0.399083" ixy="0" ixz="0" iyy="7.26042" iyz="0" izz="7.15533" />
+		</inertial>
+		<visual name="upperworks">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/upperworks.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="trolley">
+		<inertial>
+			<origin xyz="0 0 -0.48" rpy="0 0 0" />
+			<mass value="0.8" />
+			<inertia ixx="0.0790667" ixy="0" ixz="0" iyy="0.07992" iyz="0" izz="0.00346667" />
+		</inertial>
+		<visual name="trolley">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/trolley.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="hook_block">
+		<inertial>
+			<origin xyz="0 0 -0.12" rpy="0 0 0" />
+			<mass value="0.6" />
+			<inertia ixx="0.00306" ixy="0" ixz="0" iyy="0.0032" iyz="0" izz="0.0005" />
+		</inertial>
+		<visual name="hook_block">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hook_block.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="slewing_rotation" type="continuous">
+		<origin xyz="0 0 1.6" rpy="0 0 0" />
+		<parent link="tower_base" />
+		<child link="upperworks" />
+		<axis xyz="0 0 1" />
+		<limit effort="80" velocity="0.45" />
+	</joint>
+	<joint name="trolley_travel" type="prismatic">
+		<origin xyz="0.42 0 0.118" rpy="0 0 0" />
+		<parent link="upperworks" />
+		<child link="trolley" />
+		<axis xyz="1 0 0" />
+		<limit effort="30" velocity="0.8" lower="0" upper="1.08" />
+	</joint>
+	<joint name="hook_suspension" type="fixed">
+		<origin xyz="0 0 -1.03" rpy="0 0 0" />
+		<parent link="trolley" />
+		<child link="hook_block" />
+	</joint>
+</robot>

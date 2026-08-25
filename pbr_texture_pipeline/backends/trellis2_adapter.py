@@ -93,6 +93,75 @@ def _sample_field(pipe, pbr_voxel, pos, resolution: int):
     )
 
 
+def _split_sharp(mesh, angle_deg: float = 60.0):
+    """Split vertices at edges where the face-face angle exceeds *angle_deg*.
+
+    After splitting, ``trimesh.Trimesh.vertex_normals`` averages only within
+    each smooth region, giving correct hard edges at creases while keeping
+    shared vertices on smooth surfaces (important for xatlas chart quality).
+    """
+    from collections import defaultdict
+
+    verts = np.asarray(mesh.vertices)
+    faces_arr = np.asarray(mesh.faces)
+    fn = np.asarray(mesh.face_normals)
+    cos_thresh = np.cos(np.radians(angle_deg))
+
+    v2f = defaultdict(list)
+    for fi, face in enumerate(faces_arr):
+        for vi in face:
+            v2f[int(vi)].append(fi)
+
+    new_verts = list(verts)
+    new_faces = faces_arr.copy()
+
+    for vi in range(len(verts)):
+        adj = v2f[vi]
+        if len(adj) <= 1:
+            continue
+
+        face_others = {
+            fi: {int(v) for v in new_faces[fi] if v != vi} for fi in adj
+        }
+
+        visited = set()
+        groups = []
+        for fi_start in adj:
+            if fi_start in visited:
+                continue
+            group = []
+            stack = [fi_start]
+            while stack:
+                fi = stack.pop()
+                if fi in visited:
+                    continue
+                visited.add(fi)
+                group.append(fi)
+                for fj in adj:
+                    if fj in visited:
+                        continue
+                    if face_others[fi] & face_others[fj]:
+                        if np.dot(fn[fi], fn[fj]) >= cos_thresh:
+                            stack.append(fj)
+            groups.append(group)
+
+        if len(groups) <= 1:
+            continue
+
+        for group in groups[1:]:
+            new_vi = len(new_verts)
+            new_verts.append(verts[vi].copy())
+            for fi in group:
+                for j in range(3):
+                    if new_faces[fi, j] == vi:
+                        new_faces[fi, j] = new_vi
+                        break
+
+    return trimesh.Trimesh(
+        vertices=np.asarray(new_verts), faces=new_faces, process=False
+    )
+
+
 def _bake_group(pipe, ctx, group: dict, faces: np.ndarray, mesh_a, field_a,
                 resolution: int) -> tuple[trimesh.Trimesh, dict]:
     """Bake one group's atlas from the shared field; returns (mesh in link frame, stats).
@@ -115,7 +184,8 @@ def _bake_group(pipe, ctx, group: dict, faces: np.ndarray, mesh_a, field_a,
     remap[used] = np.arange(len(used))
     sub = trimesh.Trimesh(vertices=np.asarray(mesh_a.vertices)[used], faces=remap[f],
                           process=False)
-    normals = np.asarray(sub.vertex_normals)
+    sub.merge_vertices(merge_norm=True)
+    sub = _split_sharp(sub)
 
     vertices_torch = torch.from_numpy(np.asarray(sub.vertices)).float().cuda()
     faces_torch = torch.from_numpy(np.asarray(sub.faces)).int().cuda()
@@ -125,11 +195,11 @@ def _bake_group(pipe, ctx, group: dict, faces: np.ndarray, mesh_a, field_a,
     vertices_torch = vertices_torch.cuda()
     faces_torch = faces_torch.cuda()
     uvs_torch = uvs_torch.cuda()
-    vmap_np = vmap.cpu().numpy()
     vertices = vertices_torch.cpu().numpy()
     faces_out = faces_torch.cpu().numpy()
     uvs = uvs_torch.cpu().numpy()
-    normals = normals[vmap_np]
+    normals = np.asarray(trimesh.Trimesh(
+        vertices=vertices, faces=faces_out, process=False).vertex_normals)
 
     uv_clip = torch.cat([uvs_torch * 2 - 1, torch.zeros_like(uvs_torch[:, :1]),
                          torch.ones_like(uvs_torch[:, :1])], dim=-1).unsqueeze(0)
@@ -194,6 +264,7 @@ def _constant_pbr(group: dict, faces: np.ndarray, mesh_a) -> trimesh.Trimesh:
     remap[used] = np.arange(len(used))
     sub = trimesh.Trimesh(vertices=np.asarray(mesh_a.vertices)[used], faces=remap[f],
                           process=False)
+    sub.merge_vertices(merge_norm=True)
     T = np.asarray(group["to_link"], dtype=np.float64)
     v_out = _unswap(np.asarray(sub.vertices, dtype=np.float64))
     v_link = v_out @ T[:3, :3].T + T[:3, 3]

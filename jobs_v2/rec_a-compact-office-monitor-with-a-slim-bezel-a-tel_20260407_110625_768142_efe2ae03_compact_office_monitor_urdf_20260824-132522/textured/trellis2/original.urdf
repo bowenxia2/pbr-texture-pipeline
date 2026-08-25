@@ -1,0 +1,300 @@
+<robot name="compact_office_monitor">
+  <material name="charcoal">
+    <color rgba="0.16 0.17 0.18 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.22 0.23 0.25 1" />
+    </material>
+  <material name="black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="satin">
+    <color rgba="0.36 0.37 0.39 1" />
+    </material>
+  <material name="screen_glass">
+    <color rgba="0.06 0.09 0.11 0.94" />
+    </material>
+  <link name="base">
+    <inertial>
+      <origin xyz="0 -0.002 0.099" rpy="0 0 0" />
+      <mass value="3.4" />
+      <inertia ixx="0.0213361" ixy="0" ixz="0" iyy="0.0260961" iyz="0" izz="0.0252167" />
+      </inertial>
+    <visual name="foot">
+      <origin xyz="0 -0.01 0.007" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/monitor_foot.obj" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="foot_riser">
+      <origin xyz="0 0.034 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.026 0.02" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.22 0.23 0.25 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_left_wall">
+      <origin xyz="-0.014 0.034 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.03 0.168" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_right_wall">
+      <origin xyz="0.014 0.034 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.03 0.168" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_front_wall">
+      <origin xyz="0 0.022 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.006 0.168" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_back_wall">
+      <origin xyz="0 0.046 0.118" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.006 0.168" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="sleeve_rear_cap">
+      <origin xyz="0 0.053 0.201" rpy="0 0 0" />
+      <geometry>
+        <box size="0.06 0.008 0.018" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="height_lock_knob">
+      <origin xyz="0.03 0.044 0.2" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.032" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.36 0.37 0.39 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="mast">
+    <inertial>
+      <origin xyz="0 0.008 0.098" rpy="0 0 0" />
+      <mass value="1.1" />
+      <inertia ixx="0.0141684" ixy="0" ixz="0" iyy="0.0143733" iyz="0" izz="0.000369967" />
+      </inertial>
+    <visual name="inner_mast">
+      <origin xyz="0 0.008 0.03" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.016 0.36" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.36 0.37 0.39 1" />
+        </material>
+      </visual>
+    <visual name="tilt_post">
+      <origin xyz="0 0.017 0.227" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.014 0.052" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tilt_bridge">
+      <origin xyz="0 0.006 0.255" rpy="0 0 0" />
+      <geometry>
+        <box size="0.052 0.012 0.018" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="left_tilt_cheek">
+      <origin xyz="-0.018 0.004 0.224" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.02 0.05" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="right_tilt_cheek">
+      <origin xyz="0.018 0.004 0.224" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.02 0.05" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="panel">
+    <inertial>
+      <origin xyz="0 -0.004 0" rpy="0 0 0" />
+      <mass value="2.7" />
+      <inertia ixx="0.0241389" ixy="0" ixz="0" iyy="0.0889389" iyz="0" izz="0.06642" />
+      </inertial>
+    <visual name="rear_shell">
+      <origin xyz="0 -0.05 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/monitor_rear_shell.obj" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="top_bezel">
+      <origin xyz="0 -0.053 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.01 0.012" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bezel">
+      <origin xyz="0 -0.05 -0.152" rpy="0 0 0" />
+      <geometry>
+        <box size="0.54 0.016 0.018" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="left_bezel">
+      <origin xyz="-0.265 -0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.322" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="right_bezel">
+      <origin xyz="0.265 -0.053 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.322" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="screen">
+      <origin xyz="0 -0.054 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.52 0.004 0.286" />
+        </geometry>
+      <material name="screen_glass">
+        <color rgba="0.06 0.09 0.11 0.94" />
+        </material>
+      </visual>
+    <visual name="mount_block">
+      <origin xyz="0 -0.043 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.082 0.018 0.11" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tilt_spine">
+      <origin xyz="0 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.038 0.134" />
+        </geometry>
+      <material name="charcoal">
+        <color rgba="0.16 0.17 0.18 1" />
+        </material>
+      </visual>
+    <visual name="tilt_barrel">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.007" length="0.028" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.36 0.37 0.39 1" />
+        </material>
+      </visual>
+    <visual name="wheel_left_tab">
+      <origin xyz="0.203 -0.05 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.014" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="wheel_right_tab">
+      <origin xyz="0.241 -0.05 -0.168" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.01 0.014" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="control_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="0.03" />
+      <inertia ixx="3.1675e-06" ixy="0" ixz="0" iyy="3.1675e-06" iyz="0" izz="1.215e-06" />
+      </inertial>
+    <visual name="wheel_tire">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.018" />
+        </geometry>
+      <material name="black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="wheel_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0025" length="0.032" />
+        </geometry>
+      <material name="satin">
+        <color rgba="0.36 0.37 0.39 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="base_to_mast" type="prismatic">
+    <origin xyz="0 0.025 0.202" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="mast" />
+    <axis xyz="0 0 1" />
+    <limit effort="80" velocity="0.12" lower="0" upper="0.1" />
+    </joint>
+  <joint name="mast_to_panel" type="revolute">
+    <origin xyz="0 0 0.224" rpy="0 0 0" />
+    <parent link="mast" />
+    <child link="panel" />
+    <axis xyz="-1 0 0" />
+    <limit effort="18" velocity="1.5" lower="-0.18" upper="0.34" />
+    </joint>
+  <joint name="panel_to_control_wheel" type="continuous">
+    <origin xyz="0.222 -0.05 -0.171" rpy="0 0 0" />
+    <parent link="panel" />
+    <child link="control_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.4" velocity="8" />
+    </joint>
+  </robot>

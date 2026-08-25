@@ -8,7 +8,7 @@ Layout:
     jobs/<job_id>/
       job.json
       input/   mesh_norm.glb  face_ranges.json  asset/ (rebuilt URDF tree)
-      render/  view_0.png  depth_0.png  front_white.png
+      render/  view_0.png  depth_0.png  canny_0.png  front_white.png
       groups/<gid>/  mesh.glb  norm.json
       control/ camera.json
       vlm/     materials.txt
@@ -216,6 +216,9 @@ class JobDir:
 
     def render_depth(self, i: int) -> Path:
         return self.path("render", f"depth_{i}.png")
+
+    def render_canny(self, i: int) -> Path:
+        return self.path("render", f"canny_{i}.png")
 
     def render_front_white(self) -> Path:
         return self.path("render", "front_white.png")

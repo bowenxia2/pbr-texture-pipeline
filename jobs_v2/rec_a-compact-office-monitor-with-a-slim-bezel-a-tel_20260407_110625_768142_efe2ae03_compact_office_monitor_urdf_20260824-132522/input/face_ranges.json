@@ -1,0 +1,144 @@
+{
+  "group_order": [
+    "base__foot",
+    "base__foot_riser",
+    "base__sleeve_left_wall",
+    "base__sleeve_right_wall",
+    "base__sleeve_front_wall",
+    "base__sleeve_back_wall",
+    "base__sleeve_rear_cap",
+    "base__height_lock_knob",
+    "mast__inner_mast",
+    "mast__tilt_post",
+    "mast__tilt_bridge",
+    "mast__left_tilt_cheek",
+    "mast__right_tilt_cheek",
+    "panel__rear_shell",
+    "panel__top_bezel",
+    "panel__bottom_bezel",
+    "panel__left_bezel",
+    "panel__right_bezel",
+    "panel__screen",
+    "panel__mount_block",
+    "panel__tilt_spine",
+    "panel__tilt_barrel",
+    "panel__wheel_left_tab",
+    "panel__wheel_right_tab",
+    "control_wheel__wheel_tire",
+    "control_wheel__wheel_axle"
+  ],
+  "face_ranges": {
+    "base__foot": [
+      0,
+      96
+    ],
+    "base__foot_riser": [
+      96,
+      108
+    ],
+    "base__sleeve_left_wall": [
+      108,
+      120
+    ],
+    "base__sleeve_right_wall": [
+      120,
+      132
+    ],
+    "base__sleeve_front_wall": [
+      132,
+      144
+    ],
+    "base__sleeve_back_wall": [
+      144,
+      156
+    ],
+    "base__sleeve_rear_cap": [
+      156,
+      168
+    ],
+    "base__height_lock_knob": [
+      168,
+      296
+    ],
+    "mast__inner_mast": [
+      296,
+      308
+    ],
+    "mast__tilt_post": [
+      308,
+      320
+    ],
+    "mast__tilt_bridge": [
+      320,
+      332
+    ],
+    "mast__left_tilt_cheek": [
+      332,
+      344
+    ],
+    "mast__right_tilt_cheek": [
+      344,
+      356
+    ],
+    "panel__rear_shell": [
+      356,
+      2465
+    ],
+    "panel__top_bezel": [
+      2465,
+      2477
+    ],
+    "panel__bottom_bezel": [
+      2477,
+      2489
+    ],
+    "panel__left_bezel": [
+      2489,
+      2501
+    ],
+    "panel__right_bezel": [
+      2501,
+      2513
+    ],
+    "panel__screen": [
+      2513,
+      2525
+    ],
+    "panel__mount_block": [
+      2525,
+      2537
+    ],
+    "panel__tilt_spine": [
+      2537,
+      2549
+    ],
+    "panel__tilt_barrel": [
+      2549,
+      2677
+    ],
+    "panel__wheel_left_tab": [
+      2677,
+      2689
+    ],
+    "panel__wheel_right_tab": [
+      2689,
+      2701
+    ],
+    "control_wheel__wheel_tire": [
+      2701,
+      2829
+    ],
+    "control_wheel__wheel_axle": [
+      2829,
+      2957
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.009999999999999995,
+      0.29350000000000004
+    ],
+    "scale": 1.7035604770017034
+  }
+}
