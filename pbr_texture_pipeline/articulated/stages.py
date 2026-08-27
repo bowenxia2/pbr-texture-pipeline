@@ -182,19 +182,25 @@ def render(job) -> dict:
 # --- Stage V ------------------------------------------------------------------
 
 def vlm(job) -> dict:
-    """Stage V: VLM material analysis of the front-panel image."""
+    """Stage V: VLM material analysis + texture quality classification."""
     front_white = job.render_front_white()
     if not front_white.is_file():
         raise FileNotFoundError(
             f"front_white.png missing; re-run Stage R for {job.job_id}")
     out_path = job.vlm_materials()
+    class_path = job.vlm_classification()
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     import json
-    import tempfile
     from pbr_texture_pipeline.backends import registry
 
-    items = [{"image": str(front_white), "output": str(out_path)}]
+    category = effective_category(job)
+    items = [{
+        "image": str(front_white),
+        "output": str(out_path),
+        "classification_output": str(class_path),
+        "category": category,
+    }]
     items_path = job.root / "_items_vlm.json"
     with open(items_path, "w") as f:
         json.dump(items, f)
@@ -206,12 +212,17 @@ def vlm(job) -> dict:
     if not out_path.is_file():
         raise RuntimeError(f"VLM did not produce {out_path}")
     materials = out_path.read_text().strip()
-    return {"materials": materials}
+    classification = "edit"
+    if class_path.is_file():
+        classification = class_path.read_text().strip().lower()
+        if classification not in ("edit", "generate"):
+            classification = "edit"
+    return {"materials": materials, "classification": classification}
 
 
 # --- Stage E ------------------------------------------------------------------
 def imageedit(job) -> dict:
-    """Stage E: enhance front-panel image with VLM-derived material description."""
+    """Stage E: enhance or generate front-panel image based on VLM classification."""
     front_white = job.render_front_white()
     canny = job.render_canny(0)
     materials_path = job.vlm_materials()
@@ -224,29 +235,52 @@ def imageedit(job) -> dict:
                 f"{label} missing; re-run earlier stages for {job.job_id}")
 
     materials = materials_path.read_text().strip()
+    classification_path = job.vlm_classification()
+    classification = "edit"
+    if classification_path.is_file():
+        classification = classification_path.read_text().strip().lower()
+        if classification not in ("edit", "generate"):
+            classification = "edit"
+
     out_path = job.enhanced_view(0)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     import json
     from pbr_texture_pipeline.backends import registry
 
-    items = [{
-        "source": str(front_white),
-        "canny": str(canny),
-        "materials": materials,
-        "output": str(out_path),
-    }]
-    items_path = job.root / "_items_imageedit.json"
-    with open(items_path, "w") as f:
-        json.dump(items, f)
-    try:
-        registry.imageedit_infer_batch(str(items_path))
-    finally:
-        items_path.unlink(missing_ok=True)
+    if classification == "generate":
+        category = effective_category(job)
+        items = [{
+            "canny": str(canny),
+            "materials": materials,
+            "output": str(out_path),
+            "category": category,
+        }]
+        items_path = job.root / "_items_imagegen.json"
+        with open(items_path, "w") as f:
+            json.dump(items, f)
+        try:
+            registry.imagegen_infer_batch(str(items_path))
+        finally:
+            items_path.unlink(missing_ok=True)
+    else:
+        items = [{
+            "source": str(front_white),
+            "canny": str(canny),
+            "materials": materials,
+            "output": str(out_path),
+        }]
+        items_path = job.root / "_items_imageedit.json"
+        with open(items_path, "w") as f:
+            json.dump(items, f)
+        try:
+            registry.imageedit_infer_batch(str(items_path))
+        finally:
+            items_path.unlink(missing_ok=True)
 
     if not out_path.is_file():
-        raise RuntimeError(f"ImageEdit did not produce {out_path}")
-    return {"enhanced": str(out_path)}
+        raise RuntimeError(f"Stage E did not produce {out_path}")
+    return {"enhanced": str(out_path), "path": classification}
 
 
 # --- Stage T pair construction ------------------------------------------------

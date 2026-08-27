@@ -122,6 +122,8 @@ def stage_vlm(jobs: list[JobDir]) -> None:
         print("[batch][V] no approved jobs")
         return
 
+    from pbr_texture_pipeline.articulated.stages import effective_category
+
     items = []
     for job in approved:
         job.start("vlm")
@@ -132,6 +134,8 @@ def stage_vlm(jobs: list[JobDir]) -> None:
         items.append({
             "image": str(front),
             "output": str(job.vlm_materials()),
+            "classification_output": str(job.vlm_classification()),
+            "category": effective_category(job),
             "job_id": job.job_id,
         })
 
@@ -146,8 +150,16 @@ def stage_vlm(jobs: list[JobDir]) -> None:
     for job in approved:
         if job.vlm_materials().is_file():
             materials = job.vlm_materials().read_text().strip()
-            job.finish("vlm", params={"materials_preview": materials[:200]})
-            print(f"[batch][V] {job.job_id}: {materials[:80]}")
+            classification = "edit"
+            if job.vlm_classification().is_file():
+                classification = job.vlm_classification().read_text().strip().lower()
+                if classification not in ("edit", "generate"):
+                    classification = "edit"
+            job.finish("vlm", params={
+                "materials_preview": materials[:200],
+                "classification": classification,
+            })
+            print(f"[batch][V] {job.job_id} [{classification}]: {materials[:80]}")
         else:
             job.fail("vlm", "materials.txt not produced")
             print(f"[batch][V] FAIL {job.job_id}")
@@ -155,15 +167,18 @@ def stage_vlm(jobs: list[JobDir]) -> None:
 
 # --- Stage E -----------------------------------------------------------------
 def stage_imageedit(jobs: list[JobDir]) -> None:
-    """Stage E: image enhancement. Model loads once for all assets."""
+    """Stage E: image enhancement/generation. Edit-path and generate-path run as
+    two sequential sub-batches, each loading its model once."""
     from pbr_texture_pipeline.backends import registry
+    from pbr_texture_pipeline.articulated.stages import effective_category
 
     approved = [j for j in jobs if j.is_done("vlm") and not j.is_done("imageedit")]
     if not approved:
         print("[batch][E] no approved jobs")
         return
 
-    items = []
+    edit_items = []
+    gen_items = []
     for job in approved:
         job.start("imageedit")
         front = job.render_front_white()
@@ -173,26 +188,60 @@ def stage_imageedit(jobs: list[JobDir]) -> None:
             job.fail("imageedit", "missing front_white, canny, or materials")
             continue
         materials = mat_path.read_text().strip()
-        items.append({
-            "source": str(front),
-            "canny": str(canny),
-            "materials": materials,
-            "output": str(job.enhanced_view(0)),
-            "job_id": job.job_id,
-        })
 
-    if items:
+        classification = "edit"
+        class_path = job.vlm_classification()
+        if class_path.is_file():
+            classification = class_path.read_text().strip().lower()
+            if classification not in ("edit", "generate"):
+                classification = "edit"
+
+        if classification == "generate":
+            gen_items.append({
+                "canny": str(canny),
+                "materials": materials,
+                "output": str(job.enhanced_view(0)),
+                "category": effective_category(job),
+                "job_id": job.job_id,
+            })
+        else:
+            edit_items.append({
+                "source": str(front),
+                "canny": str(canny),
+                "materials": materials,
+                "output": str(job.enhanced_view(0)),
+                "job_id": job.job_id,
+            })
+
+    if edit_items:
         items_path = Path(approved[0].root.parent) / "_items_imageedit.json"
         with open(items_path, "w") as f:
-            json.dump(items, f, indent=2)
-        print(f"[batch][E] imageedit: {len(items)} items")
+            json.dump(edit_items, f, indent=2)
+        print(f"[batch][E] imageedit (edit path): {len(edit_items)} items")
         registry.imageedit_infer_batch(str(items_path))
+        items_path.unlink(missing_ok=True)
+
+    if gen_items:
+        items_path = Path(approved[0].root.parent) / "_items_imagegen.json"
+        with open(items_path, "w") as f:
+            json.dump(gen_items, f, indent=2)
+        print(f"[batch][E] imagegen (generate path): {len(gen_items)} items")
+        registry.imagegen_infer_batch(str(items_path))
         items_path.unlink(missing_ok=True)
 
     for job in approved:
         if job.enhanced_view(0).is_file():
-            job.finish("imageedit", params={"enhanced": str(job.enhanced_view(0))})
-            print(f"[batch][E] {job.job_id}: ok")
+            path_taken = "edit"
+            class_path = job.vlm_classification()
+            if class_path.is_file():
+                path_taken = class_path.read_text().strip().lower()
+                if path_taken not in ("edit", "generate"):
+                    path_taken = "edit"
+            job.finish("imageedit", params={
+                "enhanced": str(job.enhanced_view(0)),
+                "path": path_taken,
+            })
+            print(f"[batch][E] {job.job_id}: ok ({path_taken})")
         else:
             job.fail("imageedit", "enhanced_0.png not produced")
             print(f"[batch][E] FAIL {job.job_id}")

@@ -11,7 +11,7 @@ Layout:
       render/  view_0.png  depth_0.png  canny_0.png  front_white.png
       groups/<gid>/  mesh.glb  norm.json
       control/ camera.json
-      vlm/     materials.txt
+      vlm/     materials.txt  classification.txt
       imageedit/ enhanced_0.png
       textured/<backend>/{groups/<gid>.glb, global/pass_a.json,
                mobility_textured.urdf, assembled.glb,
@@ -39,7 +39,7 @@ ERROR = "error"
 NEEDS_REVIEW = "needs_review"
 STATUSES = (PENDING, RUNNING, DONE, ERROR, NEEDS_REVIEW)
 
-SCHEMA_VERSION = 6  # v6: added vlm and imageedit stages; pipeline is R->V->E->T
+SCHEMA_VERSION = 7  # v7: vlm classification (edit/generate routing for Stage E)
 
 
 def _now() -> str:
@@ -229,6 +229,9 @@ class JobDir:
     # vlm/
     def vlm_materials(self) -> Path:
         return self.path("vlm", "materials.txt")
+
+    def vlm_classification(self) -> Path:
+        return self.path("vlm", "classification.txt")
 
     # imageedit/
     def enhanced_view(self, i: int) -> Path:

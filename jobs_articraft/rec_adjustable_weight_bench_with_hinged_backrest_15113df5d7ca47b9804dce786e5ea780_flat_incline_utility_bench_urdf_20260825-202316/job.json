@@ -1,0 +1,203 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780_flat_incline_utility_bench_urdf_20260825-202316",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780/model.urdf",
+  "created": "2026-08-25T20:23:16",
+  "updated": "2026-08-25T20:53:07",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 5,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-25T20:23:16",
+      "finished": "2026-08-25T20:24:40",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "smooth gray plastic on the frame; smooth gray plastic on the base; smooth gray plastic on the ladder; smooth gray plastic on the support beams; smooth gray plastic on the top platform; smooth gray pla",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-08-25T20:28:09",
+      "finished": "2026-08-25T20:29:30",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780_flat_incline_utility_bench_urdf_20260825-202316/imageedit/enhanced_0.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-08-25T20:29:30",
+      "finished": "2026-08-25T20:43:54",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 5,
+            "n_total": 5,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780_flat_incline_utility_bench_urdf_20260825-202316/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-25T20:43:54",
+      "finished": "2026-08-25T20:53:07",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_adjustable_weight_bench_with_hinged_backrest_15113df5d7ca47b9804dce786e5ea780/model.urdf",
+    "category": "flat incline utility bench",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.285,
+        -0.32,
+        0.0
+      ],
+      "max": [
+        0.8700000000000001,
+        0.32,
+        0.47200000000000003
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base",
+        "link": "base",
+        "label": "base",
+        "semantic_id": null,
+        "objs": [
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>"
+        ],
+        "n_faces": 2424,
+        "area_frac": 0.4319315134413945,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "seat",
+        "link": "seat",
+        "label": "seat",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>"
+        ],
+        "n_faces": 176,
+        "area_frac": 0.11784072359535573,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "backrest",
+        "link": "backrest",
+        "label": "backrest",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<box>",
+          "<box>"
+        ],
+        "n_faces": 376,
+        "area_frac": 0.43086616446961845,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "ladder",
+        "link": "ladder",
+        "label": "ladder",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 896,
+        "area_frac": 0.017176260181059708,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "selector_knob",
+        "link": "selector_knob",
+        "label": "selector_knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 384,
+        "area_frac": 0.00218533831257164,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

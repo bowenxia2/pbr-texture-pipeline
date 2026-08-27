@@ -1,0 +1,105 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      -1.0,
+      -1.2246467991473532e-16,
+      0.0
+    ],
+    [
+      1.2246467991473532e-16,
+      -1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_0.png",
+        "ok": true,
+        "az": 182.0,
+        "el": 9.0,
+        "ro": 20.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_1.png",
+        "ok": true,
+        "az": 136.0,
+        "el": 14.0,
+        "ro": 19.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_2.png",
+        "ok": true,
+        "az": 90.0,
+        "el": 15.0,
+        "ro": 20.0,
+        "alpha": 1.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_3.png",
+        "ok": true,
+        "az": 39.0,
+        "el": 16.0,
+        "ro": -18.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_4.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 11.0,
+        "ro": 20.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_5.png",
+        "ok": true,
+        "az": 320.0,
+        "el": 15.0,
+        "ro": -19.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_6.png",
+        "ok": true,
+        "az": 272.0,
+        "el": 14.0,
+        "ro": -23.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_articraft/rec_a-casino-slot-machine-with-a-tall-cabinet-a-fron_20260401_030831_141551_df669af7_casino_slot_machine_urdf_20260825-192701/render/view_7.png",
+        "ok": true,
+        "az": 230.0,
+        "el": 13.0,
+        "ro": -23.0,
+        "alpha": 0.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 181.25175730848972,
+    "agreement_err_deg": 2.25,
+    "implied_front_deg": [
+      182.0,
+      181.0,
+      180.0,
+      174.0,
+      181.0,
+      185.0,
+      182.0,
+      185.0
+    ],
+    "front_panel": 4,
+    "ok": true,
+    "method": "orient_anything_v2"
+  }
+}
