@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="tower_air_purifier">
+	<material name="shell_white">
+		<color rgba="0.93 0.94 0.92 1" />
+	</material>
+	<material name="panel_white">
+		<color rgba="0.9 0.91 0.89 1" />
+	</material>
+	<material name="graphite">
+		<color rgba="0.18 0.2 0.22 1" />
+	</material>
+	<material name="dark_glass">
+		<color rgba="0.1 0.12 0.14 1" />
+	</material>
+	<material name="pedestal_gray">
+		<color rgba="0.55 0.58 0.6 1" />
+	</material>
+	<link name="body">
+		<inertial>
+			<origin xyz="0 0 0.33" rpy="0 0 0" />
+			<mass value="6" />
+			<inertia ixx="0.18635" ixy="0" ixz="0" iyy="0.18635" iyz="0" izz="0.0363" />
+		</inertial>
+		<visual name="body__tower_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__tower_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__base_ring">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__base_ring.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__panel_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__panel_seat.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__filter_screen">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__filter_screen.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__control_display">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__control_display.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__hinge_jamb">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__hinge_jamb.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_panel">
+		<inertial>
+			<origin xyz="0.0035 0.076 0" rpy="0 0 0" />
+			<mass value="0.9" />
+			<inertia ixx="0.0140955" ixy="0" ixz="0" iyy="0.0123654" iyz="0" izz="0.0017355" />
+		</inertial>
+		<visual name="front_panel__door_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__door_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__door_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__door_grip.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__hinge_leaf.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="panel_hinge" type="revolute">
+		<origin xyz="0.11 -0.076 0.33" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="front_panel" />
+		<axis xyz="0 0 1" />
+		<limit effort="12" velocity="1.5" lower="-1.35" upper="0" />
+	</joint>
+</robot>

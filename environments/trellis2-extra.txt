@@ -9,6 +9,3 @@ importlib_metadata==9.0.0
 fastapi==0.138.0
 uvicorn==0.49.0
 fast_simplification==0.1.13
-# natten's prebuilt wheels are keyed to a specific torch/CUDA build; if plain pip fails to
-# find a match for your setup, see https://github.com/SHI-Labs/NATTEN for the wheel index.
-natten==0.21.0

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="cup_holder_air_purifier">
+	<material name="body_dark">
+		<color rgba="0.17 0.18 0.2 1" />
+	</material>
+	<material name="body_black">
+		<color rgba="0.08 0.09 0.1 1" />
+	</material>
+	<material name="satin_silver">
+		<color rgba="0.62 0.65 0.68 1" />
+	</material>
+	<material name="accent_blue">
+		<color rgba="0.3 0.58 0.82 1" />
+	</material>
+	<material name="filter_media">
+		<color rgba="0.86 0.89 0.88 1" />
+	</material>
+	<link name="body">
+		<inertial>
+			<origin xyz="0 0 0.08" rpy="0 0 0" />
+			<mass value="0.85" />
+			<inertia ixx="0.00320167" ixy="0" ixz="0" iyy="0.00320167" iyz="0" izz="0.00277667" />
+		</inertial>
+		<visual name="body__cup_holder_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__cup_holder_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__mount_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__mount_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__neck_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__neck_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lower_disc_cover">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lower_disc_cover.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__upper_disc_cover">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__upper_disc_cover.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outer_rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outer_rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__opening_upper_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__opening_upper_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__opening_lower_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__opening_lower_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__opening_left_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__opening_left_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__opening_right_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__opening_right_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_grille_ring">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_grille_ring.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__status_disc">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__status_disc.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cap">
+		<inertial>
+			<origin xyz="0.011 0 0" rpy="0 0 0" />
+			<mass value="0.08" />
+			<inertia ixx="3.05333e-05" ixy="0" ixz="0" iyy="1.28533e-05" iyz="0" izz="2.41333e-05" />
+		</inertial>
+		<visual name="filter_cap__cap_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cap__cap_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cap__cap_grip_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cap__cap_grip_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cap__cap_twist_rib_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cap__cap_twist_rib_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cap__cap_twist_rib_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cap__cap_twist_rib_lower.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cartridge">
+		<inertial>
+			<origin xyz="0.037 0 0" rpy="0 0 0" />
+			<mass value="0.1" />
+			<inertia ixx="1.89667e-05" ixy="0" ixz="0" iyy="5.12667e-05" iyz="0" izz="5.89667e-05" />
+		</inertial>
+		<visual name="filter_cartridge__cartridge_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__cartridge_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__upper_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__upper_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__lower_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__lower_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__filter_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pull_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pull_tab.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_filter_cap" type="prismatic">
+		<origin xyz="0.066 0 0.132" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="filter_cap" />
+		<axis xyz="1 0 0" />
+		<limit effort="6" velocity="0.08" lower="0" upper="0.022" />
+	</joint>
+	<joint name="body_to_filter_cartridge" type="prismatic">
+		<origin xyz="-0.008 0 0.132" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="filter_cartridge" />
+		<axis xyz="1 0 0" />
+		<limit effort="12" velocity="0.1" lower="0" upper="0.048" />
+	</joint>
+</robot>

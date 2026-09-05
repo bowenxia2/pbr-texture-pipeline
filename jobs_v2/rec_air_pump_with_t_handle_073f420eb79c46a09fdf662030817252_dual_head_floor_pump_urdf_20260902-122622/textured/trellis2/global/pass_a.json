@@ -1,0 +1,187 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 930739,
+  "groups": {
+    "body__foot_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53533,
+      "field_voxels": 50341
+    },
+    "body__spine": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51616,
+      "field_voxels": 48298
+    },
+    "body__pad_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59955,
+      "field_voxels": 13496
+    },
+    "body__pad_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59955,
+      "field_voxels": 13496
+    },
+    "body__barrel_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 702983,
+      "field_voxels": 44448
+    },
+    "body__barrel_shell": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 798721,
+      "field_voxels": 342838
+    },
+    "body__top_guide": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 672308,
+      "field_voxels": 32667
+    },
+    "body__gauge_mount": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 47807,
+      "field_voxels": 24240
+    },
+    "body__gauge_body": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 655258,
+      "field_voxels": 37218
+    },
+    "body__gauge_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 586176,
+      "field_voxels": 29553
+    },
+    "body__gauge_face": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 598799,
+      "field_voxels": 19309
+    },
+    "body__hose_port": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 681142,
+      "field_voxels": 3672
+    },
+    "body__button_collar": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 452152,
+      "field_voxels": 1004
+    },
+    "pump_rod__rod_shaft": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 740985,
+      "field_voxels": 27480
+    },
+    "pump_rod__guide_nut": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 759025,
+      "field_voxels": 3401
+    },
+    "pump_rod__handle_hub": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 752889,
+      "field_voxels": 12061
+    },
+    "pump_rod__handle_bar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 772229,
+      "field_voxels": 26662
+    },
+    "pump_rod__grip_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 712841,
+      "field_voxels": 17023
+    },
+    "pump_rod__grip_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 694853,
+      "field_voxels": 17204
+    },
+    "release_button__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 572995,
+      "field_voxels": 962
+    },
+    "hose__hose_cuff": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 785702,
+      "field_voxels": 3966
+    },
+    "hose__hose_tube": {
+      "texture_size": 1024,
+      "n_faces": 3276,
+      "texels": 270188,
+      "field_voxels": 41929
+    },
+    "hose__head_body": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 754910,
+      "field_voxels": 5434
+    },
+    "hose__head_port_large": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 753846,
+      "field_voxels": 3043
+    },
+    "hose__head_port_small": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 746145,
+      "field_voxels": 2057
+    },
+    "hose__lever_ear_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46712,
+      "field_voxels": 746
+    },
+    "hose__lever_ear_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46712,
+      "field_voxels": 804
+    },
+    "clamp_lever__lever_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 539380,
+      "field_voxels": 816
+    },
+    "clamp_lever__lever_arm": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54282,
+      "field_voxels": 2024
+    },
+    "clamp_lever__lever_tip": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 665217,
+      "field_voxels": 934
+    }
+  }
+}

@@ -1,0 +1,1851 @@
+{
+  "schema_version": 7,
+  "job_id": "12953_keyboard_urdf_20260831-000659",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12953/mobility.urdf",
+  "created": "2026-08-31T00:06:59",
+  "updated": "2026-08-31T01:28:26",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 105,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-08-31T00:07:29",
+      "finished": "2026-08-31T00:07:41",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "rubberized plastic on the keys; brushed aluminum on the frame; matte black plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-08-31T00:08:03",
+      "finished": "2026-08-31T00:09:50",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/12953_keyboard_urdf_20260831-000659/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-08-31T00:09:50",
+      "finished": "2026-08-31T01:09:41",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 105,
+            "n_total": 105,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/12953_keyboard_urdf_20260831-000659/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-31T01:09:44",
+      "finished": "2026-08-31T01:28:26",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12953",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12953/mobility.urdf",
+    "category": "Keyboard",
+    "group_by": "semantic",
+    "semantic_labels": [
+      "key",
+      "keyboard_base"
+    ],
+    "bbox_world": {
+      "min": [
+        -0.3720790000000003,
+        -0.9193240000000001,
+        -0.04885300000000014
+      ],
+      "max": [
+        0.3518450000000004,
+        0.9593420000000001,
+        0.0737590000000001
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "link_0__frame-2",
+        "link": "link_0",
+        "label": "frame",
+        "semantic_id": 2,
+        "objs": [
+          "textured_objs/original-560.obj",
+          "textured_objs/original-464.obj",
+          "textured_objs/original-409.obj",
+          "textured_objs/original-301.obj"
+        ],
+        "n_faces": 438,
+        "area_frac": 0.5609912984853408,
+        "motion": "free",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__key-7",
+        "link": "link_1",
+        "label": "key",
+        "semantic_id": 7,
+        "objs": [
+          "textured_objs/original-516.obj"
+        ],
+        "n_faces": 248,
+        "area_frac": 0.0036749510639025418,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__key-8",
+        "link": "link_2",
+        "label": "key",
+        "semantic_id": 8,
+        "objs": [
+          "textured_objs/original-480.obj"
+        ],
+        "n_faces": 64,
+        "area_frac": 0.003674950332316303,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__key-9",
+        "link": "link_3",
+        "label": "key",
+        "semantic_id": 9,
+        "objs": [
+          "textured_objs/original-518.obj"
+        ],
+        "n_faces": 66,
+        "area_frac": 0.0036740975580377526,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__key-10",
+        "link": "link_4",
+        "label": "key",
+        "semantic_id": 10,
+        "objs": [
+          "textured_objs/original-544.obj",
+          "textured_objs/original-12.obj"
+        ],
+        "n_faces": 188,
+        "area_frac": 0.0036921307391079615,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_5__key-11",
+        "link": "link_5",
+        "label": "key",
+        "semantic_id": 11,
+        "objs": [
+          "textured_objs/original-2.obj",
+          "textured_objs/original-413.obj",
+          "textured_objs/original-414.obj",
+          "textured_objs/original-411.obj",
+          "textured_objs/original-412.obj",
+          "textured_objs/original-415.obj",
+          "textured_objs/original-469.obj"
+        ],
+        "n_faces": 620,
+        "area_frac": 0.0037116788265813714,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_6__key-12",
+        "link": "link_6",
+        "label": "key",
+        "semantic_id": 12,
+        "objs": [
+          "textured_objs/original-471.obj"
+        ],
+        "n_faces": 180,
+        "area_frac": 0.003674965629999843,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_7__key-13",
+        "link": "link_7",
+        "label": "key",
+        "semantic_id": 13,
+        "objs": [
+          "textured_objs/original-485.obj",
+          "textured_objs/original-417.obj",
+          "textured_objs/original-418.obj",
+          "textured_objs/original-420.obj",
+          "textured_objs/original-421.obj",
+          "textured_objs/original-422.obj",
+          "textured_objs/original-419.obj"
+        ],
+        "n_faces": 464,
+        "area_frac": 0.0036985071581618276,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_8__key-14",
+        "link": "link_8",
+        "label": "key",
+        "semantic_id": 14,
+        "objs": [
+          "textured_objs/original-475.obj",
+          "textured_objs/original-1.obj"
+        ],
+        "n_faces": 152,
+        "area_frac": 0.003691043234503186,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_9__key-15",
+        "link": "link_9",
+        "label": "key",
+        "semantic_id": 15,
+        "objs": [
+          "textured_objs/original-517.obj"
+        ],
+        "n_faces": 134,
+        "area_frac": 0.0036698163467069203,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_10__key-16",
+        "link": "link_10",
+        "label": "key",
+        "semantic_id": 16,
+        "objs": [
+          "textured_objs/original-532.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.003674949944228503,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_11__key-17",
+        "link": "link_11",
+        "label": "key",
+        "semantic_id": 17,
+        "objs": [
+          "textured_objs/original-536.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.003674965689655174,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_12__key-18",
+        "link": "link_12",
+        "label": "key",
+        "semantic_id": 18,
+        "objs": [
+          "textured_objs/original-538.obj"
+        ],
+        "n_faces": 152,
+        "area_frac": 0.0036749664879429144,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_13__key-19",
+        "link": "link_13",
+        "label": "key",
+        "semantic_id": 19,
+        "objs": [
+          "textured_objs/original-470.obj"
+        ],
+        "n_faces": 72,
+        "area_frac": 0.003674993898205457,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_14__key-20",
+        "link": "link_14",
+        "label": "key",
+        "semantic_id": 20,
+        "objs": [
+          "textured_objs/original-486.obj",
+          "textured_objs/original-13.obj"
+        ],
+        "n_faces": 78,
+        "area_frac": 0.0036832598717467815,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_15__key-21",
+        "link": "link_15",
+        "label": "key",
+        "semantic_id": 21,
+        "objs": [
+          "textured_objs/original-476.obj",
+          "textured_objs/original-20.obj",
+          "textured_objs/original-18.obj",
+          "textured_objs/original-19.obj",
+          "textured_objs/original-45.obj",
+          "textured_objs/original-22.obj",
+          "textured_objs/original-23.obj"
+        ],
+        "n_faces": 284,
+        "area_frac": 0.003697356824695686,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_16__key-22",
+        "link": "link_16",
+        "label": "key",
+        "semantic_id": 22,
+        "objs": [
+          "textured_objs/original-473.obj",
+          "textured_objs/original-16.obj"
+        ],
+        "n_faces": 50,
+        "area_frac": 0.003695488233064125,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_17__key-23",
+        "link": "link_17",
+        "label": "key",
+        "semantic_id": 23,
+        "objs": [
+          "textured_objs/original-51.obj",
+          "textured_objs/original-53.obj",
+          "textured_objs/original-50.obj",
+          "textured_objs/original-52.obj",
+          "textured_objs/original-553.obj",
+          "textured_objs/original-54.obj"
+        ],
+        "n_faces": 538,
+        "area_frac": 0.0036876915364346618,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_18__key-24",
+        "link": "link_18",
+        "label": "key",
+        "semantic_id": 24,
+        "objs": [
+          "textured_objs/original-70.obj",
+          "textured_objs/original-69.obj",
+          "textured_objs/original-68.obj",
+          "textured_objs/original-73.obj",
+          "textured_objs/original-72.obj",
+          "textured_objs/original-71.obj",
+          "textured_objs/original-556.obj"
+        ],
+        "n_faces": 550,
+        "area_frac": 0.003690200739393666,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_19__key-25",
+        "link": "link_19",
+        "label": "key",
+        "semantic_id": 25,
+        "objs": [
+          "textured_objs/original-56.obj",
+          "textured_objs/original-57.obj",
+          "textured_objs/original-59.obj",
+          "textured_objs/original-550.obj",
+          "textured_objs/original-58.obj"
+        ],
+        "n_faces": 518,
+        "area_frac": 0.003688940959558485,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_20__key-26",
+        "link": "link_20",
+        "label": "key",
+        "semantic_id": 26,
+        "objs": [
+          "textured_objs/original-76.obj",
+          "textured_objs/original-554.obj",
+          "textured_objs/original-75.obj",
+          "textured_objs/original-77.obj"
+        ],
+        "n_faces": 356,
+        "area_frac": 0.00368490621215712,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_21__key-27",
+        "link": "link_21",
+        "label": "key",
+        "semantic_id": 27,
+        "objs": [
+          "textured_objs/original-85.obj",
+          "textured_objs/original-86.obj",
+          "textured_objs/original-82.obj",
+          "textured_objs/original-79.obj",
+          "textured_objs/original-83.obj",
+          "textured_objs/original-84.obj",
+          "textured_objs/original-80.obj",
+          "textured_objs/original-81.obj",
+          "textured_objs/original-555.obj"
+        ],
+        "n_faces": 984,
+        "area_frac": 0.0037002463207351237,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_22__key-28",
+        "link": "link_22",
+        "label": "key",
+        "semantic_id": 28,
+        "objs": [
+          "textured_objs/original-61.obj",
+          "textured_objs/original-62.obj",
+          "textured_objs/original-64.obj",
+          "textured_objs/original-65.obj",
+          "textured_objs/original-66.obj",
+          "textured_objs/original-552.obj",
+          "textured_objs/original-63.obj"
+        ],
+        "n_faces": 830,
+        "area_frac": 0.0036940668544629966,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_23__key-29",
+        "link": "link_23",
+        "label": "key",
+        "semantic_id": 29,
+        "objs": [
+          "textured_objs/original-290.obj",
+          "textured_objs/original-286.obj",
+          "textured_objs/original-288.obj",
+          "textured_objs/original-481.obj",
+          "textured_objs/original-289.obj"
+        ],
+        "n_faces": 416,
+        "area_frac": 0.0036973940608806153,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_24__key-30",
+        "link": "link_24",
+        "label": "key",
+        "semantic_id": 30,
+        "objs": [
+          "textured_objs/original-43.obj",
+          "textured_objs/original-41.obj",
+          "textured_objs/original-39.obj",
+          "textured_objs/original-484.obj",
+          "textured_objs/original-42.obj"
+        ],
+        "n_faces": 378,
+        "area_frac": 0.003699612225973495,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_25__key-31",
+        "link": "link_25",
+        "label": "key",
+        "semantic_id": 31,
+        "objs": [
+          "textured_objs/original-548.obj",
+          "textured_objs/original-282.obj",
+          "textured_objs/original-284.obj",
+          "textured_objs/original-285.obj"
+        ],
+        "n_faces": 240,
+        "area_frac": 0.0036892283646962386,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_26__key-32",
+        "link": "link_26",
+        "label": "key",
+        "semantic_id": 32,
+        "objs": [
+          "textured_objs/original-482.obj",
+          "textured_objs/original-278.obj",
+          "textured_objs/original-281.obj",
+          "textured_objs/original-280.obj"
+        ],
+        "n_faces": 156,
+        "area_frac": 0.003689216859934311,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_27__key-33",
+        "link": "link_27",
+        "label": "key",
+        "semantic_id": 33,
+        "objs": [
+          "textured_objs/original-545.obj",
+          "textured_objs/original-275.obj",
+          "textured_objs/original-276.obj",
+          "textured_objs/original-277.obj"
+        ],
+        "n_faces": 386,
+        "area_frac": 0.0036969073355496386,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_28__key-34",
+        "link": "link_28",
+        "label": "key",
+        "semantic_id": 34,
+        "objs": [
+          "textured_objs/original-541.obj",
+          "textured_objs/original-273.obj",
+          "textured_objs/original-274.obj"
+        ],
+        "n_faces": 170,
+        "area_frac": 0.003688786889645303,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_29__key-35",
+        "link": "link_29",
+        "label": "key",
+        "semantic_id": 35,
+        "objs": [
+          "textured_objs/original-546.obj",
+          "textured_objs/original-271.obj",
+          "textured_objs/original-272.obj"
+        ],
+        "n_faces": 74,
+        "area_frac": 0.003685845166461892,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_30__key-36",
+        "link": "link_30",
+        "label": "key",
+        "semantic_id": 36,
+        "objs": [
+          "textured_objs/original-537.obj",
+          "textured_objs/original-270.obj",
+          "textured_objs/original-267.obj",
+          "textured_objs/original-268.obj",
+          "textured_objs/original-269.obj"
+        ],
+        "n_faces": 264,
+        "area_frac": 0.00369428820652441,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_31__key-37",
+        "link": "link_31",
+        "label": "key",
+        "semantic_id": 37,
+        "objs": [
+          "textured_objs/original-265.obj",
+          "textured_objs/original-263.obj",
+          "textured_objs/original-539.obj",
+          "textured_objs/original-261.obj",
+          "textured_objs/original-264.obj"
+        ],
+        "n_faces": 542,
+        "area_frac": 0.003700200119904131,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_32__key-38",
+        "link": "link_32",
+        "label": "key",
+        "semantic_id": 38,
+        "objs": [
+          "textured_objs/original-391.obj",
+          "textured_objs/original-392.obj",
+          "textured_objs/original-512.obj",
+          "textured_objs/original-393.obj",
+          "textured_objs/original-394.obj",
+          "textured_objs/original-30.obj"
+        ],
+        "n_faces": 412,
+        "area_frac": 0.003705349562053783,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_33__key-39",
+        "link": "link_33",
+        "label": "key",
+        "semantic_id": 39,
+        "objs": [
+          "textured_objs/original-426.obj",
+          "textured_objs/original-427.obj",
+          "textured_objs/original-428.obj",
+          "textured_objs/original-425.obj",
+          "textured_objs/original-424.obj",
+          "textured_objs/original-502.obj",
+          "textured_objs/original-29.obj"
+        ],
+        "n_faces": 600,
+        "area_frac": 0.003716909837210853,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_34__key-40",
+        "link": "link_34",
+        "label": "key",
+        "semantic_id": 40,
+        "objs": [
+          "textured_objs/original-28.obj",
+          "textured_objs/original-530.obj",
+          "textured_objs/original-27.obj",
+          "textured_objs/original-48.obj"
+        ],
+        "n_faces": 48,
+        "area_frac": 0.0036858766987016233,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_35__key-41",
+        "link": "link_35",
+        "label": "key",
+        "semantic_id": 41,
+        "objs": [
+          "textured_objs/original-408.obj",
+          "textured_objs/original-406.obj",
+          "textured_objs/original-404.obj",
+          "textured_objs/original-405.obj",
+          "textured_objs/original-407.obj",
+          "textured_objs/original-511.obj",
+          "textured_objs/original-31.obj"
+        ],
+        "n_faces": 620,
+        "area_frac": 0.003708832587328943,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_36__key-42",
+        "link": "link_36",
+        "label": "key",
+        "semantic_id": 42,
+        "objs": [
+          "textured_objs/original-32.obj",
+          "textured_objs/original-438.obj",
+          "textured_objs/original-439.obj",
+          "textured_objs/original-443.obj",
+          "textured_objs/original-442.obj",
+          "textured_objs/original-441.obj",
+          "textured_objs/original-440.obj",
+          "textured_objs/original-549.obj"
+        ],
+        "n_faces": 630,
+        "area_frac": 0.003709758704785908,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_37__key-43",
+        "link": "link_37",
+        "label": "key",
+        "semantic_id": 43,
+        "objs": [
+          "textured_objs/original-33.obj",
+          "textured_objs/original-446.obj",
+          "textured_objs/original-447.obj",
+          "textured_objs/original-448.obj",
+          "textured_objs/original-503.obj",
+          "textured_objs/original-449.obj",
+          "textured_objs/original-450.obj"
+        ],
+        "n_faces": 626,
+        "area_frac": 0.0037165902900831316,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_38__key-44",
+        "link": "link_38",
+        "label": "key",
+        "semantic_id": 44,
+        "objs": [
+          "textured_objs/original-534.obj",
+          "textured_objs/original-34.obj"
+        ],
+        "n_faces": 96,
+        "area_frac": 0.003687635737277915,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_39__key-45",
+        "link": "link_39",
+        "label": "key",
+        "semantic_id": 45,
+        "objs": [
+          "textured_objs/original-472.obj",
+          "textured_objs/original-14.obj"
+        ],
+        "n_faces": 44,
+        "area_frac": 0.0036891633831314147,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_40__key-46",
+        "link": "link_40",
+        "label": "key",
+        "semantic_id": 46,
+        "objs": [
+          "textured_objs/original-477.obj",
+          "textured_objs/original-36.obj",
+          "textured_objs/original-37.obj",
+          "textured_objs/original-38.obj"
+        ],
+        "n_faces": 190,
+        "area_frac": 0.0036821991782281537,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_41__key-47",
+        "link": "link_41",
+        "label": "key",
+        "semantic_id": 47,
+        "objs": [
+          "textured_objs/original-167.obj",
+          "textured_objs/original-509.obj",
+          "textured_objs/original-168.obj",
+          "textured_objs/original-165.obj"
+        ],
+        "n_faces": 126,
+        "area_frac": 0.0036784289017014215,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_42__key-48",
+        "link": "link_42",
+        "label": "key",
+        "semantic_id": 48,
+        "objs": [
+          "textured_objs/original-474.obj",
+          "textured_objs/original-15.obj"
+        ],
+        "n_faces": 32,
+        "area_frac": 0.0036833998486711012,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_43__key-49",
+        "link": "link_43",
+        "label": "key",
+        "semantic_id": 49,
+        "objs": [
+          "textured_objs/original-514.obj"
+        ],
+        "n_faces": 40,
+        "area_frac": 0.0036749656891487464,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_44__key-50",
+        "link": "link_44",
+        "label": "key",
+        "semantic_id": 50,
+        "objs": [
+          "textured_objs/original-527.obj"
+        ],
+        "n_faces": 224,
+        "area_frac": 0.0036749657169209532,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_45__key-51",
+        "link": "link_45",
+        "label": "key",
+        "semantic_id": 51,
+        "objs": [
+          "textured_objs/original-430.obj",
+          "textured_objs/original-431.obj",
+          "textured_objs/original-432.obj",
+          "textured_objs/original-434.obj",
+          "textured_objs/original-435.obj",
+          "textured_objs/original-436.obj",
+          "textured_objs/original-524.obj",
+          "textured_objs/original-433.obj"
+        ],
+        "n_faces": 582,
+        "area_frac": 0.0036991067289200287,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_46__key-52",
+        "link": "link_46",
+        "label": "key",
+        "semantic_id": 52,
+        "objs": [
+          "textured_objs/original-523.obj"
+        ],
+        "n_faces": 244,
+        "area_frac": 0.0036749499866770225,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_47__key-53",
+        "link": "link_47",
+        "label": "key",
+        "semantic_id": 53,
+        "objs": [
+          "textured_objs/original-547.obj"
+        ],
+        "n_faces": 484,
+        "area_frac": 0.003674958395786664,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_48__key-54",
+        "link": "link_48",
+        "label": "key",
+        "semantic_id": 54,
+        "objs": [
+          "textured_objs/original-25.obj",
+          "textured_objs/original-24.obj",
+          "textured_objs/original-540.obj",
+          "textured_objs/original-26.obj"
+        ],
+        "n_faces": 304,
+        "area_frac": 0.0036942654827539284,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_49__key-55",
+        "link": "link_49",
+        "label": "key",
+        "semantic_id": 55,
+        "objs": [
+          "textured_objs/original-175.obj",
+          "textured_objs/original-176.obj",
+          "textured_objs/original-465.obj",
+          "textured_objs/original-177.obj",
+          "textured_objs/original-173.obj"
+        ],
+        "n_faces": 104,
+        "area_frac": 0.0036852381915809607,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_50__key-56",
+        "link": "link_50",
+        "label": "key",
+        "semantic_id": 56,
+        "objs": [
+          "textured_objs/original-508.obj",
+          "textured_objs/original-171.obj",
+          "textured_objs/original-172.obj",
+          "textured_objs/original-169.obj"
+        ],
+        "n_faces": 84,
+        "area_frac": 0.0036793545014830475,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_51__key-57",
+        "link": "link_51",
+        "label": "key",
+        "semantic_id": 57,
+        "objs": [
+          "textured_objs/original-458.obj",
+          "textured_objs/original-105.obj",
+          "textured_objs/original-106.obj",
+          "textured_objs/original-103.obj",
+          "textured_objs/original-104.obj",
+          "textured_objs/original-102.obj"
+        ],
+        "n_faces": 402,
+        "area_frac": 0.0045555407514582405,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_52__key-58",
+        "link": "link_52",
+        "label": "key",
+        "semantic_id": 58,
+        "objs": [
+          "textured_objs/original-354.obj",
+          "textured_objs/original-389.obj",
+          "textured_objs/original-382.obj",
+          "textured_objs/original-347.obj",
+          "textured_objs/original-361.obj",
+          "textured_objs/original-368.obj",
+          "textured_objs/original-375.obj",
+          "textured_objs/original-383.obj",
+          "textured_objs/original-384.obj",
+          "textured_objs/original-386.obj",
+          "textured_objs/original-385.obj",
+          "textured_objs/original-387.obj",
+          "textured_objs/original-388.obj",
+          "textured_objs/original-376.obj",
+          "textured_objs/original-377.obj",
+          "textured_objs/original-378.obj",
+          "textured_objs/original-379.obj",
+          "textured_objs/original-380.obj",
+          "textured_objs/original-381.obj",
+          "textured_objs/original-372.obj",
+          "textured_objs/original-371.obj",
+          "textured_objs/original-370.obj",
+          "textured_objs/original-369.obj",
+          "textured_objs/original-362.obj",
+          "textured_objs/original-355.obj",
+          "textured_objs/original-348.obj",
+          "textured_objs/original-349.obj",
+          "textured_objs/original-350.obj",
+          "textured_objs/original-351.obj",
+          "textured_objs/original-352.obj",
+          "textured_objs/original-353.obj",
+          "textured_objs/original-360.obj",
+          "textured_objs/original-367.obj",
+          "textured_objs/original-374.obj",
+          "textured_objs/original-373.obj",
+          "textured_objs/original-363.obj",
+          "textured_objs/original-364.obj",
+          "textured_objs/original-365.obj",
+          "textured_objs/original-366.obj",
+          "textured_objs/original-359.obj",
+          "textured_objs/original-358.obj",
+          "textured_objs/original-357.obj",
+          "textured_objs/original-356.obj",
+          "textured_objs/original-459.obj"
+        ],
+        "n_faces": 282,
+        "area_frac": 0.0045816650506451196,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_53__key-59",
+        "link": "link_53",
+        "label": "key",
+        "semantic_id": 59,
+        "objs": [
+          "textured_objs/original-396.obj",
+          "textured_objs/original-397.obj",
+          "textured_objs/original-399.obj",
+          "textured_objs/original-457.obj",
+          "textured_objs/original-401.obj",
+          "textured_objs/original-402.obj",
+          "textured_objs/original-400.obj",
+          "textured_objs/original-398.obj"
+        ],
+        "n_faces": 64,
+        "area_frac": 0.004559405012591674,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_54__key-60",
+        "link": "link_54",
+        "label": "key",
+        "semantic_id": 60,
+        "objs": [
+          "textured_objs/original-453.obj"
+        ],
+        "n_faces": 80,
+        "area_frac": 0.009402198844625759,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_55__key-61",
+        "link": "link_55",
+        "label": "key",
+        "semantic_id": 61,
+        "objs": [
+          "textured_objs/original-467.obj",
+          "textured_objs/original-153.obj",
+          "textured_objs/original-152.obj",
+          "textured_objs/original-151.obj",
+          "textured_objs/original-131.obj"
+        ],
+        "n_faces": 396,
+        "area_frac": 0.0036907810989884556,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_56__key-62",
+        "link": "link_56",
+        "label": "key",
+        "semantic_id": 62,
+        "objs": [
+          "textured_objs/original-124.obj",
+          "textured_objs/original-141.obj",
+          "textured_objs/original-496.obj",
+          "textured_objs/original-144.obj",
+          "textured_objs/original-142.obj",
+          "textured_objs/original-143.obj"
+        ],
+        "n_faces": 538,
+        "area_frac": 0.0036950760382988513,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_57__key-63",
+        "link": "link_57",
+        "label": "key",
+        "semantic_id": 63,
+        "objs": [
+          "textured_objs/original-489.obj",
+          "textured_objs/original-129.obj"
+        ],
+        "n_faces": 114,
+        "area_frac": 0.0036829605275789214,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_58__key-64",
+        "link": "link_58",
+        "label": "key",
+        "semantic_id": 64,
+        "objs": [
+          "textured_objs/original-157.obj",
+          "textured_objs/original-488.obj",
+          "textured_objs/original-158.obj",
+          "textured_objs/original-156.obj",
+          "textured_objs/original-155.obj",
+          "textured_objs/original-133.obj"
+        ],
+        "n_faces": 676,
+        "area_frac": 0.0036973482657447826,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_59__key-65",
+        "link": "link_59",
+        "label": "key",
+        "semantic_id": 65,
+        "objs": [
+          "textured_objs/original-126.obj",
+          "textured_objs/original-148.obj",
+          "textured_objs/original-149.obj",
+          "textured_objs/original-493.obj",
+          "textured_objs/original-146.obj",
+          "textured_objs/original-147.obj"
+        ],
+        "n_faces": 720,
+        "area_frac": 0.0036988306661079567,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_60__key-66",
+        "link": "link_60",
+        "label": "key",
+        "semantic_id": 66,
+        "objs": [
+          "textured_objs/original-497.obj"
+        ],
+        "n_faces": 104,
+        "area_frac": 0.00367502302660088,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_61__key-67",
+        "link": "link_61",
+        "label": "key",
+        "semantic_id": 67,
+        "objs": [
+          "textured_objs/original-114.obj",
+          "textured_objs/original-115.obj",
+          "textured_objs/original-121.obj",
+          "textured_objs/original-116.obj",
+          "textured_objs/original-117.obj",
+          "textured_objs/original-495.obj",
+          "textured_objs/original-119.obj",
+          "textured_objs/original-120.obj",
+          "textured_objs/original-118.obj"
+        ],
+        "n_faces": 704,
+        "area_frac": 0.003696694853728335,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_62__key-68",
+        "link": "link_62",
+        "label": "key",
+        "semantic_id": 68,
+        "objs": [
+          "textured_objs/original-498.obj",
+          "textured_objs/original-122.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.003677649282701147,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_63__key-69",
+        "link": "link_63",
+        "label": "key",
+        "semantic_id": 69,
+        "objs": [
+          "textured_objs/original-487.obj",
+          "textured_objs/original-132.obj",
+          "textured_objs/original-137.obj"
+        ],
+        "n_faces": 148,
+        "area_frac": 0.003689268924646844,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_64__key-70",
+        "link": "link_64",
+        "label": "key",
+        "semantic_id": 70,
+        "objs": [
+          "textured_objs/original-492.obj",
+          "textured_objs/original-136.obj",
+          "textured_objs/original-125.obj"
+        ],
+        "n_faces": 222,
+        "area_frac": 0.003691123237064341,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_65__key-71",
+        "link": "link_65",
+        "label": "key",
+        "semantic_id": 71,
+        "objs": [
+          "textured_objs/original-444.obj",
+          "textured_objs/original-535.obj",
+          "textured_objs/original-44.obj"
+        ],
+        "n_faces": 176,
+        "area_frac": 0.0036841096740648453,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_66__key-72",
+        "link": "link_66",
+        "label": "key",
+        "semantic_id": 72,
+        "objs": [
+          "textured_objs/original-483.obj",
+          "textured_objs/original-452.obj",
+          "textured_objs/original-451.obj"
+        ],
+        "n_faces": 32,
+        "area_frac": 0.00367878836859735,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_67__key-73",
+        "link": "link_67",
+        "label": "key",
+        "semantic_id": 73,
+        "objs": [
+          "textured_objs/original-519.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.006972478090626035,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_68__key-74",
+        "link": "link_68",
+        "label": "key",
+        "semantic_id": 74,
+        "objs": [
+          "textured_objs/original-520.obj"
+        ],
+        "n_faces": 80,
+        "area_frac": 0.009258554085383142,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_69__key-75",
+        "link": "link_69",
+        "label": "key",
+        "semantic_id": 75,
+        "objs": [
+          "textured_objs/original-218.obj",
+          "textured_objs/original-219.obj",
+          "textured_objs/original-529.obj",
+          "textured_objs/original-220.obj"
+        ],
+        "n_faces": 246,
+        "area_frac": 0.0036826855662167755,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_70__key-76",
+        "link": "link_70",
+        "label": "key",
+        "semantic_id": 76,
+        "objs": [
+          "textured_objs/original-525.obj",
+          "textured_objs/original-214.obj",
+          "textured_objs/original-215.obj",
+          "textured_objs/original-216.obj"
+        ],
+        "n_faces": 194,
+        "area_frac": 0.003681922017628189,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_71__key-77",
+        "link": "link_71",
+        "label": "key",
+        "semantic_id": 77,
+        "objs": [
+          "textured_objs/original-210.obj",
+          "textured_objs/original-528.obj",
+          "textured_objs/original-211.obj",
+          "textured_objs/original-212.obj"
+        ],
+        "n_faces": 266,
+        "area_frac": 0.0036834470679545372,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_72__key-78",
+        "link": "link_72",
+        "label": "key",
+        "semantic_id": 78,
+        "objs": [
+          "textured_objs/original-207.obj",
+          "textured_objs/original-526.obj",
+          "textured_objs/original-208.obj"
+        ],
+        "n_faces": 252,
+        "area_frac": 0.003681236299486323,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_73__key-79",
+        "link": "link_73",
+        "label": "key",
+        "semantic_id": 79,
+        "objs": [
+          "textured_objs/original-513.obj",
+          "textured_objs/original-204.obj",
+          "textured_objs/original-205.obj"
+        ],
+        "n_faces": 280,
+        "area_frac": 0.003681389246890042,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_74__key-80",
+        "link": "link_74",
+        "label": "key",
+        "semantic_id": 80,
+        "objs": [
+          "textured_objs/original-515.obj",
+          "textured_objs/original-201.obj",
+          "textured_objs/original-202.obj"
+        ],
+        "n_faces": 134,
+        "area_frac": 0.0036801248802875927,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_75__key-81",
+        "link": "link_75",
+        "label": "key",
+        "semantic_id": 81,
+        "objs": [
+          "textured_objs/original-466.obj",
+          "textured_objs/original-198.obj",
+          "textured_objs/original-199.obj"
+        ],
+        "n_faces": 246,
+        "area_frac": 0.00368119859106724,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_76__key-82",
+        "link": "link_76",
+        "label": "key",
+        "semantic_id": 82,
+        "objs": [
+          "textured_objs/original-195.obj",
+          "textured_objs/original-522.obj",
+          "textured_objs/original-196.obj"
+        ],
+        "n_faces": 204,
+        "area_frac": 0.0036806962330336425,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_77__key-83",
+        "link": "link_77",
+        "label": "key",
+        "semantic_id": 83,
+        "objs": [
+          "textured_objs/original-506.obj",
+          "textured_objs/original-192.obj",
+          "textured_objs/original-193.obj"
+        ],
+        "n_faces": 142,
+        "area_frac": 0.003681060961014047,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_78__key-84",
+        "link": "link_78",
+        "label": "key",
+        "semantic_id": 84,
+        "objs": [
+          "textured_objs/original-505.obj",
+          "textured_objs/original-189.obj",
+          "textured_objs/original-190.obj"
+        ],
+        "n_faces": 244,
+        "area_frac": 0.0036805358558186325,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_79__key-85",
+        "link": "link_79",
+        "label": "key",
+        "semantic_id": 85,
+        "objs": [
+          "textured_objs/original-504.obj",
+          "textured_objs/original-186.obj",
+          "textured_objs/original-187.obj"
+        ],
+        "n_faces": 206,
+        "area_frac": 0.003680764970318276,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_80__key-86",
+        "link": "link_80",
+        "label": "key",
+        "semantic_id": 86,
+        "objs": [
+          "textured_objs/original-183.obj",
+          "textured_objs/original-507.obj",
+          "textured_objs/original-184.obj"
+        ],
+        "n_faces": 154,
+        "area_frac": 0.0036799763691648724,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_81__key-87",
+        "link": "link_81",
+        "label": "key",
+        "semantic_id": 87,
+        "objs": [
+          "textured_objs/original-99.obj",
+          "textured_objs/original-521.obj",
+          "textured_objs/original-100.obj",
+          "textured_objs/original-98.obj"
+        ],
+        "n_faces": 186,
+        "area_frac": 0.004549714317608779,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_82__key-88",
+        "link": "link_82",
+        "label": "key",
+        "semantic_id": 88,
+        "objs": [
+          "textured_objs/original-96.obj",
+          "textured_objs/original-510.obj",
+          "textured_objs/original-92.obj",
+          "textured_objs/original-93.obj",
+          "textured_objs/original-94.obj",
+          "textured_objs/original-95.obj"
+        ],
+        "n_faces": 336,
+        "area_frac": 0.005336209446299075,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_83__key-89",
+        "link": "link_83",
+        "label": "key",
+        "semantic_id": 89,
+        "objs": [
+          "textured_objs/original-455.obj",
+          "textured_objs/original-344.obj",
+          "textured_objs/original-330.obj",
+          "textured_objs/original-345.obj",
+          "textured_objs/original-338.obj",
+          "textured_objs/original-340.obj",
+          "textured_objs/original-341.obj",
+          "textured_objs/original-335.obj",
+          "textured_objs/original-336.obj",
+          "textured_objs/original-342.obj",
+          "textured_objs/original-339.obj",
+          "textured_objs/original-331.obj",
+          "textured_objs/original-324.obj",
+          "textured_objs/original-325.obj",
+          "textured_objs/original-332.obj",
+          "textured_objs/original-333.obj",
+          "textured_objs/original-334.obj",
+          "textured_objs/original-343.obj",
+          "textured_objs/original-337.obj",
+          "textured_objs/original-328.obj",
+          "textured_objs/original-329.obj",
+          "textured_objs/original-327.obj",
+          "textured_objs/original-326.obj",
+          "textured_objs/original-317.obj",
+          "textured_objs/original-318.obj",
+          "textured_objs/original-319.obj",
+          "textured_objs/original-323.obj",
+          "textured_objs/original-322.obj",
+          "textured_objs/original-321.obj",
+          "textured_objs/original-320.obj",
+          "textured_objs/original-316.obj",
+          "textured_objs/original-315.obj",
+          "textured_objs/original-314.obj",
+          "textured_objs/original-313.obj",
+          "textured_objs/original-312.obj",
+          "textured_objs/original-310.obj",
+          "textured_objs/original-311.obj",
+          "textured_objs/original-303.obj",
+          "textured_objs/original-304.obj",
+          "textured_objs/original-305.obj",
+          "textured_objs/original-306.obj",
+          "textured_objs/original-307.obj",
+          "textured_objs/original-308.obj",
+          "textured_objs/original-309.obj",
+          "textured_objs/original-454.obj"
+        ],
+        "n_faces": 436,
+        "area_frac": 0.00912408260417594,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_84__key-90",
+        "link": "link_84",
+        "label": "key",
+        "semantic_id": 90,
+        "objs": [
+          "textured_objs/original-8.obj",
+          "textured_objs/original-9.obj",
+          "textured_objs/original-10.obj",
+          "textured_objs/original-11.obj",
+          "textured_objs/original-456.obj",
+          "textured_objs/original-4.obj",
+          "textured_objs/original-5.obj",
+          "textured_objs/original-6.obj",
+          "textured_objs/original-7.obj"
+        ],
+        "n_faces": 798,
+        "area_frac": 0.00539640429370203,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_85__key-91",
+        "link": "link_85",
+        "label": "key",
+        "semantic_id": 91,
+        "objs": [
+          "textured_objs/original-542.obj",
+          "textured_objs/original-258.obj",
+          "textured_objs/original-259.obj",
+          "textured_objs/original-260.obj"
+        ],
+        "n_faces": 272,
+        "area_frac": 0.003699836311762312,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_86__key-92",
+        "link": "link_86",
+        "label": "key",
+        "semantic_id": 92,
+        "objs": [
+          "textured_objs/original-478.obj"
+        ],
+        "n_faces": 112,
+        "area_frac": 0.0053236716598796426,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_87__key-93",
+        "link": "link_87",
+        "label": "key",
+        "semantic_id": 93,
+        "objs": [
+          "textured_objs/original-543.obj",
+          "textured_objs/original-46.obj",
+          "textured_objs/original-47.obj"
+        ],
+        "n_faces": 246,
+        "area_frac": 0.003690607184154383,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_88__key-94",
+        "link": "link_88",
+        "label": "key",
+        "semantic_id": 94,
+        "objs": [
+          "textured_objs/original-179.obj",
+          "textured_objs/original-180.obj",
+          "textured_objs/original-479.obj",
+          "textured_objs/original-181.obj"
+        ],
+        "n_faces": 354,
+        "area_frac": 0.0036825263184737333,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_89__key-95",
+        "link": "link_89",
+        "label": "key",
+        "semantic_id": 95,
+        "objs": [
+          "textured_objs/original-461.obj"
+        ],
+        "n_faces": 40,
+        "area_frac": 0.019121077017137673,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_90__key-96",
+        "link": "link_90",
+        "label": "key",
+        "semantic_id": 96,
+        "objs": [
+          "textured_objs/original-490.obj",
+          "textured_objs/original-138.obj",
+          "textured_objs/original-130.obj"
+        ],
+        "n_faces": 188,
+        "area_frac": 0.0036908578744575525,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_91__key-97",
+        "link": "link_91",
+        "label": "key",
+        "semantic_id": 97,
+        "objs": [
+          "textured_objs/original-491.obj",
+          "textured_objs/original-139.obj",
+          "textured_objs/original-128.obj"
+        ],
+        "n_faces": 84,
+        "area_frac": 0.0036904285182320575,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_92__key-98",
+        "link": "link_92",
+        "label": "key",
+        "semantic_id": 98,
+        "objs": [
+          "textured_objs/original-499.obj",
+          "textured_objs/original-88.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.0036811045403408633,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_93__key-99",
+        "link": "link_93",
+        "label": "key",
+        "semantic_id": 99,
+        "objs": [
+          "textured_objs/original-558.obj",
+          "textured_objs/original-90.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.0036813762511136916,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_94__key-100",
+        "link": "link_94",
+        "label": "key",
+        "semantic_id": 100,
+        "objs": [
+          "textured_objs/original-164.obj",
+          "textured_objs/original-163.obj",
+          "textured_objs/original-162.obj",
+          "textured_objs/original-460.obj",
+          "textured_objs/original-160.obj",
+          "textured_objs/original-134.obj",
+          "textured_objs/original-161.obj"
+        ],
+        "n_faces": 650,
+        "area_frac": 0.006995705409222692,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_95__key-101",
+        "link": "link_95",
+        "label": "key",
+        "semantic_id": 101,
+        "objs": [
+          "textured_objs/original-292.obj",
+          "textured_objs/original-294.obj",
+          "textured_objs/original-293.obj",
+          "textured_objs/original-494.obj",
+          "textured_objs/original-135.obj"
+        ],
+        "n_faces": 302,
+        "area_frac": 0.0036848717241778125,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_96__key-102",
+        "link": "link_96",
+        "label": "key",
+        "semantic_id": 102,
+        "objs": [
+          "textured_objs/original-299.obj",
+          "textured_objs/original-300.obj",
+          "textured_objs/original-462.obj",
+          "textured_objs/original-298.obj",
+          "textured_objs/original-297.obj",
+          "textured_objs/original-296.obj"
+        ],
+        "n_faces": 510,
+        "area_frac": 0.0069846251215503205,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_97__key-103",
+        "link": "link_97",
+        "label": "key",
+        "semantic_id": 103,
+        "objs": [
+          "textured_objs/original-127.obj",
+          "textured_objs/original-463.obj"
+        ],
+        "n_faces": 44,
+        "area_frac": 0.006976266060676357,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_98__key-104",
+        "link": "link_98",
+        "label": "key",
+        "semantic_id": 104,
+        "objs": [
+          "textured_objs/original-500.obj",
+          "textured_objs/original-123.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.003676790465166994,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_99__key-105",
+        "link": "link_99",
+        "label": "key",
+        "semantic_id": 105,
+        "objs": [
+          "textured_objs/original-559.obj",
+          "textured_objs/original-226.obj",
+          "textured_objs/original-225.obj",
+          "textured_objs/original-224.obj",
+          "textured_objs/original-223.obj",
+          "textured_objs/original-222.obj",
+          "textured_objs/original-228.obj",
+          "textured_objs/original-229.obj",
+          "textured_objs/original-230.obj",
+          "textured_objs/original-231.obj",
+          "textured_objs/original-232.obj",
+          "textured_objs/original-533.obj"
+        ],
+        "n_faces": 1204,
+        "area_frac": 0.003711876340706808,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_100__key-106",
+        "link": "link_100",
+        "label": "key",
+        "semantic_id": 106,
+        "objs": [
+          "textured_objs/original-236.obj",
+          "textured_objs/original-237.obj",
+          "textured_objs/original-239.obj",
+          "textured_objs/original-238.obj",
+          "textured_objs/original-234.obj",
+          "textured_objs/original-243.obj",
+          "textured_objs/original-240.obj",
+          "textured_objs/original-468.obj",
+          "textured_objs/original-242.obj",
+          "textured_objs/original-235.obj",
+          "textured_objs/original-241.obj",
+          "textured_objs/original-244.obj"
+        ],
+        "n_faces": 904,
+        "area_frac": 0.00369907549895068,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_101__key-107",
+        "link": "link_101",
+        "label": "key",
+        "semantic_id": 107,
+        "objs": [
+          "textured_objs/original-246.obj",
+          "textured_objs/original-248.obj",
+          "textured_objs/original-255.obj",
+          "textured_objs/original-252.obj",
+          "textured_objs/original-253.obj",
+          "textured_objs/original-254.obj",
+          "textured_objs/original-257.obj",
+          "textured_objs/original-256.obj",
+          "textured_objs/original-531.obj",
+          "textured_objs/original-250.obj",
+          "textured_objs/original-249.obj",
+          "textured_objs/original-247.obj"
+        ],
+        "n_faces": 1150,
+        "area_frac": 0.0037027577874594623,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_102__key-108",
+        "link": "link_102",
+        "label": "key",
+        "semantic_id": 108,
+        "objs": [
+          "textured_objs/original-557.obj",
+          "textured_objs/original-89.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.003681105248391182,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_103__key-109",
+        "link": "link_103",
+        "label": "key",
+        "semantic_id": 109,
+        "objs": [
+          "textured_objs/original-501.obj",
+          "textured_objs/original-87.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.003681385344001897,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_104__key-110",
+        "link": "link_104",
+        "label": "key",
+        "semantic_id": 110,
+        "objs": [
+          "textured_objs/original-112.obj",
+          "textured_objs/original-108.obj",
+          "textured_objs/original-110.obj",
+          "textured_objs/original-551.obj",
+          "textured_objs/original-109.obj",
+          "textured_objs/original-111.obj"
+        ],
+        "n_faces": 336,
+        "area_frac": 0.0053362092050699625,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

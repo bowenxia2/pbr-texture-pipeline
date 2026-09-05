@@ -1,0 +1,61 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 14399284,
+  "groups": {
+    "body__body_shell": {
+      "texture_size": 1024,
+      "n_faces": 14148,
+      "texels": 771507,
+      "field_voxels": 771025
+    },
+    "body__cavity_shell": {
+      "texture_size": 1024,
+      "n_faces": 780,
+      "texels": 677263,
+      "field_voxels": 676949
+    },
+    "top_cap__cap_shell": {
+      "texture_size": 1024,
+      "n_faces": 8252,
+      "texels": 750648,
+      "field_voxels": 739845
+    },
+    "drawer__drawer_shell": {
+      "texture_size": 1024,
+      "n_faces": 1484,
+      "texels": 812297,
+      "field_voxels": 811491
+    },
+    "basket__basket_shell": {
+      "texture_size": 1024,
+      "n_faces": 19488,
+      "texels": 904434,
+      "field_voxels": 901066
+    },
+    "temp_dial__dial_shell": {
+      "texture_size": 1024,
+      "n_faces": 17274,
+      "texels": 639663,
+      "field_voxels": 81035
+    },
+    "timer_dial__dial_shell": {
+      "texture_size": 1024,
+      "n_faces": 17274,
+      "texels": 631807,
+      "field_voxels": 81255
+    },
+    "power_button__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 8564,
+      "texels": 666060,
+      "field_voxels": 11331
+    },
+    "release_button__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 188,
+      "texels": 652807,
+      "field_voxels": 19368
+    }
+  }
+}

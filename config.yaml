@@ -37,7 +37,6 @@ env:
 backend_envs:
   trellis2: trellis2      # TRELLIS.2 texturing backend (renderer stack)
   imageedit: trellis2     # Qwen-Image-Edit-2511 (diffusers 0.38.0 in trellis2 env)
-  imagegen: trellis2      # Qwen-Image + ControlNet-Union (same env)
 
 # ---------------------------------------------------------------------------
 # Model ids (all resolve inside hf_cache above; do not re-download)
@@ -49,9 +48,7 @@ models:
   # Fetched by scripts/download_orient_anything.py into the shared cache.
   orient: Viglong/OriAnyV2_ckpt
   vlm: Qwen/Qwen2.5-VL-7B-Instruct                    # Stage V material analysis
-  imageedit: Qwen/Qwen-Image-Edit-2511                # Stage E image enhancement (edit path)
-  imagegen: Qwen/Qwen-Image                           # Stage E image generation (generate path)
-  imagegen_controlnet: InstantX/Qwen-Image-ControlNet-Union  # ControlNet for canny conditioning
+  imageedit: Qwen/Qwen-Image-Edit-2511                # Stage E image enhancement
 
 
 # ---------------------------------------------------------------------------
@@ -75,6 +72,7 @@ render:
   canonical_pitch: 0.0
   contact_pitch_deg: 15
   canny_thresholds: [100, 200]
+  condition_yaw_offset: 0.4363  # ~25 deg off front
 
 texture:
   trellis2_resolution: 1024
@@ -101,14 +99,8 @@ articulated:
   min_group_area_frac: 0.0005
   collision_mode: symlink       # textured URDF collision meshes: symlink original textured_objs
 
-# Stage E (imageedit) defaults - edit path.
+# Stage E (imageedit) defaults.
 imageedit:
   num_inference_steps: 40
   guidance_scale: 1.0
   true_cfg_scale: 4.0
-
-# Stage E (imagegen) defaults - generate path (Qwen-Image + ControlNet-Union).
-imagegen:
-  num_inference_steps: 30
-  true_cfg_scale: 4.0
-  controlnet_conditioning_scale: 1.0

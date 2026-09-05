@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="window_sill_air_purifier">
+	<material name="warm_white_plastic">
+		<color rgba="0.86 0.84 0.78 1" />
+	</material>
+	<material name="charcoal_plastic">
+		<color rgba="0.05 0.055 0.055 1" />
+	</material>
+	<material name="dark_filter_media">
+		<color rgba="0.015 0.018 0.017 1" />
+	</material>
+	<material name="brushed_steel">
+		<color rgba="0.62 0.64 0.62 1" />
+	</material>
+	<material name="black_rubber">
+		<color rgba="0.01 0.01 0.012 1" />
+	</material>
+	<link name="housing">
+		<visual name="housing__housing_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__housing_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__lower_guide_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__lower_guide_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_guide_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_guide_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rubber_foot_0_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rubber_foot_0_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rubber_foot_0_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rubber_foot_0_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rubber_foot_1_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rubber_foot_1_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rubber_foot_1_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rubber_foot_1_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__fixed_hinge_leaf_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__fixed_hinge_leaf_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__fixed_hinge_leaf_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__fixed_hinge_leaf_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rear_window_gasket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rear_window_gasket.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="lid">
+		<visual name="lid__lid_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__lid_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="lid__top_service_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__top_service_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="lid__moving_hinge_leaf_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__moving_hinge_leaf_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="lid__hinge_barrel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__hinge_barrel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="lid__moving_hinge_leaf_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__moving_hinge_leaf_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="lid__hinge_barrel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/lid__hinge_barrel_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="pre_filter">
+		<visual name="pre_filter__filter_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__filter_face.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__top_filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__top_filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__bottom_filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__bottom_filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__filter_frame_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__filter_frame_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__filter_frame_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__filter_frame_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__lower_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__lower_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__upper_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__upper_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="pre_filter__pull_handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pre_filter__pull_handle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_lid" type="revolute">
+		<origin xyz="0 0.124 0.155" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="lid" />
+		<axis xyz="-1 0 0" />
+		<limit effort="8" velocity="2" lower="0" upper="1.25" />
+	</joint>
+	<joint name="housing_to_pre_filter" type="prismatic">
+		<origin xyz="0 -0.12 0.095" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="pre_filter" />
+		<axis xyz="0 -1 0" />
+		<limit effort="25" velocity="0.22" lower="0" upper="0.12" />
+	</joint>
+</robot>

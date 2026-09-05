@@ -1,0 +1,224 @@
+{
+  "group_order": [
+    "body__top_shell",
+    "body__back_wall",
+    "body__side_wall",
+    "body__side_wall_1",
+    "body__rear_corner",
+    "body__rear_corner_1",
+    "body__front_corner",
+    "body__front_corner_1",
+    "body__front_side",
+    "body__front_side_1",
+    "body__front_lower_rail",
+    "body__control_band",
+    "chamber__chamber_floor",
+    "chamber__chamber_roof",
+    "chamber__chamber_side",
+    "chamber__chamber_side_1",
+    "chamber__chamber_back",
+    "chamber__flange_top",
+    "chamber__flange_bottom",
+    "chamber__flange_side",
+    "chamber__flange_side_1",
+    "drawer__drawer_front",
+    "drawer__window_lens",
+    "drawer__drawer_floor",
+    "drawer__drawer_side",
+    "drawer__drawer_side_1",
+    "drawer__drawer_back",
+    "drawer__drawer_inner_front",
+    "drawer__handle",
+    "drawer__handle_arm",
+    "drawer__handle_arm_1",
+    "basket__basket_floor",
+    "basket__basket_side",
+    "basket__basket_side_1",
+    "basket__basket_back",
+    "basket__basket_front",
+    "plunger__release_plunger",
+    "dial__timer_dial",
+    "button_0__button_cap",
+    "button_1__button_cap",
+    "button_2__button_cap",
+    "button_3__button_cap"
+  ],
+  "face_ranges": {
+    "body__top_shell": [
+      0,
+      12
+    ],
+    "body__back_wall": [
+      12,
+      24
+    ],
+    "body__side_wall": [
+      24,
+      36
+    ],
+    "body__side_wall_1": [
+      36,
+      48
+    ],
+    "body__rear_corner": [
+      48,
+      176
+    ],
+    "body__rear_corner_1": [
+      176,
+      304
+    ],
+    "body__front_corner": [
+      304,
+      432
+    ],
+    "body__front_corner_1": [
+      432,
+      560
+    ],
+    "body__front_side": [
+      560,
+      572
+    ],
+    "body__front_side_1": [
+      572,
+      584
+    ],
+    "body__front_lower_rail": [
+      584,
+      596
+    ],
+    "body__control_band": [
+      596,
+      608
+    ],
+    "chamber__chamber_floor": [
+      608,
+      620
+    ],
+    "chamber__chamber_roof": [
+      620,
+      632
+    ],
+    "chamber__chamber_side": [
+      632,
+      644
+    ],
+    "chamber__chamber_side_1": [
+      644,
+      656
+    ],
+    "chamber__chamber_back": [
+      656,
+      668
+    ],
+    "chamber__flange_top": [
+      668,
+      680
+    ],
+    "chamber__flange_bottom": [
+      680,
+      692
+    ],
+    "chamber__flange_side": [
+      692,
+      704
+    ],
+    "chamber__flange_side_1": [
+      704,
+      716
+    ],
+    "drawer__drawer_front": [
+      716,
+      728
+    ],
+    "drawer__window_lens": [
+      728,
+      740
+    ],
+    "drawer__drawer_floor": [
+      740,
+      752
+    ],
+    "drawer__drawer_side": [
+      752,
+      764
+    ],
+    "drawer__drawer_side_1": [
+      764,
+      776
+    ],
+    "drawer__drawer_back": [
+      776,
+      788
+    ],
+    "drawer__drawer_inner_front": [
+      788,
+      800
+    ],
+    "drawer__handle": [
+      800,
+      812
+    ],
+    "drawer__handle_arm": [
+      812,
+      824
+    ],
+    "drawer__handle_arm_1": [
+      824,
+      836
+    ],
+    "basket__basket_floor": [
+      836,
+      848
+    ],
+    "basket__basket_side": [
+      848,
+      860
+    ],
+    "basket__basket_side_1": [
+      860,
+      872
+    ],
+    "basket__basket_back": [
+      872,
+      884
+    ],
+    "basket__basket_front": [
+      884,
+      896
+    ],
+    "plunger__release_plunger": [
+      896,
+      908
+    ],
+    "dial__timer_dial": [
+      908,
+      19808
+    ],
+    "button_0__button_cap": [
+      19808,
+      19820
+    ],
+    "button_1__button_cap": [
+      19820,
+      19832
+    ],
+    "button_2__button_cap": [
+      19832,
+      19844
+    ],
+    "button_3__button_cap": [
+      19844,
+      19856
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.041999999999999996,
+      0.1675
+    ],
+    "scale": 2.4752227722772275
+  }
+}

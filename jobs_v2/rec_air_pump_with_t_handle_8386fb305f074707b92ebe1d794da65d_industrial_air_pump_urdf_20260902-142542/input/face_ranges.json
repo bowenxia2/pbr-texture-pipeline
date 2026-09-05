@@ -1,0 +1,109 @@
+{
+  "group_order": [
+    "body__guide_shell",
+    "body__barrel_base",
+    "body__barrel_shell",
+    "body__top_collar",
+    "body__pedal_tread",
+    "handle__piston_rod",
+    "handle__handle_stop",
+    "handle__top_bar",
+    "handle__top_pad_0",
+    "handle__top_pad_1",
+    "stabilizer__slide_bar",
+    "stabilizer__slider_block",
+    "stabilizer__web_0",
+    "stabilizer__web_1",
+    "stabilizer__foot_0",
+    "stabilizer__foot_1",
+    "grip__sleeve",
+    "grip__bridge",
+    "grip__loop_bar"
+  ],
+  "face_ranges": {
+    "body__guide_shell": [
+      0,
+      32
+    ],
+    "body__barrel_base": [
+      32,
+      160
+    ],
+    "body__barrel_shell": [
+      160,
+      1168
+    ],
+    "body__top_collar": [
+      1168,
+      2176
+    ],
+    "body__pedal_tread": [
+      2176,
+      2188
+    ],
+    "handle__piston_rod": [
+      2188,
+      2316
+    ],
+    "handle__handle_stop": [
+      2316,
+      2444
+    ],
+    "handle__top_bar": [
+      2444,
+      2572
+    ],
+    "handle__top_pad_0": [
+      2572,
+      2700
+    ],
+    "handle__top_pad_1": [
+      2700,
+      2828
+    ],
+    "stabilizer__slide_bar": [
+      2828,
+      2956
+    ],
+    "stabilizer__slider_block": [
+      2956,
+      2968
+    ],
+    "stabilizer__web_0": [
+      2968,
+      2980
+    ],
+    "stabilizer__web_1": [
+      2980,
+      2992
+    ],
+    "stabilizer__foot_0": [
+      2992,
+      3004
+    ],
+    "stabilizer__foot_1": [
+      3004,
+      3016
+    ],
+    "grip__sleeve": [
+      3016,
+      5032
+    ],
+    "grip__bridge": [
+      5032,
+      5056
+    ],
+    "grip__loop_bar": [
+      5056,
+      5184
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.5319955000000001
+    ],
+    "scale": 0.9328343241687662
+  }
+}

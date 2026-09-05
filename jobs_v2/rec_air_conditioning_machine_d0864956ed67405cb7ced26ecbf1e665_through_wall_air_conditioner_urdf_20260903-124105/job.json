@@ -1,0 +1,374 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665_through_wall_air_conditioner_urdf_20260903-124105",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665/model.urdf",
+  "created": "2026-09-03T12:41:05",
+  "updated": "2026-09-03T13:16:07",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 22,
+        "n_tiny": 20
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:16",
+      "finished": "2026-09-03T12:41:17",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "smooth plastic on the front face",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:19",
+      "finished": "2026-09-03T12:42:35",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665_through_wall_air_conditioner_urdf_20260903-124105/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:42:35",
+      "finished": "2026-09-03T13:07:51",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 22,
+            "n_total": 22,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665_through_wall_air_conditioner_urdf_20260903-124105/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T13:07:52",
+      "finished": "2026-09-03T13:16:07",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_d0864956ed67405cb7ced26ecbf1e665/model.urdf",
+    "category": "through wall air conditioner",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.535,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.535,
+        0.5,
+        0.42100000000000004
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__bottom_shell",
+        "link": "body",
+        "label": "bottom_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.18238016907068572,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_shell",
+        "link": "body",
+        "label": "top_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.18238016907068574,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__left_shell",
+        "link": "body",
+        "label": "left_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06765609410748437,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__right_shell",
+        "link": "body",
+        "label": "right_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06765609410748437,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__back_shell",
+        "link": "body",
+        "label": "back_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13869259684526017,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_band",
+        "link": "body",
+        "label": "top_band",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.025211890573660266,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__bottom_band",
+        "link": "body",
+        "label": "bottom_band",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0361949806828064,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__mid_band",
+        "link": "body",
+        "label": "mid_band",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.023152561178195342,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__control_separator",
+        "link": "body",
+        "label": "control_separator",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00846267815721237,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__intake_grille",
+        "link": "body",
+        "label": "intake_grille",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/ac_intake_grille.obj"
+        ],
+        "n_faces": 2320,
+        "area_frac": 0.05409200796747931,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__outlet_cavity",
+        "link": "body",
+        "label": "outlet_cavity",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.12139034439619369,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__control_backer",
+        "link": "body",
+        "label": "control_backer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06783482835690209,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "flap__flap_panel",
+        "link": "flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017242674365927205,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap__flap_barrel",
+        "link": "flap",
+        "label": "flap_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00352907162621123,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "button_0__button_cap",
+        "link": "button_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004960523009201621,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_0__button_stem",
+        "link": "button_0",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005349075725327075,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_1__button_cap",
+        "link": "button_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004960523009201621,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_1__button_stem",
+        "link": "button_1",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005349075725327075,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_2__button_cap",
+        "link": "button_2",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004960523009201621,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_2__button_stem",
+        "link": "button_2",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005349075725327075,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_3__button_cap",
+        "link": "button_3",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004960523009201621,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_3__button_stem",
+        "link": "button_3",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005349075725327075,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

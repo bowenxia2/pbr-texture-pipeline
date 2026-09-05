@@ -1,0 +1,181 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1011376,
+  "groups": {
+    "frame__frame_core": {
+      "texture_size": 1024,
+      "n_faces": 3024,
+      "texels": 810354,
+      "field_voxels": 328028
+    },
+    "frame__gauge_boss": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 708341,
+      "field_voxels": 2452
+    },
+    "frame__foot_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59445,
+      "field_voxels": 59014
+    },
+    "frame__foot_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59445,
+      "field_voxels": 59014
+    },
+    "frame__bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55544,
+      "field_voxels": 55055
+    },
+    "frame__tread_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56374,
+      "field_voxels": 38049
+    },
+    "frame__tread_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56374,
+      "field_voxels": 38049
+    },
+    "frame__hose": {
+      "texture_size": 1024,
+      "n_faces": 3924,
+      "texels": 253739,
+      "field_voxels": 41779
+    },
+    "frame__hose_dock": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54689,
+      "field_voxels": 6108
+    },
+    "frame__clip_mid": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61008,
+      "field_voxels": 4052
+    },
+    "frame__clip_top": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58105,
+      "field_voxels": 4358
+    },
+    "carriage__rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 724966,
+      "field_voxels": 53185
+    },
+    "carriage__stop_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 769200,
+      "field_voxels": 4817
+    },
+    "carriage__yoke": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51774,
+      "field_voxels": 14088
+    },
+    "carriage__crossbar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 743633,
+      "field_voxels": 45168
+    },
+    "carriage__retainer_left": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 646947,
+      "field_voxels": 2284
+    },
+    "carriage__retainer_right": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 646950,
+      "field_voxels": 2413
+    },
+    "carriage__handle_left": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 890567,
+      "field_voxels": 34106
+    },
+    "carriage__handle_right": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 862305,
+      "field_voxels": 33949
+    },
+    "grip__sleeve": {
+      "texture_size": 1024,
+      "n_faces": 448,
+      "texels": 727099,
+      "field_voxels": 22251
+    },
+    "grip__strap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52978,
+      "field_voxels": 19066
+    },
+    "grip__lower_bar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 803873,
+      "field_voxels": 16704
+    },
+    "gauge__shell": {
+      "texture_size": 1024,
+      "n_faces": 448,
+      "texels": 515457,
+      "field_voxels": 28043
+    },
+    "gauge__dial": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 560850,
+      "field_voxels": 15061
+    },
+    "gauge__lens": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 560833,
+      "field_voxels": 15059
+    },
+    "gauge__stem": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 684436,
+      "field_voxels": 1940
+    },
+    "gauge__pivot": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 35902,
+      "field_voxels": 538
+    },
+    "needle__pointer": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46106,
+      "field_voxels": 590
+    },
+    "needle__hub": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 42606,
+      "field_voxels": 392
+    }
+  }
+}

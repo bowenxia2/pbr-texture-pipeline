@@ -132,12 +132,6 @@ IMAGEEDIT_ADAPTER: dict[str, str] = {
     "cwd": str(_PROJECT_ROOT),
 }
 
-IMAGEGEN_ADAPTER: dict[str, str] = {
-    "script": str(_PROJECT_ROOT / "scripts" / "imagegen_infer.py"),
-    "env": _CFG.backend_env("imagegen"),
-    "cwd": str(_PROJECT_ROOT),
-}
-
 
 def vlm_infer_batch(items_file: str, extra_env: Optional[dict] = None,
                     on_line: Optional[Callable[[str, bool], None]] = None) -> dict:
@@ -154,16 +148,6 @@ def imageedit_infer_batch(items_file: str, extra_env: Optional[dict] = None,
     spec = IMAGEEDIT_ADAPTER
     model = str(_CFG.model("imageedit"))
     extra = ["--model", model, "--items-file", items_file]
-    return _run(spec, extra, extra_env=extra_env, on_line=on_line)
-
-
-def imagegen_infer_batch(items_file: str, extra_env: Optional[dict] = None,
-                         on_line: Optional[Callable[[str, bool], None]] = None) -> dict:
-    """Batch image generation: one model load over many items (generate path)."""
-    spec = IMAGEGEN_ADAPTER
-    model = str(_CFG.model("imagegen"))
-    controlnet = str(_CFG.model("imagegen_controlnet"))
-    extra = ["--model", model, "--controlnet", controlnet, "--items-file", items_file]
     return _run(spec, extra, extra_env=extra_env, on_line=on_line)
 
 

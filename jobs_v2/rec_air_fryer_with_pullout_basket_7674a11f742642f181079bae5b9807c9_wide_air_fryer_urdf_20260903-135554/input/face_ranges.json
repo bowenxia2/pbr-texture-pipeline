@@ -1,0 +1,264 @@
+{
+  "group_order": [
+    "body__base_plinth",
+    "body__left_wall",
+    "body__right_wall",
+    "body__rear_wall",
+    "body__roof",
+    "body__upper_housing",
+    "body__control_panel_face",
+    "body__opening_header",
+    "body__opening_sill",
+    "body__left_stile",
+    "body__right_stile",
+    "drawer__drawer_floor",
+    "drawer__left_drawer_wall",
+    "drawer__right_drawer_wall",
+    "drawer__drawer_back",
+    "drawer__drawer_front_wall",
+    "drawer__drawer_front",
+    "drawer__handle_base",
+    "drawer__handle_grip",
+    "drawer__latch_floor",
+    "drawer__left_latch_guide",
+    "drawer__right_latch_guide",
+    "basket__basket_floor",
+    "basket__left_basket_wall",
+    "basket__right_basket_wall",
+    "basket__basket_back",
+    "basket__basket_front",
+    "basket__divider_plate",
+    "basket__basket_foot_0_0",
+    "basket__basket_foot_0_240",
+    "basket__basket_foot_159_0",
+    "basket__basket_foot_159_240",
+    "basket__left_slot_bridge",
+    "basket__right_slot_bridge",
+    "latch__latch_cap",
+    "latch__latch_foot",
+    "knob__knob_skirt",
+    "knob__knob_body",
+    "knob__knob_nose",
+    "knob__knob_indicator",
+    "button_0__button_cap",
+    "button_0__button_stem",
+    "button_1__button_cap",
+    "button_1__button_stem",
+    "button_2__button_cap",
+    "button_2__button_stem",
+    "button_3__button_cap",
+    "button_3__button_stem",
+    "button_4__button_cap",
+    "button_4__button_stem"
+  ],
+  "face_ranges": {
+    "body__base_plinth": [
+      0,
+      12
+    ],
+    "body__left_wall": [
+      12,
+      24
+    ],
+    "body__right_wall": [
+      24,
+      36
+    ],
+    "body__rear_wall": [
+      36,
+      48
+    ],
+    "body__roof": [
+      48,
+      60
+    ],
+    "body__upper_housing": [
+      60,
+      72
+    ],
+    "body__control_panel_face": [
+      72,
+      84
+    ],
+    "body__opening_header": [
+      84,
+      96
+    ],
+    "body__opening_sill": [
+      96,
+      108
+    ],
+    "body__left_stile": [
+      108,
+      120
+    ],
+    "body__right_stile": [
+      120,
+      132
+    ],
+    "drawer__drawer_floor": [
+      132,
+      144
+    ],
+    "drawer__left_drawer_wall": [
+      144,
+      156
+    ],
+    "drawer__right_drawer_wall": [
+      156,
+      168
+    ],
+    "drawer__drawer_back": [
+      168,
+      180
+    ],
+    "drawer__drawer_front_wall": [
+      180,
+      192
+    ],
+    "drawer__drawer_front": [
+      192,
+      204
+    ],
+    "drawer__handle_base": [
+      204,
+      216
+    ],
+    "drawer__handle_grip": [
+      216,
+      228
+    ],
+    "drawer__latch_floor": [
+      228,
+      240
+    ],
+    "drawer__left_latch_guide": [
+      240,
+      252
+    ],
+    "drawer__right_latch_guide": [
+      252,
+      264
+    ],
+    "basket__basket_floor": [
+      264,
+      276
+    ],
+    "basket__left_basket_wall": [
+      276,
+      288
+    ],
+    "basket__right_basket_wall": [
+      288,
+      300
+    ],
+    "basket__basket_back": [
+      300,
+      312
+    ],
+    "basket__basket_front": [
+      312,
+      324
+    ],
+    "basket__divider_plate": [
+      324,
+      336
+    ],
+    "basket__basket_foot_0_0": [
+      336,
+      348
+    ],
+    "basket__basket_foot_0_240": [
+      348,
+      360
+    ],
+    "basket__basket_foot_159_0": [
+      360,
+      372
+    ],
+    "basket__basket_foot_159_240": [
+      372,
+      384
+    ],
+    "basket__left_slot_bridge": [
+      384,
+      396
+    ],
+    "basket__right_slot_bridge": [
+      396,
+      408
+    ],
+    "latch__latch_cap": [
+      408,
+      420
+    ],
+    "latch__latch_foot": [
+      420,
+      432
+    ],
+    "knob__knob_skirt": [
+      432,
+      560
+    ],
+    "knob__knob_body": [
+      560,
+      688
+    ],
+    "knob__knob_nose": [
+      688,
+      816
+    ],
+    "knob__knob_indicator": [
+      816,
+      828
+    ],
+    "button_0__button_cap": [
+      828,
+      840
+    ],
+    "button_0__button_stem": [
+      840,
+      852
+    ],
+    "button_1__button_cap": [
+      852,
+      864
+    ],
+    "button_1__button_stem": [
+      864,
+      876
+    ],
+    "button_2__button_cap": [
+      876,
+      888
+    ],
+    "button_2__button_stem": [
+      888,
+      900
+    ],
+    "button_3__button_cap": [
+      900,
+      912
+    ],
+    "button_3__button_stem": [
+      912,
+      924
+    ],
+    "button_4__button_cap": [
+      924,
+      936
+    ],
+    "button_4__button_stem": [
+      936,
+      948
+    ]
+  },
+  "norm": {
+    "center": [
+      0.027499999999999997,
+      0.0,
+      0.165
+    ],
+    "scale": 2.247168539325843
+  }
+}

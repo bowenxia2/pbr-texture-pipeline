@@ -1,0 +1,119 @@
+{
+  "group_order": [
+    "body__top_shell",
+    "body__left_side",
+    "body__right_side",
+    "body__front_fascia",
+    "body__rear_bottom_rail",
+    "body__rear_left_upright",
+    "body__rear_right_upright",
+    "body__rear_intake_backer",
+    "body__left_panel_seat",
+    "body__right_panel_seat",
+    "body__front_panel_seat",
+    "body__rear_grille_slat_0",
+    "body__rear_grille_slat_1",
+    "body__rear_grille_slat_2",
+    "body__rear_grille_slat_3",
+    "body__rear_grille_slat_4",
+    "body__rear_grille_slat_5",
+    "body__rear_grille_slat_6",
+    "body__rear_grille_slat_7",
+    "access_panel__panel_leaf",
+    "access_panel__pull_lip"
+  ],
+  "face_ranges": {
+    "body__top_shell": [
+      0,
+      12
+    ],
+    "body__left_side": [
+      12,
+      24
+    ],
+    "body__right_side": [
+      24,
+      36
+    ],
+    "body__front_fascia": [
+      36,
+      48
+    ],
+    "body__rear_bottom_rail": [
+      48,
+      60
+    ],
+    "body__rear_left_upright": [
+      60,
+      72
+    ],
+    "body__rear_right_upright": [
+      72,
+      84
+    ],
+    "body__rear_intake_backer": [
+      84,
+      96
+    ],
+    "body__left_panel_seat": [
+      96,
+      108
+    ],
+    "body__right_panel_seat": [
+      108,
+      120
+    ],
+    "body__front_panel_seat": [
+      120,
+      132
+    ],
+    "body__rear_grille_slat_0": [
+      132,
+      144
+    ],
+    "body__rear_grille_slat_1": [
+      144,
+      156
+    ],
+    "body__rear_grille_slat_2": [
+      156,
+      168
+    ],
+    "body__rear_grille_slat_3": [
+      168,
+      180
+    ],
+    "body__rear_grille_slat_4": [
+      180,
+      192
+    ],
+    "body__rear_grille_slat_5": [
+      192,
+      204
+    ],
+    "body__rear_grille_slat_6": [
+      204,
+      216
+    ],
+    "body__rear_grille_slat_7": [
+      216,
+      228
+    ],
+    "access_panel__panel_leaf": [
+      228,
+      240
+    ],
+    "access_panel__pull_lip": [
+      240,
+      252
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -6.938893903907228e-18,
+      0.08000000000000002
+    ],
+    "scale": 1.7856964285714285
+  }
+}

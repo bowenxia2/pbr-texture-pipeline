@@ -1,0 +1,660 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79_wall_hung_air_purifier_urdf_20260902-160649",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79/model.urdf",
+  "created": "2026-09-02T16:06:49",
+  "updated": "2026-09-02T17:08:05",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 44,
+        "n_tiny": 39
+      },
+      "seed": null,
+      "started": "2026-09-02T16:07:35",
+      "finished": "2026-09-02T16:07:37",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; metal on the hinge; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T16:07:39",
+      "finished": "2026-09-02T16:13:08",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79_wall_hung_air_purifier_urdf_20260902-160649/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T16:13:08",
+      "finished": "2026-09-02T16:48:13",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 44,
+            "n_total": 44,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79_wall_hung_air_purifier_urdf_20260902-160649/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T16:48:15",
+      "finished": "2026-09-02T17:08:05",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_84b44894c3f74e799b1480993f89de79/model.urdf",
+    "category": "wall hung air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.253,
+        0.0,
+        -0.35
+      ],
+      "max": [
+        0.24,
+        0.129,
+        0.35
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "wall_bracket__back_plate",
+        "link": "wall_bracket",
+        "label": "back_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05221616087517193,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__upper_hook",
+        "link": "wall_bracket",
+        "label": "upper_hook",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002738050241666478,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__lower_hook",
+        "link": "wall_bracket",
+        "label": "lower_hook",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002738050241666478,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__left_standoff",
+        "link": "wall_bracket",
+        "label": "left_standoff",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002165640580823091,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__right_standoff",
+        "link": "wall_bracket",
+        "label": "right_standoff",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002165640580823091,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__center_latch",
+        "link": "wall_bracket",
+        "label": "center_latch",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001441837936633216,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_frame",
+        "link": "housing",
+        "label": "front_frame",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_housing_frame.obj"
+        ],
+        "n_faces": 328,
+        "area_frac": 0.3015766964595767,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__rear_panel",
+        "link": "housing",
+        "label": "rear_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11105035787949029,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_plenum",
+        "link": "housing",
+        "label": "top_plenum",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008434751929304318,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__left_rail",
+        "link": "housing",
+        "label": "left_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.019222583371194035,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__right_rail",
+        "link": "housing",
+        "label": "right_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.019222583371194035,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__upper_hinge_leaf",
+        "link": "housing",
+        "label": "upper_hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014865349126688453,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__lower_hinge_leaf",
+        "link": "housing",
+        "label": "lower_hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014865349126688453,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__upper_knuckle",
+        "link": "housing",
+        "label": "upper_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0009943823986741,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__lower_knuckle",
+        "link": "housing",
+        "label": "lower_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0009943823986741,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__cover_panel",
+        "link": "front_cover",
+        "label": "cover_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_front_cover.obj"
+        ],
+        "n_faces": 160,
+        "area_frac": 0.11865589842322138,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__grille_recess",
+        "link": "front_cover",
+        "label": "grille_recess",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.028761783159959406,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_0",
+        "link": "front_cover",
+        "label": "grille_slat_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_1",
+        "link": "front_cover",
+        "label": "grille_slat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_2",
+        "link": "front_cover",
+        "label": "grille_slat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_3",
+        "link": "front_cover",
+        "label": "grille_slat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_4",
+        "link": "front_cover",
+        "label": "grille_slat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_5",
+        "link": "front_cover",
+        "label": "grille_slat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_6",
+        "link": "front_cover",
+        "label": "grille_slat_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__grille_slat_7",
+        "link": "front_cover",
+        "label": "grille_slat_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0013437929569421584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__status_strip",
+        "link": "front_cover",
+        "label": "status_strip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00046715549146916243,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__upper_hinge_strap",
+        "link": "front_cover",
+        "label": "upper_hinge_strap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014418379366332153,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__lower_hinge_strap",
+        "link": "front_cover",
+        "label": "lower_hinge_strap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014418379366332153,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_frame",
+        "link": "filter_cartridge",
+        "label": "filter_frame",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_filter_frame.obj"
+        ],
+        "n_faces": 328,
+        "area_frac": 0.16527745767671145,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_cartridge__media_block",
+        "link": "filter_cartridge",
+        "label": "media_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08027576895999093,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_0",
+        "link": "filter_cartridge",
+        "label": "media_pleat_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_1",
+        "link": "filter_cartridge",
+        "label": "media_pleat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_2",
+        "link": "filter_cartridge",
+        "label": "media_pleat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_3",
+        "link": "filter_cartridge",
+        "label": "media_pleat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030091157737535215,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_4",
+        "link": "filter_cartridge",
+        "label": "media_pleat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753522,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_5",
+        "link": "filter_cartridge",
+        "label": "media_pleat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753522,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_6",
+        "link": "filter_cartridge",
+        "label": "media_pleat_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753522,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_7",
+        "link": "filter_cartridge",
+        "label": "media_pleat_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030091157737535215,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_8",
+        "link": "filter_cartridge",
+        "label": "media_pleat_8",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_9",
+        "link": "filter_cartridge",
+        "label": "media_pleat_9",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__media_pleat_10",
+        "link": "filter_cartridge",
+        "label": "media_pleat_10",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003009115773753524,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__left_runner",
+        "link": "filter_cartridge",
+        "label": "left_runner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015240226990213096,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__right_runner",
+        "link": "filter_cartridge",
+        "label": "right_runner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015240226990213096,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__pull_tab",
+        "link": "filter_cartridge",
+        "label": "pull_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014130011779005525,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

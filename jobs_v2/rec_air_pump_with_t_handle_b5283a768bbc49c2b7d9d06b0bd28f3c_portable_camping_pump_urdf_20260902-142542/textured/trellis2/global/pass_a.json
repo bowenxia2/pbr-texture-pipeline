@@ -1,0 +1,43 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1034396,
+  "groups": {
+    "pump_body__body_shell": {
+      "texture_size": 1024,
+      "n_faces": 3440,
+      "texels": 820684,
+      "field_voxels": 601932
+    },
+    "shaft_handle__pump_rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 940466,
+      "field_voxels": 77232
+    },
+    "shaft_handle__t_grip": {
+      "texture_size": 1024,
+      "n_faces": 1028,
+      "texels": 822628,
+      "field_voxels": 129751
+    },
+    "shaft_handle__rod_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 767594,
+      "field_voxels": 13268
+    },
+    "left_foot__left_foot_visual": {
+      "texture_size": 1024,
+      "n_faces": 1028,
+      "texels": 832075,
+      "field_voxels": 37381
+    },
+    "right_foot__right_foot_visual": {
+      "texture_size": 1024,
+      "n_faces": 1028,
+      "texels": 832133,
+      "field_voxels": 37382
+    }
+  }
+}

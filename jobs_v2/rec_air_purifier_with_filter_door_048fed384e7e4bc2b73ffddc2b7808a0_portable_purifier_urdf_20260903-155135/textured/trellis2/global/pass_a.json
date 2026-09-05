@@ -1,0 +1,31 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 6016519,
+  "groups": {
+    "shell__housing": {
+      "texture_size": 1024,
+      "n_faces": 96,
+      "texels": 807988,
+      "field_voxels": 807683
+    },
+    "door__panel": {
+      "texture_size": 1024,
+      "n_faces": 940,
+      "texels": 655165,
+      "field_voxels": 649626
+    },
+    "filter_cartridge__cartridge": {
+      "texture_size": 1024,
+      "n_faces": 44,
+      "texels": 786472,
+      "field_voxels": 758638
+    },
+    "handle__grip": {
+      "texture_size": 1024,
+      "n_faces": 1084,
+      "texels": 787177,
+      "field_voxels": 121868
+    }
+  }
+}

@@ -1,0 +1,361 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48_cassette_air_conditioner_urdf_20260902-132504",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48/model.urdf",
+  "created": "2026-09-02T13:25:04",
+  "updated": "2026-09-02T14:25:21",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 21,
+        "n_tiny": 14
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:05",
+      "finished": "2026-09-02T13:26:06",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:13",
+      "finished": "2026-09-02T13:32:44",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48_cassette_air_conditioner_urdf_20260902-132504/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:32:44",
+      "finished": "2026-09-02T14:12:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 21,
+            "n_total": 21,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48_cassette_air_conditioner_urdf_20260902-132504/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T14:12:37",
+      "finished": "2026-09-02T14:25:21",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_043af8a6816945488cdab983f7334f48/model.urdf",
+    "category": "cassette air conditioner",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.475,
+        -0.475,
+        -0.014999999999999998
+      ],
+      "max": [
+        0.475,
+        0.475,
+        0.21500000000000002
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "panel__fascia",
+        "link": "panel",
+        "label": "fascia",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cassette_panel.obj"
+        ],
+        "n_faces": 604,
+        "area_frac": 0.39927504592242147,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "panel__plenum",
+        "link": "panel",
+        "label": "plenum",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.30537907831970984,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "panel__grille_face",
+        "link": "panel",
+        "label": "grille_face",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cassette_center_grille.obj"
+        ],
+        "n_faces": 8900,
+        "area_frac": 0.04901195626218216,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "panel__mount_frame",
+        "link": "panel",
+        "label": "mount_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08874871250658622,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_0__barrel",
+        "link": "flap_0",
+        "label": "barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005804621159100493,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "flap_0__blade",
+        "link": "flap_0",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03133050534888258,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_0__rib_0",
+        "link": "flap_0",
+        "label": "rib_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_0__rib_1",
+        "link": "flap_0",
+        "label": "rib_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_1__barrel",
+        "link": "flap_1",
+        "label": "barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005804621159100493,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "flap_1__blade",
+        "link": "flap_1",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.031330505348882584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_1__rib_0",
+        "link": "flap_1",
+        "label": "rib_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_1__rib_1",
+        "link": "flap_1",
+        "label": "rib_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_2__barrel",
+        "link": "flap_2",
+        "label": "barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005804621159100493,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "flap_2__blade",
+        "link": "flap_2",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03133050534888258,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_2__rib_0",
+        "link": "flap_2",
+        "label": "rib_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_2__rib_1",
+        "link": "flap_2",
+        "label": "rib_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_3__barrel",
+        "link": "flap_3",
+        "label": "barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005804621159100493,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "flap_3__blade",
+        "link": "flap_3",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.031330505348882584,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_3__rib_0",
+        "link": "flap_3",
+        "label": "rib_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "flap_3__rib_1",
+        "link": "flap_3",
+        "label": "rib_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010570187830906217,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "selector_dial__dial_body",
+        "link": "selector_dial",
+        "label": "dial_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cassette_selector_dial.obj"
+        ],
+        "n_faces": 2756,
+        "area_frac": 0.0005885506924432574,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

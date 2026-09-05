@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="outdoor_tower_air_purifier">
+	<material name="shell_powder">
+		<color rgba="0.78 0.8 0.78 1" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.17 0.18 0.19 1" />
+	</material>
+	<material name="deep_black">
+		<color rgba="0.09 0.1 0.1 1" />
+	</material>
+	<material name="hood_black">
+		<color rgba="0.13 0.14 0.15 1" />
+	</material>
+	<material name="filter_olive">
+		<color rgba="0.41 0.46 0.34 1" />
+	</material>
+	<material name="lens_tint">
+		<color rgba="0.38 0.62 0.51 0.8" />
+	</material>
+	<link name="tower_body">
+		<inertial>
+			<origin xyz="0 0 0.6" rpy="0 0 0" />
+			<mass value="24" />
+			<inertia ixx="3.0368" ixy="0" ixz="0" iyy="3.1112" iyz="0" izz="0.388" />
+		</inertial>
+		<visual name="tower_body__body_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__base_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__base_plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__foot_front_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__foot_front_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__foot_front_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__foot_front_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__foot_rear_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__foot_rear_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__foot_rear_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__foot_rear_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__filter_cartridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__filter_cartridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__intake_cavity">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__intake_cavity.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__status_window">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__status_window.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__status_window_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__status_window_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__top_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__top_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__exhaust_cavity">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__exhaust_cavity.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__exhaust_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__exhaust_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__exhaust_grille_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__exhaust_grille_seat.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__body_hinge_leaf_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_hinge_leaf_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__body_hinge_mount_mid">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_hinge_mount_mid.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__body_hinge_leaf_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_hinge_leaf_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__hood_post_front_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__hood_post_front_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__hood_post_front_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__hood_post_front_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__hood_post_rear_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__hood_post_rear_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__hood_post_rear_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__hood_post_rear_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__top_hood">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__top_hood.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__body_hinge_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_hinge_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="tower_body__body_hinge_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/tower_body__body_hinge_upper.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="intake_door">
+		<inertial>
+			<origin xyz="0.102 0 0" rpy="0 0 0" />
+			<mass value="2.5" />
+			<inertia ixx="0.120401" ixy="0" ixz="0" iyy="0.129003" iyz="0" izz="0.0087375" />
+		</inertial>
+		<visual name="intake_door__door_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_hinge_leaf_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_hinge_leaf_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_hinge_leaf_mid">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_hinge_leaf_mid.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_hinge_leaf_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_hinge_leaf_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_handle.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_knuckle_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_knuckle_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_knuckle_mid">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_knuckle_mid.glb" />
+			</geometry>
+		</visual>
+		<visual name="intake_door__door_knuckle_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/intake_door__door_knuckle_upper.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="intake_door_hinge" type="revolute">
+		<origin xyz="-0.102 0.133 0.54" rpy="0 0 0" />
+		<parent link="tower_body" />
+		<child link="intake_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="10" velocity="2" lower="0" upper="1.5" />
+	</joint>
+</robot>

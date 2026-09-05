@@ -1,0 +1,253 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 16117148,
+  "groups": {
+    "housing__bottom_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59520,
+      "field_voxels": 59520
+    },
+    "housing__left_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57720,
+      "field_voxels": 57720
+    },
+    "housing__back_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52387,
+      "field_voxels": 52387
+    },
+    "housing__front_bottom_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57451,
+      "field_voxels": 57451
+    },
+    "housing__front_top_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55908,
+      "field_voxels": 55797
+    },
+    "housing__front_left_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54130,
+      "field_voxels": 54130
+    },
+    "housing__front_right_bar": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54130,
+      "field_voxels": 54099
+    },
+    "housing__front_grille_slat_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30610
+    },
+    "housing__front_grille_slat_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30899
+    },
+    "housing__front_grille_slat_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30853
+    },
+    "housing__front_grille_slat_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30854
+    },
+    "housing__front_grille_slat_5": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30653
+    },
+    "housing__front_grille_slat_6": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54757,
+      "field_voxels": 30874
+    },
+    "housing__top_front_ring": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56654,
+      "field_voxels": 40996
+    },
+    "housing__top_back_ring": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56654,
+      "field_voxels": 40996
+    },
+    "housing__top_left_ring": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 48769,
+      "field_voxels": 43646
+    },
+    "housing__top_right_ring": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 48769,
+      "field_voxels": 43646
+    },
+    "housing__top_exhaust_slat_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54505,
+      "field_voxels": 44241
+    },
+    "housing__top_exhaust_slat_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54505,
+      "field_voxels": 44088
+    },
+    "housing__top_exhaust_slat_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54505,
+      "field_voxels": 43984
+    },
+    "housing__top_exhaust_slat_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54505,
+      "field_voxels": 44088
+    },
+    "housing__top_exhaust_slat_5": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54505,
+      "field_voxels": 44081
+    },
+    "housing__side_front_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60916,
+      "field_voxels": 57506
+    },
+    "housing__side_back_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60916,
+      "field_voxels": 57753
+    },
+    "housing__side_bottom_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57606,
+      "field_voxels": 57596
+    },
+    "housing__side_top_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61128,
+      "field_voxels": 61128
+    },
+    "housing__lower_guide_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55100,
+      "field_voxels": 55100
+    },
+    "housing__upper_guide_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55100,
+      "field_voxels": 55100
+    },
+    "filter_door__door_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58227,
+      "field_voxels": 58227
+    },
+    "filter_door__door_hinge_stile": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55941,
+      "field_voxels": 23205
+    },
+    "filter_door__door_pull": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57790,
+      "field_voxels": 34127
+    },
+    "hepa_filter__filter_cartridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59108,
+      "field_voxels": 59108
+    },
+    "hepa_filter__filter_media_block": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57472,
+      "field_voxels": 57472
+    },
+    "hepa_filter__filter_pleat_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29169
+    },
+    "hepa_filter__filter_pleat_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29526
+    },
+    "hepa_filter__filter_pleat_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29604
+    },
+    "hepa_filter__filter_pleat_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29604
+    },
+    "hepa_filter__filter_pleat_5": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29410
+    },
+    "hepa_filter__filter_pleat_6": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29169
+    },
+    "hepa_filter__filter_pleat_7": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61070,
+      "field_voxels": 29526
+    },
+    "hepa_filter__filter_pull_tab": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55578,
+      "field_voxels": 41048
+    }
+  }
+}

@@ -1,0 +1,452 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e_compact_purifier_urdf_20260903-162948",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e/model.urdf",
+  "created": "2026-09-03T16:29:48",
+  "updated": "2026-09-03T17:10:14",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 28,
+        "n_tiny": 24
+      },
+      "seed": null,
+      "started": "2026-09-03T16:29:49",
+      "finished": "2026-09-03T16:29:58",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T16:30:05",
+      "finished": "2026-09-03T16:31:42",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e_compact_purifier_urdf_20260903-162948/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T16:31:42",
+      "finished": "2026-09-03T16:58:23",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 28,
+            "n_total": 28,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e_compact_purifier_urdf_20260903-162948/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T16:58:25",
+      "finished": "2026-09-03T17:10:14",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_1f72a93beb1d4e4399f95907d65c4f2e/model.urdf",
+    "category": "compact purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.09,
+        -0.1105,
+        0.0
+      ],
+      "max": [
+        0.102,
+        0.1105,
+        0.4285
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__back_wall",
+        "link": "body",
+        "label": "back_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1841554325919923,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__side_wall_0",
+        "link": "body",
+        "label": "side_wall_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1483870796146681,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__side_wall_1",
+        "link": "body",
+        "label": "side_wall_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1483870796146681,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__base_wall",
+        "link": "body",
+        "label": "base_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07575321763654748,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_wall",
+        "link": "body",
+        "label": "top_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07575321763654748,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__lower_rail",
+        "link": "body",
+        "label": "lower_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.019299861680239127,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__upper_front",
+        "link": "body",
+        "label": "upper_front",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09836103139285855,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_stile_0",
+        "link": "body",
+        "label": "front_stile_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007374653235985662,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_stile_1",
+        "link": "body",
+        "label": "front_stile_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007374653235985662,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__guide_rail_0",
+        "link": "body",
+        "label": "guide_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007764936311060839,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__guide_rail_1",
+        "link": "body",
+        "label": "guide_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007764936311060839,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_0",
+        "link": "body",
+        "label": "top_vent_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017763940212117187,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_1",
+        "link": "body",
+        "label": "top_vent_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017763940212117207,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_2",
+        "link": "body",
+        "label": "top_vent_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00177639402121172,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_3",
+        "link": "body",
+        "label": "top_vent_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00177639402121172,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_4",
+        "link": "body",
+        "label": "top_vent_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017763940212117207,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_vent_5",
+        "link": "body",
+        "label": "top_vent_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017763940212117187,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__panel",
+        "link": "front_panel",
+        "label": "panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/front_panel.obj"
+        ],
+        "n_faces": 152,
+        "area_frac": 0.06723922871555979,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_panel__hinge_leaf",
+        "link": "front_panel",
+        "label": "hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001966444909943978,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__knuckle_0",
+        "link": "front_panel",
+        "label": "knuckle_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0011079775206919848,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_panel__knuckle_1",
+        "link": "front_panel",
+        "label": "knuckle_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0014364428954034573,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_panel__knuckle_2",
+        "link": "front_panel",
+        "label": "knuckle_2",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0011079775206919848,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "filter__cartridge",
+        "link": "filter",
+        "label": "cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/filter_cartridge.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13401302668320383,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "rocker_switch__switch_front",
+        "link": "rocker_switch",
+        "label": "switch_front",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007097818905714951,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "rocker_switch__switch_rear",
+        "link": "rocker_switch",
+        "label": "switch_rear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007097818905714951,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "rocker_switch__switch_bridge",
+        "link": "rocker_switch",
+        "label": "switch_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0003956161357283744,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "rocker_switch__switch_tab_0",
+        "link": "rocker_switch",
+        "label": "switch_tab_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00013962922437472036,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "rocker_switch__switch_tab_1",
+        "link": "rocker_switch",
+        "label": "switch_tab_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00013962922437472036,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

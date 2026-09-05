@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_0.png",
+        "ok": true,
+        "az": 264.0,
+        "el": 18.0,
+        "ro": 21.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_1.png",
+        "ok": true,
+        "az": 43.0,
+        "el": 24.0,
+        "ro": 21.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_2.png",
+        "ok": true,
+        "az": 359.0,
+        "el": 11.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_3.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 23.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_4.png",
+        "ok": true,
+        "az": 275.0,
+        "el": 22.0,
+        "ro": -31.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_5.png",
+        "ok": true,
+        "az": 47.0,
+        "el": 15.0,
+        "ro": -30.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_6.png",
+        "ok": true,
+        "az": 0.0,
+        "el": 20.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/100487_cart_urdf_20260826-232646/render/view_7.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 15.0,
+        "ro": 27.0,
+        "alpha": 2.0
+      }
+    ],
+    "sign": -1,
+    "front_deg": 161.99472661679945,
+    "agreement_err_deg": 88.0,
+    "implied_front_deg": [
+      96.0,
+      2.0,
+      91.0,
+      179.0,
+      265.0,
+      178.0,
+      270.0,
+      359.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 88.0 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 4
+  }
+}

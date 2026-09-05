@@ -1,0 +1,313 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2161286,
+  "groups": {
+    "bus__main_bus": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 49695,
+      "field_voxels": 49695
+    },
+    "bus__top_deck": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54168,
+      "field_voxels": 53927
+    },
+    "bus__bottom_deck": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54168,
+      "field_voxels": 54032
+    },
+    "bus__radiator_plus_x": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59227,
+      "field_voxels": 59227
+    },
+    "bus__radiator_minus_x": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59227,
+      "field_voxels": 59227
+    },
+    "bus__antenna_mount": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52780,
+      "field_voxels": 12142
+    },
+    "bus__left_array_clevis": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53666,
+      "field_voxels": 10144
+    },
+    "bus__right_array_clevis": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53666,
+      "field_voxels": 10144
+    },
+    "bus__sensor_plinth": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58548,
+      "field_voxels": 10832
+    },
+    "bus__sensor_mast": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 709852,
+      "field_voxels": 2646
+    },
+    "bus__star_tracker_dome": {
+      "texture_size": 1024,
+      "n_faces": 1280,
+      "texels": 556786,
+      "field_voxels": 2455
+    },
+    "bus__engine_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 650776,
+      "field_voxels": 12430
+    },
+    "bus__apogee_nozzle": {
+      "texture_size": 1024,
+      "n_faces": 832,
+      "texels": 531060,
+      "field_voxels": 57047
+    },
+    "left_solar_wing__hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 904642,
+      "field_voxels": 5798
+    },
+    "left_solar_wing__root_yoke": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51772,
+      "field_voxels": 8496
+    },
+    "left_solar_wing__inner_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62221,
+      "field_voxels": 62221
+    },
+    "left_solar_wing__mid_hinge_strip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52826,
+      "field_voxels": 12583
+    },
+    "left_solar_wing__outer_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61461,
+      "field_voxels": 61454
+    },
+    "left_solar_wing__top_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51182,
+      "field_voxels": 9312
+    },
+    "left_solar_wing__bottom_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51182,
+      "field_voxels": 9308
+    },
+    "left_solar_wing__inner_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52671,
+      "field_voxels": 11028
+    },
+    "left_solar_wing__outer_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52671,
+      "field_voxels": 11028
+    },
+    "left_solar_wing__inner_upper_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 61906
+    },
+    "left_solar_wing__inner_lower_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 61897
+    },
+    "left_solar_wing__outer_upper_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 62100
+    },
+    "left_solar_wing__outer_lower_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 62088
+    },
+    "right_solar_wing__hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 726333,
+      "field_voxels": 5796
+    },
+    "right_solar_wing__root_yoke": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51772,
+      "field_voxels": 8496
+    },
+    "right_solar_wing__inner_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62225,
+      "field_voxels": 62225
+    },
+    "right_solar_wing__mid_hinge_strip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52826,
+      "field_voxels": 12583
+    },
+    "right_solar_wing__outer_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61461,
+      "field_voxels": 61454
+    },
+    "right_solar_wing__top_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51182,
+      "field_voxels": 9313
+    },
+    "right_solar_wing__bottom_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51182,
+      "field_voxels": 9309
+    },
+    "right_solar_wing__inner_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52671,
+      "field_voxels": 11028
+    },
+    "right_solar_wing__outer_frame_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52671,
+      "field_voxels": 11028
+    },
+    "right_solar_wing__inner_upper_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 61906
+    },
+    "right_solar_wing__inner_lower_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 61904
+    },
+    "right_solar_wing__outer_upper_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 62100
+    },
+    "right_solar_wing__outer_lower_cells": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62396,
+      "field_voxels": 62097
+    },
+    "high_gain_antenna__mount_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 761664,
+      "field_voxels": 3916
+    },
+    "high_gain_antenna__support_boom": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 860480,
+      "field_voxels": 6527
+    },
+    "high_gain_antenna__transceiver_box": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56328,
+      "field_voxels": 7694
+    },
+    "high_gain_antenna__dish_hub": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 713037,
+      "field_voxels": 9546
+    },
+    "high_gain_antenna__dish_neck": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 738176,
+      "field_voxels": 4226
+    },
+    "high_gain_antenna__dish_shell": {
+      "texture_size": 1024,
+      "n_faces": 1280,
+      "texels": 555127,
+      "field_voxels": 59615
+    },
+    "high_gain_antenna__feed_ring": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 630054,
+      "field_voxels": 1873
+    },
+    "high_gain_antenna__feed_support_boom": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 40726,
+      "field_voxels": 1484
+    },
+    "high_gain_antenna__feed_strut_0": {
+      "texture_size": 256,
+      "n_faces": 1188,
+      "texels": 25909,
+      "field_voxels": 1282
+    },
+    "high_gain_antenna__feed_strut_1": {
+      "texture_size": 256,
+      "n_faces": 1188,
+      "texels": 24996,
+      "field_voxels": 1470
+    },
+    "high_gain_antenna__feed_strut_2": {
+      "texture_size": 256,
+      "n_faces": 1188,
+      "texels": 26486,
+      "field_voxels": 1459
+    },
+    "high_gain_antenna__feed_horn": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 732167,
+      "field_voxels": 2139
+    }
+  }
+}

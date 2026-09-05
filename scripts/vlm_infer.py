@@ -74,6 +74,35 @@ SYSTEM_PROMPT_GENERATE = (
 )
 
 
+_DETAIL_KEYWORDS = {
+    "button", "buttons", "dial", "dials", "gauge", "gauges", "display",
+    "displays", "screen", "screens", "readout", "readouts", "knob", "knobs",
+    "switch", "switches", "indicator", "indicators", "led", "leds", "icon",
+    "icons", "label", "labels", "logo", "logos", "text", "lettering",
+    "sticker", "stickers", "decal", "decals", "marking", "markings",
+    "writing", "stamp", "stamps",
+}
+
+
+def _filter_materials(text: str) -> str:
+    """Remove semicolon-separated entries that reference fine-grained surface details
+    (buttons, displays, dials, etc.) which conflict with the edit model's removal prompt.
+    Also deduplicates repeated entries."""
+    entries = [e.strip() for e in text.split(";") if e.strip()]
+    seen = set()
+    filtered = []
+    for entry in entries:
+        lower = entry.lower()
+        if lower in seen:
+            continue
+        seen.add(lower)
+        words = set(lower.split())
+        if words & _DETAIL_KEYWORDS:
+            continue
+        filtered.append(entry)
+    return "; ".join(filtered) if filtered else text
+
+
 def build_parser() -> argparse.ArgumentParser:
     ap = argparse.ArgumentParser(description="VLM material analysis (Stage V)")
     ap.add_argument("--model", required=True, help="HuggingFace model id")
@@ -161,12 +190,15 @@ def main(argv: list[str] | None = None) -> int:
         else:
             system_prompt = SYSTEM_PROMPT_EDIT
 
-        text = _generate(
+        raw_text = _generate(
             model, processor, img,
             system_prompt,
             "Describe the materials visible in this object.",
             max_tokens=args.max_tokens, temperature=args.temperature,
         )
+        text = _filter_materials(raw_text)
+        if text != raw_text:
+            print(f"[vlm]   filtered: {raw_text!r} -> {text!r}")
 
         out_path = Path(item["output"])
         out_path.parent.mkdir(parents=True, exist_ok=True)

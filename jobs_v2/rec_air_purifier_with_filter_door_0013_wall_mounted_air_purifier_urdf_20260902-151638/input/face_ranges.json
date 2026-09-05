@@ -1,0 +1,109 @@
+{
+  "group_order": [
+    "body__back_plate",
+    "body__left_side",
+    "body__right_side",
+    "body__top_cap",
+    "body__bottom_cap",
+    "body__filter_core",
+    "body__outlet_deck",
+    "body__outlet_fin_1",
+    "body__outlet_fin_2",
+    "body__outlet_fin_3",
+    "body__outlet_fin_4",
+    "body__outlet_fin_5",
+    "front_panel__panel_shell",
+    "front_panel__grille_bar_1",
+    "front_panel__grille_bar_2",
+    "front_panel__grille_bar_3",
+    "front_panel__grille_bar_4",
+    "front_panel__status_strip",
+    "front_panel__bottom_pull"
+  ],
+  "face_ranges": {
+    "body__back_plate": [
+      0,
+      12
+    ],
+    "body__left_side": [
+      12,
+      24
+    ],
+    "body__right_side": [
+      24,
+      36
+    ],
+    "body__top_cap": [
+      36,
+      48
+    ],
+    "body__bottom_cap": [
+      48,
+      60
+    ],
+    "body__filter_core": [
+      60,
+      72
+    ],
+    "body__outlet_deck": [
+      72,
+      84
+    ],
+    "body__outlet_fin_1": [
+      84,
+      96
+    ],
+    "body__outlet_fin_2": [
+      96,
+      108
+    ],
+    "body__outlet_fin_3": [
+      108,
+      120
+    ],
+    "body__outlet_fin_4": [
+      120,
+      132
+    ],
+    "body__outlet_fin_5": [
+      132,
+      144
+    ],
+    "front_panel__panel_shell": [
+      144,
+      156
+    ],
+    "front_panel__grille_bar_1": [
+      156,
+      168
+    ],
+    "front_panel__grille_bar_2": [
+      168,
+      180
+    ],
+    "front_panel__grille_bar_3": [
+      180,
+      192
+    ],
+    "front_panel__grille_bar_4": [
+      192,
+      204
+    ],
+    "front_panel__status_strip": [
+      204,
+      216
+    ],
+    "front_panel__bottom_pull": [
+      216,
+      228
+    ]
+  },
+  "norm": {
+    "center": [
+      0.059,
+      0.0,
+      0.0027500000000000024
+    ],
+    "scale": 1.5987050359712232
+  }
+}

@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wall_mounted_air_purifier">
+	<material name="housing_white">
+		<color rgba="0.94 0.95 0.96 1" />
+	</material>
+	<material name="panel_white">
+		<color rgba="0.97 0.97 0.98 1" />
+	</material>
+	<material name="vent_gray">
+		<color rgba="0.28 0.31 0.34 1" />
+	</material>
+	<material name="filter_gray">
+		<color rgba="0.67 0.69 0.72 1" />
+	</material>
+	<material name="accent_gray">
+		<color rgba="0.76 0.79 0.82 1" />
+	</material>
+	<link name="body">
+		<inertial>
+			<origin xyz="0.0525 0 0" rpy="0 0 0" />
+			<mass value="4.6" />
+			<inertia ixx="0.191667" ixy="0" ixz="0" iyy="0.15158" iyz="0" izz="0.0485396" />
+		</inertial>
+		<visual name="body__back_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__back_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_side">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_side.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_side">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_side.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__bottom_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__bottom_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__filter_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__filter_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_fin_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_fin_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_fin_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_fin_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_fin_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_fin_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_fin_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_fin_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_fin_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_fin_5.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_panel">
+		<inertial>
+			<origin xyz="0.009 0 -0.265" rpy="0 0 0" />
+			<mass value="1.1" />
+			<inertia ixx="0.0347871" ixy="0" ixz="0" iyy="0.0257789" iyz="0" izz="0.00906767" />
+		</inertial>
+		<visual name="front_panel__panel_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__panel_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__grille_bar_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__grille_bar_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__grille_bar_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__grille_bar_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__grille_bar_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__grille_bar_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__grille_bar_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__grille_bar_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__status_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__status_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__bottom_pull">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__bottom_pull.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="front_panel_hinge" type="revolute">
+		<origin xyz="0.102 0 0.255" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="front_panel" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="1.5" lower="-1.18" upper="0" />
+	</joint>
+</robot>

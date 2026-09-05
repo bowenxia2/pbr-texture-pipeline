@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "body__shell",
+    "body__control_strip",
+    "body__lower_trim",
+    "louver__hinge_barrel",
+    "louver__top_rail",
+    "louver__side_rail_0",
+    "louver__side_rail_1",
+    "louver__bottom_rail",
+    "louver__slat_0",
+    "louver__slat_1",
+    "louver__slat_2",
+    "louver__slat_3",
+    "dial__dial_knob",
+    "button_0__cap",
+    "button_0__label_band",
+    "button_1__cap",
+    "button_1__label_band",
+    "caster_pair_0__mount_plate",
+    "caster_pair_0__stem",
+    "caster_pair_0__bridge",
+    "caster_pair_0__fork_0",
+    "caster_pair_0__fork_1",
+    "caster_0_0__tire",
+    "caster_0_0__hub",
+    "caster_0_1__tire",
+    "caster_0_1__hub",
+    "caster_pair_1__mount_plate",
+    "caster_pair_1__stem",
+    "caster_pair_1__bridge",
+    "caster_pair_1__fork_0",
+    "caster_pair_1__fork_1",
+    "caster_1_0__tire",
+    "caster_1_0__hub",
+    "caster_1_1__tire",
+    "caster_1_1__hub"
+  ],
+  "face_ranges": {
+    "body__shell": [
+      0,
+      6772
+    ],
+    "body__control_strip": [
+      6772,
+      8360
+    ],
+    "body__lower_trim": [
+      8360,
+      8372
+    ],
+    "louver__hinge_barrel": [
+      8372,
+      8500
+    ],
+    "louver__top_rail": [
+      8500,
+      8512
+    ],
+    "louver__side_rail_0": [
+      8512,
+      8524
+    ],
+    "louver__side_rail_1": [
+      8524,
+      8536
+    ],
+    "louver__bottom_rail": [
+      8536,
+      8548
+    ],
+    "louver__slat_0": [
+      8548,
+      8560
+    ],
+    "louver__slat_1": [
+      8560,
+      8572
+    ],
+    "louver__slat_2": [
+      8572,
+      8584
+    ],
+    "louver__slat_3": [
+      8584,
+      8596
+    ],
+    "dial__dial_knob": [
+      8596,
+      27102
+    ],
+    "button_0__cap": [
+      27102,
+      27114
+    ],
+    "button_0__label_band": [
+      27114,
+      27126
+    ],
+    "button_1__cap": [
+      27126,
+      27138
+    ],
+    "button_1__label_band": [
+      27138,
+      27150
+    ],
+    "caster_pair_0__mount_plate": [
+      27150,
+      27162
+    ],
+    "caster_pair_0__stem": [
+      27162,
+      27174
+    ],
+    "caster_pair_0__bridge": [
+      27174,
+      27186
+    ],
+    "caster_pair_0__fork_0": [
+      27186,
+      27198
+    ],
+    "caster_pair_0__fork_1": [
+      27198,
+      27210
+    ],
+    "caster_0_0__tire": [
+      27210,
+      27338
+    ],
+    "caster_0_0__hub": [
+      27338,
+      27466
+    ],
+    "caster_0_1__tire": [
+      27466,
+      27594
+    ],
+    "caster_0_1__hub": [
+      27594,
+      27722
+    ],
+    "caster_pair_1__mount_plate": [
+      27722,
+      27734
+    ],
+    "caster_pair_1__stem": [
+      27734,
+      27746
+    ],
+    "caster_pair_1__bridge": [
+      27746,
+      27758
+    ],
+    "caster_pair_1__fork_0": [
+      27758,
+      27770
+    ],
+    "caster_pair_1__fork_1": [
+      27770,
+      27782
+    ],
+    "caster_1_0__tire": [
+      27782,
+      27910
+    ],
+    "caster_1_0__hub": [
+      27910,
+      28038
+    ],
+    "caster_1_1__tire": [
+      28038,
+      28166
+    ],
+    "caster_1_1__hub": [
+      28166,
+      28294
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.006000000000000005,
+      0.3709999889804589
+    ],
+    "scale": 1.3476953777601492
+  }
+}

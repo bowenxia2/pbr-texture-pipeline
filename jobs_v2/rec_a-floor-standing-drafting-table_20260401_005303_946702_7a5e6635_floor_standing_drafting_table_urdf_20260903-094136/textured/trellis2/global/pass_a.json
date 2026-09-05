@@ -1,0 +1,181 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 3269799,
+  "groups": {
+    "stand__left_floor_rail": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 752763,
+      "field_voxels": 79069
+    },
+    "stand__right_floor_rail": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 746234,
+      "field_voxels": 79588
+    },
+    "stand__front_floor_stretcher": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 748745,
+      "field_voxels": 110143
+    },
+    "stand__rear_floor_stretcher": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 750090,
+      "field_voxels": 112713
+    },
+    "stand__left_front_post": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 753024,
+      "field_voxels": 79686
+    },
+    "stand__right_front_post": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 742407,
+      "field_voxels": 79667
+    },
+    "stand__left_rear_post": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 944350,
+      "field_voxels": 90084
+    },
+    "stand__right_rear_post": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 943881,
+      "field_voxels": 90205
+    },
+    "stand__left_top_rail": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 761982,
+      "field_voxels": 53258
+    },
+    "stand__right_top_rail": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 758182,
+      "field_voxels": 53324
+    },
+    "stand__rear_head_rail": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 978175,
+      "field_voxels": 113215
+    },
+    "stand__left_pivot_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 837953,
+      "field_voxels": 6820
+    },
+    "stand__right_pivot_pin": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 841033,
+      "field_voxels": 6820
+    },
+    "stand__left_hinge_support": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54862,
+      "field_voxels": 27674
+    },
+    "stand__right_hinge_support": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54862,
+      "field_voxels": 27673
+    },
+    "stand__front_mid_stretcher": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50323,
+      "field_voxels": 27981
+    },
+    "stand__left_front_glide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52389,
+      "field_voxels": 11146
+    },
+    "stand__left_rear_glide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52389,
+      "field_voxels": 11146
+    },
+    "stand__right_front_glide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52389,
+      "field_voxels": 11146
+    },
+    "stand__right_rear_glide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52389,
+      "field_voxels": 11146
+    },
+    "tabletop__work_surface": {
+      "texture_size": 1024,
+      "n_faces": 96,
+      "texels": 946413,
+      "field_voxels": 944278
+    },
+    "tabletop__rear_subframe": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60976,
+      "field_voxels": 42491
+    },
+    "tabletop__left_subframe": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52008,
+      "field_voxels": 41948
+    },
+    "tabletop__right_subframe": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52008,
+      "field_voxels": 41833
+    },
+    "tabletop__left_hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 681561,
+      "field_voxels": 12404
+    },
+    "tabletop__right_hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 744212,
+      "field_voxels": 12404
+    },
+    "tabletop__left_hinge_bracket": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57138,
+      "field_voxels": 36671
+    },
+    "tabletop__right_hinge_bracket": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57138,
+      "field_voxels": 36507
+    },
+    "tabletop__paper_stop": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 49671,
+      "field_voxels": 17660
+    }
+  }
+}

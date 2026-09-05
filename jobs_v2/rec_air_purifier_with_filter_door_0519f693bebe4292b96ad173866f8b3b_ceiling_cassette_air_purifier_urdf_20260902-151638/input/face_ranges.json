@@ -1,0 +1,264 @@
+{
+  "group_order": [
+    "ceiling_plate__ceiling_tile",
+    "housing__top_pan",
+    "housing__side_wall_0",
+    "housing__side_wall_1",
+    "housing__rear_wall",
+    "housing__front_fascia",
+    "housing__rear_base_lip",
+    "housing__side_base_lip_0",
+    "housing__side_base_lip_1",
+    "housing__front_hinge_lip_0",
+    "housing__front_hinge_lip_1",
+    "housing__guide_rail_0",
+    "housing__guide_rail_1",
+    "housing__hinge_knuckle_0",
+    "housing__hinge_knuckle_1",
+    "front_grille__front_bar",
+    "front_grille__rear_bar",
+    "front_grille__side_bar_0",
+    "front_grille__side_bar_1",
+    "front_grille__center_mullion",
+    "front_grille__louver_0",
+    "front_grille__louver_1",
+    "front_grille__louver_2",
+    "front_grille__louver_3",
+    "front_grille__louver_4",
+    "front_grille__louver_5",
+    "front_grille__louver_6",
+    "front_grille__louver_7",
+    "front_grille__louver_8",
+    "front_grille__dark_opening_shadow",
+    "front_grille__perimeter_gasket",
+    "front_grille__knuckle_web_0",
+    "front_grille__grille_knuckle_0",
+    "front_grille__knuckle_web_1",
+    "front_grille__grille_knuckle_1",
+    "filter_block__filter_core",
+    "filter_block__front_filter_frame",
+    "filter_block__rear_filter_frame",
+    "filter_block__side_filter_frame_0",
+    "filter_block__side_filter_frame_1",
+    "filter_block__pleat_0",
+    "filter_block__pleat_1",
+    "filter_block__pleat_2",
+    "filter_block__pleat_3",
+    "filter_block__pleat_4",
+    "filter_block__pleat_5",
+    "filter_block__pleat_6",
+    "filter_block__runner_0",
+    "filter_block__runner_1",
+    "filter_block__pull_grip"
+  ],
+  "face_ranges": {
+    "ceiling_plate__ceiling_tile": [
+      0,
+      12
+    ],
+    "housing__top_pan": [
+      12,
+      24
+    ],
+    "housing__side_wall_0": [
+      24,
+      36
+    ],
+    "housing__side_wall_1": [
+      36,
+      48
+    ],
+    "housing__rear_wall": [
+      48,
+      60
+    ],
+    "housing__front_fascia": [
+      60,
+      72
+    ],
+    "housing__rear_base_lip": [
+      72,
+      84
+    ],
+    "housing__side_base_lip_0": [
+      84,
+      96
+    ],
+    "housing__side_base_lip_1": [
+      96,
+      108
+    ],
+    "housing__front_hinge_lip_0": [
+      108,
+      120
+    ],
+    "housing__front_hinge_lip_1": [
+      120,
+      132
+    ],
+    "housing__guide_rail_0": [
+      132,
+      144
+    ],
+    "housing__guide_rail_1": [
+      144,
+      156
+    ],
+    "housing__hinge_knuckle_0": [
+      156,
+      284
+    ],
+    "housing__hinge_knuckle_1": [
+      284,
+      412
+    ],
+    "front_grille__front_bar": [
+      412,
+      424
+    ],
+    "front_grille__rear_bar": [
+      424,
+      436
+    ],
+    "front_grille__side_bar_0": [
+      436,
+      448
+    ],
+    "front_grille__side_bar_1": [
+      448,
+      460
+    ],
+    "front_grille__center_mullion": [
+      460,
+      472
+    ],
+    "front_grille__louver_0": [
+      472,
+      484
+    ],
+    "front_grille__louver_1": [
+      484,
+      496
+    ],
+    "front_grille__louver_2": [
+      496,
+      508
+    ],
+    "front_grille__louver_3": [
+      508,
+      520
+    ],
+    "front_grille__louver_4": [
+      520,
+      532
+    ],
+    "front_grille__louver_5": [
+      532,
+      544
+    ],
+    "front_grille__louver_6": [
+      544,
+      556
+    ],
+    "front_grille__louver_7": [
+      556,
+      568
+    ],
+    "front_grille__louver_8": [
+      568,
+      580
+    ],
+    "front_grille__dark_opening_shadow": [
+      580,
+      592
+    ],
+    "front_grille__perimeter_gasket": [
+      592,
+      604
+    ],
+    "front_grille__knuckle_web_0": [
+      604,
+      616
+    ],
+    "front_grille__grille_knuckle_0": [
+      616,
+      744
+    ],
+    "front_grille__knuckle_web_1": [
+      744,
+      756
+    ],
+    "front_grille__grille_knuckle_1": [
+      756,
+      884
+    ],
+    "filter_block__filter_core": [
+      884,
+      896
+    ],
+    "filter_block__front_filter_frame": [
+      896,
+      908
+    ],
+    "filter_block__rear_filter_frame": [
+      908,
+      920
+    ],
+    "filter_block__side_filter_frame_0": [
+      920,
+      932
+    ],
+    "filter_block__side_filter_frame_1": [
+      932,
+      944
+    ],
+    "filter_block__pleat_0": [
+      944,
+      956
+    ],
+    "filter_block__pleat_1": [
+      956,
+      968
+    ],
+    "filter_block__pleat_2": [
+      968,
+      980
+    ],
+    "filter_block__pleat_3": [
+      980,
+      992
+    ],
+    "filter_block__pleat_4": [
+      992,
+      1004
+    ],
+    "filter_block__pleat_5": [
+      1004,
+      1016
+    ],
+    "filter_block__pleat_6": [
+      1016,
+      1028
+    ],
+    "filter_block__runner_0": [
+      1028,
+      1040
+    ],
+    "filter_block__runner_1": [
+      1040,
+      1052
+    ],
+    "filter_block__pull_grip": [
+      1052,
+      1064
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      -0.0785
+    ],
+    "scale": 0.9615288461538462
+  }
+}

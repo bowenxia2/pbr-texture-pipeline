@@ -1,0 +1,699 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a_glass_window_air_fryer_urdf_20260902-132504",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a/model.urdf",
+  "created": "2026-09-02T13:25:04",
+  "updated": "2026-09-02T14:25:30",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 47,
+        "n_tiny": 46
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:11",
+      "finished": "2026-09-02T13:26:13",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the entire object",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:13",
+      "finished": "2026-09-02T13:32:44",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a_glass_window_air_fryer_urdf_20260902-132504/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:32:44",
+      "finished": "2026-09-02T14:12:36",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 47,
+            "n_total": 47,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a_glass_window_air_fryer_urdf_20260902-132504/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T14:12:37",
+      "finished": "2026-09-02T14:25:30",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_551d8bacb4fa47ffa62b7206f3b40e0a/model.urdf",
+    "category": "glass window air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.17,
+        -0.15,
+        0.0
+      ],
+      "max": [
+        0.21400000000000002,
+        0.15,
+        0.385
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__body_left_wall",
+        "link": "body",
+        "label": "body_left_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.12758942381719232,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_right_wall",
+        "link": "body",
+        "label": "body_right_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.12758942381719232,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_back_wall",
+        "link": "body",
+        "label": "body_back_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1084090307299379,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_top_shell",
+        "link": "body",
+        "label": "body_top_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09426429268398612,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_base",
+        "link": "body",
+        "label": "body_base",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09895845144860235,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_upper_front",
+        "link": "body",
+        "label": "body_upper_front",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05426206031767025,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__body_lower_sill",
+        "link": "body",
+        "label": "body_lower_sill",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.023168918661369633,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__control_panel",
+        "link": "body",
+        "label": "control_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021055792529388034,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__display_glass",
+        "link": "body",
+        "label": "display_glass",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025508451164634994,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_0_0",
+        "link": "body",
+        "label": "foot_0_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011282584168973153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_0_1",
+        "link": "body",
+        "label": "foot_0_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011282584168973153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_1_0",
+        "link": "body",
+        "label": "foot_1_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011282584168973153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_1_1",
+        "link": "body",
+        "label": "foot_1_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011282584168973153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_bottom",
+        "link": "drawer",
+        "label": "drawer_bottom",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05421489232365279,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_left_wall",
+        "link": "drawer",
+        "label": "drawer_left_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.029115859347089254,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_right_wall",
+        "link": "drawer",
+        "label": "drawer_right_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.029115859347089254,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_back_wall",
+        "link": "drawer",
+        "label": "drawer_back_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02586692791916756,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_bottom",
+        "link": "drawer",
+        "label": "drawer_front_bottom",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.018961533595013423,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_top",
+        "link": "drawer",
+        "label": "drawer_front_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012191983093629517,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_left_rail",
+        "link": "drawer",
+        "label": "drawer_front_left_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005943167246198239,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_right_rail",
+        "link": "drawer",
+        "label": "drawer_front_right_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005943167246198239,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__window_glass",
+        "link": "drawer",
+        "label": "window_glass",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014588117189715798,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_bottom",
+        "link": "basket",
+        "label": "basket_bottom",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.041564436328173686,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_left_wall",
+        "link": "basket",
+        "label": "basket_left_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020372799976015415,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_right_wall",
+        "link": "basket",
+        "label": "basket_right_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020372799976015415,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_back_wall",
+        "link": "basket",
+        "label": "basket_back_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01886342416745713,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_front_wall",
+        "link": "basket",
+        "label": "basket_front_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01479565636339256,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_0_0",
+        "link": "basket",
+        "label": "basket_foot_0_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006037503234233128,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_0_1",
+        "link": "basket",
+        "label": "basket_foot_0_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006037503234233128,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_1_0",
+        "link": "basket",
+        "label": "basket_foot_1_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006037503234233132,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_1_1",
+        "link": "basket",
+        "label": "basket_foot_1_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006037503234233132,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_left_post",
+        "link": "handle",
+        "label": "handle_left_post",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017055946636708589,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_right_post",
+        "link": "handle",
+        "label": "handle_right_post",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017055946636708589,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_grip",
+        "link": "handle",
+        "label": "handle_grip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007637441591304908,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_left_shoulder",
+        "link": "handle",
+        "label": "handle_left_shoulder",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005924300048591257,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_right_shoulder",
+        "link": "handle",
+        "label": "handle_right_shoulder",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005924300048591257,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__handle_rear_shoulder",
+        "link": "handle",
+        "label": "handle_rear_shoulder",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011924068887610424,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "release_button__release_button",
+        "link": "release_button",
+        "label": "release_button",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001267875679188957,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "selector_knob__knob_shell",
+        "link": "selector_knob",
+        "label": "knob_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_selector_knob.obj"
+        ],
+        "n_faces": 20438,
+        "area_frac": 0.004498732344428243,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "program_button_0__button_cap",
+        "link": "program_button_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.000754687904279141,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_0__button_stem",
+        "link": "program_button_0",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002754610850618865,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_1__button_cap",
+        "link": "program_button_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.000754687904279141,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_1__button_stem",
+        "link": "program_button_1",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002754610850618865,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_2__button_cap",
+        "link": "program_button_2",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.000754687904279141,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_2__button_stem",
+        "link": "program_button_2",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002754610850618865,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_3__button_cap",
+        "link": "program_button_3",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.000754687904279141,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "program_button_3__button_stem",
+        "link": "program_button_3",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002754610850618865,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 5053236,
+  "groups": {
+    "body__body_shell": {
+      "texture_size": 1024,
+      "n_faces": 6800,
+      "texels": 747144,
+      "field_voxels": 746680
+    },
+    "body__guide_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58073,
+      "field_voxels": 12568
+    },
+    "body__guide_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58073,
+      "field_voxels": 12568
+    },
+    "discharge_flap__flap_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61936,
+      "field_voxels": 38063
+    },
+    "filter_drawer__grille_face": {
+      "texture_size": 1024,
+      "n_faces": 50060,
+      "texels": 731914,
+      "field_voxels": 605514
+    },
+    "filter_drawer__filter_media": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58910,
+      "field_voxels": 58910
+    },
+    "filter_drawer__pull_tab": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52217,
+      "field_voxels": 5418
+    },
+    "filter_drawer__runner_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54264,
+      "field_voxels": 9216
+    },
+    "filter_drawer__runner_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54264,
+      "field_voxels": 9216
+    }
+  }
+}

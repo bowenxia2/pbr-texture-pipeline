@@ -1,0 +1,393 @@
+<robot name="duct_mounted_air_purifier">
+  <material name="housing_color">
+    <color rgba="0.84 0.86 0.88 1" />
+    </material>
+  <material name="trim_color">
+    <color rgba="0.66 0.69 0.72 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.74 0.76 0.78 1" />
+    </material>
+  <material name="dark_hardware">
+    <color rgba="0.22 0.24 0.25 1" />
+    </material>
+  <material name="filter_media_color">
+    <color rgba="0.56 0.74 0.77 0.95" />
+    </material>
+  <link name="housing">
+    <inertial>
+      <origin xyz="0 0 0.23" rpy="0 0 0" />
+      <mass value="24" />
+      <inertia ixx="1.352" ixy="0" ixz="0" iyy="4.068" iyz="0" izz="4.2536" />
+      </inertial>
+    <visual name="bottom_shell">
+      <origin xyz="0 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.56 0.03" />
+        </geometry>
+      <material name="housing_color">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="top_shell">
+      <origin xyz="0 0 0.445" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.56 0.03" />
+        </geometry>
+      <material name="housing_color">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="0.585 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.56 0.46" />
+        </geometry>
+      <material name="housing_color">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="left_wall">
+      <origin xyz="-0.585 0 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="0.03 0.56 0.46" />
+        </geometry>
+      <material name="housing_color">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="front_shell">
+      <origin xyz="0 -0.265 0.23" rpy="0 0 0" />
+      <geometry>
+        <box size="1.2 0.03 0.46" />
+        </geometry>
+      <material name="housing_color">
+        <color rgba="0.84 0.86 0.88 1" />
+        </material>
+      </visual>
+    <visual name="rear_top_rail">
+      <origin xyz="0 0.255 0.43" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.05 0.06" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_bottom_sill">
+      <origin xyz="0 0.255 0.0275" rpy="0 0 0" />
+      <geometry>
+        <box size="1.1 0.05 0.055" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_left_jamb">
+      <origin xyz="-0.5425 0.255 0.2275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.05 0.345" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_jamb">
+      <origin xyz="0.5425 0.255 0.2275" rpy="0 0 0" />
+      <geometry>
+        <box size="0.055 0.05 0.345" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="left_filter_shelf">
+      <origin xyz="-0.53 0.04 0.204" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.24 0.012" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="right_filter_shelf">
+      <origin xyz="0.53 0.04 0.204" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.24 0.012" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="upper_filter_guide">
+      <origin xyz="0 -0.02 0.424" rpy="0 0 0" />
+      <geometry>
+        <box size="0.96 0.48 0.012" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="left_duct_flange">
+      <origin xyz="-0.606 0 0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.137" length="0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="left_duct_collar">
+      <origin xyz="-0.647 0 0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.104" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="right_duct_flange">
+      <origin xyz="0.606 0 0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.137" length="0.018" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="right_duct_collar">
+      <origin xyz="0.647 0 0.23" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.12" length="0.104" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.74 0.76 0.78 1" />
+        </material>
+      </visual>
+    <visual name="control_box">
+      <origin xyz="0.34 -0.12 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.1 0.08" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="status_window">
+      <origin xyz="0.34 -0.283 0.31" rpy="0 0 0" />
+      <geometry>
+        <box size="0.14 0.006 0.035" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hinge_mount_0">
+      <origin xyz="-0.34 0.29 0.423" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.022" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_0_a">
+      <origin xyz="-0.389 0.318 0.401" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.032" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_0_b">
+      <origin xyz="-0.291 0.318 0.401" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.032" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hinge_mount_1">
+      <origin xyz="0.34 0.29 0.423" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.04 0.022" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_1_a">
+      <origin xyz="0.291 0.318 0.401" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.032" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="hinge_ear_1_b">
+      <origin xyz="0.389 0.318 0.401" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.036 0.032" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_door">
+    <inertial>
+      <origin xyz="0 0.018 -0.1725" rpy="0 0 0" />
+      <mass value="4.5" />
+      <inertia ixx="0.0459844" ixy="0" ixz="0" iyy="0.482034" iyz="0" izz="0.43875" />
+      </inertial>
+    <visual name="door_panel">
+      <origin xyz="0 0.012 -0.1725" rpy="0 0 0" />
+      <geometry>
+        <box size="1.08 0.024 0.345" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    <visual name="service_pull">
+      <origin xyz="0 0.03 -0.285" rpy="0 0 0" />
+      <geometry>
+        <box size="0.16 0.028 0.04" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_leaf">
+      <origin xyz="-0.34 0.012 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.024 0.014" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_hinge_knuckle">
+      <origin xyz="-0.34 0.012 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.078" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_leaf">
+      <origin xyz="0.34 0.012 -0.007" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.024 0.014" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_hinge_knuckle">
+      <origin xyz="0.34 0.012 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.011" length="0.078" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_frame">
+    <inertial>
+      <origin xyz="0 -0.115 0" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.0385333" ixy="0" ixz="0" iyy="0.172867" iyz="0" izz="0.172867" />
+      </inertial>
+    <visual name="left_runner">
+      <origin xyz="-0.46 -0.14 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.32 0.035" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_runner">
+      <origin xyz="0.46 -0.14 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.32 0.035" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="top_frame">
+      <origin xyz="0 -0.02 0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.93 0.06 0.03" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="bottom_frame">
+      <origin xyz="0 -0.02 -0.155" rpy="0 0 0" />
+      <geometry>
+        <box size="0.93 0.06 0.03" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="left_frame_side">
+      <origin xyz="-0.4475 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.06 0.31" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="right_frame_side">
+      <origin xyz="0.4475 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.035 0.06 0.31" />
+        </geometry>
+      <material name="dark_hardware">
+        <color rgba="0.22 0.24 0.25 1" />
+        </material>
+      </visual>
+    <visual name="filter_media">
+      <origin xyz="0 -0.02 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.895 0.04 0.27" />
+        </geometry>
+      <material name="filter_media_color">
+        <color rgba="0.56 0.74 0.77 0.95" />
+        </material>
+      </visual>
+    <visual name="filter_pull_tab">
+      <geometry>
+        <box size="0.14 0.02 0.04" />
+        </geometry>
+      <material name="trim_color">
+        <color rgba="0.66 0.69 0.72 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="rear_access_hinge" type="revolute">
+    <origin xyz="0 0.28 0.4" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="rear_door" />
+    <axis xyz="1 0 0" />
+    <limit effort="20" velocity="1.2" lower="0" upper="1.45" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="0 0.23 0.2275" rpy="0 0 0" />
+    <parent link="housing" />
+    <child link="filter_frame" />
+    <axis xyz="0 1 0" />
+    <limit effort="15" velocity="0.25" lower="0" upper="0.2" />
+    </joint>
+  </robot>

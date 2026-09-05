@@ -1,0 +1,49 @@
+{
+  "schema_version": 7,
+  "job_id": "19179_table_urdf_20260827-181822",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/19179/mobility.urdf",
+  "created": "2026-08-27T18:18:50",
+  "updated": "2026-08-27T18:21:50",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "error",
+      "params": {},
+      "seed": null,
+      "started": "2026-08-27T18:21:47",
+      "finished": "2026-08-27T18:21:50",
+      "error": "Traceback (most recent call last):\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/batch.py\", line 105, in stage_render\n    info = AS.render(job)\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/articulated/stages.py\", line 60, in render\n    from pbr_texture_pipeline import rendering as R\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/rendering.py\", line 35, in <module>\n    from trellis2.renderers import MeshRenderer  # noqa: E402\n  File \"<frozen importlib._bootstrap>\", line 1075, in _handle_fromlist\n  File \"/mmfs1/gscratch/krishna/bxia2/TRELLIS.2/trellis2/renderers/__init__.py\", line 18, in __getattr__\n    module = importlib.import_module(f\".{module_name}\", __name__)\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n  File \"/mmfs1/gscratch/krishna/bxia2/TRELLIS.2/trellis2/renderers/mesh_renderer.py\", line 4, in <module>\n    from ..representations.mesh import Mesh, MeshWithVoxel, MeshWithPbrMaterial, TextureFilterMode, AlphaMode, TextureWrapMode\n  File \"/mmfs1/gscratch/krishna/bxia2/TRELLIS.2/trellis2/representations/mesh/__init__.py\", line 1, in <module>\n    from .base import Mesh, MeshWithVoxel, MeshWithPbrMaterial, TextureFilterMode, TextureWrapMode, AlphaMode, PbrMaterial, Texture\n  File \"/mmfs1/gscratch/krishna/bxia2/TRELLIS.2/trellis2/representations/mesh/base.py\", line 5, in <module>\n    from flex_gemm.ops.grid_sample import grid_sample_3d\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/__init__.py\", line 10, in <module>\n    from . import kernels\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/kernels/__init__.py\", line 1, in <module>\n    from . import triton\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/kernels/triton/__init__.py\", line 1, in <module>\n    from .grid_sample import *\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/kernels/triton/grid_sample/__init__.py\", line 2, in <module>\n    from .indice_weighed_sum_fwd import indice_weighed_sum_fwd\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/kernels/triton/grid_sample/indice_weighed_sum_fwd.py\", line 15, in <module>\n    def indice_weighed_sum_fwd_kernel(\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/utils/autotuner.py\", line 185, in decorator\n    return TritonPersistentCacheAutotuner(\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/flex_gemm/utils/autotuner.py\", line 35, in __init__\n    super().__init__(\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/triton/runtime/autotuner.py\", line 130, in __init__\n    self.do_bench = driver.active.get_benchmarker()\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/triton/runtime/driver.py\", line 23, in __getattr__\n    self._initialize_obj()\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/triton/runtime/driver.py\", line 20, in _initialize_obj\n    self._obj = self._init_fn()\n  File \"/mmfs1/gscratch/krishna/bxia2/conda/envs/trellis2/lib/python3.10/site-packages/triton/runtime/driver.py\", line 8, in _create_driver\n    raise RuntimeError(f\"{len(actives)} active drivers ({actives}). There should only be one.\")\nRuntimeError: 0 active drivers ([]). There should only be one.\n"
+    },
+    "vlm": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "imageedit": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "texture": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    }
+  }
+}

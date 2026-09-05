@@ -1,0 +1,144 @@
+{
+  "group_order": [
+    "body__foot_plate",
+    "body__pump_head",
+    "body__barrel",
+    "body__lower_band",
+    "body__top_collar",
+    "body__foot_pad_0",
+    "body__foot_pad_1",
+    "body__gauge_neck",
+    "body__gauge_case",
+    "body__gauge_dial",
+    "body__gauge_tick_0",
+    "body__gauge_tick_1",
+    "body__gauge_tick_2",
+    "body__gauge_tick_3",
+    "body__gauge_tick_4",
+    "body__parked_hose",
+    "body__hose_port",
+    "body__hose_clip_0",
+    "body__hose_clip_1",
+    "handle__piston_rod",
+    "handle__crossbar",
+    "handle__handle_boss",
+    "grip__grip_sleeve",
+    "grip__folding_tab",
+    "needle__pointer",
+    "needle__pivot_cap"
+  ],
+  "face_ranges": {
+    "body__foot_plate": [
+      0,
+      12
+    ],
+    "body__pump_head": [
+      12,
+      24
+    ],
+    "body__barrel": [
+      24,
+      152
+    ],
+    "body__lower_band": [
+      152,
+      280
+    ],
+    "body__top_collar": [
+      280,
+      408
+    ],
+    "body__foot_pad_0": [
+      408,
+      420
+    ],
+    "body__foot_pad_1": [
+      420,
+      432
+    ],
+    "body__gauge_neck": [
+      432,
+      560
+    ],
+    "body__gauge_case": [
+      560,
+      688
+    ],
+    "body__gauge_dial": [
+      688,
+      816
+    ],
+    "body__gauge_tick_0": [
+      816,
+      828
+    ],
+    "body__gauge_tick_1": [
+      828,
+      840
+    ],
+    "body__gauge_tick_2": [
+      840,
+      852
+    ],
+    "body__gauge_tick_3": [
+      852,
+      864
+    ],
+    "body__gauge_tick_4": [
+      864,
+      876
+    ],
+    "body__parked_hose": [
+      876,
+      3504
+    ],
+    "body__hose_port": [
+      3504,
+      4784
+    ],
+    "body__hose_clip_0": [
+      4784,
+      4796
+    ],
+    "body__hose_clip_1": [
+      4796,
+      4808
+    ],
+    "handle__piston_rod": [
+      4808,
+      4936
+    ],
+    "handle__crossbar": [
+      4936,
+      5064
+    ],
+    "handle__handle_boss": [
+      5064,
+      6344
+    ],
+    "grip__grip_sleeve": [
+      6344,
+      6472
+    ],
+    "grip__folding_tab": [
+      6472,
+      6484
+    ],
+    "needle__pointer": [
+      6484,
+      6496
+    ],
+    "needle__pivot_cap": [
+      6496,
+      6624
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.022000011019605185,
+      0.4830001377451104
+    ],
+    "scale": 1.0351860401825768
+  }
+}

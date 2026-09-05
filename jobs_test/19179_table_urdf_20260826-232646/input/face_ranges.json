@@ -1,0 +1,64 @@
+{
+  "group_order": [
+    "link_0__drawer_front-28",
+    "link_0__handle-27",
+    "link_1__drawer_front-25",
+    "link_1__drawer_bottom-29",
+    "link_1__handle-24",
+    "link_2__board-32",
+    "link_2__back_panel-19",
+    "link_2__vertical_side_panel-20",
+    "link_2__vertical_side_panel-21",
+    "link_2__bottom_panel-22"
+  ],
+  "face_ranges": {
+    "link_0__drawer_front-28": [
+      0,
+      68
+    ],
+    "link_0__handle-27": [
+      68,
+      540
+    ],
+    "link_1__drawer_front-25": [
+      540,
+      608
+    ],
+    "link_1__drawer_bottom-29": [
+      608,
+      632
+    ],
+    "link_1__handle-24": [
+      632,
+      1104
+    ],
+    "link_2__board-32": [
+      1104,
+      1152
+    ],
+    "link_2__back_panel-19": [
+      1152,
+      1176
+    ],
+    "link_2__vertical_side_panel-20": [
+      1176,
+      1200
+    ],
+    "link_2__vertical_side_panel-21": [
+      1200,
+      1224
+    ],
+    "link_2__bottom_panel-22": [
+      1224,
+      1248
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.052177999999999836,
+      -0.0006860000000000199,
+      -0.029644999999999977
+    ],
+    "scale": 0.8264803651096168
+  }
+}

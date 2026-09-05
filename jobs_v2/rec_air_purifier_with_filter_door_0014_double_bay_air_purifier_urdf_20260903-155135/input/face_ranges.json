@@ -1,0 +1,209 @@
+{
+  "group_order": [
+    "body__rear_shell",
+    "body__left_shell",
+    "body__right_shell",
+    "body__bottom_shell",
+    "body__top_shell",
+    "body__center_partition",
+    "body__front_top_strip",
+    "body__front_bottom_strip",
+    "body__left_frame_strip",
+    "body__center_frame_strip",
+    "body__right_frame_strip",
+    "body__left_filter_core",
+    "body__left_rib_1",
+    "body__left_rib_2",
+    "body__left_rib_3",
+    "body__left_rib_4",
+    "body__left_rib_5",
+    "body__left_rib_6",
+    "body__left_rib_7",
+    "body__right_filter_core",
+    "body__right_rib_1",
+    "body__right_rib_2",
+    "body__right_rib_3",
+    "body__right_rib_4",
+    "body__right_rib_5",
+    "body__right_rib_6",
+    "body__right_rib_7",
+    "body__top_vent_bar_1",
+    "body__top_vent_bar_2",
+    "body__top_vent_bar_3",
+    "body__top_vent_bar_4",
+    "body__top_vent_bar_5",
+    "body__top_vent_bar_6",
+    "body__top_vent_bar_7",
+    "body__control_panel",
+    "left_door__door_panel",
+    "left_door__handle",
+    "right_door__door_panel",
+    "right_door__handle"
+  ],
+  "face_ranges": {
+    "body__rear_shell": [
+      0,
+      12
+    ],
+    "body__left_shell": [
+      12,
+      24
+    ],
+    "body__right_shell": [
+      24,
+      36
+    ],
+    "body__bottom_shell": [
+      36,
+      48
+    ],
+    "body__top_shell": [
+      48,
+      60
+    ],
+    "body__center_partition": [
+      60,
+      72
+    ],
+    "body__front_top_strip": [
+      72,
+      84
+    ],
+    "body__front_bottom_strip": [
+      84,
+      96
+    ],
+    "body__left_frame_strip": [
+      96,
+      108
+    ],
+    "body__center_frame_strip": [
+      108,
+      120
+    ],
+    "body__right_frame_strip": [
+      120,
+      132
+    ],
+    "body__left_filter_core": [
+      132,
+      144
+    ],
+    "body__left_rib_1": [
+      144,
+      156
+    ],
+    "body__left_rib_2": [
+      156,
+      168
+    ],
+    "body__left_rib_3": [
+      168,
+      180
+    ],
+    "body__left_rib_4": [
+      180,
+      192
+    ],
+    "body__left_rib_5": [
+      192,
+      204
+    ],
+    "body__left_rib_6": [
+      204,
+      216
+    ],
+    "body__left_rib_7": [
+      216,
+      228
+    ],
+    "body__right_filter_core": [
+      228,
+      240
+    ],
+    "body__right_rib_1": [
+      240,
+      252
+    ],
+    "body__right_rib_2": [
+      252,
+      264
+    ],
+    "body__right_rib_3": [
+      264,
+      276
+    ],
+    "body__right_rib_4": [
+      276,
+      288
+    ],
+    "body__right_rib_5": [
+      288,
+      300
+    ],
+    "body__right_rib_6": [
+      300,
+      312
+    ],
+    "body__right_rib_7": [
+      312,
+      324
+    ],
+    "body__top_vent_bar_1": [
+      324,
+      336
+    ],
+    "body__top_vent_bar_2": [
+      336,
+      348
+    ],
+    "body__top_vent_bar_3": [
+      348,
+      360
+    ],
+    "body__top_vent_bar_4": [
+      360,
+      372
+    ],
+    "body__top_vent_bar_5": [
+      372,
+      384
+    ],
+    "body__top_vent_bar_6": [
+      384,
+      396
+    ],
+    "body__top_vent_bar_7": [
+      396,
+      408
+    ],
+    "body__control_panel": [
+      408,
+      420
+    ],
+    "left_door__door_panel": [
+      420,
+      432
+    ],
+    "left_door__handle": [
+      432,
+      444
+    ],
+    "right_door__door_panel": [
+      444,
+      456
+    ],
+    "right_door__handle": [
+      456,
+      468
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.021999999999999992,
+      0.313
+    ],
+    "scale": 1.3888749999999999
+  }
+}

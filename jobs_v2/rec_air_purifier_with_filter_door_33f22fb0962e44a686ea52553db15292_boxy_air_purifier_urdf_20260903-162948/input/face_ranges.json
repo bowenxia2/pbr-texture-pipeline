@@ -1,0 +1,204 @@
+{
+  "group_order": [
+    "housing__shell",
+    "housing__front_fascia",
+    "housing__front_sill",
+    "housing__control_deck",
+    "housing__dial_bezel",
+    "housing__guide_rail_0",
+    "housing__guide_rail_1",
+    "housing__hinge_jamb",
+    "housing__top_vent_panel",
+    "housing__foot_0",
+    "housing__foot_1",
+    "housing__foot_2",
+    "housing__foot_3",
+    "door__door_panel",
+    "door__door_inset",
+    "door__door_pull",
+    "door__hinge_barrel",
+    "door__hinge_leaf",
+    "filter_pack__filter_side_0",
+    "filter_pack__filter_side_1",
+    "filter_pack__filter_bottom",
+    "filter_pack__filter_top",
+    "filter_pack__filter_media",
+    "filter_pack__filter_pull",
+    "filter_pack__filter_pleat_0",
+    "filter_pack__filter_pleat_1",
+    "filter_pack__filter_pleat_2",
+    "filter_pack__filter_pleat_3",
+    "filter_pack__filter_pleat_4",
+    "filter_pack__filter_pleat_5",
+    "filter_pack__filter_pleat_6",
+    "dial__dial_shaft",
+    "dial__dial_cap",
+    "dial__dial_indicator",
+    "button_0__button_cap",
+    "button_0__button_stem",
+    "button_1__button_cap",
+    "button_1__button_stem"
+  ],
+  "face_ranges": {
+    "housing__shell": [
+      0,
+      708
+    ],
+    "housing__front_fascia": [
+      708,
+      720
+    ],
+    "housing__front_sill": [
+      720,
+      732
+    ],
+    "housing__control_deck": [
+      732,
+      744
+    ],
+    "housing__dial_bezel": [
+      744,
+      872
+    ],
+    "housing__guide_rail_0": [
+      872,
+      884
+    ],
+    "housing__guide_rail_1": [
+      884,
+      896
+    ],
+    "housing__hinge_jamb": [
+      896,
+      908
+    ],
+    "housing__top_vent_panel": [
+      908,
+      920
+    ],
+    "housing__foot_0": [
+      920,
+      1048
+    ],
+    "housing__foot_1": [
+      1048,
+      1176
+    ],
+    "housing__foot_2": [
+      1176,
+      1304
+    ],
+    "housing__foot_3": [
+      1304,
+      1432
+    ],
+    "door__door_panel": [
+      1432,
+      1444
+    ],
+    "door__door_inset": [
+      1444,
+      1456
+    ],
+    "door__door_pull": [
+      1456,
+      1468
+    ],
+    "door__hinge_barrel": [
+      1468,
+      1596
+    ],
+    "door__hinge_leaf": [
+      1596,
+      1608
+    ],
+    "filter_pack__filter_side_0": [
+      1608,
+      1620
+    ],
+    "filter_pack__filter_side_1": [
+      1620,
+      1632
+    ],
+    "filter_pack__filter_bottom": [
+      1632,
+      1644
+    ],
+    "filter_pack__filter_top": [
+      1644,
+      1656
+    ],
+    "filter_pack__filter_media": [
+      1656,
+      1668
+    ],
+    "filter_pack__filter_pull": [
+      1668,
+      1680
+    ],
+    "filter_pack__filter_pleat_0": [
+      1680,
+      1692
+    ],
+    "filter_pack__filter_pleat_1": [
+      1692,
+      1704
+    ],
+    "filter_pack__filter_pleat_2": [
+      1704,
+      1716
+    ],
+    "filter_pack__filter_pleat_3": [
+      1716,
+      1728
+    ],
+    "filter_pack__filter_pleat_4": [
+      1728,
+      1740
+    ],
+    "filter_pack__filter_pleat_5": [
+      1740,
+      1752
+    ],
+    "filter_pack__filter_pleat_6": [
+      1752,
+      1764
+    ],
+    "dial__dial_shaft": [
+      1764,
+      1892
+    ],
+    "dial__dial_cap": [
+      1892,
+      20628
+    ],
+    "dial__dial_indicator": [
+      20628,
+      20640
+    ],
+    "button_0__button_cap": [
+      20640,
+      20652
+    ],
+    "button_0__button_stem": [
+      20652,
+      20664
+    ],
+    "button_1__button_cap": [
+      20664,
+      20676
+    ],
+    "button_1__button_stem": [
+      20676,
+      20688
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.0059999999999999915,
+      0.015999999999999993,
+      0.3005
+    ],
+    "scale": 1.658358208955224
+  }
+}

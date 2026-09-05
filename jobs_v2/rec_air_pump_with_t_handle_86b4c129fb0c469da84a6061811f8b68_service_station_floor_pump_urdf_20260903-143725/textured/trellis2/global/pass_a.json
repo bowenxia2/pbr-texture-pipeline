@@ -1,0 +1,181 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1075611,
+  "groups": {
+    "body__base_hub": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 740941,
+      "field_voxels": 50334
+    },
+    "body__foot_pad_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59966,
+      "field_voxels": 50112
+    },
+    "body__foot_pad_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59966,
+      "field_voxels": 50135
+    },
+    "body__barrel_shell": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 812506,
+      "field_voxels": 422673
+    },
+    "body__guide_ring": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 752977,
+      "field_voxels": 25259
+    },
+    "body__gauge_bracket": {
+      "texture_size": 1024,
+      "n_faces": 9460,
+      "texels": 932813,
+      "field_voxels": 54439
+    },
+    "body__gauge_housing": {
+      "texture_size": 1024,
+      "n_faces": 9460,
+      "texels": 721223,
+      "field_voxels": 89127
+    },
+    "body__gauge_bezel": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 342603,
+      "field_voxels": 13802
+    },
+    "body__dial_face": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 609476,
+      "field_voxels": 18652
+    },
+    "body__button_guide": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 521555,
+      "field_voxels": 2004
+    },
+    "body__hose_port": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 816142,
+      "field_voxels": 4587
+    },
+    "body__hose": {
+      "texture_size": 1024,
+      "n_faces": 3640,
+      "texels": 450971,
+      "field_voxels": 24423
+    },
+    "body__lower_clip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57657,
+      "field_voxels": 6136
+    },
+    "body__upper_clip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58972,
+      "field_voxels": 6752
+    },
+    "body__hose_head": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50138,
+      "field_voxels": 2918
+    },
+    "body__hose_head_lever": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46380,
+      "field_voxels": 960
+    },
+    "plunger__piston_rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 729077,
+      "field_voxels": 69157
+    },
+    "plunger__handle_stem": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 791676,
+      "field_voxels": 18248
+    },
+    "plunger__guide_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 780508,
+      "field_voxels": 7516
+    },
+    "plunger__handle_center": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 47829,
+      "field_voxels": 11154
+    },
+    "plunger__handle_bar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 774554,
+      "field_voxels": 54758
+    },
+    "plunger__grip_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 810545,
+      "field_voxels": 24744
+    },
+    "plunger__grip_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 851941,
+      "field_voxels": 24502
+    },
+    "gauge_needle__needle_hub": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 43205,
+      "field_voxels": 408
+    },
+    "gauge_needle__needle_pointer": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43646,
+      "field_voxels": 722
+    },
+    "gauge_needle__needle_tail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 37770,
+      "field_voxels": 166
+    },
+    "release_button__button_shaft": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 553178,
+      "field_voxels": 862
+    },
+    "release_button__button_flange": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 634507,
+      "field_voxels": 791
+    },
+    "release_button__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 602981,
+      "field_voxels": 892
+    }
+  }
+}

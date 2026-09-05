@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="compact_floor_purifier">
+	<material name="body_finish">
+		<color rgba="0.92 0.93 0.94 1" />
+	</material>
+	<material name="trim_finish">
+		<color rgba="0.77 0.79 0.82 1" />
+	</material>
+	<material name="grille_finish">
+		<color rgba="0.26 0.29 0.32 1" />
+	</material>
+	<material name="filter_frame_finish">
+		<color rgba="0.95 0.96 0.97 1" />
+	</material>
+	<material name="filter_media_finish">
+		<color rgba="0.73 0.81 0.86 1" />
+	</material>
+	<material name="knob_finish">
+		<color rgba="0.17 0.18 0.2 1" />
+	</material>
+	<material name="shaft_finish">
+		<color rgba="0.55 0.57 0.6 1" />
+	</material>
+	<link name="housing">
+		<collision name="base_plinth">
+			<origin xyz="0 0 0.007" rpy="0 0 0" />
+			<geometry>
+				<box size="0.23 0.18 0.014" />
+			</geometry>
+		</collision>
+		<collision name="back_panel">
+			<origin xyz="0 0.086 0.25" rpy="0 0 0" />
+			<geometry>
+				<box size="0.23 0.008 0.5" />
+			</geometry>
+		</collision>
+		<collision name="side_shell_0">
+			<origin xyz="-0.111 0 0.25" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.18 0.5" />
+			</geometry>
+		</collision>
+		<collision name="side_shell_1">
+			<origin xyz="0.111 0 0.25" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.18 0.5" />
+			</geometry>
+		</collision>
+		<collision name="top_cover">
+			<origin xyz="0 0 0.496" rpy="0 0 0" />
+			<geometry>
+				<box size="0.23 0.18 0.008" />
+			</geometry>
+		</collision>
+		<collision name="upper_fascia">
+			<origin xyz="0 -0.086 0.376" rpy="0 0 0" />
+			<geometry>
+				<box size="0.214 0.008 0.232" />
+			</geometry>
+		</collision>
+		<collision name="front_grille">
+			<origin xyz="0 -0.088 0.345" rpy="0 0 0" />
+			<geometry>
+				<box size="0.138 0.004 0.116" />
+			</geometry>
+		</collision>
+		<collision name="front_jamb_0">
+			<origin xyz="-0.095 -0.086 0.1575" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.008 0.205" />
+			</geometry>
+		</collision>
+		<collision name="front_jamb_1">
+			<origin xyz="0.095 -0.086 0.1575" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.008 0.205" />
+			</geometry>
+		</collision>
+		<collision name="front_sill">
+			<origin xyz="0 -0.086 0.0275" rpy="0 0 0" />
+			<geometry>
+				<box size="0.214 0.008 0.055" />
+			</geometry>
+		</collision>
+		<collision name="guide_0">
+			<origin xyz="-0.091 -0.015 0.067" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.08 0.008" />
+			</geometry>
+		</collision>
+		<collision name="guide_1">
+			<origin xyz="0.091 -0.015 0.067" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.08 0.008" />
+			</geometry>
+		</collision>
+		<visual name="housing__base_plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__base_plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__back_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__back_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__side_shell_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_shell_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__side_shell_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_shell_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_cover">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_cover.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_fascia">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_fascia.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_jamb_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_jamb_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_jamb_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_jamb_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_sill">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_sill.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="service_flap">
+		<collision name="panel">
+			<origin xyz="0 -0.0035 0.1005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.162 0.007 0.201" />
+			</geometry>
+		</collision>
+		<collision name="pull_ridge">
+			<origin xyz="0 -0.0095 0.175" rpy="0 0 0" />
+			<geometry>
+				<box size="0.07 0.005 0.012" />
+			</geometry>
+		</collision>
+		<collision name="side_return_0">
+			<origin xyz="-0.077 0.005 0.0905" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.01 0.181" />
+			</geometry>
+		</collision>
+		<collision name="side_return_1">
+			<origin xyz="0.077 0.005 0.0905" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.01 0.181" />
+			</geometry>
+		</collision>
+		<visual name="service_flap__panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/service_flap__panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="service_flap__pull_ridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/service_flap__pull_ridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="service_flap__side_return_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/service_flap__side_return_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="service_flap__side_return_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/service_flap__side_return_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cassette">
+		<collision name="filter_media">
+			<origin xyz="0 0.058 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.134 0.1 0.17" />
+			</geometry>
+		</collision>
+		<collision name="frame_0">
+			<origin xyz="-0.071 0.056 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.112 0.186" />
+			</geometry>
+		</collision>
+		<collision name="frame_1">
+			<origin xyz="0.071 0.056 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.112 0.186" />
+			</geometry>
+		</collision>
+		<collision name="frame_2">
+			<origin xyz="0 0.056 0.089" rpy="0 0 0" />
+			<geometry>
+				<box size="0.134 0.112 0.008" />
+			</geometry>
+		</collision>
+		<collision name="frame_3">
+			<origin xyz="0 0.056 -0.089" rpy="0 0 0" />
+			<geometry>
+				<box size="0.134 0.112 0.008" />
+			</geometry>
+		</collision>
+		<collision name="pull_tab">
+			<origin xyz="0 -0.006 0.065" rpy="0 0 0" />
+			<geometry>
+				<box size="0.052 0.012 0.02" />
+			</geometry>
+		</collision>
+		<collision name="tab_bridge">
+			<origin xyz="0 0.005 0.045" rpy="0 0 0" />
+			<geometry>
+				<box size="0.02 0.01 0.05" />
+			</geometry>
+		</collision>
+		<visual name="filter_cassette__filter_media">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_media.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__frame_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__frame_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__frame_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__frame_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__frame_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__frame_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__frame_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__frame_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__pull_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__pull_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__tab_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__tab_bridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="control_knob">
+		<collision name="shaft">
+			<origin xyz="0.004 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.004" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="knob_cap">
+			<origin xyz="0.008 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/purifier_side_knob.obj" />
+			</geometry>
+		</collision>
+		<visual name="control_knob__shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/control_knob__shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="control_knob__knob_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/control_knob__knob_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_flap" type="revolute">
+		<origin xyz="0 -0.083 0.055" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="service_flap" />
+		<axis xyz="1 0 0" />
+		<limit effort="8" velocity="2" lower="0" upper="1.35" />
+	</joint>
+	<joint name="housing_to_filter" type="prismatic">
+		<origin xyz="0 -0.049 0.148" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_cassette" />
+		<axis xyz="0 -1 0" />
+		<limit effort="40" velocity="0.18" lower="0" upper="0.045" />
+	</joint>
+	<joint name="housing_to_knob" type="continuous">
+		<origin xyz="0.115 0.008 0.35" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="control_knob" />
+		<axis xyz="1 0 0" />
+		<limit effort="1.5" velocity="6" />
+	</joint>
+</robot>

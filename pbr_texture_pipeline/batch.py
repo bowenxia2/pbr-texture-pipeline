@@ -167,8 +167,10 @@ def stage_vlm(jobs: list[JobDir]) -> None:
 
 # --- Stage E -----------------------------------------------------------------
 def stage_imageedit(jobs: list[JobDir]) -> None:
-    """Stage E: image enhancement/generation. Edit-path and generate-path run as
-    two sequential sub-batches, each loading its model once."""
+    """Stage E: image enhancement via Qwen-Image-Edit. One model load for all items;
+    the VLM classification selects the prompt template (edit vs generate)."""
+    import numpy as np
+    from PIL import Image
     from pbr_texture_pipeline.backends import registry
     from pbr_texture_pipeline.articulated.stages import effective_category
 
@@ -177,17 +179,23 @@ def stage_imageedit(jobs: list[JobDir]) -> None:
         print("[batch][E] no approved jobs")
         return
 
-    edit_items = []
-    gen_items = []
+    items = []
+    job_has_cond: dict[str, bool] = {}
     for job in approved:
         job.start("imageedit")
-        front = job.render_front_white()
-        canny = job.render_canny(0)
+        cond_view = job.render_condition_view()
+        has_cond = cond_view.is_file()
+        job_has_cond[job.job_id] = has_cond
+
+        source = job.render_condition_front_white() if has_cond else job.render_front_white()
+        canny = job.render_condition_canny() if has_cond else job.render_canny(0)
         mat_path = job.vlm_materials()
-        if not front.is_file() or not canny.is_file() or not mat_path.is_file():
-            job.fail("imageedit", "missing front_white, canny, or materials")
+        if not source.is_file() or not canny.is_file() or not mat_path.is_file():
+            job.fail("imageedit", f"missing {source.name}, {canny.name}, or materials")
             continue
         materials = mat_path.read_text().strip()
+
+        out_path = job.enhanced_condition() if has_cond else job.enhanced_view(0)
 
         classification = "edit"
         class_path = job.vlm_classification()
@@ -196,41 +204,36 @@ def stage_imageedit(jobs: list[JobDir]) -> None:
             if classification not in ("edit", "generate"):
                 classification = "edit"
 
-        if classification == "generate":
-            gen_items.append({
-                "canny": str(canny),
-                "materials": materials,
-                "output": str(job.enhanced_view(0)),
-                "category": effective_category(job),
-                "job_id": job.job_id,
-            })
-        else:
-            edit_items.append({
-                "source": str(front),
-                "canny": str(canny),
-                "materials": materials,
-                "output": str(job.enhanced_view(0)),
-                "job_id": job.job_id,
-            })
+        items.append({
+            "source": str(source),
+            "canny": str(canny),
+            "materials": materials,
+            "output": str(out_path),
+            "classification": classification,
+            "category": effective_category(job),
+            "job_id": job.job_id,
+        })
 
-    if edit_items:
+    if items:
         items_path = Path(approved[0].root.parent) / "_items_imageedit.json"
         with open(items_path, "w") as f:
-            json.dump(edit_items, f, indent=2)
-        print(f"[batch][E] imageedit (edit path): {len(edit_items)} items")
+            json.dump(items, f, indent=2)
+        print(f"[batch][E] imageedit: {len(items)} items")
         registry.imageedit_infer_batch(str(items_path))
         items_path.unlink(missing_ok=True)
 
-    if gen_items:
-        items_path = Path(approved[0].root.parent) / "_items_imagegen.json"
-        with open(items_path, "w") as f:
-            json.dump(gen_items, f, indent=2)
-        print(f"[batch][E] imagegen (generate path): {len(gen_items)} items")
-        registry.imagegen_infer_batch(str(items_path))
-        items_path.unlink(missing_ok=True)
-
     for job in approved:
-        if job.enhanced_view(0).is_file():
+        has_cond = job_has_cond.get(job.job_id, False)
+        out_path = job.enhanced_condition() if has_cond else job.enhanced_view(0)
+        if out_path.is_file():
+            if has_cond:
+                import cv2
+                enhanced_rgb = Image.open(out_path).convert("RGB")
+                cond_rgba = Image.open(job.render_condition_view())
+                alpha = np.array(cond_rgba)[:, :, 3]
+                alpha = cv2.erode(alpha, np.ones((3, 3), np.uint8), iterations=1)
+                result = np.dstack([np.array(enhanced_rgb), alpha])
+                Image.fromarray(result, "RGBA").save(out_path)
             path_taken = "edit"
             class_path = job.vlm_classification()
             if class_path.is_file():
@@ -238,12 +241,12 @@ def stage_imageedit(jobs: list[JobDir]) -> None:
                 if path_taken not in ("edit", "generate"):
                     path_taken = "edit"
             job.finish("imageedit", params={
-                "enhanced": str(job.enhanced_view(0)),
+                "enhanced": str(out_path),
                 "path": path_taken,
             })
             print(f"[batch][E] {job.job_id}: ok ({path_taken})")
         else:
-            job.fail("imageedit", "enhanced_0.png not produced")
+            job.fail("imageedit", f"{out_path.name} not produced")
             print(f"[batch][E] FAIL {job.job_id}")
 
 

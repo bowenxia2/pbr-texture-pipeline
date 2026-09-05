@@ -1,0 +1,179 @@
+{
+  "group_order": [
+    "tower_body__body_shell",
+    "tower_body__base_plinth",
+    "tower_body__foot_front_left",
+    "tower_body__foot_front_right",
+    "tower_body__foot_rear_left",
+    "tower_body__foot_rear_right",
+    "tower_body__filter_cartridge",
+    "tower_body__intake_cavity",
+    "tower_body__status_window",
+    "tower_body__status_window_bezel",
+    "tower_body__top_deck",
+    "tower_body__exhaust_cavity",
+    "tower_body__exhaust_grille",
+    "tower_body__exhaust_grille_seat",
+    "tower_body__body_hinge_leaf_lower",
+    "tower_body__body_hinge_mount_mid",
+    "tower_body__body_hinge_leaf_upper",
+    "tower_body__hood_post_front_left",
+    "tower_body__hood_post_front_right",
+    "tower_body__hood_post_rear_left",
+    "tower_body__hood_post_rear_right",
+    "tower_body__top_hood",
+    "tower_body__body_hinge_lower",
+    "tower_body__body_hinge_upper",
+    "intake_door__door_frame",
+    "intake_door__door_grille",
+    "intake_door__door_hinge_leaf_lower",
+    "intake_door__door_hinge_leaf_mid",
+    "intake_door__door_hinge_leaf_upper",
+    "intake_door__door_handle",
+    "intake_door__door_knuckle_lower",
+    "intake_door__door_knuckle_mid",
+    "intake_door__door_knuckle_upper"
+  ],
+  "face_ranges": {
+    "tower_body__body_shell": [
+      0,
+      103568
+    ],
+    "tower_body__base_plinth": [
+      103568,
+      103696
+    ],
+    "tower_body__foot_front_left": [
+      103696,
+      103708
+    ],
+    "tower_body__foot_front_right": [
+      103708,
+      103720
+    ],
+    "tower_body__foot_rear_left": [
+      103720,
+      103732
+    ],
+    "tower_body__foot_rear_right": [
+      103732,
+      103744
+    ],
+    "tower_body__filter_cartridge": [
+      103744,
+      103872
+    ],
+    "tower_body__intake_cavity": [
+      103872,
+      104000
+    ],
+    "tower_body__status_window": [
+      104000,
+      104128
+    ],
+    "tower_body__status_window_bezel": [
+      104128,
+      104140
+    ],
+    "tower_body__top_deck": [
+      104140,
+      104404
+    ],
+    "tower_body__exhaust_cavity": [
+      104404,
+      104416
+    ],
+    "tower_body__exhaust_grille": [
+      104416,
+      105172
+    ],
+    "tower_body__exhaust_grille_seat": [
+      105172,
+      105436
+    ],
+    "tower_body__body_hinge_leaf_lower": [
+      105436,
+      105448
+    ],
+    "tower_body__body_hinge_mount_mid": [
+      105448,
+      105460
+    ],
+    "tower_body__body_hinge_leaf_upper": [
+      105460,
+      105472
+    ],
+    "tower_body__hood_post_front_left": [
+      105472,
+      105484
+    ],
+    "tower_body__hood_post_front_right": [
+      105484,
+      105496
+    ],
+    "tower_body__hood_post_rear_left": [
+      105496,
+      105508
+    ],
+    "tower_body__hood_post_rear_right": [
+      105508,
+      105520
+    ],
+    "tower_body__top_hood": [
+      105520,
+      105648
+    ],
+    "tower_body__body_hinge_lower": [
+      105648,
+      105776
+    ],
+    "tower_body__body_hinge_upper": [
+      105776,
+      105904
+    ],
+    "intake_door__door_frame": [
+      105904,
+      106168
+    ],
+    "intake_door__door_grille": [
+      106168,
+      108364
+    ],
+    "intake_door__door_hinge_leaf_lower": [
+      108364,
+      108376
+    ],
+    "intake_door__door_hinge_leaf_mid": [
+      108376,
+      108388
+    ],
+    "intake_door__door_hinge_leaf_upper": [
+      108388,
+      108400
+    ],
+    "intake_door__door_handle": [
+      108400,
+      108528
+    ],
+    "intake_door__door_knuckle_lower": [
+      108528,
+      108656
+    ],
+    "intake_door__door_knuckle_mid": [
+      108656,
+      108784
+    ],
+    "intake_door__door_knuckle_upper": [
+      108784,
+      108912
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0040000000000000036,
+      0.579
+    ],
+    "scale": 0.8635492227979276
+  }
+}

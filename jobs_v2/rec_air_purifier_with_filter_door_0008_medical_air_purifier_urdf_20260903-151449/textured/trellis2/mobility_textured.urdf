@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="medical_air_purifier">
+	<material name="shell_white">
+		<color rgba="0.93 0.95 0.96 1" />
+	</material>
+	<material name="panel_white">
+		<color rgba="0.88 0.9 0.92 1" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.2 0.23 0.26 1" />
+	</material>
+	<material name="deep_shadow">
+		<color rgba="0.12 0.14 0.16 1" />
+	</material>
+	<material name="latch_dark">
+		<color rgba="0.24 0.26 0.29 1" />
+	</material>
+	<material name="filter_media">
+		<color rgba="0.61 0.71 0.78 1" />
+	</material>
+	<material name="filter_frame">
+		<color rgba="0.72 0.76 0.79 1" />
+	</material>
+	<link name="housing">
+		<inertial>
+			<origin xyz="0 0 0.09" rpy="0 0 0" />
+			<mass value="9.5" />
+			<inertia ixx="0.58425" ixy="0" ixz="0" iyy="0.329967" iyz="0" izz="0.862917" />
+		</inertial>
+		<visual name="housing__back_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__back_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_filter_guide">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_filter_guide.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_filter_guide">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_filter_guide.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_media_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_media_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_pleat_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_pleat_8.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="hinge_hardware">
+		<inertial>
+			<origin xyz="0 0.009 0.001" rpy="0 0 0" />
+			<mass value="0.5" />
+			<inertia ixx="0.000104167" ixy="0" ixz="0" iyy="0.0104542" iyz="0" izz="0.0104833" />
+		</inertial>
+		<visual name="hinge_hardware__mount_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__mount_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_tab_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_tab_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_tab_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_tab_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_knuckle_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_knuckle_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_tab_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_tab_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_knuckle_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_knuckle_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_tab_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_tab_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="hinge_hardware__frame_knuckle_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/hinge_hardware__frame_knuckle_6.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="latch_hardware">
+		<inertial>
+			<mass value="0.2" />
+			<inertia ixx="3.33333e-05" ixy="0" ixz="0" iyy="0.00323333" iyz="0" izz="0.00325333" />
+		</inertial>
+		<visual name="latch_hardware__crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/latch_hardware__crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="latch_hardware__left_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/latch_hardware__left_base.glb" />
+			</geometry>
+		</visual>
+		<visual name="latch_hardware__left_striker">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/latch_hardware__left_striker.glb" />
+			</geometry>
+		</visual>
+		<visual name="latch_hardware__right_base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/latch_hardware__right_base.glb" />
+			</geometry>
+		</visual>
+		<visual name="latch_hardware__right_striker">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/latch_hardware__right_striker.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_door">
+		<inertial>
+			<origin xyz="0 0.34 0" rpy="0 0 0" />
+			<mass value="2.4" />
+			<inertia ixx="0.09266" ixy="0" ixz="0" iyy="0.05018" iyz="0" izz="0.14248" />
+		</inertial>
+		<visual name="filter_door__door_skin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_skin.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__bottom_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__bottom_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__top_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__top_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__left_stile">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__left_stile.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__right_stile">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__right_stile.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__hinge_strap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__hinge_strap.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_tab_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_tab_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_tab_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_tab_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_knuckle_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_knuckle_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_tab_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_tab_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__door_knuckle_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__door_knuckle_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__field_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__field_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_recess">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_recess.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__face_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__face_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_slat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_slat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_left_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_left_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__grille_right_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__grille_right_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__left_latch">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__left_latch.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__left_latch_button">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__left_latch_button.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__left_hook">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__left_hook.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__right_latch">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__right_latch.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__right_latch_button">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__right_latch_button.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_door__right_hook">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_door__right_hook.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_hinge_hardware" type="fixed">
+		<origin xyz="0 -0.349 0.161" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="hinge_hardware" />
+	</joint>
+	<joint name="housing_to_latch_hardware" type="fixed">
+		<origin xyz="0 0.324 0.159" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="latch_hardware" />
+	</joint>
+	<joint name="housing_to_filter_door" type="revolute">
+		<origin xyz="0 -0.35 0.167" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_door" />
+		<axis xyz="1 0 0" />
+		<limit effort="28" velocity="1.2" lower="0" upper="1.85" />
+	</joint>
+</robot>

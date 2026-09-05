@@ -1,0 +1,453 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wall_panel_air_purifier">
+	<link name="housing">
+		<collision name="back_plate">
+			<origin xyz="0 0.009 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.74 0.018 0.56" />
+			</geometry>
+		</collision>
+		<collision name="side_wall_0">
+			<origin xyz="-0.3525 0.069 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.035 0.102 0.56" />
+			</geometry>
+		</collision>
+		<collision name="side_wall_1">
+			<origin xyz="0.3525 0.069 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.035 0.102 0.56" />
+			</geometry>
+		</collision>
+		<collision name="top_wall">
+			<origin xyz="0 0.069 0.2625" rpy="0 0 0" />
+			<geometry>
+				<box size="0.74 0.102 0.035" />
+			</geometry>
+		</collision>
+		<collision name="bottom_wall">
+			<origin xyz="0 0.069 -0.2625" rpy="0 0 0" />
+			<geometry>
+				<box size="0.74 0.102 0.035" />
+			</geometry>
+		</collision>
+		<collision name="hinge_leaf">
+			<origin xyz="-0.353 0.124 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.008 0.48" />
+			</geometry>
+		</collision>
+		<collision name="guide_rail_0">
+			<origin xyz="-0.2 0.12 -0.241" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.22 0.008" />
+			</geometry>
+		</collision>
+		<collision name="guide_rail_1">
+			<origin xyz="0.2 0.12 -0.241" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.22 0.008" />
+			</geometry>
+		</collision>
+		<collision name="upper_door_seal">
+			<origin xyz="0 0.122 0.222" rpy="0 0 0" />
+			<geometry>
+				<box size="0.67 0.004 0.008" />
+			</geometry>
+		</collision>
+		<collision name="lower_door_seal">
+			<origin xyz="0 0.122 -0.222" rpy="0 0 0" />
+			<geometry>
+				<box size="0.67 0.004 0.008" />
+			</geometry>
+		</collision>
+		<visual name="housing__back_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__back_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__side_wall_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_wall_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__side_wall_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_wall_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__hinge_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_door_seal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_door_seal.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__lower_door_seal">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__lower_door_seal.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="access_door">
+		<collision name="door_panel">
+			<origin xyz="0.33 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.66 0.018 0.44" />
+			</geometry>
+		</collision>
+		<collision name="hinge_barrel">
+			<geometry>
+				<cylinder radius="0.012" length="0.46" />
+			</geometry>
+		</collision>
+		<collision name="front_handle">
+			<origin xyz="0.6 0.026 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.026 0.034 0.2" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_0">
+			<origin xyz="0.345 0.0105 -0.15" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_1">
+			<origin xyz="0.345 0.0105 -0.11" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_2">
+			<origin xyz="0.345 0.0105 -0.07" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_3">
+			<origin xyz="0.345 0.0105 -0.03" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_4">
+			<origin xyz="0.345 0.0105 0.01" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_5">
+			<origin xyz="0.345 0.0105 0.05" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_6">
+			<origin xyz="0.345 0.0105 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<collision name="intake_slot_7">
+			<origin xyz="0.345 0.0105 0.13" rpy="0 0 0" />
+			<geometry>
+				<box size="0.42 0.003 0.012" />
+			</geometry>
+		</collision>
+		<visual name="access_door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__hinge_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__hinge_barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__front_handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__front_handle.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__intake_slot_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__intake_slot_7.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cartridge">
+		<collision name="side_frame_0">
+			<origin xyz="-0.2575 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.025 0.045 0.38" />
+			</geometry>
+		</collision>
+		<collision name="side_frame_1">
+			<origin xyz="0.2575 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.025 0.045 0.38" />
+			</geometry>
+		</collision>
+		<collision name="upper_frame">
+			<origin xyz="0 0 0.1775" rpy="0 0 0" />
+			<geometry>
+				<box size="0.54 0.045 0.025" />
+			</geometry>
+		</collision>
+		<collision name="lower_frame">
+			<origin xyz="0 0 -0.1775" rpy="0 0 0" />
+			<geometry>
+				<box size="0.54 0.045 0.025" />
+			</geometry>
+		</collision>
+		<collision name="pleated_media">
+			<geometry>
+				<box size="0.49 0.03 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_0">
+			<origin xyz="-0.21 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_1">
+			<origin xyz="-0.15 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_2">
+			<origin xyz="-0.09 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_3">
+			<origin xyz="-0.03 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_4">
+			<origin xyz="0.03 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_5">
+			<origin xyz="0.09 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_6">
+			<origin xyz="0.15 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="pleat_rib_7">
+			<origin xyz="0.21 0.019 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.008 0.33" />
+			</geometry>
+		</collision>
+		<collision name="runner_0">
+			<origin xyz="-0.2 0.055 -0.196" rpy="0 0 0" />
+			<geometry>
+				<box size="0.034 0.22 0.012" />
+			</geometry>
+		</collision>
+		<collision name="runner_1">
+			<origin xyz="0.2 0.055 -0.196" rpy="0 0 0" />
+			<geometry>
+				<box size="0.034 0.22 0.012" />
+			</geometry>
+		</collision>
+		<visual name="filter_cartridge__side_frame_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__side_frame_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__side_frame_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__side_frame_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__upper_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__upper_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__lower_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__lower_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleated_media">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleated_media.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pleat_rib_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pleat_rib_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__runner_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__runner_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__runner_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__runner_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_door" type="revolute">
+		<origin xyz="-0.33 0.135 0" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="access_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="8" velocity="1.5" lower="0" upper="1.75" />
+	</joint>
+	<joint name="housing_to_filter" type="prismatic">
+		<origin xyz="0 0.075 -0.035" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_cartridge" />
+		<axis xyz="0 1 0" />
+		<limit effort="25" velocity="0.2" lower="0" upper="0.12" />
+	</joint>
+</robot>

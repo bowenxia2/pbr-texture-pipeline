@@ -1,0 +1,61 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2018363,
+  "groups": {
+    "link_0__outside_frame-16": {
+      "texture_size": 1024,
+      "n_faces": 742,
+      "texels": 486617,
+      "field_voxels": 423509
+    },
+    "link_1__movable_part-10": {
+      "texture_size": 1024,
+      "n_faces": 8378,
+      "texels": 360892,
+      "field_voxels": 1528
+    },
+    "link_2__movable_part-8": {
+      "texture_size": 1024,
+      "n_faces": 8344,
+      "texels": 414541,
+      "field_voxels": 1483
+    },
+    "link_3__glass-12": {
+      "texture_size": 1024,
+      "n_faces": 200,
+      "texels": 818512,
+      "field_voxels": 85188
+    },
+    "link_3__surface_board-14": {
+      "texture_size": 1024,
+      "n_faces": 898,
+      "texels": 411851,
+      "field_voxels": 351854
+    },
+    "link_3__fixed_part-9": {
+      "texture_size": 1024,
+      "n_faces": 9192,
+      "texels": 650640,
+      "field_voxels": 2855
+    },
+    "link_4__glass-13": {
+      "texture_size": 1024,
+      "n_faces": 648,
+      "texels": 404046,
+      "field_voxels": 107359
+    },
+    "link_4__surface_board-15": {
+      "texture_size": 1024,
+      "n_faces": 266,
+      "texels": 624889,
+      "field_voxels": 369934
+    },
+    "link_4__fixed_part-7": {
+      "texture_size": 1024,
+      "n_faces": 9238,
+      "texels": 645257,
+      "field_voxels": 2778
+    }
+  }
+}

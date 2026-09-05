@@ -9,10 +9,11 @@ Layout:
       job.json
       input/   mesh_norm.glb  face_ranges.json  asset/ (rebuilt URDF tree)
       render/  view_0.png  depth_0.png  canny_0.png  front_white.png
+               view_cond.png  canny_cond.png  front_white_cond.png  (3/4 view)
       groups/<gid>/  mesh.glb  norm.json
       control/ camera.json
       vlm/     materials.txt  classification.txt
-      imageedit/ enhanced_0.png
+      imageedit/ enhanced_0.png | enhanced_cond.png  (RGBA with alpha mask)
       textured/<backend>/{groups/<gid>.glb, global/pass_a.json,
                mobility_textured.urdf, assembled.glb,
                original.urdf, assembled_original.glb}
@@ -223,6 +224,15 @@ class JobDir:
     def render_front_white(self) -> Path:
         return self.path("render", "front_white.png")
 
+    def render_condition_view(self) -> Path:
+        return self.path("render", "view_cond.png")
+
+    def render_condition_canny(self) -> Path:
+        return self.path("render", "canny_cond.png")
+
+    def render_condition_front_white(self) -> Path:
+        return self.path("render", "front_white_cond.png")
+
     def contact_sheet(self) -> Path:
         return self.path("render", "contact_sheet.png")
 
@@ -236,6 +246,9 @@ class JobDir:
     # imageedit/
     def enhanced_view(self, i: int) -> Path:
         return self.path("imageedit", f"enhanced_{i}.png")
+
+    def enhanced_condition(self) -> Path:
+        return self.path("imageedit", "enhanced_cond.png")
 
     # control/
     def camera_json(self) -> Path:

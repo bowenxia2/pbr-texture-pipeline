@@ -1,0 +1,94 @@
+{
+  "group_order": [
+    "body__guide_housing",
+    "body__support_spine",
+    "body__gauge_mount",
+    "body__barrel_shell",
+    "handle__rod",
+    "handle__crossbar",
+    "handle__rod_collar",
+    "handle__grip_0",
+    "handle__grip_1",
+    "stabilizer_bar__stabilizer_bar",
+    "stabilizer_bar__foot_0",
+    "stabilizer_bar__foot_1",
+    "stabilizer_bar__stop_collar",
+    "gauge__gauge_body",
+    "release_button__button_stem",
+    "release_button__release_button"
+  ],
+  "face_ranges": {
+    "body__guide_housing": [
+      0,
+      1032
+    ],
+    "body__support_spine": [
+      1032,
+      1044
+    ],
+    "body__gauge_mount": [
+      1044,
+      1056
+    ],
+    "body__barrel_shell": [
+      1056,
+      3576
+    ],
+    "handle__rod": [
+      3576,
+      3704
+    ],
+    "handle__crossbar": [
+      3704,
+      3832
+    ],
+    "handle__rod_collar": [
+      3832,
+      3960
+    ],
+    "handle__grip_0": [
+      3960,
+      4088
+    ],
+    "handle__grip_1": [
+      4088,
+      4216
+    ],
+    "stabilizer_bar__stabilizer_bar": [
+      4216,
+      4344
+    ],
+    "stabilizer_bar__foot_0": [
+      4344,
+      4472
+    ],
+    "stabilizer_bar__foot_1": [
+      4472,
+      4600
+    ],
+    "stabilizer_bar__stop_collar": [
+      4600,
+      4728
+    ],
+    "gauge__gauge_body": [
+      4728,
+      6252
+    ],
+    "release_button__button_stem": [
+      6252,
+      6380
+    ],
+    "release_button__release_button": [
+      6380,
+      6508
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.023755011937906467,
+      0.36400008723856725
+    ],
+    "scale": 1.3736123081539293
+  }
+}

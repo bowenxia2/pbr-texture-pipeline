@@ -1,0 +1,159 @@
+{
+  "group_order": [
+    "stand__left_floor_rail",
+    "stand__right_floor_rail",
+    "stand__front_floor_stretcher",
+    "stand__rear_floor_stretcher",
+    "stand__left_front_post",
+    "stand__right_front_post",
+    "stand__left_rear_post",
+    "stand__right_rear_post",
+    "stand__left_top_rail",
+    "stand__right_top_rail",
+    "stand__rear_head_rail",
+    "stand__left_pivot_pin",
+    "stand__right_pivot_pin",
+    "stand__left_hinge_support",
+    "stand__right_hinge_support",
+    "stand__front_mid_stretcher",
+    "stand__left_front_glide",
+    "stand__left_rear_glide",
+    "stand__right_front_glide",
+    "stand__right_rear_glide",
+    "tabletop__work_surface",
+    "tabletop__rear_subframe",
+    "tabletop__left_subframe",
+    "tabletop__right_subframe",
+    "tabletop__left_hinge_barrel",
+    "tabletop__right_hinge_barrel",
+    "tabletop__left_hinge_bracket",
+    "tabletop__right_hinge_bracket",
+    "tabletop__paper_stop"
+  ],
+  "face_ranges": {
+    "stand__left_floor_rail": [
+      0,
+      128
+    ],
+    "stand__right_floor_rail": [
+      128,
+      256
+    ],
+    "stand__front_floor_stretcher": [
+      256,
+      384
+    ],
+    "stand__rear_floor_stretcher": [
+      384,
+      512
+    ],
+    "stand__left_front_post": [
+      512,
+      640
+    ],
+    "stand__right_front_post": [
+      640,
+      768
+    ],
+    "stand__left_rear_post": [
+      768,
+      896
+    ],
+    "stand__right_rear_post": [
+      896,
+      1024
+    ],
+    "stand__left_top_rail": [
+      1024,
+      1152
+    ],
+    "stand__right_top_rail": [
+      1152,
+      1280
+    ],
+    "stand__rear_head_rail": [
+      1280,
+      1408
+    ],
+    "stand__left_pivot_pin": [
+      1408,
+      1536
+    ],
+    "stand__right_pivot_pin": [
+      1536,
+      1664
+    ],
+    "stand__left_hinge_support": [
+      1664,
+      1676
+    ],
+    "stand__right_hinge_support": [
+      1676,
+      1688
+    ],
+    "stand__front_mid_stretcher": [
+      1688,
+      1700
+    ],
+    "stand__left_front_glide": [
+      1700,
+      1712
+    ],
+    "stand__left_rear_glide": [
+      1712,
+      1724
+    ],
+    "stand__right_front_glide": [
+      1724,
+      1736
+    ],
+    "stand__right_rear_glide": [
+      1736,
+      1748
+    ],
+    "tabletop__work_surface": [
+      1748,
+      1844
+    ],
+    "tabletop__rear_subframe": [
+      1844,
+      1856
+    ],
+    "tabletop__left_subframe": [
+      1856,
+      1868
+    ],
+    "tabletop__right_subframe": [
+      1868,
+      1880
+    ],
+    "tabletop__left_hinge_barrel": [
+      1880,
+      2008
+    ],
+    "tabletop__right_hinge_barrel": [
+      2008,
+      2136
+    ],
+    "tabletop__left_hinge_bracket": [
+      2136,
+      2148
+    ],
+    "tabletop__right_hinge_bracket": [
+      2148,
+      2160
+    ],
+    "tabletop__paper_stop": [
+      2160,
+      2172
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.07378147549088615,
+      0.5754964373289646
+    ],
+    "scale": 0.8688064209756237
+  }
+}

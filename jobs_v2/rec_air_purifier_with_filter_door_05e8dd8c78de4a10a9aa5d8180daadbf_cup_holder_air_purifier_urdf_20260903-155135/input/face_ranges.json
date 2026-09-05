@@ -1,0 +1,144 @@
+{
+  "group_order": [
+    "body__cup_holder_stem",
+    "body__mount_collar",
+    "body__neck_post",
+    "body__lower_disc_cover",
+    "body__upper_disc_cover",
+    "body__outer_rim",
+    "body__opening_upper_rail",
+    "body__opening_lower_rail",
+    "body__opening_left_rail",
+    "body__opening_right_rail",
+    "body__top_grille_ring",
+    "body__status_disc",
+    "filter_cap__cap_shell",
+    "filter_cap__cap_grip_tab",
+    "filter_cap__cap_twist_rib_upper",
+    "filter_cap__cap_twist_rib_lower",
+    "filter_cartridge__cartridge_frame",
+    "filter_cartridge__filter_core",
+    "filter_cartridge__upper_runner",
+    "filter_cartridge__lower_runner",
+    "filter_cartridge__filter_pleat_0",
+    "filter_cartridge__filter_pleat_1",
+    "filter_cartridge__filter_pleat_2",
+    "filter_cartridge__filter_pleat_3",
+    "filter_cartridge__filter_pleat_4",
+    "filter_cartridge__pull_tab"
+  ],
+  "face_ranges": {
+    "body__cup_holder_stem": [
+      0,
+      128
+    ],
+    "body__mount_collar": [
+      128,
+      256
+    ],
+    "body__neck_post": [
+      256,
+      384
+    ],
+    "body__lower_disc_cover": [
+      384,
+      512
+    ],
+    "body__upper_disc_cover": [
+      512,
+      640
+    ],
+    "body__outer_rim": [
+      640,
+      5964
+    ],
+    "body__opening_upper_rail": [
+      5964,
+      5976
+    ],
+    "body__opening_lower_rail": [
+      5976,
+      5988
+    ],
+    "body__opening_left_rail": [
+      5988,
+      6000
+    ],
+    "body__opening_right_rail": [
+      6000,
+      6012
+    ],
+    "body__top_grille_ring": [
+      6012,
+      6140
+    ],
+    "body__status_disc": [
+      6140,
+      6268
+    ],
+    "filter_cap__cap_shell": [
+      6268,
+      6396
+    ],
+    "filter_cap__cap_grip_tab": [
+      6396,
+      6408
+    ],
+    "filter_cap__cap_twist_rib_upper": [
+      6408,
+      6420
+    ],
+    "filter_cap__cap_twist_rib_lower": [
+      6420,
+      6432
+    ],
+    "filter_cartridge__cartridge_frame": [
+      6432,
+      6444
+    ],
+    "filter_cartridge__filter_core": [
+      6444,
+      6456
+    ],
+    "filter_cartridge__upper_runner": [
+      6456,
+      6468
+    ],
+    "filter_cartridge__lower_runner": [
+      6468,
+      6480
+    ],
+    "filter_cartridge__filter_pleat_0": [
+      6480,
+      6492
+    ],
+    "filter_cartridge__filter_pleat_1": [
+      6492,
+      6504
+    ],
+    "filter_cartridge__filter_pleat_2": [
+      6504,
+      6516
+    ],
+    "filter_cartridge__filter_pleat_3": [
+      6516,
+      6528
+    ],
+    "filter_cartridge__filter_pleat_4": [
+      6528,
+      6540
+    ],
+    "filter_cartridge__pull_tab": [
+      6540,
+      6552
+    ]
+  },
+  "norm": {
+    "center": [
+      0.009500000000000001,
+      0.0,
+      0.08
+    ],
+    "scale": 6.249937500000001
+  }
+}

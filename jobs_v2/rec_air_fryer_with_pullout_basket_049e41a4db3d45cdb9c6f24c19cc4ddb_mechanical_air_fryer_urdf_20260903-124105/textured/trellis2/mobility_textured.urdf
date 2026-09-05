@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="mechanical_air_fryer">
+	<material name="shell_steel">
+		<color rgba="0.76 0.78 0.8 1" />
+	</material>
+	<material name="drawer_black">
+		<color rgba="0.11 0.11 0.12 1" />
+	</material>
+	<material name="chrome">
+		<color rgba="0.9 0.91 0.93 1" />
+	</material>
+	<material name="signal_red">
+		<color rgba="0.78 0.12 0.1 1" />
+	</material>
+	<link name="body">
+		<collision name="shell">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="body__shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__shell.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="drawer">
+		<collision name="drawer_body">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_drawer.obj" />
+			</geometry>
+		</collision>
+		<visual name="drawer__drawer_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_body.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="timer_dial">
+		<collision name="dial">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_timer_dial.obj" />
+			</geometry>
+		</collision>
+		<visual name="timer_dial__dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/timer_dial__dial.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="temperature_dial">
+		<collision name="dial">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_temperature_dial.obj" />
+			</geometry>
+		</collision>
+		<visual name="temperature_dial__dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temperature_dial__dial.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="power_button">
+		<collision name="button_bezel">
+			<origin xyz="0.003 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_power_button_bezel.obj" />
+			</geometry>
+		</collision>
+		<collision name="button_lens">
+			<origin xyz="0.005 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_power_button_lens.obj" />
+			</geometry>
+		</collision>
+		<visual name="power_button__button_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_button__button_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="power_button__button_lens">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_button__button_lens.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="release_button">
+		<collision name="release_cap">
+			<origin xyz="0 0 0.00168" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_release_button.obj" />
+			</geometry>
+		</collision>
+		<collision name="release_stem">
+			<origin xyz="0 0 -0.002" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.008 0.006" />
+			</geometry>
+		</collision>
+		<visual name="release_button__release_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__release_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="release_button__release_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__release_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_drawer" type="prismatic">
+		<origin xyz="0.156 0 0.134" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="drawer" />
+		<axis xyz="1 0 0" />
+		<limit effort="80" velocity="0.25" lower="0" upper="0.122" />
+	</joint>
+	<joint name="body_to_timer_dial" type="continuous">
+		<origin xyz="0.156 -0.068 0.254" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="timer_dial" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.25" velocity="8" />
+	</joint>
+	<joint name="body_to_temperature_dial" type="continuous">
+		<origin xyz="0.156 0.068 0.254" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="temperature_dial" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.25" velocity="8" />
+	</joint>
+	<joint name="body_to_power_button" type="prismatic">
+		<origin xyz="0.156 0 0.252" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="power_button" />
+		<axis xyz="-1 0 0" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.004" />
+	</joint>
+	<joint name="drawer_to_release_button" type="prismatic">
+		<origin xyz="0.037 0 0.009" rpy="0 0 0" />
+		<parent link="drawer" />
+		<child link="release_button" />
+		<axis xyz="0 0 -1" />
+		<limit effort="8" velocity="0.06" lower="0" upper="0.0035" />
+	</joint>
+</robot>

@@ -1,0 +1,199 @@
+{
+  "group_order": [
+    "frame__base_rail_0",
+    "frame__base_rail_1",
+    "frame__crossbar_0",
+    "frame__crossbar_1",
+    "frame__crossbar_2",
+    "frame__crossbar_3",
+    "frame__crossbar_4",
+    "frame__center_beam",
+    "frame__rear_post",
+    "frame__front_post",
+    "frame__upper_deck",
+    "frame__arm_pivot_block",
+    "frame__wheel_mount_0",
+    "frame__wheel_mount_1",
+    "frame__handle_brace_0",
+    "frame__handle_brace_1",
+    "frame__handle",
+    "backrest__hinge_sleeve",
+    "backrest__hinge_block",
+    "backrest__back_plate",
+    "backrest__brace",
+    "backrest__pad",
+    "seat__hinge_sleeve",
+    "seat__hinge_block",
+    "seat__seat_plate",
+    "seat__brace",
+    "seat__pad",
+    "support_arm__pivot_sleeve",
+    "support_arm__rail_0",
+    "support_arm__rail_1",
+    "support_arm__saddle",
+    "wheel_0__tire",
+    "wheel_0__hub",
+    "wheel_0__cap",
+    "wheel_1__tire",
+    "wheel_1__hub",
+    "wheel_1__cap"
+  ],
+  "face_ranges": {
+    "frame__base_rail_0": [
+      0,
+      12
+    ],
+    "frame__base_rail_1": [
+      12,
+      24
+    ],
+    "frame__crossbar_0": [
+      24,
+      36
+    ],
+    "frame__crossbar_1": [
+      36,
+      48
+    ],
+    "frame__crossbar_2": [
+      48,
+      60
+    ],
+    "frame__crossbar_3": [
+      60,
+      72
+    ],
+    "frame__crossbar_4": [
+      72,
+      84
+    ],
+    "frame__center_beam": [
+      84,
+      96
+    ],
+    "frame__rear_post": [
+      96,
+      108
+    ],
+    "frame__front_post": [
+      108,
+      120
+    ],
+    "frame__upper_deck": [
+      120,
+      132
+    ],
+    "frame__arm_pivot_block": [
+      132,
+      144
+    ],
+    "frame__wheel_mount_0": [
+      144,
+      156
+    ],
+    "frame__wheel_mount_1": [
+      156,
+      168
+    ],
+    "frame__handle_brace_0": [
+      168,
+      180
+    ],
+    "frame__handle_brace_1": [
+      180,
+      192
+    ],
+    "frame__handle": [
+      192,
+      320
+    ],
+    "backrest__hinge_sleeve": [
+      320,
+      448
+    ],
+    "backrest__hinge_block": [
+      448,
+      460
+    ],
+    "backrest__back_plate": [
+      460,
+      472
+    ],
+    "backrest__brace": [
+      472,
+      484
+    ],
+    "backrest__pad": [
+      484,
+      496
+    ],
+    "seat__hinge_sleeve": [
+      496,
+      624
+    ],
+    "seat__hinge_block": [
+      624,
+      636
+    ],
+    "seat__seat_plate": [
+      636,
+      648
+    ],
+    "seat__brace": [
+      648,
+      660
+    ],
+    "seat__pad": [
+      660,
+      672
+    ],
+    "support_arm__pivot_sleeve": [
+      672,
+      800
+    ],
+    "support_arm__rail_0": [
+      800,
+      812
+    ],
+    "support_arm__rail_1": [
+      812,
+      824
+    ],
+    "support_arm__saddle": [
+      824,
+      836
+    ],
+    "wheel_0__tire": [
+      836,
+      964
+    ],
+    "wheel_0__hub": [
+      964,
+      1092
+    ],
+    "wheel_0__cap": [
+      1092,
+      1220
+    ],
+    "wheel_1__tire": [
+      1220,
+      1348
+    ],
+    "wheel_1__hub": [
+      1348,
+      1476
+    ],
+    "wheel_1__cap": [
+      1476,
+      1604
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.022499999999999964,
+      0.0,
+      0.24349996326813447
+    ],
+    "scale": 0.7272654545454545
+  }
+}

@@ -1,0 +1,5738 @@
+[
+  {
+    "kind": "global",
+    "merged_mesh": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/input/mesh_norm.glb",
+    "image": [
+      "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png"
+    ],
+    "face_ranges": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/input/face_ranges.json",
+    "seed": 42,
+    "out_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/global",
+    "groups": [
+      {
+        "group_id": "base__bottom_disc",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__bottom_disc.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.155,
+            -0.155,
+            0.0
+          ],
+          [
+            0.155,
+            0.155,
+            0.01
+          ]
+        ]
+      },
+      {
+        "group_id": "base__base_skirt",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__base_skirt.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.11,
+            -0.147,
+            0.009999999999999995
+          ],
+          [
+            0.11,
+            -0.065,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__left_skirt_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__left_skirt_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.128,
+            -0.093,
+            0.009999999999999995
+          ],
+          [
+            -0.094,
+            0.07300000000000001,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__right_skirt_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__right_skirt_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.094,
+            -0.093,
+            0.009999999999999995
+          ],
+          [
+            0.128,
+            0.07300000000000001,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__left_front_cheek",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__left_front_cheek.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.128,
+            0.09999999999999999,
+            0.009999999999999995
+          ],
+          [
+            -0.094,
+            0.13599999999999998,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__right_front_cheek",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__right_front_cheek.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.094,
+            0.09999999999999999,
+            0.009999999999999995
+          ],
+          [
+            0.128,
+            0.13599999999999998,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__top_plate",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__top_plate.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.155,
+            -0.155,
+            0.078
+          ],
+          [
+            0.155,
+            0.155,
+            0.08800000000000001
+          ]
+        ]
+      },
+      {
+        "group_id": "base__neck_pad",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__neck_pad.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.06,
+            -0.06,
+            0.088
+          ],
+          [
+            0.06,
+            0.06,
+            0.096
+          ]
+        ]
+      },
+      {
+        "group_id": "base__slot_jamb_left",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__slot_jamb_left.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.081,
+            0.151,
+            0.009999999999999995
+          ],
+          [
+            -0.06899999999999999,
+            0.155,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__slot_jamb_right",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__slot_jamb_right.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.06899999999999999,
+            0.151,
+            0.009999999999999995
+          ],
+          [
+            0.081,
+            0.155,
+            0.078
+          ]
+        ]
+      },
+      {
+        "group_id": "base__slot_header",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__slot_header.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.069,
+            0.151,
+            0.071
+          ],
+          [
+            0.069,
+            0.155,
+            0.081
+          ]
+        ]
+      },
+      {
+        "group_id": "base__slot_sill",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/base__slot_sill.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.20650000000000002
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.069,
+            0.151,
+            0.009999999999999998
+          ],
+          [
+            0.069,
+            0.155,
+            0.02
+          ]
+        ]
+      },
+      {
+        "group_id": "lower_housing__lower_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/lower_housing__lower_shell.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.14,
+            -0.14,
+            -0.105
+          ],
+          [
+            0.14,
+            0.14,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "lower_housing__support_neck",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/lower_housing__support_neck.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.042,
+            -0.042,
+            -0.17600000000000002
+          ],
+          [
+            0.042,
+            0.042,
+            -0.1
+          ]
+        ]
+      },
+      {
+        "group_id": "lower_housing__neck_collar",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/lower_housing__neck_collar.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.055,
+            -0.055,
+            -0.109
+          ],
+          [
+            0.055,
+            0.055,
+            -0.09100000000000001
+          ]
+        ]
+      },
+      {
+        "group_id": "lower_housing__intake_band_upper",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/lower_housing__intake_band_upper.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.131,
+            -0.131,
+            -0.049848
+          ],
+          [
+            0.131,
+            0.131,
+            -0.030151999999999998
+          ]
+        ]
+      },
+      {
+        "group_id": "lower_housing__intake_band_lower",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/lower_housing__intake_band_lower.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.114,
+            -0.114,
+            -0.08184799999999999
+          ],
+          [
+            0.114,
+            0.114,
+            -0.06215199999999999
+          ]
+        ]
+      },
+      {
+        "group_id": "top_cap__upper_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/top_cap__upper_shell.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.14,
+            -0.14,
+            0.0
+          ],
+          [
+            0.14,
+            0.14,
+            0.14
+          ]
+        ]
+      },
+      {
+        "group_id": "top_cap__outlet_shroud",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/top_cap__outlet_shroud.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.08899983837917108,
+            -0.044,
+            0.013999893477348847
+          ],
+          [
+            0.1470001616208289,
+            0.044,
+            0.10200010652265115
+          ]
+        ]
+      },
+      {
+        "group_id": "top_cap__outlet_grille",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/top_cap__outlet_grille.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.13699986776467699,
+            -0.036,
+            0.021999966941396942
+          ],
+          [
+            0.155000132235323,
+            0.036,
+            0.09400003305860306
+          ]
+        ]
+      },
+      {
+        "group_id": "top_cap__top_pivot_cap",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/top_cap__top_pivot_cap.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            0.0020000000000000018
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            -0.0645
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.02,
+            -0.02,
+            0.126
+          ],
+          [
+            0.02,
+            0.02,
+            0.14200000000000002
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__cartridge_body",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__cartridge_body.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            -0.145
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.1945
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.063,
+            -0.124,
+            0.0
+          ],
+          [
+            0.063,
+            0.0,
+            0.045
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__front_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__front_panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            -0.145
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.1945
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.069,
+            -0.002,
+            0.0
+          ],
+          [
+            0.069,
+            0.004,
+            0.052
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__pull_handle",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__pull_handle.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            2.5289208951046743e-17,
+            0.0,
+            -0.41300412443251516,
+            6.61176614985548e-08
+          ],
+          [
+            -0.41300412443251516,
+            0.0,
+            -2.5289208951046743e-17,
+            -0.145
+          ],
+          [
+            0.0,
+            0.41300412443251516,
+            0.0,
+            0.1945
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.032,
+            0.004,
+            0.026
+          ],
+          [
+            0.032,
+            0.012,
+            0.036
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "global",
+    "merged_mesh": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/input/mesh_norm.glb",
+    "image": [
+      "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png"
+    ],
+    "face_ranges": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/input/face_ranges.json",
+    "seed": 42,
+    "out_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/global",
+    "groups": [
+      {
+        "group_id": "wall_bracket__wall_plate",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__wall_plate.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.125,
+            -0.015,
+            0.06539999999999999
+          ],
+          [
+            0.125,
+            -0.009000000000000001,
+            0.47539999999999993
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__hook_rail_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__hook_rail_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.113,
+            -0.012,
+            0.10300000000000001
+          ],
+          [
+            0.113,
+            0.0,
+            0.121
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__hook_rail_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__hook_rail_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.113,
+            -0.012,
+            0.429
+          ],
+          [
+            0.113,
+            0.0,
+            0.447
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__screw_head_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__screw_head_0.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.013,
+            -0.018500047751652853,
+            0.1129999926536775
+          ],
+          [
+            0.013,
+            -0.01449995224834715,
+            0.1390000073463225
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__screw_slot_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__screw_slot_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.009,
+            -0.01975,
+            0.1245
+          ],
+          [
+            0.009,
+            -0.01825,
+            0.1275
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__screw_head_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__screw_head_1.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.013,
+            -0.018500047751652853,
+            0.4109999926536775
+          ],
+          [
+            0.013,
+            -0.01449995224834715,
+            0.4370000073463225
+          ]
+        ]
+      },
+      {
+        "group_id": "wall_bracket__screw_slot_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/wall_bracket__screw_slot_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.009,
+            -0.01975,
+            0.4225
+          ],
+          [
+            0.009,
+            -0.01825,
+            0.4255
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__rear_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__rear_panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.16,
+            0.0,
+            0.0
+          ],
+          [
+            0.16,
+            0.012,
+            0.52
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__side_wall_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__side_wall_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.16,
+            0.0,
+            0.0
+          ],
+          [
+            -0.148,
+            0.12,
+            0.52
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__side_wall_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__side_wall_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.148,
+            0.0,
+            0.0
+          ],
+          [
+            0.16,
+            0.12,
+            0.52
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__top_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__top_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.16,
+            0.0,
+            0.508
+          ],
+          [
+            0.16,
+            0.12,
+            0.52
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__bottom_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__bottom_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.16,
+            0.0,
+            0.0
+          ],
+          [
+            0.16,
+            0.12,
+            0.012
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__tray_slide_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__tray_slide_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.136,
+            0.0049999999999999975,
+            0.027
+          ],
+          [
+            -0.122,
+            0.11499999999999999,
+            0.033
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__tray_slide_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__tray_slide_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.122,
+            0.0049999999999999975,
+            0.027
+          ],
+          [
+            0.136,
+            0.11499999999999999,
+            0.033
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__base_fascia",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__base_fascia.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.1425,
+            0.114,
+            0.01
+          ],
+          [
+            0.1425,
+            0.12000000000000001,
+            0.018000000000000002
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__hinge_leaf_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__hinge_leaf_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.15100000000000002,
+            0.12,
+            0.10699999999999998
+          ],
+          [
+            0.181,
+            0.126,
+            0.185
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__fixed_knuckle_0_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__fixed_knuckle_0_0.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.16849999999999998,
+            0.1225,
+            0.109
+          ],
+          [
+            0.1795,
+            0.1335,
+            0.131
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__fixed_knuckle_0_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__fixed_knuckle_0_1.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.16849999999999998,
+            0.1225,
+            0.16099999999999998
+          ],
+          [
+            0.1795,
+            0.1335,
+            0.183
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__hinge_leaf_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__hinge_leaf_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.15100000000000002,
+            0.12,
+            0.381
+          ],
+          [
+            0.181,
+            0.126,
+            0.45899999999999996
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__fixed_knuckle_1_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__fixed_knuckle_1_0.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.16849999999999998,
+            0.1225,
+            0.383
+          ],
+          [
+            0.1795,
+            0.1335,
+            0.405
+          ]
+        ]
+      },
+      {
+        "group_id": "housing__fixed_knuckle_1_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/housing__fixed_knuckle_1_1.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.06212500000000001
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.16849999999999998,
+            0.1225,
+            0.435
+          ],
+          [
+            0.1795,
+            0.1335,
+            0.457
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__cover_side_stile",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__cover_side_stile.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.318,
+            -0.006,
+            0.054999999999999966
+          ],
+          [
+            -0.296,
+            0.006,
+            0.51
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__cover_hinge_stile",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__cover_hinge_stile.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.041999999999999996,
+            -0.006,
+            0.054999999999999966
+          ],
+          [
+            -0.012,
+            0.006,
+            0.51
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__cover_bottom_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__cover_bottom_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.318,
+            -0.006,
+            0.05500000000000001
+          ],
+          [
+            -0.01200000000000001,
+            0.006,
+            0.079
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__cover_top_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__cover_top_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.318,
+            -0.006,
+            0.486
+          ],
+          [
+            -0.01200000000000001,
+            0.006,
+            0.51
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__front_grille",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__front_grille.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.2975,
+            0.002999219443925658,
+            0.0779999944916259
+          ],
+          [
+            -0.0325,
+            0.006000780556074342,
+            0.5030000055083741
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__finger_pull",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__finger_pull.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.301,
+            0.004999999999999999,
+            0.17750000000000002
+          ],
+          [
+            -0.291,
+            0.01,
+            0.36750000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__moving_knuckle_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__moving_knuckle_0.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.0052,
+            -0.0052,
+            0.13299999999999998
+          ],
+          [
+            0.0052,
+            0.0052,
+            0.159
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__moving_leaf_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__moving_leaf_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.013999999999999999,
+            -0.0025,
+            0.131
+          ],
+          [
+            -0.003999999999999999,
+            0.0025,
+            0.16099999999999998
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__moving_knuckle_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__moving_knuckle_1.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.0052,
+            -0.0052,
+            0.407
+          ],
+          [
+            0.0052,
+            0.0052,
+            0.433
+          ]
+        ]
+      },
+      {
+        "group_id": "front_cover__moving_leaf_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/front_cover__moving_leaf_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            -0.16349999999999998
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            -0.06587499999999999
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.013999999999999999,
+            -0.0025,
+            0.40499999999999997
+          ],
+          [
+            -0.003999999999999999,
+            0.0025,
+            0.435
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_side_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_side_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.126,
+            -0.015,
+            0.020999999999999998
+          ],
+          [
+            -0.11199999999999999,
+            0.105,
+            0.039
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_side_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_side_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.11199999999999999,
+            -0.015,
+            0.020999999999999998
+          ],
+          [
+            0.126,
+            0.105,
+            0.039
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_rear_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_rear_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.126,
+            -0.015,
+            0.020999999999999998
+          ],
+          [
+            0.126,
+            -0.001,
+            0.039
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_front_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_front_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.126,
+            0.091,
+            0.020999999999999998
+          ],
+          [
+            0.126,
+            0.10500000000000001,
+            0.039
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__filter_mesh",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__filter_mesh.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.116,
+            -0.006999999999999999,
+            0.0355
+          ],
+          [
+            0.116,
+            0.097,
+            0.0385
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_pull_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_pull_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            3.184113475676588e-17,
+            0.0,
+            -0.5200051929900917,
+            0.010499999999999995
+          ],
+          [
+            -0.5200051929900917,
+            0.0,
+            -3.184113475676588e-17,
+            0.037125000000000005
+          ],
+          [
+            0.0,
+            0.5200051929900917,
+            0.0,
+            0.26
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.06,
+            0.105,
+            0.019000000000000003
+          ],
+          [
+            0.06,
+            0.11900000000000001,
+            0.037
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "global",
+    "merged_mesh": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/input/mesh_norm.glb",
+    "image": [
+      "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png"
+    ],
+    "face_ranges": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/input/face_ranges.json",
+    "seed": 42,
+    "out_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/global",
+    "groups": [
+      {
+        "group_id": "body__rear_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__rear_shell.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.59,
+            -0.17,
+            0.0
+          ],
+          [
+            0.59,
+            0.21,
+            0.64
+          ]
+        ]
+      },
+      {
+        "group_id": "body__top_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__top_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.59,
+            -0.24,
+            0.555
+          ],
+          [
+            0.59,
+            -0.16999999999999998,
+            0.64
+          ]
+        ]
+      },
+      {
+        "group_id": "body__bottom_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__bottom_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.59,
+            -0.24,
+            0.0
+          ],
+          [
+            0.59,
+            -0.16999999999999998,
+            0.085
+          ]
+        ]
+      },
+      {
+        "group_id": "body__side_rail_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__side_rail_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.59,
+            -0.24,
+            0.0
+          ],
+          [
+            -0.515,
+            -0.16999999999999998,
+            0.64
+          ]
+        ]
+      },
+      {
+        "group_id": "body__side_rail_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__side_rail_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.515,
+            -0.24,
+            0.0
+          ],
+          [
+            0.59,
+            -0.16999999999999998,
+            0.64
+          ]
+        ]
+      },
+      {
+        "group_id": "body__center_mullion",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__center_mullion.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.0325,
+            -0.24,
+            0.04749999999999999
+          ],
+          [
+            0.0325,
+            -0.16999999999999998,
+            0.5525
+          ]
+        ]
+      },
+      {
+        "group_id": "body__filter_media_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__filter_media_0.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.48250000000000004,
+            -0.1800007530070192,
+            0.09999998530856258
+          ],
+          [
+            -0.06750000000000003,
+            -0.17199924699298078,
+            0.5100000146914374
+          ]
+        ]
+      },
+      {
+        "group_id": "body__filter_shadow_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__filter_shadow_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.49750000000000005,
+            -0.17600000000000002,
+            0.08499999999999999
+          ],
+          [
+            -0.05250000000000002,
+            -0.164,
+            0.525
+          ]
+        ]
+      },
+      {
+        "group_id": "body__filter_media_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__filter_media_1.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.06750000000000003,
+            -0.1800007530070192,
+            0.09999998530856258
+          ],
+          [
+            0.48250000000000004,
+            -0.17199924699298078,
+            0.5100000146914374
+          ]
+        ]
+      },
+      {
+        "group_id": "body__filter_shadow_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__filter_shadow_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.05250000000000002,
+            -0.17600000000000002,
+            0.08499999999999999
+          ],
+          [
+            0.49750000000000005,
+            -0.164,
+            0.525
+          ]
+        ]
+      },
+      {
+        "group_id": "body__top_outlet_grille",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__top_outlet_grille.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.41,
+            -0.039999999999999994,
+            0.64
+          ],
+          [
+            0.41,
+            0.14,
+            0.646
+          ]
+        ]
+      },
+      {
+        "group_id": "body__hinge_plate_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__hinge_plate_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.556,
+            -0.246,
+            0.05249999999999999
+          ],
+          [
+            -0.536,
+            -0.24,
+            0.5575
+          ]
+        ]
+      },
+      {
+        "group_id": "body__hinge_plate_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__hinge_plate_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.536,
+            -0.246,
+            0.05249999999999999
+          ],
+          [
+            0.556,
+            -0.24,
+            0.5575
+          ]
+        ]
+      },
+      {
+        "group_id": "body__foot_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__foot_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.525,
+            -0.135,
+            -0.026
+          ],
+          [
+            -0.395,
+            -0.065,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "body__foot_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__foot_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.395,
+            -0.135,
+            -0.026
+          ],
+          [
+            0.525,
+            -0.065,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "body__foot_2",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__foot_2.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.525,
+            0.11499999999999999,
+            -0.026
+          ],
+          [
+            -0.395,
+            0.185,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "body__foot_3",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/body__foot_3.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.0
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            -0.03724999999999999
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.31
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.395,
+            0.11499999999999999,
+            -0.026
+          ],
+          [
+            0.525,
+            0.185,
+            0.0
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.0,
+            -0.034,
+            -0.25
+          ],
+          [
+            0.49,
+            -0.0019999999999999983,
+            0.25
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__top_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__top_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.017499999999999988,
+            -0.0435,
+            0.214
+          ],
+          [
+            0.47250000000000003,
+            -0.0335,
+            0.24000000000000002
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__bottom_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__bottom_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.017499999999999988,
+            -0.0435,
+            -0.24000000000000002
+          ],
+          [
+            0.47250000000000003,
+            -0.0335,
+            -0.214
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__hinge_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__hinge_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.004999999999999999,
+            -0.0435,
+            -0.2325
+          ],
+          [
+            0.031,
+            -0.0335,
+            0.2325
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__free_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__free_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.45899999999999996,
+            -0.0435,
+            -0.2325
+          ],
+          [
+            0.485,
+            -0.0335,
+            0.2325
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__rear_gasket",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__rear_gasket.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.027499999999999997,
+            -0.003,
+            -0.2225
+          ],
+          [
+            0.4625,
+            0.001,
+            0.2225
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__vertical_pull",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__vertical_pull.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.435,
+            -0.0435,
+            -0.16
+          ],
+          [
+            0.455,
+            -0.0335,
+            0.16
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__hinge_barrel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__hinge_barrel.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.012,
+            -0.034,
+            -0.25
+          ],
+          [
+            0.012,
+            -0.009999999999999998,
+            0.25
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_0__hinge_leaf",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_0__hinge_leaf.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.0,
+            -0.026000000000000002,
+            -0.25
+          ],
+          [
+            0.028,
+            -0.016,
+            0.25
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.49,
+            -0.034,
+            -0.25
+          ],
+          [
+            0.0,
+            -0.0019999999999999983,
+            0.25
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__top_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__top_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.47250000000000003,
+            -0.0435,
+            0.214
+          ],
+          [
+            -0.017499999999999988,
+            -0.0335,
+            0.24000000000000002
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__bottom_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__bottom_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.47250000000000003,
+            -0.0435,
+            -0.24000000000000002
+          ],
+          [
+            -0.017499999999999988,
+            -0.0335,
+            -0.214
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__hinge_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__hinge_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.031,
+            -0.0435,
+            -0.2325
+          ],
+          [
+            -0.004999999999999999,
+            -0.0335,
+            0.2325
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__free_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__free_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.485,
+            -0.0435,
+            -0.2325
+          ],
+          [
+            -0.45899999999999996,
+            -0.0335,
+            0.2325
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__rear_gasket",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__rear_gasket.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.4625,
+            -0.003,
+            -0.2225
+          ],
+          [
+            -0.027499999999999997,
+            0.001,
+            0.2225
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__vertical_pull",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__vertical_pull.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.455,
+            -0.0435,
+            -0.16
+          ],
+          [
+            -0.435,
+            -0.0335,
+            0.16
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__hinge_barrel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__hinge_barrel.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.012,
+            -0.034,
+            -0.25
+          ],
+          [
+            0.012,
+            -0.009999999999999998,
+            0.25
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door_1__hinge_leaf",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_66455844bdd24e80ad22c4178de55601_wide_dual_bay_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door_1__hinge_leaf.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            7.22548827172764e-17,
+            0.0,
+            -1.1800117840929003,
+            -0.53
+          ],
+          [
+            -1.1800117840929003,
+            0.0,
+            -7.22548827172764e-17,
+            0.20375
+          ],
+          [
+            0.0,
+            1.1800117840929003,
+            0.0,
+            0.0050000000000000044
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.028,
+            -0.026000000000000002,
+            -0.25
+          ],
+          [
+            0.0,
+            -0.016,
+            0.25
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "global",
+    "merged_mesh": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/input/mesh_norm.glb",
+    "image": [
+      "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png"
+    ],
+    "face_ranges": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/input/face_ranges.json",
+    "seed": 42,
+    "out_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/global",
+    "groups": [
+      {
+        "group_id": "body__body_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/body__body_shell.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            0.009000000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.09,
+            -0.25,
+            -0.4
+          ],
+          [
+            0.09,
+            0.25,
+            0.4
+          ]
+        ]
+      },
+      {
+        "group_id": "body__guide_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/body__guide_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            0.009000000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.064,
+            0.13299999999999998,
+            -0.3955
+          ],
+          [
+            0.055999999999999994,
+            0.157,
+            -0.3445
+          ]
+        ]
+      },
+      {
+        "group_id": "body__guide_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/body__guide_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            0.009000000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.064,
+            -0.157,
+            -0.3955
+          ],
+          [
+            0.055999999999999994,
+            -0.13299999999999998,
+            -0.3445
+          ]
+        ]
+      },
+      {
+        "group_id": "door__door_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/door__door_panel.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            -0.07899999999999999
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            -0.211
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            -0.041
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.002,
+            -0.418,
+            -0.235
+          ],
+          [
+            0.02,
+            0.0,
+            0.235
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__drawer_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__drawer_shell.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            -0.07100000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.282
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.136,
+            -0.205,
+            -0.07
+          ],
+          [
+            0.01,
+            0.205,
+            0.07
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__runner_0",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__runner_0.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            -0.07100000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.282
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.125,
+            0.13599999999999998,
+            -0.0625
+          ],
+          [
+            -0.015000000000000006,
+            0.154,
+            -0.052500000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_drawer__runner_1",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_drawer__runner_1.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            -0.07100000000000001
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            0.282
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.125,
+            -0.154,
+            -0.0625
+          ],
+          [
+            -0.015000000000000006,
+            -0.13599999999999998,
+            -0.052500000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "latch_flap__flap_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/textured/trellis2/groups/latch_flap__flap_panel.glb",
+        "texture_size": 1024,
+        "to_link": [
+          [
+            4.8986361164255187e-17,
+            0.0,
+            -0.8000079892155257,
+            -0.07899999999999999
+          ],
+          [
+            -0.8000079892155257,
+            0.0,
+            -4.8986361164255187e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.8000079892155257,
+            0.0,
+            -0.332
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.002,
+            -0.06,
+            -0.038
+          ],
+          [
+            0.015,
+            0.06,
+            0.0
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "kind": "global",
+    "merged_mesh": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/input/mesh_norm.glb",
+    "image": [
+      "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png"
+    ],
+    "face_ranges": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/input/face_ranges.json",
+    "seed": 42,
+    "out_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/global",
+    "groups": [
+      {
+        "group_id": "cabinet_body__left_side_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__left_side_shell.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            0.295,
+            0.050000000000000044
+          ],
+          [
+            0.15,
+            0.31,
+            0.75
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__right_side_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__right_side_shell.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            -0.31,
+            0.050000000000000044
+          ],
+          [
+            0.15,
+            -0.295,
+            0.75
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__rear_shell",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__rear_shell.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            -0.295,
+            0.050000000000000044
+          ],
+          [
+            -0.13499999999999998,
+            0.295,
+            0.75
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__top_cap",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__top_cap.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            -0.31,
+            0.73
+          ],
+          [
+            0.15,
+            0.31,
+            0.75
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__front_grille_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__front_grille_panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.13499999999999998,
+            -0.295,
+            0.14500000000000002
+          ],
+          [
+            0.15,
+            0.295,
+            0.73
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__control_strip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__control_strip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.13999999999999999,
+            -0.08,
+            0.6789999999999999
+          ],
+          [
+            0.15,
+            0.08,
+            0.711
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__top_exhaust_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__top_exhaust_panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.11,
+            -0.09,
+            0.744
+          ],
+          [
+            0.11,
+            0.09,
+            0.75
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__rear_floor_strip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__rear_floor_strip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            -0.31,
+            0.05
+          ],
+          [
+            -0.045000000000000005,
+            0.31,
+            0.062
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__left_bottom_sill",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__left_bottom_sill.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.045,
+            0.27799999999999997,
+            0.05
+          ],
+          [
+            0.14500000000000002,
+            0.31,
+            0.062
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__right_bottom_sill",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__right_bottom_sill.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.045,
+            -0.31,
+            0.05
+          ],
+          [
+            0.14500000000000002,
+            -0.27799999999999997,
+            0.062
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__front_left_leg",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__front_left_leg.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.09,
+            0.26499999999999996,
+            0.0
+          ],
+          [
+            0.15,
+            0.31,
+            0.05
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__front_right_leg",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__front_right_leg.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.09,
+            -0.31,
+            0.0
+          ],
+          [
+            0.15,
+            -0.26499999999999996,
+            0.05
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__rear_left_leg",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__rear_left_leg.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            0.26499999999999996,
+            0.0
+          ],
+          [
+            -0.09,
+            0.31,
+            0.05
+          ]
+        ]
+      },
+      {
+        "group_id": "cabinet_body__rear_right_leg",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/cabinet_body__rear_right_leg.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.15,
+            -0.31,
+            0.0
+          ],
+          [
+            -0.09,
+            -0.26499999999999996,
+            0.05
+          ]
+        ]
+      },
+      {
+        "group_id": "guide_rail_frame__left_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/guide_rail_frame__left_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.121,
+            0.268,
+            0.077
+          ],
+          [
+            0.10400000000000001,
+            0.28200000000000003,
+            0.08700000000000001
+          ]
+        ]
+      },
+      {
+        "group_id": "guide_rail_frame__right_rail",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/guide_rail_frame__right_rail.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.121,
+            -0.28200000000000003,
+            0.077
+          ],
+          [
+            0.10400000000000001,
+            -0.268,
+            0.08700000000000001
+          ]
+        ]
+      },
+      {
+        "group_id": "guide_rail_frame__rear_mount_crossbar",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/guide_rail_frame__rear_mount_crossbar.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.0015000000000000152
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.375
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.135,
+            -0.275,
+            0.07200000000000001
+          ],
+          [
+            -0.121,
+            0.275,
+            0.092
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door__door_bottom_panel",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door__door_bottom_panel.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.046500000000000014
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.325
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.0,
+            -0.27,
+            0.0
+          ],
+          [
+            0.19,
+            0.27,
+            0.01
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door__door_front_fascia",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door__door_front_fascia.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.046500000000000014
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.325
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.178,
+            -0.27,
+            0.0
+          ],
+          [
+            0.19,
+            0.27,
+            0.094
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_door__door_pull",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_door__door_pull.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            0.046500000000000014
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.325
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            0.18,
+            -0.07,
+            0.025
+          ],
+          [
+            0.198,
+            0.07,
+            0.043000000000000003
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_floor",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_floor.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.222,
+            -0.26,
+            0.0
+          ],
+          [
+            0.010000000000000009,
+            0.26,
+            0.004
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__left_tray_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__left_tray_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.222,
+            0.252,
+            0.0019999999999999983
+          ],
+          [
+            0.010000000000000009,
+            0.26,
+            0.052000000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__right_tray_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__right_tray_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.222,
+            -0.26,
+            0.0019999999999999983
+          ],
+          [
+            0.010000000000000009,
+            -0.252,
+            0.052000000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_back_wall",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_back_wall.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.222,
+            -0.26,
+            0.0019999999999999983
+          ],
+          [
+            -0.214,
+            0.26,
+            0.052000000000000005
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__tray_front_lip",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__tray_front_lip.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.002,
+            -0.26,
+            0.0
+          ],
+          [
+            0.01,
+            0.26,
+            0.06
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__left_runner",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__left_runner.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.216,
+            0.258,
+            0.0
+          ],
+          [
+            0.0040000000000000036,
+            0.268,
+            0.008
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__right_runner",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__right_runner.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.216,
+            -0.268,
+            0.0
+          ],
+          [
+            0.0040000000000000036,
+            -0.258,
+            0.008
+          ]
+        ]
+      },
+      {
+        "group_id": "filter_tray__filter_media_block",
+        "out_glb": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_8659af264fdb4a74bb10e1e6013e8c46_cabinet_air_purifier_urdf_20260903-171040/textured/trellis2/groups/filter_tray__filter_media_block.glb",
+        "texture_size": 256,
+        "to_link": [
+          [
+            4.592471359148924e-17,
+            0.0,
+            -0.7500074898895553,
+            -0.10249999999999998
+          ],
+          [
+            -0.7500074898895553,
+            0.0,
+            -4.592471359148924e-17,
+            0.0
+          ],
+          [
+            0.0,
+            0.7500074898895553,
+            0.0,
+            0.28800000000000003
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "bounds_link": [
+          [
+            -0.214,
+            -0.246,
+            0.004
+          ],
+          [
+            -0.023999999999999994,
+            0.246,
+            0.044
+          ]
+        ]
+      }
+    ]
+  }
+]

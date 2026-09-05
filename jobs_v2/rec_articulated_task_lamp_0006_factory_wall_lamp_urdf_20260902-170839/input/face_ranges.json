@@ -1,0 +1,114 @@
+{
+  "group_order": [
+    "bracket__backplate",
+    "bracket__standoff",
+    "bracket__shoulder_post",
+    "bracket__upper_anchor_cap",
+    "bracket__lower_anchor_cap",
+    "bracket__upper_rib",
+    "bracket__lower_rib",
+    "boom__shoulder_sleeve",
+    "boom__shoulder_clevis",
+    "boom__upper_strut",
+    "boom__lower_strut",
+    "boom__head_brace",
+    "boom__head_sleeve",
+    "boom__tension_rod",
+    "head__trunnion",
+    "head__neck_stem",
+    "head__collar",
+    "head__shade_shell",
+    "head__reflector_liner",
+    "head__front_rim"
+  ],
+  "face_ranges": {
+    "bracket__backplate": [
+      0,
+      12
+    ],
+    "bracket__standoff": [
+      12,
+      24
+    ],
+    "bracket__shoulder_post": [
+      24,
+      152
+    ],
+    "bracket__upper_anchor_cap": [
+      152,
+      280
+    ],
+    "bracket__lower_anchor_cap": [
+      280,
+      408
+    ],
+    "bracket__upper_rib": [
+      408,
+      420
+    ],
+    "bracket__lower_rib": [
+      420,
+      432
+    ],
+    "boom__shoulder_sleeve": [
+      432,
+      560
+    ],
+    "boom__shoulder_clevis": [
+      560,
+      572
+    ],
+    "boom__upper_strut": [
+      572,
+      584
+    ],
+    "boom__lower_strut": [
+      584,
+      596
+    ],
+    "boom__head_brace": [
+      596,
+      608
+    ],
+    "boom__head_sleeve": [
+      608,
+      736
+    ],
+    "boom__tension_rod": [
+      736,
+      864
+    ],
+    "head__trunnion": [
+      864,
+      992
+    ],
+    "head__neck_stem": [
+      992,
+      1004
+    ],
+    "head__collar": [
+      1004,
+      1132
+    ],
+    "head__shade_shell": [
+      1132,
+      1512
+    ],
+    "head__reflector_liner": [
+      1512,
+      1892
+    ],
+    "head__front_rim": [
+      1892,
+      2020
+    ]
+  },
+  "norm": {
+    "center": [
+      0.2659695147386129,
+      0.0,
+      0.0
+    ],
+    "scale": 1.7987404139269283
+  }
+}

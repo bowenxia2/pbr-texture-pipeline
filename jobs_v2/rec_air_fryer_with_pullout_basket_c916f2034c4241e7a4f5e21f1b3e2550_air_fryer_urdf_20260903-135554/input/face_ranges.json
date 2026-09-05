@@ -1,0 +1,54 @@
+{
+  "group_order": [
+    "housing",
+    "drawer",
+    "basket",
+    "basket_button",
+    "dial_temp",
+    "dial_time",
+    "preset_1",
+    "preset_2"
+  ],
+  "face_ranges": {
+    "housing": [
+      0,
+      5400
+    ],
+    "drawer": [
+      5400,
+      7004
+    ],
+    "basket": [
+      7004,
+      10280
+    ],
+    "basket_button": [
+      10280,
+      10308
+    ],
+    "dial_temp": [
+      10308,
+      10808
+    ],
+    "dial_time": [
+      10808,
+      11308
+    ],
+    "preset_1": [
+      11308,
+      11336
+    ],
+    "preset_2": [
+      11336,
+      11364
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.020000000000000004,
+      0.1825
+    ],
+    "scale": 2.564076923076923
+  }
+}

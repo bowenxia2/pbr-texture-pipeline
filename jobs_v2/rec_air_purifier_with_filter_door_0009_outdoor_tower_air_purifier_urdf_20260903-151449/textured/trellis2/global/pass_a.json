@@ -1,0 +1,205 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2385622,
+  "groups": {
+    "tower_body__body_shell": {
+      "texture_size": 1024,
+      "n_faces": 103568,
+      "texels": 795953,
+      "field_voxels": 783006
+    },
+    "tower_body__base_plinth": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 793442,
+      "field_voxels": 184293
+    },
+    "tower_body__foot_front_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56538,
+      "field_voxels": 6492
+    },
+    "tower_body__foot_front_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56538,
+      "field_voxels": 6492
+    },
+    "tower_body__foot_rear_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56538,
+      "field_voxels": 6378
+    },
+    "tower_body__foot_rear_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56538,
+      "field_voxels": 6378
+    },
+    "tower_body__filter_cartridge": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 981291,
+      "field_voxels": 188764
+    },
+    "tower_body__intake_cavity": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 990486,
+      "field_voxels": 265930
+    },
+    "tower_body__status_window": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 947488,
+      "field_voxels": 13544
+    },
+    "tower_body__status_window_bezel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60415,
+      "field_voxels": 13955
+    },
+    "tower_body__top_deck": {
+      "texture_size": 1024,
+      "n_faces": 264,
+      "texels": 740963,
+      "field_voxels": 69437
+    },
+    "tower_body__exhaust_cavity": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51400,
+      "field_voxels": 43834
+    },
+    "tower_body__exhaust_grille": {
+      "texture_size": 1024,
+      "n_faces": 756,
+      "texels": 466171,
+      "field_voxels": 27657
+    },
+    "tower_body__exhaust_grille_seat": {
+      "texture_size": 1024,
+      "n_faces": 264,
+      "texels": 757742,
+      "field_voxels": 29742
+    },
+    "tower_body__body_hinge_leaf_lower": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56568,
+      "field_voxels": 5005
+    },
+    "tower_body__body_hinge_mount_mid": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56568,
+      "field_voxels": 5057
+    },
+    "tower_body__body_hinge_leaf_upper": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56568,
+      "field_voxels": 5005
+    },
+    "tower_body__hood_post_front_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50695,
+      "field_voxels": 3134
+    },
+    "tower_body__hood_post_front_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50695,
+      "field_voxels": 3134
+    },
+    "tower_body__hood_post_rear_left": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50695,
+      "field_voxels": 3134
+    },
+    "tower_body__hood_post_rear_right": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50695,
+      "field_voxels": 3134
+    },
+    "tower_body__top_hood": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 903058,
+      "field_voxels": 107304
+    },
+    "tower_body__body_hinge_lower": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 759816,
+      "field_voxels": 4056
+    },
+    "tower_body__body_hinge_upper": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 743574,
+      "field_voxels": 3969
+    },
+    "intake_door__door_frame": {
+      "texture_size": 1024,
+      "n_faces": 264,
+      "texels": 916284,
+      "field_voxels": 261684
+    },
+    "intake_door__door_grille": {
+      "texture_size": 1024,
+      "n_faces": 2196,
+      "texels": 448054,
+      "field_voxels": 155003
+    },
+    "intake_door__door_hinge_leaf_lower": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55198,
+      "field_voxels": 4508
+    },
+    "intake_door__door_hinge_leaf_mid": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55198,
+      "field_voxels": 4552
+    },
+    "intake_door__door_hinge_leaf_upper": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55198,
+      "field_voxels": 4508
+    },
+    "intake_door__door_handle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 825288,
+      "field_voxels": 7274
+    },
+    "intake_door__door_knuckle_lower": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 710951,
+      "field_voxels": 7180
+    },
+    "intake_door__door_knuckle_mid": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 733004,
+      "field_voxels": 7065
+    },
+    "intake_door__door_knuckle_upper": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 728646,
+      "field_voxels": 7022
+    }
+  }
+}

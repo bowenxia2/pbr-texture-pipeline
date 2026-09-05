@@ -1,0 +1,166 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c_bedside_air_purifier_urdf_20260902-122622",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c/model.urdf",
+  "created": "2026-09-02T12:26:22",
+  "updated": "2026-09-02T13:24:29",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 6,
+        "n_tiny": 3
+      },
+      "seed": null,
+      "started": "2026-09-02T12:27:00",
+      "finished": "2026-09-02T12:27:01",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T12:27:02",
+      "finished": "2026-09-02T12:33:18",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c_bedside_air_purifier_urdf_20260902-122622/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T12:33:18",
+      "finished": "2026-09-02T13:08:25",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 6,
+            "n_total": 6,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c_bedside_air_purifier_urdf_20260902-122622/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T13:08:27",
+      "finished": "2026-09-02T13:24:29",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_3ca93583a32649749f09580ccb73bf0c/model.urdf",
+    "category": "bedside air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.112,
+        -0.111965,
+        0.0
+      ],
+      "max": [
+        0.112,
+        0.112,
+        0.34
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "housing__housing_shell",
+        "link": "housing",
+        "label": "housing_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_purifier_housing.obj"
+        ],
+        "n_faces": 5736,
+        "area_frac": 0.5556188325491347,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__lock_mark",
+        "link": "housing",
+        "label": "lock_mark",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002719598742099561,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__status_light",
+        "link": "housing",
+        "label": "status_light",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0003472344822502118,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cap__cap_ring",
+        "link": "cap",
+        "label": "cap_ring",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_purifier_cap.obj"
+        ],
+        "n_faces": 15570,
+        "area_frac": 0.0728435239620022,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "cap__grip_tab",
+        "link": "cap",
+        "label": "grip_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006264789959479346,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter__filter_cartridge",
+        "link": "filter",
+        "label": "filter_cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_purifier_filter.obj"
+        ],
+        "n_faces": 11856,
+        "area_frac": 0.370291970136455,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1098872,
+  "groups": {
+    "pump_body__tripod_hub": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 662210,
+      "field_voxels": 51920
+    },
+    "pump_body__barrel_socket": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 745027,
+      "field_voxels": 36671
+    },
+    "pump_body__barrel_shell": {
+      "texture_size": 1024,
+      "n_faces": 576,
+      "texels": 814047,
+      "field_voxels": 295535
+    },
+    "pump_body__top_bushing": {
+      "texture_size": 1024,
+      "n_faces": 512,
+      "texels": 786262,
+      "field_voxels": 30076
+    },
+    "pump_body__lower_barrel_band": {
+      "texture_size": 1024,
+      "n_faces": 512,
+      "texels": 694681,
+      "field_voxels": 17318
+    },
+    "pump_body__upper_barrel_band": {
+      "texture_size": 1024,
+      "n_faces": 512,
+      "texels": 640406,
+      "field_voxels": 15872
+    },
+    "pump_body__foot_arm_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57960,
+      "field_voxels": 46716
+    },
+    "pump_body__rubber_foot_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60484,
+      "field_voxels": 44234
+    },
+    "pump_body__foot_arm_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56772,
+      "field_voxels": 46666
+    },
+    "pump_body__rubber_foot_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59263,
+      "field_voxels": 42442
+    },
+    "pump_body__foot_arm_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56772,
+      "field_voxels": 46561
+    },
+    "pump_body__rubber_foot_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58458,
+      "field_voxels": 42353
+    },
+    "pump_body__gauge_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 713842,
+      "field_voxels": 29846
+    },
+    "pump_body__gauge_face": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 599697,
+      "field_voxels": 16909
+    },
+    "pump_body__gauge_needle": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 42540,
+      "field_voxels": 804
+    },
+    "pump_body__side_hose": {
+      "texture_size": 1024,
+      "n_faces": 2628,
+      "texels": 175847,
+      "field_voxels": 49393
+    },
+    "pump_body__hose_clip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50507,
+      "field_voxels": 5668
+    },
+    "pump_body__pump_nozzle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 736222,
+      "field_voxels": 4636
+    },
+    "plunger__rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 772658,
+      "field_voxels": 41061
+    },
+    "plunger__guide_stem": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 691274,
+      "field_voxels": 5830
+    },
+    "plunger__wiper_flange": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 753478,
+      "field_voxels": 3921
+    },
+    "plunger__handle_socket": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 744346,
+      "field_voxels": 8260
+    },
+    "plunger__grip": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 757107,
+      "field_voxels": 68177
+    },
+    "plunger__grip_cap_0": {
+      "texture_size": 1024,
+      "n_faces": 1280,
+      "texels": 617579,
+      "field_voxels": 10610
+    },
+    "plunger__grip_cap_1": {
+      "texture_size": 1024,
+      "n_faces": 1280,
+      "texels": 678864,
+      "field_voxels": 10587
+    }
+  }
+}

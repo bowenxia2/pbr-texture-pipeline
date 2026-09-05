@@ -1,0 +1,179 @@
+{
+  "group_order": [
+    "frame__base_plate",
+    "frame__guide_floor",
+    "frame__guide_side_0",
+    "frame__guide_side_1",
+    "frame__guide_top",
+    "frame__barrel_shell",
+    "frame__lower_collar",
+    "frame__upper_collar",
+    "frame__side_bracket_0",
+    "frame__side_bracket_1",
+    "frame__tie_rod_0",
+    "frame__tie_rod_1",
+    "frame__gauge_neck",
+    "frame__gauge_body",
+    "frame__gauge_face",
+    "frame__gauge_needle",
+    "frame__gauge_tick_0",
+    "frame__gauge_tick_1",
+    "frame__gauge_tick_2",
+    "frame__gauge_tick_3",
+    "frame__gauge_tick_4",
+    "frame__button_collar",
+    "piston__piston_rod",
+    "piston__handle_stem",
+    "piston__plunger_stop",
+    "piston__t_handle_pad",
+    "piston__handle_end_0",
+    "piston__handle_end_1",
+    "stabilizer__slide_bar",
+    "stabilizer__foot_pad_0",
+    "stabilizer__foot_pad_1",
+    "release_button__button_cap",
+    "release_button__button_dome"
+  ],
+  "face_ranges": {
+    "frame__base_plate": [
+      0,
+      12
+    ],
+    "frame__guide_floor": [
+      12,
+      24
+    ],
+    "frame__guide_side_0": [
+      24,
+      36
+    ],
+    "frame__guide_side_1": [
+      36,
+      48
+    ],
+    "frame__guide_top": [
+      48,
+      60
+    ],
+    "frame__barrel_shell": [
+      60,
+      1068
+    ],
+    "frame__lower_collar": [
+      1068,
+      2076
+    ],
+    "frame__upper_collar": [
+      2076,
+      3084
+    ],
+    "frame__side_bracket_0": [
+      3084,
+      3096
+    ],
+    "frame__side_bracket_1": [
+      3096,
+      3108
+    ],
+    "frame__tie_rod_0": [
+      3108,
+      3236
+    ],
+    "frame__tie_rod_1": [
+      3236,
+      3364
+    ],
+    "frame__gauge_neck": [
+      3364,
+      3492
+    ],
+    "frame__gauge_body": [
+      3492,
+      3620
+    ],
+    "frame__gauge_face": [
+      3620,
+      3748
+    ],
+    "frame__gauge_needle": [
+      3748,
+      3760
+    ],
+    "frame__gauge_tick_0": [
+      3760,
+      3772
+    ],
+    "frame__gauge_tick_1": [
+      3772,
+      3784
+    ],
+    "frame__gauge_tick_2": [
+      3784,
+      3796
+    ],
+    "frame__gauge_tick_3": [
+      3796,
+      3808
+    ],
+    "frame__gauge_tick_4": [
+      3808,
+      3820
+    ],
+    "frame__button_collar": [
+      3820,
+      3948
+    ],
+    "piston__piston_rod": [
+      3948,
+      4076
+    ],
+    "piston__handle_stem": [
+      4076,
+      4204
+    ],
+    "piston__plunger_stop": [
+      4204,
+      4332
+    ],
+    "piston__t_handle_pad": [
+      4332,
+      4460
+    ],
+    "piston__handle_end_0": [
+      4460,
+      5740
+    ],
+    "piston__handle_end_1": [
+      5740,
+      7020
+    ],
+    "stabilizer__slide_bar": [
+      7020,
+      7032
+    ],
+    "stabilizer__foot_pad_0": [
+      7032,
+      7044
+    ],
+    "stabilizer__foot_pad_1": [
+      7044,
+      7056
+    ],
+    "release_button__button_cap": [
+      7056,
+      7184
+    ],
+    "release_button__button_dome": [
+      7184,
+      8464
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.598250394869434
+    ],
+    "scale": 0.8357620893992425
+  }
+}

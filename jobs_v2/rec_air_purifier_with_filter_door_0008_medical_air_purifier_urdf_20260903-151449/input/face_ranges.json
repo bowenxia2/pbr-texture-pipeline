@@ -1,0 +1,349 @@
+{
+  "group_order": [
+    "housing__back_panel",
+    "housing__left_shell",
+    "housing__right_shell",
+    "housing__top_shell",
+    "housing__bottom_shell",
+    "housing__left_bezel",
+    "housing__right_bezel",
+    "housing__top_bezel",
+    "housing__bottom_bezel",
+    "housing__left_filter_guide",
+    "housing__right_filter_guide",
+    "housing__filter_frame",
+    "housing__filter_media_core",
+    "housing__filter_pleat_0",
+    "housing__filter_pleat_1",
+    "housing__filter_pleat_2",
+    "housing__filter_pleat_3",
+    "housing__filter_pleat_4",
+    "housing__filter_pleat_5",
+    "housing__filter_pleat_6",
+    "housing__filter_pleat_7",
+    "housing__filter_pleat_8",
+    "hinge_hardware__mount_strip",
+    "hinge_hardware__frame_tab_0",
+    "hinge_hardware__frame_knuckle_0",
+    "hinge_hardware__frame_tab_2",
+    "hinge_hardware__frame_knuckle_2",
+    "hinge_hardware__frame_tab_4",
+    "hinge_hardware__frame_knuckle_4",
+    "hinge_hardware__frame_tab_6",
+    "hinge_hardware__frame_knuckle_6",
+    "latch_hardware__crossbar",
+    "latch_hardware__left_base",
+    "latch_hardware__left_striker",
+    "latch_hardware__right_base",
+    "latch_hardware__right_striker",
+    "filter_door__door_skin",
+    "filter_door__bottom_rail",
+    "filter_door__top_rail",
+    "filter_door__left_stile",
+    "filter_door__right_stile",
+    "filter_door__hinge_strap",
+    "filter_door__door_tab_1",
+    "filter_door__door_knuckle_1",
+    "filter_door__door_tab_3",
+    "filter_door__door_knuckle_3",
+    "filter_door__door_tab_5",
+    "filter_door__door_knuckle_5",
+    "filter_door__field_panel",
+    "filter_door__grille_recess",
+    "filter_door__face_grille",
+    "filter_door__grille_slat_0",
+    "filter_door__grille_slat_1",
+    "filter_door__grille_slat_2",
+    "filter_door__grille_slat_3",
+    "filter_door__grille_slat_4",
+    "filter_door__grille_slat_5",
+    "filter_door__grille_slat_6",
+    "filter_door__grille_slat_7",
+    "filter_door__grille_left_rail",
+    "filter_door__grille_right_rail",
+    "filter_door__left_latch",
+    "filter_door__left_latch_button",
+    "filter_door__left_hook",
+    "filter_door__right_latch",
+    "filter_door__right_latch_button",
+    "filter_door__right_hook"
+  ],
+  "face_ranges": {
+    "housing__back_panel": [
+      0,
+      12
+    ],
+    "housing__left_shell": [
+      12,
+      24
+    ],
+    "housing__right_shell": [
+      24,
+      36
+    ],
+    "housing__top_shell": [
+      36,
+      48
+    ],
+    "housing__bottom_shell": [
+      48,
+      60
+    ],
+    "housing__left_bezel": [
+      60,
+      72
+    ],
+    "housing__right_bezel": [
+      72,
+      84
+    ],
+    "housing__top_bezel": [
+      84,
+      96
+    ],
+    "housing__bottom_bezel": [
+      96,
+      108
+    ],
+    "housing__left_filter_guide": [
+      108,
+      120
+    ],
+    "housing__right_filter_guide": [
+      120,
+      132
+    ],
+    "housing__filter_frame": [
+      132,
+      144
+    ],
+    "housing__filter_media_core": [
+      144,
+      156
+    ],
+    "housing__filter_pleat_0": [
+      156,
+      168
+    ],
+    "housing__filter_pleat_1": [
+      168,
+      180
+    ],
+    "housing__filter_pleat_2": [
+      180,
+      192
+    ],
+    "housing__filter_pleat_3": [
+      192,
+      204
+    ],
+    "housing__filter_pleat_4": [
+      204,
+      216
+    ],
+    "housing__filter_pleat_5": [
+      216,
+      228
+    ],
+    "housing__filter_pleat_6": [
+      228,
+      240
+    ],
+    "housing__filter_pleat_7": [
+      240,
+      252
+    ],
+    "housing__filter_pleat_8": [
+      252,
+      264
+    ],
+    "hinge_hardware__mount_strip": [
+      264,
+      276
+    ],
+    "hinge_hardware__frame_tab_0": [
+      276,
+      288
+    ],
+    "hinge_hardware__frame_knuckle_0": [
+      288,
+      416
+    ],
+    "hinge_hardware__frame_tab_2": [
+      416,
+      428
+    ],
+    "hinge_hardware__frame_knuckle_2": [
+      428,
+      556
+    ],
+    "hinge_hardware__frame_tab_4": [
+      556,
+      568
+    ],
+    "hinge_hardware__frame_knuckle_4": [
+      568,
+      696
+    ],
+    "hinge_hardware__frame_tab_6": [
+      696,
+      708
+    ],
+    "hinge_hardware__frame_knuckle_6": [
+      708,
+      836
+    ],
+    "latch_hardware__crossbar": [
+      836,
+      848
+    ],
+    "latch_hardware__left_base": [
+      848,
+      860
+    ],
+    "latch_hardware__left_striker": [
+      860,
+      872
+    ],
+    "latch_hardware__right_base": [
+      872,
+      884
+    ],
+    "latch_hardware__right_striker": [
+      884,
+      896
+    ],
+    "filter_door__door_skin": [
+      896,
+      908
+    ],
+    "filter_door__bottom_rail": [
+      908,
+      920
+    ],
+    "filter_door__top_rail": [
+      920,
+      932
+    ],
+    "filter_door__left_stile": [
+      932,
+      944
+    ],
+    "filter_door__right_stile": [
+      944,
+      956
+    ],
+    "filter_door__hinge_strap": [
+      956,
+      968
+    ],
+    "filter_door__door_tab_1": [
+      968,
+      980
+    ],
+    "filter_door__door_knuckle_1": [
+      980,
+      1108
+    ],
+    "filter_door__door_tab_3": [
+      1108,
+      1120
+    ],
+    "filter_door__door_knuckle_3": [
+      1120,
+      1248
+    ],
+    "filter_door__door_tab_5": [
+      1248,
+      1260
+    ],
+    "filter_door__door_knuckle_5": [
+      1260,
+      1388
+    ],
+    "filter_door__field_panel": [
+      1388,
+      1400
+    ],
+    "filter_door__grille_recess": [
+      1400,
+      1412
+    ],
+    "filter_door__face_grille": [
+      1412,
+      1424
+    ],
+    "filter_door__grille_slat_0": [
+      1424,
+      1436
+    ],
+    "filter_door__grille_slat_1": [
+      1436,
+      1448
+    ],
+    "filter_door__grille_slat_2": [
+      1448,
+      1460
+    ],
+    "filter_door__grille_slat_3": [
+      1460,
+      1472
+    ],
+    "filter_door__grille_slat_4": [
+      1472,
+      1484
+    ],
+    "filter_door__grille_slat_5": [
+      1484,
+      1496
+    ],
+    "filter_door__grille_slat_6": [
+      1496,
+      1508
+    ],
+    "filter_door__grille_slat_7": [
+      1508,
+      1520
+    ],
+    "filter_door__grille_left_rail": [
+      1520,
+      1532
+    ],
+    "filter_door__grille_right_rail": [
+      1532,
+      1544
+    ],
+    "filter_door__left_latch": [
+      1544,
+      1556
+    ],
+    "filter_door__left_latch_button": [
+      1556,
+      1568
+    ],
+    "filter_door__left_hook": [
+      1568,
+      1580
+    ],
+    "filter_door__right_latch": [
+      1580,
+      1592
+    ],
+    "filter_door__right_latch_button": [
+      1592,
+      1604
+    ],
+    "filter_door__right_hook": [
+      1604,
+      1616
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.09
+    ],
+    "scale": 1.1904642857142858
+  }
+}

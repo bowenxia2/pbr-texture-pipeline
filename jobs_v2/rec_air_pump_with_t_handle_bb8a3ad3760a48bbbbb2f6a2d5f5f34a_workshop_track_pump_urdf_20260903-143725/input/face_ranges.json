@@ -1,0 +1,194 @@
+{
+  "group_order": [
+    "pump_body__floor_plate",
+    "pump_body__wide_foot_tread",
+    "pump_body__barrel_plinth",
+    "pump_body__barrel_socket",
+    "pump_body__base_crimp_ring",
+    "pump_body__barrel_shell",
+    "pump_body__barrel_shadow_seam",
+    "pump_body__top_collar",
+    "pump_body__gauge_bridge",
+    "pump_body__gauge_housing",
+    "pump_body__gauge_face",
+    "pump_body__gauge_bezel",
+    "pump_body__gauge_lens",
+    "pump_body__gauge_tick_0",
+    "pump_body__gauge_tick_1",
+    "pump_body__gauge_tick_2",
+    "pump_body__gauge_tick_3",
+    "pump_body__gauge_tick_4",
+    "pump_body__button_socket",
+    "pump_body__parked_hose",
+    "pump_body__hose_chuck",
+    "pump_body__hose_clip_low",
+    "pump_body__hose_clip_high",
+    "pump_body__hose_outlet_boss",
+    "handle_rod__piston_rod",
+    "handle_rod__handle_neck",
+    "handle_rod__handle_bar",
+    "handle_rod__grip_0",
+    "handle_rod__grip_1",
+    "handle_rod__grip_end_0",
+    "handle_rod__grip_end_1",
+    "gauge_needle__pointer",
+    "gauge_needle__counter_tail",
+    "gauge_needle__pivot_cap",
+    "release_button__button_stem",
+    "release_button__button_cap"
+  ],
+  "face_ranges": {
+    "pump_body__floor_plate": [
+      0,
+      12
+    ],
+    "pump_body__wide_foot_tread": [
+      12,
+      24
+    ],
+    "pump_body__barrel_plinth": [
+      24,
+      36
+    ],
+    "pump_body__barrel_socket": [
+      36,
+      164
+    ],
+    "pump_body__base_crimp_ring": [
+      164,
+      1956
+    ],
+    "pump_body__barrel_shell": [
+      1956,
+      2084
+    ],
+    "pump_body__barrel_shadow_seam": [
+      2084,
+      2096
+    ],
+    "pump_body__top_collar": [
+      2096,
+      3888
+    ],
+    "pump_body__gauge_bridge": [
+      3888,
+      3900
+    ],
+    "pump_body__gauge_housing": [
+      3900,
+      4028
+    ],
+    "pump_body__gauge_face": [
+      4028,
+      4156
+    ],
+    "pump_body__gauge_bezel": [
+      4156,
+      6460
+    ],
+    "pump_body__gauge_lens": [
+      6460,
+      6588
+    ],
+    "pump_body__gauge_tick_0": [
+      6588,
+      6600
+    ],
+    "pump_body__gauge_tick_1": [
+      6600,
+      6612
+    ],
+    "pump_body__gauge_tick_2": [
+      6612,
+      6624
+    ],
+    "pump_body__gauge_tick_3": [
+      6624,
+      6636
+    ],
+    "pump_body__gauge_tick_4": [
+      6636,
+      6648
+    ],
+    "pump_body__button_socket": [
+      6648,
+      6776
+    ],
+    "pump_body__parked_hose": [
+      6776,
+      10844
+    ],
+    "pump_body__hose_chuck": [
+      10844,
+      10972
+    ],
+    "pump_body__hose_clip_low": [
+      10972,
+      10984
+    ],
+    "pump_body__hose_clip_high": [
+      10984,
+      10996
+    ],
+    "pump_body__hose_outlet_boss": [
+      10996,
+      11124
+    ],
+    "handle_rod__piston_rod": [
+      11124,
+      11252
+    ],
+    "handle_rod__handle_neck": [
+      11252,
+      11380
+    ],
+    "handle_rod__handle_bar": [
+      11380,
+      11508
+    ],
+    "handle_rod__grip_0": [
+      11508,
+      11636
+    ],
+    "handle_rod__grip_1": [
+      11636,
+      11764
+    ],
+    "handle_rod__grip_end_0": [
+      11764,
+      13044
+    ],
+    "handle_rod__grip_end_1": [
+      13044,
+      14324
+    ],
+    "gauge_needle__pointer": [
+      14324,
+      14336
+    ],
+    "gauge_needle__counter_tail": [
+      14336,
+      14348
+    ],
+    "gauge_needle__pivot_cap": [
+      14348,
+      14476
+    ],
+    "release_button__button_stem": [
+      14476,
+      14604
+    ],
+    "release_button__button_cap": [
+      14604,
+      14732
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.008000023875819676,
+      0.589
+    ],
+    "scale": 0.8488879456706283
+  }
+}

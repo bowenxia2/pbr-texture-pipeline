@@ -231,6 +231,19 @@ def rgba_to_canny(color: np.ndarray, low: int = 100, high: int = 200) -> np.ndar
     return cv2.Canny(gray, low, high)
 
 
+def normal_to_canny(normal_3hw: np.ndarray, mask: np.ndarray,
+                    low: int = 100, high: int = 200) -> np.ndarray:
+    """Canny edge map from a normal render: captures only geometric edges, not texture detail.
+
+    Encodes the normal map as (n+1)/2 uint8 RGB, runs Canny, and dilates 1px
+    so nearby edge fragments connect.
+    """
+    normal_img = (np.clip(normal_3hw.transpose(1, 2, 0), 0, 1) * 255).astype(np.uint8)
+    edges = cv2.Canny(normal_img, low, high)
+    edges = cv2.dilate(edges, np.ones((3, 3), np.uint8), iterations=1)
+    return edges
+
+
 # --- contact sheet + re-pose (Task 1.3) --------------------------------------
 CONTACT_N = 8                         # 8 azimuth panels, front + k*45deg
 CONTACT_STEP = math.pi / 4            # 45 deg
@@ -365,6 +378,8 @@ def render_textured_views(
     R_mat: np.ndarray | None,
     num_views: int = 1,
     resolution: int = 1024,
+    condition_yaw: float | None = None,
+    clay_mesh_repr: "Mesh | None" = None,
 ) -> dict:
     """Render *num_views* RGBA views of the textured mesh at 90-degree azimuth steps.
 
@@ -372,16 +387,28 @@ def render_textured_views(
     For view 0 (the front), also captures the depth buffer as an inverse-depth
     ControlNet map and composites the RGBA onto a white background.
 
+    When *condition_yaw* is set, an extra 3/4 view is rendered at that yaw angle
+    and saved as view_cond.png / canny_cond.png / front_white_cond.png for use as
+    the TRELLIS.2 conditioning image.
+
+    Canny maps are derived from the normal map (via nvdiffrast) rather than the
+    textured color render, so they capture only geometric edges - not texture
+    details like text, logos, or color boundaries. If *clay_mesh_repr* is None,
+    falls back to the legacy textured-render canny.
+
     Args:
         job: JobDir instance.
         group_meshes_textured: list of (group_id, trimesh_with_materials, fk_transform_4x4).
         R_mat: 3x3 repose rotation (from Orient-V2 / front_panel), or None.
         num_views: number of views (default 1, front-only).
         resolution: output image size in pixels.
+        condition_yaw: yaw angle for the conditioning view (radians), or None to skip.
+        clay_mesh_repr: nvdiffrast Mesh of the reposed normalized assembly (for
+            normal-map canny); when None, canny falls back to the textured render.
 
     Returns:
         dict with keys: views (list of RGBA paths), depth (depth map path),
-        front_white (white-bg composite path).
+        canny, front_white, and optionally condition_view/condition_canny/condition_front_white.
     """
     os.environ.setdefault("PYOPENGL_PLATFORM", "egl")
     import pyrender
@@ -395,7 +422,7 @@ def render_textured_views(
     center = (vmin + vmax) / 2.0
     scale = 0.99999 / (vmax - vmin).max()
 
-    scene = pyrender.Scene(bg_color=[0, 0, 0, 0], ambient_light=[0.3, 0.3, 0.3])
+    scene = pyrender.Scene(bg_color=[0, 0, 0, 0], ambient_light=[1.0, 1.0, 1.0])
     for _gid, mesh, fk_T in group_meshes_textured:
         v = np.asarray(mesh.vertices, dtype=np.float64) @ fk_T[:3, :3].T + fk_T[:3, 3]
         v = (v - center) * scale
@@ -414,13 +441,10 @@ def render_textured_views(
     fov = float(_CFG.get("render.fov_deg"))
     fov_rad = math.radians(fov)
     cam = pyrender.PerspectiveCamera(yfov=fov_rad, aspectRatio=1.0, znear=0.1, zfar=100.0)
-    light = pyrender.DirectionalLight(color=np.ones(3), intensity=3.0)
 
     renderer = pyrender.OffscreenRenderer(resolution, resolution)
-    azimuth_step = 2.0 * math.pi / num_views
-    saved = []
-    for i in range(num_views):
-        yaw = math.pi + i * azimuth_step
+
+    def _render_at_yaw(yaw):
         cx, cy, cz = r * math.sin(yaw), r * math.cos(yaw), 0.0
         eye = np.array([cx, cy, cz])
         target = np.array([0.0, 0.0, 0.0])
@@ -437,11 +461,26 @@ def render_textured_views(
         cam_pose[:3, 3] = eye
 
         cam_node = scene.add(cam, pose=cam_pose)
-        light_node = scene.add(light, pose=cam_pose)
-
         color, depth_buf = renderer.render(scene, flags=pyrender.RenderFlags.RGBA)
         scene.remove_node(cam_node)
-        scene.remove_node(light_node)
+        return color, depth_buf
+
+    lo, hi = _CFG.get("render.canny_thresholds")
+
+    def _canny_at_yaw(yaw_angle, color_rgba):
+        """Canny from normal map (geometry-only edges) when clay mesh is available,
+        else fall back to textured-render canny."""
+        if clay_mesh_repr is not None:
+            nrm = render_view(clay_mesh_repr, yaw_angle, CANONICAL_PITCH,
+                              resolution, 1, return_types=("mask", "normal"))
+            return normal_to_canny(nrm["normal"], nrm["mask"], int(lo), int(hi))
+        return rgba_to_canny(color_rgba, int(lo), int(hi))
+
+    azimuth_step = 2.0 * math.pi / num_views
+    saved = []
+    for i in range(num_views):
+        yaw = math.pi + i * azimuth_step
+        color, depth_buf = _render_at_yaw(yaw)
 
         out_path = job.render_view(i)
         out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -456,7 +495,7 @@ def render_textured_views(
             depth_path.parent.mkdir(parents=True, exist_ok=True)
             Image.fromarray(depth_cn, mode="L").save(depth_path)
 
-            canny_map = rgba_to_canny(color)
+            canny_map = _canny_at_yaw(yaw, color)
             canny_path = job.render_canny(0)
             canny_path.parent.mkdir(parents=True, exist_ok=True)
             Image.fromarray(canny_map, mode="L").save(canny_path)
@@ -467,10 +506,33 @@ def render_textured_views(
             front_white_path = job.render_front_white()
             Image.fromarray(white_bg).save(front_white_path)
 
-    renderer.delete()
-    return {
+    result = {
         "views": saved,
         "depth": job.render_depth(0),
         "canny": job.render_canny(0),
         "front_white": job.render_front_white(),
     }
+
+    if condition_yaw is not None:
+        cond_color, _cond_depth = _render_at_yaw(condition_yaw)
+
+        cond_view_path = job.render_condition_view()
+        cond_view_path.parent.mkdir(parents=True, exist_ok=True)
+        Image.fromarray(cond_color).save(cond_view_path)
+
+        cond_canny = _canny_at_yaw(condition_yaw, cond_color)
+        cond_canny_path = job.render_condition_canny()
+        Image.fromarray(cond_canny, mode="L").save(cond_canny_path)
+
+        cond_rgb = cond_color[:, :, :3].astype(np.float32)
+        cond_a = cond_color[:, :, 3:4].astype(np.float32) / 255.0
+        cond_white = (cond_rgb * cond_a + 255.0 * (1.0 - cond_a)).astype(np.uint8)
+        cond_white_path = job.render_condition_front_white()
+        Image.fromarray(cond_white).save(cond_white_path)
+
+        result["condition_view"] = cond_view_path
+        result["condition_canny"] = cond_canny_path
+        result["condition_front_white"] = cond_white_path
+
+    renderer.delete()
+    return result

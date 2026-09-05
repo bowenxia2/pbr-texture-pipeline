@@ -1,0 +1,269 @@
+{
+  "group_order": [
+    "housing__body_shell",
+    "housing__control_panel",
+    "housing__foot_0",
+    "housing__foot_1",
+    "housing__foot_2",
+    "housing__foot_3",
+    "chamber__chamber_floor",
+    "chamber__chamber_side_0",
+    "chamber__chamber_side_1",
+    "chamber__chamber_rear",
+    "chamber__chamber_ceiling",
+    "drawer__drawer_floor",
+    "drawer__drawer_side_0",
+    "drawer__drawer_side_1",
+    "drawer__drawer_rear",
+    "drawer__drawer_front_lower",
+    "drawer__drawer_front_cheek_0",
+    "drawer__drawer_front_cheek_1",
+    "drawer__drawer_front_lower_panel",
+    "drawer__drawer_front_upper_panel",
+    "drawer__drawer_front_panel_0",
+    "drawer__drawer_front_panel_1",
+    "drawer__drawer_front_mount_0",
+    "drawer__drawer_front_mount_1",
+    "drawer__drawer_front_mount_2",
+    "drawer__handle_post_0",
+    "drawer__handle_post_1",
+    "drawer__handle_bridge",
+    "basket__basket_floor",
+    "basket__basket_side_0",
+    "basket__basket_side_1",
+    "basket__basket_rear",
+    "basket__basket_front",
+    "basket__basket_foot_0",
+    "basket__basket_foot_1",
+    "basket__basket_foot_2",
+    "basket__basket_foot_3",
+    "basket__basket_handle",
+    "release_button__release_button",
+    "temp_dial__dial_skirt",
+    "temp_dial__dial_cap",
+    "temp_dial__dial_hub",
+    "temp_dial__dial_indicator",
+    "time_dial__dial_skirt",
+    "time_dial__dial_cap",
+    "time_dial__dial_hub",
+    "time_dial__dial_indicator",
+    "preset_button_0__button_cap",
+    "preset_button_0__button_stem",
+    "preset_button_1__button_cap",
+    "preset_button_1__button_stem"
+  ],
+  "face_ranges": {
+    "housing__body_shell": [
+      0,
+      10772
+    ],
+    "housing__control_panel": [
+      10772,
+      11360
+    ],
+    "housing__foot_0": [
+      11360,
+      11488
+    ],
+    "housing__foot_1": [
+      11488,
+      11616
+    ],
+    "housing__foot_2": [
+      11616,
+      11744
+    ],
+    "housing__foot_3": [
+      11744,
+      11872
+    ],
+    "chamber__chamber_floor": [
+      11872,
+      11884
+    ],
+    "chamber__chamber_side_0": [
+      11884,
+      11896
+    ],
+    "chamber__chamber_side_1": [
+      11896,
+      11908
+    ],
+    "chamber__chamber_rear": [
+      11908,
+      11920
+    ],
+    "chamber__chamber_ceiling": [
+      11920,
+      11932
+    ],
+    "drawer__drawer_floor": [
+      11932,
+      11944
+    ],
+    "drawer__drawer_side_0": [
+      11944,
+      11956
+    ],
+    "drawer__drawer_side_1": [
+      11956,
+      11968
+    ],
+    "drawer__drawer_rear": [
+      11968,
+      11980
+    ],
+    "drawer__drawer_front_lower": [
+      11980,
+      11992
+    ],
+    "drawer__drawer_front_cheek_0": [
+      11992,
+      12004
+    ],
+    "drawer__drawer_front_cheek_1": [
+      12004,
+      12016
+    ],
+    "drawer__drawer_front_lower_panel": [
+      12016,
+      12028
+    ],
+    "drawer__drawer_front_upper_panel": [
+      12028,
+      12040
+    ],
+    "drawer__drawer_front_panel_0": [
+      12040,
+      12052
+    ],
+    "drawer__drawer_front_panel_1": [
+      12052,
+      12064
+    ],
+    "drawer__drawer_front_mount_0": [
+      12064,
+      12076
+    ],
+    "drawer__drawer_front_mount_1": [
+      12076,
+      12088
+    ],
+    "drawer__drawer_front_mount_2": [
+      12088,
+      12100
+    ],
+    "drawer__handle_post_0": [
+      12100,
+      12112
+    ],
+    "drawer__handle_post_1": [
+      12112,
+      12124
+    ],
+    "drawer__handle_bridge": [
+      12124,
+      12136
+    ],
+    "basket__basket_floor": [
+      12136,
+      12648
+    ],
+    "basket__basket_side_0": [
+      12648,
+      12820
+    ],
+    "basket__basket_side_1": [
+      12820,
+      12992
+    ],
+    "basket__basket_rear": [
+      12992,
+      13104
+    ],
+    "basket__basket_front": [
+      13104,
+      13116
+    ],
+    "basket__basket_foot_0": [
+      13116,
+      13128
+    ],
+    "basket__basket_foot_1": [
+      13128,
+      13140
+    ],
+    "basket__basket_foot_2": [
+      13140,
+      13152
+    ],
+    "basket__basket_foot_3": [
+      13152,
+      13164
+    ],
+    "basket__basket_handle": [
+      13164,
+      13224
+    ],
+    "release_button__release_button": [
+      13224,
+      13236
+    ],
+    "temp_dial__dial_skirt": [
+      13236,
+      13364
+    ],
+    "temp_dial__dial_cap": [
+      13364,
+      13492
+    ],
+    "temp_dial__dial_hub": [
+      13492,
+      13620
+    ],
+    "temp_dial__dial_indicator": [
+      13620,
+      13632
+    ],
+    "time_dial__dial_skirt": [
+      13632,
+      13760
+    ],
+    "time_dial__dial_cap": [
+      13760,
+      13888
+    ],
+    "time_dial__dial_hub": [
+      13888,
+      14016
+    ],
+    "time_dial__dial_indicator": [
+      14016,
+      14028
+    ],
+    "preset_button_0__button_cap": [
+      14028,
+      14040
+    ],
+    "preset_button_0__button_stem": [
+      14040,
+      14052
+    ],
+    "preset_button_1__button_cap": [
+      14052,
+      14064
+    ],
+    "preset_button_1__button_stem": [
+      14064,
+      14076
+    ]
+  },
+  "norm": {
+    "center": [
+      0.033,
+      0.0,
+      0.17649999081702772
+    ],
+    "scale": 2.29355504587156
+  }
+}

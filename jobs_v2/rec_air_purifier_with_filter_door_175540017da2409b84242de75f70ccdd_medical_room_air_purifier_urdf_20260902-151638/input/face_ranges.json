@@ -1,0 +1,179 @@
+{
+  "group_order": [
+    "body__stand_base",
+    "body__stand_column",
+    "body__housing_floor",
+    "body__front_shell",
+    "body__rear_shell",
+    "body__left_shell",
+    "body__right_front_frame",
+    "body__right_rear_frame",
+    "body__right_bottom_frame",
+    "body__right_top_frame",
+    "body__top_front_rim",
+    "body__top_rear_rim",
+    "body__top_left_rim",
+    "body__top_right_rim",
+    "body__front_guide_rail",
+    "body__rear_guide_rail",
+    "body__intake_screen",
+    "body__intake_slat_0",
+    "body__intake_slat_1",
+    "body__intake_slat_2",
+    "body__intake_slat_3",
+    "body__intake_slat_4",
+    "body__intake_slat_5",
+    "body__status_bezel",
+    "hepa_lid__lid_shell",
+    "hepa_lid__lid_pull",
+    "hepa_lid__lid_inner_flange",
+    "pre_filter__filter_frame",
+    "pre_filter__filter_door",
+    "pre_filter__filter_media",
+    "pre_filter__front_runner",
+    "pre_filter__rear_runner",
+    "pre_filter__filter_handle"
+  ],
+  "face_ranges": {
+    "body__stand_base": [
+      0,
+      12
+    ],
+    "body__stand_column": [
+      12,
+      24
+    ],
+    "body__housing_floor": [
+      24,
+      36
+    ],
+    "body__front_shell": [
+      36,
+      48
+    ],
+    "body__rear_shell": [
+      48,
+      60
+    ],
+    "body__left_shell": [
+      60,
+      72
+    ],
+    "body__right_front_frame": [
+      72,
+      84
+    ],
+    "body__right_rear_frame": [
+      84,
+      96
+    ],
+    "body__right_bottom_frame": [
+      96,
+      108
+    ],
+    "body__right_top_frame": [
+      108,
+      120
+    ],
+    "body__top_front_rim": [
+      120,
+      132
+    ],
+    "body__top_rear_rim": [
+      132,
+      144
+    ],
+    "body__top_left_rim": [
+      144,
+      156
+    ],
+    "body__top_right_rim": [
+      156,
+      168
+    ],
+    "body__front_guide_rail": [
+      168,
+      180
+    ],
+    "body__rear_guide_rail": [
+      180,
+      192
+    ],
+    "body__intake_screen": [
+      192,
+      204
+    ],
+    "body__intake_slat_0": [
+      204,
+      216
+    ],
+    "body__intake_slat_1": [
+      216,
+      228
+    ],
+    "body__intake_slat_2": [
+      228,
+      240
+    ],
+    "body__intake_slat_3": [
+      240,
+      252
+    ],
+    "body__intake_slat_4": [
+      252,
+      264
+    ],
+    "body__intake_slat_5": [
+      264,
+      276
+    ],
+    "body__status_bezel": [
+      276,
+      288
+    ],
+    "hepa_lid__lid_shell": [
+      288,
+      300
+    ],
+    "hepa_lid__lid_pull": [
+      300,
+      312
+    ],
+    "hepa_lid__lid_inner_flange": [
+      312,
+      324
+    ],
+    "pre_filter__filter_frame": [
+      324,
+      336
+    ],
+    "pre_filter__filter_door": [
+      336,
+      348
+    ],
+    "pre_filter__filter_media": [
+      348,
+      360
+    ],
+    "pre_filter__front_runner": [
+      360,
+      372
+    ],
+    "pre_filter__rear_runner": [
+      372,
+      384
+    ],
+    "pre_filter__filter_handle": [
+      384,
+      396
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0050000000000000044,
+      0.0,
+      0.541
+    ],
+    "scale": 0.9242051756007393
+  }
+}

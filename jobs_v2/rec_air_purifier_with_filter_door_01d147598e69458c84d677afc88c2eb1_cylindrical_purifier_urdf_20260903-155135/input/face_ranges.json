@@ -1,0 +1,44 @@
+{
+  "group_order": [
+    "lower_body__body_shell",
+    "lower_body__button_pad",
+    "upper_shell__shell_body",
+    "upper_shell__shell_badge",
+    "filter_cylinder__filter_body",
+    "power_button__button_cap"
+  ],
+  "face_ranges": {
+    "lower_body__body_shell": [
+      0,
+      2516
+    ],
+    "lower_body__button_pad": [
+      2516,
+      2528
+    ],
+    "upper_shell__shell_body": [
+      2528,
+      4606
+    ],
+    "upper_shell__shell_badge": [
+      4606,
+      4618
+    ],
+    "filter_cylinder__filter_body": [
+      4618,
+      8336
+    ],
+    "power_button__button_cap": [
+      8336,
+      8464
+    ]
+  },
+  "norm": {
+    "center": [
+      0.006000023875819681,
+      0.0,
+      0.27749999999999997
+    ],
+    "scale": 1.801783783783784
+  }
+}

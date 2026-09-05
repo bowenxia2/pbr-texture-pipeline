@@ -1,0 +1,329 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "body__right_shell",
+    "body__rear_shell",
+    "body__roof_shell",
+    "body__front_sill",
+    "body__front_jamb_0",
+    "body__front_jamb_1",
+    "body__upper_face_0",
+    "body__upper_face_1",
+    "body__cluster_bridge",
+    "body__cluster_cap",
+    "body__control_cluster",
+    "body__button_bezel_top",
+    "body__button_bezel_bottom",
+    "body__button_bezel_0",
+    "body__button_bezel_1",
+    "body__button_bezel_2",
+    "body__button_bezel_3",
+    "body__side_vent_0_0",
+    "body__side_vent_0_1",
+    "body__side_vent_0_2",
+    "body__side_vent_0_3",
+    "body__side_vent_0_4",
+    "body__side_vent_1_0",
+    "body__side_vent_1_1",
+    "body__side_vent_1_2",
+    "body__side_vent_1_3",
+    "body__side_vent_1_4",
+    "drawer__drawer_shell",
+    "drawer__drawer_side_0",
+    "drawer__drawer_side_1",
+    "drawer__drawer_rear",
+    "drawer__drawer_front_wall",
+    "drawer__drawer_fascia",
+    "drawer__handle_rear",
+    "drawer__handle_grip_0",
+    "drawer__handle_grip_1",
+    "drawer__latch_guide_0",
+    "drawer__latch_guide_1",
+    "drawer__handle_top_0",
+    "drawer__handle_top_1",
+    "drawer__handle_top_rear",
+    "basket__basket_shell",
+    "basket__basket_side_1",
+    "basket__basket_front",
+    "basket__basket_rear",
+    "basket__basket_floor_0",
+    "basket__basket_floor_1",
+    "basket__basket_floor_2",
+    "basket__basket_floor_3",
+    "basket__basket_grate_0",
+    "basket__basket_grate_1",
+    "basket__basket_grate_2",
+    "basket__basket_grate_3",
+    "basket__basket_foot_0",
+    "basket__basket_foot_1",
+    "basket__basket_foot_2",
+    "basket__basket_foot_3",
+    "latch__latch_button",
+    "selector_knob__selector_knob",
+    "preset_button_0__preset_button",
+    "preset_button_1__preset_button",
+    "preset_button_2__preset_button"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      12
+    ],
+    "body__right_shell": [
+      12,
+      24
+    ],
+    "body__rear_shell": [
+      24,
+      36
+    ],
+    "body__roof_shell": [
+      36,
+      48
+    ],
+    "body__front_sill": [
+      48,
+      60
+    ],
+    "body__front_jamb_0": [
+      60,
+      72
+    ],
+    "body__front_jamb_1": [
+      72,
+      84
+    ],
+    "body__upper_face_0": [
+      84,
+      96
+    ],
+    "body__upper_face_1": [
+      96,
+      108
+    ],
+    "body__cluster_bridge": [
+      108,
+      120
+    ],
+    "body__cluster_cap": [
+      120,
+      132
+    ],
+    "body__control_cluster": [
+      132,
+      144
+    ],
+    "body__button_bezel_top": [
+      144,
+      156
+    ],
+    "body__button_bezel_bottom": [
+      156,
+      168
+    ],
+    "body__button_bezel_0": [
+      168,
+      180
+    ],
+    "body__button_bezel_1": [
+      180,
+      192
+    ],
+    "body__button_bezel_2": [
+      192,
+      204
+    ],
+    "body__button_bezel_3": [
+      204,
+      216
+    ],
+    "body__side_vent_0_0": [
+      216,
+      228
+    ],
+    "body__side_vent_0_1": [
+      228,
+      240
+    ],
+    "body__side_vent_0_2": [
+      240,
+      252
+    ],
+    "body__side_vent_0_3": [
+      252,
+      264
+    ],
+    "body__side_vent_0_4": [
+      264,
+      276
+    ],
+    "body__side_vent_1_0": [
+      276,
+      288
+    ],
+    "body__side_vent_1_1": [
+      288,
+      300
+    ],
+    "body__side_vent_1_2": [
+      300,
+      312
+    ],
+    "body__side_vent_1_3": [
+      312,
+      324
+    ],
+    "body__side_vent_1_4": [
+      324,
+      336
+    ],
+    "drawer__drawer_shell": [
+      336,
+      348
+    ],
+    "drawer__drawer_side_0": [
+      348,
+      360
+    ],
+    "drawer__drawer_side_1": [
+      360,
+      372
+    ],
+    "drawer__drawer_rear": [
+      372,
+      384
+    ],
+    "drawer__drawer_front_wall": [
+      384,
+      396
+    ],
+    "drawer__drawer_fascia": [
+      396,
+      408
+    ],
+    "drawer__handle_rear": [
+      408,
+      420
+    ],
+    "drawer__handle_grip_0": [
+      420,
+      432
+    ],
+    "drawer__handle_grip_1": [
+      432,
+      444
+    ],
+    "drawer__latch_guide_0": [
+      444,
+      456
+    ],
+    "drawer__latch_guide_1": [
+      456,
+      468
+    ],
+    "drawer__handle_top_0": [
+      468,
+      480
+    ],
+    "drawer__handle_top_1": [
+      480,
+      492
+    ],
+    "drawer__handle_top_rear": [
+      492,
+      504
+    ],
+    "basket__basket_shell": [
+      504,
+      516
+    ],
+    "basket__basket_side_1": [
+      516,
+      528
+    ],
+    "basket__basket_front": [
+      528,
+      540
+    ],
+    "basket__basket_rear": [
+      540,
+      552
+    ],
+    "basket__basket_floor_0": [
+      552,
+      564
+    ],
+    "basket__basket_floor_1": [
+      564,
+      576
+    ],
+    "basket__basket_floor_2": [
+      576,
+      588
+    ],
+    "basket__basket_floor_3": [
+      588,
+      600
+    ],
+    "basket__basket_grate_0": [
+      600,
+      612
+    ],
+    "basket__basket_grate_1": [
+      612,
+      624
+    ],
+    "basket__basket_grate_2": [
+      624,
+      636
+    ],
+    "basket__basket_grate_3": [
+      636,
+      648
+    ],
+    "basket__basket_foot_0": [
+      648,
+      660
+    ],
+    "basket__basket_foot_1": [
+      660,
+      672
+    ],
+    "basket__basket_foot_2": [
+      672,
+      684
+    ],
+    "basket__basket_foot_3": [
+      684,
+      696
+    ],
+    "latch__latch_button": [
+      696,
+      708
+    ],
+    "selector_knob__selector_knob": [
+      708,
+      18036
+    ],
+    "preset_button_0__preset_button": [
+      18036,
+      18048
+    ],
+    "preset_button_1__preset_button": [
+      18048,
+      18060
+    ],
+    "preset_button_2__preset_button": [
+      18060,
+      18072
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.02099999999999999,
+      0.20500000000000002
+    ],
+    "scale": 2.39232057416268
+  }
+}

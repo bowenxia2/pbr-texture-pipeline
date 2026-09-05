@@ -1,0 +1,621 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a_desktop_cube_air_purifier_urdf_20260902-160649",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a/model.urdf",
+  "created": "2026-09-02T16:06:49",
+  "updated": "2026-09-02T17:07:58",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 41,
+        "n_tiny": 41
+      },
+      "seed": null,
+      "started": "2026-09-02T16:07:34",
+      "finished": "2026-09-02T16:07:35",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T16:07:39",
+      "finished": "2026-09-02T16:13:08",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a_desktop_cube_air_purifier_urdf_20260902-160649/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T16:13:08",
+      "finished": "2026-09-02T16:48:13",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 41,
+            "n_total": 41,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a_desktop_cube_air_purifier_urdf_20260902-160649/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T16:48:15",
+      "finished": "2026-09-02T17:07:58",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_438a45594fc34514aeaa0166f856fc1a/model.urdf",
+    "category": "desktop cube air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.12000000000000001,
+        -0.12000000000000001,
+        0.0
+      ],
+      "max": [
+        0.136,
+        0.12000000000000001,
+        0.276
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "housing__bottom_shell",
+        "link": "housing",
+        "label": "bottom_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09942410595195124,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__left_shell",
+        "link": "housing",
+        "label": "left_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1041693473723853,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__back_shell",
+        "link": "housing",
+        "label": "back_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09422693677719018,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_bottom_bar",
+        "link": "housing",
+        "label": "front_bottom_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.022671709008740406,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_top_bar",
+        "link": "housing",
+        "label": "front_top_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.018378395342633424,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_left_bar",
+        "link": "housing",
+        "label": "front_left_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008950680245421875,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_right_bar",
+        "link": "housing",
+        "label": "front_right_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008950680245421875,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_1",
+        "link": "housing",
+        "label": "front_grille_slat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0042713449558271985,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_2",
+        "link": "housing",
+        "label": "front_grille_slat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004271344955827196,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_3",
+        "link": "housing",
+        "label": "front_grille_slat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004271344955827197,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_4",
+        "link": "housing",
+        "label": "front_grille_slat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004271344955827197,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_5",
+        "link": "housing",
+        "label": "front_grille_slat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004271344955827196,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__front_grille_slat_6",
+        "link": "housing",
+        "label": "front_grille_slat_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0042713449558271985,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_front_ring",
+        "link": "housing",
+        "label": "top_front_ring",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008360663455050456,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_back_ring",
+        "link": "housing",
+        "label": "top_back_ring",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008360663455050456,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_left_ring",
+        "link": "housing",
+        "label": "top_left_ring",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008360663455050453,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_right_ring",
+        "link": "housing",
+        "label": "top_right_ring",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008360663455050453,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_exhaust_slat_1",
+        "link": "housing",
+        "label": "top_exhaust_slat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008304172485759567,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_exhaust_slat_2",
+        "link": "housing",
+        "label": "top_exhaust_slat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008304172485759568,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_exhaust_slat_3",
+        "link": "housing",
+        "label": "top_exhaust_slat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008304172485759568,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_exhaust_slat_4",
+        "link": "housing",
+        "label": "top_exhaust_slat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008304172485759568,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_exhaust_slat_5",
+        "link": "housing",
+        "label": "top_exhaust_slat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008304172485759567,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_front_frame",
+        "link": "housing",
+        "label": "side_front_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013030583583096642,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_back_frame",
+        "link": "housing",
+        "label": "side_back_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013030583583096642,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_bottom_frame",
+        "link": "housing",
+        "label": "side_bottom_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011084783529744065,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_top_frame",
+        "link": "housing",
+        "label": "side_top_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013080797778021883,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__lower_guide_rail",
+        "link": "housing",
+        "label": "lower_guide_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07301143942128138,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__upper_guide_rail",
+        "link": "housing",
+        "label": "upper_guide_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07301143942128138,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_door__door_panel",
+        "link": "filter_door",
+        "label": "door_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06707988764573883,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_door__door_hinge_stile",
+        "link": "filter_door",
+        "label": "door_hinge_stile",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0037597878450264404,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_door__door_pull",
+        "link": "filter_door",
+        "label": "door_pull",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001964630376449542,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_cartridge",
+        "link": "hepa_filter",
+        "label": "filter_cartridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13419743593767156,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_media_block",
+        "link": "hepa_filter",
+        "label": "filter_media_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11001616269399153,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_1",
+        "link": "hepa_filter",
+        "label": "filter_pleat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038602162348768954,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_2",
+        "link": "hepa_filter",
+        "label": "filter_pleat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003860216234876894,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_3",
+        "link": "hepa_filter",
+        "label": "filter_pleat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038602162348768954,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_4",
+        "link": "hepa_filter",
+        "label": "filter_pleat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038602162348768954,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_5",
+        "link": "hepa_filter",
+        "label": "filter_pleat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038602162348768954,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_6",
+        "link": "hepa_filter",
+        "label": "filter_pleat_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003860216234876894,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pleat_7",
+        "link": "hepa_filter",
+        "label": "filter_pleat_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038602162348768954,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "hepa_filter__filter_pull_tab",
+        "link": "hepa_filter",
+        "label": "filter_pull_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002347513612754405,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "group_order": [
+    "pump_body__tripod_hub",
+    "pump_body__barrel_socket",
+    "pump_body__barrel_shell",
+    "pump_body__top_bushing",
+    "pump_body__lower_barrel_band",
+    "pump_body__upper_barrel_band",
+    "pump_body__foot_arm_0",
+    "pump_body__rubber_foot_0",
+    "pump_body__foot_arm_1",
+    "pump_body__rubber_foot_1",
+    "pump_body__foot_arm_2",
+    "pump_body__rubber_foot_2",
+    "pump_body__gauge_bezel",
+    "pump_body__gauge_face",
+    "pump_body__gauge_needle",
+    "pump_body__side_hose",
+    "pump_body__hose_clip",
+    "pump_body__pump_nozzle",
+    "plunger__rod",
+    "plunger__guide_stem",
+    "plunger__wiper_flange",
+    "plunger__handle_socket",
+    "plunger__grip",
+    "plunger__grip_cap_0",
+    "plunger__grip_cap_1"
+  ],
+  "face_ranges": {
+    "pump_body__tripod_hub": [
+      0,
+      128
+    ],
+    "pump_body__barrel_socket": [
+      128,
+      256
+    ],
+    "pump_body__barrel_shell": [
+      256,
+      832
+    ],
+    "pump_body__top_bushing": [
+      832,
+      1344
+    ],
+    "pump_body__lower_barrel_band": [
+      1344,
+      1856
+    ],
+    "pump_body__upper_barrel_band": [
+      1856,
+      2368
+    ],
+    "pump_body__foot_arm_0": [
+      2368,
+      2380
+    ],
+    "pump_body__rubber_foot_0": [
+      2380,
+      2392
+    ],
+    "pump_body__foot_arm_1": [
+      2392,
+      2404
+    ],
+    "pump_body__rubber_foot_1": [
+      2404,
+      2416
+    ],
+    "pump_body__foot_arm_2": [
+      2416,
+      2428
+    ],
+    "pump_body__rubber_foot_2": [
+      2428,
+      2440
+    ],
+    "pump_body__gauge_bezel": [
+      2440,
+      2568
+    ],
+    "pump_body__gauge_face": [
+      2568,
+      2696
+    ],
+    "pump_body__gauge_needle": [
+      2696,
+      2708
+    ],
+    "pump_body__side_hose": [
+      2708,
+      5336
+    ],
+    "pump_body__hose_clip": [
+      5336,
+      5348
+    ],
+    "pump_body__pump_nozzle": [
+      5348,
+      5476
+    ],
+    "plunger__rod": [
+      5476,
+      5604
+    ],
+    "plunger__guide_stem": [
+      5604,
+      5732
+    ],
+    "plunger__wiper_flange": [
+      5732,
+      5860
+    ],
+    "plunger__handle_socket": [
+      5860,
+      5988
+    ],
+    "plunger__grip": [
+      5988,
+      6116
+    ],
+    "plunger__grip_cap_0": [
+      6116,
+      7396
+    ],
+    "plunger__grip_cap_1": [
+      7396,
+      8676
+    ]
+  },
+  "norm": {
+    "center": [
+      0.08180917257143361,
+      3.240680335192536e-09,
+      0.5519999999999999
+    ],
+    "scale": 0.9107377049180327
+  }
+}

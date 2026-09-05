@@ -1,0 +1,606 @@
+{
+  "schema_version": 7,
+  "job_id": "41083_storagefurniture_urdf_20260827-183710",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/41083/mobility.urdf",
+  "created": "2026-08-27T18:37:10",
+  "updated": "2026-08-27T18:51:03",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 36,
+        "n_tiny": 19
+      },
+      "seed": null,
+      "started": "2026-08-27T18:49:57",
+      "finished": "2026-08-27T18:51:03",
+      "error": null
+    },
+    "vlm": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "imageedit": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "texture": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/41083",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/41083/mobility.urdf",
+    "category": "StorageFurniture",
+    "group_by": "semantic",
+    "semantic_labels": [
+      "drawer",
+      "furniture_body",
+      "rotation_door"
+    ],
+    "bbox_world": {
+      "min": [
+        -0.4829080000000003,
+        -0.6859019999999999,
+        -0.6756470000000001
+      ],
+      "max": [
+        0.45754300000000053,
+        0.7163480000000001,
+        0.5648060000000003
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "link_0__cabinet_door_surface-31",
+        "link": "link_0",
+        "label": "cabinet_door_surface",
+        "semantic_id": 31,
+        "objs": [
+          "textured_objs/original-117.obj",
+          "textured_objs/original-113.obj",
+          "textured_objs/original-111.obj",
+          "textured_objs/original-107.obj",
+          "textured_objs/original-108.obj",
+          "textured_objs/original-114.obj",
+          "textured_objs/original-110.obj",
+          "textured_objs/original-112.obj",
+          "textured_objs/original-109.obj",
+          "textured_objs/original-116.obj"
+        ],
+        "n_faces": 2232,
+        "area_frac": 0.053379519220407096,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_0__handle-32",
+        "link": "link_0",
+        "label": "handle",
+        "semantic_id": 32,
+        "objs": [
+          "textured_objs/original-125.obj",
+          "textured_objs/original-124.obj",
+          "textured_objs/original-123.obj",
+          "textured_objs/original-121.obj",
+          "textured_objs/original-120.obj"
+        ],
+        "n_faces": 3596,
+        "area_frac": 0.000992783393972256,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__cabinet_door_surface-29",
+        "link": "link_1",
+        "label": "cabinet_door_surface",
+        "semantic_id": 29,
+        "objs": [
+          "textured_objs/original-96.obj",
+          "textured_objs/original-88.obj",
+          "textured_objs/original-91.obj",
+          "textured_objs/original-93.obj",
+          "textured_objs/original-87.obj",
+          "textured_objs/original-94.obj",
+          "textured_objs/original-92.obj",
+          "textured_objs/original-90.obj",
+          "textured_objs/original-89.obj",
+          "textured_objs/original-97.obj"
+        ],
+        "n_faces": 2232,
+        "area_frac": 0.053379132793778504,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__handle-30",
+        "link": "link_1",
+        "label": "handle",
+        "semantic_id": 30,
+        "objs": [
+          "textured_objs/original-105.obj",
+          "textured_objs/original-101.obj",
+          "textured_objs/original-100.obj",
+          "textured_objs/original-104.obj",
+          "textured_objs/original-103.obj"
+        ],
+        "n_faces": 3596,
+        "area_frac": 0.0009927822374125352,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__drawer_front-24",
+        "link": "link_2",
+        "label": "drawer_front",
+        "semantic_id": 24,
+        "objs": [
+          "textured_objs/original-42.obj",
+          "textured_objs/original-40.obj",
+          "textured_objs/original-37.obj",
+          "textured_objs/original-39.obj",
+          "textured_objs/original-38.obj",
+          "textured_objs/original-44.obj",
+          "textured_objs/original-41.obj",
+          "textured_objs/original-43.obj",
+          "textured_objs/original-46.obj",
+          "textured_objs/original-47.obj",
+          "textured_objs/original-29.obj"
+        ],
+        "n_faces": 1960,
+        "area_frac": 0.02264209092866525,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__drawer_side-25",
+        "link": "link_2",
+        "label": "drawer_side",
+        "semantic_id": 25,
+        "objs": [
+          "textured_objs/original-28.obj"
+        ],
+        "n_faces": 24,
+        "area_frac": 0.009914496797059557,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__drawer_side-26",
+        "link": "link_2",
+        "label": "drawer_side",
+        "semantic_id": 26,
+        "objs": [
+          "textured_objs/original-33.obj",
+          "textured_objs/original-35.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.010090730253267783,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_2__drawer_back-27",
+        "link": "link_2",
+        "label": "drawer_back",
+        "semantic_id": 27,
+        "objs": [
+          "textured_objs/original-34.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.006557528488328518,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "link_2__drawer_bottom-28",
+        "link": "link_2",
+        "label": "drawer_bottom",
+        "semantic_id": 28,
+        "objs": [
+          "textured_objs/original-32.obj",
+          "textured_objs/original-31.obj"
+        ],
+        "n_faces": 8,
+        "area_frac": 0.03235070408222122,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "link_2__handle-23",
+        "link": "link_2",
+        "label": "handle",
+        "semantic_id": 23,
+        "objs": [
+          "textured_objs/original-55.obj",
+          "textured_objs/original-51.obj",
+          "textured_objs/original-50.obj",
+          "textured_objs/original-54.obj",
+          "textured_objs/original-53.obj"
+        ],
+        "n_faces": 3596,
+        "area_frac": 0.0009927801159135931,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__drawer_front-17",
+        "link": "link_3",
+        "label": "drawer_front",
+        "semantic_id": 17,
+        "objs": [
+          "textured_objs/original-59.obj",
+          "textured_objs/original-71.obj",
+          "textured_objs/original-68.obj",
+          "textured_objs/original-67.obj",
+          "textured_objs/original-70.obj",
+          "textured_objs/original-73.obj",
+          "textured_objs/original-72.obj",
+          "textured_objs/original-69.obj",
+          "textured_objs/original-74.obj",
+          "textured_objs/original-76.obj",
+          "textured_objs/original-77.obj"
+        ],
+        "n_faces": 1960,
+        "area_frac": 0.022642083887590328,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__drawer_side-18",
+        "link": "link_3",
+        "label": "drawer_side",
+        "semantic_id": 18,
+        "objs": [
+          "textured_objs/original-58.obj"
+        ],
+        "n_faces": 24,
+        "area_frac": 0.009914496797059563,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__drawer_side-19",
+        "link": "link_3",
+        "label": "drawer_side",
+        "semantic_id": 19,
+        "objs": [
+          "textured_objs/original-63.obj",
+          "textured_objs/original-65.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.01009064815359104,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_3__drawer_back-20",
+        "link": "link_3",
+        "label": "drawer_back",
+        "semantic_id": 20,
+        "objs": [
+          "textured_objs/original-64.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.006557528488328518,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "link_3__drawer_bottom-21",
+        "link": "link_3",
+        "label": "drawer_bottom",
+        "semantic_id": 21,
+        "objs": [
+          "textured_objs/original-62.obj",
+          "textured_objs/original-61.obj"
+        ],
+        "n_faces": 8,
+        "area_frac": 0.03235070408222122,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "link_3__handle-16",
+        "link": "link_3",
+        "label": "handle",
+        "semantic_id": 16,
+        "objs": [
+          "textured_objs/original-85.obj",
+          "textured_objs/original-84.obj",
+          "textured_objs/original-83.obj",
+          "textured_objs/original-81.obj",
+          "textured_objs/original-80.obj"
+        ],
+        "n_faces": 3596,
+        "area_frac": 0.0009927789602653617,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__shelf-10",
+        "link": "link_4",
+        "label": "shelf",
+        "semantic_id": 10,
+        "objs": [
+          "textured_objs/original-2.obj",
+          "textured_objs/original-25.obj"
+        ],
+        "n_faces": 24,
+        "area_frac": 0.21658020513351636,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__vertical_side_panel-43",
+        "link": "link_4",
+        "label": "vertical_side_panel",
+        "semantic_id": 43,
+        "objs": [
+          "textured_objs/original-12.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.08200768316530824,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__vertical_side_panel-44",
+        "link": "link_4",
+        "label": "vertical_side_panel",
+        "semantic_id": 44,
+        "objs": [
+          "textured_objs/original-16.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.08200759236481382,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__back_panel-45",
+        "link": "link_4",
+        "label": "back_panel",
+        "semantic_id": 45,
+        "objs": [
+          "textured_objs/original-6.obj",
+          "textured_objs/original-126.obj"
+        ],
+        "n_faces": 20,
+        "area_frac": 0.1388340762745943,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__bottom_panel-46",
+        "link": "link_4",
+        "label": "bottom_panel",
+        "semantic_id": 46,
+        "objs": [
+          "textured_objs/original-3.obj"
+        ],
+        "n_faces": 4,
+        "area_frac": 0.053242646032327104,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_vertical_bar-47",
+        "link": "link_4",
+        "label": "frame_vertical_bar",
+        "semantic_id": 47,
+        "objs": [
+          "textured_objs/original-8.obj"
+        ],
+        "n_faces": 24,
+        "area_frac": 0.008807478141566571,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__frame_vertical_bar-48",
+        "link": "link_4",
+        "label": "frame_vertical_bar",
+        "semantic_id": 48,
+        "objs": [
+          "textured_objs/original-18.obj",
+          "textured_objs/original-24.obj"
+        ],
+        "n_faces": 32,
+        "area_frac": 0.012272903634739055,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__frame_vertical_bar-49",
+        "link": "link_4",
+        "label": "frame_vertical_bar",
+        "semantic_id": 49,
+        "objs": [
+          "textured_objs/original-15.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.009296961109176927,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-50",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 50,
+        "objs": [
+          "textured_objs/original-9.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.010395834747202784,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-51",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 51,
+        "objs": [
+          "textured_objs/original-19.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.010395834747202778,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-52",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 52,
+        "objs": [
+          "textured_objs/original-7.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.010395834747202784,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-53",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 53,
+        "objs": [
+          "textured_objs/original-23.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009385083860250085,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-54",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 54,
+        "objs": [
+          "textured_objs/original-22.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009385164175207366,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_horizontal_bar-55",
+        "link": "link_4",
+        "label": "frame_horizontal_bar",
+        "semantic_id": 55,
+        "objs": [
+          "textured_objs/original-5.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.013837058993769226,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__frame_vertical_bar-56",
+        "link": "link_4",
+        "label": "frame_vertical_bar",
+        "semantic_id": 56,
+        "objs": [
+          "textured_objs/original-4.obj"
+        ],
+        "n_faces": 24,
+        "area_frac": 0.008807478141566571,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_4__frame_vertical_bar-57",
+        "link": "link_4",
+        "label": "frame_vertical_bar",
+        "semantic_id": 57,
+        "objs": [
+          "textured_objs/original-11.obj"
+        ],
+        "n_faces": 16,
+        "area_frac": 0.009296969586917054,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__base_side_panel-34",
+        "link": "link_4",
+        "label": "base_side_panel",
+        "semantic_id": 34,
+        "objs": [
+          "textured_objs/original-13.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006316916179911834,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__base_side_panel-35",
+        "link": "link_4",
+        "label": "base_side_panel",
+        "semantic_id": 35,
+        "objs": [
+          "textured_objs/original-21.obj"
+        ],
+        "n_faces": 4,
+        "area_frac": 0.012633874302071416,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__base_side_panel-36",
+        "link": "link_4",
+        "label": "base_side_panel",
+        "semantic_id": 36,
+        "objs": [
+          "textured_objs/original-17.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006316900116940233,
+        "motion": "heavy",
+        "tiny": true
+      },
+      {
+        "group_id": "link_4__base_side_panel-37",
+        "link": "link_4",
+        "label": "base_side_panel",
+        "semantic_id": 37,
+        "objs": [
+          "textured_objs/original-20.obj"
+        ],
+        "n_faces": 8,
+        "area_frac": 0.01594271586563355,
+        "motion": "heavy",
+        "tiny": true
+      }
+    ]
+  }
+}

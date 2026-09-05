@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "body__base_bridge",
+    "body__foot_pad_0",
+    "body__foot_pad_1",
+    "body__base_socket",
+    "body__barrel",
+    "body__top_collar",
+    "body__top_bushing",
+    "body__bottom_collar",
+    "body__gauge_neck",
+    "body__gauge_housing",
+    "body__gauge_dial",
+    "body__gauge_bezel",
+    "body__gauge_lens",
+    "body__gauge_tick_0",
+    "body__gauge_tick_1",
+    "body__gauge_tick_2",
+    "body__gauge_tick_3",
+    "body__gauge_tick_4",
+    "body__gauge_pivot",
+    "body__hose_outlet",
+    "body__hose",
+    "body__hose_clip",
+    "body__clip_lip",
+    "body__hose_nozzle",
+    "handle__piston_rod",
+    "handle__top_bar",
+    "handle__bar_boss",
+    "grip__sleeve",
+    "grip__lug_0",
+    "grip__lug_1",
+    "grip__side_arm_0",
+    "grip__side_arm_1",
+    "grip__folding_bar",
+    "needle__pointer",
+    "needle__hub"
+  ],
+  "face_ranges": {
+    "body__base_bridge": [
+      0,
+      12
+    ],
+    "body__foot_pad_0": [
+      12,
+      24
+    ],
+    "body__foot_pad_1": [
+      24,
+      36
+    ],
+    "body__base_socket": [
+      36,
+      164
+    ],
+    "body__barrel": [
+      164,
+      676
+    ],
+    "body__top_collar": [
+      676,
+      1188
+    ],
+    "body__top_bushing": [
+      1188,
+      1700
+    ],
+    "body__bottom_collar": [
+      1700,
+      2212
+    ],
+    "body__gauge_neck": [
+      2212,
+      2224
+    ],
+    "body__gauge_housing": [
+      2224,
+      2352
+    ],
+    "body__gauge_dial": [
+      2352,
+      2480
+    ],
+    "body__gauge_bezel": [
+      2480,
+      2992
+    ],
+    "body__gauge_lens": [
+      2992,
+      3120
+    ],
+    "body__gauge_tick_0": [
+      3120,
+      3132
+    ],
+    "body__gauge_tick_1": [
+      3132,
+      3144
+    ],
+    "body__gauge_tick_2": [
+      3144,
+      3156
+    ],
+    "body__gauge_tick_3": [
+      3156,
+      3168
+    ],
+    "body__gauge_tick_4": [
+      3168,
+      3180
+    ],
+    "body__gauge_pivot": [
+      3180,
+      3308
+    ],
+    "body__hose_outlet": [
+      3308,
+      3436
+    ],
+    "body__hose": [
+      3436,
+      6496
+    ],
+    "body__hose_clip": [
+      6496,
+      6508
+    ],
+    "body__clip_lip": [
+      6508,
+      6520
+    ],
+    "body__hose_nozzle": [
+      6520,
+      6648
+    ],
+    "handle__piston_rod": [
+      6648,
+      6776
+    ],
+    "handle__top_bar": [
+      6776,
+      6904
+    ],
+    "handle__bar_boss": [
+      6904,
+      7032
+    ],
+    "grip__sleeve": [
+      7032,
+      7544
+    ],
+    "grip__lug_0": [
+      7544,
+      7556
+    ],
+    "grip__lug_1": [
+      7556,
+      7568
+    ],
+    "grip__side_arm_0": [
+      7568,
+      7580
+    ],
+    "grip__side_arm_1": [
+      7580,
+      7592
+    ],
+    "grip__folding_bar": [
+      7592,
+      7720
+    ],
+    "needle__pointer": [
+      7720,
+      7732
+    ],
+    "needle__hub": [
+      7732,
+      7860
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.021000018366015394,
+      0.7760001469280962
+    ],
+    "scale": 0.6443233316118552
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "group_order": [
+    "frame__rear_stabilizer",
+    "frame__front_stabilizer",
+    "frame__rear_floor_pad",
+    "frame__front_floor_pad",
+    "frame__left_floor_rail",
+    "frame__right_floor_rail",
+    "frame__seat_tube",
+    "frame__down_tube",
+    "frame__top_tube",
+    "frame__front_mast",
+    "frame__left_rear_brace",
+    "frame__right_rear_brace",
+    "frame__left_front_strut",
+    "frame__right_front_strut",
+    "frame__bottom_bracket_shell",
+    "frame__fan_bridge",
+    "seat__seatpost",
+    "seat__seat_support_plate",
+    "seat__saddle",
+    "fan_wheel__fan_rim",
+    "fan_wheel__fan_mid_ring",
+    "fan_wheel__fan_hub",
+    "fan_wheel__fan_blade_0",
+    "fan_wheel__fan_blade_1",
+    "fan_wheel__fan_blade_2",
+    "fan_wheel__fan_blade_3",
+    "fan_wheel__fan_blade_4",
+    "fan_wheel__fan_blade_5",
+    "fan_wheel__fan_blade_6",
+    "fan_wheel__fan_blade_7",
+    "fan_wheel__fan_blade_8",
+    "fan_wheel__fan_blade_9",
+    "fan_wheel__fan_blade_10",
+    "fan_wheel__fan_blade_11",
+    "crank_assembly__crank_axle",
+    "crank_assembly__left_spider",
+    "crank_assembly__right_spider",
+    "crank_assembly__drive_guard",
+    "crank_assembly__left_crank_arm",
+    "crank_assembly__right_crank_arm",
+    "left_pedal__left_spindle",
+    "left_pedal__left_pedal_inner_cage",
+    "left_pedal__left_pedal_body",
+    "left_pedal__left_pedal_tread_top",
+    "left_pedal__left_pedal_tread_bottom",
+    "right_pedal__right_spindle",
+    "right_pedal__right_pedal_inner_cage",
+    "right_pedal__right_pedal_body",
+    "right_pedal__right_pedal_tread_top",
+    "right_pedal__right_pedal_tread_bottom",
+    "left_handlebar__left_bar_0",
+    "left_handlebar__left_bar_1",
+    "left_handlebar__left_bar_2",
+    "left_handlebar__left_bar_3",
+    "left_handlebar__left_upper_0",
+    "left_handlebar__left_upper_1",
+    "left_handlebar__left_pivot_sleeve",
+    "left_handlebar__left_grip",
+    "right_handlebar__right_bar_0",
+    "right_handlebar__right_bar_1",
+    "right_handlebar__right_bar_2",
+    "right_handlebar__right_bar_3",
+    "right_handlebar__right_upper_0",
+    "right_handlebar__right_upper_1",
+    "right_handlebar__right_pivot_sleeve",
+    "right_handlebar__right_grip"
+  ],
+  "face_ranges": {
+    "frame__rear_stabilizer": [
+      0,
+      12
+    ],
+    "frame__front_stabilizer": [
+      12,
+      24
+    ],
+    "frame__rear_floor_pad": [
+      24,
+      36
+    ],
+    "frame__front_floor_pad": [
+      36,
+      48
+    ],
+    "frame__left_floor_rail": [
+      48,
+      176
+    ],
+    "frame__right_floor_rail": [
+      176,
+      304
+    ],
+    "frame__seat_tube": [
+      304,
+      432
+    ],
+    "frame__down_tube": [
+      432,
+      560
+    ],
+    "frame__top_tube": [
+      560,
+      688
+    ],
+    "frame__front_mast": [
+      688,
+      816
+    ],
+    "frame__left_rear_brace": [
+      816,
+      944
+    ],
+    "frame__right_rear_brace": [
+      944,
+      1072
+    ],
+    "frame__left_front_strut": [
+      1072,
+      1200
+    ],
+    "frame__right_front_strut": [
+      1200,
+      1328
+    ],
+    "frame__bottom_bracket_shell": [
+      1328,
+      1456
+    ],
+    "frame__fan_bridge": [
+      1456,
+      1584
+    ],
+    "seat__seatpost": [
+      1584,
+      1712
+    ],
+    "seat__seat_support_plate": [
+      1712,
+      1724
+    ],
+    "seat__saddle": [
+      1724,
+      2240
+    ],
+    "fan_wheel__fan_rim": [
+      2240,
+      3968
+    ],
+    "fan_wheel__fan_mid_ring": [
+      3968,
+      5120
+    ],
+    "fan_wheel__fan_hub": [
+      5120,
+      5248
+    ],
+    "fan_wheel__fan_blade_0": [
+      5248,
+      5260
+    ],
+    "fan_wheel__fan_blade_1": [
+      5260,
+      5272
+    ],
+    "fan_wheel__fan_blade_2": [
+      5272,
+      5284
+    ],
+    "fan_wheel__fan_blade_3": [
+      5284,
+      5296
+    ],
+    "fan_wheel__fan_blade_4": [
+      5296,
+      5308
+    ],
+    "fan_wheel__fan_blade_5": [
+      5308,
+      5320
+    ],
+    "fan_wheel__fan_blade_6": [
+      5320,
+      5332
+    ],
+    "fan_wheel__fan_blade_7": [
+      5332,
+      5344
+    ],
+    "fan_wheel__fan_blade_8": [
+      5344,
+      5356
+    ],
+    "fan_wheel__fan_blade_9": [
+      5356,
+      5368
+    ],
+    "fan_wheel__fan_blade_10": [
+      5368,
+      5380
+    ],
+    "fan_wheel__fan_blade_11": [
+      5380,
+      5392
+    ],
+    "crank_assembly__crank_axle": [
+      5392,
+      5520
+    ],
+    "crank_assembly__left_spider": [
+      5520,
+      5648
+    ],
+    "crank_assembly__right_spider": [
+      5648,
+      5776
+    ],
+    "crank_assembly__drive_guard": [
+      5776,
+      5904
+    ],
+    "crank_assembly__left_crank_arm": [
+      5904,
+      6032
+    ],
+    "crank_assembly__right_crank_arm": [
+      6032,
+      6160
+    ],
+    "left_pedal__left_spindle": [
+      6160,
+      6288
+    ],
+    "left_pedal__left_pedal_inner_cage": [
+      6288,
+      6300
+    ],
+    "left_pedal__left_pedal_body": [
+      6300,
+      6312
+    ],
+    "left_pedal__left_pedal_tread_top": [
+      6312,
+      6324
+    ],
+    "left_pedal__left_pedal_tread_bottom": [
+      6324,
+      6336
+    ],
+    "right_pedal__right_spindle": [
+      6336,
+      6464
+    ],
+    "right_pedal__right_pedal_inner_cage": [
+      6464,
+      6476
+    ],
+    "right_pedal__right_pedal_body": [
+      6476,
+      6488
+    ],
+    "right_pedal__right_pedal_tread_top": [
+      6488,
+      6500
+    ],
+    "right_pedal__right_pedal_tread_bottom": [
+      6500,
+      6512
+    ],
+    "left_handlebar__left_bar_0": [
+      6512,
+      6640
+    ],
+    "left_handlebar__left_bar_1": [
+      6640,
+      6768
+    ],
+    "left_handlebar__left_bar_2": [
+      6768,
+      6896
+    ],
+    "left_handlebar__left_bar_3": [
+      6896,
+      7024
+    ],
+    "left_handlebar__left_upper_0": [
+      7024,
+      7152
+    ],
+    "left_handlebar__left_upper_1": [
+      7152,
+      7280
+    ],
+    "left_handlebar__left_pivot_sleeve": [
+      7280,
+      7408
+    ],
+    "left_handlebar__left_grip": [
+      7408,
+      7536
+    ],
+    "right_handlebar__right_bar_0": [
+      7536,
+      7664
+    ],
+    "right_handlebar__right_bar_1": [
+      7664,
+      7792
+    ],
+    "right_handlebar__right_bar_2": [
+      7792,
+      7920
+    ],
+    "right_handlebar__right_bar_3": [
+      7920,
+      8048
+    ],
+    "right_handlebar__right_upper_0": [
+      8048,
+      8176
+    ],
+    "right_handlebar__right_upper_1": [
+      8176,
+      8304
+    ],
+    "right_handlebar__right_pivot_sleeve": [
+      8304,
+      8432
+    ],
+    "right_handlebar__right_grip": [
+      8432,
+      8560
+    ]
+  },
+  "norm": {
+    "center": [
+      1.1231197416528005e-07,
+      -0.018750000000000017,
+      0.48485982890479706
+    ],
+    "scale": 1.0312155600297725
+  }
+}

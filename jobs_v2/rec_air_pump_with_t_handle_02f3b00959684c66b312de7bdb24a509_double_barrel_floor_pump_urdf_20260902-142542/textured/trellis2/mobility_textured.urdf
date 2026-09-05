@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="double_barrel_floor_pump">
+	<material name="matte_black">
+		<color rgba="0.015 0.017 0.018 1" />
+	</material>
+	<material name="rubber_black">
+		<color rgba="0.004 0.004 0.004 1" />
+	</material>
+	<material name="brushed_steel">
+		<color rgba="0.7 0.73 0.74 1" />
+	</material>
+	<material name="polished_rod">
+		<color rgba="0.92 0.94 0.95 1" />
+	</material>
+	<material name="pump_blue">
+		<color rgba="0.03 0.16 0.42 1" />
+	</material>
+	<material name="gauge_white">
+		<color rgba="0.92 0.9 0.84 1" />
+	</material>
+	<link name="body">
+		<visual name="body__base_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__base_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lower_manifold">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lower_manifold.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__barrel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__barrel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_collar_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_collar_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_socket_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_socket_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__barrel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__barrel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_collar_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_collar_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_socket_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_socket_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_face.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_pad_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_pad_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_pad_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_pad_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="handle">
+		<visual name="handle__rod_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__rod_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__rod_socket_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__rod_socket_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__rod_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__rod_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__rod_socket_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__rod_socket_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__grip.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__handle_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__handle_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__grip_end_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__grip_end_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__grip_end_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__grip_end_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_handle" type="prismatic">
+		<origin xyz="0 0 0.605" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="handle" />
+		<axis xyz="0 0 1" />
+		<limit effort="120" velocity="0.45" lower="0" upper="0.32" />
+	</joint>
+</robot>

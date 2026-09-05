@@ -1,0 +1,218 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd_mini_air_fryer_urdf_20260903-131617",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd/model.urdf",
+  "created": "2026-09-03T13:16:17",
+  "updated": "2026-09-03T13:55:45",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 10,
+        "n_tiny": 7
+      },
+      "seed": null,
+      "started": "2026-09-03T13:16:26",
+      "finished": "2026-09-03T13:16:27",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the top cap; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:16:27",
+      "finished": "2026-09-03T13:17:46",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd_mini_air_fryer_urdf_20260903-131617/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:17:46",
+      "finished": "2026-09-03T13:44:23",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 10,
+            "n_total": 10,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd_mini_air_fryer_urdf_20260903-131617/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T13:44:23",
+      "finished": "2026-09-03T13:55:45",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_21d5168db6624dfeb492161c31e330dd/model.urdf",
+    "category": "mini air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.155,
+        -0.13,
+        0.0
+      ],
+      "max": [
+        0.249,
+        0.136,
+        0.348
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_body.obj"
+        ],
+        "n_faces": 1644,
+        "area_frac": 0.6908960781487888,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__basket_shell",
+        "link": "basket",
+        "label": "basket_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_basket.obj"
+        ],
+        "n_faces": 88,
+        "area_frac": 0.26333241322534284,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__handle",
+        "link": "basket",
+        "label": "handle",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01880159666832332,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__guide_0",
+        "link": "basket",
+        "label": "guide_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004945909095086003,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__guide_1",
+        "link": "basket",
+        "label": "guide_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004945909095086003,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "release_button__release_cap",
+        "link": "release_button",
+        "label": "release_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011695200206791809,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "timer_knob__knob_shell",
+        "link": "timer_knob",
+        "label": "knob_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/timer_knob.obj"
+        ],
+        "n_faces": 13386,
+        "area_frac": 0.010418078993123647,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "program_button__button_face",
+        "link": "program_button",
+        "label": "button_face",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012498687243899648,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "power_rocker__rocker_cap",
+        "link": "power_rocker",
+        "label": "rocker_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003312152119633407,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "power_rocker__rocker_barrel",
+        "link": "power_rocker",
+        "label": "rocker_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009284739095468307,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

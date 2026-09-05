@@ -1,0 +1,335 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_0013_wall_mounted_air_purifier_urdf_20260902-151638",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0013/model.urdf",
+  "created": "2026-09-02T15:16:38",
+  "updated": "2026-09-02T16:06:18",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 19,
+        "n_tiny": 19
+      },
+      "seed": null,
+      "started": "2026-09-02T15:17:16",
+      "finished": "2026-09-02T15:17:17",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T15:17:19",
+      "finished": "2026-09-02T15:21:33",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0013_wall_mounted_air_purifier_urdf_20260902-151638/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T15:21:33",
+      "finished": "2026-09-02T15:55:02",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 19,
+            "n_total": 19,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0013_wall_mounted_air_purifier_urdf_20260902-151638/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T15:55:03",
+      "finished": "2026-09-02T16:06:18",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0013",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0013/model.urdf",
+    "category": "wall mounted air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        0.0,
+        -0.17,
+        -0.31
+      ],
+      "max": [
+        0.118,
+        0.17,
+        0.3155
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__back_plate",
+        "link": "body",
+        "label": "back_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.273151579296994,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__left_side",
+        "link": "body",
+        "label": "left_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08540324559598847,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__right_side",
+        "link": "body",
+        "label": "right_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08540324559598847,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_cap",
+        "link": "body",
+        "label": "top_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06447690976826732,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__bottom_cap",
+        "link": "body",
+        "label": "bottom_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05943277670230196,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__filter_core",
+        "link": "body",
+        "label": "filter_core",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1623541601084674,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_deck",
+        "link": "body",
+        "label": "outlet_deck",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015590956749347483,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_fin_1",
+        "link": "body",
+        "label": "outlet_fin_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012938759019331303,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_fin_2",
+        "link": "body",
+        "label": "outlet_fin_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012938759019331298,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_fin_3",
+        "link": "body",
+        "label": "outlet_fin_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012938759019331303,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_fin_4",
+        "link": "body",
+        "label": "outlet_fin_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012938759019331298,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__outlet_fin_5",
+        "link": "body",
+        "label": "outlet_fin_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0012938759019331303,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__panel_shell",
+        "link": "front_panel",
+        "label": "panel_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.2125277923056521,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__grille_bar_1",
+        "link": "front_panel",
+        "label": "grille_bar_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007200592902520582,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__grille_bar_2",
+        "link": "front_panel",
+        "label": "grille_bar_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007200592902520582,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__grille_bar_3",
+        "link": "front_panel",
+        "label": "grille_bar_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007200592902520582,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__grille_bar_4",
+        "link": "front_panel",
+        "label": "grille_bar_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007200592902520582,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__status_strip",
+        "link": "front_panel",
+        "label": "status_strip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001331056243942703,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__bottom_pull",
+        "link": "front_panel",
+        "label": "bottom_pull",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005056526513301888,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

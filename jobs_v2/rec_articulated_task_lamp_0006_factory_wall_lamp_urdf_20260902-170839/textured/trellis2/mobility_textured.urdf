@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="factory_wall_lamp">
+	<material name="steel">
+		<color rgba="0.18 0.19 0.21 1" />
+	</material>
+	<material name="satin_steel">
+		<color rgba="0.56 0.58 0.6 1" />
+	</material>
+	<material name="enamel_green">
+		<color rgba="0.18 0.28 0.2 1" />
+	</material>
+	<material name="reflector_white">
+		<color rgba="0.88 0.88 0.84 1" />
+	</material>
+	<link name="bracket">
+		<visual name="bracket__backplate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__backplate.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__standoff">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__standoff.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__shoulder_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__shoulder_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__upper_anchor_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__upper_anchor_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__lower_anchor_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__lower_anchor_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__upper_rib">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__upper_rib.glb" />
+			</geometry>
+		</visual>
+		<visual name="bracket__lower_rib">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/bracket__lower_rib.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="boom">
+		<visual name="boom__shoulder_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__shoulder_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__shoulder_clevis">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__shoulder_clevis.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__upper_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__upper_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__lower_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__lower_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__head_brace">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__head_brace.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__head_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__head_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="boom__tension_rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/boom__tension_rod.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="head">
+		<visual name="head__trunnion">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__trunnion.glb" />
+			</geometry>
+		</visual>
+		<visual name="head__neck_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__neck_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="head__collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="head__shade_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__shade_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="head__reflector_liner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__reflector_liner.glb" />
+			</geometry>
+		</visual>
+		<visual name="head__front_rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/head__front_rim.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="shoulder_swing" type="revolute">
+		<origin xyz="0.016 0 0" rpy="0 0 0" />
+		<parent link="bracket" />
+		<child link="boom" />
+		<axis xyz="0 0 1" />
+		<limit effort="12" velocity="1.8" lower="-1.05" upper="1.05" />
+	</joint>
+	<joint name="head_tilt" type="revolute">
+		<origin xyz="0.332 0 0" rpy="0 0 0" />
+		<parent link="boom" />
+		<child link="head" />
+		<axis xyz="0 1 0" />
+		<limit effort="6" velocity="2" lower="-0.28" upper="0.55" />
+	</joint>
+</robot>

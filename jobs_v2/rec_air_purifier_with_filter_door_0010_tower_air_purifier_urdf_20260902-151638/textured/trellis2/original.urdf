@@ -1,0 +1,137 @@
+<robot name="tower_air_purifier">
+  <material name="shell_white">
+    <color rgba="0.93 0.94 0.92 1" />
+    </material>
+  <material name="panel_white">
+    <color rgba="0.9 0.91 0.89 1" />
+    </material>
+  <material name="graphite">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="dark_glass">
+    <color rgba="0.1 0.12 0.14 1" />
+    </material>
+  <material name="pedestal_gray">
+    <color rgba="0.55 0.58 0.6 1" />
+    </material>
+  <link name="body">
+    <inertial>
+      <origin xyz="0 0 0.33" rpy="0 0 0" />
+      <mass value="6" />
+      <inertia ixx="0.18635" ixy="0" ixz="0" iyy="0.18635" iyz="0" izz="0.0363" />
+      </inertial>
+    <visual name="tower_shell">
+      <origin xyz="0 0 0.33" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.11" length="0.58" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="base_ring">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.125" length="0.04" />
+        </geometry>
+      <material name="pedestal_gray">
+        <color rgba="0.55 0.58 0.6 1" />
+        </material>
+      </visual>
+    <visual name="top_cap">
+      <origin xyz="0 0 0.65" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.105" length="0.06" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="top_vent">
+      <origin xyz="0 0 0.674" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.072" length="0.012" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="panel_seat">
+      <origin xyz="0.096 0 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.158 0.414" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.93 0.94 0.92 1" />
+        </material>
+      </visual>
+    <visual name="filter_screen">
+      <origin xyz="0.093 0 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.136 0.366" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="control_display">
+      <origin xyz="0.098 0 0.545" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.058 0.048" />
+        </geometry>
+      <material name="dark_glass">
+        <color rgba="0.1 0.12 0.14 1" />
+        </material>
+      </visual>
+    <visual name="hinge_jamb">
+      <origin xyz="0.107 -0.075 0.33" rpy="0 0 0" />
+      <geometry>
+        <box size="0.008 0.012 0.34" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_panel">
+    <inertial>
+      <origin xyz="0.0035 0.076 0" rpy="0 0 0" />
+      <mass value="0.9" />
+      <inertia ixx="0.0140955" ixy="0" ixz="0" iyy="0.0123654" iyz="0" izz="0.0017355" />
+      </inertial>
+    <visual name="door_shell">
+      <origin xyz="0.0035 0.076 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.006 0.152 0.406" />
+        </geometry>
+      <material name="panel_white">
+        <color rgba="0.9 0.91 0.89 1" />
+        </material>
+      </visual>
+    <visual name="door_grip">
+      <origin xyz="0.0065 0.141 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.012 0.13" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="hinge_leaf">
+      <origin xyz="-0.001 0.004 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.01 0.34" />
+        </geometry>
+      <material name="graphite">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="panel_hinge" type="revolute">
+    <origin xyz="0.11 -0.076 0.33" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="front_panel" />
+    <axis xyz="0 0 1" />
+    <limit effort="12" velocity="1.5" lower="-1.35" upper="0" />
+    </joint>
+  </robot>

@@ -1,0 +1,391 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5/model.urdf",
+  "created": "2026-09-03T17:10:40",
+  "updated": "2026-09-03T17:40:18",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 24,
+        "n_tiny": 12
+      },
+      "seed": null,
+      "started": "2026-09-03T17:10:40",
+      "finished": "2026-09-03T17:10:59",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; plastic on the globe; plastic on the stand",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:11:05",
+      "finished": "2026-09-03T17:13:00",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5_desktop_globe_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:13:00",
+      "finished": "2026-09-03T17:40:16",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {},
+      "seed": 42,
+      "started": "2026-09-03T17:40:18",
+      "finished": null,
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4084cc24830b420fa8663c9cdd5d28e5/model.urdf",
+    "category": "desktop globe air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.155,
+        -0.155,
+        0.0
+      ],
+      "max": [
+        0.155000132235323,
+        0.159,
+        0.41300000000000003
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base__bottom_disc",
+        "link": "base",
+        "label": "bottom_disc",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.1277737047469809,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__base_skirt",
+        "link": "base",
+        "label": "base_skirt",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06172484283347925,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__left_skirt_wall",
+        "link": "base",
+        "label": "left_skirt_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.030792017717945742,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__right_skirt_wall",
+        "link": "base",
+        "label": "right_skirt_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.030792017717945742,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__left_front_cheek",
+        "link": "base",
+        "label": "left_front_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009574903035968993,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__right_front_cheek",
+        "link": "base",
+        "label": "right_front_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009574903035968993,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__top_plate",
+        "link": "base",
+        "label": "top_plate",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.1277737047469809,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__neck_pad",
+        "link": "base",
+        "label": "neck_pad",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.020389464517527246,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base__slot_jamb_left",
+        "link": "base",
+        "label": "slot_jamb_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001817695496133153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__slot_jamb_right",
+        "link": "base",
+        "label": "slot_jamb_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001817695496133153,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__slot_header",
+        "link": "base",
+        "label": "slot_header",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0031553657732170575,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base__slot_sill",
+        "link": "base",
+        "label": "slot_sill",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0031553657732170553,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "lower_housing__lower_shell",
+        "link": "lower_housing",
+        "label": "lower_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/lower_shell.obj"
+        ],
+        "n_faces": 1728,
+        "area_frac": 0.16265629639515583,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "lower_housing__support_neck",
+        "link": "lower_housing",
+        "label": "support_neck",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.024830251753739832,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "lower_housing__neck_collar",
+        "link": "lower_housing",
+        "label": "neck_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.020077142137277647,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "lower_housing__intake_band_upper",
+        "link": "lower_housing",
+        "label": "intake_band_upper",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/upper_intake_band.obj"
+        ],
+        "n_faces": 2016,
+        "area_frac": 0.03797337125616335,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "lower_housing__intake_band_lower",
+        "link": "lower_housing",
+        "label": "intake_band_lower",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/lower_intake_band.obj"
+        ],
+        "n_faces": 1728,
+        "area_frac": 0.032622746902796027,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "top_cap__upper_shell",
+        "link": "top_cap",
+        "label": "upper_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/upper_shell.obj"
+        ],
+        "n_faces": 2016,
+        "area_frac": 0.19941398458406015,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "top_cap__outlet_shroud",
+        "link": "top_cap",
+        "label": "outlet_shroud",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.02247732418974169,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "top_cap__outlet_grille",
+        "link": "top_cap",
+        "label": "outlet_grille",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.009725113070262723,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "top_cap__top_pivot_cap",
+        "link": "top_cap",
+        "label": "top_pivot_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0036038270585989412,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_drawer__cartridge_body",
+        "link": "filter_drawer",
+        "label": "cartridge_body",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.043000659122431596,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__front_panel",
+        "link": "filter_drawer",
+        "label": "front_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013306299072045145,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__pull_handle",
+        "link": "filter_drawer",
+        "label": "pull_handle",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0019713035662289103,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

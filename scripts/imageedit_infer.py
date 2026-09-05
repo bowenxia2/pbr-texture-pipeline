@@ -6,7 +6,13 @@ Uses QwenImageEditPlusPipeline with Canny edge ControlNet conditioning.
 CLI:
     python scripts/imageedit_infer.py --model <hf_id> --items-file <path>
 
-Items file: [{"source": "...", "canny": "...", "materials": "...", "output": "..."}, ...]
+Items file: [{"source": "...", "canny": "...", "materials": "...", "output": "...",
+              "classification": "edit"|"generate", "category": "..."}, ...]
+
+classification (optional, default "edit") selects the prompt template:
+  - "edit": preserve existing textures and enhance materials.
+  - "generate": replace blank/flat surfaces with realistic textures.
+category (optional, default "object") provides context for the generate prompt.
 
 Emits [PBR_RESULT] JSON lines per the adapter contract.
 """
@@ -19,13 +25,48 @@ from pathlib import Path
 
 RESULT_MARKER = "[PBR_RESULT]"
 
-PROMPT_TEMPLATE = (
+NEGATIVE_PROMPT = (
+    "text, writing, letters, numbers, logos, labels, symbols, brand names, "
+    "buttons, dials, gauges, displays, markings, icons, stickers, decals, "
+    "watermarks, scratches, noise, spots, blurry, low quality"
+)
+
+PROMPT_TEMPLATE_EDIT = (
     "Preserve the object's geometry, proportions, colors, patterns, and design. "
     "The object's materials are: {MATERIAL_DESCRIPTION}. "
     "Apply each material to its described location with realistic surface properties "
-    "and fine texture detail while maintaining the original appearance. "
+    "while maintaining the original appearance. "
+    "CRITICAL: Every surface must be pure material texture only. "
+    "Completely remove all text, letters, numbers, logos, icons, labels, symbols, "
+    "brand names, warning signs, dials, gauges, readouts, stickers, decals, "
+    "screen content, button markings, and any other fine-grained surface details. "
+    "Seamlessly replace each removed detail with the natural texture of the "
+    "surrounding material so the surface looks continuous and uniform, "
+    "as if the detail was never there. "
+    "Surfaces should show only material properties like grain, roughness, "
+    "reflections, and color variation - never any printed or engraved markings. "
     "Do not add, remove, reshape, or redesign any components. "
-    "Keep the background clean and empty."
+    "Keep the background clean and empty. "
+    "Soft ambient lighting with very subtle shadows. "
+    "No directional light source or specular highlights."
+)
+
+PROMPT_TEMPLATE_GENERATE = (
+    "This is a {CATEGORY} with blank or flat-colored surfaces. "
+    "Replace all flat, uniform surfaces with realistic material textures. "
+    "The object's materials should be: {MATERIAL_DESCRIPTION}. "
+    "Apply each material to its described location with realistic surface properties "
+    "including grain, roughness, reflections, and natural color variation. "
+    "CRITICAL: Every surface must be pure material texture only. "
+    "Do not generate any text, letters, numbers, logos, icons, labels, symbols, "
+    "brand names, warning signs, dials, gauges, readouts, stickers, decals, "
+    "screen content, button markings, watermarks, or any other fine-grained surface details. "
+    "All surfaces should show only natural material properties like grain, roughness, "
+    "reflections, and color variation - never any printed or engraved markings. "
+    "Do not add, remove, reshape, or redesign any components. "
+    "Keep the background clean and empty. "
+    "Soft ambient lighting with very subtle shadows. "
+    "No directional light source or specular highlights."
 )
 
 
@@ -62,15 +103,21 @@ def main(argv: list[str] | None = None) -> int:
         source_img = Image.open(item["source"]).convert("RGB")
         canny_img = Image.open(item["canny"]).convert("RGB")
         materials = item["materials"]
+        classification = item.get("classification", "edit")
+        category = item.get("category", "object")
 
-        prompt = PROMPT_TEMPLATE.replace("{MATERIAL_DESCRIPTION}", materials)
+        if classification == "generate":
+            prompt = PROMPT_TEMPLATE_GENERATE.replace("{CATEGORY}", category)
+            prompt = prompt.replace("{MATERIAL_DESCRIPTION}", materials)
+        else:
+            prompt = PROMPT_TEMPLATE_EDIT.replace("{MATERIAL_DESCRIPTION}", materials)
 
         print(f"[imageedit] [{i+1}/{len(items)}] {Path(item['source']).name} ...")
         with torch.inference_mode():
             output = pipeline(
                 image=[source_img, canny_img],
                 prompt=prompt,
-                negative_prompt=" ",
+                negative_prompt=NEGATIVE_PROMPT,
                 guidance_scale=args.guidance_scale,
                 true_cfg_scale=args.true_cfg_scale,
                 num_inference_steps=args.num_inference_steps,

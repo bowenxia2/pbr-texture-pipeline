@@ -71,39 +71,48 @@ Outputs (all under `jobs/<job_id>/`):
 
 ### 2.2 Stage V (VLM)
 
-Run a vision-language model on the white-background front-panel image to produce a material description.
+Run a vision-language model on the white-background front-panel image to produce a material description and a texture quality classification.
 
 Inputs:
 - `render/front_white.png` from Stage R.
+- Asset category from `meta.json` `model_cat` (or `<robot name>` URDF attribute as fallback).
 
 Processing:
-1. Load Qwen2.5-VL-7B-Instruct via transformers `AutoModelForImageTextToText` in the `vlm` conda env.
-2. Send the white-background front view with a system prompt that asks for a part-by-part material analysis (material type, color, surface finish).
-3. The model returns a text description of the object's materials.
+1. Load Qwen2.5-VL-7B-Instruct via transformers `AutoModelForImageTextToText` in the `vlm` conda env (`device_map="auto"`).
+2. First classify texture quality: send the front view with a prompt asking whether the object has meaningful existing textures worth preserving (`edit`) or is blank/basic and should be generated from scratch (`generate`).
+3. Then send the front view with a material analysis prompt (variant matched to the classification) that asks for a part-by-part description (material type, color, surface finish).
+4. The classification routes the Stage E prompt: `edit` tells Qwen-Image-Edit to preserve existing textures while enhancing, `generate` tells it to replace blank surfaces with realistic textures.
 
 Outputs:
-- `vlm/materials.txt` - material description text.
+- `vlm/materials.txt` - semicolon-separated material description text.
+- `vlm/classification.txt` - texture quality classification (`edit` or `generate`).
 
 Stage V is optional.
 If skipped, Stage E cannot run, and Stage T falls back to the raw front-panel view.
 
 ### 2.3 Stage E (ImageEdit)
 
-Enhance the front-panel image using an image-editing model guided by the VLM material description and depth conditioning.
+Enhance or generate textures for the front-panel image using Qwen-Image-Edit.
+The VLM classification from Stage V selects the prompt template, not a separate pipeline.
 
 Inputs:
 - `render/front_white.png` from Stage R (source image).
-- `render/depth_0.png` from Stage R (depth conditioning).
+- `render/canny_0.png` from Stage R (canny edge map for structural conditioning).
 - `vlm/materials.txt` from Stage V (material description for the prompt).
+- `vlm/classification.txt` from Stage V (`edit` or `generate`).
 
 Processing:
 1. Load Qwen-Image-Edit-2511 via diffusers `QwenImageEditPlusPipeline` in the `trellis2` conda env, with `device_map="balanced"` across both GPUs.
-2. Construct a prompt that preserves the object's geometry, proportions, colors, and design while enhancing the specified materials with realistic surface properties.
-3. Pass the source image and depth map as a two-image input (native ControlNet depth conditioning).
+2. Select a prompt template based on classification:
+   - `edit`: preserve the object's existing textures, colors, and patterns while enhancing materials with realistic surface properties.
+   - `generate`: replace blank/flat surfaces with realistic material textures inferred by the VLM from shape and category.
+3. Pass the source image and canny map to the edit pipeline in both cases.
 4. Generate one enhanced image.
 
+In batch mode, Stage E loads the model once for all items.
+
 Outputs:
-- `imageedit/enhanced_0.png` - enhanced front view with PBR surface detail.
+- `imageedit/enhanced_0.png` - enhanced or generated front view.
 
 Stage E is optional.
 If skipped, Stage T falls back to the raw front-panel view.
@@ -160,6 +169,7 @@ jobs/<job_id>/
     camera.json                         # repose matrix, Orient-V2 decision
   vlm/
     materials.txt                       # VLM material description (Stage V)
+    classification.txt                  # texture quality: edit or generate (Stage V)
   imageedit/
     enhanced_0.png                      # enhanced front view (Stage E)
   textured/trellis2/
@@ -233,6 +243,18 @@ gpu_mode: dual
 Dependencies:
 - pyrender (for Stage R textured rendering, EGL backend)
 - TRELLIS.2 and Orient-Anything-V2 as git submodules
+
+### 5.1 HPC environment setup
+
+On HPC clusters where CUDA and GCC are provided as environment modules:
+- Load `cuda/12.4.x` and `gcc/11.x` (or newer; GCC >= 9 required) before building the trellis2 env's compiled CUDA extensions.
+- Set `CUDA_HOME` to the loaded CUDA toolkit path so build scripts can find `nvcc`.
+- Add `--no-cache-dir` to pip install commands if the pip cache is on a different filesystem from the build directory (avoids `Invalid cross-device link` errors during wheel installation).
+
+### 5.2 Hugging Face authentication
+
+TRELLIS.2 loads a gated model (`facebook/dinov3-vitl16-pretrain-lvd1689m`) at Stage T startup.
+Accept its license on Hugging Face and authenticate via `hf auth login --token <token>` before running Stage T.
 
 ## 6. CLI and Gradio
 

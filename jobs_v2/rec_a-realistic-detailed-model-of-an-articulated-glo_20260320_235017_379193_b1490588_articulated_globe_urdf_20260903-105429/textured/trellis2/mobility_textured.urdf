@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="articulated_globe">
+	<material name="wood">
+		<color rgba="0.38 0.24 0.14 1" />
+	</material>
+	<material name="dark_wood">
+		<color rgba="0.24 0.15 0.09 1" />
+	</material>
+	<material name="brass">
+		<color rgba="0.78 0.66 0.34 1" />
+	</material>
+	<material name="aged_brass">
+		<color rgba="0.63 0.53 0.28 1" />
+	</material>
+	<material name="ocean">
+		<color rgba="0.16 0.38 0.62 1" />
+	</material>
+	<material name="land">
+		<color rgba="0.7 0.73 0.55 1" />
+	</material>
+	<material name="paper">
+		<color rgba="0.91 0.88 0.77 1" />
+	</material>
+	<link name="base">
+		<inertial>
+			<origin xyz="0 0 0.027" rpy="0 0 0" />
+			<mass value="1.8" />
+			<inertia ixx="0.0058824" ixy="0" ixz="0" iyy="0.0058824" iyz="0" izz="0.01089" />
+		</inertial>
+		<visual name="base">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="meridian">
+		<inertial>
+			<origin xyz="0 0 0.118" rpy="0 0 0" />
+			<mass value="0.45" />
+			<inertia ixx="0.00136969" ixy="0" ixz="0" iyy="0.00136969" iyz="0" izz="0.0027225" />
+		</inertial>
+		<visual name="meridian">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/meridian.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="globe">
+		<inertial>
+			<mass value="0.95" />
+			<inertia ixx="0.003078" ixy="0" ixz="0" iyy="0.003078" iyz="0" izz="0.003078" />
+		</inertial>
+		<visual name="globe">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/globe.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="base_to_meridian" type="fixed">
+		<origin xyz="0 0 0.1265" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="meridian" />
+	</joint>
+	<joint name="globe_spin" type="continuous">
+		<origin xyz="0 0 0.118" rpy="0 0 0" />
+		<parent link="meridian" />
+		<child link="globe" />
+		<axis xyz="0.398749 0 0.91706" />
+		<limit effort="2.5" velocity="3" />
+	</joint>
+</robot>

@@ -1,0 +1,234 @@
+{
+  "group_order": [
+    "wall_bracket__back_plate",
+    "wall_bracket__upper_hook",
+    "wall_bracket__lower_hook",
+    "wall_bracket__left_standoff",
+    "wall_bracket__right_standoff",
+    "wall_bracket__center_latch",
+    "housing__front_frame",
+    "housing__rear_panel",
+    "housing__top_plenum",
+    "housing__left_rail",
+    "housing__right_rail",
+    "housing__upper_hinge_leaf",
+    "housing__lower_hinge_leaf",
+    "housing__upper_knuckle",
+    "housing__lower_knuckle",
+    "front_cover__cover_panel",
+    "front_cover__grille_recess",
+    "front_cover__grille_slat_0",
+    "front_cover__grille_slat_1",
+    "front_cover__grille_slat_2",
+    "front_cover__grille_slat_3",
+    "front_cover__grille_slat_4",
+    "front_cover__grille_slat_5",
+    "front_cover__grille_slat_6",
+    "front_cover__grille_slat_7",
+    "front_cover__status_strip",
+    "front_cover__upper_hinge_strap",
+    "front_cover__lower_hinge_strap",
+    "filter_cartridge__filter_frame",
+    "filter_cartridge__media_block",
+    "filter_cartridge__media_pleat_0",
+    "filter_cartridge__media_pleat_1",
+    "filter_cartridge__media_pleat_2",
+    "filter_cartridge__media_pleat_3",
+    "filter_cartridge__media_pleat_4",
+    "filter_cartridge__media_pleat_5",
+    "filter_cartridge__media_pleat_6",
+    "filter_cartridge__media_pleat_7",
+    "filter_cartridge__media_pleat_8",
+    "filter_cartridge__media_pleat_9",
+    "filter_cartridge__media_pleat_10",
+    "filter_cartridge__left_runner",
+    "filter_cartridge__right_runner",
+    "filter_cartridge__pull_tab"
+  ],
+  "face_ranges": {
+    "wall_bracket__back_plate": [
+      0,
+      12
+    ],
+    "wall_bracket__upper_hook": [
+      12,
+      24
+    ],
+    "wall_bracket__lower_hook": [
+      24,
+      36
+    ],
+    "wall_bracket__left_standoff": [
+      36,
+      48
+    ],
+    "wall_bracket__right_standoff": [
+      48,
+      60
+    ],
+    "wall_bracket__center_latch": [
+      60,
+      72
+    ],
+    "housing__front_frame": [
+      72,
+      400
+    ],
+    "housing__rear_panel": [
+      400,
+      412
+    ],
+    "housing__top_plenum": [
+      412,
+      424
+    ],
+    "housing__left_rail": [
+      424,
+      436
+    ],
+    "housing__right_rail": [
+      436,
+      448
+    ],
+    "housing__upper_hinge_leaf": [
+      448,
+      460
+    ],
+    "housing__lower_hinge_leaf": [
+      460,
+      472
+    ],
+    "housing__upper_knuckle": [
+      472,
+      600
+    ],
+    "housing__lower_knuckle": [
+      600,
+      728
+    ],
+    "front_cover__cover_panel": [
+      728,
+      888
+    ],
+    "front_cover__grille_recess": [
+      888,
+      900
+    ],
+    "front_cover__grille_slat_0": [
+      900,
+      912
+    ],
+    "front_cover__grille_slat_1": [
+      912,
+      924
+    ],
+    "front_cover__grille_slat_2": [
+      924,
+      936
+    ],
+    "front_cover__grille_slat_3": [
+      936,
+      948
+    ],
+    "front_cover__grille_slat_4": [
+      948,
+      960
+    ],
+    "front_cover__grille_slat_5": [
+      960,
+      972
+    ],
+    "front_cover__grille_slat_6": [
+      972,
+      984
+    ],
+    "front_cover__grille_slat_7": [
+      984,
+      996
+    ],
+    "front_cover__status_strip": [
+      996,
+      1008
+    ],
+    "front_cover__upper_hinge_strap": [
+      1008,
+      1020
+    ],
+    "front_cover__lower_hinge_strap": [
+      1020,
+      1032
+    ],
+    "filter_cartridge__filter_frame": [
+      1032,
+      1360
+    ],
+    "filter_cartridge__media_block": [
+      1360,
+      1372
+    ],
+    "filter_cartridge__media_pleat_0": [
+      1372,
+      1384
+    ],
+    "filter_cartridge__media_pleat_1": [
+      1384,
+      1396
+    ],
+    "filter_cartridge__media_pleat_2": [
+      1396,
+      1408
+    ],
+    "filter_cartridge__media_pleat_3": [
+      1408,
+      1420
+    ],
+    "filter_cartridge__media_pleat_4": [
+      1420,
+      1432
+    ],
+    "filter_cartridge__media_pleat_5": [
+      1432,
+      1444
+    ],
+    "filter_cartridge__media_pleat_6": [
+      1444,
+      1456
+    ],
+    "filter_cartridge__media_pleat_7": [
+      1456,
+      1468
+    ],
+    "filter_cartridge__media_pleat_8": [
+      1468,
+      1480
+    ],
+    "filter_cartridge__media_pleat_9": [
+      1480,
+      1492
+    ],
+    "filter_cartridge__media_pleat_10": [
+      1492,
+      1504
+    ],
+    "filter_cartridge__left_runner": [
+      1504,
+      1516
+    ],
+    "filter_cartridge__right_runner": [
+      1516,
+      1528
+    ],
+    "filter_cartridge__pull_tab": [
+      1528,
+      1540
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.006500000000000006,
+      0.0645,
+      0.0
+    ],
+    "scale": 1.428557142857143
+  }
+}

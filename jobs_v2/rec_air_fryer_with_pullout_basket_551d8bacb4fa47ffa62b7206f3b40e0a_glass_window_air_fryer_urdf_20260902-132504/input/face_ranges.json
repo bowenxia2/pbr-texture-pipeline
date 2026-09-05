@@ -1,0 +1,249 @@
+{
+  "group_order": [
+    "body__body_left_wall",
+    "body__body_right_wall",
+    "body__body_back_wall",
+    "body__body_top_shell",
+    "body__body_base",
+    "body__body_upper_front",
+    "body__body_lower_sill",
+    "body__control_panel",
+    "body__display_glass",
+    "body__foot_0_0",
+    "body__foot_0_1",
+    "body__foot_1_0",
+    "body__foot_1_1",
+    "drawer__drawer_bottom",
+    "drawer__drawer_left_wall",
+    "drawer__drawer_right_wall",
+    "drawer__drawer_back_wall",
+    "drawer__drawer_front_bottom",
+    "drawer__drawer_front_top",
+    "drawer__drawer_front_left_rail",
+    "drawer__drawer_front_right_rail",
+    "drawer__window_glass",
+    "basket__basket_bottom",
+    "basket__basket_left_wall",
+    "basket__basket_right_wall",
+    "basket__basket_back_wall",
+    "basket__basket_front_wall",
+    "basket__basket_foot_0_0",
+    "basket__basket_foot_0_1",
+    "basket__basket_foot_1_0",
+    "basket__basket_foot_1_1",
+    "handle__handle_left_post",
+    "handle__handle_right_post",
+    "handle__handle_grip",
+    "handle__handle_left_shoulder",
+    "handle__handle_right_shoulder",
+    "handle__handle_rear_shoulder",
+    "release_button__release_button",
+    "selector_knob__knob_shell",
+    "program_button_0__button_cap",
+    "program_button_0__button_stem",
+    "program_button_1__button_cap",
+    "program_button_1__button_stem",
+    "program_button_2__button_cap",
+    "program_button_2__button_stem",
+    "program_button_3__button_cap",
+    "program_button_3__button_stem"
+  ],
+  "face_ranges": {
+    "body__body_left_wall": [
+      0,
+      12
+    ],
+    "body__body_right_wall": [
+      12,
+      24
+    ],
+    "body__body_back_wall": [
+      24,
+      36
+    ],
+    "body__body_top_shell": [
+      36,
+      48
+    ],
+    "body__body_base": [
+      48,
+      60
+    ],
+    "body__body_upper_front": [
+      60,
+      72
+    ],
+    "body__body_lower_sill": [
+      72,
+      84
+    ],
+    "body__control_panel": [
+      84,
+      96
+    ],
+    "body__display_glass": [
+      96,
+      108
+    ],
+    "body__foot_0_0": [
+      108,
+      120
+    ],
+    "body__foot_0_1": [
+      120,
+      132
+    ],
+    "body__foot_1_0": [
+      132,
+      144
+    ],
+    "body__foot_1_1": [
+      144,
+      156
+    ],
+    "drawer__drawer_bottom": [
+      156,
+      168
+    ],
+    "drawer__drawer_left_wall": [
+      168,
+      180
+    ],
+    "drawer__drawer_right_wall": [
+      180,
+      192
+    ],
+    "drawer__drawer_back_wall": [
+      192,
+      204
+    ],
+    "drawer__drawer_front_bottom": [
+      204,
+      216
+    ],
+    "drawer__drawer_front_top": [
+      216,
+      228
+    ],
+    "drawer__drawer_front_left_rail": [
+      228,
+      240
+    ],
+    "drawer__drawer_front_right_rail": [
+      240,
+      252
+    ],
+    "drawer__window_glass": [
+      252,
+      264
+    ],
+    "basket__basket_bottom": [
+      264,
+      276
+    ],
+    "basket__basket_left_wall": [
+      276,
+      288
+    ],
+    "basket__basket_right_wall": [
+      288,
+      300
+    ],
+    "basket__basket_back_wall": [
+      300,
+      312
+    ],
+    "basket__basket_front_wall": [
+      312,
+      324
+    ],
+    "basket__basket_foot_0_0": [
+      324,
+      336
+    ],
+    "basket__basket_foot_0_1": [
+      336,
+      348
+    ],
+    "basket__basket_foot_1_0": [
+      348,
+      360
+    ],
+    "basket__basket_foot_1_1": [
+      360,
+      372
+    ],
+    "handle__handle_left_post": [
+      372,
+      384
+    ],
+    "handle__handle_right_post": [
+      384,
+      396
+    ],
+    "handle__handle_grip": [
+      396,
+      408
+    ],
+    "handle__handle_left_shoulder": [
+      408,
+      420
+    ],
+    "handle__handle_right_shoulder": [
+      420,
+      432
+    ],
+    "handle__handle_rear_shoulder": [
+      432,
+      444
+    ],
+    "release_button__release_button": [
+      444,
+      456
+    ],
+    "selector_knob__knob_shell": [
+      456,
+      20894
+    ],
+    "program_button_0__button_cap": [
+      20894,
+      20906
+    ],
+    "program_button_0__button_stem": [
+      20906,
+      20918
+    ],
+    "program_button_1__button_cap": [
+      20918,
+      20930
+    ],
+    "program_button_1__button_stem": [
+      20930,
+      20942
+    ],
+    "program_button_2__button_cap": [
+      20942,
+      20954
+    ],
+    "program_button_2__button_stem": [
+      20954,
+      20966
+    ],
+    "program_button_3__button_cap": [
+      20966,
+      20978
+    ],
+    "program_button_3__button_stem": [
+      20978,
+      20990
+    ]
+  },
+  "norm": {
+    "center": [
+      0.022000000000000006,
+      0.0,
+      0.1925
+    ],
+    "scale": 2.5973766233766233
+  }
+}

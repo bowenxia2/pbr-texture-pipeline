@@ -1,0 +1,157 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 4147856,
+  "groups": {
+    "body__left_side": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 733762,
+      "field_voxels": 540865
+    },
+    "body__right_side": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 733679,
+      "field_voxels": 540609
+    },
+    "body__coin_panel": {
+      "texture_size": 1024,
+      "n_faces": 52,
+      "texels": 940272,
+      "field_voxels": 43134
+    },
+    "body__front_base": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55269,
+      "field_voxels": 28965
+    },
+    "body__tray_side_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55550,
+      "field_voxels": 14754
+    },
+    "body__tray_side_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55550,
+      "field_voxels": 14754
+    },
+    "body__mid_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55269,
+      "field_voxels": 29451
+    },
+    "body__door_stile_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59286,
+      "field_voxels": 39155
+    },
+    "body__door_stile_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59286,
+      "field_voxels": 39164
+    },
+    "body__front_top": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60209,
+      "field_voxels": 59973
+    },
+    "body__tray_surround": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 692016,
+      "field_voxels": 21292
+    },
+    "body__control_apron": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57075,
+      "field_voxels": 40182
+    },
+    "body__control_deck": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58698,
+      "field_voxels": 58588
+    },
+    "body__monitor_frame": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 524799,
+      "field_voxels": 170994
+    },
+    "body__monitor_mount": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53217,
+      "field_voxels": 53036
+    },
+    "body__screen_glass": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57432,
+      "field_voxels": 57309
+    },
+    "body__marquee_face": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55386,
+      "field_voxels": 55263
+    },
+    "body__roof": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60148,
+      "field_voxels": 60148
+    },
+    "body__rear_lower": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61480,
+      "field_voxels": 61480
+    },
+    "body__rear_upper": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62804,
+      "field_voxels": 62804
+    },
+    "body__floor": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54220,
+      "field_voxels": 54117
+    },
+    "service_door__service_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57146,
+      "field_voxels": 57146
+    },
+    "service_door__service_handle": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55652,
+      "field_voxels": 5936
+    },
+    "tray_flap__tray_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58052,
+      "field_voxels": 9188
+    },
+    "tray_flap__tray_pull": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51832,
+      "field_voxels": 2010
+    }
+  }
+}

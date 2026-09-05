@@ -1,0 +1,257 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b_office_all_in_one_printer_urdf_20260902-170839",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b/model.urdf",
+  "created": "2026-09-02T17:08:39",
+  "updated": "2026-09-02T18:13:21",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 13,
+        "n_tiny": 7
+      },
+      "seed": null,
+      "started": "2026-09-02T17:08:44",
+      "finished": "2026-09-02T17:09:41",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; rubber on the top edge; plastic on the side panels; metal on the top edge",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T17:09:48",
+      "finished": "2026-09-02T17:17:00",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b_office_all_in_one_printer_urdf_20260902-170839/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T17:17:00",
+      "finished": "2026-09-02T17:56:39",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 13,
+            "n_total": 13,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b_office_all_in_one_printer_urdf_20260902-170839/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T17:56:41",
+      "finished": "2026-09-02T18:13:21",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_all_in_one_printer_with_scanner_lid_and_paper_tray_0c91d1947bfb4a02b2f7165aefffbf2b/model.urdf",
+    "category": "office all in one printer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.241,
+        -0.23,
+        0.0
+      ],
+      "max": [
+        0.24,
+        0.205,
+        0.26
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/printer_body.obj"
+        ],
+        "n_faces": 7332,
+        "area_frac": 0.5396348718702393,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "scanner_glass__glass",
+        "link": "scanner_glass",
+        "label": "glass",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05997747639546082,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "lid_mount__hinge_pad",
+        "link": "lid_mount",
+        "label": "hinge_pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006096437983294792,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "lid__lid_shell",
+        "link": "lid",
+        "label": "lid_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/printer_lid.obj"
+        ],
+        "n_faces": 96,
+        "area_frac": 0.14756685803009317,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "adf_lid__adf_shell",
+        "link": "adf_lid",
+        "label": "adf_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/printer_adf_lid.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.059901635540166226,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "cassette__tray_shell",
+        "link": "cassette",
+        "label": "tray_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/printer_cassette.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.16296012085824807,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "tray_flap__flap_panel",
+        "link": "tray_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/printer_tray_flap.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.020360352690620885,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dial__dial_knob",
+        "link": "dial",
+        "label": "dial_knob",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.001499270197173705,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "button_0__button_cap",
+        "link": "button_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00040059528694058285,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_1__button_cap",
+        "link": "button_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00040059528694058285,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_2__button_cap",
+        "link": "button_2",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00040059528694058285,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_3__button_cap",
+        "link": "button_3",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00040059528694058285,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_4__button_cap",
+        "link": "button_4",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00040059528694058285,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

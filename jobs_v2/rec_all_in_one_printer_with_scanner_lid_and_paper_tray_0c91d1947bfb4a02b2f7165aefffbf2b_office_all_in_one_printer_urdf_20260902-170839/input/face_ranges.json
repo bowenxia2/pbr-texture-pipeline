@@ -1,0 +1,79 @@
+{
+  "group_order": [
+    "body__shell",
+    "scanner_glass__glass",
+    "lid_mount__hinge_pad",
+    "lid__lid_shell",
+    "adf_lid__adf_shell",
+    "cassette__tray_shell",
+    "tray_flap__flap_panel",
+    "dial__dial_knob",
+    "button_0__button_cap",
+    "button_1__button_cap",
+    "button_2__button_cap",
+    "button_3__button_cap",
+    "button_4__button_cap"
+  ],
+  "face_ranges": {
+    "body__shell": [
+      0,
+      7332
+    ],
+    "scanner_glass__glass": [
+      7332,
+      7344
+    ],
+    "lid_mount__hinge_pad": [
+      7344,
+      7356
+    ],
+    "lid__lid_shell": [
+      7356,
+      7452
+    ],
+    "adf_lid__adf_shell": [
+      7452,
+      7480
+    ],
+    "cassette__tray_shell": [
+      7480,
+      7540
+    ],
+    "tray_flap__flap_panel": [
+      7540,
+      7568
+    ],
+    "dial__dial_knob": [
+      7568,
+      7696
+    ],
+    "button_0__button_cap": [
+      7696,
+      7708
+    ],
+    "button_1__button_cap": [
+      7708,
+      7720
+    ],
+    "button_2__button_cap": [
+      7720,
+      7732
+    ],
+    "button_3__button_cap": [
+      7732,
+      7744
+    ],
+    "button_4__button_cap": [
+      7744,
+      7756
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.0005000000000000004,
+      -0.012500000000000011,
+      0.13
+    ],
+    "scale": 2.0789812889812893
+  }
+}

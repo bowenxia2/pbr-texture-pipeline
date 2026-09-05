@@ -1,0 +1,205 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820_wall_console_air_conditioner_urdf_20260903-124105",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820/model.urdf",
+  "created": "2026-09-03T12:41:05",
+  "updated": "2026-09-03T13:16:04",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 9,
+        "n_tiny": 7
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:06",
+      "finished": "2026-09-03T12:41:15",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "smooth plastic on the front face",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:19",
+      "finished": "2026-09-03T12:42:35",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820_wall_console_air_conditioner_urdf_20260903-124105/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:42:35",
+      "finished": "2026-09-03T13:07:50",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 9,
+            "n_total": 9,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820_wall_console_air_conditioner_urdf_20260903-124105/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T13:07:52",
+      "finished": "2026-09-03T13:16:04",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_40c7dd54ff9d4a15b80df53c88d03820/model.urdf",
+    "category": "wall console air conditioner",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.12,
+        -0.43,
+        0.0
+      ],
+      "max": [
+        0.122,
+        0.43,
+        0.606
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__body_shell",
+        "link": "body",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/console_body_shell.obj"
+        ],
+        "n_faces": 6800,
+        "area_frac": 0.7434729020870157,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__guide_0",
+        "link": "body",
+        "label": "guide_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002400375307031689,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__guide_1",
+        "link": "body",
+        "label": "guide_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002400375307031689,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "discharge_flap__flap_panel",
+        "link": "discharge_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.025908021928512583,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__grille_face",
+        "link": "filter_drawer",
+        "label": "grille_face",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/filter_drawer_grille.obj"
+        ],
+        "n_faces": 50060,
+        "area_frac": 0.11685038532673817,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_drawer__filter_media",
+        "link": "filter_drawer",
+        "label": "filter_media",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.10444882191147897,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__pull_tab",
+        "link": "filter_drawer",
+        "label": "pull_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0010268753569792597,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__runner_0",
+        "link": "filter_drawer",
+        "label": "runner_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001746121387606083,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__runner_1",
+        "link": "filter_drawer",
+        "label": "runner_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001746121387606083,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,283 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492_torchiere_floor_lamp_urdf_20260902-181413",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492/model.urdf",
+  "created": "2026-09-02T18:14:13",
+  "updated": "2026-09-03T09:41:31",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 15,
+        "n_tiny": 1
+      },
+      "seed": null,
+      "started": "2026-09-02T18:15:19",
+      "finished": "2026-09-02T18:15:22",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "metallic gray on the base; metallic gray on the stem; metallic gray on the shade",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T18:15:22",
+      "finished": "2026-09-02T18:22:31",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492_torchiere_floor_lamp_urdf_20260902-181413/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T18:22:31",
+      "finished": "2026-09-02T19:03:01",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 15,
+            "n_total": 15,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492_torchiere_floor_lamp_urdf_20260902-181413/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T09:34:03",
+      "finished": "2026-09-03T09:41:31",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_1ced2c27ee8f432bae52389fe97aa492/model.urdf",
+    "category": "torchiere floor lamp",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.178,
+        -0.178,
+        0.0
+      ],
+      "max": [
+        0.5964540342408714,
+        0.178,
+        1.81
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "stand__base_disc",
+        "link": "stand",
+        "label": "base_disc",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.24042763586574792,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__base_foot_ring",
+        "link": "stand",
+        "label": "base_foot_ring",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.11993267812743116,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__post_shaft",
+        "link": "stand",
+        "label": "post_shaft",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.13460180173491107,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__shoulder_collar",
+        "link": "stand",
+        "label": "shoulder_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.019553263195483624,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__shoulder_boss",
+        "link": "stand",
+        "label": "shoulder_boss",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007438477525439339,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__top_socket",
+        "link": "stand",
+        "label": "top_socket",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.02030565547358982,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "main_shade__main_bowl_shell",
+        "link": "main_shade",
+        "label": "main_bowl_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/main_torchiere_bowl.obj"
+        ],
+        "n_faces": 2736,
+        "area_frac": 0.3320960752565855,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "main_shade__mount_collar",
+        "link": "main_shade",
+        "label": "mount_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008023691992988746,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "main_shade__lamp_socket_stem",
+        "link": "main_shade",
+        "label": "lamp_socket_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0035914156889663854,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "reading_arm__root_knuckle",
+        "link": "reading_arm",
+        "label": "root_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0041051819087544045,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "reading_arm__arm_tube",
+        "link": "reading_arm",
+        "label": "arm_tube",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/reading_arm_tube.obj"
+        ],
+        "n_faces": 2336,
+        "area_frac": 0.02287382448520922,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "reading_arm__tip_block",
+        "link": "reading_arm",
+        "label": "tip_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005951395100451827,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "reading_shade__hinge_barrel",
+        "link": "reading_shade",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0028508207699683365,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "reading_shade__shade_shell",
+        "link": "reading_shade",
+        "label": "shade_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/reading_shade_shell.obj"
+        ],
+        "n_faces": 1120,
+        "area_frac": 0.07426506588038152,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "reading_shade__shade_neck",
+        "link": "reading_shade",
+        "label": "shade_neck",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003983016994090958,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

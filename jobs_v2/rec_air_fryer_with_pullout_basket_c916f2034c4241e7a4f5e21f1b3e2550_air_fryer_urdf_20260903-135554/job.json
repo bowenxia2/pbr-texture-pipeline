@@ -1,0 +1,192 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550_air_fryer_urdf_20260903-135554",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550/model.urdf",
+  "created": "2026-09-03T13:55:54",
+  "updated": "2026-09-03T14:37:13",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 8,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-03T13:56:12",
+      "finished": "2026-09-03T13:56:13",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; rubber on the handle grip; plastic on the hinge cover; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:56:15",
+      "finished": "2026-09-03T13:58:02",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550_air_fryer_urdf_20260903-135554/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:58:02",
+      "finished": "2026-09-03T14:23:14",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 8,
+            "n_total": 8,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550_air_fryer_urdf_20260903-135554/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T14:23:15",
+      "finished": "2026-09-03T14:37:13",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c916f2034c4241e7a4f5e21f1b3e2550/model.urdf",
+    "category": "air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.15,
+        -0.215,
+        0.0
+      ],
+      "max": [
+        0.15,
+        0.175,
+        0.365
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "housing",
+        "link": "housing",
+        "label": "housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/housing_body.obj"
+        ],
+        "n_faces": 5400,
+        "area_frac": 0.46245412514489326,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "drawer",
+        "link": "drawer",
+        "label": "drawer",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/drawer_body.obj"
+        ],
+        "n_faces": 1604,
+        "area_frac": 0.285745285043204,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "basket",
+        "link": "basket",
+        "label": "basket",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_body.obj"
+        ],
+        "n_faces": 3276,
+        "area_frac": 0.24437078354210337,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "basket_button",
+        "link": "basket_button",
+        "label": "basket_button",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_button_body.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.001118300007961332,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "dial_temp",
+        "link": "dial_temp",
+        "label": "dial_temp",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/dial_temp_body.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.002373159013378472,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dial_time",
+        "link": "dial_time",
+        "label": "dial_time",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/dial_time_body.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.002373159013378472,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "preset_1",
+        "link": "preset_1",
+        "label": "preset_1",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/preset_1_body.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.0007825941175405071,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "preset_2",
+        "link": "preset_2",
+        "label": "preset_2",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/preset_2_body.obj"
+        ],
+        "n_faces": 28,
+        "area_frac": 0.0007825941175405071,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

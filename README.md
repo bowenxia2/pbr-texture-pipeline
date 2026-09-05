@@ -74,13 +74,34 @@ pip install $(grep -vE '^(bpy|gradio)' Orient-Anything-V2/requirements.txt)
 These installs are sensitive to your CUDA driver/toolkit version.
 If a pinned package fails to install, check the corresponding upstream repo's own install docs (`TRELLIS.2/README.md`, `Orient-Anything-V2/README.md`) for current guidance.
 
+**HPC clusters** (module-based environments):
+The CUDA extensions (`flash-attn`, `nvdiffrast`, `nvdiffrec`, `CuMesh`, `FlexGEMM`, `o-voxel`) compile against your system's CUDA toolkit and C++ compiler.
+On HPC clusters where these are provided as environment modules rather than installed system-wide, load them before running `setup.sh`:
+
+```bash
+module load cuda/12.4.1 gcc/11.2.0   # adjust versions to your cluster
+export CUDA_HOME=$CUDA_ROOT           # so build scripts can find nvcc
+```
+
+GCC >= 9 is required (PyTorch headers enforce this at compile time).
+If pip fails with `Invalid cross-device link` during wheel installation, add `--no-cache-dir` to all pip install commands - this happens when the pip cache and the build directory are on different filesystems.
+
 ### 3. Point config at your machine (if needed)
 
 `config.yaml` ships with defaults that work out of the box: caches under `.cache/` inside the repo, and backend repos resolved from the submodule paths above.
 If you want the Hugging Face cache, torch cache, or backend repos to live somewhere else (a shared/larger disk, or checkouts you already have elsewhere), copy `config.local.yaml.example` to `config.local.yaml` (gitignored) and override only the keys you need.
 It's merged on top of `config.yaml` at load time, so any key you don't set keeps its default.
 
-### 4. Download model weights
+### 4. Authenticate with Hugging Face
+
+TRELLIS.2 loads a gated model (`facebook/dinov3-vitl16-pretrain-lvd1689m`) that requires authentication.
+Accept the license at https://huggingface.co/facebook/dinov3-vitl16-pretrain-lvd1689m, then log in:
+
+```bash
+conda run -n trellis2 hf auth login --token YOUR_TOKEN
+```
+
+### 5. Download model weights
 
 ```bash
 conda run -n trellis2 python -m scripts.download_orient_anything  # Orient-Anything-V2 checkpoint, ~5 GB
@@ -88,7 +109,7 @@ conda run -n trellis2 python -m scripts.download_orient_anything  # Orient-Anyth
 
 Every other model (TRELLIS.2, CLIP, Qwen2.5-VL for Stage V, Qwen-Image-Edit for Stage E) is fetched automatically on first use via `huggingface_hub`, into the same cache.
 
-### 5. Get test data
+### 6. Get test data
 
 **PartNet-Mobility**: `partnet_mobility/` (articulated URDF test assets) is not included in this repo: it's a subset of the SAPIEN PartNet-Mobility dataset, which requires agreeing to its own terms before you can download it.
 Get it from https://sapien.ucsd.edu/downloads and place object folders (e.g. `partnet_mobility/8930/`) directly under `partnet_mobility/`.

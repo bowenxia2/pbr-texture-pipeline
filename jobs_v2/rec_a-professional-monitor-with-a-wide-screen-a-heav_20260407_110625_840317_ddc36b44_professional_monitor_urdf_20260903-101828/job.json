@@ -1,0 +1,283 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44_professional_monitor_urdf_20260903-101828",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44/model.urdf",
+  "created": "2026-09-03T10:18:28",
+  "updated": "2026-09-03T10:54:19",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 15,
+        "n_tiny": 8
+      },
+      "seed": null,
+      "started": "2026-09-03T10:18:41",
+      "finished": "2026-09-03T10:18:41",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; plastic on the stand; plastic on the back; plastic on the side; plastic on the bottom; plastic on the top; plastic on the front",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:18:41",
+      "finished": "2026-09-03T10:20:04",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44_professional_monitor_urdf_20260903-101828/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:20:04",
+      "finished": "2026-09-03T10:46:18",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 15,
+            "n_total": 15,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44_professional_monitor_urdf_20260903-101828/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T10:46:19",
+      "finished": "2026-09-03T10:54:19",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-professional-monitor-with-a-wide-screen-a-heav_20260407_110625_840317_ddc36b44/model.urdf",
+    "category": "professional monitor",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.31184,
+        -0.115,
+        0.0
+      ],
+      "max": [
+        0.31184,
+        0.115,
+        0.59584
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "pedestal__base_plate",
+        "link": "pedestal",
+        "label": "base_plate",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/monitor_base_plate.obj"
+        ],
+        "n_faces": 96,
+        "area_frac": 0.1172461540634434,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pedestal__pedestal_stem",
+        "link": "pedestal",
+        "label": "pedestal_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007706603588868979,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pedestal__pedestal_collar",
+        "link": "pedestal",
+        "label": "pedestal_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.01581405668381534,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__rotating_collar",
+        "link": "stand",
+        "label": "rotating_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.011959805936209935,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__upright_column",
+        "link": "stand",
+        "label": "upright_column",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/monitor_column.obj"
+        ],
+        "n_faces": 272,
+        "area_frac": 0.04707118702656691,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "stand__head_bridge",
+        "link": "stand",
+        "label": "head_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007407738389877886,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "stand__hinge_barrel",
+        "link": "stand",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.006620084307228418,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "display__display_shell",
+        "link": "display",
+        "label": "display_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/monitor_display_shell.obj"
+        ],
+        "n_faces": 2866,
+        "area_frac": 0.3835223657771676,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "display__screen_glass",
+        "link": "display",
+        "label": "screen_glass",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.3164027903625703,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "display__rear_bulge",
+        "link": "display",
+        "label": "rear_bulge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06541303170230586,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "display__rear_mount_plate",
+        "link": "display",
+        "label": "rear_mount_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.018949736203453506,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "display__joystick_support",
+        "link": "display",
+        "label": "joystick_support",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009801587691441477,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "joystick__pivot_barrel",
+        "link": "joystick",
+        "label": "pivot_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0004096746662214601,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "joystick__joystick_stem",
+        "link": "joystick",
+        "label": "joystick_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00025105265685157116,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "joystick__joystick_cap",
+        "link": "joystick",
+        "label": "joystick_cap",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.0002455598662748033,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

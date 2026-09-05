@@ -1,0 +1,59 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "body__guide_0",
+    "body__guide_1",
+    "discharge_flap__flap_panel",
+    "filter_drawer__grille_face",
+    "filter_drawer__filter_media",
+    "filter_drawer__pull_tab",
+    "filter_drawer__runner_0",
+    "filter_drawer__runner_1"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      6800
+    ],
+    "body__guide_0": [
+      6800,
+      6812
+    ],
+    "body__guide_1": [
+      6812,
+      6824
+    ],
+    "discharge_flap__flap_panel": [
+      6824,
+      6836
+    ],
+    "filter_drawer__grille_face": [
+      6836,
+      56896
+    ],
+    "filter_drawer__filter_media": [
+      56896,
+      56908
+    ],
+    "filter_drawer__pull_tab": [
+      56908,
+      56920
+    ],
+    "filter_drawer__runner_0": [
+      56920,
+      56932
+    ],
+    "filter_drawer__runner_1": [
+      56932,
+      56944
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0010000000000000009,
+      0.0,
+      0.303
+    ],
+    "scale": 1.1627790697674418
+  }
+}

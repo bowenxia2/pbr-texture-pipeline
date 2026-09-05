@@ -1,0 +1,713 @@
+<robot name="air_bike">
+  <material name="frame_black">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.64 0.66 0.69 1" />
+    </material>
+  <material name="rubber_black">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <material name="vinyl_black">
+    <color rgba="0.15 0.15 0.16 1" />
+    </material>
+  <material name="oxide_red">
+    <color rgba="0.52 0.11 0.1 1" />
+    </material>
+  <link name="frame">
+    <inertial>
+      <origin xyz="0 -0.02 0.4" rpy="0 0 0" />
+      <mass value="45" />
+      <inertia ixx="5.9595" ixy="0" ixz="0" iyy="3.372" iyz="0" izz="4.0395" />
+      </inertial>
+    <visual name="rear_stabilizer">
+      <origin xyz="0 -0.44 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.38 0.08 0.045" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="front_stabilizer">
+      <origin xyz="0 0.36 0.0225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.34 0.08 0.045" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_floor_pad">
+      <origin xyz="0 -0.44 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.085 0.01" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="front_floor_pad">
+      <origin xyz="0 0.36 0.05" rpy="0 0 0" />
+      <geometry>
+        <box size="0.36 0.085 0.01" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="left_floor_rail">
+      <origin xyz="-0.15 -0.04 0.05" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.8" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_floor_rail">
+      <origin xyz="0.15 -0.04 0.05" rpy="0 1.5708 1.5708" />
+      <geometry>
+        <cylinder radius="0.018" length="0.8" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="seat_tube">
+      <origin xyz="0 -0.06 0.465" rpy="0 0.298499 -1.5708" />
+      <geometry>
+        <cylinder radius="0.028" length="0.408044" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="down_tube">
+      <origin xyz="0 0.12 0.355" rpy="0 0.954499 1.5708" />
+      <geometry>
+        <cylinder radius="0.03" length="0.294109" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="top_tube">
+      <origin xyz="0 0.06 0.55" rpy="0 2.11935 1.5708" />
+      <geometry>
+        <cylinder radius="0.024" length="0.4219" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="front_mast">
+      <origin xyz="0 0.3 0.245" rpy="0 0.298499 -1.5708" />
+      <geometry>
+        <cylinder radius="0.028" length="0.408044" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_rear_brace">
+      <origin xyz="-0.05 -0.28 0.355" rpy="0 0.502542 1.26791" />
+      <geometry>
+        <cylinder radius="0.018" length="0.69606" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_rear_brace">
+      <origin xyz="0.05 -0.28 0.355" rpy="0 0.502542 1.87368" />
+      <geometry>
+        <cylinder radius="0.018" length="0.69606" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_front_strut">
+      <origin xyz="-0.155 0.21 0.245" rpy="0 0.154722 1.73595" />
+      <geometry>
+        <cylinder radius="0.016" length="0.394715" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_front_strut">
+      <origin xyz="0.155 0.21 0.245" rpy="0 0.154722 1.40565" />
+      <geometry>
+        <cylinder radius="0.016" length="0.394715" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="bottom_bracket_shell">
+      <origin xyz="0 0 0.27" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.26" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="fan_bridge">
+      <origin xyz="0 0.24 0.44" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.34" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="seat">
+    <inertial>
+      <origin xyz="0 0 0.18" rpy="0 0 0" />
+      <mass value="2.5" />
+      <inertia ixx="0.0328333" ixy="0" ixz="0" iyy="0.03075" iyz="0" izz="0.0260833" />
+      </inertial>
+    <visual name="seatpost">
+      <origin xyz="0 0 0.105" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.022" length="0.21" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="seat_support_plate">
+      <origin xyz="0 0 0.195" rpy="0 0 0" />
+      <geometry>
+        <box size="0.09 0.17 0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="saddle">
+      <origin xyz="0 0.01 0.215" rpy="-0.1 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_bike_saddle.obj" />
+        </geometry>
+      <material name="vinyl_black">
+        <color rgba="0.15 0.15 0.16 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="fan_wheel">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <mass value="8" />
+      <inertia ixx="0.0898667" ixy="0" ixz="0" iyy="0.0898667" iyz="0" izz="0.1764" />
+      </inertial>
+    <visual name="fan_rim">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_bike_fan_rim.obj" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="fan_mid_ring">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/air_bike_fan_mid_ring.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="fan_hub">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.033" length="0.045" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_0">
+      <origin xyz="0 0.113 0" rpy="0 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_1">
+      <origin xyz="0 0.0978609 0.0565" rpy="0.523599 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_2">
+      <origin xyz="0 0.0565 0.0978609" rpy="1.0472 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_3">
+      <origin xyz="0 6.91925e-18 0.113" rpy="1.5708 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_4">
+      <origin xyz="0 -0.0565 0.0978609" rpy="2.0944 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_5">
+      <origin xyz="0 -0.0978609 0.0565" rpy="2.61799 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_6">
+      <origin xyz="0 -0.113 1.38385e-17" rpy="3.14159 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_7">
+      <origin xyz="0 -0.0978609 -0.0565" rpy="3.66519 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_8">
+      <origin xyz="0 -0.0565 -0.0978609" rpy="4.18879 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_9">
+      <origin xyz="0 -2.07578e-17 -0.113" rpy="4.71239 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_10">
+      <origin xyz="0 0.0565 -0.0978609" rpy="5.23599 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="fan_blade_11">
+      <origin xyz="0 0.0978609 -0.0565" rpy="5.75959 0.18 0" />
+      <geometry>
+        <box size="0.008 0.06 0.16" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="crank_assembly">
+    <inertial>
+      <mass value="4" />
+      <inertia ixx="0.048" ixy="0" ixz="0" iyy="0.0913333" iyz="0" izz="0.0529333" />
+      </inertial>
+    <visual name="crank_axle">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.015" length="0.32" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_spider">
+      <origin xyz="0.07 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_spider">
+      <origin xyz="-0.07 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.045" length="0.01" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="drive_guard">
+      <origin xyz="-0.095 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.078" length="0.006" />
+        </geometry>
+      <material name="oxide_red">
+        <color rgba="0.52 0.11 0.1 1" />
+        </material>
+      </visual>
+    <visual name="left_crank_arm">
+      <origin xyz="0.1475 0.015 -0.085" rpy="0 2.9158 0.876058" />
+      <geometry>
+        <cylinder radius="0.016" length="0.174428" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_crank_arm">
+      <origin xyz="-0.1475 -0.015 0.085" rpy="0 0.225796 -2.26553" />
+      <geometry>
+        <cylinder radius="0.016" length="0.174428" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_pedal">
+    <inertial>
+      <origin xyz="0.052 0 0" rpy="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="0.000285417" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000385417" />
+      </inertial>
+    <visual name="left_spindle">
+      <origin xyz="0.016 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_inner_cage">
+      <origin xyz="0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.11 0.036" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_body">
+      <origin xyz="0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.022" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_tread_top">
+      <origin xyz="0.058 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.008" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="left_pedal_tread_bottom">
+      <origin xyz="0.058 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.008" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_pedal">
+    <inertial>
+      <origin xyz="-0.052 0 0" rpy="0 0 0" />
+      <mass value="0.25" />
+      <inertia ixx="0.000285417" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000385417" />
+      </inertial>
+    <visual name="right_spindle">
+      <origin xyz="-0.016 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.009" length="0.02" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_inner_cage">
+      <origin xyz="-0.024 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.022 0.11 0.036" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_body">
+      <origin xyz="-0.058 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.05 0.11 0.022" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_tread_top">
+      <origin xyz="-0.058 0 0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.008" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="right_pedal_tread_bottom">
+      <origin xyz="-0.058 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <box size="0.045 0.11 0.008" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="left_handlebar">
+    <inertial>
+      <origin xyz="0.02 -0.08 0.16" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.102533" ixy="0" ixz="0" iyy="0.0929333" iyz="0" izz="0.0129333" />
+      </inertial>
+    <visual name="left_bar_0">
+      <origin xyz="0.1485 -0.2 -0.1175" rpy="0 0.952926 2.01133" />
+      <geometry>
+        <cylinder radius="0.014" length="0.0949421" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_bar_1">
+      <origin xyz="0.111 -0.1275 -0.062" rpy="0 0.993388 2.08128" />
+      <geometry>
+        <cylinder radius="0.014" length="0.102591" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_bar_2">
+      <origin xyz="0.045 -0.045 -0.017" rpy="0 1.30976 2.35619" />
+      <geometry>
+        <cylinder radius="0.014" length="0.131742" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_bar_3">
+      <origin xyz="0.028 -0.019 0.085" rpy="0 0.378861 -0.596199" />
+      <geometry>
+        <cylinder radius="0.014" length="0.182975" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_upper_0">
+      <origin xyz="0.069 -0.07 0.282" rpy="0 0.299137 -1.18491" />
+      <geometry>
+        <cylinder radius="0.018" length="0.23441" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_upper_1">
+      <origin xyz="0.09 -0.126 0.458" rpy="0 0.376435 -1.24905" />
+      <geometry>
+        <cylinder radius="0.018" length="0.137637" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="left_pivot_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="left_grip">
+      <origin xyz="0.09 -0.126 0.458" rpy="0 0.376435 -1.24905" />
+      <geometry>
+        <cylinder radius="0.021" length="0.137637" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="right_handlebar">
+    <inertial>
+      <origin xyz="-0.02 -0.08 0.16" rpy="0 0 0" />
+      <mass value="2" />
+      <inertia ixx="0.102533" ixy="0" ixz="0" iyy="0.0929333" iyz="0" izz="0.0129333" />
+      </inertial>
+    <visual name="right_bar_0">
+      <origin xyz="-0.1485 -0.2 -0.1175" rpy="0 0.952926 1.13027" />
+      <geometry>
+        <cylinder radius="0.014" length="0.0949421" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_bar_1">
+      <origin xyz="-0.111 -0.1275 -0.062" rpy="0 0.993388 1.06031" />
+      <geometry>
+        <cylinder radius="0.014" length="0.102591" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_bar_2">
+      <origin xyz="-0.045 -0.045 -0.017" rpy="0 1.30976 0.785398" />
+      <geometry>
+        <cylinder radius="0.014" length="0.131742" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_bar_3">
+      <origin xyz="-0.028 -0.019 0.085" rpy="0 0.378861 -2.54539" />
+      <geometry>
+        <cylinder radius="0.014" length="0.182975" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_upper_0">
+      <origin xyz="-0.069 -0.07 0.282" rpy="0 0.299137 -1.95668" />
+      <geometry>
+        <cylinder radius="0.018" length="0.23441" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_upper_1">
+      <origin xyz="-0.09 -0.126 0.458" rpy="0 0.376435 -1.89255" />
+      <geometry>
+        <cylinder radius="0.018" length="0.137637" />
+        </geometry>
+      <material name="frame_black">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="right_pivot_sleeve">
+      <origin xyz="0 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.026" length="0.04" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.64 0.66 0.69 1" />
+        </material>
+      </visual>
+    <visual name="right_grip">
+      <origin xyz="-0.09 -0.126 0.458" rpy="0 0.376435 -1.89255" />
+      <geometry>
+        <cylinder radius="0.021" length="0.137637" />
+        </geometry>
+      <material name="rubber_black">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="fan_spin" type="continuous">
+    <origin xyz="0 0.24 0.44" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="fan_wheel" />
+    <axis xyz="1 0 0" />
+    <limit effort="120" velocity="25" />
+    </joint>
+  <joint name="crank_spin" type="continuous">
+    <origin xyz="0 0 0.27" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="crank_assembly" />
+    <axis xyz="1 0 0" />
+    <limit effort="180" velocity="18" />
+    </joint>
+  <joint name="left_pedal_spin" type="continuous">
+    <origin xyz="0.16 0.03 -0.17" rpy="0 0 0" />
+    <parent link="crank_assembly" />
+    <child link="left_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="20" />
+    </joint>
+  <joint name="right_pedal_spin" type="continuous">
+    <origin xyz="-0.16 -0.03 0.17" rpy="0 0 0" />
+    <parent link="crank_assembly" />
+    <child link="right_pedal" />
+    <axis xyz="1 0 0" />
+    <limit effort="25" velocity="20" />
+    </joint>
+  <joint name="left_handlebar_swing" type="revolute">
+    <origin xyz="0.16 0.24 0.44" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="left_handlebar" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="2.5" lower="-0.44" upper="0.44" />
+    </joint>
+  <joint name="right_handlebar_swing" type="revolute">
+    <origin xyz="-0.16 0.24 0.44" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="right_handlebar" />
+    <axis xyz="1 0 0" />
+    <limit effort="70" velocity="2.5" lower="-0.44" upper="0.44" />
+    </joint>
+  <joint name="seat_mount" type="fixed">
+    <origin xyz="0 -0.12 0.66" rpy="0 0 0" />
+    <parent link="frame" />
+    <child link="seat" />
+    </joint>
+  </robot>

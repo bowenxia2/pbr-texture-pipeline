@@ -1,0 +1,169 @@
+{
+  "group_order": [
+    "cabinet__plinth",
+    "cabinet__lower_body",
+    "cabinet__upper_body",
+    "cabinet__marquee_box",
+    "cabinet__marquee_panel",
+    "cabinet__control_deck",
+    "cabinet__control_apron",
+    "cabinet__screen_bezel",
+    "cabinet__screen_glass",
+    "cabinet__speaker_panel",
+    "joystick_0__base_collar",
+    "joystick_0__shaft",
+    "joystick_0__ball_top",
+    "joystick_1__base_collar",
+    "joystick_1__shaft",
+    "joystick_1__ball_top",
+    "start_button_0__button_bezel",
+    "start_button_0__button_plunger",
+    "start_button_0__button_cap",
+    "start_button_1__button_bezel",
+    "start_button_1__button_plunger",
+    "start_button_1__button_cap",
+    "start_button_2__button_bezel",
+    "start_button_2__button_plunger",
+    "start_button_2__button_cap",
+    "start_button_3__button_bezel",
+    "start_button_3__button_plunger",
+    "start_button_3__button_cap",
+    "cashbox_door__door_panel",
+    "cashbox_door__door_handle",
+    "cashbox_door__door_lock"
+  ],
+  "face_ranges": {
+    "cabinet__plinth": [
+      0,
+      12
+    ],
+    "cabinet__lower_body": [
+      12,
+      24
+    ],
+    "cabinet__upper_body": [
+      24,
+      36
+    ],
+    "cabinet__marquee_box": [
+      36,
+      48
+    ],
+    "cabinet__marquee_panel": [
+      48,
+      60
+    ],
+    "cabinet__control_deck": [
+      60,
+      3120
+    ],
+    "cabinet__control_apron": [
+      3120,
+      3132
+    ],
+    "cabinet__screen_bezel": [
+      3132,
+      3144
+    ],
+    "cabinet__screen_glass": [
+      3144,
+      3156
+    ],
+    "cabinet__speaker_panel": [
+      3156,
+      3168
+    ],
+    "joystick_0__base_collar": [
+      3168,
+      3296
+    ],
+    "joystick_0__shaft": [
+      3296,
+      3424
+    ],
+    "joystick_0__ball_top": [
+      3424,
+      4704
+    ],
+    "joystick_1__base_collar": [
+      4704,
+      4832
+    ],
+    "joystick_1__shaft": [
+      4832,
+      4960
+    ],
+    "joystick_1__ball_top": [
+      4960,
+      6240
+    ],
+    "start_button_0__button_bezel": [
+      6240,
+      6368
+    ],
+    "start_button_0__button_plunger": [
+      6368,
+      6496
+    ],
+    "start_button_0__button_cap": [
+      6496,
+      6624
+    ],
+    "start_button_1__button_bezel": [
+      6624,
+      6752
+    ],
+    "start_button_1__button_plunger": [
+      6752,
+      6880
+    ],
+    "start_button_1__button_cap": [
+      6880,
+      7008
+    ],
+    "start_button_2__button_bezel": [
+      7008,
+      7136
+    ],
+    "start_button_2__button_plunger": [
+      7136,
+      7264
+    ],
+    "start_button_2__button_cap": [
+      7264,
+      7392
+    ],
+    "start_button_3__button_bezel": [
+      7392,
+      7520
+    ],
+    "start_button_3__button_plunger": [
+      7520,
+      7648
+    ],
+    "start_button_3__button_cap": [
+      7648,
+      7776
+    ],
+    "cashbox_door__door_panel": [
+      7776,
+      7788
+    ],
+    "cashbox_door__door_handle": [
+      7788,
+      7916
+    ],
+    "cashbox_door__door_lock": [
+      7916,
+      8044
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.01050000000000001,
+      0.895
+    ],
+    "scale": 0.5586536312849162
+  }
+}

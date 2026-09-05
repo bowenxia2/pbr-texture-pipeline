@@ -1,0 +1,179 @@
+{
+  "group_order": [
+    "purifier_body__body_core",
+    "purifier_body__body_front_curve",
+    "purifier_body__body_rear_curve",
+    "purifier_body__base_core",
+    "purifier_body__base_front_curve",
+    "purifier_body__base_rear_curve",
+    "purifier_body__top_outlet_left_wall",
+    "purifier_body__top_outlet_right_wall",
+    "purifier_body__top_outlet_front_wall",
+    "purifier_body__top_outlet_rear_wall",
+    "purifier_body__outlet_slat_1",
+    "purifier_body__outlet_slat_2",
+    "purifier_body__outlet_slat_3",
+    "purifier_body__outlet_slat_4",
+    "purifier_body__opening_lower_rail",
+    "purifier_body__opening_upper_rail",
+    "purifier_body__opening_rear_stile",
+    "purifier_body__body_knuckle_lower",
+    "purifier_body__hinge_support_lower",
+    "purifier_body__body_knuckle_upper",
+    "purifier_body__hinge_support_upper",
+    "purifier_body__filter_frame",
+    "purifier_body__filter_media",
+    "filter_cover__cover_knuckle",
+    "filter_cover__cover_hinge_leaf",
+    "filter_cover__cover_panel",
+    "filter_cover__cover_grille_inset",
+    "filter_cover__cover_rib_1",
+    "filter_cover__cover_rib_2",
+    "filter_cover__cover_rib_3",
+    "filter_cover__cover_rib_4",
+    "filter_cover__cover_rib_5",
+    "filter_cover__finger_pull"
+  ],
+  "face_ranges": {
+    "purifier_body__body_core": [
+      0,
+      12
+    ],
+    "purifier_body__body_front_curve": [
+      12,
+      140
+    ],
+    "purifier_body__body_rear_curve": [
+      140,
+      268
+    ],
+    "purifier_body__base_core": [
+      268,
+      280
+    ],
+    "purifier_body__base_front_curve": [
+      280,
+      408
+    ],
+    "purifier_body__base_rear_curve": [
+      408,
+      536
+    ],
+    "purifier_body__top_outlet_left_wall": [
+      536,
+      548
+    ],
+    "purifier_body__top_outlet_right_wall": [
+      548,
+      560
+    ],
+    "purifier_body__top_outlet_front_wall": [
+      560,
+      572
+    ],
+    "purifier_body__top_outlet_rear_wall": [
+      572,
+      584
+    ],
+    "purifier_body__outlet_slat_1": [
+      584,
+      596
+    ],
+    "purifier_body__outlet_slat_2": [
+      596,
+      608
+    ],
+    "purifier_body__outlet_slat_3": [
+      608,
+      620
+    ],
+    "purifier_body__outlet_slat_4": [
+      620,
+      632
+    ],
+    "purifier_body__opening_lower_rail": [
+      632,
+      644
+    ],
+    "purifier_body__opening_upper_rail": [
+      644,
+      656
+    ],
+    "purifier_body__opening_rear_stile": [
+      656,
+      668
+    ],
+    "purifier_body__body_knuckle_lower": [
+      668,
+      796
+    ],
+    "purifier_body__hinge_support_lower": [
+      796,
+      808
+    ],
+    "purifier_body__body_knuckle_upper": [
+      808,
+      936
+    ],
+    "purifier_body__hinge_support_upper": [
+      936,
+      948
+    ],
+    "purifier_body__filter_frame": [
+      948,
+      960
+    ],
+    "purifier_body__filter_media": [
+      960,
+      972
+    ],
+    "filter_cover__cover_knuckle": [
+      972,
+      1100
+    ],
+    "filter_cover__cover_hinge_leaf": [
+      1100,
+      1112
+    ],
+    "filter_cover__cover_panel": [
+      1112,
+      1124
+    ],
+    "filter_cover__cover_grille_inset": [
+      1124,
+      1136
+    ],
+    "filter_cover__cover_rib_1": [
+      1136,
+      1148
+    ],
+    "filter_cover__cover_rib_2": [
+      1148,
+      1160
+    ],
+    "filter_cover__cover_rib_3": [
+      1160,
+      1172
+    ],
+    "filter_cover__cover_rib_4": [
+      1172,
+      1184
+    ],
+    "filter_cover__cover_rib_5": [
+      1184,
+      1196
+    ],
+    "filter_cover__finger_pull": [
+      1196,
+      1324
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0010000000000000009,
+      0.0,
+      0.385
+    ],
+    "scale": 1.2986883116883117
+  }
+}

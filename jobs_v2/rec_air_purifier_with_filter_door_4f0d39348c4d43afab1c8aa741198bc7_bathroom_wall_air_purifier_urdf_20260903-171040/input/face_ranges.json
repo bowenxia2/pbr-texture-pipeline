@@ -1,0 +1,199 @@
+{
+  "group_order": [
+    "wall_bracket__wall_plate",
+    "wall_bracket__hook_rail_0",
+    "wall_bracket__hook_rail_1",
+    "wall_bracket__screw_head_0",
+    "wall_bracket__screw_slot_0",
+    "wall_bracket__screw_head_1",
+    "wall_bracket__screw_slot_1",
+    "housing__rear_panel",
+    "housing__side_wall_0",
+    "housing__side_wall_1",
+    "housing__top_wall",
+    "housing__bottom_wall",
+    "housing__tray_slide_0",
+    "housing__tray_slide_1",
+    "housing__base_fascia",
+    "housing__hinge_leaf_0",
+    "housing__fixed_knuckle_0_0",
+    "housing__fixed_knuckle_0_1",
+    "housing__hinge_leaf_1",
+    "housing__fixed_knuckle_1_0",
+    "housing__fixed_knuckle_1_1",
+    "front_cover__cover_side_stile",
+    "front_cover__cover_hinge_stile",
+    "front_cover__cover_bottom_rail",
+    "front_cover__cover_top_rail",
+    "front_cover__front_grille",
+    "front_cover__finger_pull",
+    "front_cover__moving_knuckle_0",
+    "front_cover__moving_leaf_0",
+    "front_cover__moving_knuckle_1",
+    "front_cover__moving_leaf_1",
+    "filter_tray__tray_side_0",
+    "filter_tray__tray_side_1",
+    "filter_tray__tray_rear_rail",
+    "filter_tray__tray_front_rail",
+    "filter_tray__filter_mesh",
+    "filter_tray__tray_pull_lip"
+  ],
+  "face_ranges": {
+    "wall_bracket__wall_plate": [
+      0,
+      12
+    ],
+    "wall_bracket__hook_rail_0": [
+      12,
+      24
+    ],
+    "wall_bracket__hook_rail_1": [
+      24,
+      36
+    ],
+    "wall_bracket__screw_head_0": [
+      36,
+      164
+    ],
+    "wall_bracket__screw_slot_0": [
+      164,
+      176
+    ],
+    "wall_bracket__screw_head_1": [
+      176,
+      304
+    ],
+    "wall_bracket__screw_slot_1": [
+      304,
+      316
+    ],
+    "housing__rear_panel": [
+      316,
+      328
+    ],
+    "housing__side_wall_0": [
+      328,
+      340
+    ],
+    "housing__side_wall_1": [
+      340,
+      352
+    ],
+    "housing__top_wall": [
+      352,
+      364
+    ],
+    "housing__bottom_wall": [
+      364,
+      376
+    ],
+    "housing__tray_slide_0": [
+      376,
+      388
+    ],
+    "housing__tray_slide_1": [
+      388,
+      400
+    ],
+    "housing__base_fascia": [
+      400,
+      412
+    ],
+    "housing__hinge_leaf_0": [
+      412,
+      424
+    ],
+    "housing__fixed_knuckle_0_0": [
+      424,
+      552
+    ],
+    "housing__fixed_knuckle_0_1": [
+      552,
+      680
+    ],
+    "housing__hinge_leaf_1": [
+      680,
+      692
+    ],
+    "housing__fixed_knuckle_1_0": [
+      692,
+      820
+    ],
+    "housing__fixed_knuckle_1_1": [
+      820,
+      948
+    ],
+    "front_cover__cover_side_stile": [
+      948,
+      960
+    ],
+    "front_cover__cover_hinge_stile": [
+      960,
+      972
+    ],
+    "front_cover__cover_bottom_rail": [
+      972,
+      984
+    ],
+    "front_cover__cover_top_rail": [
+      984,
+      996
+    ],
+    "front_cover__front_grille": [
+      996,
+      6956
+    ],
+    "front_cover__finger_pull": [
+      6956,
+      6968
+    ],
+    "front_cover__moving_knuckle_0": [
+      6968,
+      7096
+    ],
+    "front_cover__moving_leaf_0": [
+      7096,
+      7108
+    ],
+    "front_cover__moving_knuckle_1": [
+      7108,
+      7236
+    ],
+    "front_cover__moving_leaf_1": [
+      7236,
+      7248
+    ],
+    "filter_tray__tray_side_0": [
+      7248,
+      7260
+    ],
+    "filter_tray__tray_side_1": [
+      7260,
+      7272
+    ],
+    "filter_tray__tray_rear_rail": [
+      7272,
+      7284
+    ],
+    "filter_tray__tray_front_rail": [
+      7284,
+      7296
+    ],
+    "filter_tray__filter_mesh": [
+      7296,
+      126380
+    ],
+    "filter_tray__tray_pull_lip": [
+      126380,
+      126392
+    ]
+  },
+  "norm": {
+    "center": [
+      0.010499999999999995,
+      0.06212500000000001,
+      0.26
+    ],
+    "scale": 1.9230576923076923
+  }
+}

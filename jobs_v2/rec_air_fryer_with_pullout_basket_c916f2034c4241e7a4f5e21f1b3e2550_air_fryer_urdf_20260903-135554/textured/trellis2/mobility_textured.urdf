@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="air_fryer">
+	<link name="housing">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/housing_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="housing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="drawer">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/drawer_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="drawer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="basket">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/basket_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="basket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="basket_button">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/basket_button_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="basket_button">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket_button.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="dial_temp">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/dial_temp_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="dial_temp">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dial_temp.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="dial_time">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/dial_time_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="dial_time">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/dial_time.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="preset_1">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/preset_1_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="preset_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="preset_2">
+		<collision>
+			<geometry>
+				<mesh filename="assets/meshes/preset_2_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="preset_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_2.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="drawer_slide" type="prismatic">
+		<parent link="housing" />
+		<child link="drawer" />
+		<axis xyz="0 -1 0" />
+		<limit effort="1" velocity="1" lower="0" upper="0.25" />
+	</joint>
+	<joint name="basket_lift" type="prismatic">
+		<parent link="drawer" />
+		<child link="basket" />
+		<axis xyz="0 0 1" />
+		<limit effort="1" velocity="1" lower="0" upper="0.2" />
+	</joint>
+	<joint name="basket_button_press" type="prismatic">
+		<origin xyz="0 -0.2 0.28" rpy="0 0 0" />
+		<parent link="basket" />
+		<child link="basket_button" />
+		<axis xyz="0 0 -1" />
+		<limit effort="1" velocity="1" lower="0" upper="0.005" />
+	</joint>
+	<joint name="dial_temp_turn" type="continuous">
+		<origin xyz="-0.06 0 0.35" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="dial_temp" />
+		<axis xyz="0 0 1" />
+		<limit effort="1" velocity="1" />
+	</joint>
+	<joint name="dial_time_turn" type="continuous">
+		<origin xyz="0.06 0 0.35" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="dial_time" />
+		<axis xyz="0 0 1" />
+		<limit effort="1" velocity="1" />
+	</joint>
+	<joint name="preset_1_press" type="prismatic">
+		<origin xyz="-0.06 0.05 0.35" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="preset_1" />
+		<axis xyz="0 0 -1" />
+		<limit effort="1" velocity="1" lower="0" upper="0.004" />
+	</joint>
+	<joint name="preset_2_press" type="prismatic">
+		<origin xyz="0.06 0.05 0.35" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="preset_2" />
+		<axis xyz="0 0 -1" />
+		<limit effort="1" velocity="1" lower="0" upper="0.004" />
+	</joint>
+</robot>

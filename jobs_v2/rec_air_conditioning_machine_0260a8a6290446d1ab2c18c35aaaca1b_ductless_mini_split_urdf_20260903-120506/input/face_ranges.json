@@ -1,0 +1,74 @@
+{
+  "group_order": [
+    "body__shell",
+    "body__flap_mount_0",
+    "body__flap_mount_1",
+    "body__vane_0_lower_mount",
+    "body__vane_0_upper_mount",
+    "body__vane_0_roof_bridge",
+    "body__vane_1_lower_mount",
+    "body__vane_1_upper_mount",
+    "body__vane_1_roof_bridge",
+    "flap__blade",
+    "vane_0__blade",
+    "vane_1__blade"
+  ],
+  "face_ranges": {
+    "body__shell": [
+      0,
+      144
+    ],
+    "body__flap_mount_0": [
+      144,
+      156
+    ],
+    "body__flap_mount_1": [
+      156,
+      168
+    ],
+    "body__vane_0_lower_mount": [
+      168,
+      296
+    ],
+    "body__vane_0_upper_mount": [
+      296,
+      424
+    ],
+    "body__vane_0_roof_bridge": [
+      424,
+      436
+    ],
+    "body__vane_1_lower_mount": [
+      436,
+      564
+    ],
+    "body__vane_1_upper_mount": [
+      564,
+      692
+    ],
+    "body__vane_1_roof_bridge": [
+      692,
+      704
+    ],
+    "flap__blade": [
+      704,
+      1132
+    ],
+    "vane_0__blade": [
+      1132,
+      2032
+    ],
+    "vane_1__blade": [
+      2032,
+      2932
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.12013,
+      0.1475
+    ],
+    "scale": 1.0638191489361704
+  }
+}

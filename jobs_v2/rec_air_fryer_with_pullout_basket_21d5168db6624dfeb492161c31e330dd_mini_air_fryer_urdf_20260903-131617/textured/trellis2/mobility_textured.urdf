@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="mini_air_fryer">
+	<material name="shell_finish">
+		<color rgba="0.2 0.22 0.24 1" />
+	</material>
+	<material name="basket_finish">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<material name="handle_finish">
+		<color rgba="0.07 0.07 0.08 1" />
+	</material>
+	<material name="release_finish">
+		<color rgba="0.82 0.83 0.84 1" />
+	</material>
+	<material name="control_finish">
+		<color rgba="0.13 0.14 0.15 1" />
+	</material>
+	<link name="body">
+		<collision name="shell">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_body.obj" />
+			</geometry>
+		</collision>
+		<visual name="body__shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__shell.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="basket">
+		<collision name="basket_shell">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_basket.obj" />
+			</geometry>
+		</collision>
+		<collision name="handle">
+			<origin xyz="0.057 0 -0.006" rpy="0 0 0" />
+			<geometry>
+				<box size="0.072 0.054 0.036" />
+			</geometry>
+		</collision>
+		<collision name="guide_0">
+			<origin xyz="-0.086 0.095 -0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.12 0.004 0.014" />
+			</geometry>
+		</collision>
+		<collision name="guide_1">
+			<origin xyz="-0.086 -0.095 -0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.12 0.004 0.014" />
+			</geometry>
+		</collision>
+		<visual name="basket__basket_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__handle.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__guide_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__guide_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__guide_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__guide_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="release_button">
+		<collision name="release_cap">
+			<origin xyz="0 0 0.003" rpy="0 0 0" />
+			<geometry>
+				<box size="0.022 0.014 0.006" />
+			</geometry>
+		</collision>
+		<visual name="release_button__release_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__release_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="timer_knob">
+		<collision name="knob_shell">
+			<geometry>
+				<mesh filename="assets/meshes/timer_knob.obj" />
+			</geometry>
+		</collision>
+		<visual name="timer_knob__knob_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/timer_knob__knob_shell.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="program_button">
+		<collision name="button_face">
+			<origin xyz="0.001 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.02 0.012" />
+			</geometry>
+		</collision>
+		<visual name="program_button__button_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/program_button__button_face.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="power_rocker">
+		<collision name="rocker_cap">
+			<origin xyz="0 0.003 -0.017" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.006 0.034" />
+			</geometry>
+		</collision>
+		<collision name="rocker_barrel">
+			<origin xyz="0 -0.002 -0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.004 0.008" />
+			</geometry>
+		</collision>
+		<visual name="power_rocker__rocker_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_rocker__rocker_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="power_rocker__rocker_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_rocker__rocker_barrel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_basket" type="prismatic">
+		<origin xyz="0.156 0 0.096" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="basket" />
+		<axis xyz="1 0 0" />
+		<limit effort="45" velocity="0.28" lower="0" upper="0.115" />
+	</joint>
+	<joint name="basket_to_release_button" type="prismatic">
+		<origin xyz="0.049 0 0.012" rpy="0 0 0" />
+		<parent link="basket" />
+		<child link="release_button" />
+		<axis xyz="0 0 -1" />
+		<limit effort="12" velocity="0.1" lower="0" upper="0.004" />
+	</joint>
+	<joint name="body_to_timer_knob" type="continuous">
+		<origin xyz="0.008 0 0.316" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="timer_knob" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.3" velocity="6" />
+	</joint>
+	<joint name="body_to_program_button" type="prismatic">
+		<origin xyz="0.155 0 0.208" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="program_button" />
+		<axis xyz="-1 0 0" />
+		<limit effort="10" velocity="0.08" lower="0" upper="0.004" />
+	</joint>
+	<joint name="body_to_power_rocker" type="revolute">
+		<origin xyz="0.04 0.13 0.195" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="power_rocker" />
+		<axis xyz="1 0 0" />
+		<limit effort="1" velocity="2.5" lower="-0.28" upper="0.28" />
+	</joint>
+</robot>

@@ -1,0 +1,307 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 13519844,
+  "groups": {
+    "body__base_plinth": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57060,
+      "field_voxels": 56932
+    },
+    "body__left_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57433,
+      "field_voxels": 57433
+    },
+    "body__right_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57433,
+      "field_voxels": 57433
+    },
+    "body__rear_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57172,
+      "field_voxels": 57172
+    },
+    "body__roof": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55695,
+      "field_voxels": 55695
+    },
+    "body__upper_housing": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52784,
+      "field_voxels": 52784
+    },
+    "body__control_panel_face": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56650,
+      "field_voxels": 56650
+    },
+    "body__opening_header": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60218,
+      "field_voxels": 28563
+    },
+    "body__opening_sill": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60218,
+      "field_voxels": 28560
+    },
+    "body__left_stile": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61431,
+      "field_voxels": 40206
+    },
+    "body__right_stile": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61431,
+      "field_voxels": 40049
+    },
+    "drawer__drawer_floor": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61562,
+      "field_voxels": 61562
+    },
+    "drawer__left_drawer_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56540,
+      "field_voxels": 56536
+    },
+    "drawer__right_drawer_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56540,
+      "field_voxels": 56535
+    },
+    "drawer__drawer_back": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54492,
+      "field_voxels": 54441
+    },
+    "drawer__drawer_front_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54492,
+      "field_voxels": 54441
+    },
+    "drawer__drawer_front": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55018,
+      "field_voxels": 55018
+    },
+    "drawer__handle_base": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52476,
+      "field_voxels": 52404
+    },
+    "drawer__handle_grip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54800,
+      "field_voxels": 54661
+    },
+    "drawer__latch_floor": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55286,
+      "field_voxels": 9762
+    },
+    "drawer__left_latch_guide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59203,
+      "field_voxels": 7640
+    },
+    "drawer__right_latch_guide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59203,
+      "field_voxels": 7640
+    },
+    "basket__basket_floor": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62246,
+      "field_voxels": 62246
+    },
+    "basket__left_basket_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56755,
+      "field_voxels": 56589
+    },
+    "basket__right_basket_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56755,
+      "field_voxels": 56561
+    },
+    "basket__basket_back": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59039,
+      "field_voxels": 59037
+    },
+    "basket__basket_front": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58817,
+      "field_voxels": 58585
+    },
+    "basket__divider_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61710,
+      "field_voxels": 61709
+    },
+    "basket__basket_foot_0_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59879,
+      "field_voxels": 7546
+    },
+    "basket__basket_foot_0_240": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59879,
+      "field_voxels": 7546
+    },
+    "basket__basket_foot_159_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59879,
+      "field_voxels": 7546
+    },
+    "basket__basket_foot_159_240": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59879,
+      "field_voxels": 7546
+    },
+    "basket__left_slot_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54320,
+      "field_voxels": 21217
+    },
+    "basket__right_slot_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54320,
+      "field_voxels": 21287
+    },
+    "latch__latch_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58187,
+      "field_voxels": 21519
+    },
+    "latch__latch_foot": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56066,
+      "field_voxels": 3946
+    },
+    "knob__knob_skirt": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 655495,
+      "field_voxels": 28682
+    },
+    "knob__knob_body": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 746432,
+      "field_voxels": 31782
+    },
+    "knob__knob_nose": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 627919,
+      "field_voxels": 15192
+    },
+    "knob__knob_indicator": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52279,
+      "field_voxels": 1152
+    },
+    "button_0__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52266,
+      "field_voxels": 11564
+    },
+    "button_0__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53918,
+      "field_voxels": 2528
+    },
+    "button_1__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52266,
+      "field_voxels": 11656
+    },
+    "button_1__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53918,
+      "field_voxels": 2464
+    },
+    "button_2__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52266,
+      "field_voxels": 11656
+    },
+    "button_2__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53918,
+      "field_voxels": 2464
+    },
+    "button_3__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52266,
+      "field_voxels": 11564
+    },
+    "button_3__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53918,
+      "field_voxels": 2528
+    },
+    "button_4__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52266,
+      "field_voxels": 11621
+    },
+    "button_4__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53918,
+      "field_voxels": 2464
+    }
+  }
+}

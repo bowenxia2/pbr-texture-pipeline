@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "body__rear_shell",
+    "body__top_rail",
+    "body__bottom_rail",
+    "body__side_rail_0",
+    "body__side_rail_1",
+    "body__center_mullion",
+    "body__filter_media_0",
+    "body__filter_shadow_0",
+    "body__filter_media_1",
+    "body__filter_shadow_1",
+    "body__top_outlet_grille",
+    "body__hinge_plate_0",
+    "body__hinge_plate_1",
+    "body__foot_0",
+    "body__foot_1",
+    "body__foot_2",
+    "body__foot_3",
+    "filter_door_0__panel",
+    "filter_door_0__top_lip",
+    "filter_door_0__bottom_lip",
+    "filter_door_0__hinge_lip",
+    "filter_door_0__free_lip",
+    "filter_door_0__rear_gasket",
+    "filter_door_0__vertical_pull",
+    "filter_door_0__hinge_barrel",
+    "filter_door_0__hinge_leaf",
+    "filter_door_1__panel",
+    "filter_door_1__top_lip",
+    "filter_door_1__bottom_lip",
+    "filter_door_1__hinge_lip",
+    "filter_door_1__free_lip",
+    "filter_door_1__rear_gasket",
+    "filter_door_1__vertical_pull",
+    "filter_door_1__hinge_barrel",
+    "filter_door_1__hinge_leaf"
+  ],
+  "face_ranges": {
+    "body__rear_shell": [
+      0,
+      12
+    ],
+    "body__top_rail": [
+      12,
+      24
+    ],
+    "body__bottom_rail": [
+      24,
+      36
+    ],
+    "body__side_rail_0": [
+      36,
+      48
+    ],
+    "body__side_rail_1": [
+      48,
+      60
+    ],
+    "body__center_mullion": [
+      60,
+      72
+    ],
+    "body__filter_media_0": [
+      72,
+      143012
+    ],
+    "body__filter_shadow_0": [
+      143012,
+      143024
+    ],
+    "body__filter_media_1": [
+      143024,
+      285964
+    ],
+    "body__filter_shadow_1": [
+      285964,
+      285976
+    ],
+    "body__top_outlet_grille": [
+      285976,
+      317460
+    ],
+    "body__hinge_plate_0": [
+      317460,
+      317472
+    ],
+    "body__hinge_plate_1": [
+      317472,
+      317484
+    ],
+    "body__foot_0": [
+      317484,
+      317496
+    ],
+    "body__foot_1": [
+      317496,
+      317508
+    ],
+    "body__foot_2": [
+      317508,
+      317520
+    ],
+    "body__foot_3": [
+      317520,
+      317532
+    ],
+    "filter_door_0__panel": [
+      317532,
+      317544
+    ],
+    "filter_door_0__top_lip": [
+      317544,
+      317556
+    ],
+    "filter_door_0__bottom_lip": [
+      317556,
+      317568
+    ],
+    "filter_door_0__hinge_lip": [
+      317568,
+      317580
+    ],
+    "filter_door_0__free_lip": [
+      317580,
+      317592
+    ],
+    "filter_door_0__rear_gasket": [
+      317592,
+      317604
+    ],
+    "filter_door_0__vertical_pull": [
+      317604,
+      317616
+    ],
+    "filter_door_0__hinge_barrel": [
+      317616,
+      317744
+    ],
+    "filter_door_0__hinge_leaf": [
+      317744,
+      317756
+    ],
+    "filter_door_1__panel": [
+      317756,
+      317768
+    ],
+    "filter_door_1__top_lip": [
+      317768,
+      317780
+    ],
+    "filter_door_1__bottom_lip": [
+      317780,
+      317792
+    ],
+    "filter_door_1__hinge_lip": [
+      317792,
+      317804
+    ],
+    "filter_door_1__free_lip": [
+      317804,
+      317816
+    ],
+    "filter_door_1__rear_gasket": [
+      317816,
+      317828
+    ],
+    "filter_door_1__vertical_pull": [
+      317828,
+      317840
+    ],
+    "filter_door_1__hinge_barrel": [
+      317840,
+      317968
+    ],
+    "filter_door_1__hinge_leaf": [
+      317968,
+      317980
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.03724999999999999,
+      0.31
+    ],
+    "scale": 0.847449152542373
+  }
+}

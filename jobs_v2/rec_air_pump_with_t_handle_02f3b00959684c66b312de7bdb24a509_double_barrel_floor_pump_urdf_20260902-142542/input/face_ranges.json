@@ -1,0 +1,119 @@
+{
+  "group_order": [
+    "body__base_plate",
+    "body__lower_manifold",
+    "body__barrel_0",
+    "body__top_collar_0",
+    "body__foot_socket_0",
+    "body__barrel_1",
+    "body__top_collar_1",
+    "body__foot_socket_1",
+    "body__gauge_bezel",
+    "body__gauge_face",
+    "body__gauge_stem",
+    "body__foot_pad_0",
+    "body__foot_pad_1",
+    "handle__rod_0",
+    "handle__rod_socket_0",
+    "handle__rod_1",
+    "handle__rod_socket_1",
+    "handle__grip",
+    "handle__handle_bridge",
+    "handle__grip_end_0",
+    "handle__grip_end_1"
+  ],
+  "face_ranges": {
+    "body__base_plate": [
+      0,
+      860
+    ],
+    "body__lower_manifold": [
+      860,
+      872
+    ],
+    "body__barrel_0": [
+      872,
+      2888
+    ],
+    "body__top_collar_0": [
+      2888,
+      4904
+    ],
+    "body__foot_socket_0": [
+      4904,
+      6920
+    ],
+    "body__barrel_1": [
+      6920,
+      8936
+    ],
+    "body__top_collar_1": [
+      8936,
+      10952
+    ],
+    "body__foot_socket_1": [
+      10952,
+      12968
+    ],
+    "body__gauge_bezel": [
+      12968,
+      13096
+    ],
+    "body__gauge_face": [
+      13096,
+      13224
+    ],
+    "body__gauge_stem": [
+      13224,
+      13236
+    ],
+    "body__foot_pad_0": [
+      13236,
+      13248
+    ],
+    "body__foot_pad_1": [
+      13248,
+      13260
+    ],
+    "handle__rod_0": [
+      13260,
+      13388
+    ],
+    "handle__rod_socket_0": [
+      13388,
+      13516
+    ],
+    "handle__rod_1": [
+      13516,
+      13644
+    ],
+    "handle__rod_socket_1": [
+      13644,
+      13772
+    ],
+    "handle__grip": [
+      13772,
+      13900
+    ],
+    "handle__handle_bridge": [
+      13900,
+      13912
+    ],
+    "handle__grip_end_0": [
+      13912,
+      15192
+    ],
+    "handle__grip_end_1": [
+      15192,
+      16472
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.01400005326144027,
+      0.35150035813742
+    ],
+    "scale": 1.422459432614648
+  }
+}

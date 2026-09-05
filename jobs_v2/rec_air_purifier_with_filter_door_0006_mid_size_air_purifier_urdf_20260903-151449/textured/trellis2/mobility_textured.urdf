@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="mid_size_air_purifier">
+	<material name="shell">
+		<color rgba="0.86 0.87 0.84 1" />
+	</material>
+	<material name="accent">
+		<color rgba="0.19 0.21 0.23 1" />
+	</material>
+	<material name="panel_color">
+		<color rgba="0.28 0.3 0.33 1" />
+	</material>
+	<link name="body">
+		<inertial>
+			<origin xyz="0 0 0.09" rpy="0 0 0" />
+			<mass value="8.8" />
+			<inertia ixx="0.066" ixy="0" ixz="0" iyy="0.253733" iyz="0" izz="0.272213" />
+		</inertial>
+		<visual name="body__top_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_side">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_side.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_side">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_side.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_fascia">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_fascia.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_bottom_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_bottom_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_left_upright">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_left_upright.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_right_upright">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_right_upright.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_intake_backer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_intake_backer.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_panel_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_panel_seat.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_panel_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_panel_seat.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_panel_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_panel_seat.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__rear_grille_slat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_grille_slat_7.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="access_panel">
+		<inertial>
+			<origin xyz="0 0.1 -0.006" rpy="0 0 0" />
+			<mass value="1.2" />
+			<inertia ixx="0.0040144" ixy="0" ixz="0" iyy="0.0270544" iyz="0" izz="0.03104" />
+		</inertial>
+		<visual name="access_panel__panel_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__panel_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__pull_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__pull_lip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_access_panel" type="revolute">
+		<origin xyz="0 -0.1 0" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="access_panel" />
+		<axis xyz="1 0 0" />
+		<limit effort="15" velocity="2.2" lower="-1.35" upper="0" />
+	</joint>
+</robot>

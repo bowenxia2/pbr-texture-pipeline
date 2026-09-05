@@ -1,0 +1,231 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_0010_tower_air_purifier_urdf_20260902-151638",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0010/model.urdf",
+  "created": "2026-09-02T15:16:38",
+  "updated": "2026-09-02T16:06:17",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 11,
+        "n_tiny": 7
+      },
+      "seed": null,
+      "started": "2026-09-02T15:17:15",
+      "finished": "2026-09-02T15:17:16",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T15:17:19",
+      "finished": "2026-09-02T15:21:33",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0010_tower_air_purifier_urdf_20260902-151638/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T15:21:33",
+      "finished": "2026-09-02T15:55:01",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 11,
+            "n_total": 11,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0010_tower_air_purifier_urdf_20260902-151638/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T15:55:03",
+      "finished": "2026-09-02T16:06:17",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0010",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0010/model.urdf",
+    "category": "tower air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.125,
+        -0.125,
+        0.0
+      ],
+      "max": [
+        0.125,
+        0.125,
+        0.68
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__tower_shell",
+        "link": "body",
+        "label": "tower_shell",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.39941760648724806,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__base_ring",
+        "link": "body",
+        "label": "base_ring",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.1082245345935376,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__top_cap",
+        "link": "body",
+        "label": "top_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.09096186391065007,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__top_vent",
+        "link": "body",
+        "label": "top_vent",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03172009797870794,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__panel_seat",
+        "link": "body",
+        "label": "panel_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.13672272511603473,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__filter_screen",
+        "link": "body",
+        "label": "filter_screen",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09369170385462909,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__control_display",
+        "link": "body",
+        "label": "control_display",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006810278688788099,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__hinge_jamb",
+        "link": "body",
+        "label": "hinge_jamb",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011578817021174241,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__door_shell",
+        "link": "front_panel",
+        "label": "door_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.10923982531867683,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__door_grip",
+        "link": "front_panel",
+        "label": "door_grip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0035730456237034205,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_panel__hinge_leaf",
+        "link": "front_panel",
+        "label": "hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008059501406849816,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

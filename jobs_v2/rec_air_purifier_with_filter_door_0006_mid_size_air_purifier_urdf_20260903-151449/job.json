@@ -1,0 +1,361 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_0006_mid_size_air_purifier_urdf_20260903-151449",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0006/model.urdf",
+  "created": "2026-09-03T15:14:49",
+  "updated": "2026-09-03T15:51:17",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 21,
+        "n_tiny": 21
+      },
+      "seed": null,
+      "started": "2026-09-03T15:15:03",
+      "finished": "2026-09-03T15:15:03",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:15:07",
+      "finished": "2026-09-03T15:16:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0006_mid_size_air_purifier_urdf_20260903-151449/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:16:47",
+      "finished": "2026-09-03T15:43:38",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 21,
+            "n_total": 21,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0006_mid_size_air_purifier_urdf_20260903-151449/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T15:43:39",
+      "finished": "2026-09-03T15:51:17",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0006",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0006/model.urdf",
+    "category": "mid size air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.28,
+        -0.12000000000000001,
+        -0.02
+      ],
+      "max": [
+        0.28,
+        0.12,
+        0.18000000000000002
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__top_shell",
+        "link": "body",
+        "label": "top_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.2470782666408199,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__left_side",
+        "link": "body",
+        "label": "left_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07491202765173792,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__right_side",
+        "link": "body",
+        "label": "right_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07491202765173792,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_fascia",
+        "link": "body",
+        "label": "front_fascia",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.15795923865723474,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_bottom_rail",
+        "link": "body",
+        "label": "rear_bottom_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0404262100099554,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_left_upright",
+        "link": "body",
+        "label": "rear_left_upright",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004277871052743986,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_right_upright",
+        "link": "body",
+        "label": "rear_right_upright",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004277871052743986,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_intake_backer",
+        "link": "body",
+        "label": "rear_intake_backer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.10573438429213058,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__left_panel_seat",
+        "link": "body",
+        "label": "left_panel_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004678716112985739,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__right_panel_seat",
+        "link": "body",
+        "label": "right_panel_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004678716112985739,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_panel_seat",
+        "link": "body",
+        "label": "front_panel_seat",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012038494268244205,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_0",
+        "link": "body",
+        "label": "rear_grille_slat_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009830560821666659,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_1",
+        "link": "body",
+        "label": "rear_grille_slat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009830560821666659,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_2",
+        "link": "body",
+        "label": "rear_grille_slat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_3",
+        "link": "body",
+        "label": "rear_grille_slat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_4",
+        "link": "body",
+        "label": "rear_grille_slat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_5",
+        "link": "body",
+        "label": "rear_grille_slat_5",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_6",
+        "link": "body",
+        "label": "rear_grille_slat_6",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_grille_slat_7",
+        "link": "body",
+        "label": "rear_grille_slat_7",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00983056082166667,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "access_panel__panel_leaf",
+        "link": "access_panel",
+        "label": "panel_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.18504585076078423,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "access_panel__pull_lip",
+        "link": "access_panel",
+        "label": "pull_lip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005335839162562387,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

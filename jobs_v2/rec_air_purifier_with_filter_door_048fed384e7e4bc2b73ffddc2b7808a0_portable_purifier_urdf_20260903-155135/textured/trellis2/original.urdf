@@ -1,0 +1,92 @@
+<robot name="portable_purifier">
+  <material name="shell_white">
+    <color rgba="0.92 0.93 0.94 1" />
+    </material>
+  <material name="shell_dark">
+    <color rgba="0.2 0.22 0.24 1" />
+    </material>
+  <material name="filter_gray">
+    <color rgba="0.76 0.79 0.76 1" />
+    </material>
+  <link name="shell">
+    <visual name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/shell.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <collision name="housing">
+      <geometry>
+        <mesh filename="assets/meshes/shell.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="door">
+    <visual name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/door.obj" />
+        </geometry>
+      <material name="shell_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <collision name="panel">
+      <geometry>
+        <mesh filename="assets/meshes/door.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="filter_cartridge">
+    <visual name="cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/filter_cartridge.obj" />
+        </geometry>
+      <material name="filter_gray">
+        <color rgba="0.76 0.79 0.76 1" />
+        </material>
+      </visual>
+    <collision name="cartridge">
+      <geometry>
+        <mesh filename="assets/meshes/filter_cartridge.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="handle">
+    <visual name="grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle.obj" />
+        </geometry>
+      <material name="shell_dark">
+        <color rgba="0.2 0.22 0.24 1" />
+        </material>
+      </visual>
+    <collision name="grip">
+      <geometry>
+        <mesh filename="assets/meshes/handle.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="door_hinge" type="revolute">
+    <origin xyz="-0.106 0.095 -0.005" rpy="0 0 0" />
+    <parent link="shell" />
+    <child link="door" />
+    <axis xyz="0 0 1" />
+    <limit effort="8" velocity="1.6" lower="0" upper="1.55" />
+    </joint>
+  <joint name="filter_slide" type="prismatic">
+    <origin xyz="0 0.0655 -0.082" rpy="0 0 0" />
+    <parent link="shell" />
+    <child link="filter_cartridge" />
+    <axis xyz="0 1 0" />
+    <limit effort="25" velocity="0.2" lower="0" upper="0.076" />
+    </joint>
+  <joint name="handle_pivot" type="revolute">
+    <origin xyz="0 0 0.2025" rpy="0 0 0" />
+    <parent link="shell" />
+    <child link="handle" />
+    <axis xyz="1 0 0" />
+    <limit effort="6" velocity="2.2" lower="0" upper="2.85" />
+    </joint>
+  </robot>

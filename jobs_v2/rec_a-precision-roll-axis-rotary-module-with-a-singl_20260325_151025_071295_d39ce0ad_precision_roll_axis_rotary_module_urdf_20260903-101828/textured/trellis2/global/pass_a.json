@@ -1,0 +1,103 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 5706072,
+  "groups": {
+    "support_frame__left_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54267,
+      "field_voxels": 54267
+    },
+    "support_frame__right_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54267,
+      "field_voxels": 54163
+    },
+    "support_frame__top_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57769,
+      "field_voxels": 57769
+    },
+    "support_frame__bottom_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57769,
+      "field_voxels": 57769
+    },
+    "left_bearing_cartridge__housing": {
+      "texture_size": 1024,
+      "n_faces": 4536,
+      "texels": 865804,
+      "field_voxels": 477539
+    },
+    "right_bearing_cartridge__housing": {
+      "texture_size": 1024,
+      "n_faces": 4536,
+      "texels": 870767,
+      "field_voxels": 475883
+    },
+    "shaft__left_journal": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 812103,
+      "field_voxels": 54952
+    },
+    "shaft__right_journal": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 778714,
+      "field_voxels": 55071
+    },
+    "shaft__left_shoulder": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 677159,
+      "field_voxels": 46793
+    },
+    "shaft__right_shoulder": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 627405,
+      "field_voxels": 46848
+    },
+    "shaft__main_shaft": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 786513,
+      "field_voxels": 265155
+    },
+    "shaft__center_hub": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 814743,
+      "field_voxels": 157243
+    },
+    "shaft__mount_pad": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53288,
+      "field_voxels": 49467
+    },
+    "payload_bracket__clamp_block": {
+      "texture_size": 1024,
+      "n_faces": 316,
+      "texels": 848156,
+      "field_voxels": 52705
+    },
+    "payload_bracket__web_rib": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50791,
+      "field_voxels": 45803
+    },
+    "payload_bracket__top_plate": {
+      "texture_size": 1024,
+      "n_faces": 1284,
+      "texels": 833099,
+      "field_voxels": 62746
+    }
+  }
+}

@@ -1,0 +1,389 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wall_air_purifier">
+	<material name="shell_white">
+		<color rgba="0.95 0.96 0.94 1" />
+	</material>
+	<material name="frame_white">
+		<color rgba="0.9 0.91 0.89 1" />
+	</material>
+	<material name="soft_grey">
+		<color rgba="0.75 0.77 0.78 1" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.18 0.19 0.2 1" />
+	</material>
+	<material name="filter_dark">
+		<color rgba="0.28 0.31 0.3 1" />
+	</material>
+	<material name="indicator_blue">
+		<color rgba="0.4 0.62 0.74 0.85" />
+	</material>
+	<material name="slider_black">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<link name="housing">
+		<collision name="back_panel">
+			<origin xyz="-0.061 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.4 0.68" />
+			</geometry>
+		</collision>
+		<collision name="left_wall">
+			<origin xyz="0 -0.19 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.02 0.68" />
+			</geometry>
+		</collision>
+		<collision name="right_wall">
+			<origin xyz="0 0.19 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.02 0.68" />
+			</geometry>
+		</collision>
+		<collision name="top_wall">
+			<origin xyz="0 0 0.33" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.36 0.02" />
+			</geometry>
+		</collision>
+		<collision name="bottom_wall">
+			<origin xyz="0 0 -0.33" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.36 0.02" />
+			</geometry>
+		</collision>
+		<collision name="front_frame_0">
+			<origin xyz="0.063 -0.181 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.038 0.576" />
+			</geometry>
+		</collision>
+		<collision name="front_frame_1">
+			<origin xyz="0.063 0.181 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.038 0.576" />
+			</geometry>
+		</collision>
+		<collision name="front_frame_2">
+			<origin xyz="0.063 0 0.314" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.324 0.052" />
+			</geometry>
+		</collision>
+		<collision name="front_frame_3">
+			<origin xyz="0.063 0 -0.314" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.324 0.052" />
+			</geometry>
+		</collision>
+		<collision name="hinge_mount">
+			<origin xyz="0.07 -0.158 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.02 0.588" />
+			</geometry>
+		</collision>
+		<collision name="filter_guide_0">
+			<origin xyz="0.01 -0.1655 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.029 0.52" />
+			</geometry>
+		</collision>
+		<collision name="filter_guide_1">
+			<origin xyz="0.01 0.1655 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.029 0.52" />
+			</geometry>
+		</collision>
+		<collision name="slider_guide">
+			<origin xyz="0.034 0.199 -0.065" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.002 0.11" />
+			</geometry>
+		</collision>
+		<collision name="top_cap">
+			<origin xyz="0.018 0 0.335" rpy="0 0 0" />
+			<geometry>
+				<box size="0.05 0.08 0.01" />
+			</geometry>
+		</collision>
+		<visual name="housing__back_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__back_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_frame_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_frame_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_frame_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_frame_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_frame_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_frame_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_frame_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_frame_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__hinge_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__hinge_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_guide_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_guide_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__filter_guide_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__filter_guide_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__slider_guide">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__slider_guide.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="door">
+		<collision name="door_panel">
+			<origin xyz="0.002 0.168 0.294" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.336 0.588" />
+			</geometry>
+		</collision>
+		<collision name="door_liner">
+			<origin xyz="-0.003 0.168 0.294" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.3 0.548" />
+			</geometry>
+		</collision>
+		<collision name="hinge_spine">
+			<origin xyz="0.004 0.009 0.294" rpy="0 0 0" />
+			<geometry>
+				<box size="0.008 0.018 0.588" />
+			</geometry>
+		</collision>
+		<collision name="pull_rail">
+			<origin xyz="0.01 0.314 0.31752" rpy="0 0 0" />
+			<geometry>
+				<box size="0.016 0.018 0.24" />
+			</geometry>
+		</collision>
+		<collision name="status_lens">
+			<origin xyz="0.002 0.168 0.09" rpy="0 0 0" />
+			<geometry>
+				<box size="0.002 0.09 0.01" />
+			</geometry>
+		</collision>
+		<visual name="door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__door_liner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_liner.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__hinge_spine">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__hinge_spine.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__pull_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__pull_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__status_lens">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__status_lens.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cassette">
+		<collision name="filter_frame_0">
+			<origin xyz="-0.04 -0.143 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.016 0.552" />
+			</geometry>
+		</collision>
+		<collision name="filter_frame_1">
+			<origin xyz="-0.04 0.143 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.016 0.552" />
+			</geometry>
+		</collision>
+		<collision name="filter_frame_2">
+			<origin xyz="-0.04 0 0.268" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.27 0.016" />
+			</geometry>
+		</collision>
+		<collision name="filter_frame_3">
+			<origin xyz="-0.04 0 -0.268" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.27 0.016" />
+			</geometry>
+		</collision>
+		<collision name="filter_media">
+			<origin xyz="-0.04 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.062 0.271 0.521" />
+			</geometry>
+		</collision>
+		<collision name="filter_tab">
+			<origin xyz="-0.003 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.086 0.028" />
+			</geometry>
+		</collision>
+		<visual name="filter_cassette__filter_frame_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_frame_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__filter_frame_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_frame_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__filter_frame_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_frame_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__filter_frame_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_frame_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__filter_media">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_media.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cassette__filter_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cassette__filter_tab.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="side_slider">
+		<collision name="slider_stem">
+			<origin xyz="0 0.004 0.03" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.008 0.06" />
+			</geometry>
+		</collision>
+		<collision name="thumb_tab">
+			<origin xyz="0.003 0.011 0.012" rpy="0 0 0" />
+			<geometry>
+				<box size="0.016 0.022 0.022" />
+			</geometry>
+		</collision>
+		<collision name="thumb_ridge">
+			<origin xyz="0.006 0.022 0.012" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.01 0.003" />
+			</geometry>
+		</collision>
+		<visual name="side_slider__slider_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/side_slider__slider_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="side_slider__thumb_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/side_slider__thumb_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="side_slider__thumb_ridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/side_slider__thumb_ridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_door" type="revolute">
+		<origin xyz="0.072 -0.168 -0.294" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="door" />
+		<axis xyz="0 0 -1" />
+		<limit effort="8" velocity="1.8" lower="0" upper="1.8326" />
+	</joint>
+	<joint name="housing_to_filter" type="prismatic">
+		<origin xyz="0.048 0 0" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_cassette" />
+		<axis xyz="1 0 0" />
+		<limit effort="18" velocity="0.12" lower="0" upper="0.06" />
+	</joint>
+	<joint name="housing_to_side_slider" type="prismatic">
+		<origin xyz="0.034 0.2 -0.12" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="side_slider" />
+		<axis xyz="0 0 1" />
+		<limit effort="2" velocity="0.08" lower="0" upper="0.055" />
+	</joint>
+</robot>

@@ -1,0 +1,44 @@
+{
+  "group_order": [
+    "housing__housing_shell",
+    "housing__lock_mark",
+    "housing__status_light",
+    "cap__cap_ring",
+    "cap__grip_tab",
+    "filter__filter_cartridge"
+  ],
+  "face_ranges": {
+    "housing__housing_shell": [
+      0,
+      5736
+    ],
+    "housing__lock_mark": [
+      5736,
+      5748
+    ],
+    "housing__status_light": [
+      5748,
+      5760
+    ],
+    "cap__cap_ring": [
+      5760,
+      21330
+    ],
+    "cap__grip_tab": [
+      21330,
+      21342
+    ],
+    "filter__filter_cartridge": [
+      21342,
+      33198
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      1.7500000000003624e-05,
+      0.17
+    ],
+    "scale": 2.941147058823529
+  }
+}

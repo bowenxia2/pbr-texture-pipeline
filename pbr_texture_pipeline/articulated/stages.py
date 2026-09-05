@@ -137,9 +137,13 @@ def render(job) -> dict:
         "norm": {"center": [float(c) for c in center_rest], "scale": float(scale_rest)},
     })
 
+    import math as _math
+
+    cond_offset = float(_CFG.get("render.condition_yaw_offset", 0))
     cam = {
         "repose_applied": R_mat is not None,
         "R": R_mat.tolist() if R_mat is not None else None,
+        "condition_yaw_offset": cond_offset,
     }
     if orient_decision is not None:
         cam["orient"] = orient_decision
@@ -148,12 +152,16 @@ def render(job) -> dict:
     # 3. Render front textured view + depth map via pyrender.
     num_views = int(_CFG.get("render.num_views", 1))
     resolution = int(_CFG.get("render.resolution", 1024))
+    condition_yaw = (_math.pi + cond_offset) if cond_offset else None
+    clay_mesh_repr = R.to_mesh_repr(norm)
     group_meshes_textured = []
     for g in groups:
         T = fk.get(g.link, np.eye(4))
         group_meshes_textured.append((g.group_id, merged_textured[g.group_id], T))
     render_out = R.render_textured_views(job, group_meshes_textured, R_mat,
-                                         num_views=num_views, resolution=resolution)
+                                         num_views=num_views, resolution=resolution,
+                                         condition_yaw=condition_yaw,
+                                         clay_mesh_repr=clay_mesh_repr)
 
     # Remove stale contact-sheet views (8 panels at 45-deg) beyond the textured set.
     for k in range(num_views, R.CONTACT_N):
@@ -221,14 +229,34 @@ def vlm(job) -> dict:
 
 
 # --- Stage E ------------------------------------------------------------------
+def _apply_alpha_mask(enhanced_path, rgba_path):
+    """Replace the white background on the enhanced RGB with the alpha from the RGBA render.
+
+    Erodes the alpha mask by 1px to avoid silhouette-edge color bleeding from the
+    edit model's white-background output into the TRELLIS.2 premultiplied-alpha input.
+    """
+    import cv2
+    from PIL import Image
+
+    enhanced_rgb = Image.open(enhanced_path).convert("RGB")
+    original_rgba = Image.open(rgba_path)
+    alpha = np.array(original_rgba)[:, :, 3]
+    alpha = cv2.erode(alpha, np.ones((3, 3), np.uint8), iterations=1)
+    result = np.dstack([np.array(enhanced_rgb), alpha])
+    Image.fromarray(result, "RGBA").save(enhanced_path)
+
+
 def imageedit(job) -> dict:
-    """Stage E: enhance or generate front-panel image based on VLM classification."""
-    front_white = job.render_front_white()
-    canny = job.render_canny(0)
+    """Stage E: enhance or generate the conditioning image based on VLM classification."""
+    cond_view = job.render_condition_view()
+    has_cond = cond_view.is_file()
+
+    source = job.render_condition_front_white() if has_cond else job.render_front_white()
+    canny = job.render_condition_canny() if has_cond else job.render_canny(0)
     materials_path = job.vlm_materials()
 
-    for p, label in [(front_white, "front_white.png"),
-                     (canny, "canny_0.png"),
+    for p, label in [(source, source.name),
+                     (canny, canny.name),
                      (materials_path, "materials.txt")]:
         if not p.is_file():
             raise FileNotFoundError(
@@ -242,44 +270,35 @@ def imageedit(job) -> dict:
         if classification not in ("edit", "generate"):
             classification = "edit"
 
-    out_path = job.enhanced_view(0)
+    out_path = job.enhanced_condition() if has_cond else job.enhanced_view(0)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     import json
     from pbr_texture_pipeline.backends import registry
 
-    if classification == "generate":
-        category = effective_category(job)
-        items = [{
-            "canny": str(canny),
-            "materials": materials,
-            "output": str(out_path),
-            "category": category,
-        }]
-        items_path = job.root / "_items_imagegen.json"
-        with open(items_path, "w") as f:
-            json.dump(items, f)
-        try:
-            registry.imagegen_infer_batch(str(items_path))
-        finally:
-            items_path.unlink(missing_ok=True)
-    else:
-        items = [{
-            "source": str(front_white),
-            "canny": str(canny),
-            "materials": materials,
-            "output": str(out_path),
-        }]
-        items_path = job.root / "_items_imageedit.json"
-        with open(items_path, "w") as f:
-            json.dump(items, f)
-        try:
-            registry.imageedit_infer_batch(str(items_path))
-        finally:
-            items_path.unlink(missing_ok=True)
+    category = effective_category(job)
+    items = [{
+        "source": str(source),
+        "canny": str(canny),
+        "materials": materials,
+        "output": str(out_path),
+        "classification": classification,
+        "category": category,
+    }]
+    items_path = job.root / "_items_imageedit.json"
+    with open(items_path, "w") as f:
+        json.dump(items, f)
+    try:
+        registry.imageedit_infer_batch(str(items_path))
+    finally:
+        items_path.unlink(missing_ok=True)
 
     if not out_path.is_file():
         raise RuntimeError(f"Stage E did not produce {out_path}")
+
+    if has_cond:
+        _apply_alpha_mask(out_path, cond_view)
+
     return {"enhanced": str(out_path), "path": classification}
 
 
@@ -348,8 +367,13 @@ def global_texture_pair(job, seed: int):
     if not groups:
         return None
 
-    enhanced = job.enhanced_view(0)
-    image_paths = [str(enhanced)] if enhanced.is_file() else [str(job.render_view(0))]
+    candidates = [
+        job.enhanced_condition(),
+        job.render_condition_view(),
+        job.enhanced_view(0),
+        job.render_view(0),
+    ]
+    image_paths = [str(next(c for c in candidates if c.is_file()))]
     pair = {
         "kind": "global",
         "merged_mesh": str(job.mesh_norm()),

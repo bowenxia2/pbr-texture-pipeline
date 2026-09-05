@@ -1,0 +1,159 @@
+{
+  "group_order": [
+    "frame__frame_core",
+    "frame__gauge_boss",
+    "frame__foot_left",
+    "frame__foot_right",
+    "frame__bridge",
+    "frame__tread_left",
+    "frame__tread_right",
+    "frame__hose",
+    "frame__hose_dock",
+    "frame__clip_mid",
+    "frame__clip_top",
+    "carriage__rod",
+    "carriage__stop_collar",
+    "carriage__yoke",
+    "carriage__crossbar",
+    "carriage__retainer_left",
+    "carriage__retainer_right",
+    "carriage__handle_left",
+    "carriage__handle_right",
+    "grip__sleeve",
+    "grip__strap",
+    "grip__lower_bar",
+    "gauge__shell",
+    "gauge__dial",
+    "gauge__lens",
+    "gauge__stem",
+    "gauge__pivot",
+    "needle__pointer",
+    "needle__hub"
+  ],
+  "face_ranges": {
+    "frame__frame_core": [
+      0,
+      3024
+    ],
+    "frame__gauge_boss": [
+      3024,
+      3152
+    ],
+    "frame__foot_left": [
+      3152,
+      3164
+    ],
+    "frame__foot_right": [
+      3164,
+      3176
+    ],
+    "frame__bridge": [
+      3176,
+      3188
+    ],
+    "frame__tread_left": [
+      3188,
+      3200
+    ],
+    "frame__tread_right": [
+      3200,
+      3212
+    ],
+    "frame__hose": [
+      3212,
+      7136
+    ],
+    "frame__hose_dock": [
+      7136,
+      7148
+    ],
+    "frame__clip_mid": [
+      7148,
+      7160
+    ],
+    "frame__clip_top": [
+      7160,
+      7172
+    ],
+    "carriage__rod": [
+      7172,
+      7300
+    ],
+    "carriage__stop_collar": [
+      7300,
+      7428
+    ],
+    "carriage__yoke": [
+      7428,
+      7440
+    ],
+    "carriage__crossbar": [
+      7440,
+      7568
+    ],
+    "carriage__retainer_left": [
+      7568,
+      7696
+    ],
+    "carriage__retainer_right": [
+      7696,
+      7824
+    ],
+    "carriage__handle_left": [
+      7824,
+      7952
+    ],
+    "carriage__handle_right": [
+      7952,
+      8080
+    ],
+    "grip__sleeve": [
+      8080,
+      8528
+    ],
+    "grip__strap": [
+      8528,
+      8540
+    ],
+    "grip__lower_bar": [
+      8540,
+      8668
+    ],
+    "gauge__shell": [
+      8668,
+      9116
+    ],
+    "gauge__dial": [
+      9116,
+      9244
+    ],
+    "gauge__lens": [
+      9244,
+      9372
+    ],
+    "gauge__stem": [
+      9372,
+      9500
+    ],
+    "gauge__pivot": [
+      9500,
+      9628
+    ],
+    "needle__pointer": [
+      9628,
+      9640
+    ],
+    "needle__hub": [
+      9640,
+      9768
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.38
+    ],
+    "scale": 1.3157763157894737
+  }
+}

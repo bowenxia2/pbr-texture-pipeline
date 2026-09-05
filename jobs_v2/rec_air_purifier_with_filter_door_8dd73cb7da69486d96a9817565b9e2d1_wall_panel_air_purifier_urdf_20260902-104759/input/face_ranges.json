@@ -1,0 +1,194 @@
+{
+  "group_order": [
+    "housing__back_plate",
+    "housing__side_wall_0",
+    "housing__side_wall_1",
+    "housing__top_wall",
+    "housing__bottom_wall",
+    "housing__hinge_leaf",
+    "housing__guide_rail_0",
+    "housing__guide_rail_1",
+    "housing__upper_door_seal",
+    "housing__lower_door_seal",
+    "access_door__door_panel",
+    "access_door__hinge_barrel",
+    "access_door__front_handle",
+    "access_door__intake_slot_0",
+    "access_door__intake_slot_1",
+    "access_door__intake_slot_2",
+    "access_door__intake_slot_3",
+    "access_door__intake_slot_4",
+    "access_door__intake_slot_5",
+    "access_door__intake_slot_6",
+    "access_door__intake_slot_7",
+    "filter_cartridge__side_frame_0",
+    "filter_cartridge__side_frame_1",
+    "filter_cartridge__upper_frame",
+    "filter_cartridge__lower_frame",
+    "filter_cartridge__pleated_media",
+    "filter_cartridge__pleat_rib_0",
+    "filter_cartridge__pleat_rib_1",
+    "filter_cartridge__pleat_rib_2",
+    "filter_cartridge__pleat_rib_3",
+    "filter_cartridge__pleat_rib_4",
+    "filter_cartridge__pleat_rib_5",
+    "filter_cartridge__pleat_rib_6",
+    "filter_cartridge__pleat_rib_7",
+    "filter_cartridge__runner_0",
+    "filter_cartridge__runner_1"
+  ],
+  "face_ranges": {
+    "housing__back_plate": [
+      0,
+      12
+    ],
+    "housing__side_wall_0": [
+      12,
+      24
+    ],
+    "housing__side_wall_1": [
+      24,
+      36
+    ],
+    "housing__top_wall": [
+      36,
+      48
+    ],
+    "housing__bottom_wall": [
+      48,
+      60
+    ],
+    "housing__hinge_leaf": [
+      60,
+      72
+    ],
+    "housing__guide_rail_0": [
+      72,
+      84
+    ],
+    "housing__guide_rail_1": [
+      84,
+      96
+    ],
+    "housing__upper_door_seal": [
+      96,
+      108
+    ],
+    "housing__lower_door_seal": [
+      108,
+      120
+    ],
+    "access_door__door_panel": [
+      120,
+      132
+    ],
+    "access_door__hinge_barrel": [
+      132,
+      260
+    ],
+    "access_door__front_handle": [
+      260,
+      272
+    ],
+    "access_door__intake_slot_0": [
+      272,
+      284
+    ],
+    "access_door__intake_slot_1": [
+      284,
+      296
+    ],
+    "access_door__intake_slot_2": [
+      296,
+      308
+    ],
+    "access_door__intake_slot_3": [
+      308,
+      320
+    ],
+    "access_door__intake_slot_4": [
+      320,
+      332
+    ],
+    "access_door__intake_slot_5": [
+      332,
+      344
+    ],
+    "access_door__intake_slot_6": [
+      344,
+      356
+    ],
+    "access_door__intake_slot_7": [
+      356,
+      368
+    ],
+    "filter_cartridge__side_frame_0": [
+      368,
+      380
+    ],
+    "filter_cartridge__side_frame_1": [
+      380,
+      392
+    ],
+    "filter_cartridge__upper_frame": [
+      392,
+      404
+    ],
+    "filter_cartridge__lower_frame": [
+      404,
+      416
+    ],
+    "filter_cartridge__pleated_media": [
+      416,
+      428
+    ],
+    "filter_cartridge__pleat_rib_0": [
+      428,
+      440
+    ],
+    "filter_cartridge__pleat_rib_1": [
+      440,
+      452
+    ],
+    "filter_cartridge__pleat_rib_2": [
+      452,
+      464
+    ],
+    "filter_cartridge__pleat_rib_3": [
+      464,
+      476
+    ],
+    "filter_cartridge__pleat_rib_4": [
+      476,
+      488
+    ],
+    "filter_cartridge__pleat_rib_5": [
+      488,
+      500
+    ],
+    "filter_cartridge__pleat_rib_6": [
+      500,
+      512
+    ],
+    "filter_cartridge__pleat_rib_7": [
+      512,
+      524
+    ],
+    "filter_cartridge__runner_0": [
+      524,
+      536
+    ],
+    "filter_cartridge__runner_1": [
+      536,
+      548
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.12,
+      0.0
+    ],
+    "scale": 1.351337837837838
+  }
+}

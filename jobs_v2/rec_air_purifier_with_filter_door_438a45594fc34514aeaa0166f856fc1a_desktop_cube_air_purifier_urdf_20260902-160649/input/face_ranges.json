@@ -1,0 +1,219 @@
+{
+  "group_order": [
+    "housing__bottom_shell",
+    "housing__left_shell",
+    "housing__back_shell",
+    "housing__front_bottom_bar",
+    "housing__front_top_bar",
+    "housing__front_left_bar",
+    "housing__front_right_bar",
+    "housing__front_grille_slat_1",
+    "housing__front_grille_slat_2",
+    "housing__front_grille_slat_3",
+    "housing__front_grille_slat_4",
+    "housing__front_grille_slat_5",
+    "housing__front_grille_slat_6",
+    "housing__top_front_ring",
+    "housing__top_back_ring",
+    "housing__top_left_ring",
+    "housing__top_right_ring",
+    "housing__top_exhaust_slat_1",
+    "housing__top_exhaust_slat_2",
+    "housing__top_exhaust_slat_3",
+    "housing__top_exhaust_slat_4",
+    "housing__top_exhaust_slat_5",
+    "housing__side_front_frame",
+    "housing__side_back_frame",
+    "housing__side_bottom_frame",
+    "housing__side_top_frame",
+    "housing__lower_guide_rail",
+    "housing__upper_guide_rail",
+    "filter_door__door_panel",
+    "filter_door__door_hinge_stile",
+    "filter_door__door_pull",
+    "hepa_filter__filter_cartridge",
+    "hepa_filter__filter_media_block",
+    "hepa_filter__filter_pleat_1",
+    "hepa_filter__filter_pleat_2",
+    "hepa_filter__filter_pleat_3",
+    "hepa_filter__filter_pleat_4",
+    "hepa_filter__filter_pleat_5",
+    "hepa_filter__filter_pleat_6",
+    "hepa_filter__filter_pleat_7",
+    "hepa_filter__filter_pull_tab"
+  ],
+  "face_ranges": {
+    "housing__bottom_shell": [
+      0,
+      12
+    ],
+    "housing__left_shell": [
+      12,
+      24
+    ],
+    "housing__back_shell": [
+      24,
+      36
+    ],
+    "housing__front_bottom_bar": [
+      36,
+      48
+    ],
+    "housing__front_top_bar": [
+      48,
+      60
+    ],
+    "housing__front_left_bar": [
+      60,
+      72
+    ],
+    "housing__front_right_bar": [
+      72,
+      84
+    ],
+    "housing__front_grille_slat_1": [
+      84,
+      96
+    ],
+    "housing__front_grille_slat_2": [
+      96,
+      108
+    ],
+    "housing__front_grille_slat_3": [
+      108,
+      120
+    ],
+    "housing__front_grille_slat_4": [
+      120,
+      132
+    ],
+    "housing__front_grille_slat_5": [
+      132,
+      144
+    ],
+    "housing__front_grille_slat_6": [
+      144,
+      156
+    ],
+    "housing__top_front_ring": [
+      156,
+      168
+    ],
+    "housing__top_back_ring": [
+      168,
+      180
+    ],
+    "housing__top_left_ring": [
+      180,
+      192
+    ],
+    "housing__top_right_ring": [
+      192,
+      204
+    ],
+    "housing__top_exhaust_slat_1": [
+      204,
+      216
+    ],
+    "housing__top_exhaust_slat_2": [
+      216,
+      228
+    ],
+    "housing__top_exhaust_slat_3": [
+      228,
+      240
+    ],
+    "housing__top_exhaust_slat_4": [
+      240,
+      252
+    ],
+    "housing__top_exhaust_slat_5": [
+      252,
+      264
+    ],
+    "housing__side_front_frame": [
+      264,
+      276
+    ],
+    "housing__side_back_frame": [
+      276,
+      288
+    ],
+    "housing__side_bottom_frame": [
+      288,
+      300
+    ],
+    "housing__side_top_frame": [
+      300,
+      312
+    ],
+    "housing__lower_guide_rail": [
+      312,
+      324
+    ],
+    "housing__upper_guide_rail": [
+      324,
+      336
+    ],
+    "filter_door__door_panel": [
+      336,
+      348
+    ],
+    "filter_door__door_hinge_stile": [
+      348,
+      360
+    ],
+    "filter_door__door_pull": [
+      360,
+      372
+    ],
+    "hepa_filter__filter_cartridge": [
+      372,
+      384
+    ],
+    "hepa_filter__filter_media_block": [
+      384,
+      396
+    ],
+    "hepa_filter__filter_pleat_1": [
+      396,
+      408
+    ],
+    "hepa_filter__filter_pleat_2": [
+      408,
+      420
+    ],
+    "hepa_filter__filter_pleat_3": [
+      420,
+      432
+    ],
+    "hepa_filter__filter_pleat_4": [
+      432,
+      444
+    ],
+    "hepa_filter__filter_pleat_5": [
+      444,
+      456
+    ],
+    "hepa_filter__filter_pleat_6": [
+      456,
+      468
+    ],
+    "hepa_filter__filter_pleat_7": [
+      468,
+      480
+    ],
+    "hepa_filter__filter_pull_tab": [
+      480,
+      492
+    ]
+  },
+  "norm": {
+    "center": [
+      0.008,
+      0.0,
+      0.138
+    ],
+    "scale": 3.6231521739130432
+  }
+}

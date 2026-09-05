@@ -1,0 +1,43 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 7361353,
+  "groups": {
+    "link_0__button-1": {
+      "texture_size": 1024,
+      "n_faces": 3344,
+      "texels": 534005,
+      "field_voxels": 8011
+    },
+    "link_1__lid-2": {
+      "texture_size": 1024,
+      "n_faces": 3520,
+      "texels": 507457,
+      "field_voxels": 177881
+    },
+    "link_2__button-3": {
+      "texture_size": 1024,
+      "n_faces": 2032,
+      "texels": 807368,
+      "field_voxels": 18971
+    },
+    "link_2__button-4": {
+      "texture_size": 1024,
+      "n_faces": 2616,
+      "texels": 759006,
+      "field_voxels": 7468
+    },
+    "link_2__button-5": {
+      "texture_size": 1024,
+      "n_faces": 840,
+      "texels": 740582,
+      "field_voxels": 7415
+    },
+    "link_2__base_body-6": {
+      "texture_size": 1024,
+      "n_faces": 65058,
+      "texels": 787415,
+      "field_voxels": 752236
+    }
+  }
+}

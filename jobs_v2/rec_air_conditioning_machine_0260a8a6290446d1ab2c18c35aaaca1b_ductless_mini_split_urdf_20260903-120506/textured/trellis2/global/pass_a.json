@@ -1,0 +1,79 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2529018,
+  "groups": {
+    "body__shell": {
+      "texture_size": 1024,
+      "n_faces": 144,
+      "texels": 792726,
+      "field_voxels": 791806
+    },
+    "body__flap_mount_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51492,
+      "field_voxels": 2496
+    },
+    "body__flap_mount_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51492,
+      "field_voxels": 2496
+    },
+    "body__vane_0_lower_mount": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 35602,
+      "field_voxels": 216
+    },
+    "body__vane_0_upper_mount": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 30872,
+      "field_voxels": 239
+    },
+    "body__vane_0_roof_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53583,
+      "field_voxels": 3316
+    },
+    "body__vane_1_lower_mount": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 35606,
+      "field_voxels": 216
+    },
+    "body__vane_1_upper_mount": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 32474,
+      "field_voxels": 239
+    },
+    "body__vane_1_roof_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53583,
+      "field_voxels": 3316
+    },
+    "flap__blade": {
+      "texture_size": 1024,
+      "n_faces": 428,
+      "texels": 887034,
+      "field_voxels": 160174
+    },
+    "vane_0__blade": {
+      "texture_size": 1024,
+      "n_faces": 900,
+      "texels": 672093,
+      "field_voxels": 1970
+    },
+    "vane_1__blade": {
+      "texture_size": 1024,
+      "n_faces": 900,
+      "texels": 670386,
+      "field_voxels": 1970
+    }
+  }
+}

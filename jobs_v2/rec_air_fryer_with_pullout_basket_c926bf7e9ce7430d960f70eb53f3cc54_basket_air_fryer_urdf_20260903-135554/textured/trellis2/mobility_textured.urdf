@@ -1,0 +1,702 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="basket_air_fryer">
+	<material name="housing_plastic">
+		<color rgba="0.12 0.12 0.13 1" />
+	</material>
+	<material name="panel_black">
+		<color rgba="0.06 0.06 0.07 1" />
+	</material>
+	<material name="drawer_plastic">
+		<color rgba="0.15 0.15 0.16 1" />
+	</material>
+	<material name="basket_metal">
+		<color rgba="0.34 0.36 0.38 1" />
+	</material>
+	<material name="chamber_metal">
+		<color rgba="0.58 0.59 0.6 1" />
+	</material>
+	<material name="rubber_dark">
+		<color rgba="0.07 0.07 0.08 1" />
+	</material>
+	<material name="button_grey">
+		<color rgba="0.82 0.83 0.84 1" />
+	</material>
+	<material name="safety_red">
+		<color rgba="0.74 0.16 0.12 1" />
+	</material>
+	<link name="housing">
+		<collision name="body_shell">
+			<geometry>
+				<mesh filename="assets/meshes/housing_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="control_panel">
+			<origin xyz="0.066 0 0.311" rpy="0 0.42 0" />
+			<geometry>
+				<mesh filename="assets/meshes/control_panel.obj" />
+			</geometry>
+		</collision>
+		<collision name="foot_0">
+			<origin xyz="-0.125 -0.105 0.005" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="foot_1">
+			<origin xyz="-0.125 0.105 0.005" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="foot_2">
+			<origin xyz="0.09 -0.105 0.005" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="foot_3">
+			<origin xyz="0.09 0.105 0.005" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.01" />
+			</geometry>
+		</collision>
+		<visual name="housing__body_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__body_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__control_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__control_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__foot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__foot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__foot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__foot_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__foot_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__foot_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__foot_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__foot_3.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="chamber">
+		<collision name="chamber_floor">
+			<origin xyz="-0.126 0 -0.067" rpy="0 0 0" />
+			<geometry>
+				<box size="0.252 0.252 0.004" />
+			</geometry>
+		</collision>
+		<collision name="chamber_side_0">
+			<origin xyz="-0.126 0.124 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.252 0.004 0.138" />
+			</geometry>
+		</collision>
+		<collision name="chamber_side_1">
+			<origin xyz="-0.126 -0.124 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.252 0.004 0.138" />
+			</geometry>
+		</collision>
+		<collision name="chamber_rear">
+			<origin xyz="-0.25 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.252 0.138" />
+			</geometry>
+		</collision>
+		<collision name="chamber_ceiling">
+			<origin xyz="-0.126 0 0.067" rpy="0 0 0" />
+			<geometry>
+				<box size="0.252 0.252 0.004" />
+			</geometry>
+		</collision>
+		<visual name="chamber__chamber_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/chamber__chamber_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="chamber__chamber_side_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/chamber__chamber_side_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="chamber__chamber_side_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/chamber__chamber_side_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="chamber__chamber_rear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/chamber__chamber_rear.glb" />
+			</geometry>
+		</visual>
+		<visual name="chamber__chamber_ceiling">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/chamber__chamber_ceiling.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="drawer">
+		<collision name="drawer_floor">
+			<origin xyz="-0.118 0 -0.06075" rpy="0 0 0" />
+			<geometry>
+				<box size="0.236 0.236 0.0045" />
+			</geometry>
+		</collision>
+		<collision name="drawer_side_0">
+			<origin xyz="-0.118 0.11575 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.236 0.0045 0.126" />
+			</geometry>
+		</collision>
+		<collision name="drawer_side_1">
+			<origin xyz="-0.118 -0.11575 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.236 0.0045 0.126" />
+			</geometry>
+		</collision>
+		<collision name="drawer_rear">
+			<origin xyz="-0.23375 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.0045 0.236 0.126" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_lower">
+			<origin xyz="-0.00225 0 -0.028" rpy="0 0 0" />
+			<geometry>
+				<box size="0.0045 0.236 0.07" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_cheek_0">
+			<origin xyz="-0.00225 -0.09 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.0045 0.076 0.048" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_cheek_1">
+			<origin xyz="-0.00225 0.09 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.0045 0.076 0.048" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_lower_panel">
+			<origin xyz="0.029 0 -0.038" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.258 0.074" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_upper_panel">
+			<origin xyz="0.029 0 0.05" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.258 0.05" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_panel_0">
+			<origin xyz="0.029 -0.0905 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.077 0.048" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_panel_1">
+			<origin xyz="0.029 0.0905 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.077 0.048" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_mount_0">
+			<origin xyz="0.01 0 -0.034" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.14 0.036" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_mount_1">
+			<origin xyz="0.01 -0.0905 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.086 0.024" />
+			</geometry>
+		</collision>
+		<collision name="drawer_front_mount_2">
+			<origin xyz="0.01 0.0905 0.016" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.086 0.024" />
+			</geometry>
+		</collision>
+		<collision name="handle_post_0">
+			<origin xyz="0.05 -0.055 -0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.018 0.032" />
+			</geometry>
+		</collision>
+		<collision name="handle_post_1">
+			<origin xyz="0.05 0.055 -0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.018 0.032" />
+			</geometry>
+		</collision>
+		<collision name="handle_bridge">
+			<origin xyz="0.056 0 -0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.034 0.1 0.012" />
+			</geometry>
+		</collision>
+		<visual name="drawer__drawer_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_side_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_side_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_side_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_side_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_rear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_rear.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_cheek_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_cheek_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_cheek_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_cheek_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_lower_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_lower_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_upper_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_upper_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_panel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_panel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_panel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_panel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_mount_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_mount_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_mount_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_mount_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__drawer_front_mount_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__drawer_front_mount_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__handle_post_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__handle_post_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__handle_post_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__handle_post_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="drawer__handle_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer__handle_bridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="basket">
+		<collision name="basket_floor">
+			<geometry>
+				<mesh filename="assets/meshes/basket_floor.obj" />
+			</geometry>
+		</collision>
+		<collision name="basket_side_0">
+			<geometry>
+				<mesh filename="assets/meshes/basket_side_0.obj" />
+			</geometry>
+		</collision>
+		<collision name="basket_side_1">
+			<geometry>
+				<mesh filename="assets/meshes/basket_side_1.obj" />
+			</geometry>
+		</collision>
+		<collision name="basket_rear">
+			<geometry>
+				<mesh filename="assets/meshes/basket_rear.obj" />
+			</geometry>
+		</collision>
+		<collision name="basket_front">
+			<origin xyz="-0.0015 0 -0.005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.003 0.214 0.078" />
+			</geometry>
+		</collision>
+		<collision name="basket_foot_0">
+			<origin xyz="-0.174 -0.074 -0.055" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.014 0.016" />
+			</geometry>
+		</collision>
+		<collision name="basket_foot_1">
+			<origin xyz="-0.174 0.074 -0.055" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.014 0.016" />
+			</geometry>
+		</collision>
+		<collision name="basket_foot_2">
+			<origin xyz="-0.058 -0.074 -0.055" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.014 0.016" />
+			</geometry>
+		</collision>
+		<collision name="basket_foot_3">
+			<origin xyz="-0.058 0.074 -0.055" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.014 0.016" />
+			</geometry>
+		</collision>
+		<collision name="basket_handle">
+			<geometry>
+				<mesh filename="assets/meshes/basket_handle.obj" />
+			</geometry>
+		</collision>
+		<visual name="basket__basket_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_side_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_side_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_side_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_side_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_rear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_rear.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_front">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_front.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_foot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_foot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_foot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_foot_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_foot_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_foot_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_foot_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_foot_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="basket__basket_handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/basket__basket_handle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="release_button">
+		<collision name="release_button">
+			<origin xyz="0 0 0.007" rpy="0 0 0" />
+			<geometry>
+				<box size="0.022 0.034 0.014" />
+			</geometry>
+		</collision>
+		<visual name="release_button__release_button">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__release_button.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="temp_dial">
+		<collision name="dial_skirt">
+			<origin xyz="0 0 0.005" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.028" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="dial_cap">
+			<origin xyz="0 0 0.013" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.022" length="0.016" />
+			</geometry>
+		</collision>
+		<collision name="dial_hub">
+			<origin xyz="0 0 -0.005" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="dial_indicator">
+			<origin xyz="0.012 0 0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.004 0.004" />
+			</geometry>
+		</collision>
+		<visual name="temp_dial__dial_skirt">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temp_dial__dial_skirt.glb" />
+			</geometry>
+		</visual>
+		<visual name="temp_dial__dial_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temp_dial__dial_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="temp_dial__dial_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temp_dial__dial_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="temp_dial__dial_indicator">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temp_dial__dial_indicator.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="time_dial">
+		<collision name="dial_skirt">
+			<origin xyz="0 0 0.005" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.028" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="dial_cap">
+			<origin xyz="0 0 0.013" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.022" length="0.016" />
+			</geometry>
+		</collision>
+		<collision name="dial_hub">
+			<origin xyz="0 0 -0.005" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="dial_indicator">
+			<origin xyz="0.012 0 0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.004 0.004" />
+			</geometry>
+		</collision>
+		<visual name="time_dial__dial_skirt">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/time_dial__dial_skirt.glb" />
+			</geometry>
+		</visual>
+		<visual name="time_dial__dial_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/time_dial__dial_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="time_dial__dial_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/time_dial__dial_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="time_dial__dial_indicator">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/time_dial__dial_indicator.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="preset_button_0">
+		<collision name="button_cap">
+			<origin xyz="0 0 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.026 0.018 0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0 -0.003" rpy="0 0 0" />
+			<geometry>
+				<box size="0.016 0.01 0.006" />
+			</geometry>
+		</collision>
+		<visual name="preset_button_0__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_button_0__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="preset_button_0__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_button_0__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="preset_button_1">
+		<collision name="button_cap">
+			<origin xyz="0 0 0.004" rpy="0 0 0" />
+			<geometry>
+				<box size="0.026 0.018 0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0 -0.003" rpy="0 0 0" />
+			<geometry>
+				<box size="0.016 0.01 0.006" />
+			</geometry>
+		</collision>
+		<visual name="preset_button_1__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_button_1__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="preset_button_1__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/preset_button_1__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_chamber" type="fixed">
+		<origin xyz="0.167 0 0.115" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="chamber" />
+	</joint>
+	<joint name="housing_to_drawer" type="prismatic">
+		<origin xyz="0.167 0 0.115" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="drawer" />
+		<axis xyz="1 0 0" />
+		<limit effort="60" velocity="0.35" lower="0" upper="0.118" />
+	</joint>
+	<joint name="drawer_to_basket" type="fixed">
+		<parent link="drawer" />
+		<child link="basket" />
+	</joint>
+	<joint name="basket_to_release_button" type="prismatic">
+		<origin xyz="0.058 0 0.005" rpy="0 0 0" />
+		<parent link="basket" />
+		<child link="release_button" />
+		<axis xyz="0 0 -1" />
+		<limit effort="6" velocity="0.08" lower="0" upper="0.004" />
+	</joint>
+	<joint name="housing_to_temp_dial" type="continuous">
+		<origin xyz="0.0885345 -0.06 0.307508" rpy="0 0.42 0" />
+		<parent link="housing" />
+		<child link="temp_dial" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.12" velocity="6" />
+	</joint>
+	<joint name="housing_to_time_dial" type="continuous">
+		<origin xyz="0.0885345 0.06 0.307508" rpy="0 0.42 0" />
+		<parent link="housing" />
+		<child link="time_dial" />
+		<axis xyz="0 0 1" />
+		<limit effort="0.12" velocity="6" />
+	</joint>
+	<joint name="housing_to_preset_button_0" type="prismatic">
+		<origin xyz="0.0288735 -0.024 0.330865" rpy="0 0.42 0" />
+		<parent link="housing" />
+		<child link="preset_button_0" />
+		<axis xyz="0 0 -1" />
+		<limit effort="5" velocity="0.08" lower="0" upper="0.004" />
+	</joint>
+	<joint name="housing_to_preset_button_1" type="prismatic">
+		<origin xyz="0.0288735 0.024 0.330865" rpy="0 0.42 0" />
+		<parent link="housing" />
+		<child link="preset_button_1" />
+		<axis xyz="0 0 -1" />
+		<limit effort="5" velocity="0.08" lower="0" upper="0.004" />
+	</joint>
+</robot>

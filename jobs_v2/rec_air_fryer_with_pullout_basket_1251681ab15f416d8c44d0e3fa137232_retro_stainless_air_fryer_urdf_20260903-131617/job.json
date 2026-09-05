@@ -1,0 +1,179 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232_retro_stainless_air_fryer_urdf_20260903-131617",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232/model.urdf",
+  "created": "2026-09-03T13:16:17",
+  "updated": "2026-09-03T13:55:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 6,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-03T13:16:23",
+      "finished": "2026-09-03T13:16:24",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "brushed stainless steel on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:16:27",
+      "finished": "2026-09-03T13:17:46",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232_retro_stainless_air_fryer_urdf_20260903-131617/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:17:46",
+      "finished": "2026-09-03T13:44:22",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 6,
+            "n_total": 6,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232_retro_stainless_air_fryer_urdf_20260903-131617/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T13:44:23",
+      "finished": "2026-09-03T13:55:37",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_1251681ab15f416d8c44d0e3fa137232/model.urdf",
+    "category": "retro stainless air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.18,
+        -0.165,
+        -0.001
+      ],
+      "max": [
+        0.278,
+        0.165,
+        0.35
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body",
+        "link": "body",
+        "label": "body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_body_shell.obj",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 684,
+        "area_frac": 0.7405581195238011,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "drawer",
+        "link": "drawer",
+        "label": "drawer",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_drawer_shell.obj",
+          "<box>"
+        ],
+        "n_faces": 484,
+        "area_frac": 0.246199283624363,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "timer_dial",
+        "link": "timer_dial",
+        "label": "timer_dial",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/timer_dial.obj"
+        ],
+        "n_faces": 18298,
+        "area_frac": 0.004423718411181695,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "temperature_dial",
+        "link": "temperature_dial",
+        "label": "temperature_dial",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/temperature_dial.obj"
+        ],
+        "n_faces": 19976,
+        "area_frac": 0.005732575807223911,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "power_rocker",
+        "link": "power_rocker",
+        "label": "power_rocker",
+        "semantic_id": null,
+        "objs": [
+          "<box>",
+          "<cylinder>"
+        ],
+        "n_faces": 140,
+        "area_frac": 0.0014437993872891532,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "release_latch",
+        "link": "release_latch",
+        "label": "release_latch",
+        "semantic_id": null,
+        "objs": [
+          "<box>",
+          "<box>",
+          "<box>"
+        ],
+        "n_faces": 36,
+        "area_frac": 0.0016425032461410488,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc/model.urdf",
+  "created": "2026-09-03T17:10:40",
+  "updated": "2026-09-03T17:40:18",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 8,
+        "n_tiny": 4
+      },
+      "seed": null,
+      "started": "2026-09-03T17:11:03",
+      "finished": "2026-09-03T17:11:04",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "smooth plastic on the wall panel",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:11:05",
+      "finished": "2026-09-03T17:13:00",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc_wall_panel_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:13:00",
+      "finished": "2026-09-03T17:40:17",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {},
+      "seed": 42,
+      "started": "2026-09-03T17:40:18",
+      "finished": null,
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_7794c63ea2a6442dbe7d52e25596f0fc/model.urdf",
+    "category": "wall panel purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.09,
+        -0.25,
+        -0.4
+      ],
+      "max": [
+        0.108,
+        0.25,
+        0.4
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__body_shell",
+        "link": "body",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_body.obj"
+        ],
+        "n_faces": 160,
+        "area_frac": 0.7074656201868502,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__guide_0",
+        "link": "body",
+        "label": "guide_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006573611233005399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__guide_1",
+        "link": "body",
+        "label": "guide_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.006573611233005399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "door__door_panel",
+        "link": "door",
+        "label": "door_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_door.obj"
+        ],
+        "n_faces": 44,
+        "area_frac": 0.144948642054845,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_drawer__drawer_shell",
+        "link": "filter_drawer",
+        "label": "drawer_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_filter_drawer.obj"
+        ],
+        "n_faces": 76,
+        "area_frac": 0.12559140158277177,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_drawer__runner_0",
+        "link": "filter_drawer",
+        "label": "runner_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0020960458352501554,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_drawer__runner_1",
+        "link": "filter_drawer",
+        "label": "runner_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0020960458352501554,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "latch_flap__flap_panel",
+        "link": "latch_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_latch_flap.obj"
+        ],
+        "n_faces": 44,
+        "area_frac": 0.004655022039021815,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

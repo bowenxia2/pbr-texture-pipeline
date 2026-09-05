@@ -1,0 +1,473 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="upright_arcade_machine">
+	<material name="body_finish">
+		<color rgba="0.09 0.09 0.1 1" />
+	</material>
+	<material name="trim_finish">
+		<color rgba="0.16 0.17 0.19 1" />
+	</material>
+	<material name="marquee_finish">
+		<color rgba="0.21 0.05 0.36 1" />
+	</material>
+	<material name="screen_finish">
+		<color rgba="0.06 0.12 0.16 1" />
+	</material>
+	<material name="door_finish">
+		<color rgba="0.55 0.57 0.6 1" />
+	</material>
+	<material name="joystick_finish">
+		<color rgba="0.06 0.06 0.07 1" />
+	</material>
+	<material name="joystick_ball_finish">
+		<color rgba="0.88 0.12 0.14 1" />
+	</material>
+	<material name="button_blue">
+		<color rgba="0.15 0.43 0.94 1" />
+	</material>
+	<material name="button_green">
+		<color rgba="0.15 0.78 0.32 1" />
+	</material>
+	<material name="button_yellow">
+		<color rgba="0.92 0.73 0.12 1" />
+	</material>
+	<material name="button_red">
+		<color rgba="0.88 0.15 0.18 1" />
+	</material>
+	<link name="cabinet">
+		<collision name="plinth">
+			<origin xyz="0 0 0.05" rpy="0 0 0" />
+			<geometry>
+				<box size="0.78 0.76 0.1" />
+			</geometry>
+		</collision>
+		<collision name="lower_body">
+			<origin xyz="0 0 0.53" rpy="0 0 0" />
+			<geometry>
+				<box size="0.76 0.74 0.86" />
+			</geometry>
+		</collision>
+		<collision name="upper_body">
+			<origin xyz="0 -0.08 1.34" rpy="0 0 0" />
+			<geometry>
+				<box size="0.68 0.54 0.76" />
+			</geometry>
+		</collision>
+		<collision name="marquee_box">
+			<origin xyz="0 0.04 1.7" rpy="0 0 0" />
+			<geometry>
+				<box size="0.74 0.2 0.18" />
+			</geometry>
+		</collision>
+		<collision name="marquee_panel">
+			<origin xyz="0 0.13 1.7" rpy="0 0 0" />
+			<geometry>
+				<box size="0.7 0.02 0.12" />
+			</geometry>
+		</collision>
+		<collision name="control_deck">
+			<origin xyz="0 0.22 1.01" rpy="-0.349066 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/arcade_control_deck.obj" />
+			</geometry>
+		</collision>
+		<collision name="control_apron">
+			<origin xyz="0 0.31 0.89" rpy="0 0 0" />
+			<geometry>
+				<box size="0.78 0.12 0.16" />
+			</geometry>
+		</collision>
+		<collision name="screen_bezel">
+			<origin xyz="0 0.14 1.3" rpy="0.226893 0 0" />
+			<geometry>
+				<box size="0.58 0.06 0.42" />
+			</geometry>
+		</collision>
+		<collision name="screen_glass">
+			<origin xyz="0 0.17 1.28" rpy="0.226893 0 0" />
+			<geometry>
+				<box size="0.48 0.016 0.32" />
+			</geometry>
+		</collision>
+		<collision name="speaker_panel">
+			<origin xyz="0 0.13 1.52" rpy="0.08 0 0" />
+			<geometry>
+				<box size="0.6 0.04 0.15" />
+			</geometry>
+		</collision>
+		<visual name="cabinet__plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__lower_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__lower_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__upper_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__upper_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_box">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_box.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__marquee_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__marquee_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__control_deck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__control_deck.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__control_apron">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__control_apron.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__screen_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__screen_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__screen_glass">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__screen_glass.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__speaker_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__speaker_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="joystick_0">
+		<collision name="base_collar">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.025" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="shaft">
+			<origin xyz="0 0 0.045" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.078" />
+			</geometry>
+		</collision>
+		<collision name="ball_top">
+			<origin xyz="0 0 0.093" rpy="0 0 0" />
+			<geometry>
+				<sphere radius="0.018" />
+			</geometry>
+		</collision>
+		<visual name="joystick_0__base_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_0__base_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick_0__shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_0__shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick_0__ball_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_0__ball_top.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="joystick_1">
+		<collision name="base_collar">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.025" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="shaft">
+			<origin xyz="0 0 0.045" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.078" />
+			</geometry>
+		</collision>
+		<collision name="ball_top">
+			<origin xyz="0 0 0.093" rpy="0 0 0" />
+			<geometry>
+				<sphere radius="0.018" />
+			</geometry>
+		</collision>
+		<visual name="joystick_1__base_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_1__base_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick_1__shaft">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_1__shaft.glb" />
+			</geometry>
+		</visual>
+		<visual name="joystick_1__ball_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/joystick_1__ball_top.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="start_button_0">
+		<collision name="button_bezel">
+			<origin xyz="0 0 0.002" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.029" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="button_plunger">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_cap">
+			<origin xyz="0 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.031" length="0.008" />
+			</geometry>
+		</collision>
+		<visual name="start_button_0__button_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_0__button_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_0__button_plunger">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_0__button_plunger.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_0__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_0__button_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="start_button_1">
+		<collision name="button_bezel">
+			<origin xyz="0 0 0.002" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.029" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="button_plunger">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_cap">
+			<origin xyz="0 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.031" length="0.008" />
+			</geometry>
+		</collision>
+		<visual name="start_button_1__button_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_1__button_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_1__button_plunger">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_1__button_plunger.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_1__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_1__button_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="start_button_2">
+		<collision name="button_bezel">
+			<origin xyz="0 0 0.002" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.029" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="button_plunger">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_cap">
+			<origin xyz="0 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.031" length="0.008" />
+			</geometry>
+		</collision>
+		<visual name="start_button_2__button_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_2__button_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_2__button_plunger">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_2__button_plunger.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_2__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_2__button_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="start_button_3">
+		<collision name="button_bezel">
+			<origin xyz="0 0 0.002" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.029" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="button_plunger">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.021" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="button_cap">
+			<origin xyz="0 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.031" length="0.008" />
+			</geometry>
+		</collision>
+		<visual name="start_button_3__button_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_3__button_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_3__button_plunger">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_3__button_plunger.glb" />
+			</geometry>
+		</visual>
+		<visual name="start_button_3__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/start_button_3__button_cap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="cashbox_door">
+		<collision name="door_panel">
+			<origin xyz="0.17 0.0075 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.34 0.015 0.3" />
+			</geometry>
+		</collision>
+		<collision name="door_handle">
+			<origin xyz="0.275 0.022 0" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.009" length="0.18" />
+			</geometry>
+		</collision>
+		<collision name="door_lock">
+			<origin xyz="0.1 0.016 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.018" />
+			</geometry>
+		</collision>
+		<visual name="cashbox_door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cashbox_door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="cashbox_door__door_handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cashbox_door__door_handle.glb" />
+			</geometry>
+		</visual>
+		<visual name="cashbox_door__door_lock">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cashbox_door__door_lock.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="cabinet_to_joystick_0" type="revolute">
+		<origin xyz="-0.23 0.219243 1.05178" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="joystick_0" />
+		<axis xyz="1 0 0" />
+		<limit effort="4" velocity="2.5" lower="-0.4" upper="0.4" />
+	</joint>
+	<joint name="cabinet_to_joystick_1" type="revolute">
+		<origin xyz="0.23 0.219243 1.05178" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="joystick_1" />
+		<axis xyz="1 0 0" />
+		<limit effort="4" velocity="2.5" lower="-0.4" upper="0.4" />
+	</joint>
+	<joint name="cabinet_to_start_button_0" type="prismatic">
+		<origin xyz="-0.12 0.299459 1.02365" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="start_button_0" />
+		<axis xyz="0 0 -1" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.0025" />
+	</joint>
+	<joint name="cabinet_to_start_button_1" type="prismatic">
+		<origin xyz="-0.04 0.299459 1.02365" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="start_button_1" />
+		<axis xyz="0 0 -1" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.0025" />
+	</joint>
+	<joint name="cabinet_to_start_button_2" type="prismatic">
+		<origin xyz="0.04 0.299459 1.02365" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="start_button_2" />
+		<axis xyz="0 0 -1" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.0025" />
+	</joint>
+	<joint name="cabinet_to_start_button_3" type="prismatic">
+		<origin xyz="0.12 0.299459 1.02365" rpy="-0.349066 0 0" />
+		<parent link="cabinet" />
+		<child link="start_button_3" />
+		<axis xyz="0 0 -1" />
+		<limit effort="12" velocity="0.08" lower="0" upper="0.0025" />
+	</joint>
+	<joint name="cabinet_to_cashbox_door" type="revolute">
+		<origin xyz="-0.17 0.37 0.55" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="cashbox_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="20" velocity="1.2" lower="0" upper="1.35" />
+	</joint>
+</robot>

@@ -1,0 +1,44 @@
+{
+  "group_order": [
+    "body",
+    "drawer",
+    "timer_dial",
+    "temperature_dial",
+    "power_rocker",
+    "release_latch"
+  ],
+  "face_ranges": {
+    "body": [
+      0,
+      684
+    ],
+    "drawer": [
+      684,
+      1168
+    ],
+    "timer_dial": [
+      1168,
+      19466
+    ],
+    "temperature_dial": [
+      19466,
+      39442
+    ],
+    "power_rocker": [
+      39442,
+      39582
+    ],
+    "release_latch": [
+      39582,
+      39618
+    ]
+  },
+  "norm": {
+    "center": [
+      0.049000000000000016,
+      0.0,
+      0.1745
+    ],
+    "scale": 2.1833842794759826
+  }
+}

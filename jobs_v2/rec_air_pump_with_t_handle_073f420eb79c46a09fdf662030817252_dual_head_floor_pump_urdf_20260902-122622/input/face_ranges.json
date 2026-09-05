@@ -1,0 +1,164 @@
+{
+  "group_order": [
+    "body__foot_bar",
+    "body__spine",
+    "body__pad_0",
+    "body__pad_1",
+    "body__barrel_collar",
+    "body__barrel_shell",
+    "body__top_guide",
+    "body__gauge_mount",
+    "body__gauge_body",
+    "body__gauge_bezel",
+    "body__gauge_face",
+    "body__hose_port",
+    "body__button_collar",
+    "pump_rod__rod_shaft",
+    "pump_rod__guide_nut",
+    "pump_rod__handle_hub",
+    "pump_rod__handle_bar",
+    "pump_rod__grip_0",
+    "pump_rod__grip_1",
+    "release_button__button_cap",
+    "hose__hose_cuff",
+    "hose__hose_tube",
+    "hose__head_body",
+    "hose__head_port_large",
+    "hose__head_port_small",
+    "hose__lever_ear_0",
+    "hose__lever_ear_1",
+    "clamp_lever__lever_barrel",
+    "clamp_lever__lever_arm",
+    "clamp_lever__lever_tip"
+  ],
+  "face_ranges": {
+    "body__foot_bar": [
+      0,
+      12
+    ],
+    "body__spine": [
+      12,
+      24
+    ],
+    "body__pad_0": [
+      24,
+      36
+    ],
+    "body__pad_1": [
+      36,
+      48
+    ],
+    "body__barrel_collar": [
+      48,
+      176
+    ],
+    "body__barrel_shell": [
+      176,
+      1184
+    ],
+    "body__top_guide": [
+      1184,
+      2192
+    ],
+    "body__gauge_mount": [
+      2192,
+      2204
+    ],
+    "body__gauge_body": [
+      2204,
+      2332
+    ],
+    "body__gauge_bezel": [
+      2332,
+      2460
+    ],
+    "body__gauge_face": [
+      2460,
+      2588
+    ],
+    "body__hose_port": [
+      2588,
+      2716
+    ],
+    "body__button_collar": [
+      2716,
+      3724
+    ],
+    "pump_rod__rod_shaft": [
+      3724,
+      3852
+    ],
+    "pump_rod__guide_nut": [
+      3852,
+      3980
+    ],
+    "pump_rod__handle_hub": [
+      3980,
+      4108
+    ],
+    "pump_rod__handle_bar": [
+      4108,
+      4236
+    ],
+    "pump_rod__grip_0": [
+      4236,
+      4364
+    ],
+    "pump_rod__grip_1": [
+      4364,
+      4492
+    ],
+    "release_button__button_cap": [
+      4492,
+      4620
+    ],
+    "hose__hose_cuff": [
+      4620,
+      4748
+    ],
+    "hose__hose_tube": [
+      4748,
+      8024
+    ],
+    "hose__head_body": [
+      8024,
+      8152
+    ],
+    "hose__head_port_large": [
+      8152,
+      8280
+    ],
+    "hose__head_port_small": [
+      8280,
+      8408
+    ],
+    "hose__lever_ear_0": [
+      8408,
+      8420
+    ],
+    "hose__lever_ear_1": [
+      8420,
+      8432
+    ],
+    "clamp_lever__lever_barrel": [
+      8432,
+      8560
+    ],
+    "clamp_lever__lever_arm": [
+      8560,
+      8572
+    ],
+    "clamp_lever__lever_tip": [
+      8572,
+      8700
+    ]
+  },
+  "norm": {
+    "center": [
+      0.021027000000000004,
+      0.016499999999999994,
+      0.39900006428103535
+    ],
+    "scale": 1.2531200988675255
+  }
+}

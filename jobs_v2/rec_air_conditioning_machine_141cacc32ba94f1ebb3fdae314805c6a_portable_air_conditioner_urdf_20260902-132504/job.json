@@ -1,0 +1,543 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a_portable_air_conditioner_urdf_20260902-132504",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a/model.urdf",
+  "created": "2026-09-02T13:25:04",
+  "updated": "2026-09-02T14:25:24",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 35,
+        "n_tiny": 23
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:06",
+      "finished": "2026-09-02T13:26:10",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; rubber on the wheels",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:13",
+      "finished": "2026-09-02T13:32:44",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a_portable_air_conditioner_urdf_20260902-132504/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:32:44",
+      "finished": "2026-09-02T14:12:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 35,
+            "n_total": 35,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a_portable_air_conditioner_urdf_20260902-132504/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T14:12:37",
+      "finished": "2026-09-02T14:25:24",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_141cacc32ba94f1ebb3fdae314805c6a/model.urdf",
+    "category": "portable air conditioner",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.17,
+        -0.167,
+        -2.2039082208519245e-08
+      ],
+      "max": [
+        0.17,
+        0.155,
+        0.742
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/portable_ac_body.obj"
+        ],
+        "n_faces": 6772,
+        "area_frac": 0.8671780062811932,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__control_strip",
+        "link": "body",
+        "label": "control_strip",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/portable_ac_control_plate.obj"
+        ],
+        "n_faces": 1588,
+        "area_frac": 0.0365774563096279,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__lower_trim",
+        "link": "body",
+        "label": "lower_trim",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0057281216915193505,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__hinge_barrel",
+        "link": "louver",
+        "label": "hinge_barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004604298614056989,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "louver__top_rail",
+        "link": "louver",
+        "label": "top_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005171038918316662,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__side_rail_0",
+        "link": "louver",
+        "label": "side_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0023135319875358462,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__side_rail_1",
+        "link": "louver",
+        "label": "side_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0023135319875358462,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__bottom_rail",
+        "link": "louver",
+        "label": "bottom_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005872307821054158,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__slat_0",
+        "link": "louver",
+        "label": "slat_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004659833549965965,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__slat_1",
+        "link": "louver",
+        "label": "slat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004659833549965965,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__slat_2",
+        "link": "louver",
+        "label": "slat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004659833549965965,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "louver__slat_3",
+        "link": "louver",
+        "label": "slat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0046598335499659655,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "dial__dial_knob",
+        "link": "dial",
+        "label": "dial_knob",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/portable_ac_dial.obj"
+        ],
+        "n_faces": 18506,
+        "area_frac": 0.0053621977476442225,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "button_0__cap",
+        "link": "button_0",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009863642043176904,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_0__label_band",
+        "link": "button_0",
+        "label": "label_band",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00034997905987086146,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_1__cap",
+        "link": "button_1",
+        "label": "cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0009863642043176904,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "button_1__label_band",
+        "link": "button_1",
+        "label": "label_band",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00034997905987086146,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_0__mount_plate",
+        "link": "caster_pair_0",
+        "label": "mount_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004797465764521922,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_0__stem",
+        "link": "caster_pair_0",
+        "label": "stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017040178945023222,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_0__bridge",
+        "link": "caster_pair_0",
+        "label": "bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003303173149342963,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_0__fork_0",
+        "link": "caster_pair_0",
+        "label": "fork_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007471463075894797,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_0__fork_1",
+        "link": "caster_pair_0",
+        "label": "fork_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007471463075894797,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_0_0__tire",
+        "link": "caster_0_0",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0038321203836763217,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_0_0__hub",
+        "link": "caster_0_0",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0014102768828691558,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_0_1__tire",
+        "link": "caster_0_1",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0038321203836763217,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_0_1__hub",
+        "link": "caster_0_1",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0014102768828691558,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_pair_1__mount_plate",
+        "link": "caster_pair_1",
+        "label": "mount_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004797465764521922,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_1__stem",
+        "link": "caster_pair_1",
+        "label": "stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017040178945023222,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_1__bridge",
+        "link": "caster_pair_1",
+        "label": "bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003303173149342963,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_1__fork_0",
+        "link": "caster_pair_1",
+        "label": "fork_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007471463075894797,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_pair_1__fork_1",
+        "link": "caster_pair_1",
+        "label": "fork_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0007471463075894797,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "caster_1_0__tire",
+        "link": "caster_1_0",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0038321203836763217,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_1_0__hub",
+        "link": "caster_1_0",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0014102768828691558,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_1_1__tire",
+        "link": "caster_1_1",
+        "label": "tire",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0038321203836763217,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "caster_1_1__hub",
+        "link": "caster_1_1",
+        "label": "hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0014102768828691558,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

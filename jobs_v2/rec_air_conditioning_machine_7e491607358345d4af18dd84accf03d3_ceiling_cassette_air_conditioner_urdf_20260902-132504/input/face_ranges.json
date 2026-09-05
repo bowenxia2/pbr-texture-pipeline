@@ -1,0 +1,69 @@
+{
+  "group_order": [
+    "cassette__panel_shell",
+    "cassette__intake_grille",
+    "cassette__upper_body",
+    "front_flap__flap_panel",
+    "rear_flap__flap_panel",
+    "left_flap__flap_panel",
+    "right_flap__flap_panel",
+    "front_button_0__button_cap",
+    "front_button_0__button_stem",
+    "front_button_1__button_cap",
+    "front_button_1__button_stem"
+  ],
+  "face_ranges": {
+    "cassette__panel_shell": [
+      0,
+      152
+    ],
+    "cassette__intake_grille": [
+      152,
+      884
+    ],
+    "cassette__upper_body": [
+      884,
+      896
+    ],
+    "front_flap__flap_panel": [
+      896,
+      908
+    ],
+    "rear_flap__flap_panel": [
+      908,
+      920
+    ],
+    "left_flap__flap_panel": [
+      920,
+      932
+    ],
+    "right_flap__flap_panel": [
+      932,
+      944
+    ],
+    "front_button_0__button_cap": [
+      944,
+      956
+    ],
+    "front_button_0__button_stem": [
+      956,
+      968
+    ],
+    "front_button_1__button_cap": [
+      968,
+      980
+    ],
+    "front_button_1__button_stem": [
+      980,
+      992
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.14400000000000002
+    ],
+    "scale": 1.0526210526315791
+  }
+}
