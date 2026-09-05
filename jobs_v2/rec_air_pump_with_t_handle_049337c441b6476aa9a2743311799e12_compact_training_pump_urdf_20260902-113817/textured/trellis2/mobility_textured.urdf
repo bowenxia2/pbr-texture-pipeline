@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="compact_training_pump">
+	<material name="frame_black">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<material name="barrel_black">
+		<color rgba="0.16 0.16 0.17 1" />
+	</material>
+	<material name="steel">
+		<color rgba="0.69 0.71 0.74 1" />
+	</material>
+	<material name="grip_gray">
+		<color rgba="0.2 0.22 0.24 1" />
+	</material>
+	<material name="dial_white">
+		<color rgba="0.95 0.95 0.93 1" />
+	</material>
+	<material name="orange">
+		<color rgba="0.88 0.31 0.08 1" />
+	</material>
+	<link name="base">
+		<collision name="foot_0">
+			<origin xyz="0 0.07 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.2 0.045 0.016" />
+			</geometry>
+		</collision>
+		<collision name="foot_1">
+			<origin xyz="0 -0.07 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.2 0.045 0.016" />
+			</geometry>
+		</collision>
+		<collision name="rear_bridge">
+			<origin xyz="-0.03 0 0.027" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.16 0.022" />
+			</geometry>
+		</collision>
+		<collision name="front_bridge">
+			<origin xyz="0.042 0 0.03" rpy="0 0 0" />
+			<geometry>
+				<box size="0.08 0.12 0.028" />
+			</geometry>
+		</collision>
+		<collision name="gauge_neck">
+			<origin xyz="0.074 0 0.046" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.06 0.036" />
+			</geometry>
+		</collision>
+		<collision name="barrel">
+			<origin xyz="0 0 0.173" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/pump_barrel.obj" />
+			</geometry>
+		</collision>
+		<collision name="barrel_collar">
+			<origin xyz="0 0 0.299" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/pump_barrel_collar.obj" />
+			</geometry>
+		</collision>
+		<collision name="gauge_ring">
+			<origin xyz="0.099 0 0.048" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/pump_gauge_ring.obj" />
+			</geometry>
+		</collision>
+		<collision name="dial">
+			<origin xyz="0.0965 0 0.048" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.028" length="0.005" />
+			</geometry>
+		</collision>
+		<visual name="base__foot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__foot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__foot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__foot_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__rear_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__rear_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__front_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__front_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__gauge_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__gauge_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__barrel_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__barrel_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__gauge_ring">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__gauge_ring.glb" />
+			</geometry>
+		</visual>
+		<visual name="base__dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/base__dial.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="handle">
+		<collision name="rod">
+			<origin xyz="0 0 -0.075" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0065" length="0.35" />
+			</geometry>
+		</collision>
+		<collision name="guide_cap">
+			<origin xyz="0 0 0.005" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.015" length="0.01" />
+			</geometry>
+		</collision>
+		<collision name="yoke">
+			<origin xyz="0 0 0.106" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03 0.04 0.03" />
+			</geometry>
+		</collision>
+		<collision name="crossbar">
+			<origin xyz="0 0 0.125" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.26" />
+			</geometry>
+		</collision>
+		<collision name="stop_0">
+			<origin xyz="0 0.026 0.125" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.008" />
+			</geometry>
+		</collision>
+		<collision name="stop_1">
+			<origin xyz="0 0.114 0.125" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.008" />
+			</geometry>
+		</collision>
+		<visual name="handle__rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__rod.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__guide_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__guide_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__stop_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__stop_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__stop_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__stop_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="grip">
+		<collision name="sleeve">
+			<origin xyz="0 0 0" rpy="1.5708 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/pump_grip_sleeve.obj" />
+			</geometry>
+		</collision>
+		<collision name="pad">
+			<origin xyz="0.014 0 -0.022" rpy="0 0 0" />
+			<geometry>
+				<box size="0.022 0.074 0.022" />
+			</geometry>
+		</collision>
+		<visual name="grip__sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__pad.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="needle">
+		<collision name="pointer">
+			<origin xyz="0.004 0 0.011" rpy="0 0 0" />
+			<geometry>
+				<box size="0.002 0.003 0.022" />
+			</geometry>
+		</collision>
+		<collision name="hub">
+			<origin xyz="0.002 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.004" length="0.004" />
+			</geometry>
+		</collision>
+		<visual name="needle__pointer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__pointer.glb" />
+			</geometry>
+		</visual>
+		<visual name="needle__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="handle_slide" type="prismatic">
+		<origin xyz="0 0 0.308" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="handle" />
+		<axis xyz="0 0 1" />
+		<limit effort="50" velocity="0.5" lower="0" upper="0.16" />
+	</joint>
+	<joint name="grip_roll" type="continuous">
+		<origin xyz="0 0.07 0.125" rpy="0 0 0" />
+		<parent link="handle" />
+		<child link="grip" />
+		<axis xyz="0 1 0" />
+		<limit effort="2" velocity="8" />
+	</joint>
+	<joint name="gauge_sweep" type="revolute">
+		<origin xyz="0.099 0 0.048" rpy="0 0 0" />
+		<parent link="base" />
+		<child link="needle" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.2" velocity="6" lower="-1.2" upper="1.2" />
+	</joint>
+</robot>

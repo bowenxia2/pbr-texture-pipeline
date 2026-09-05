@@ -1,0 +1,426 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf_cup_holder_air_purifier_urdf_20260903-155135",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf/model.urdf",
+  "created": "2026-09-03T15:51:35",
+  "updated": "2026-09-03T16:29:41",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 26,
+        "n_tiny": 17
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:49",
+      "finished": "2026-09-03T15:51:50",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the top rim; plastic on the base; plastic on the stem; plastic on the bottom ring",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:50",
+      "finished": "2026-09-03T15:53:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf_cup_holder_air_purifier_urdf_20260903-155135/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:53:47",
+      "finished": "2026-09-03T16:20:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 26,
+            "n_total": 26,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf_cup_holder_air_purifier_urdf_20260903-155135/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T16:20:35",
+      "finished": "2026-09-03T16:29:41",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_05e8dd8c78de4a10a9aa5d8180daadbf/model.urdf",
+    "category": "cup holder air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.066,
+        -0.066,
+        0.0
+      ],
+      "max": [
+        0.085,
+        0.066,
+        0.16
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__cup_holder_stem",
+        "link": "body",
+        "label": "cup_holder_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.12175371495517706,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__mount_collar",
+        "link": "body",
+        "label": "mount_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.06770633003197864,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__neck_post",
+        "link": "body",
+        "label": "neck_post",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.033358701428795816,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__lower_disc_cover",
+        "link": "body",
+        "label": "lower_disc_cover",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.14984512258159358,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__upper_disc_cover",
+        "link": "body",
+        "label": "upper_disc_cover",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.14984512258159358,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__outer_rim",
+        "link": "body",
+        "label": "outer_rim",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_outer_rim.obj"
+        ],
+        "n_faces": 5324,
+        "area_frac": 0.13939312381748203,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__opening_upper_rail",
+        "link": "body",
+        "label": "opening_upper_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01902463315214093,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__opening_lower_rail",
+        "link": "body",
+        "label": "opening_lower_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01902463315214093,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__opening_left_rail",
+        "link": "body",
+        "label": "opening_left_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012763872772986268,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__opening_right_rail",
+        "link": "body",
+        "label": "opening_right_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012763872772986268,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_grille_ring",
+        "link": "body",
+        "label": "top_grille_ring",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.06381061982382821,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__status_disc",
+        "link": "body",
+        "label": "status_disc",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.006562181878980477,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_cap__cap_shell",
+        "link": "filter_cap",
+        "label": "cap_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_filter_cap_shell.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03197211162325686,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_cap__cap_grip_tab",
+        "link": "filter_cap",
+        "label": "cap_grip_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004160376251954385,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cap__cap_twist_rib_upper",
+        "link": "filter_cap",
+        "label": "cap_twist_rib_upper",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014541120880617272,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cap__cap_twist_rib_lower",
+        "link": "filter_cap",
+        "label": "cap_twist_rib_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014541120880617272,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__cartridge_frame",
+        "link": "filter_cartridge",
+        "label": "cartridge_frame",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04992451502345263,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_core",
+        "link": "filter_cartridge",
+        "label": "filter_core",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.030172825827280828,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__upper_runner",
+        "link": "filter_cartridge",
+        "label": "upper_runner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017005033029832976,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__lower_runner",
+        "link": "filter_cartridge",
+        "label": "lower_runner",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017005033029832976,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_pleat_0",
+        "link": "filter_cartridge",
+        "label": "filter_pleat_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00885089753601461,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_pleat_1",
+        "link": "filter_cartridge",
+        "label": "filter_pleat_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00885089753601461,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_pleat_2",
+        "link": "filter_cartridge",
+        "label": "filter_pleat_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00885089753601461,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_pleat_3",
+        "link": "filter_cartridge",
+        "label": "filter_pleat_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00885089753601461,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__filter_pleat_4",
+        "link": "filter_cartridge",
+        "label": "filter_pleat_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00885089753601461,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cartridge__pull_tab",
+        "link": "filter_cartridge",
+        "label": "pull_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0067454644085085695,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

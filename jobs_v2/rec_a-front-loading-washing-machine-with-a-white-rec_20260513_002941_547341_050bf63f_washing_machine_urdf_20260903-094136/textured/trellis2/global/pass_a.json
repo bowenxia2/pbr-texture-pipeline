@@ -1,0 +1,43 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 8812738,
+  "groups": {
+    "cabinet__cabinet_shell": {
+      "texture_size": 1024,
+      "n_faces": 532,
+      "texels": 844121,
+      "field_voxels": 844087
+    },
+    "drum__drum_shell": {
+      "texture_size": 1024,
+      "n_faces": 1508,
+      "texels": 738649,
+      "field_voxels": 737870
+    },
+    "door__door_frame": {
+      "texture_size": 1024,
+      "n_faces": 1008,
+      "texels": 486471,
+      "field_voxels": 462887
+    },
+    "door__door_glass": {
+      "texture_size": 1024,
+      "n_faces": 500,
+      "texels": 687937,
+      "field_voxels": 279348
+    },
+    "detergent_drawer__drawer_body": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 886791,
+      "field_voxels": 260476
+    },
+    "knob__knob_body": {
+      "texture_size": 1024,
+      "n_faces": 500,
+      "texels": 766358,
+      "field_voxels": 16571
+    }
+  }
+}

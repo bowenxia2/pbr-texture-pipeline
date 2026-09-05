@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="service_station_pump">
+	<material name="red_enamel">
+		<color rgba="0.78 0.06 0.035 1" />
+	</material>
+	<material name="dark_red">
+		<color rgba="0.45 0.025 0.02 1" />
+	</material>
+	<material name="black_rubber">
+		<color rgba="0.015 0.014 0.012 1" />
+	</material>
+	<material name="brushed_steel">
+		<color rgba="0.62 0.62 0.58 1" />
+	</material>
+	<material name="brass">
+		<color rgba="0.92 0.66 0.24 1" />
+	</material>
+	<material name="gauge_face">
+		<color rgba="0.94 0.91 0.82 1" />
+	</material>
+	<material name="smoky_glass">
+		<color rgba="0.65 0.85 0.95 0.45" />
+	</material>
+	<link name="body">
+		<visual name="body__base_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__base_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_pad_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_pad_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__foot_pad_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__foot_pad_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__base_socket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__base_socket.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_bushing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_bushing.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__bottom_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__bottom_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_housing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_housing.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_dial.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_lens">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_lens.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_tick_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_tick_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_tick_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_tick_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_tick_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_tick_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_tick_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_tick_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_tick_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_tick_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__gauge_pivot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__gauge_pivot.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__hose_outlet">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__hose_outlet.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__hose">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__hose.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__hose_clip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__hose_clip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__clip_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__clip_lip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__hose_nozzle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__hose_nozzle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="handle">
+		<visual name="handle__piston_rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__piston_rod.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__top_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__top_bar.glb" />
+			</geometry>
+		</visual>
+		<visual name="handle__bar_boss">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/handle__bar_boss.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="grip">
+		<visual name="grip__sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__lug_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__lug_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__lug_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__lug_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__side_arm_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__side_arm_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__side_arm_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__side_arm_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__folding_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__folding_bar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="needle">
+		<visual name="needle__pointer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__pointer.glb" />
+			</geometry>
+		</visual>
+		<visual name="needle__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_handle" type="prismatic">
+		<origin xyz="0 0 0.9" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="handle" />
+		<axis xyz="0 0 1" />
+		<limit effort="180" velocity="0.35" lower="0" upper="0.25" />
+	</joint>
+	<joint name="handle_to_grip" type="continuous">
+		<origin xyz="0.13 0 0.62" rpy="0 0 0" />
+		<parent link="handle" />
+		<child link="grip" />
+		<axis xyz="1 0 0" />
+		<limit effort="2" velocity="6" />
+	</joint>
+	<joint name="body_to_needle" type="continuous">
+		<origin xyz="0 -0.161 0.52" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="needle" />
+		<axis xyz="0 -1 0" />
+		<limit effort="0.05" velocity="20" />
+	</joint>
+</robot>

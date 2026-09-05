@@ -1,0 +1,103 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 767164,
+  "groups": {
+    "body__guide_housing": {
+      "texture_size": 1024,
+      "n_faces": 1032,
+      "texels": 861032,
+      "field_voxels": 104106
+    },
+    "body__support_spine": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54040,
+      "field_voxels": 53652
+    },
+    "body__gauge_mount": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57316,
+      "field_voxels": 8588
+    },
+    "body__barrel_shell": {
+      "texture_size": 1024,
+      "n_faces": 2520,
+      "texels": 861930,
+      "field_voxels": 262658
+    },
+    "handle__rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 754976,
+      "field_voxels": 53357
+    },
+    "handle__crossbar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 770648,
+      "field_voxels": 35354
+    },
+    "handle__rod_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 760544,
+      "field_voxels": 4530
+    },
+    "handle__grip_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 863170,
+      "field_voxels": 26686
+    },
+    "handle__grip_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 841575,
+      "field_voxels": 26954
+    },
+    "stabilizer_bar__stabilizer_bar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 783754,
+      "field_voxels": 59427
+    },
+    "stabilizer_bar__foot_0": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 773117,
+      "field_voxels": 14352
+    },
+    "stabilizer_bar__foot_1": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 749435,
+      "field_voxels": 14496
+    },
+    "stabilizer_bar__stop_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 763045,
+      "field_voxels": 6184
+    },
+    "gauge__gauge_body": {
+      "texture_size": 1024,
+      "n_faces": 1524,
+      "texels": 674017,
+      "field_voxels": 50523
+    },
+    "release_button__button_stem": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 658122,
+      "field_voxels": 856
+    },
+    "release_button__release_button": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 603882,
+      "field_voxels": 1179
+    }
+  }
+}

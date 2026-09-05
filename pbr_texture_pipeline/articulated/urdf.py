@@ -565,8 +565,13 @@ def merge_group_mesh(asset: AssetInfo, group: Group, with_materials: bool = Fals
         if vis.primitive is not None:
             m = primitive_to_trimesh(vis.primitive)
         else:
-            m = trimesh.load(str(asset.asset_dir / vis.obj), force="mesh", process=False,
-                             skip_materials=not with_materials)
+            obj_path = str(asset.asset_dir / vis.obj)
+            kwargs = dict(force="mesh", process=False,
+                          skip_materials=not with_materials)
+            if with_materials:
+                kwargs["resolver"] = trimesh.visual.resolvers.FilePathResolver(
+                    obj_path, allow_anywhere=True)
+            m = trimesh.load(obj_path, **kwargs)
         if m.vertices.shape[0] == 0:
             continue
         m = m.copy()

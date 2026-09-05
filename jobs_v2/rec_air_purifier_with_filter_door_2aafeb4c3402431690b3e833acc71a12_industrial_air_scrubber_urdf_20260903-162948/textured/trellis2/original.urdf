@@ -1,0 +1,796 @@
+<robot name="industrial_air_scrubber">
+  <material name="cabinet_paint">
+    <color rgba="0.8 0.81 0.82 1" />
+    </material>
+  <material name="trim_dark">
+    <color rgba="0.17 0.18 0.2 1" />
+    </material>
+  <material name="blower_dark">
+    <color rgba="0.1 0.11 0.12 1" />
+    </material>
+  <material name="steel">
+    <color rgba="0.62 0.64 0.67 1" />
+    </material>
+  <material name="hinge_steel">
+    <color rgba="0.55 0.57 0.6 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.05 0.05 0.05 1" />
+    </material>
+  <link name="cabinet">
+    <inertial>
+      <origin xyz="0 0 0.76" rpy="0 0 0" />
+      <mass value="92" />
+      <inertia ixx="20.1173" ixy="0" ixz="0" iyy="21.6875" iyz="0" izz="6.37867" />
+      </inertial>
+    <visual name="left_wall">
+      <origin xyz="-0.346 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.56 1.4" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_wall">
+      <origin xyz="0.346 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.56 1.4" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="back_wall">
+      <origin xyz="0 -0.266 0.82" rpy="0 0 0" />
+      <geometry>
+        <box size="0.676 0.028 1.4" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="base_pan">
+      <origin xyz="0 0 0.134" rpy="0 0 0" />
+      <geometry>
+        <box size="0.7 0.54 0.028" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="front_left_jamb">
+      <origin xyz="-0.332 0.266 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.028 1.18" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_right_jamb">
+      <origin xyz="0.332 0.266 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.058 0.028 1.18" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_bottom_rail">
+      <origin xyz="0 0.266 0.162" rpy="0 0 0" />
+      <geometry>
+        <box size="0.672 0.028 0.084" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_top_rail">
+      <origin xyz="0 0.266 1.43" rpy="0 0 0" />
+      <geometry>
+        <box size="0.672 0.028 0.18" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="top_front_rail">
+      <origin xyz="0 0.2 1.506" rpy="0 0 0" />
+      <geometry>
+        <box size="0.674 0.16 0.028" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="top_rear_rail">
+      <origin xyz="0 -0.24 1.506" rpy="0 0 0" />
+      <geometry>
+        <box size="0.674 0.08 0.028" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="top_left_rail">
+      <origin xyz="-0.3 -0.04 1.506" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.32 0.028" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="top_right_rail">
+      <origin xyz="0.3 -0.04 1.506" rpy="0 0 0" />
+      <geometry>
+        <box size="0.12 0.32 0.028" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="blower_plenum">
+      <origin xyz="0 -0.17 1.36" rpy="0 0 0" />
+      <geometry>
+        <box size="0.4 0.22 0.32" />
+        </geometry>
+      <material name="blower_dark">
+        <color rgba="0.1 0.11 0.12 1" />
+        </material>
+      </visual>
+    <visual name="lower_hinge_backer">
+      <origin xyz="-0.348 0.266 0.38" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.028 0.22" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="upper_hinge_backer">
+      <origin xyz="-0.348 0.266 1.16" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.028 0.22" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="door_hinge_bridge">
+      <origin xyz="-0.362 0.267 0.77" rpy="0 0 0" />
+      <geometry>
+        <box size="0.026 0.03 0.59" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="door_center_knuckle">
+      <origin xyz="-0.375 0.294 0.77" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.59" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="baffle_hinge_bridge">
+      <origin xyz="0 -0.267 1.524" rpy="0 0 0" />
+      <geometry>
+        <box size="0.22 0.024 0.02" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="baffle_center_knuckle">
+      <origin xyz="0 -0.255 1.544" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.22" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="access_door">
+    <inertial>
+      <origin xyz="0.316 0.02 0" rpy="0 0 0" />
+      <mass value="18" />
+      <inertia ixx="1.88295" ixy="0" ixz="0" iyy="2.46193" iyz="0" izz="0.581676" />
+      </inertial>
+    <visual name="left_stile">
+      <origin xyz="0.093 0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.028 1.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_stile">
+      <origin xyz="0.639 0.008 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.066 0.028 1.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="top_rail">
+      <origin xyz="0.366 0.008 0.5" rpy="0 0 0" />
+      <geometry>
+        <box size="0.622 0.028 0.12" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="bottom_rail">
+      <origin xyz="0.366 0.008 -0.49" rpy="0 0 0" />
+      <geometry>
+        <box size="0.622 0.028 0.14" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="upper_panel">
+      <origin xyz="0.366 0.006 0.3" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.02 0.2" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="door_grille">
+      <origin xyz="0.366 0.022 -0.06" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/access_door_grille.obj" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="upper_knuckle">
+      <origin xyz="0 0 0.39" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.19" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="upper_knuckle_leaf">
+      <origin xyz="0.035 0.01 0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.2" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_knuckle">
+      <origin xyz="0 0 -0.39" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.19" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="lower_knuckle_leaf">
+      <origin xyz="0.035 0.01 -0.39" rpy="0 0 0" />
+      <geometry>
+        <box size="0.056 0.012 0.2" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="handle_upper_post">
+      <origin xyz="0.61 0.031 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.036" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="handle_lower_post">
+      <origin xyz="0.61 0.031 -0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.014 0.024 0.036" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="handle_grip">
+      <origin xyz="0.61 0.039 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.24" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="exhaust_baffle">
+    <inertial>
+      <origin xyz="0 0.12 0.03" rpy="0 0 0" />
+      <mass value="5" />
+      <inertia ixx="0.0260417" ixy="0" ixz="0" iyy="0.0980417" iyz="0" izz="0.12" />
+      </inertial>
+    <visual name="baffle_panel">
+      <origin xyz="0 0.138 -0.012" rpy="0 0 0" />
+      <geometry>
+        <box size="0.48 0.24 0.016" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="left_flange">
+      <origin xyz="-0.232 0.138 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.24 0.06" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="right_flange">
+      <origin xyz="0.232 0.138 0.006" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.24 0.06" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="front_lip">
+      <origin xyz="0 0.25 0.003" rpy="0 0 0" />
+      <geometry>
+        <box size="0.44 0.016 0.05" />
+        </geometry>
+      <material name="cabinet_paint">
+        <color rgba="0.8 0.81 0.82 1" />
+        </material>
+      </visual>
+    <visual name="lift_tab">
+      <origin xyz="0 0.256 0.028" rpy="0 0 0" />
+      <geometry>
+        <box size="0.18 0.012 0.024" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="left_baffle_knuckle">
+      <origin xyz="-0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.1" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="left_baffle_leaf">
+      <origin xyz="-0.16 0.016 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.02" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="right_baffle_knuckle">
+      <origin xyz="0.16 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.1" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    <visual name="right_baffle_leaf">
+      <origin xyz="0.16 0.016 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.012 0.02" />
+        </geometry>
+      <material name="hinge_steel">
+        <color rgba="0.55 0.57 0.6 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_left_caster">
+    <inertial>
+      <origin xyz="0 0 -0.06" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+      </inertial>
+    <visual name="mount_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="swivel_head">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.022" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.032" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.02 0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_left">
+      <origin xyz="-0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_right">
+      <origin xyz="0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.058" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tire">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_right_caster">
+    <inertial>
+      <origin xyz="0 0 -0.06" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+      </inertial>
+    <visual name="mount_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="swivel_head">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.022" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.032" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.02 0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_left">
+      <origin xyz="-0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_right">
+      <origin xyz="0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.058" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tire">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_left_caster">
+    <inertial>
+      <origin xyz="0 0 -0.06" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+      </inertial>
+    <visual name="mount_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="swivel_head">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.022" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.032" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.02 0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_left">
+      <origin xyz="-0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_right">
+      <origin xyz="0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.058" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tire">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="rear_right_caster">
+    <inertial>
+      <origin xyz="0 0 -0.06" rpy="0 0 0" />
+      <mass value="2.2" />
+      <inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+      </inertial>
+    <visual name="mount_plate">
+      <origin xyz="0 0 -0.004" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.08 0.008" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="swivel_head">
+      <origin xyz="0 0 -0.015" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.022" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="swivel_stem">
+      <origin xyz="0 0 -0.038" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.014" length="0.032" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="yoke_bridge">
+      <origin xyz="0 0 -0.052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.07 0.02 0.016" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_left">
+      <origin xyz="-0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="yoke_cheek_right">
+      <origin xyz="0.024 0 -0.056" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.02 0.05" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    <visual name="axle">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.058" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.17 0.18 0.2 1" />
+        </material>
+      </visual>
+    <visual name="wheel_tire">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.05" length="0.03" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.05 0.05 0.05 1" />
+        </material>
+      </visual>
+    <visual name="wheel_hub">
+      <origin xyz="0 0 -0.07" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.02" length="0.034" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.62 0.64 0.67 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="access_door_hinge" type="revolute">
+    <origin xyz="-0.375 0.294 0.77" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="access_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="45" velocity="1.6" lower="0" upper="1.55" />
+    </joint>
+  <joint name="exhaust_baffle_hinge" type="revolute">
+    <origin xyz="0 -0.255 1.544" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="exhaust_baffle" />
+    <axis xyz="1 0 0" />
+    <limit effort="18" velocity="1.4" lower="0" upper="1.1" />
+    </joint>
+  <joint name="front_left_caster_mount" type="fixed">
+    <origin xyz="-0.23 0.18 0.12" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="front_left_caster" />
+    </joint>
+  <joint name="front_right_caster_mount" type="fixed">
+    <origin xyz="0.23 0.18 0.12" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="front_right_caster" />
+    </joint>
+  <joint name="rear_left_caster_mount" type="fixed">
+    <origin xyz="-0.23 -0.18 0.12" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="rear_left_caster" />
+    </joint>
+  <joint name="rear_right_caster_mount" type="fixed">
+    <origin xyz="0.23 -0.18 0.12" rpy="0 0 0" />
+    <parent link="cabinet" />
+    <child link="rear_right_caster" />
+    </joint>
+  </robot>

@@ -1,0 +1,159 @@
+{
+  "group_order": [
+    "body__base_hub",
+    "body__foot_pad_0",
+    "body__foot_pad_1",
+    "body__barrel_shell",
+    "body__guide_ring",
+    "body__gauge_bracket",
+    "body__gauge_housing",
+    "body__gauge_bezel",
+    "body__dial_face",
+    "body__button_guide",
+    "body__hose_port",
+    "body__hose",
+    "body__lower_clip",
+    "body__upper_clip",
+    "body__hose_head",
+    "body__hose_head_lever",
+    "plunger__piston_rod",
+    "plunger__handle_stem",
+    "plunger__guide_collar",
+    "plunger__handle_center",
+    "plunger__handle_bar",
+    "plunger__grip_0",
+    "plunger__grip_1",
+    "gauge_needle__needle_hub",
+    "gauge_needle__needle_pointer",
+    "gauge_needle__needle_tail",
+    "release_button__button_shaft",
+    "release_button__button_flange",
+    "release_button__button_cap"
+  ],
+  "face_ranges": {
+    "body__base_hub": [
+      0,
+      128
+    ],
+    "body__foot_pad_0": [
+      128,
+      140
+    ],
+    "body__foot_pad_1": [
+      140,
+      152
+    ],
+    "body__barrel_shell": [
+      152,
+      1160
+    ],
+    "body__guide_ring": [
+      1160,
+      2168
+    ],
+    "body__gauge_bracket": [
+      2168,
+      11628
+    ],
+    "body__gauge_housing": [
+      11628,
+      21088
+    ],
+    "body__gauge_bezel": [
+      21088,
+      22096
+    ],
+    "body__dial_face": [
+      22096,
+      22224
+    ],
+    "body__button_guide": [
+      22224,
+      23232
+    ],
+    "body__hose_port": [
+      23232,
+      23360
+    ],
+    "body__hose": [
+      23360,
+      27000
+    ],
+    "body__lower_clip": [
+      27000,
+      27012
+    ],
+    "body__upper_clip": [
+      27012,
+      27024
+    ],
+    "body__hose_head": [
+      27024,
+      27036
+    ],
+    "body__hose_head_lever": [
+      27036,
+      27048
+    ],
+    "plunger__piston_rod": [
+      27048,
+      27176
+    ],
+    "plunger__handle_stem": [
+      27176,
+      27304
+    ],
+    "plunger__guide_collar": [
+      27304,
+      27432
+    ],
+    "plunger__handle_center": [
+      27432,
+      27444
+    ],
+    "plunger__handle_bar": [
+      27444,
+      27572
+    ],
+    "plunger__grip_0": [
+      27572,
+      27700
+    ],
+    "plunger__grip_1": [
+      27700,
+      27828
+    ],
+    "gauge_needle__needle_hub": [
+      27828,
+      27956
+    ],
+    "gauge_needle__needle_pointer": [
+      27956,
+      27968
+    ],
+    "gauge_needle__needle_tail": [
+      27968,
+      27980
+    ],
+    "release_button__button_shaft": [
+      27980,
+      28108
+    ],
+    "release_button__button_flange": [
+      28108,
+      28236
+    ],
+    "release_button__button_cap": [
+      28236,
+      28364
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.050500080784772854,
+      0.39900008632025924
+    ],
+    "scale": 1.2531200296500105
+  }
+}

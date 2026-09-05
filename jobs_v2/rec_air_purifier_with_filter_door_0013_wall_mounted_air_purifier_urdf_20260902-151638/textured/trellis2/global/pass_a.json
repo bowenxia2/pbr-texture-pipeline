@@ -1,0 +1,121 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 3804760,
+  "groups": {
+    "body__back_plate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46143,
+      "field_voxels": 46142
+    },
+    "body__left_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58698,
+      "field_voxels": 58698
+    },
+    "body__right_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58698,
+      "field_voxels": 58698
+    },
+    "body__top_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57783,
+      "field_voxels": 57727
+    },
+    "body__bottom_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53300,
+      "field_voxels": 53300
+    },
+    "body__filter_core": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59118,
+      "field_voxels": 59118
+    },
+    "body__outlet_deck": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56131,
+      "field_voxels": 45625
+    },
+    "body__outlet_fin_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54338,
+      "field_voxels": 5538
+    },
+    "body__outlet_fin_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54338,
+      "field_voxels": 5370
+    },
+    "body__outlet_fin_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54338,
+      "field_voxels": 5370
+    },
+    "body__outlet_fin_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54338,
+      "field_voxels": 5370
+    },
+    "body__outlet_fin_5": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54338,
+      "field_voxels": 5538
+    },
+    "front_panel__panel_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 44404,
+      "field_voxels": 44404
+    },
+    "front_panel__grille_bar_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59439,
+      "field_voxels": 18584
+    },
+    "front_panel__grille_bar_2": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59439,
+      "field_voxels": 18829
+    },
+    "front_panel__grille_bar_3": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59439,
+      "field_voxels": 19074
+    },
+    "front_panel__grille_bar_4": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59439,
+      "field_voxels": 18924
+    },
+    "front_panel__status_strip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55226,
+      "field_voxels": 5780
+    },
+    "front_panel__bottom_pull": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54638,
+      "field_voxels": 21920
+    }
+  }
+}

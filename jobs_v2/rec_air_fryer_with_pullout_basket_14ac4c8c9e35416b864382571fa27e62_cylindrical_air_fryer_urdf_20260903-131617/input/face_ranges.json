@@ -1,0 +1,64 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "drawer__drawer_shell",
+    "basket__basket_shell",
+    "handle__handle_shell",
+    "release_button__release_button_cap",
+    "control_panel__control_panel",
+    "temperature_dial__temperature_dial",
+    "time_dial__time_dial",
+    "keep_warm_bezel__keep_warm_bezel",
+    "keep_warm_button__keep_warm_cap"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      1640
+    ],
+    "drawer__drawer_shell": [
+      1640,
+      2296
+    ],
+    "basket__basket_shell": [
+      2296,
+      2636
+    ],
+    "handle__handle_shell": [
+      2636,
+      2792
+    ],
+    "release_button__release_button_cap": [
+      2792,
+      2820
+    ],
+    "control_panel__control_panel": [
+      2820,
+      2832
+    ],
+    "temperature_dial__temperature_dial": [
+      2832,
+      4340
+    ],
+    "time_dial__time_dial": [
+      4340,
+      5848
+    ],
+    "keep_warm_bezel__keep_warm_bezel": [
+      5848,
+      5880
+    ],
+    "keep_warm_button__keep_warm_cap": [
+      5880,
+      5908
+    ]
+  },
+  "norm": {
+    "center": [
+      0.026249999999999996,
+      0.0,
+      0.186
+    ],
+    "scale": 2.688145161290323
+  }
+}

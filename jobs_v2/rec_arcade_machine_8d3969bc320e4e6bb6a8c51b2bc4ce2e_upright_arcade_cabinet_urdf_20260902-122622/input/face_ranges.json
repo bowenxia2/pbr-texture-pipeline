@@ -1,0 +1,139 @@
+{
+  "group_order": [
+    "body__left_side",
+    "body__right_side",
+    "body__coin_panel",
+    "body__front_base",
+    "body__tray_side_0",
+    "body__tray_side_1",
+    "body__mid_rail",
+    "body__door_stile_0",
+    "body__door_stile_1",
+    "body__front_top",
+    "body__tray_surround",
+    "body__control_apron",
+    "body__control_deck",
+    "body__monitor_frame",
+    "body__monitor_mount",
+    "body__screen_glass",
+    "body__marquee_face",
+    "body__roof",
+    "body__rear_lower",
+    "body__rear_upper",
+    "body__floor",
+    "service_door__service_panel",
+    "service_door__service_handle",
+    "tray_flap__tray_panel",
+    "tray_flap__tray_pull"
+  ],
+  "face_ranges": {
+    "body__left_side": [
+      0,
+      40
+    ],
+    "body__right_side": [
+      40,
+      80
+    ],
+    "body__coin_panel": [
+      80,
+      132
+    ],
+    "body__front_base": [
+      132,
+      144
+    ],
+    "body__tray_side_0": [
+      144,
+      156
+    ],
+    "body__tray_side_1": [
+      156,
+      168
+    ],
+    "body__mid_rail": [
+      168,
+      180
+    ],
+    "body__door_stile_0": [
+      180,
+      192
+    ],
+    "body__door_stile_1": [
+      192,
+      204
+    ],
+    "body__front_top": [
+      204,
+      216
+    ],
+    "body__tray_surround": [
+      216,
+      248
+    ],
+    "body__control_apron": [
+      248,
+      260
+    ],
+    "body__control_deck": [
+      260,
+      272
+    ],
+    "body__monitor_frame": [
+      272,
+      304
+    ],
+    "body__monitor_mount": [
+      304,
+      316
+    ],
+    "body__screen_glass": [
+      316,
+      328
+    ],
+    "body__marquee_face": [
+      328,
+      340
+    ],
+    "body__roof": [
+      340,
+      352
+    ],
+    "body__rear_lower": [
+      352,
+      364
+    ],
+    "body__rear_upper": [
+      364,
+      376
+    ],
+    "body__floor": [
+      376,
+      388
+    ],
+    "service_door__service_panel": [
+      388,
+      400
+    ],
+    "service_door__service_handle": [
+      400,
+      412
+    ],
+    "tray_flap__tray_panel": [
+      412,
+      424
+    ],
+    "tray_flap__tray_pull": [
+      424,
+      436
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.1368166546758121,
+      0.87
+    ],
+    "scale": 0.5747068965517241
+  }
+}

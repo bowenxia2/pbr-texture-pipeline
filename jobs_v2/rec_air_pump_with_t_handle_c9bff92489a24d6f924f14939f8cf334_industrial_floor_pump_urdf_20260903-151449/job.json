@@ -1,0 +1,296 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334_industrial_floor_pump_urdf_20260903-151449",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334/model.urdf",
+  "created": "2026-09-03T15:14:49",
+  "updated": "2026-09-03T15:51:16",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 16,
+        "n_tiny": 2
+      },
+      "seed": null,
+      "started": "2026-09-03T15:14:50",
+      "finished": "2026-09-03T15:15:02",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "brushed stainless steel on the body; matte black rubber on the handle grip; tempered glass on the nozzle; chrome-plated metal on the base; plastic on the hose connector; rubber on the hose",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:15:07",
+      "finished": "2026-09-03T15:16:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334_industrial_floor_pump_urdf_20260903-151449/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:16:47",
+      "finished": "2026-09-03T15:43:38",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 16,
+            "n_total": 16,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334_industrial_floor_pump_urdf_20260903-151449/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T15:43:39",
+      "finished": "2026-09-03T15:51:16",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_c9bff92489a24d6f924f14939f8cf334/model.urdf",
+    "category": "industrial floor pump",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.1700000550979079,
+        -0.03099,
+        0.0
+      ],
+      "max": [
+        0.1700000550979079,
+        0.07850002387581294,
+        0.7280001744771345
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__guide_housing",
+        "link": "body",
+        "label": "guide_housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pump_guide_housing.obj"
+        ],
+        "n_faces": 1032,
+        "area_frac": 0.15140106086520494,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__support_spine",
+        "link": "body",
+        "label": "support_spine",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08387715797830883,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_mount",
+        "link": "body",
+        "label": "gauge_mount",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013347408617417835,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__barrel_shell",
+        "link": "body",
+        "label": "barrel_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pump_barrel_shell.obj"
+        ],
+        "n_faces": 2520,
+        "area_frac": 0.3738445611538481,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__rod",
+        "link": "handle",
+        "label": "rod",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.06618873737666775,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__crossbar",
+        "link": "handle",
+        "label": "crossbar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.042715243769324764,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__rod_collar",
+        "link": "handle",
+        "label": "rod_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00618032303370813,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__grip_0",
+        "link": "handle",
+        "label": "grip_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03383436594675853,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__grip_1",
+        "link": "handle",
+        "label": "grip_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03383436594675853,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "stabilizer_bar__stabilizer_bar",
+        "link": "stabilizer_bar",
+        "label": "stabilizer_bar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.07359543649818974,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "stabilizer_bar__foot_0",
+        "link": "stabilizer_bar",
+        "label": "foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.018566856396473923,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "stabilizer_bar__foot_1",
+        "link": "stabilizer_bar",
+        "label": "foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.018566856396473923,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "stabilizer_bar__stop_collar",
+        "link": "stabilizer_bar",
+        "label": "stop_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00872389843981415,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "gauge__gauge_body",
+        "link": "gauge",
+        "label": "gauge_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pump_gauge.obj"
+        ],
+        "n_faces": 1524,
+        "area_frac": 0.07260946270535916,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "release_button__button_stem",
+        "link": "release_button",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0011691841172649532,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "release_button__release_button",
+        "link": "release_button",
+        "label": "release_button",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0015450807584270324,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

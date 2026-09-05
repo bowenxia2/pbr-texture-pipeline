@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="oval_floor_air_purifier">
+	<material name="shell_white">
+		<color rgba="0.94 0.95 0.93 1" />
+	</material>
+	<material name="trim_gray">
+		<color rgba="0.74 0.76 0.77 1" />
+	</material>
+	<material name="graphite">
+		<color rgba="0.17 0.18 0.2 1" />
+	</material>
+	<material name="filter_black">
+		<color rgba="0.11 0.12 0.13 1" />
+	</material>
+	<link name="purifier_body">
+		<inertial>
+			<origin xyz="0 0 0.39" rpy="0 0 0" />
+			<mass value="15" />
+			<inertia ixx="0.9225" ixy="0" ixz="0" iyy="0.873" iyz="0" izz="0.2745" />
+		</inertial>
+		<visual name="purifier_body__body_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__body_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__body_front_curve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__body_front_curve.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__body_rear_curve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__body_rear_curve.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__base_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__base_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__base_front_curve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__base_front_curve.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__base_rear_curve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__base_rear_curve.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__top_outlet_left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__top_outlet_left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__top_outlet_right_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__top_outlet_right_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__top_outlet_front_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__top_outlet_front_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__top_outlet_rear_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__top_outlet_rear_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__outlet_slat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__outlet_slat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__outlet_slat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__outlet_slat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__outlet_slat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__outlet_slat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__outlet_slat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__outlet_slat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__opening_lower_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__opening_lower_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__opening_upper_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__opening_upper_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__opening_rear_stile">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__opening_rear_stile.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__body_knuckle_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__body_knuckle_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__hinge_support_lower">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__hinge_support_lower.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__body_knuckle_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__body_knuckle_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__hinge_support_upper">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__hinge_support_upper.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="purifier_body__filter_media">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/purifier_body__filter_media.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cover">
+		<inertial>
+			<origin xyz="0 -0.11 0" rpy="0 0 0" />
+			<mass value="1" />
+			<inertia ixx="0.0348" ixy="0" ixz="0" iyy="0.0302083" iyz="0" izz="0.00500833" />
+		</inertial>
+		<visual name="filter_cover__cover_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_hinge_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_grille_inset">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_grille_inset.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_rib_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_rib_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_rib_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_rib_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_rib_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_rib_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__cover_rib_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__cover_rib_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cover__finger_pull">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cover__finger_pull.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="cover_hinge" type="revolute">
+		<origin xyz="0.124 0.11 0.4" rpy="0 0 0" />
+		<parent link="purifier_body" />
+		<child link="filter_cover" />
+		<axis xyz="0 0 1" />
+		<limit effort="8" velocity="1.8" lower="0" upper="1.18" />
+	</joint>
+</robot>

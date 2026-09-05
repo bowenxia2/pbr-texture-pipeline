@@ -1,0 +1,59 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "body__cavity_shell",
+    "top_cap__cap_shell",
+    "drawer__drawer_shell",
+    "basket__basket_shell",
+    "temp_dial__dial_shell",
+    "timer_dial__dial_shell",
+    "power_button__button_cap",
+    "release_button__button_cap"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      14148
+    ],
+    "body__cavity_shell": [
+      14148,
+      14928
+    ],
+    "top_cap__cap_shell": [
+      14928,
+      23180
+    ],
+    "drawer__drawer_shell": [
+      23180,
+      24664
+    ],
+    "basket__basket_shell": [
+      24664,
+      44152
+    ],
+    "temp_dial__dial_shell": [
+      44152,
+      61426
+    ],
+    "timer_dial__dial_shell": [
+      61426,
+      78700
+    ],
+    "power_button__button_cap": [
+      78700,
+      87264
+    ],
+    "release_button__button_cap": [
+      87264,
+      87452
+    ]
+  },
+  "norm": {
+    "center": [
+      0.02850000000000001,
+      0.0,
+      0.174
+    ],
+    "scale": 2.66664
+  }
+}

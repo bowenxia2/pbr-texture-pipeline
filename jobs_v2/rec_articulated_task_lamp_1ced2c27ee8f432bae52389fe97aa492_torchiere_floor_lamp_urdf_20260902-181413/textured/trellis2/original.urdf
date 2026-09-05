@@ -1,0 +1,194 @@
+<robot name="torchiere_floor_lamp">
+  <material name="satin_black">
+    <color rgba="0.16 0.16 0.17 1" />
+    </material>
+  <material name="dark_steel">
+    <color rgba="0.24 0.25 0.27 1" />
+    </material>
+  <material name="brushed_steel">
+    <color rgba="0.7 0.72 0.75 1" />
+    </material>
+  <material name="warm_white">
+    <color rgba="0.94 0.92 0.86 1" />
+    </material>
+  <link name="stand">
+    <inertial>
+      <origin xyz="0 0 0.85" rpy="0 0 0" />
+      <mass value="9" />
+      <inertia ixx="2.22876" ixy="0" ixz="0" iyy="2.22876" iyz="0" izz="0.122513" />
+      </inertial>
+    <visual name="base_disc">
+      <origin xyz="0 0 0.02" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.165" length="0.04" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="base_foot_ring">
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.126" length="0.008" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    <visual name="post_shaft">
+      <origin xyz="0 0 0.82" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="1.56" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_collar">
+      <origin xyz="0 0 1.08" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.028" length="0.07" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_boss">
+      <origin xyz="0.02 0 1.08" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.04" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="top_socket">
+      <origin xyz="0 0 1.6325" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.03" length="0.065" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="main_shade">
+    <inertial>
+      <origin xyz="0 0 0.075" rpy="0 0 0" />
+      <mass value="1.4" />
+      <inertia ixx="0.0147117" ixy="0" ixz="0" iyy="0.0147117" iyz="0" izz="0.02268" />
+      </inertial>
+    <visual name="main_bowl_shell">
+      <geometry>
+        <mesh filename="assets/meshes/main_torchiere_bowl.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="mount_collar">
+      <origin xyz="0 0 0.013" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.023" length="0.026" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="lamp_socket_stem">
+      <origin xyz="0 0 0.028" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.03" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="reading_arm">
+    <inertial>
+      <origin xyz="0.215 0 0.05" rpy="0 0 0" />
+      <mass value="0.8" />
+      <inertia ixx="0.00112667" ixy="0" ixz="0" iyy="0.0132867" iyz="0" izz="0.0124933" />
+      </inertial>
+    <visual name="root_knuckle">
+      <origin xyz="0.012 0 0" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.012" length="0.036" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="arm_tube">
+      <geometry>
+        <mesh filename="assets/meshes/reading_arm_tube.obj" />
+        </geometry>
+      <material name="brushed_steel">
+        <color rgba="0.7 0.72 0.75 1" />
+        </material>
+      </visual>
+    <visual name="tip_block">
+      <origin xyz="0.406 0 0.09" rpy="0 0 0" />
+      <geometry>
+        <box size="0.028 0.04 0.022" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="reading_shade">
+    <inertial>
+      <origin xyz="0.06 0 0" rpy="0 1.5708 0" />
+      <mass value="0.45" />
+      <inertia ixx="0.00101839" ixy="0" ixz="0" iyy="0.00101839" iyz="0" izz="0.0008649" />
+      </inertial>
+    <visual name="hinge_barrel">
+      <origin xyz="0.01 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.03" />
+        </geometry>
+      <material name="satin_black">
+        <color rgba="0.16 0.16 0.17 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.012 0 0" rpy="0 1.6908 0" />
+      <geometry>
+        <mesh filename="assets/meshes/reading_shade_shell.obj" />
+        </geometry>
+      <material name="warm_white">
+        <color rgba="0.94 0.92 0.86 1" />
+        </material>
+      </visual>
+    <visual name="shade_neck">
+      <origin xyz="0.028 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.013" length="0.03" />
+        </geometry>
+      <material name="dark_steel">
+        <color rgba="0.24 0.25 0.27 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="stand_to_main_shade" type="fixed">
+    <origin xyz="0 0 1.665" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="main_shade" />
+    </joint>
+  <joint name="stand_to_reading_arm" type="revolute">
+    <origin xyz="0.04 0 1.08" rpy="0 0 0" />
+    <parent link="stand" />
+    <child link="reading_arm" />
+    <axis xyz="0 0 1" />
+    <limit effort="6" velocity="1.4" lower="-2.15" upper="2.15" />
+    </joint>
+  <joint name="reading_arm_to_shade" type="revolute">
+    <origin xyz="0.42 0 0.09" rpy="0 0 0" />
+    <parent link="reading_arm" />
+    <child link="reading_shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="3" velocity="1.8" lower="-0.55" upper="1" />
+    </joint>
+  </robot>

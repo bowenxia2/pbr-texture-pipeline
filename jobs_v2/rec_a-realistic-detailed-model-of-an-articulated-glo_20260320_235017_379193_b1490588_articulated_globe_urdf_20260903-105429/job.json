@@ -1,0 +1,149 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260903-105429",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588/model.urdf",
+  "created": "2026-09-03T10:54:29",
+  "updated": "2026-09-03T11:30:56",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 3,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-03T10:54:29",
+      "finished": "2026-09-03T10:54:39",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "rubber on the base; plastic on the stem; metal on the top pole",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:54:44",
+      "finished": "2026-09-03T10:56:17",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260903-105429/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:56:17",
+      "finished": "2026-09-03T11:22:56",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 3,
+            "n_total": 3,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588_articulated_globe_urdf_20260903-105429/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T11:22:57",
+      "finished": "2026-09-03T11:30:56",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-detailed-model-of-an-articulated-glo_20260320_235017_379193_b1490588/model.urdf",
+    "category": "articulated globe",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.111,
+        -0.108,
+        0.0
+      ],
+      "max": [
+        0.111,
+        0.108,
+        0.355485
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base",
+        "link": "base",
+        "label": "base",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/globe_base.obj",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<box>",
+          "<box>"
+        ],
+        "n_faces": 1192,
+        "area_frac": 0.4148584868052872,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "meridian",
+        "link": "meridian",
+        "label": "meridian",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "assets/meshes/meridian_segment_1.obj",
+          "assets/meshes/meridian_segment_2.obj",
+          "assets/meshes/meridian_segment_3.obj",
+          "assets/meshes/meridian_segment_4.obj",
+          "assets/meshes/meridian_segment_5.obj",
+          "assets/meshes/meridian_segment_6.obj",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 10980,
+        "area_frac": 0.10832205726402751,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "globe",
+        "link": "globe",
+        "label": "globe",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>",
+          "assets/meshes/north_america.obj",
+          "assets/meshes/south_america.obj",
+          "assets/meshes/eurasia.obj",
+          "assets/meshes/africa.obj",
+          "assets/meshes/australia.obj",
+          "assets/meshes/greenland.obj",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 56514,
+        "area_frac": 0.47681945593068525,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

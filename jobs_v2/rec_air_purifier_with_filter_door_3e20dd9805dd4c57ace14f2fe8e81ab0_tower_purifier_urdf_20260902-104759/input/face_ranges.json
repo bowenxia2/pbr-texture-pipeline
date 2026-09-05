@@ -1,0 +1,184 @@
+{
+  "group_order": [
+    "purifier_body__tower_shell",
+    "purifier_body__base_plinth",
+    "purifier_body__front_grille",
+    "purifier_body__rear_bezel",
+    "purifier_body__control_panel",
+    "purifier_body__body_hinge_leaf",
+    "purifier_body__filter_track_0",
+    "purifier_body__filter_track_1",
+    "access_door__door_panel",
+    "access_door__hinge_knuckle",
+    "access_door__hinge_leaf",
+    "access_door__finger_latch",
+    "filter_cartridge__filter_media",
+    "filter_cartridge__top_filter_rail",
+    "filter_cartridge__bottom_filter_rail",
+    "filter_cartridge__side_filter_rail_0",
+    "filter_cartridge__side_filter_rail_1",
+    "filter_cartridge__pleat_0",
+    "filter_cartridge__pleat_1",
+    "filter_cartridge__pleat_2",
+    "filter_cartridge__pleat_3",
+    "filter_cartridge__pleat_4",
+    "filter_cartridge__pleat_5",
+    "filter_cartridge__pleat_6",
+    "filter_cartridge__pull_tab",
+    "filter_cartridge__tab_grip_recess",
+    "power_button__button_cap",
+    "power_button__button_icon",
+    "fan_button__button_cap",
+    "fan_button__button_icon",
+    "mode_button__button_cap",
+    "mode_button__button_icon",
+    "timer_button__button_cap",
+    "timer_button__button_icon"
+  ],
+  "face_ranges": {
+    "purifier_body__tower_shell": [
+      0,
+      564
+    ],
+    "purifier_body__base_plinth": [
+      564,
+      1088
+    ],
+    "purifier_body__front_grille": [
+      1088,
+      8508
+    ],
+    "purifier_body__rear_bezel": [
+      8508,
+      9329
+    ],
+    "purifier_body__control_panel": [
+      9329,
+      9853
+    ],
+    "purifier_body__body_hinge_leaf": [
+      9853,
+      9865
+    ],
+    "purifier_body__filter_track_0": [
+      9865,
+      9877
+    ],
+    "purifier_body__filter_track_1": [
+      9877,
+      9889
+    ],
+    "access_door__door_panel": [
+      9889,
+      25893
+    ],
+    "access_door__hinge_knuckle": [
+      25893,
+      26021
+    ],
+    "access_door__hinge_leaf": [
+      26021,
+      26033
+    ],
+    "access_door__finger_latch": [
+      26033,
+      26045
+    ],
+    "filter_cartridge__filter_media": [
+      26045,
+      26057
+    ],
+    "filter_cartridge__top_filter_rail": [
+      26057,
+      26069
+    ],
+    "filter_cartridge__bottom_filter_rail": [
+      26069,
+      26081
+    ],
+    "filter_cartridge__side_filter_rail_0": [
+      26081,
+      26093
+    ],
+    "filter_cartridge__side_filter_rail_1": [
+      26093,
+      26105
+    ],
+    "filter_cartridge__pleat_0": [
+      26105,
+      26117
+    ],
+    "filter_cartridge__pleat_1": [
+      26117,
+      26129
+    ],
+    "filter_cartridge__pleat_2": [
+      26129,
+      26141
+    ],
+    "filter_cartridge__pleat_3": [
+      26141,
+      26153
+    ],
+    "filter_cartridge__pleat_4": [
+      26153,
+      26165
+    ],
+    "filter_cartridge__pleat_5": [
+      26165,
+      26177
+    ],
+    "filter_cartridge__pleat_6": [
+      26177,
+      26189
+    ],
+    "filter_cartridge__pull_tab": [
+      26189,
+      26201
+    ],
+    "filter_cartridge__tab_grip_recess": [
+      26201,
+      26213
+    ],
+    "power_button__button_cap": [
+      26213,
+      26341
+    ],
+    "power_button__button_icon": [
+      26341,
+      26469
+    ],
+    "fan_button__button_cap": [
+      26469,
+      26597
+    ],
+    "fan_button__button_icon": [
+      26597,
+      26725
+    ],
+    "mode_button__button_cap": [
+      26725,
+      26853
+    ],
+    "mode_button__button_icon": [
+      26853,
+      26981
+    ],
+    "timer_button__button_cap": [
+      26981,
+      27109
+    ],
+    "timer_button__button_icon": [
+      27109,
+      27237
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.011499999999999996,
+      0.47525
+    ],
+    "scale": 1.0520673329826407
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0_portable_purifier_urdf_20260903-155135",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0/model.urdf",
+  "created": "2026-09-03T15:51:35",
+  "updated": "2026-09-03T16:29:38",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 4,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:48",
+      "finished": "2026-09-03T15:51:49",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; rubber on the base; metal on the top edge; plastic on the side panel; rubber on the bottom edge",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:50",
+      "finished": "2026-09-03T15:53:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0_portable_purifier_urdf_20260903-155135/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:53:47",
+      "finished": "2026-09-03T16:20:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 4,
+            "n_total": 4,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0_portable_purifier_urdf_20260903-155135/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T16:20:35",
+      "finished": "2026-09-03T16:29:38",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_048fed384e7e4bc2b73ffddc2b7808a0/model.urdf",
+    "category": "portable purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.12,
+        -0.09,
+        -0.21
+      ],
+      "max": [
+        0.12,
+        0.1075,
+        0.21
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "shell__housing",
+        "link": "shell",
+        "label": "housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/shell.obj"
+        ],
+        "n_faces": 96,
+        "area_frac": 0.6947467017122985,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "door__panel",
+        "link": "door",
+        "label": "panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/door.obj"
+        ],
+        "n_faces": 940,
+        "area_frac": 0.156847934776011,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_cartridge__cartridge",
+        "link": "filter_cartridge",
+        "label": "cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/filter_cartridge.obj"
+        ],
+        "n_faces": 44,
+        "area_frac": 0.1283429297299721,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__grip",
+        "link": "handle",
+        "label": "grip",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/handle.obj"
+        ],
+        "n_faces": 1084,
+        "area_frac": 0.020062433781718465,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

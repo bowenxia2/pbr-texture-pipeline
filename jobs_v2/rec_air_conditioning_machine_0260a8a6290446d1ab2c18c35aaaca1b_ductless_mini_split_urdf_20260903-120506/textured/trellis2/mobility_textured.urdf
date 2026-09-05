@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ductless_mini_split">
+	<material name="housing_white">
+		<color rgba="0.95 0.95 0.93 1" />
+	</material>
+	<material name="flap_white">
+		<color rgba="0.92 0.92 0.9 1" />
+	</material>
+	<material name="vane_gray">
+		<color rgba="0.63 0.66 0.69 1" />
+	</material>
+	<link name="body">
+		<collision name="shell">
+			<geometry>
+				<mesh filename="assets/meshes/body_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="flap_mount_0">
+			<origin xyz="-0.461 0.181 0.063" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.06 0.0065" />
+			</geometry>
+		</collision>
+		<collision name="flap_mount_1">
+			<origin xyz="0.461 0.181 0.063" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.06 0.0065" />
+			</geometry>
+		</collision>
+		<collision name="vane_0_lower_mount">
+			<origin xyz="-0.145 0.154 0.052" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0032" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="vane_0_upper_mount">
+			<origin xyz="-0.145 0.154 0.093" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0032" length="0.006" />
+			</geometry>
+		</collision>
+		<collision name="vane_0_roof_bridge">
+			<origin xyz="-0.145 0.182 0.096" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.064 0.008" />
+			</geometry>
+		</collision>
+		<collision name="vane_1_lower_mount">
+			<origin xyz="0.145 0.154 0.052" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0032" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="vane_1_upper_mount">
+			<origin xyz="0.145 0.154 0.093" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0032" length="0.006" />
+			</geometry>
+		</collision>
+		<collision name="vane_1_roof_bridge">
+			<origin xyz="0.145 0.182 0.096" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.064 0.008" />
+			</geometry>
+		</collision>
+		<visual name="body__shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__flap_mount_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__flap_mount_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__flap_mount_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__flap_mount_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_0_lower_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_0_lower_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_0_upper_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_0_upper_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_0_roof_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_0_roof_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_1_lower_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_1_lower_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_1_upper_mount">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_1_upper_mount.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__vane_1_roof_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__vane_1_roof_bridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap">
+		<collision name="blade">
+			<geometry>
+				<mesh filename="assets/meshes/outlet_flap.obj" />
+			</geometry>
+		</collision>
+		<visual name="flap__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap__blade.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="vane_0">
+		<collision name="blade">
+			<geometry>
+				<mesh filename="assets/meshes/vane_0.obj" />
+			</geometry>
+		</collision>
+		<visual name="vane_0__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/vane_0__blade.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="vane_1">
+		<collision name="blade">
+			<geometry>
+				<mesh filename="assets/meshes/vane_1.obj" />
+			</geometry>
+		</collision>
+		<visual name="vane_1__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/vane_1__blade.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_flap" type="revolute">
+		<origin xyz="0 0.181 0.063" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="flap" />
+		<axis xyz="-1 0 0" />
+		<limit effort="10" velocity="1.6" lower="-0.28" upper="0.78" />
+	</joint>
+	<joint name="body_to_vane_0" type="revolute">
+		<origin xyz="-0.145 0.154 0.072" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="vane_0" />
+		<axis xyz="0 0 1" />
+		<limit effort="3" velocity="2.5" lower="-0.65" upper="0.65" />
+	</joint>
+	<joint name="body_to_vane_1" type="revolute">
+		<origin xyz="0.145 0.154 0.072" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="vane_1" />
+		<axis xyz="0 0 1" />
+		<limit effort="3" velocity="2.5" lower="-0.65" upper="0.65" />
+	</joint>
+</robot>

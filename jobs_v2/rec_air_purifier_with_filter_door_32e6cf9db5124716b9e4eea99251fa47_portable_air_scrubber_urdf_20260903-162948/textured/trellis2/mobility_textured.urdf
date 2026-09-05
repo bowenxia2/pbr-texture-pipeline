@@ -1,0 +1,722 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="portable_air_scrubber">
+	<material name="blue_powder_coat">
+		<color rgba="0.1 0.24 0.34 1" />
+	</material>
+	<material name="dark_access_panel">
+		<color rgba="0.05 0.06 0.065 1" />
+	</material>
+	<material name="galvanized_steel">
+		<color rgba="0.62 0.65 0.66 1" />
+	</material>
+	<material name="black_rubber">
+		<color rgba="0.01 0.01 0.01 1" />
+	</material>
+	<material name="coarse_prefilter">
+		<color rgba="0.82 0.84 0.8 1" />
+	</material>
+	<material name="blue_media">
+		<color rgba="0.3 0.56 0.82 1" />
+	</material>
+	<material name="white_hepa_media">
+		<color rgba="0.92 0.92 0.88 1" />
+	</material>
+	<material name="carbon_media">
+		<color rgba="0.08 0.08 0.075 1" />
+	</material>
+	<material name="warning_label">
+		<color rgba="0.95 0.72 0.12 1" />
+	</material>
+	<link name="housing">
+		<visual name="housing__side_panel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_panel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__side_panel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__side_panel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rear_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rear_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_pan">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_pan.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_stile_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_stile_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_stile_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_stile_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__lower_sill">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__lower_sill.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__middle_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__middle_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_header">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_header.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_stile_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_stile_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_stile_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_stile_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__front_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__grille_mount_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__grille_mount_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__grille_mount_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__grille_mount_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__grille_mount_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__grille_mount_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__grille_mount_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__grille_mount_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rail_lip_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rail_lip_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__guide_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__guide_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rail_lip_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rail_lip_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_hinge_leaf_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_hinge_leaf_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_hinge_leaf_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_hinge_leaf_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_knuckle_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_knuckle_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__frame_hinge_leaf_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__frame_hinge_leaf_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__hinge_pin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__hinge_pin.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_plate_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_plate_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_stem_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_stem_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_0_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_0_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_1_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_1_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_axle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_axle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_tire_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_tire_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_wheel_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_wheel_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_plate_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_plate_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_stem_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_stem_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_0_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_0_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_1_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_1_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_axle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_axle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_tire_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_tire_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_wheel_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_wheel_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_plate_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_plate_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_stem_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_stem_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_0_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_0_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_1_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_1_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_axle_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_axle_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_tire_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_tire_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_wheel_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_wheel_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_plate_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_plate_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_stem_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_stem_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_0_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_0_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_fork_1_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_fork_1_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_axle_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_axle_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_tire_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_tire_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__caster_wheel_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__caster_wheel_3.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="door">
+		<visual name="door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__lower_label">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__lower_label.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__upper_label">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__upper_label.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__pull_handle_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__pull_handle_bar.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__pull_handle_standoff_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__pull_handle_standoff_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__pull_handle_standoff_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__pull_handle_standoff_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__compression_latch">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__compression_latch.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__door_knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__door_hinge_leaf_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_hinge_leaf_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__door_knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="door__door_hinge_leaf_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/door__door_hinge_leaf_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_stack">
+		<visual name="filter_stack__bottom_sled">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__bottom_sled.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__runner_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__runner_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__runner_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__runner_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__rack_side_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__rack_side_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__rack_side_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__rack_side_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__front_rack_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__front_rack_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__rear_rack_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__rear_rack_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__top_filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__top_filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_0_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_0_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_1_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_1_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_2_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_2_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__stage_3_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__stage_3_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_stack__cassette_pull">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_stack__cassette_pull.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_door" type="revolute">
+		<origin xyz="-0.31 -0.315 0.23" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="door" />
+		<axis xyz="0 0 -1" />
+		<limit effort="45" velocity="1.2" lower="0" upper="1.75" />
+	</joint>
+	<joint name="housing_to_filter_stack" type="prismatic">
+		<origin xyz="0 0.01 0.55" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_stack" />
+		<axis xyz="0 -1 0" />
+		<limit effort="120" velocity="0.25" lower="0" upper="0.34" />
+	</joint>
+</robot>

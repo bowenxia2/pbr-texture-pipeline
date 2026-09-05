@@ -1,0 +1,637 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1364095,
+  "groups": {
+    "link_0__frame-2": {
+      "texture_size": 1024,
+      "n_faces": 438,
+      "texels": 655489,
+      "field_voxels": 541951
+    },
+    "link_1__key-7": {
+      "texture_size": 1024,
+      "n_faces": 248,
+      "texels": 795924,
+      "field_voxels": 5299
+    },
+    "link_2__key-8": {
+      "texture_size": 1024,
+      "n_faces": 64,
+      "texels": 795935,
+      "field_voxels": 5305
+    },
+    "link_3__key-9": {
+      "texture_size": 1024,
+      "n_faces": 66,
+      "texels": 795750,
+      "field_voxels": 5367
+    },
+    "link_4__key-10": {
+      "texture_size": 1024,
+      "n_faces": 188,
+      "texels": 800101,
+      "field_voxels": 5326
+    },
+    "link_5__key-11": {
+      "texture_size": 1024,
+      "n_faces": 620,
+      "texels": 805911,
+      "field_voxels": 5298
+    },
+    "link_6__key-12": {
+      "texture_size": 1024,
+      "n_faces": 180,
+      "texels": 795871,
+      "field_voxels": 5294
+    },
+    "link_7__key-13": {
+      "texture_size": 1024,
+      "n_faces": 464,
+      "texels": 803251,
+      "field_voxels": 5296
+    },
+    "link_8__key-14": {
+      "texture_size": 1024,
+      "n_faces": 152,
+      "texels": 799502,
+      "field_voxels": 5294
+    },
+    "link_9__key-15": {
+      "texture_size": 1024,
+      "n_faces": 134,
+      "texels": 794731,
+      "field_voxels": 5299
+    },
+    "link_10__key-16": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 795935,
+      "field_voxels": 5301
+    },
+    "link_11__key-17": {
+      "texture_size": 1024,
+      "n_faces": 60,
+      "texels": 795935,
+      "field_voxels": 5332
+    },
+    "link_12__key-18": {
+      "texture_size": 1024,
+      "n_faces": 152,
+      "texels": 795921,
+      "field_voxels": 5304
+    },
+    "link_13__key-19": {
+      "texture_size": 1024,
+      "n_faces": 72,
+      "texels": 795935,
+      "field_voxels": 5325
+    },
+    "link_14__key-20": {
+      "texture_size": 1024,
+      "n_faces": 78,
+      "texels": 798833,
+      "field_voxels": 5296
+    },
+    "link_15__key-21": {
+      "texture_size": 1024,
+      "n_faces": 284,
+      "texels": 802253,
+      "field_voxels": 5281
+    },
+    "link_16__key-22": {
+      "texture_size": 1024,
+      "n_faces": 50,
+      "texels": 801008,
+      "field_voxels": 5299
+    },
+    "link_17__key-23": {
+      "texture_size": 1024,
+      "n_faces": 538,
+      "texels": 798405,
+      "field_voxels": 5255
+    },
+    "link_18__key-24": {
+      "texture_size": 1024,
+      "n_faces": 550,
+      "texels": 798215,
+      "field_voxels": 5301
+    },
+    "link_19__key-25": {
+      "texture_size": 1024,
+      "n_faces": 518,
+      "texels": 799197,
+      "field_voxels": 5278
+    },
+    "link_20__key-26": {
+      "texture_size": 1024,
+      "n_faces": 356,
+      "texels": 799321,
+      "field_voxels": 5332
+    },
+    "link_21__key-27": {
+      "texture_size": 1024,
+      "n_faces": 984,
+      "texels": 801418,
+      "field_voxels": 5301
+    },
+    "link_22__key-28": {
+      "texture_size": 1024,
+      "n_faces": 830,
+      "texels": 799471,
+      "field_voxels": 5253
+    },
+    "link_23__key-29": {
+      "texture_size": 1024,
+      "n_faces": 416,
+      "texels": 801656,
+      "field_voxels": 5254
+    },
+    "link_24__key-30": {
+      "texture_size": 1024,
+      "n_faces": 378,
+      "texels": 802860,
+      "field_voxels": 5278
+    },
+    "link_25__key-31": {
+      "texture_size": 1024,
+      "n_faces": 240,
+      "texels": 800205,
+      "field_voxels": 5243
+    },
+    "link_26__key-32": {
+      "texture_size": 1024,
+      "n_faces": 156,
+      "texels": 800242,
+      "field_voxels": 5257
+    },
+    "link_27__key-33": {
+      "texture_size": 1024,
+      "n_faces": 386,
+      "texels": 801566,
+      "field_voxels": 5286
+    },
+    "link_28__key-34": {
+      "texture_size": 1024,
+      "n_faces": 170,
+      "texels": 799179,
+      "field_voxels": 5311
+    },
+    "link_29__key-35": {
+      "texture_size": 1024,
+      "n_faces": 74,
+      "texels": 791764,
+      "field_voxels": 5285
+    },
+    "link_30__key-36": {
+      "texture_size": 1024,
+      "n_faces": 264,
+      "texels": 802098,
+      "field_voxels": 5275
+    },
+    "link_31__key-37": {
+      "texture_size": 1024,
+      "n_faces": 542,
+      "texels": 801871,
+      "field_voxels": 5252
+    },
+    "link_32__key-38": {
+      "texture_size": 1024,
+      "n_faces": 412,
+      "texels": 803799,
+      "field_voxels": 5309
+    },
+    "link_33__key-39": {
+      "texture_size": 1024,
+      "n_faces": 600,
+      "texels": 807813,
+      "field_voxels": 5288
+    },
+    "link_34__key-40": {
+      "texture_size": 1024,
+      "n_faces": 48,
+      "texels": 799572,
+      "field_voxels": 5286
+    },
+    "link_35__key-41": {
+      "texture_size": 1024,
+      "n_faces": 620,
+      "texels": 804597,
+      "field_voxels": 5288
+    },
+    "link_36__key-42": {
+      "texture_size": 1024,
+      "n_faces": 630,
+      "texels": 804436,
+      "field_voxels": 5283
+    },
+    "link_37__key-43": {
+      "texture_size": 1024,
+      "n_faces": 626,
+      "texels": 807923,
+      "field_voxels": 5287
+    },
+    "link_38__key-44": {
+      "texture_size": 1024,
+      "n_faces": 96,
+      "texels": 800014,
+      "field_voxels": 5289
+    },
+    "link_39__key-45": {
+      "texture_size": 1024,
+      "n_faces": 44,
+      "texels": 799310,
+      "field_voxels": 5294
+    },
+    "link_40__key-46": {
+      "texture_size": 1024,
+      "n_faces": 190,
+      "texels": 797365,
+      "field_voxels": 5315
+    },
+    "link_41__key-47": {
+      "texture_size": 1024,
+      "n_faces": 126,
+      "texels": 789700,
+      "field_voxels": 5291
+    },
+    "link_42__key-48": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 797925,
+      "field_voxels": 5287
+    },
+    "link_43__key-49": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 795935,
+      "field_voxels": 5300
+    },
+    "link_44__key-50": {
+      "texture_size": 1024,
+      "n_faces": 224,
+      "texels": 795807,
+      "field_voxels": 5299
+    },
+    "link_45__key-51": {
+      "texture_size": 1024,
+      "n_faces": 582,
+      "texels": 802724,
+      "field_voxels": 5303
+    },
+    "link_46__key-52": {
+      "texture_size": 1024,
+      "n_faces": 244,
+      "texels": 795793,
+      "field_voxels": 5336
+    },
+    "link_47__key-53": {
+      "texture_size": 1024,
+      "n_faces": 484,
+      "texels": 795780,
+      "field_voxels": 5300
+    },
+    "link_48__key-54": {
+      "texture_size": 1024,
+      "n_faces": 304,
+      "texels": 800724,
+      "field_voxels": 5296
+    },
+    "link_49__key-55": {
+      "texture_size": 1024,
+      "n_faces": 104,
+      "texels": 799506,
+      "field_voxels": 5283
+    },
+    "link_50__key-56": {
+      "texture_size": 1024,
+      "n_faces": 84,
+      "texels": 797248,
+      "field_voxels": 5283
+    },
+    "link_51__key-57": {
+      "texture_size": 1024,
+      "n_faces": 402,
+      "texels": 804646,
+      "field_voxels": 6420
+    },
+    "link_52__key-58": {
+      "texture_size": 1024,
+      "n_faces": 282,
+      "texels": 793806,
+      "field_voxels": 6552
+    },
+    "link_53__key-59": {
+      "texture_size": 1024,
+      "n_faces": 64,
+      "texels": 789144,
+      "field_voxels": 6567
+    },
+    "link_54__key-60": {
+      "texture_size": 1024,
+      "n_faces": 80,
+      "texels": 865485,
+      "field_voxels": 13232
+    },
+    "link_55__key-61": {
+      "texture_size": 1024,
+      "n_faces": 396,
+      "texels": 801413,
+      "field_voxels": 5280
+    },
+    "link_56__key-62": {
+      "texture_size": 1024,
+      "n_faces": 538,
+      "texels": 801159,
+      "field_voxels": 5295
+    },
+    "link_57__key-63": {
+      "texture_size": 1024,
+      "n_faces": 114,
+      "texels": 797645,
+      "field_voxels": 5295
+    },
+    "link_58__key-64": {
+      "texture_size": 1024,
+      "n_faces": 676,
+      "texels": 801008,
+      "field_voxels": 5288
+    },
+    "link_59__key-65": {
+      "texture_size": 1024,
+      "n_faces": 720,
+      "texels": 801348,
+      "field_voxels": 5301
+    },
+    "link_60__key-66": {
+      "texture_size": 1024,
+      "n_faces": 104,
+      "texels": 795895,
+      "field_voxels": 5289
+    },
+    "link_61__key-67": {
+      "texture_size": 1024,
+      "n_faces": 704,
+      "texels": 801692,
+      "field_voxels": 5246
+    },
+    "link_62__key-68": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 796670,
+      "field_voxels": 5252
+    },
+    "link_63__key-69": {
+      "texture_size": 1024,
+      "n_faces": 148,
+      "texels": 799656,
+      "field_voxels": 5284
+    },
+    "link_64__key-70": {
+      "texture_size": 1024,
+      "n_faces": 222,
+      "texels": 800157,
+      "field_voxels": 5300
+    },
+    "link_65__key-71": {
+      "texture_size": 1024,
+      "n_faces": 176,
+      "texels": 797508,
+      "field_voxels": 5250
+    },
+    "link_66__key-72": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 797111,
+      "field_voxels": 5252
+    },
+    "link_67__key-73": {
+      "texture_size": 1024,
+      "n_faces": 52,
+      "texels": 808783,
+      "field_voxels": 9649
+    },
+    "link_68__key-74": {
+      "texture_size": 1024,
+      "n_faces": 80,
+      "texels": 796166,
+      "field_voxels": 13012
+    },
+    "link_69__key-75": {
+      "texture_size": 1024,
+      "n_faces": 246,
+      "texels": 798151,
+      "field_voxels": 5249
+    },
+    "link_70__key-76": {
+      "texture_size": 1024,
+      "n_faces": 194,
+      "texels": 797999,
+      "field_voxels": 5249
+    },
+    "link_71__key-77": {
+      "texture_size": 1024,
+      "n_faces": 266,
+      "texels": 798024,
+      "field_voxels": 5251
+    },
+    "link_72__key-78": {
+      "texture_size": 1024,
+      "n_faces": 252,
+      "texels": 797445,
+      "field_voxels": 5277
+    },
+    "link_73__key-79": {
+      "texture_size": 1024,
+      "n_faces": 280,
+      "texels": 790591,
+      "field_voxels": 5254
+    },
+    "link_74__key-80": {
+      "texture_size": 1024,
+      "n_faces": 134,
+      "texels": 797790,
+      "field_voxels": 5275
+    },
+    "link_75__key-81": {
+      "texture_size": 1024,
+      "n_faces": 246,
+      "texels": 797350,
+      "field_voxels": 5253
+    },
+    "link_76__key-82": {
+      "texture_size": 1024,
+      "n_faces": 204,
+      "texels": 797359,
+      "field_voxels": 5252
+    },
+    "link_77__key-83": {
+      "texture_size": 1024,
+      "n_faces": 142,
+      "texels": 798233,
+      "field_voxels": 5253
+    },
+    "link_78__key-84": {
+      "texture_size": 1024,
+      "n_faces": 244,
+      "texels": 796996,
+      "field_voxels": 5253
+    },
+    "link_79__key-85": {
+      "texture_size": 1024,
+      "n_faces": 206,
+      "texels": 797705,
+      "field_voxels": 5278
+    },
+    "link_80__key-86": {
+      "texture_size": 1024,
+      "n_faces": 154,
+      "texels": 797524,
+      "field_voxels": 5250
+    },
+    "link_81__key-87": {
+      "texture_size": 1024,
+      "n_faces": 186,
+      "texels": 803720,
+      "field_voxels": 6476
+    },
+    "link_82__key-88": {
+      "texture_size": 1024,
+      "n_faces": 336,
+      "texels": 810596,
+      "field_voxels": 7550
+    },
+    "link_83__key-89": {
+      "texture_size": 1024,
+      "n_faces": 436,
+      "texels": 764463,
+      "field_voxels": 12853
+    },
+    "link_84__key-90": {
+      "texture_size": 1024,
+      "n_faces": 798,
+      "texels": 756877,
+      "field_voxels": 7595
+    },
+    "link_85__key-91": {
+      "texture_size": 1024,
+      "n_faces": 272,
+      "texels": 803847,
+      "field_voxels": 5283
+    },
+    "link_86__key-92": {
+      "texture_size": 1024,
+      "n_faces": 112,
+      "texels": 785663,
+      "field_voxels": 7560
+    },
+    "link_87__key-93": {
+      "texture_size": 1024,
+      "n_faces": 246,
+      "texels": 800243,
+      "field_voxels": 5298
+    },
+    "link_88__key-94": {
+      "texture_size": 1024,
+      "n_faces": 354,
+      "texels": 797956,
+      "field_voxels": 5277
+    },
+    "link_89__key-95": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 936849,
+      "field_voxels": 26527
+    },
+    "link_90__key-96": {
+      "texture_size": 1024,
+      "n_faces": 188,
+      "texels": 800537,
+      "field_voxels": 5297
+    },
+    "link_91__key-97": {
+      "texture_size": 1024,
+      "n_faces": 84,
+      "texels": 800735,
+      "field_voxels": 5287
+    },
+    "link_92__key-98": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 797353,
+      "field_voxels": 5314
+    },
+    "link_93__key-99": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 798321,
+      "field_voxels": 5329
+    },
+    "link_94__key-100": {
+      "texture_size": 1024,
+      "n_faces": 650,
+      "texels": 811141,
+      "field_voxels": 9957
+    },
+    "link_95__key-101": {
+      "texture_size": 1024,
+      "n_faces": 302,
+      "texels": 797628,
+      "field_voxels": 5331
+    },
+    "link_96__key-102": {
+      "texture_size": 1024,
+      "n_faces": 510,
+      "texels": 810359,
+      "field_voxels": 10015
+    },
+    "link_97__key-103": {
+      "texture_size": 1024,
+      "n_faces": 44,
+      "texels": 809443,
+      "field_voxels": 9990
+    },
+    "link_98__key-104": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 796417,
+      "field_voxels": 5278
+    },
+    "link_99__key-105": {
+      "texture_size": 1024,
+      "n_faces": 1204,
+      "texels": 804816,
+      "field_voxels": 5253
+    },
+    "link_100__key-106": {
+      "texture_size": 1024,
+      "n_faces": 904,
+      "texels": 800547,
+      "field_voxels": 5281
+    },
+    "link_101__key-107": {
+      "texture_size": 1024,
+      "n_faces": 1150,
+      "texels": 800641,
+      "field_voxels": 5253
+    },
+    "link_102__key-108": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 797348,
+      "field_voxels": 5363
+    },
+    "link_103__key-109": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 798321,
+      "field_voxels": 5328
+    },
+    "link_104__key-110": {
+      "texture_size": 1024,
+      "n_faces": 336,
+      "texels": 810654,
+      "field_voxels": 7573
+    }
+  }
+}

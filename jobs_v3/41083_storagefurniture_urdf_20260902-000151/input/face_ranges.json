@@ -1,0 +1,194 @@
+{
+  "group_order": [
+    "link_0__cabinet_door_surface-31",
+    "link_0__handle-32",
+    "link_1__cabinet_door_surface-29",
+    "link_1__handle-30",
+    "link_2__drawer_front-24",
+    "link_2__drawer_side-25",
+    "link_2__drawer_side-26",
+    "link_2__drawer_back-27",
+    "link_2__drawer_bottom-28",
+    "link_2__handle-23",
+    "link_3__drawer_front-17",
+    "link_3__drawer_side-18",
+    "link_3__drawer_side-19",
+    "link_3__drawer_back-20",
+    "link_3__drawer_bottom-21",
+    "link_3__handle-16",
+    "link_4__shelf-10",
+    "link_4__vertical_side_panel-43",
+    "link_4__vertical_side_panel-44",
+    "link_4__back_panel-45",
+    "link_4__bottom_panel-46",
+    "link_4__frame_vertical_bar-47",
+    "link_4__frame_vertical_bar-48",
+    "link_4__frame_vertical_bar-49",
+    "link_4__frame_horizontal_bar-50",
+    "link_4__frame_horizontal_bar-51",
+    "link_4__frame_horizontal_bar-52",
+    "link_4__frame_horizontal_bar-53",
+    "link_4__frame_horizontal_bar-54",
+    "link_4__frame_horizontal_bar-55",
+    "link_4__frame_vertical_bar-56",
+    "link_4__frame_vertical_bar-57",
+    "link_4__base_side_panel-34",
+    "link_4__base_side_panel-35",
+    "link_4__base_side_panel-36",
+    "link_4__base_side_panel-37"
+  ],
+  "face_ranges": {
+    "link_0__cabinet_door_surface-31": [
+      0,
+      2232
+    ],
+    "link_0__handle-32": [
+      2232,
+      5828
+    ],
+    "link_1__cabinet_door_surface-29": [
+      5828,
+      8060
+    ],
+    "link_1__handle-30": [
+      8060,
+      11656
+    ],
+    "link_2__drawer_front-24": [
+      11656,
+      13616
+    ],
+    "link_2__drawer_side-25": [
+      13616,
+      13640
+    ],
+    "link_2__drawer_side-26": [
+      13640,
+      13668
+    ],
+    "link_2__drawer_back-27": [
+      13668,
+      13684
+    ],
+    "link_2__drawer_bottom-28": [
+      13684,
+      13692
+    ],
+    "link_2__handle-23": [
+      13692,
+      17288
+    ],
+    "link_3__drawer_front-17": [
+      17288,
+      19248
+    ],
+    "link_3__drawer_side-18": [
+      19248,
+      19272
+    ],
+    "link_3__drawer_side-19": [
+      19272,
+      19300
+    ],
+    "link_3__drawer_back-20": [
+      19300,
+      19316
+    ],
+    "link_3__drawer_bottom-21": [
+      19316,
+      19324
+    ],
+    "link_3__handle-16": [
+      19324,
+      22920
+    ],
+    "link_4__shelf-10": [
+      22920,
+      22944
+    ],
+    "link_4__vertical_side_panel-43": [
+      22944,
+      22960
+    ],
+    "link_4__vertical_side_panel-44": [
+      22960,
+      22976
+    ],
+    "link_4__back_panel-45": [
+      22976,
+      22996
+    ],
+    "link_4__bottom_panel-46": [
+      22996,
+      23000
+    ],
+    "link_4__frame_vertical_bar-47": [
+      23000,
+      23024
+    ],
+    "link_4__frame_vertical_bar-48": [
+      23024,
+      23056
+    ],
+    "link_4__frame_vertical_bar-49": [
+      23056,
+      23072
+    ],
+    "link_4__frame_horizontal_bar-50": [
+      23072,
+      23088
+    ],
+    "link_4__frame_horizontal_bar-51": [
+      23088,
+      23104
+    ],
+    "link_4__frame_horizontal_bar-52": [
+      23104,
+      23120
+    ],
+    "link_4__frame_horizontal_bar-53": [
+      23120,
+      23132
+    ],
+    "link_4__frame_horizontal_bar-54": [
+      23132,
+      23144
+    ],
+    "link_4__frame_horizontal_bar-55": [
+      23144,
+      23160
+    ],
+    "link_4__frame_vertical_bar-56": [
+      23160,
+      23184
+    ],
+    "link_4__frame_vertical_bar-57": [
+      23184,
+      23200
+    ],
+    "link_4__base_side_panel-34": [
+      23200,
+      23212
+    ],
+    "link_4__base_side_panel-35": [
+      23212,
+      23216
+    ],
+    "link_4__base_side_panel-36": [
+      23216,
+      23228
+    ],
+    "link_4__base_side_panel-37": [
+      23228,
+      23236
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.012682499999999874,
+      0.015223000000000098,
+      -0.05542049999999993
+    ],
+    "scale": 0.713132465680157
+  }
+}

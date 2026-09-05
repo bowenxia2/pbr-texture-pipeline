@@ -1,0 +1,413 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a_tripod_track_pump_urdf_20260903-143725",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a/model.urdf",
+  "created": "2026-09-03T14:37:25",
+  "updated": "2026-09-03T15:14:17",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 25,
+        "n_tiny": 8
+      },
+      "seed": null,
+      "started": "2026-09-03T14:37:25",
+      "finished": "2026-09-03T14:37:33",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; metal on the stem; rubber on the handle grip",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T14:37:37",
+      "finished": "2026-09-03T14:39:10",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a_tripod_track_pump_urdf_20260903-143725/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T14:39:10",
+      "finished": "2026-09-03T15:05:50",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 25,
+            "n_total": 25,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a_tripod_track_pump_urdf_20260903-143725/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T15:05:51",
+      "finished": "2026-09-03T15:14:17",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_0632072f3c7547e0a82e03bffbf6244a/model.urdf",
+    "category": "tripod track pump",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.25888165485713277,
+        -0.3933953501329497,
+        0.003000000000000001
+      ],
+      "max": [
+        0.4225,
+        0.39339535661431035,
+        1.101
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "pump_body__tripod_hub",
+        "link": "pump_body",
+        "label": "tripod_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04927511145191213,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__barrel_socket",
+        "link": "pump_body",
+        "label": "barrel_socket",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03364489712613516,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__barrel_shell",
+        "link": "pump_body",
+        "label": "barrel_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/barrel_shell.obj"
+        ],
+        "n_faces": 576,
+        "area_frac": 0.26641070399620576,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__top_bushing",
+        "link": "pump_body",
+        "label": "top_bushing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/top_bushing.obj"
+        ],
+        "n_faces": 512,
+        "area_frac": 0.027801833664024014,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__lower_barrel_band",
+        "link": "pump_body",
+        "label": "lower_barrel_band",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/lower_barrel_band.obj"
+        ],
+        "n_faces": 512,
+        "area_frac": 0.0156651206534585,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__upper_barrel_band",
+        "link": "pump_body",
+        "label": "upper_barrel_band",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/upper_barrel_band.obj"
+        ],
+        "n_faces": 512,
+        "area_frac": 0.014325773886482807,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__foot_arm_0",
+        "link": "pump_body",
+        "label": "foot_arm_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0775921000406086,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__rubber_foot_0",
+        "link": "pump_body",
+        "label": "rubber_foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04619520387568482,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__foot_arm_1",
+        "link": "pump_body",
+        "label": "foot_arm_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0775921000406086,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__rubber_foot_1",
+        "link": "pump_body",
+        "label": "rubber_foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04619520387568482,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__foot_arm_2",
+        "link": "pump_body",
+        "label": "foot_arm_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0775921000406086,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__rubber_foot_2",
+        "link": "pump_body",
+        "label": "rubber_foot_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04619520387568483,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__gauge_bezel",
+        "link": "pump_body",
+        "label": "gauge_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.029038921200409188,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__gauge_face",
+        "link": "pump_body",
+        "label": "gauge_face",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.016956827796883563,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__gauge_needle",
+        "link": "pump_body",
+        "label": "gauge_needle",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006913078054662122,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__side_hose",
+        "link": "pump_body",
+        "label": "side_hose",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/side_hose.obj"
+        ],
+        "n_faces": 2628,
+        "area_frac": 0.04185096897208949,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "pump_body__hose_clip",
+        "link": "pump_body",
+        "label": "hose_clip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005760898378885087,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "pump_body__pump_nozzle",
+        "link": "pump_body",
+        "label": "pump_nozzle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0038327551467738914,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__rod",
+        "link": "plunger",
+        "label": "rod",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03378792022813753,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__guide_stem",
+        "link": "plunger",
+        "label": "guide_stem",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004874805625042128,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__wiper_flange",
+        "link": "plunger",
+        "label": "wiper_flange",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0036029913232638114,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__handle_socket",
+        "link": "plunger",
+        "label": "handle_socket",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007329792103125432,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__grip",
+        "link": "plunger",
+        "label": "grip",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.058567185020179546,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__grip_cap_0",
+        "link": "plunger",
+        "label": "grip_cap_0",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.007610136936322797,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "plunger__grip_cap_1",
+        "link": "plunger",
+        "label": "grip_cap_1",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.007610136936322797,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,686 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_arcade_machine_47acfa133aff429f826dc960ef847b9a_two_player_arcade_machine_urdf_20260902-170839",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_47acfa133aff429f826dc960ef847b9a/model.urdf",
+  "created": "2026-09-02T17:08:39",
+  "updated": "2026-09-02T18:13:32",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 46,
+        "n_tiny": 39
+      },
+      "seed": null,
+      "started": "2026-09-02T17:09:45",
+      "finished": "2026-09-02T17:09:46",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; metal on the frame; plastic on the top cover; metal on the legs; plastic on the side panels; metal on the support beams; plastic on the control panel; plastic on the coin slot; me",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T17:09:48",
+      "finished": "2026-09-02T17:17:00",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_arcade_machine_47acfa133aff429f826dc960ef847b9a_two_player_arcade_machine_urdf_20260902-170839/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T17:17:00",
+      "finished": "2026-09-02T17:56:41",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 46,
+            "n_total": 46,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_arcade_machine_47acfa133aff429f826dc960ef847b9a_two_player_arcade_machine_urdf_20260902-170839/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T17:56:42",
+      "finished": "2026-09-02T18:13:32",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_47acfa133aff429f826dc960ef847b9a",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_47acfa133aff429f826dc960ef847b9a/model.urdf",
+    "category": "two player arcade machine",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.41,
+        -0.376,
+        0.0
+      ],
+      "max": [
+        0.41,
+        0.43,
+        1.74
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "cabinet__lower_shell",
+        "link": "cabinet",
+        "label": "lower_shell",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.37568649103693524,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__rear_tower",
+        "link": "cabinet",
+        "label": "rear_tower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.23655652513861958,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__marquee_top",
+        "link": "cabinet",
+        "label": "marquee_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05095501564357752,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__marquee_face",
+        "link": "cabinet",
+        "label": "marquee_face",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011881912586385036,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__control_deck",
+        "link": "cabinet",
+        "label": "control_deck",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/control_deck_shell.obj"
+        ],
+        "n_faces": 276,
+        "area_frac": 0.05809909835315509,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "cabinet__deck_skirt",
+        "link": "cabinet",
+        "label": "deck_skirt",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.024765845592129854,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_left_bezel",
+        "link": "cabinet",
+        "label": "monitor_left_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009634127434007399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_right_bezel",
+        "link": "cabinet",
+        "label": "monitor_right_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009634127434007399,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_top_bezel",
+        "link": "cabinet",
+        "label": "monitor_top_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01230250496411346,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_bottom_bezel",
+        "link": "cabinet",
+        "label": "monitor_bottom_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01230250496411346,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_screen",
+        "link": "cabinet",
+        "label": "monitor_screen",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03638301982908178,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__monitor_backer",
+        "link": "cabinet",
+        "label": "monitor_backer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.10568184110434718,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__coin_panel",
+        "link": "cabinet",
+        "label": "coin_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013813363877679313,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__left_coin_slot",
+        "link": "cabinet",
+        "label": "left_coin_slot",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005437099434594028,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__right_coin_slot",
+        "link": "cabinet",
+        "label": "right_coin_slot",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005437099434594028,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__left_coin_return",
+        "link": "cabinet",
+        "label": "left_coin_return",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002668733361220893,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__right_coin_return",
+        "link": "cabinet",
+        "label": "right_coin_return",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002668733361220893,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__service_frame_top",
+        "link": "cabinet",
+        "label": "service_frame_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0029505516041658172,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__service_frame_left",
+        "link": "cabinet",
+        "label": "service_frame_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0015343437671445977,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__service_frame_right",
+        "link": "cabinet",
+        "label": "service_frame_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0015343437671445977,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__joystick_collar_0",
+        "link": "cabinet",
+        "label": "joystick_collar_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00024020298745173942,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_0_0",
+        "link": "cabinet",
+        "label": "action_button_guide_0_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00026678472352569796,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_0_1",
+        "link": "cabinet",
+        "label": "action_button_guide_0_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00026678472352569796,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_0_2",
+        "link": "cabinet",
+        "label": "action_button_guide_0_2",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002667847235256978,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__joystick_collar_1",
+        "link": "cabinet",
+        "label": "joystick_collar_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00024020298745173942,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_1_0",
+        "link": "cabinet",
+        "label": "action_button_guide_1_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002667847235256979,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_1_1",
+        "link": "cabinet",
+        "label": "action_button_guide_1_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00026678472352569796,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__action_button_guide_1_2",
+        "link": "cabinet",
+        "label": "action_button_guide_1_2",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002667847235256978,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__left_button_sleeve",
+        "link": "cabinet",
+        "label": "left_button_sleeve",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001115886376105161,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "cabinet__right_button_sleeve",
+        "link": "cabinet",
+        "label": "right_button_sleeve",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001115886376105161,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "service_hatch__hatch_panel",
+        "link": "service_hatch",
+        "label": "hatch_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02273404992645367,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "service_hatch__hatch_pull",
+        "link": "service_hatch",
+        "label": "hatch_pull",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011842059501524147,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "player_0_joystick__joystick_shaft",
+        "link": "player_0_joystick",
+        "label": "joystick_shaft",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00033455575194724747,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "player_0_joystick__joystick_ball",
+        "link": "player_0_joystick",
+        "label": "joystick_ball",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005609573187804482,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "player_1_joystick__joystick_shaft",
+        "link": "player_1_joystick",
+        "label": "joystick_shaft",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00033455575194724747,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "player_1_joystick__joystick_ball",
+        "link": "player_1_joystick",
+        "label": "joystick_ball",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005609573187804482,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "action_button_0_0__button_cap",
+        "link": "action_button_0_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "action_button_0_1__button_cap",
+        "link": "action_button_0_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "action_button_0_2__button_cap",
+        "link": "action_button_0_2",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "action_button_1_0__button_cap",
+        "link": "action_button_1_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "action_button_1_1__button_cap",
+        "link": "action_button_1_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "action_button_1_2__button_cap",
+        "link": "action_button_1_2",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0002803819231116128,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "left_start_button__button_plunger",
+        "link": "left_start_button",
+        "label": "button_plunger",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.000518565909808123,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "left_start_button__button_cap",
+        "link": "left_start_button",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0009608119498069577,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "right_start_button__button_plunger",
+        "link": "right_start_button",
+        "label": "button_plunger",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.000518565909808123,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "right_start_button__button_cap",
+        "link": "right_start_button",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0009608119498069577,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

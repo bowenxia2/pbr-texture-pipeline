@@ -1,0 +1,426 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750_track_pump_urdf_20260903-143725",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750/model.urdf",
+  "created": "2026-09-03T14:37:25",
+  "updated": "2026-09-03T15:14:21",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 26,
+        "n_tiny": 13
+      },
+      "seed": null,
+      "started": "2026-09-03T14:37:33",
+      "finished": "2026-09-03T14:37:34",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the base; metal on the shaft; rubber on the handle grip",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T14:37:37",
+      "finished": "2026-09-03T14:39:10",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750_track_pump_urdf_20260903-143725/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T14:39:10",
+      "finished": "2026-09-03T15:05:51",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 26,
+            "n_total": 26,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750_track_pump_urdf_20260903-143725/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T15:05:52",
+      "finished": "2026-09-03T15:14:21",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_4b869ff655544218bc099e28a209c750/model.urdf",
+    "category": "track pump",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.21,
+        -0.12400002203921037,
+        0.0
+      ],
+      "max": [
+        0.21,
+        0.08,
+        0.9660002754902208
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__foot_plate",
+        "link": "body",
+        "label": "foot_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.30516837377026246,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__pump_head",
+        "link": "body",
+        "label": "pump_head",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.061916157924470236,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__barrel",
+        "link": "body",
+        "label": "barrel",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.1774639003173134,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__lower_band",
+        "link": "body",
+        "label": "lower_band",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03079458823330289,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__top_collar",
+        "link": "body",
+        "label": "top_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.030467100709920387,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__foot_pad_0",
+        "link": "body",
+        "label": "foot_pad_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04547635047555918,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__foot_pad_1",
+        "link": "body",
+        "label": "foot_pad_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04547635047555918,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_neck",
+        "link": "body",
+        "label": "gauge_neck",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0067825054170710455,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__gauge_case",
+        "link": "body",
+        "label": "gauge_case",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04753906254944425,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__gauge_dial",
+        "link": "body",
+        "label": "gauge_dial",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.027734264537112058,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__gauge_tick_0",
+        "link": "body",
+        "label": "gauge_tick_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002846719904573339,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_tick_1",
+        "link": "body",
+        "label": "gauge_tick_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002846719904573341,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_tick_2",
+        "link": "body",
+        "label": "gauge_tick_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00028467199045733476,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_tick_3",
+        "link": "body",
+        "label": "gauge_tick_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002846719904573341,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__gauge_tick_4",
+        "link": "body",
+        "label": "gauge_tick_4",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0002846719904573339,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__parked_hose",
+        "link": "body",
+        "label": "parked_hose",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/parked_hose.obj"
+        ],
+        "n_faces": 2628,
+        "area_frac": 0.033588057737049114,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__hose_port",
+        "link": "body",
+        "label": "hose_port",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.003760512140356751,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__hose_clip_0",
+        "link": "body",
+        "label": "hose_clip_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007230668557616297,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__hose_clip_1",
+        "link": "body",
+        "label": "hose_clip_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007230668557616297,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle__piston_rod",
+        "link": "handle",
+        "label": "piston_rod",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.019150502143431385,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__crossbar",
+        "link": "handle",
+        "label": "crossbar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.07592266907815907,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__handle_boss",
+        "link": "handle",
+        "label": "handle_boss",
+        "semantic_id": null,
+        "objs": [
+          "<sphere>"
+        ],
+        "n_faces": 1280,
+        "area_frac": 0.012816893448789874,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "grip__grip_sleeve",
+        "link": "grip",
+        "label": "grip_sleeve",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04657777122173092,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "grip__folding_tab",
+        "link": "grip",
+        "label": "folding_tab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.011547007612925627,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "needle__pointer",
+        "link": "needle",
+        "label": "pointer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011315711620679043,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "needle__pivot_cap",
+        "link": "needle",
+        "label": "pivot_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0008016639779548608,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

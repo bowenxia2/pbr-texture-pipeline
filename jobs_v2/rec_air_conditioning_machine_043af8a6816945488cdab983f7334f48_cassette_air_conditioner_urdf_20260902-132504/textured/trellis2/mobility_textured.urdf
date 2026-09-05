@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="cassette_air_conditioner">
+	<material name="panel_white">
+		<color rgba="0.93 0.94 0.92 1" />
+	</material>
+	<material name="panel_shadow">
+		<color rgba="0.73 0.76 0.77 1" />
+	</material>
+	<material name="grille_grey">
+		<color rgba="0.66 0.69 0.71 1" />
+	</material>
+	<material name="cavity_dark">
+		<color rgba="0.17 0.19 0.21 1" />
+	</material>
+	<material name="dial_grey">
+		<color rgba="0.8 0.82 0.83 1" />
+	</material>
+	<material name="dial_mark">
+		<color rgba="0.23 0.28 0.31 1" />
+	</material>
+	<link name="panel">
+		<collision name="fascia">
+			<geometry>
+				<mesh filename="assets/meshes/cassette_panel.obj" />
+			</geometry>
+		</collision>
+		<collision name="plenum">
+			<origin xyz="0 0 0.13" rpy="0 0 0" />
+			<geometry>
+				<box size="0.66 0.66 0.17" />
+			</geometry>
+		</collision>
+		<collision name="grille_face">
+			<origin xyz="0 0 0.004" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/cassette_center_grille.obj" />
+			</geometry>
+		</collision>
+		<collision name="mount_frame">
+			<origin xyz="0 0 0.013" rpy="0 0 0" />
+			<geometry>
+				<box size="0.432 0.432 0.006" />
+			</geometry>
+		</collision>
+		<visual name="panel__fascia">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__fascia.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__plenum">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__plenum.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__grille_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__grille_face.glb" />
+			</geometry>
+		</visual>
+		<visual name="panel__mount_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/panel__mount_frame.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap_0">
+		<collision name="barrel">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.492" />
+			</geometry>
+		</collision>
+		<collision name="blade">
+			<origin xyz="0 -0.0475 -0.0135" rpy="0 0 0" />
+			<geometry>
+				<box size="0.492 0.119 0.015" />
+			</geometry>
+		</collision>
+		<collision name="rib_0">
+			<origin xyz="-0.16728 -0.02618 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03808 0.00975" />
+			</geometry>
+		</collision>
+		<collision name="rib_1">
+			<origin xyz="0.16728 -0.02618 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03808 0.00975" />
+			</geometry>
+		</collision>
+		<visual name="flap_0__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_0__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_0__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_0__blade.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_0__rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_0__rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_0__rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_0__rib_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap_1">
+		<collision name="barrel">
+			<origin xyz="0 0 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.492" />
+			</geometry>
+		</collision>
+		<collision name="blade">
+			<origin xyz="-0.0475 0 -0.0135" rpy="0 0 0" />
+			<geometry>
+				<box size="0.119 0.492 0.015" />
+			</geometry>
+		</collision>
+		<collision name="rib_0">
+			<origin xyz="-0.02618 -0.16728 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03808 0.04 0.00975" />
+			</geometry>
+		</collision>
+		<collision name="rib_1">
+			<origin xyz="-0.02618 0.16728 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03808 0.04 0.00975" />
+			</geometry>
+		</collision>
+		<visual name="flap_1__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_1__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_1__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_1__blade.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_1__rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_1__rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_1__rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_1__rib_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap_2">
+		<collision name="barrel">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.492" />
+			</geometry>
+		</collision>
+		<collision name="blade">
+			<origin xyz="0 0.0475 -0.0135" rpy="0 0 0" />
+			<geometry>
+				<box size="0.492 0.119 0.015" />
+			</geometry>
+		</collision>
+		<collision name="rib_0">
+			<origin xyz="-0.16728 0.02618 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03808 0.00975" />
+			</geometry>
+		</collision>
+		<collision name="rib_1">
+			<origin xyz="0.16728 0.02618 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.04 0.03808 0.00975" />
+			</geometry>
+		</collision>
+		<visual name="flap_2__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_2__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_2__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_2__blade.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_2__rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_2__rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_2__rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_2__rib_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap_3">
+		<collision name="barrel">
+			<origin xyz="0 0 0" rpy="-1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.492" />
+			</geometry>
+		</collision>
+		<collision name="blade">
+			<origin xyz="0.0475 0 -0.0135" rpy="0 0 0" />
+			<geometry>
+				<box size="0.119 0.492 0.015" />
+			</geometry>
+		</collision>
+		<collision name="rib_0">
+			<origin xyz="0.02618 -0.16728 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03808 0.04 0.00975" />
+			</geometry>
+		</collision>
+		<collision name="rib_1">
+			<origin xyz="0.02618 0.16728 -0.0115" rpy="0 0 0" />
+			<geometry>
+				<box size="0.03808 0.04 0.00975" />
+			</geometry>
+		</collision>
+		<visual name="flap_3__barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_3__barrel.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_3__blade">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_3__blade.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_3__rib_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_3__rib_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap_3__rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap_3__rib_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="selector_dial">
+		<collision name="dial_body">
+			<origin xyz="0 0 0" rpy="3.14159 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/cassette_selector_dial.obj" />
+			</geometry>
+		</collision>
+		<visual name="selector_dial__dial_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/selector_dial__dial_body.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="panel_to_flap_0" type="revolute">
+		<origin xyz="0 0.358 0.006" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="flap_0" />
+		<axis xyz="1 0 0" />
+		<limit effort="2.5" velocity="1.2" lower="0" upper="1.1" />
+	</joint>
+	<joint name="panel_to_flap_1" type="revolute">
+		<origin xyz="0.358 0 0.006" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="flap_1" />
+		<axis xyz="0 -1 0" />
+		<limit effort="2.5" velocity="1.2" lower="0" upper="1.1" />
+	</joint>
+	<joint name="panel_to_flap_2" type="revolute">
+		<origin xyz="0 -0.358 0.006" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="flap_2" />
+		<axis xyz="-1 0 0" />
+		<limit effort="2.5" velocity="1.2" lower="0" upper="1.1" />
+	</joint>
+	<joint name="panel_to_flap_3" type="revolute">
+		<origin xyz="-0.358 0 0.006" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="flap_3" />
+		<axis xyz="0 1 0" />
+		<limit effort="2.5" velocity="1.2" lower="0" upper="1.1" />
+	</joint>
+	<joint name="panel_to_selector_dial" type="continuous">
+		<origin xyz="0.357 0.357 0" rpy="0 0 0" />
+		<parent link="panel" />
+		<child link="selector_dial" />
+		<axis xyz="0 0 -1" />
+		<limit effort="0.15" velocity="5" />
+	</joint>
+</robot>

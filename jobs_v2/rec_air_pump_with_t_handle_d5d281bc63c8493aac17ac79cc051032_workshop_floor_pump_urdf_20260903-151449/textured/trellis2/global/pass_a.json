@@ -1,0 +1,37 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 806272,
+  "groups": {
+    "frame": {
+      "texture_size": 1024,
+      "n_faces": 3140,
+      "texels": 860663,
+      "field_voxels": 523870
+    },
+    "handle": {
+      "texture_size": 1024,
+      "n_faces": 408,
+      "texels": 792403,
+      "field_voxels": 136090
+    },
+    "gauge": {
+      "texture_size": 1024,
+      "n_faces": 1648,
+      "texels": 782272,
+      "field_voxels": 63115
+    },
+    "needle": {
+      "texture_size": 1024,
+      "n_faces": 152,
+      "texels": 605274,
+      "field_voxels": 932
+    },
+    "button": {
+      "texture_size": 1024,
+      "n_faces": 256,
+      "texels": 658360,
+      "field_voxels": 801
+    }
+  }
+}

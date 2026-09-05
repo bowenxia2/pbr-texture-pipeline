@@ -1,0 +1,49 @@
+{
+  "group_order": [
+    "body_shell",
+    "front_intake",
+    "top_grille",
+    "control_pod",
+    "filter_door",
+    "selector_dial",
+    "power_rocker"
+  ],
+  "face_ranges": {
+    "body_shell": [
+      0,
+      1012
+    ],
+    "front_intake": [
+      1012,
+      2488
+    ],
+    "top_grille": [
+      2488,
+      3304
+    ],
+    "control_pod": [
+      3304,
+      3476
+    ],
+    "filter_door": [
+      3476,
+      4944
+    ],
+    "selector_dial": [
+      4944,
+      5484
+    ],
+    "power_rocker": [
+      5484,
+      5624
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.0027499999999999955,
+      0.29104998898041845
+    ],
+    "scale": 1.694611019576667
+  }
+}

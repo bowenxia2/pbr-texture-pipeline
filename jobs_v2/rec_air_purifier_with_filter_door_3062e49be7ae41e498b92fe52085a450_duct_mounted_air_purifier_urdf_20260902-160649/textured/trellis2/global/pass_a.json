@@ -1,0 +1,235 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 4657986,
+  "groups": {
+    "housing__bottom_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56418,
+      "field_voxels": 56418
+    },
+    "housing__top_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56418,
+      "field_voxels": 56418
+    },
+    "housing__right_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59463,
+      "field_voxels": 59382
+    },
+    "housing__left_wall": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59463,
+      "field_voxels": 59382
+    },
+    "housing__front_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46920,
+      "field_voxels": 46920
+    },
+    "housing__rear_top_rail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52444,
+      "field_voxels": 41455
+    },
+    "housing__rear_bottom_sill": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 61273,
+      "field_voxels": 38515
+    },
+    "housing__rear_left_jamb": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52910,
+      "field_voxels": 39971
+    },
+    "housing__rear_right_jamb": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52910,
+      "field_voxels": 39962
+    },
+    "housing__left_filter_shelf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58523,
+      "field_voxels": 40704
+    },
+    "housing__right_filter_shelf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58523,
+      "field_voxels": 40704
+    },
+    "housing__upper_filter_guide": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 45350,
+      "field_voxels": 45349
+    },
+    "housing__left_duct_flange": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 620337,
+      "field_voxels": 72434
+    },
+    "housing__left_duct_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 668099,
+      "field_voxels": 96953
+    },
+    "housing__right_duct_flange": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 619435,
+      "field_voxels": 72383
+    },
+    "housing__right_duct_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 691754,
+      "field_voxels": 96728
+    },
+    "housing__control_box": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52139,
+      "field_voxels": 42661
+    },
+    "housing__status_window": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57506,
+      "field_voxels": 6385
+    },
+    "housing__hinge_mount_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57795,
+      "field_voxels": 8760
+    },
+    "housing__hinge_ear_0_a": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57789,
+      "field_voxels": 2276
+    },
+    "housing__hinge_ear_0_b": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57789,
+      "field_voxels": 2178
+    },
+    "housing__hinge_mount_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57795,
+      "field_voxels": 8760
+    },
+    "housing__hinge_ear_1_a": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57789,
+      "field_voxels": 2178
+    },
+    "housing__hinge_ear_1_b": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57789,
+      "field_voxels": 2276
+    },
+    "rear_door__door_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 36269,
+      "field_voxels": 36269
+    },
+    "rear_door__service_pull": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56302,
+      "field_voxels": 12960
+    },
+    "rear_door__left_hinge_leaf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55288,
+      "field_voxels": 4632
+    },
+    "rear_door__left_hinge_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 797860,
+      "field_voxels": 3998
+    },
+    "rear_door__right_hinge_leaf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55288,
+      "field_voxels": 4632
+    },
+    "rear_door__right_hinge_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 803171,
+      "field_voxels": 3998
+    },
+    "filter_frame__left_runner": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51940,
+      "field_voxels": 24652
+    },
+    "filter_frame__right_runner": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51940,
+      "field_voxels": 24652
+    },
+    "filter_frame__top_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52780,
+      "field_voxels": 33219
+    },
+    "filter_frame__bottom_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52780,
+      "field_voxels": 33465
+    },
+    "filter_frame__left_frame_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55398,
+      "field_voxels": 33467
+    },
+    "filter_frame__right_frame_side": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55398,
+      "field_voxels": 33424
+    },
+    "filter_frame__filter_media": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59959,
+      "field_voxels": 59951
+    },
+    "filter_frame__filter_pull_tab": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57855,
+      "field_voxels": 9906
+    }
+  }
+}

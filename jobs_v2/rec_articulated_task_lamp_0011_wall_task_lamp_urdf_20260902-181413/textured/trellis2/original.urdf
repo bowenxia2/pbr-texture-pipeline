@@ -1,0 +1,243 @@
+<robot name="wall_task_lamp">
+  <material name="painted_steel">
+    <color rgba="0.18 0.19 0.21 1" />
+    </material>
+  <material name="hinge_black">
+    <color rgba="0.08 0.08 0.09 1" />
+    </material>
+  <material name="shade_white">
+    <color rgba="0.91 0.9 0.85 1" />
+    </material>
+  <material name="diffuser_metal">
+    <color rgba="0.82 0.82 0.8 1" />
+    </material>
+  <link name="wall_mount">
+    <inertial>
+      <origin xyz="0.025 0 0.17" rpy="0 0 0" />
+      <mass value="1.6" />
+      <inertia ixx="0.00753333" ixy="0" ixz="0" iyy="0.00678667" iyz="0" izz="0.00141333" />
+      </inertial>
+    <visual name="backplate">
+      <origin xyz="0.008 0 0.17" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.09 0.22" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="spine_rib">
+      <origin xyz="0.025 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.034 0.1" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_bridge">
+      <origin xyz="0.028 0 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.028 0.016" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_upper_cheek">
+      <origin xyz="0.042 0.01 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.048" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shoulder_lower_cheek">
+      <origin xyz="0.042 -0.01 0.22" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.048" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="upper_arm">
+    <inertial>
+      <origin xyz="0.122 0 0" rpy="0 0 0" />
+      <mass value="0.68" />
+      <inertia ixx="0.000126253" ixy="0" ixz="0" iyy="0.00345553" iyz="0" izz="0.00341813" />
+      </inertial>
+    <visual name="rear_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.111 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.21" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="elbow_bridge">
+      <origin xyz="0.211 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.028 0.012" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="elbow_upper_cheek">
+      <origin xyz="0.229 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="elbow_lower_cheek">
+      <origin xyz="0.229 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.018 0.006 0.038" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="forearm">
+    <inertial>
+      <origin xyz="0.103 0 0" rpy="0 0 0" />
+      <mass value="0.54" />
+      <inertia ixx="8.73e-05" ixy="0" ixz="0" iyy="0.00194314" iyz="0" izz="0.0019264" />
+      </inertial>
+    <visual name="rear_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="beam">
+      <origin xyz="0.091 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.17" />
+        </geometry>
+      <material name="painted_steel">
+        <color rgba="0.18 0.19 0.21 1" />
+        </material>
+      </visual>
+    <visual name="tip_bridge">
+      <origin xyz="0.173 0 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.02 0.028 0.012" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_upper_cheek">
+      <origin xyz="0.191 0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.034" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="pivot_lower_cheek">
+      <origin xyz="0.191 -0.01 0" rpy="0 0 0" />
+      <geometry>
+        <box size="0.016 0.006 0.034" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="shade">
+    <inertial>
+      <origin xyz="0.074 0 0" rpy="0 0 0" />
+      <mass value="0.36" />
+      <inertia ixx="0.00036504" ixy="0" ixz="0" iyy="0.00072927" iyz="0" izz="0.00072927" />
+      </inertial>
+    <visual name="pivot_hub">
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.006" length="0.014" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="neck">
+      <origin xyz="0.022 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.008" length="0.04" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shade_collar">
+      <origin xyz="0.049 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.018" length="0.014" />
+        </geometry>
+      <material name="hinge_black">
+        <color rgba="0.08 0.08 0.09 1" />
+        </material>
+      </visual>
+    <visual name="shade_shell">
+      <origin xyz="0.089 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/task_lamp_shade_shell.obj" />
+        </geometry>
+      <material name="shade_white">
+        <color rgba="0.91 0.9 0.85 1" />
+        </material>
+      </visual>
+    <visual name="front_rim">
+      <origin xyz="0.125 0 0" rpy="0 1.5708 0" />
+      <geometry>
+        <mesh filename="assets/meshes/task_lamp_front_rim.obj" />
+        </geometry>
+      <material name="diffuser_metal">
+        <color rgba="0.82 0.82 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="shoulder_hinge" type="revolute">
+    <origin xyz="0.042 0 0.22" rpy="0 0 0" />
+    <parent link="wall_mount" />
+    <child link="upper_arm" />
+    <axis xyz="0 1 0" />
+    <limit effort="12" velocity="2.5" lower="0" upper="1.15" />
+    </joint>
+  <joint name="elbow_hinge" type="revolute">
+    <origin xyz="0.229 0 0" rpy="0 0 0" />
+    <parent link="upper_arm" />
+    <child link="forearm" />
+    <axis xyz="0 1 0" />
+    <limit effort="10" velocity="2.5" lower="-1.05" upper="0.2" />
+    </joint>
+  <joint name="shade_pivot" type="revolute">
+    <origin xyz="0.191 0 0" rpy="0 0 0" />
+    <parent link="forearm" />
+    <child link="shade" />
+    <axis xyz="0 1 0" />
+    <limit effort="4" velocity="3" lower="-0.85" upper="0.65" />
+    </joint>
+  </robot>

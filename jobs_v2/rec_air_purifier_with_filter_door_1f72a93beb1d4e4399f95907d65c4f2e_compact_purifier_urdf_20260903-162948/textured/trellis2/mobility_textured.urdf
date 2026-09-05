@@ -1,0 +1,378 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="compact_purifier">
+	<material name="shell_white">
+		<color rgba="0.92 0.94 0.95 1" />
+	</material>
+	<material name="trim_gray">
+		<color rgba="0.74 0.77 0.79 1" />
+	</material>
+	<material name="filter_gray">
+		<color rgba="0.46 0.5 0.53 1" />
+	</material>
+	<material name="switch_black">
+		<color rgba="0.09 0.1 0.11 1" />
+	</material>
+	<link name="body">
+		<collision name="back_wall">
+			<origin xyz="-0.088 0 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.22 0.42" />
+			</geometry>
+		</collision>
+		<collision name="side_wall_0">
+			<origin xyz="0.00175 0.108 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1765 0.004 0.42" />
+			</geometry>
+		</collision>
+		<collision name="side_wall_1">
+			<origin xyz="0.00175 -0.108 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1765 0.004 0.42" />
+			</geometry>
+		</collision>
+		<collision name="base_wall">
+			<origin xyz="0.00175 0 0.002" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1765 0.2125 0.004" />
+			</geometry>
+		</collision>
+		<collision name="top_wall">
+			<origin xyz="0.00175 0 0.418" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1765 0.2125 0.004" />
+			</geometry>
+		</collision>
+		<collision name="lower_rail">
+			<origin xyz="0.088 0 0.02025" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.22 0.0405" />
+			</geometry>
+		</collision>
+		<collision name="upper_front">
+			<origin xyz="0.088 0 0.30925" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.22 0.2225" />
+			</geometry>
+		</collision>
+		<collision name="front_stile_0">
+			<origin xyz="0.088 0.10075 0.119" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.0195 0.1585" />
+			</geometry>
+		</collision>
+		<collision name="front_stile_1">
+			<origin xyz="0.088 -0.10075 0.119" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.0195 0.1585" />
+			</geometry>
+		</collision>
+		<collision name="guide_rail_0">
+			<origin xyz="-0.012 -0.095 0.119" rpy="0 0 0" />
+			<geometry>
+				<box size="0.11 0.022 0.012" />
+			</geometry>
+		</collision>
+		<collision name="guide_rail_1">
+			<origin xyz="-0.012 0.095 0.119" rpy="0 0 0" />
+			<geometry>
+				<box size="0.11 0.022 0.012" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_0">
+			<origin xyz="-0.008 -0.056 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_1">
+			<origin xyz="-0.008 -0.034 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_2">
+			<origin xyz="-0.008 -0.012 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_3">
+			<origin xyz="-0.008 0.012 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_4">
+			<origin xyz="-0.008 0.034 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<collision name="top_vent_5">
+			<origin xyz="-0.008 0.056 0.419" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.008 0.002" />
+			</geometry>
+		</collision>
+		<visual name="body__back_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__back_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__side_wall_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__side_wall_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__side_wall_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__side_wall_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__base_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__base_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__lower_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__lower_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__upper_front">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__upper_front.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_stile_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_stile_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_stile_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_stile_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__guide_rail_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__guide_rail_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__guide_rail_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__guide_rail_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_5.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_panel">
+		<collision name="panel">
+			<geometry>
+				<mesh filename="assets/meshes/front_panel.obj" />
+			</geometry>
+		</collision>
+		<collision name="hinge_leaf">
+			<origin xyz="0.0005 0 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.001 0.006 0.144" />
+			</geometry>
+		</collision>
+		<collision name="knuckle_0">
+			<origin xyz="0.0045 0 -0.057" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0045" length="0.036" />
+			</geometry>
+		</collision>
+		<collision name="knuckle_1">
+			<origin xyz="0.0045 0 0" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0045" length="0.048" />
+			</geometry>
+		</collision>
+		<collision name="knuckle_2">
+			<origin xyz="0.0045 0 0.057" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0045" length="0.036" />
+			</geometry>
+		</collision>
+		<visual name="front_panel__panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__hinge_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__knuckle_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__knuckle_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__knuckle_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__knuckle_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_panel__knuckle_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_panel__knuckle_2.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter">
+		<collision name="cartridge">
+			<geometry>
+				<mesh filename="assets/meshes/filter_cartridge.obj" />
+			</geometry>
+		</collision>
+		<visual name="filter__cartridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter__cartridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rocker_switch">
+		<collision name="switch_front">
+			<origin xyz="0.006 0 0.001" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.018 0.005" />
+			</geometry>
+		</collision>
+		<collision name="switch_rear">
+			<origin xyz="-0.006 0 0.001" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.018 0.005" />
+			</geometry>
+		</collision>
+		<collision name="switch_bridge">
+			<origin xyz="0 0 -0.001" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.018 0.004" />
+			</geometry>
+		</collision>
+		<collision name="switch_tab_0">
+			<origin xyz="0 0.0105 -0.002" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.003 0.006" />
+			</geometry>
+		</collision>
+		<collision name="switch_tab_1">
+			<origin xyz="0 -0.0105 -0.002" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.003 0.006" />
+			</geometry>
+		</collision>
+		<visual name="rocker_switch__switch_front">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rocker_switch__switch_front.glb" />
+			</geometry>
+		</visual>
+		<visual name="rocker_switch__switch_rear">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rocker_switch__switch_rear.glb" />
+			</geometry>
+		</visual>
+		<visual name="rocker_switch__switch_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rocker_switch__switch_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="rocker_switch__switch_tab_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rocker_switch__switch_tab_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="rocker_switch__switch_tab_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rocker_switch__switch_tab_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_front_panel" type="revolute">
+		<origin xyz="0.09 -0.089 0.119" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="front_panel" />
+		<axis xyz="0 0 -1" />
+		<limit effort="6" velocity="1.6" lower="0" upper="1.36136" />
+	</joint>
+	<joint name="body_to_filter" type="prismatic">
+		<origin xyz="0.062 0 0.119" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="filter" />
+		<axis xyz="1 0 0" />
+		<limit effort="18" velocity="0.15" lower="0" upper="0.095" />
+	</joint>
+	<joint name="body_to_rocker_switch" type="revolute">
+		<origin xyz="-0.028 0 0.425" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="rocker_switch" />
+		<axis xyz="0 -1 0" />
+		<limit effort="0.5" velocity="2.5" lower="-0.3" upper="0.3" />
+	</joint>
+</robot>

@@ -1,0 +1,67 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 7094292,
+  "groups": {
+    "body__body_shell": {
+      "texture_size": 1024,
+      "n_faces": 1640,
+      "texels": 743670,
+      "field_voxels": 743421
+    },
+    "drawer__drawer_shell": {
+      "texture_size": 1024,
+      "n_faces": 656,
+      "texels": 748824,
+      "field_voxels": 747669
+    },
+    "basket__basket_shell": {
+      "texture_size": 1024,
+      "n_faces": 340,
+      "texels": 820476,
+      "field_voxels": 814354
+    },
+    "handle__handle_shell": {
+      "texture_size": 1024,
+      "n_faces": 156,
+      "texels": 799944,
+      "field_voxels": 275994
+    },
+    "release_button__release_button_cap": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 845260,
+      "field_voxels": 20940
+    },
+    "control_panel__control_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58416,
+      "field_voxels": 58106
+    },
+    "temperature_dial__temperature_dial": {
+      "texture_size": 1024,
+      "n_faces": 1508,
+      "texels": 616044,
+      "field_voxels": 31470
+    },
+    "time_dial__time_dial": {
+      "texture_size": 1024,
+      "n_faces": 1508,
+      "texels": 568155,
+      "field_voxels": 31548
+    },
+    "keep_warm_bezel__keep_warm_bezel": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 673068,
+      "field_voxels": 15600
+    },
+    "keep_warm_button__keep_warm_cap": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 816035,
+      "field_voxels": 15832
+    }
+  }
+}

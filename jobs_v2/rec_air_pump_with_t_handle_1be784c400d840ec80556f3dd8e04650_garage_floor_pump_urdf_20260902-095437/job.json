@@ -1,0 +1,517 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650_garage_floor_pump_urdf_20260902-095437",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650/model.urdf",
+  "created": "2026-09-02T09:54:37",
+  "updated": "2026-09-02T10:47:48",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 33,
+        "n_tiny": 17
+      },
+      "seed": null,
+      "started": "2026-09-02T09:56:46",
+      "finished": "2026-09-02T09:56:47",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "rubber on the handle grip; plastic on the body; metal on the base; metal on the nozzle; metal on the hose connector",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T09:56:47",
+      "finished": "2026-09-02T10:03:14",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650_garage_floor_pump_urdf_20260902-095437/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T10:03:14",
+      "finished": "2026-09-02T10:37:54",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 33,
+            "n_total": 33,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650_garage_floor_pump_urdf_20260902-095437/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T10:37:55",
+      "finished": "2026-09-02T10:47:48",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_1be784c400d840ec80556f3dd8e04650/model.urdf",
+    "category": "garage floor pump",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.18,
+        -0.06,
+        0.0
+      ],
+      "max": [
+        0.18,
+        0.063,
+        1.117
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "base_frame__base_spine",
+        "link": "base_frame",
+        "label": "base_spine",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08883558476471307,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__left_tread",
+        "link": "base_frame",
+        "label": "left_tread",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04919128919576096,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__right_tread",
+        "link": "base_frame",
+        "label": "right_tread",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04919128919576096,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__pedestal",
+        "link": "base_frame",
+        "label": "pedestal",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05461203981437277,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__barrel_collar",
+        "link": "base_frame",
+        "label": "barrel_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0333773338604853,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__barrel_shell",
+        "link": "base_frame",
+        "label": "barrel_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/barrel_shell.obj"
+        ],
+        "n_faces": 672,
+        "area_frac": 0.3245019042454566,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__top_bushing",
+        "link": "base_frame",
+        "label": "top_bushing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/top_bushing.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.012455415673869643,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__stop_pad_0",
+        "link": "base_frame",
+        "label": "stop_pad_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011650568493732866,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__stop_pad_1",
+        "link": "base_frame",
+        "label": "stop_pad_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011650568493732866,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__gauge_bracket",
+        "link": "base_frame",
+        "label": "gauge_bracket",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02029140679325139,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__gauge_shell",
+        "link": "base_frame",
+        "label": "gauge_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/gauge_shell.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.03474053651358041,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__gauge_back",
+        "link": "base_frame",
+        "label": "gauge_back",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.022737278002114825,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__gauge_face",
+        "link": "base_frame",
+        "label": "gauge_face",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.021776354201934266,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__pivot_post",
+        "link": "base_frame",
+        "label": "pivot_post",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.00022154791701585314,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__gauge_lens",
+        "link": "base_frame",
+        "label": "gauge_lens",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.024522261598302317,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__hose_outlet_block",
+        "link": "base_frame",
+        "label": "hose_outlet_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004045336282546134,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__hose_support",
+        "link": "base_frame",
+        "label": "hose_support",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005868434500546922,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__hose_coupler",
+        "link": "base_frame",
+        "label": "hose_coupler",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0033794983707146394,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__hose",
+        "link": "base_frame",
+        "label": "hose",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/hose.obj"
+        ],
+        "n_faces": 3924,
+        "area_frac": 0.04093333787860139,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__hose_head",
+        "link": "base_frame",
+        "label": "hose_head",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004740530556984284,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "base_frame__clip_back",
+        "link": "base_frame",
+        "label": "clip_back",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009244941851045418,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__clip_upper",
+        "link": "base_frame",
+        "label": "clip_upper",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026645281647703868,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "base_frame__clip_lower",
+        "link": "base_frame",
+        "label": "clip_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0026645281647703868,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "handle_assembly__rod",
+        "link": "handle_assembly",
+        "label": "rod",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.05669091360059184,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle_assembly__guide_collar",
+        "link": "handle_assembly",
+        "label": "guide_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005844074919561219,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle_assembly__handle_block",
+        "link": "handle_assembly",
+        "label": "handle_block",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01302058904808849,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "handle_assembly__crossbar",
+        "link": "handle_assembly",
+        "label": "crossbar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.03166436453737699,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "handle_assembly__rod_collar",
+        "link": "handle_assembly",
+        "label": "rod_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004861915663679273,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "grip__grip_sleeve",
+        "link": "grip",
+        "label": "grip_sleeve",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/grip_sleeve.obj"
+        ],
+        "n_faces": 448,
+        "area_frac": 0.04246498982045144,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "grip__grip_body",
+        "link": "grip",
+        "label": "grip_body",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.031629135947800695,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "needle__pivot",
+        "link": "needle",
+        "label": "pivot",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005060693824541061,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "needle__pointer",
+        "link": "needle",
+        "label": "pointer",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0008090672565092263,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "needle__tail",
+        "link": "needle",
+        "label": "tail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0001833885781420913,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

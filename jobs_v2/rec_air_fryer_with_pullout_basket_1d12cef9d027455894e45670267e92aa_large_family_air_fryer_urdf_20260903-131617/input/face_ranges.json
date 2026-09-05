@@ -1,0 +1,114 @@
+{
+  "group_order": [
+    "body__base_shell",
+    "body__rear_shell",
+    "body__left_shell",
+    "body__right_shell",
+    "body__top_shell",
+    "body__sloped_panel",
+    "body__front_upper",
+    "body__lower_sill",
+    "body__left_frame",
+    "body__right_frame",
+    "body__left_guide",
+    "body__right_guide",
+    "drawer__drawer_shell",
+    "basket__basket_shell",
+    "selector_knob__knob",
+    "preset_button_0__button",
+    "preset_button_1__button",
+    "preset_button_2__button",
+    "preset_button_3__button",
+    "latch_button__button"
+  ],
+  "face_ranges": {
+    "body__base_shell": [
+      0,
+      12
+    ],
+    "body__rear_shell": [
+      12,
+      24
+    ],
+    "body__left_shell": [
+      24,
+      36
+    ],
+    "body__right_shell": [
+      36,
+      48
+    ],
+    "body__top_shell": [
+      48,
+      60
+    ],
+    "body__sloped_panel": [
+      60,
+      72
+    ],
+    "body__front_upper": [
+      72,
+      84
+    ],
+    "body__lower_sill": [
+      84,
+      96
+    ],
+    "body__left_frame": [
+      96,
+      108
+    ],
+    "body__right_frame": [
+      108,
+      120
+    ],
+    "body__left_guide": [
+      120,
+      132
+    ],
+    "body__right_guide": [
+      132,
+      144
+    ],
+    "drawer__drawer_shell": [
+      144,
+      288
+    ],
+    "basket__basket_shell": [
+      288,
+      648
+    ],
+    "selector_knob__knob": [
+      648,
+      2676
+    ],
+    "preset_button_0__button": [
+      2676,
+      2704
+    ],
+    "preset_button_1__button": [
+      2704,
+      2732
+    ],
+    "preset_button_2__button": [
+      2732,
+      2760
+    ],
+    "preset_button_3__button": [
+      2760,
+      2788
+    ],
+    "latch_button__button": [
+      2788,
+      2816
+    ]
+  },
+  "norm": {
+    "center": [
+      0.013499999999999984,
+      0.0,
+      0.1829800137759835
+    ],
+    "scale": 2.3866109785202867
+  }
+}

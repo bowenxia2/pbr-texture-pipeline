@@ -1,0 +1,97 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 344978,
+  "groups": {
+    "stand__base_disc": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 578925,
+      "field_voxels": 69303
+    },
+    "stand__base_foot_ring": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 591798,
+      "field_voxels": 33864
+    },
+    "stand__post_shaft": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 900141,
+      "field_voxels": 47955
+    },
+    "stand__shoulder_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 772675,
+      "field_voxels": 6362
+    },
+    "stand__shoulder_boss": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 685500,
+      "field_voxels": 2584
+    },
+    "stand__top_socket": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 703726,
+      "field_voxels": 6485
+    },
+    "main_shade__main_bowl_shell": {
+      "texture_size": 1024,
+      "n_faces": 2736,
+      "texels": 645427,
+      "field_voxels": 124010
+    },
+    "main_shade__mount_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 749636,
+      "field_voxels": 2594
+    },
+    "main_shade__lamp_socket_stem": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 660875,
+      "field_voxels": 1208
+    },
+    "reading_arm__root_knuckle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 760843,
+      "field_voxels": 1362
+    },
+    "reading_arm__arm_tube": {
+      "texture_size": 1024,
+      "n_faces": 2336,
+      "texels": 527337,
+      "field_voxels": 8710
+    },
+    "reading_arm__tip_block": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 45894,
+      "field_voxels": 1680
+    },
+    "reading_shade__hinge_barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 501044,
+      "field_voxels": 988
+    },
+    "reading_shade__shade_shell": {
+      "texture_size": 1024,
+      "n_faces": 1120,
+      "texels": 613319,
+      "field_voxels": 29236
+    },
+    "reading_shade__shade_neck": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 655667,
+      "field_voxels": 1372
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "condition_yaw_offset": 0.4363,
+  "orient": {
+    "fallback_panel": 2,
+    "ok": false,
+    "method": "fallback",
+    "front_panel": 2,
+    "reason": "inference failed"
+  }
+}

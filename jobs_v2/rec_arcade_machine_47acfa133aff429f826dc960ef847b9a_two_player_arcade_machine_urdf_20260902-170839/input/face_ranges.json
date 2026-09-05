@@ -1,0 +1,244 @@
+{
+  "group_order": [
+    "cabinet__lower_shell",
+    "cabinet__rear_tower",
+    "cabinet__marquee_top",
+    "cabinet__marquee_face",
+    "cabinet__control_deck",
+    "cabinet__deck_skirt",
+    "cabinet__monitor_left_bezel",
+    "cabinet__monitor_right_bezel",
+    "cabinet__monitor_top_bezel",
+    "cabinet__monitor_bottom_bezel",
+    "cabinet__monitor_screen",
+    "cabinet__monitor_backer",
+    "cabinet__coin_panel",
+    "cabinet__left_coin_slot",
+    "cabinet__right_coin_slot",
+    "cabinet__left_coin_return",
+    "cabinet__right_coin_return",
+    "cabinet__service_frame_top",
+    "cabinet__service_frame_left",
+    "cabinet__service_frame_right",
+    "cabinet__joystick_collar_0",
+    "cabinet__action_button_guide_0_0",
+    "cabinet__action_button_guide_0_1",
+    "cabinet__action_button_guide_0_2",
+    "cabinet__joystick_collar_1",
+    "cabinet__action_button_guide_1_0",
+    "cabinet__action_button_guide_1_1",
+    "cabinet__action_button_guide_1_2",
+    "cabinet__left_button_sleeve",
+    "cabinet__right_button_sleeve",
+    "service_hatch__hatch_panel",
+    "service_hatch__hatch_pull",
+    "player_0_joystick__joystick_shaft",
+    "player_0_joystick__joystick_ball",
+    "player_1_joystick__joystick_shaft",
+    "player_1_joystick__joystick_ball",
+    "action_button_0_0__button_cap",
+    "action_button_0_1__button_cap",
+    "action_button_0_2__button_cap",
+    "action_button_1_0__button_cap",
+    "action_button_1_1__button_cap",
+    "action_button_1_2__button_cap",
+    "left_start_button__button_plunger",
+    "left_start_button__button_cap",
+    "right_start_button__button_plunger",
+    "right_start_button__button_cap"
+  ],
+  "face_ranges": {
+    "cabinet__lower_shell": [
+      0,
+      12
+    ],
+    "cabinet__rear_tower": [
+      12,
+      24
+    ],
+    "cabinet__marquee_top": [
+      24,
+      36
+    ],
+    "cabinet__marquee_face": [
+      36,
+      48
+    ],
+    "cabinet__control_deck": [
+      48,
+      324
+    ],
+    "cabinet__deck_skirt": [
+      324,
+      336
+    ],
+    "cabinet__monitor_left_bezel": [
+      336,
+      348
+    ],
+    "cabinet__monitor_right_bezel": [
+      348,
+      360
+    ],
+    "cabinet__monitor_top_bezel": [
+      360,
+      372
+    ],
+    "cabinet__monitor_bottom_bezel": [
+      372,
+      384
+    ],
+    "cabinet__monitor_screen": [
+      384,
+      396
+    ],
+    "cabinet__monitor_backer": [
+      396,
+      408
+    ],
+    "cabinet__coin_panel": [
+      408,
+      420
+    ],
+    "cabinet__left_coin_slot": [
+      420,
+      432
+    ],
+    "cabinet__right_coin_slot": [
+      432,
+      444
+    ],
+    "cabinet__left_coin_return": [
+      444,
+      456
+    ],
+    "cabinet__right_coin_return": [
+      456,
+      468
+    ],
+    "cabinet__service_frame_top": [
+      468,
+      480
+    ],
+    "cabinet__service_frame_left": [
+      480,
+      492
+    ],
+    "cabinet__service_frame_right": [
+      492,
+      504
+    ],
+    "cabinet__joystick_collar_0": [
+      504,
+      632
+    ],
+    "cabinet__action_button_guide_0_0": [
+      632,
+      760
+    ],
+    "cabinet__action_button_guide_0_1": [
+      760,
+      888
+    ],
+    "cabinet__action_button_guide_0_2": [
+      888,
+      1016
+    ],
+    "cabinet__joystick_collar_1": [
+      1016,
+      1144
+    ],
+    "cabinet__action_button_guide_1_0": [
+      1144,
+      1272
+    ],
+    "cabinet__action_button_guide_1_1": [
+      1272,
+      1400
+    ],
+    "cabinet__action_button_guide_1_2": [
+      1400,
+      1528
+    ],
+    "cabinet__left_button_sleeve": [
+      1528,
+      1540
+    ],
+    "cabinet__right_button_sleeve": [
+      1540,
+      1552
+    ],
+    "service_hatch__hatch_panel": [
+      1552,
+      1564
+    ],
+    "service_hatch__hatch_pull": [
+      1564,
+      1576
+    ],
+    "player_0_joystick__joystick_shaft": [
+      1576,
+      1704
+    ],
+    "player_0_joystick__joystick_ball": [
+      1704,
+      1832
+    ],
+    "player_1_joystick__joystick_shaft": [
+      1832,
+      1960
+    ],
+    "player_1_joystick__joystick_ball": [
+      1960,
+      2088
+    ],
+    "action_button_0_0__button_cap": [
+      2088,
+      2216
+    ],
+    "action_button_0_1__button_cap": [
+      2216,
+      2344
+    ],
+    "action_button_0_2__button_cap": [
+      2344,
+      2472
+    ],
+    "action_button_1_0__button_cap": [
+      2472,
+      2600
+    ],
+    "action_button_1_1__button_cap": [
+      2600,
+      2728
+    ],
+    "action_button_1_2__button_cap": [
+      2728,
+      2856
+    ],
+    "left_start_button__button_plunger": [
+      2856,
+      2984
+    ],
+    "left_start_button__button_cap": [
+      2984,
+      3112
+    ],
+    "right_start_button__button_plunger": [
+      3112,
+      3240
+    ],
+    "right_start_button__button_cap": [
+      3240,
+      3368
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.026999999999999996,
+      0.87
+    ],
+    "scale": 0.5747068965517241
+  }
+}

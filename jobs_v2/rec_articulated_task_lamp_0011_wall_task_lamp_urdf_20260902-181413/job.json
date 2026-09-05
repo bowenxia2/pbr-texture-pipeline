@@ -1,0 +1,348 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_articulated_task_lamp_0011_wall_task_lamp_urdf_20260902-181413",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_0011/model.urdf",
+  "created": "2026-09-02T18:14:13",
+  "updated": "2026-09-03T09:41:28",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 20,
+        "n_tiny": 11
+      },
+      "seed": null,
+      "started": "2026-09-02T18:15:18",
+      "finished": "2026-09-02T18:15:19",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "smooth plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T18:15:22",
+      "finished": "2026-09-02T18:22:31",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_articulated_task_lamp_0011_wall_task_lamp_urdf_20260902-181413/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T18:22:31",
+      "finished": "2026-09-02T19:03:01",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 20,
+            "n_total": 20,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_articulated_task_lamp_0011_wall_task_lamp_urdf_20260902-181413/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T09:34:03",
+      "finished": "2026-09-03T09:41:28",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_0011",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_articulated_task_lamp_0011/model.urdf",
+    "category": "wall task lamp",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        0.0,
+        -0.045,
+        0.06000000000000001
+      ],
+      "max": [
+        0.5910001432549721,
+        0.045,
+        0.28
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "wall_mount__backplate",
+        "link": "wall_mount",
+        "label": "backplate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.3708042900427158,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_mount__spine_rib",
+        "link": "wall_mount",
+        "label": "spine_rib",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08704016695186854,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_mount__shoulder_bridge",
+        "link": "wall_mount",
+        "label": "shoulder_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014616518056611103,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_mount__shoulder_upper_cheek",
+        "link": "wall_mount",
+        "label": "shoulder_upper_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017252283607803252,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_mount__shoulder_lower_cheek",
+        "link": "wall_mount",
+        "label": "shoulder_lower_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017252283607803252,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "upper_arm__rear_hub",
+        "link": "upper_arm",
+        "label": "rear_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005628588956859957,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "upper_arm__beam",
+        "link": "upper_arm",
+        "label": "beam",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.06086855940098,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "upper_arm__elbow_bridge",
+        "link": "upper_arm",
+        "label": "elbow_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015814593307152996,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "upper_arm__elbow_upper_cheek",
+        "link": "upper_arm",
+        "label": "elbow_upper_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015275459444409145,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "upper_arm__elbow_lower_cheek",
+        "link": "upper_arm",
+        "label": "elbow_lower_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.015275459444409145,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "forearm__rear_hub",
+        "link": "forearm",
+        "label": "rear_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005628588956859957,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "forearm__beam",
+        "link": "forearm",
+        "label": "beam",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04959509604503713,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "forearm__tip_bridge",
+        "link": "forearm",
+        "label": "tip_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01701266855769489,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "forearm__pivot_upper_cheek",
+        "link": "forearm",
+        "label": "pivot_upper_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012639693893216982,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "forearm__pivot_lower_cheek",
+        "link": "forearm",
+        "label": "pivot_lower_cheek",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012639693893216982,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "shade__pivot_hub",
+        "link": "shade",
+        "label": "pivot_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005628588956859957,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shade__neck",
+        "link": "shade",
+        "label": "neck",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.01802306542086596,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shade__shade_collar",
+        "link": "shade",
+        "label": "shade_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.026983027564259597,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shade__shade_shell",
+        "link": "shade",
+        "label": "shade_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/task_lamp_shade_shell.obj"
+        ],
+        "n_faces": 1024,
+        "area_frac": 0.18807215530024599,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shade__front_rim",
+        "link": "shade",
+        "label": "front_rim",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/task_lamp_front_rim.obj"
+        ],
+        "n_faces": 768,
+        "area_frac": 0.04394921859112958,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

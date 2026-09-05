@@ -1,0 +1,206 @@
+{
+  "schema_version": 7,
+  "job_id": "12085_dishwasher_urdf_20260831-000659",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12085/mobility.urdf",
+  "created": "2026-08-31T00:06:59",
+  "updated": "2026-08-31T01:28:03",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 8,
+        "n_tiny": 1
+      },
+      "seed": null,
+      "started": "2026-08-31T00:07:27",
+      "finished": "2026-08-31T00:07:29",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "black glass on the front panel; metallic gray on the frame; black rubber on the top handle",
+        "classification": "edit"
+      },
+      "seed": null,
+      "started": "2026-08-31T00:08:03",
+      "finished": "2026-08-31T00:09:50",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/12085_dishwasher_urdf_20260831-000659/imageedit/enhanced_cond.png",
+        "path": "edit"
+      },
+      "seed": null,
+      "started": "2026-08-31T00:09:50",
+      "finished": "2026-08-31T01:09:41",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 8,
+            "n_total": 8,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v3/12085_dishwasher_urdf_20260831-000659/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-08-31T01:09:44",
+      "finished": "2026-08-31T01:28:03",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12085",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/12085/mobility.urdf",
+    "category": "Dishwasher",
+    "group_by": "semantic",
+    "semantic_labels": [
+      "dishwasher_body",
+      "shelf"
+    ],
+    "bbox_world": {
+      "min": [
+        -0.7598730000000001,
+        -0.5691889999999997,
+        -0.5280850000000002
+      ],
+      "max": [
+        0.7265790000000004,
+        0.5851180000000002,
+        0.5731809999999998
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "link_0__frame-15",
+        "link": "link_0",
+        "label": "frame",
+        "semantic_id": 15,
+        "objs": [
+          "textured_objs/new-1.obj",
+          "textured_objs/new-0.obj",
+          "textured_objs/original-18.obj"
+        ],
+        "n_faces": 2660,
+        "area_frac": 0.42598486797510476,
+        "motion": "heavy",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__display_panel-11",
+        "link": "link_1",
+        "label": "display_panel",
+        "semantic_id": 11,
+        "objs": [
+          "textured_objs/new-3.obj"
+        ],
+        "n_faces": 1562,
+        "area_frac": 0.006536452711800237,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__shelf-16",
+        "link": "link_1",
+        "label": "shelf",
+        "semantic_id": 16,
+        "objs": [
+          "textured_objs/original-3.obj"
+        ],
+        "n_faces": 440,
+        "area_frac": 0.1222405569677108,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__shelf-17",
+        "link": "link_1",
+        "label": "shelf",
+        "semantic_id": 17,
+        "objs": [
+          "textured_objs/original-4.obj"
+        ],
+        "n_faces": 56,
+        "area_frac": 0.12089077916670195,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__other_leaf-19",
+        "link": "link_1",
+        "label": "other_leaf",
+        "semantic_id": 19,
+        "objs": [
+          "textured_objs/original-12.obj",
+          "textured_objs/original-9.obj",
+          "textured_objs/original-7.obj",
+          "textured_objs/original-5.obj",
+          "textured_objs/original-14.obj",
+          "textured_objs/original-11.obj",
+          "textured_objs/original-10.obj",
+          "textured_objs/original-8.obj",
+          "textured_objs/original-6.obj",
+          "textured_objs/original-13.obj"
+        ],
+        "n_faces": 39460,
+        "area_frac": 0.13784744842123145,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__handle-12",
+        "link": "link_1",
+        "label": "handle",
+        "semantic_id": 12,
+        "objs": [
+          "textured_objs/new-2.obj"
+        ],
+        "n_faces": 172,
+        "area_frac": 0.007594813219716146,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "link_1__glass-13",
+        "link": "link_1",
+        "label": "glass",
+        "semantic_id": 13,
+        "objs": [
+          "textured_objs/new-4.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.07595086022135852,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "link_1__door_frame-20",
+        "link": "link_1",
+        "label": "door_frame",
+        "semantic_id": 20,
+        "objs": [
+          "textured_objs/new-5.obj"
+        ],
+        "n_faces": 986,
+        "area_frac": 0.10295422131637606,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

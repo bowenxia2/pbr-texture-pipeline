@@ -1,0 +1,154 @@
+{
+  "group_order": [
+    "cabinet_body__left_side_shell",
+    "cabinet_body__right_side_shell",
+    "cabinet_body__rear_shell",
+    "cabinet_body__top_cap",
+    "cabinet_body__front_grille_panel",
+    "cabinet_body__control_strip",
+    "cabinet_body__top_exhaust_panel",
+    "cabinet_body__rear_floor_strip",
+    "cabinet_body__left_bottom_sill",
+    "cabinet_body__right_bottom_sill",
+    "cabinet_body__front_left_leg",
+    "cabinet_body__front_right_leg",
+    "cabinet_body__rear_left_leg",
+    "cabinet_body__rear_right_leg",
+    "guide_rail_frame__left_rail",
+    "guide_rail_frame__right_rail",
+    "guide_rail_frame__rear_mount_crossbar",
+    "filter_door__door_bottom_panel",
+    "filter_door__door_front_fascia",
+    "filter_door__door_pull",
+    "filter_tray__tray_floor",
+    "filter_tray__left_tray_wall",
+    "filter_tray__right_tray_wall",
+    "filter_tray__tray_back_wall",
+    "filter_tray__tray_front_lip",
+    "filter_tray__left_runner",
+    "filter_tray__right_runner",
+    "filter_tray__filter_media_block"
+  ],
+  "face_ranges": {
+    "cabinet_body__left_side_shell": [
+      0,
+      12
+    ],
+    "cabinet_body__right_side_shell": [
+      12,
+      24
+    ],
+    "cabinet_body__rear_shell": [
+      24,
+      36
+    ],
+    "cabinet_body__top_cap": [
+      36,
+      48
+    ],
+    "cabinet_body__front_grille_panel": [
+      48,
+      60
+    ],
+    "cabinet_body__control_strip": [
+      60,
+      72
+    ],
+    "cabinet_body__top_exhaust_panel": [
+      72,
+      84
+    ],
+    "cabinet_body__rear_floor_strip": [
+      84,
+      96
+    ],
+    "cabinet_body__left_bottom_sill": [
+      96,
+      108
+    ],
+    "cabinet_body__right_bottom_sill": [
+      108,
+      120
+    ],
+    "cabinet_body__front_left_leg": [
+      120,
+      132
+    ],
+    "cabinet_body__front_right_leg": [
+      132,
+      144
+    ],
+    "cabinet_body__rear_left_leg": [
+      144,
+      156
+    ],
+    "cabinet_body__rear_right_leg": [
+      156,
+      168
+    ],
+    "guide_rail_frame__left_rail": [
+      168,
+      180
+    ],
+    "guide_rail_frame__right_rail": [
+      180,
+      192
+    ],
+    "guide_rail_frame__rear_mount_crossbar": [
+      192,
+      204
+    ],
+    "filter_door__door_bottom_panel": [
+      204,
+      216
+    ],
+    "filter_door__door_front_fascia": [
+      216,
+      228
+    ],
+    "filter_door__door_pull": [
+      228,
+      240
+    ],
+    "filter_tray__tray_floor": [
+      240,
+      252
+    ],
+    "filter_tray__left_tray_wall": [
+      252,
+      264
+    ],
+    "filter_tray__right_tray_wall": [
+      264,
+      276
+    ],
+    "filter_tray__tray_back_wall": [
+      276,
+      288
+    ],
+    "filter_tray__tray_front_lip": [
+      288,
+      300
+    ],
+    "filter_tray__left_runner": [
+      300,
+      312
+    ],
+    "filter_tray__right_runner": [
+      312,
+      324
+    ],
+    "filter_tray__filter_media_block": [
+      324,
+      336
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0015000000000000152,
+      0.0,
+      0.375
+    ],
+    "scale": 1.33332
+  }
+}

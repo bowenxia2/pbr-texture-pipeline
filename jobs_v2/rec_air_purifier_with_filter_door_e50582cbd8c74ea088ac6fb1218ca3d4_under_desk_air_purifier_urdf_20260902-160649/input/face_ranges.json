@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "housing__top_cover",
+    "housing__side_wall_0",
+    "housing__side_wall_1",
+    "housing__front_top_lip",
+    "housing__front_bottom_lip",
+    "housing__front_side_lip_0",
+    "housing__front_side_lip_1",
+    "housing__rear_upper_band",
+    "housing__front_grille",
+    "housing__fixed_hinge_knuckle_0",
+    "housing__fixed_hinge_knuckle_1",
+    "housing__rail_track_0",
+    "housing__rail_track_1",
+    "housing__rail_bracket_0",
+    "housing__rail_bracket_1",
+    "power_button__button_cap",
+    "bottom_panel__panel_leaf",
+    "bottom_panel__slotted_inset",
+    "bottom_panel__hinge_leaf",
+    "bottom_panel__moving_hinge_knuckle",
+    "bottom_panel__rear_pull_latch",
+    "filter_drawer__drawer_tray",
+    "filter_drawer__runner_0",
+    "filter_drawer__runner_1",
+    "filter_drawer__filter_media",
+    "filter_drawer__pleat_0",
+    "filter_drawer__pleat_1",
+    "filter_drawer__pleat_2",
+    "filter_drawer__pleat_3",
+    "filter_drawer__pleat_4",
+    "filter_drawer__pleat_5",
+    "filter_drawer__pleat_6",
+    "filter_drawer__rear_frame",
+    "filter_drawer__front_frame",
+    "filter_drawer__drawer_pull"
+  ],
+  "face_ranges": {
+    "housing__top_cover": [
+      0,
+      12
+    ],
+    "housing__side_wall_0": [
+      12,
+      24
+    ],
+    "housing__side_wall_1": [
+      24,
+      36
+    ],
+    "housing__front_top_lip": [
+      36,
+      48
+    ],
+    "housing__front_bottom_lip": [
+      48,
+      60
+    ],
+    "housing__front_side_lip_0": [
+      60,
+      72
+    ],
+    "housing__front_side_lip_1": [
+      72,
+      84
+    ],
+    "housing__rear_upper_band": [
+      84,
+      96
+    ],
+    "housing__front_grille": [
+      96,
+      3904
+    ],
+    "housing__fixed_hinge_knuckle_0": [
+      3904,
+      4032
+    ],
+    "housing__fixed_hinge_knuckle_1": [
+      4032,
+      4160
+    ],
+    "housing__rail_track_0": [
+      4160,
+      4172
+    ],
+    "housing__rail_track_1": [
+      4172,
+      4184
+    ],
+    "housing__rail_bracket_0": [
+      4184,
+      4196
+    ],
+    "housing__rail_bracket_1": [
+      4196,
+      4208
+    ],
+    "power_button__button_cap": [
+      4208,
+      4336
+    ],
+    "bottom_panel__panel_leaf": [
+      4336,
+      4348
+    ],
+    "bottom_panel__slotted_inset": [
+      4348,
+      51828
+    ],
+    "bottom_panel__hinge_leaf": [
+      51828,
+      51840
+    ],
+    "bottom_panel__moving_hinge_knuckle": [
+      51840,
+      51968
+    ],
+    "bottom_panel__rear_pull_latch": [
+      51968,
+      51980
+    ],
+    "filter_drawer__drawer_tray": [
+      51980,
+      51992
+    ],
+    "filter_drawer__runner_0": [
+      51992,
+      52004
+    ],
+    "filter_drawer__runner_1": [
+      52004,
+      52016
+    ],
+    "filter_drawer__filter_media": [
+      52016,
+      52028
+    ],
+    "filter_drawer__pleat_0": [
+      52028,
+      52040
+    ],
+    "filter_drawer__pleat_1": [
+      52040,
+      52052
+    ],
+    "filter_drawer__pleat_2": [
+      52052,
+      52064
+    ],
+    "filter_drawer__pleat_3": [
+      52064,
+      52076
+    ],
+    "filter_drawer__pleat_4": [
+      52076,
+      52088
+    ],
+    "filter_drawer__pleat_5": [
+      52088,
+      52100
+    ],
+    "filter_drawer__pleat_6": [
+      52100,
+      52112
+    ],
+    "filter_drawer__rear_frame": [
+      52112,
+      52124
+    ],
+    "filter_drawer__front_frame": [
+      52124,
+      52136
+    ],
+    "filter_drawer__drawer_pull": [
+      52136,
+      52148
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0020000730967748015,
+      0.0,
+      -0.006499999999999999
+    ],
+    "scale": 1.908377330167069
+  }
+}

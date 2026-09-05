@@ -1,0 +1,192 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb_mechanical_air_fryer_urdf_20260903-124105",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb/model.urdf",
+  "created": "2026-09-03T12:41:05",
+  "updated": "2026-09-03T13:16:10",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 8,
+        "n_tiny": 1
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:17",
+      "finished": "2026-09-03T12:41:18",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the handle grip",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:41:19",
+      "finished": "2026-09-03T12:42:35",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb_mechanical_air_fryer_urdf_20260903-124105/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:42:35",
+      "finished": "2026-09-03T13:07:51",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 8,
+            "n_total": 8,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb_mechanical_air_fryer_urdf_20260903-124105/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T13:07:52",
+      "finished": "2026-09-03T13:16:10",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_049e41a4db3d45cdb9c6f24c19cc4ddb/model.urdf",
+    "category": "mechanical air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.156,
+        -0.137,
+        0.0
+      ],
+      "max": [
+        0.216,
+        0.137,
+        0.332
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_body.obj"
+        ],
+        "n_faces": 4780,
+        "area_frac": 0.7179897420955391,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "drawer__drawer_body",
+        "link": "drawer",
+        "label": "drawer_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_drawer.obj"
+        ],
+        "n_faces": 2428,
+        "area_frac": 0.2627507449679989,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "timer_dial__dial",
+        "link": "timer_dial",
+        "label": "dial",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_timer_dial.obj"
+        ],
+        "n_faces": 15840,
+        "area_frac": 0.007899446388590615,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "temperature_dial__dial",
+        "link": "temperature_dial",
+        "label": "dial",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_temperature_dial.obj"
+        ],
+        "n_faces": 15840,
+        "area_frac": 0.007899446388590615,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "power_button__button_bezel",
+        "link": "power_button",
+        "label": "button_bezel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_power_button_bezel.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.0009306804425775959,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "power_button__button_lens",
+        "link": "power_button",
+        "label": "button_lens",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_power_button_lens.obj"
+        ],
+        "n_faces": 500,
+        "area_frac": 0.0006137221494980766,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "release_button__release_cap",
+        "link": "release_button",
+        "label": "release_cap",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/air_fryer_release_button.obj"
+        ],
+        "n_faces": 508,
+        "area_frac": 0.0015946593524909967,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "release_button__release_stem",
+        "link": "release_button",
+        "label": "release_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0003215582147143077,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

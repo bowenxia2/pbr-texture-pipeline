@@ -1,0 +1,409 @@
+{
+  "group_order": [
+    "link_0__cabinet_door_surface-81",
+    "link_1__drawer_front-137",
+    "link_1__drawer_side-138",
+    "link_1__drawer_side-139",
+    "link_1__drawer_back-140",
+    "link_1__drawer_bottom-141",
+    "link_1__handle-136",
+    "link_2__drawer_front-130",
+    "link_2__drawer_side-131",
+    "link_2__drawer_side-132",
+    "link_2__drawer_back-133",
+    "link_2__drawer_bottom-134",
+    "link_2__handle-129",
+    "link_3__drawer_front-123",
+    "link_3__drawer_side-124",
+    "link_3__drawer_side-125",
+    "link_3__drawer_back-126",
+    "link_3__drawer_bottom-127",
+    "link_3__handle-122",
+    "link_4__drawer_front-120",
+    "link_4__handle-119",
+    "link_5__drawer_front-113",
+    "link_5__drawer_side-114",
+    "link_5__drawer_side-115",
+    "link_5__drawer_back-116",
+    "link_5__drawer_bottom-117",
+    "link_5__handle-112",
+    "link_6__drawer_front-106",
+    "link_6__drawer_side-107",
+    "link_6__drawer_side-108",
+    "link_6__drawer_back-109",
+    "link_6__drawer_bottom-110",
+    "link_6__handle-105",
+    "link_7__drawer_front-99",
+    "link_7__drawer_side-100",
+    "link_7__drawer_side-101",
+    "link_7__drawer_back-102",
+    "link_7__drawer_bottom-103",
+    "link_7__handle-98",
+    "link_8__foot-52",
+    "link_8__board-148",
+    "link_8__other_leaf-147",
+    "link_8__other_leaf-145",
+    "link_8__other_leaf-146",
+    "link_8__vertical_side_panel-40",
+    "link_8__vertical_side_panel-41",
+    "link_8__vertical_side_panel-42",
+    "link_8__vertical_side_panel-43",
+    "link_8__bottom_panel-44",
+    "link_8__foot-45",
+    "link_8__foot-46",
+    "link_8__foot-47",
+    "link_8__foot-48",
+    "link_8__foot-49",
+    "link_8__foot-50",
+    "link_8__foot-51",
+    "link_8__foot-53",
+    "link_8__foot-54",
+    "link_8__tabletop_connector-55",
+    "link_8__tabletop_connector-56",
+    "link_8__back_panel-65",
+    "link_8__back_panel-66",
+    "link_8__back_panel-67",
+    "link_8__vertical_divider_panel-68",
+    "link_8__vertical_front_panel-77",
+    "link_8__vertical_front_panel-78",
+    "link_8__other_leaf-80",
+    "link_8__back_panel-95",
+    "link_8__back_panel-96",
+    "link_8__back_panel-23",
+    "link_8__vertical_side_panel-24",
+    "link_8__vertical_side_panel-25",
+    "link_8__top_panel-26",
+    "link_8__drawer_front-29",
+    "link_8__shelf-11",
+    "link_8__vertical_side_panel-12",
+    "link_8__vertical_side_panel-13",
+    "link_8__top_panel-14",
+    "link_8__other_leaf-16"
+  ],
+  "face_ranges": {
+    "link_0__cabinet_door_surface-81": [
+      0,
+      92
+    ],
+    "link_1__drawer_front-137": [
+      92,
+      704
+    ],
+    "link_1__drawer_side-138": [
+      704,
+      760
+    ],
+    "link_1__drawer_side-139": [
+      760,
+      816
+    ],
+    "link_1__drawer_back-140": [
+      816,
+      856
+    ],
+    "link_1__drawer_bottom-141": [
+      856,
+      902
+    ],
+    "link_1__handle-136": [
+      902,
+      2468
+    ],
+    "link_2__drawer_front-130": [
+      2468,
+      3110
+    ],
+    "link_2__drawer_side-131": [
+      3110,
+      3166
+    ],
+    "link_2__drawer_side-132": [
+      3166,
+      3222
+    ],
+    "link_2__drawer_back-133": [
+      3222,
+      3262
+    ],
+    "link_2__drawer_bottom-134": [
+      3262,
+      3310
+    ],
+    "link_2__handle-129": [
+      3310,
+      4844
+    ],
+    "link_3__drawer_front-123": [
+      4844,
+      5486
+    ],
+    "link_3__drawer_side-124": [
+      5486,
+      5542
+    ],
+    "link_3__drawer_side-125": [
+      5542,
+      5598
+    ],
+    "link_3__drawer_back-126": [
+      5598,
+      5638
+    ],
+    "link_3__drawer_bottom-127": [
+      5638,
+      5684
+    ],
+    "link_3__handle-122": [
+      5684,
+      7220
+    ],
+    "link_4__drawer_front-120": [
+      7220,
+      7276
+    ],
+    "link_4__handle-119": [
+      7276,
+      8980
+    ],
+    "link_5__drawer_front-113": [
+      8980,
+      9378
+    ],
+    "link_5__drawer_side-114": [
+      9378,
+      9434
+    ],
+    "link_5__drawer_side-115": [
+      9434,
+      9490
+    ],
+    "link_5__drawer_back-116": [
+      9490,
+      9514
+    ],
+    "link_5__drawer_bottom-117": [
+      9514,
+      9562
+    ],
+    "link_5__handle-112": [
+      9562,
+      11266
+    ],
+    "link_6__drawer_front-106": [
+      11266,
+      11664
+    ],
+    "link_6__drawer_side-107": [
+      11664,
+      11720
+    ],
+    "link_6__drawer_side-108": [
+      11720,
+      11776
+    ],
+    "link_6__drawer_back-109": [
+      11776,
+      11800
+    ],
+    "link_6__drawer_bottom-110": [
+      11800,
+      11848
+    ],
+    "link_6__handle-105": [
+      11848,
+      13552
+    ],
+    "link_7__drawer_front-99": [
+      13552,
+      13950
+    ],
+    "link_7__drawer_side-100": [
+      13950,
+      14006
+    ],
+    "link_7__drawer_side-101": [
+      14006,
+      14062
+    ],
+    "link_7__drawer_back-102": [
+      14062,
+      14086
+    ],
+    "link_7__drawer_bottom-103": [
+      14086,
+      14134
+    ],
+    "link_7__handle-98": [
+      14134,
+      15838
+    ],
+    "link_8__foot-52": [
+      15838,
+      15862
+    ],
+    "link_8__board-148": [
+      15862,
+      16990
+    ],
+    "link_8__other_leaf-147": [
+      16990,
+      17110
+    ],
+    "link_8__other_leaf-145": [
+      17110,
+      17134
+    ],
+    "link_8__other_leaf-146": [
+      17134,
+      17158
+    ],
+    "link_8__vertical_side_panel-40": [
+      17158,
+      17214
+    ],
+    "link_8__vertical_side_panel-41": [
+      17214,
+      17350
+    ],
+    "link_8__vertical_side_panel-42": [
+      17350,
+      17494
+    ],
+    "link_8__vertical_side_panel-43": [
+      17494,
+      17518
+    ],
+    "link_8__bottom_panel-44": [
+      17518,
+      18670
+    ],
+    "link_8__foot-45": [
+      18670,
+      18710
+    ],
+    "link_8__foot-46": [
+      18710,
+      18734
+    ],
+    "link_8__foot-47": [
+      18734,
+      18774
+    ],
+    "link_8__foot-48": [
+      18774,
+      18814
+    ],
+    "link_8__foot-49": [
+      18814,
+      18854
+    ],
+    "link_8__foot-50": [
+      18854,
+      18894
+    ],
+    "link_8__foot-51": [
+      18894,
+      18934
+    ],
+    "link_8__foot-53": [
+      18934,
+      18974
+    ],
+    "link_8__foot-54": [
+      18974,
+      19014
+    ],
+    "link_8__tabletop_connector-55": [
+      19014,
+      19038
+    ],
+    "link_8__tabletop_connector-56": [
+      19038,
+      19150
+    ],
+    "link_8__back_panel-65": [
+      19150,
+      19174
+    ],
+    "link_8__back_panel-66": [
+      19174,
+      19198
+    ],
+    "link_8__back_panel-67": [
+      19198,
+      19618
+    ],
+    "link_8__vertical_divider_panel-68": [
+      19618,
+      19762
+    ],
+    "link_8__vertical_front_panel-77": [
+      19762,
+      19954
+    ],
+    "link_8__vertical_front_panel-78": [
+      19954,
+      20266
+    ],
+    "link_8__other_leaf-80": [
+      20266,
+      20290
+    ],
+    "link_8__back_panel-95": [
+      20290,
+      20314
+    ],
+    "link_8__back_panel-96": [
+      20314,
+      20338
+    ],
+    "link_8__back_panel-23": [
+      20338,
+      20660
+    ],
+    "link_8__vertical_side_panel-24": [
+      20660,
+      20664
+    ],
+    "link_8__vertical_side_panel-25": [
+      20664,
+      20668
+    ],
+    "link_8__top_panel-26": [
+      20668,
+      20674
+    ],
+    "link_8__drawer_front-29": [
+      20674,
+      20786
+    ],
+    "link_8__shelf-11": [
+      20786,
+      20804
+    ],
+    "link_8__vertical_side_panel-12": [
+      20804,
+      20838
+    ],
+    "link_8__vertical_side_panel-13": [
+      20838,
+      20876
+    ],
+    "link_8__top_panel-14": [
+      20876,
+      20954
+    ],
+    "link_8__other_leaf-16": [
+      20954,
+      20970
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.11364349999999968,
+      -0.023726000000000025,
+      0.1026455
+    ],
+    "scale": 0.5667740147385388
+  }
+}

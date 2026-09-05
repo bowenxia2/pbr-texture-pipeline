@@ -1,0 +1,49 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 3356078,
+  "groups": {
+    "body_shell": {
+      "texture_size": 1024,
+      "n_faces": 1012,
+      "texels": 833424,
+      "field_voxels": 832633
+    },
+    "front_intake": {
+      "texture_size": 1024,
+      "n_faces": 1476,
+      "texels": 406256,
+      "field_voxels": 313213
+    },
+    "top_grille": {
+      "texture_size": 1024,
+      "n_faces": 816,
+      "texels": 454480,
+      "field_voxels": 85790
+    },
+    "control_pod": {
+      "texture_size": 1024,
+      "n_faces": 172,
+      "texels": 926060,
+      "field_voxels": 88844
+    },
+    "filter_door": {
+      "texture_size": 1024,
+      "n_faces": 1468,
+      "texels": 712754,
+      "field_voxels": 575428
+    },
+    "selector_dial": {
+      "texture_size": 1024,
+      "n_faces": 540,
+      "texels": 748739,
+      "field_voxels": 44548
+    },
+    "power_rocker": {
+      "texture_size": 1024,
+      "n_faces": 140,
+      "texels": 920033,
+      "field_voxels": 13211
+    }
+  }
+}

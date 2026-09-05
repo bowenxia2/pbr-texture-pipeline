@@ -1,0 +1,114 @@
+{
+  "group_order": [
+    "wall_mount__backplate",
+    "wall_mount__spine_rib",
+    "wall_mount__shoulder_bridge",
+    "wall_mount__shoulder_upper_cheek",
+    "wall_mount__shoulder_lower_cheek",
+    "upper_arm__rear_hub",
+    "upper_arm__beam",
+    "upper_arm__elbow_bridge",
+    "upper_arm__elbow_upper_cheek",
+    "upper_arm__elbow_lower_cheek",
+    "forearm__rear_hub",
+    "forearm__beam",
+    "forearm__tip_bridge",
+    "forearm__pivot_upper_cheek",
+    "forearm__pivot_lower_cheek",
+    "shade__pivot_hub",
+    "shade__neck",
+    "shade__shade_collar",
+    "shade__shade_shell",
+    "shade__front_rim"
+  ],
+  "face_ranges": {
+    "wall_mount__backplate": [
+      0,
+      12
+    ],
+    "wall_mount__spine_rib": [
+      12,
+      24
+    ],
+    "wall_mount__shoulder_bridge": [
+      24,
+      36
+    ],
+    "wall_mount__shoulder_upper_cheek": [
+      36,
+      48
+    ],
+    "wall_mount__shoulder_lower_cheek": [
+      48,
+      60
+    ],
+    "upper_arm__rear_hub": [
+      60,
+      188
+    ],
+    "upper_arm__beam": [
+      188,
+      316
+    ],
+    "upper_arm__elbow_bridge": [
+      316,
+      328
+    ],
+    "upper_arm__elbow_upper_cheek": [
+      328,
+      340
+    ],
+    "upper_arm__elbow_lower_cheek": [
+      340,
+      352
+    ],
+    "forearm__rear_hub": [
+      352,
+      480
+    ],
+    "forearm__beam": [
+      480,
+      608
+    ],
+    "forearm__tip_bridge": [
+      608,
+      620
+    ],
+    "forearm__pivot_upper_cheek": [
+      620,
+      632
+    ],
+    "forearm__pivot_lower_cheek": [
+      632,
+      644
+    ],
+    "shade__pivot_hub": [
+      644,
+      772
+    ],
+    "shade__neck": [
+      772,
+      900
+    ],
+    "shade__shade_collar": [
+      900,
+      1028
+    ],
+    "shade__shade_shell": [
+      1028,
+      2052
+    ],
+    "shade__front_rim": [
+      2052,
+      2820
+    ]
+  },
+  "norm": {
+    "center": [
+      0.29550007162748604,
+      0.0,
+      0.17
+    ],
+    "scale": 1.6920300467145228
+  }
+}

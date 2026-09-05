@@ -1,0 +1,225 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 9442542,
+  "groups": {
+    "link_0__cabinet_door_surface-31": {
+      "texture_size": 1024,
+      "n_faces": 2232,
+      "texels": 819436,
+      "field_voxels": 499116
+    },
+    "link_0__handle-32": {
+      "texture_size": 1024,
+      "n_faces": 3596,
+      "texels": 644594,
+      "field_voxels": 12363
+    },
+    "link_1__cabinet_door_surface-29": {
+      "texture_size": 1024,
+      "n_faces": 2232,
+      "texels": 807426,
+      "field_voxels": 513978
+    },
+    "link_1__handle-30": {
+      "texture_size": 1024,
+      "n_faces": 3596,
+      "texels": 629781,
+      "field_voxels": 12353
+    },
+    "link_2__drawer_front-24": {
+      "texture_size": 1024,
+      "n_faces": 1960,
+      "texels": 704917,
+      "field_voxels": 216637
+    },
+    "link_2__drawer_side-25": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 917171,
+      "field_voxels": 107112
+    },
+    "link_2__drawer_side-26": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 924165,
+      "field_voxels": 107112
+    },
+    "link_2__drawer_back-27": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 56969,
+      "field_voxels": 47224
+    },
+    "link_2__drawer_bottom-28": {
+      "texture_size": 256,
+      "n_faces": 8,
+      "texels": 49707,
+      "field_voxels": 48782
+    },
+    "link_2__handle-23": {
+      "texture_size": 1024,
+      "n_faces": 3596,
+      "texels": 631907,
+      "field_voxels": 12350
+    },
+    "link_3__drawer_front-17": {
+      "texture_size": 1024,
+      "n_faces": 1960,
+      "texels": 701865,
+      "field_voxels": 216046
+    },
+    "link_3__drawer_side-18": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 917171,
+      "field_voxels": 107112
+    },
+    "link_3__drawer_side-19": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 924165,
+      "field_voxels": 107112
+    },
+    "link_3__drawer_back-20": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 56969,
+      "field_voxels": 47270
+    },
+    "link_3__drawer_bottom-21": {
+      "texture_size": 256,
+      "n_faces": 8,
+      "texels": 49707,
+      "field_voxels": 48782
+    },
+    "link_3__handle-16": {
+      "texture_size": 1024,
+      "n_faces": 3596,
+      "texels": 623234,
+      "field_voxels": 12349
+    },
+    "link_4__shelf-10": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 487905,
+      "field_voxels": 424540
+    },
+    "link_4__vertical_side_panel-43": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 50787,
+      "field_voxels": 50449
+    },
+    "link_4__vertical_side_panel-44": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 50911,
+      "field_voxels": 50503
+    },
+    "link_4__back_panel-45": {
+      "texture_size": 1024,
+      "n_faces": 20,
+      "texels": 883197,
+      "field_voxels": 740688
+    },
+    "link_4__bottom_panel-46": {
+      "texture_size": 256,
+      "n_faces": 4,
+      "texels": 61696,
+      "field_voxels": 49646,
+      "bbox_warn": "bbox shrank 0.00000 (uv_unwrap welded sliver faces)"
+    },
+    "link_4__frame_vertical_bar-47": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 924214,
+      "field_voxels": 92776
+    },
+    "link_4__frame_vertical_bar-48": {
+      "texture_size": 1024,
+      "n_faces": 32,
+      "texels": 881945,
+      "field_voxels": 131516
+    },
+    "link_4__frame_vertical_bar-49": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 60812,
+      "field_voxels": 60278
+    },
+    "link_4__frame_horizontal_bar-50": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 58350,
+      "field_voxels": 43626
+    },
+    "link_4__frame_horizontal_bar-51": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 58350,
+      "field_voxels": 43783
+    },
+    "link_4__frame_horizontal_bar-52": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 58350,
+      "field_voxels": 43533
+    },
+    "link_4__frame_horizontal_bar-53": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54868,
+      "field_voxels": 47572
+    },
+    "link_4__frame_horizontal_bar-54": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56448,
+      "field_voxels": 54894
+    },
+    "link_4__frame_horizontal_bar-55": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 53750,
+      "field_voxels": 52409
+    },
+    "link_4__frame_vertical_bar-56": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 924214,
+      "field_voxels": 92776
+    },
+    "link_4__frame_vertical_bar-57": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 59084,
+      "field_voxels": 58469
+    },
+    "link_4__base_side_panel-34": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59309,
+      "field_voxels": 32348
+    },
+    "link_4__base_side_panel-35": {
+      "texture_size": 256,
+      "n_faces": 4,
+      "texels": 63744,
+      "field_voxels": 31872,
+      "bbox_warn": "bbox shrank 0.00000 (uv_unwrap welded sliver faces)"
+    },
+    "link_4__base_side_panel-36": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59309,
+      "field_voxels": 31571
+    },
+    "link_4__base_side_panel-37": {
+      "texture_size": 256,
+      "n_faces": 8,
+      "texels": 55077,
+      "field_voxels": 54551
+    }
+  }
+}

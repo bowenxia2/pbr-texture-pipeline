@@ -1,0 +1,129 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "body__control_strip",
+    "body__guide_rail_0",
+    "body__guide_rail_1",
+    "basket__basket_shell",
+    "basket__handle_post_0",
+    "basket__handle_post_1",
+    "basket__handle_grip",
+    "basket__guide_side_0",
+    "basket__guide_side_1",
+    "basket__guide_rear",
+    "basket__guide_bridge",
+    "basket__runner_0",
+    "basket__runner_1",
+    "inner_basket__inner_basket_shell",
+    "dial__dial_cap",
+    "dial__dial_shaft",
+    "mode_button_0__button_cap",
+    "mode_button_0__button_stem",
+    "mode_button_1__button_cap",
+    "mode_button_1__button_stem",
+    "release_plunger__plunger_cap",
+    "release_plunger__plunger_stem"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      6960
+    ],
+    "body__control_strip": [
+      6960,
+      6972
+    ],
+    "body__guide_rail_0": [
+      6972,
+      6984
+    ],
+    "body__guide_rail_1": [
+      6984,
+      6996
+    ],
+    "basket__basket_shell": [
+      6996,
+      17104
+    ],
+    "basket__handle_post_0": [
+      17104,
+      17116
+    ],
+    "basket__handle_post_1": [
+      17116,
+      17128
+    ],
+    "basket__handle_grip": [
+      17128,
+      17140
+    ],
+    "basket__guide_side_0": [
+      17140,
+      17152
+    ],
+    "basket__guide_side_1": [
+      17152,
+      17164
+    ],
+    "basket__guide_rear": [
+      17164,
+      17176
+    ],
+    "basket__guide_bridge": [
+      17176,
+      17188
+    ],
+    "basket__runner_0": [
+      17188,
+      17200
+    ],
+    "basket__runner_1": [
+      17200,
+      17212
+    ],
+    "inner_basket__inner_basket_shell": [
+      17212,
+      26824
+    ],
+    "dial__dial_cap": [
+      26824,
+      46246
+    ],
+    "dial__dial_shaft": [
+      46246,
+      46374
+    ],
+    "mode_button_0__button_cap": [
+      46374,
+      46386
+    ],
+    "mode_button_0__button_stem": [
+      46386,
+      46398
+    ],
+    "mode_button_1__button_cap": [
+      46398,
+      46410
+    ],
+    "mode_button_1__button_stem": [
+      46410,
+      46422
+    ],
+    "release_plunger__plunger_cap": [
+      46422,
+      46434
+    ],
+    "release_plunger__plunger_stem": [
+      46434,
+      46446
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.1375,
+      0.116
+    ],
+    "scale": 2.941147058823529
+  }
+}

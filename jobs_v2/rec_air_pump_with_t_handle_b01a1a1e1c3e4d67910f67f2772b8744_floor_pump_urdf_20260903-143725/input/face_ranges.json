@@ -1,0 +1,139 @@
+{
+  "group_order": [
+    "frame__base",
+    "frame__lower_brace",
+    "frame__support_0",
+    "frame__support_1",
+    "frame__top_bridge",
+    "frame__barrel_shell",
+    "frame__gauge_stem",
+    "frame__guide_0",
+    "frame__guide_1",
+    "frame__guide_2",
+    "frame__guide_3",
+    "frame__gauge_bezel",
+    "frame__gauge_axle",
+    "frame__hook_arm",
+    "frame__hook_tip",
+    "handle__rod",
+    "handle__crossbar",
+    "handle__handle_boss",
+    "grip__sleeve",
+    "grip__link_0",
+    "grip__link_1",
+    "grip__grip_bar",
+    "needle__hub",
+    "needle__pointer",
+    "needle__counterweight"
+  ],
+  "face_ranges": {
+    "frame__base": [
+      0,
+      12
+    ],
+    "frame__lower_brace": [
+      12,
+      24
+    ],
+    "frame__support_0": [
+      24,
+      36
+    ],
+    "frame__support_1": [
+      36,
+      48
+    ],
+    "frame__top_bridge": [
+      48,
+      60
+    ],
+    "frame__barrel_shell": [
+      60,
+      1068
+    ],
+    "frame__gauge_stem": [
+      1068,
+      1080
+    ],
+    "frame__guide_0": [
+      1080,
+      1092
+    ],
+    "frame__guide_1": [
+      1092,
+      1104
+    ],
+    "frame__guide_2": [
+      1104,
+      1116
+    ],
+    "frame__guide_3": [
+      1116,
+      1128
+    ],
+    "frame__gauge_bezel": [
+      1128,
+      2132
+    ],
+    "frame__gauge_axle": [
+      2132,
+      2260
+    ],
+    "frame__hook_arm": [
+      2260,
+      2272
+    ],
+    "frame__hook_tip": [
+      2272,
+      2284
+    ],
+    "handle__rod": [
+      2284,
+      2412
+    ],
+    "handle__crossbar": [
+      2412,
+      2540
+    ],
+    "handle__handle_boss": [
+      2540,
+      2668
+    ],
+    "grip__sleeve": [
+      2668,
+      3676
+    ],
+    "grip__link_0": [
+      3676,
+      3688
+    ],
+    "grip__link_1": [
+      3688,
+      3700
+    ],
+    "grip__grip_bar": [
+      3700,
+      3828
+    ],
+    "needle__hub": [
+      3828,
+      3956
+    ],
+    "needle__pointer": [
+      3956,
+      3968
+    ],
+    "needle__counterweight": [
+      3968,
+      3980
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.00450000918300264,
+      0.329997
+    ],
+    "scale": 1.515150137728525
+  }
+}

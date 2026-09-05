@@ -1,0 +1,149 @@
+{
+  "group_order": [
+    "body__base_shell",
+    "body__left_shell",
+    "body__right_shell",
+    "body__rear_shell",
+    "body__top_shell",
+    "body__band_backer",
+    "body__opening_lip",
+    "body__display_panel",
+    "body__display_window",
+    "basket__basket_floor",
+    "basket__basket_side_0",
+    "basket__basket_side_1",
+    "basket__basket_rear",
+    "basket__drawer_face",
+    "basket__handle_post_0",
+    "basket__handle_post_1",
+    "basket__handle_bar_0",
+    "basket__handle_bar_1",
+    "release_button__release_cap",
+    "selector_knob__knob_body",
+    "selector_knob__knob_indicator",
+    "preset_button_0__button_cap",
+    "preset_button_1__button_cap",
+    "preset_button_2__button_cap",
+    "preset_button_3__button_cap",
+    "preset_button_4__button_cap",
+    "preset_button_5__button_cap"
+  ],
+  "face_ranges": {
+    "body__base_shell": [
+      0,
+      12
+    ],
+    "body__left_shell": [
+      12,
+      24
+    ],
+    "body__right_shell": [
+      24,
+      36
+    ],
+    "body__rear_shell": [
+      36,
+      48
+    ],
+    "body__top_shell": [
+      48,
+      60
+    ],
+    "body__band_backer": [
+      60,
+      72
+    ],
+    "body__opening_lip": [
+      72,
+      84
+    ],
+    "body__display_panel": [
+      84,
+      96
+    ],
+    "body__display_window": [
+      96,
+      108
+    ],
+    "basket__basket_floor": [
+      108,
+      120
+    ],
+    "basket__basket_side_0": [
+      120,
+      132
+    ],
+    "basket__basket_side_1": [
+      132,
+      144
+    ],
+    "basket__basket_rear": [
+      144,
+      156
+    ],
+    "basket__drawer_face": [
+      156,
+      168
+    ],
+    "basket__handle_post_0": [
+      168,
+      180
+    ],
+    "basket__handle_post_1": [
+      180,
+      192
+    ],
+    "basket__handle_bar_0": [
+      192,
+      204
+    ],
+    "basket__handle_bar_1": [
+      204,
+      216
+    ],
+    "release_button__release_cap": [
+      216,
+      228
+    ],
+    "selector_knob__knob_body": [
+      228,
+      356
+    ],
+    "selector_knob__knob_indicator": [
+      356,
+      368
+    ],
+    "preset_button_0__button_cap": [
+      368,
+      380
+    ],
+    "preset_button_1__button_cap": [
+      380,
+      392
+    ],
+    "preset_button_2__button_cap": [
+      392,
+      404
+    ],
+    "preset_button_3__button_cap": [
+      404,
+      416
+    ],
+    "preset_button_4__button_cap": [
+      416,
+      428
+    ],
+    "preset_button_5__button_cap": [
+      428,
+      440
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.02550000000000001,
+      0.2025
+    ],
+    "scale": 2.4691111111111113
+  }
+}

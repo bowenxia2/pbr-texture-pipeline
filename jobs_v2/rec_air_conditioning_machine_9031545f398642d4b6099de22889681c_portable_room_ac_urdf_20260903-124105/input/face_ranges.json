@@ -1,0 +1,189 @@
+{
+  "group_order": [
+    "body__lower_shell",
+    "body__upper_shell",
+    "body__front_top",
+    "body__rear_top",
+    "body__left_top",
+    "body__right_top",
+    "body__grille",
+    "body__panel",
+    "body__display_strip",
+    "body__side_cap_0",
+    "body__side_cap_1",
+    "body__stem_nn",
+    "body__fork_nn",
+    "body__wheel_nn",
+    "body__stem_pn",
+    "body__fork_pn",
+    "body__wheel_pn",
+    "body__stem_np",
+    "body__fork_np",
+    "body__wheel_np",
+    "body__stem_pp",
+    "body__fork_pp",
+    "body__wheel_pp",
+    "flap__panel",
+    "flap__nose",
+    "flap__rear_lip",
+    "dial__skirt",
+    "dial__knob",
+    "dial__indicator",
+    "button_0__base",
+    "button_0__cap",
+    "button_1__base",
+    "button_1__cap",
+    "button_2__base",
+    "button_2__cap"
+  ],
+  "face_ranges": {
+    "body__lower_shell": [
+      0,
+      12
+    ],
+    "body__upper_shell": [
+      12,
+      24
+    ],
+    "body__front_top": [
+      24,
+      36
+    ],
+    "body__rear_top": [
+      36,
+      48
+    ],
+    "body__left_top": [
+      48,
+      60
+    ],
+    "body__right_top": [
+      60,
+      72
+    ],
+    "body__grille": [
+      72,
+      344
+    ],
+    "body__panel": [
+      344,
+      356
+    ],
+    "body__display_strip": [
+      356,
+      368
+    ],
+    "body__side_cap_0": [
+      368,
+      380
+    ],
+    "body__side_cap_1": [
+      380,
+      392
+    ],
+    "body__stem_nn": [
+      392,
+      520
+    ],
+    "body__fork_nn": [
+      520,
+      532
+    ],
+    "body__wheel_nn": [
+      532,
+      660
+    ],
+    "body__stem_pn": [
+      660,
+      788
+    ],
+    "body__fork_pn": [
+      788,
+      800
+    ],
+    "body__wheel_pn": [
+      800,
+      928
+    ],
+    "body__stem_np": [
+      928,
+      1056
+    ],
+    "body__fork_np": [
+      1056,
+      1068
+    ],
+    "body__wheel_np": [
+      1068,
+      1196
+    ],
+    "body__stem_pp": [
+      1196,
+      1324
+    ],
+    "body__fork_pp": [
+      1324,
+      1336
+    ],
+    "body__wheel_pp": [
+      1336,
+      1464
+    ],
+    "flap__panel": [
+      1464,
+      1476
+    ],
+    "flap__nose": [
+      1476,
+      1488
+    ],
+    "flap__rear_lip": [
+      1488,
+      1500
+    ],
+    "dial__skirt": [
+      1500,
+      1628
+    ],
+    "dial__knob": [
+      1628,
+      1756
+    ],
+    "dial__indicator": [
+      1756,
+      1768
+    ],
+    "button_0__base": [
+      1768,
+      1780
+    ],
+    "button_0__cap": [
+      1780,
+      1792
+    ],
+    "button_1__base": [
+      1792,
+      1804
+    ],
+    "button_1__cap": [
+      1804,
+      1816
+    ],
+    "button_2__base": [
+      1816,
+      1828
+    ],
+    "button_2__cap": [
+      1828,
+      1840
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.016499999999999987,
+      0.37099999081704793
+    ],
+    "scale": 1.3476953844317463
+  }
+}

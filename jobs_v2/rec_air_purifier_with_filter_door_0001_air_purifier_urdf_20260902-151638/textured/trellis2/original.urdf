@@ -1,0 +1,262 @@
+<robot name="air_purifier">
+  <material name="body_white">
+    <color rgba="0.94 0.95 0.96 1" />
+    </material>
+  <material name="warm_gray">
+    <color rgba="0.78 0.79 0.8 1" />
+    </material>
+  <material name="vent_dark">
+    <color rgba="0.19 0.21 0.23 1" />
+    </material>
+  <material name="glass_black">
+    <color rgba="0.09 0.1 0.11 0.96" />
+    </material>
+  <material name="steel">
+    <color rgba="0.73 0.75 0.78 1" />
+    </material>
+  <material name="rubber">
+    <color rgba="0.1 0.1 0.11 1" />
+    </material>
+  <link name="body_shell">
+    <inertial>
+      <origin xyz="0 0 0.28" rpy="0 0 0" />
+      <mass value="8.1" />
+      <inertia ixx="0.23868" ixy="0" ixz="0" iyy="0.27243" iyz="0" izz="0.08775" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.94 0.95 0.96 1" />
+        </material>
+      </visual>
+    <visual name="status_window">
+      <origin xyz="0 0.103 0.432" rpy="0 0 0" />
+      <geometry>
+        <box size="0.11 0.004 0.02" />
+        </geometry>
+      <material name="glass_black">
+        <color rgba="0.09 0.1 0.11 0.96" />
+        </material>
+      </visual>
+    <visual name="rear_left_foot">
+      <origin xyz="-0.1 -0.055 0.006" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="rear_right_foot">
+      <origin xyz="0.1 -0.055 0.006" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="front_left_foot">
+      <origin xyz="-0.1 0.055 0.006" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    <visual name="front_right_foot">
+      <origin xyz="0.1 0.055 0.006" rpy="1.5708 0 0" />
+      <geometry>
+        <cylinder radius="0.01" length="0.012" />
+        </geometry>
+      <material name="rubber">
+        <color rgba="0.1 0.1 0.11 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="front_intake">
+    <inertial>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <mass value="0.35" />
+      <inertia ixx="0.00262605" ixy="0" ixz="0" iyy="0.00411472" iyz="0" izz="0.00149077" />
+      </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/front_intake.obj" />
+        </geometry>
+      <material name="vent_dark">
+        <color rgba="0.19 0.21 0.23 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="top_grille">
+    <inertial>
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <mass value="0.18" />
+      <inertia ixx="8.31e-05" ixy="0" ixz="0" iyy="0.00032952" iyz="0" izz="0.0004107" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/top_grille.obj" />
+        </geometry>
+      <material name="vent_dark">
+        <color rgba="0.19 0.21 0.23 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="control_pod">
+    <inertial>
+      <origin xyz="0 0 0.003" rpy="0 0 0" />
+      <mass value="0.22" />
+      <inertia ixx="0.000101053" ixy="0" ixz="0" iyy="0.00041316" iyz="0" izz="0.000512893" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/control_pod.obj" />
+        </geometry>
+      <material name="glass_black">
+        <color rgba="0.09 0.1 0.11 0.96" />
+        </material>
+      </visual>
+    <visual name="power_switch_bezel">
+      <origin xyz="0.044 0 0.0052" rpy="0 0 0" />
+      <geometry>
+        <box size="0.038 0.058 0.0024" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="filter_door">
+    <inertial>
+      <origin xyz="-0.118 -0.005 0" rpy="0 0 0" />
+      <mass value="0.95" />
+      <inertia ixx="0.00713292" ixy="0" ixz="0" iyy="0.0115343" iyz="0" izz="0.00441718" />
+      </inertial>
+    <visual>
+      <origin xyz="-0.118 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/filter_door.obj" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.94 0.95 0.96 1" />
+        </material>
+      </visual>
+    <visual>
+      <origin xyz="-0.118 -0.003 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="assets/meshes/filter_insert.obj" />
+        </geometry>
+      <material name="warm_gray">
+        <color rgba="0.78 0.79 0.8 1" />
+        </material>
+      </visual>
+    <visual name="finger_pull">
+      <origin xyz="-0.226 -0.006 0.078" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.003 0.05" />
+        </geometry>
+      <material name="vent_dark">
+        <color rgba="0.19 0.21 0.23 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="selector_dial">
+    <inertial>
+      <origin xyz="0 0 0.0125" rpy="0 0 0" />
+      <mass value="0.12" />
+      <inertia ixx="3.508e-05" ixy="0" ixz="0" iyy="3.508e-05" iyz="0" izz="5.766e-05" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/selector_dial.obj" />
+        </geometry>
+      <material name="glass_black">
+        <color rgba="0.09 0.1 0.11 0.96" />
+        </material>
+      </visual>
+    <visual name="dial_trim_ring">
+      <origin xyz="0 0 0.001" rpy="0 0 0" />
+      <geometry>
+        <cylinder radius="0.031" length="0.002" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    <visual name="dial_indicator">
+      <origin xyz="0 0.018 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.003 0.012 0.0014" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <link name="power_rocker">
+    <inertial>
+      <origin xyz="0 0 0.004" rpy="0 0 0" />
+      <mass value="0.05" />
+      <inertia ixx="1.06833e-05" ixy="0" ixz="0" iyy="4.01667e-06" iyz="0" izz="1.41667e-05" />
+      </inertial>
+    <visual>
+      <geometry>
+        <mesh filename="assets/meshes/power_rocker.obj" />
+        </geometry>
+      <material name="vent_dark">
+        <color rgba="0.19 0.21 0.23 1" />
+        </material>
+      </visual>
+    <visual name="power_mark">
+      <origin xyz="0 0.012 0.0085" rpy="0 0 0" />
+      <geometry>
+        <box size="0.004 0.014 0.0015" />
+        </geometry>
+      <material name="steel">
+        <color rgba="0.73 0.75 0.78 1" />
+        </material>
+      </visual>
+    </link>
+  <joint name="body_to_front_intake" type="fixed">
+    <origin xyz="0 0.105 0.205" rpy="0 0 0" />
+    <parent link="body_shell" />
+    <child link="front_intake" />
+    </joint>
+  <joint name="body_to_top_grille" type="fixed">
+    <origin xyz="0 -0.036 0.5508" rpy="0 0 0" />
+    <parent link="body_shell" />
+    <child link="top_grille" />
+    </joint>
+  <joint name="body_to_control_pod" type="fixed">
+    <origin xyz="0 0.048 0.5515" rpy="0 0 0" />
+    <parent link="body_shell" />
+    <child link="control_pod" />
+    </joint>
+  <joint name="body_to_filter_door" type="revolute">
+    <origin xyz="0.12 -0.1045 0.22" rpy="0 0 0" />
+    <parent link="body_shell" />
+    <child link="filter_door" />
+    <axis xyz="0 0 1" />
+    <limit effort="9" velocity="2.5" lower="0" upper="1.25" />
+    </joint>
+  <joint name="control_pod_to_selector_dial" type="continuous">
+    <origin xyz="-0.036 0 0.0096" rpy="0 0 0" />
+    <parent link="control_pod" />
+    <child link="selector_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="1" velocity="5" />
+    </joint>
+  <joint name="control_pod_to_power_rocker" type="revolute">
+    <origin xyz="0.044 0 0.0123" rpy="0 0 0" />
+    <parent link="control_pod" />
+    <child link="power_rocker" />
+    <axis xyz="1 0 0" />
+    <limit effort="0.6" velocity="3" lower="-0.18" upper="0.18" />
+    </joint>
+  </robot>

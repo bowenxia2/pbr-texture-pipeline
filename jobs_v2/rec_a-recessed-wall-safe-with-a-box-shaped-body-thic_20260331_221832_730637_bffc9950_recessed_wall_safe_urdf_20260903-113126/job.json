@@ -1,0 +1,413 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950_recessed_wall_safe_urdf_20260903-113126",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950/model.urdf",
+  "created": "2026-09-03T11:31:26",
+  "updated": "2026-09-03T12:04:44",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 25,
+        "n_tiny": 17
+      },
+      "seed": null,
+      "started": "2026-09-03T11:31:35",
+      "finished": "2026-09-03T11:31:36",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray painted metal on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T11:31:41",
+      "finished": "2026-09-03T11:33:01",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950_recessed_wall_safe_urdf_20260903-113126/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T11:33:01",
+      "finished": "2026-09-03T11:58:05",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 25,
+            "n_total": 25,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950_recessed_wall_safe_urdf_20260903-113126/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T11:58:06",
+      "finished": "2026-09-03T12:04:44",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-recessed-wall-safe-with-a-box-shaped-body-thic_20260331_221832_730637_bffc9950/model.urdf",
+    "category": "recessed wall safe",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.24000000000000002,
+        -0.21,
+        -0.27
+      ],
+      "max": [
+        0.07000002571233452,
+        0.21,
+        0.27
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__back_wall",
+        "link": "body",
+        "label": "back_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.21149190805148624,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__left_wall",
+        "link": "body",
+        "label": "left_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11351982577184508,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__right_wall",
+        "link": "body",
+        "label": "right_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11351982577184508,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__top_wall",
+        "link": "body",
+        "label": "top_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08387262174287538,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__bottom_wall",
+        "link": "body",
+        "label": "bottom_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.08387262174287538,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__frame_left",
+        "link": "body",
+        "label": "frame_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.028220219352287936,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__frame_right",
+        "link": "body",
+        "label": "frame_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.028220219352287936,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__frame_top",
+        "link": "body",
+        "label": "frame_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020765821787532647,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__frame_bottom",
+        "link": "body",
+        "label": "frame_bottom",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.020765821787532647,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__hinge_support",
+        "link": "body",
+        "label": "hinge_support",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01452187639876856,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__upper_hinge_knuckle",
+        "link": "body",
+        "label": "upper_hinge_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003060467707596853,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__lower_hinge_knuckle",
+        "link": "body",
+        "label": "lower_hinge_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.003060467707596853,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "door__door_slab",
+        "link": "door",
+        "label": "door_slab",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1625378143298003,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__trim_top",
+        "link": "door",
+        "label": "trim_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.018178080918624724,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__trim_bottom",
+        "link": "door",
+        "label": "trim_bottom",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.018178080918624724,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__trim_hinge_side",
+        "link": "door",
+        "label": "trim_hinge_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02155030838839498,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__trim_latch_side",
+        "link": "door",
+        "label": "trim_latch_side",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021550308388394966,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__hinge_leaf",
+        "link": "door",
+        "label": "hinge_leaf",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009080166176497179,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "door__middle_hinge_knuckle",
+        "link": "door",
+        "label": "middle_hinge_knuckle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.004730544809715608,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dial__dial_base",
+        "link": "dial",
+        "label": "dial_base",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.006097667582308769,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dial__dial_ring",
+        "link": "dial",
+        "label": "dial_ring",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005990832560360302,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "dial__dial_center",
+        "link": "dial",
+        "label": "dial_center",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005992977061087023,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__handle_boss",
+        "link": "handle",
+        "label": "handle_boss",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.002263584656265309,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__handle_spindle",
+        "link": "handle",
+        "label": "handle_spindle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.000720259862400371,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "handle__handle_bar",
+        "link": "handle",
+        "label": "handle_bar",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0036313565279736553,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

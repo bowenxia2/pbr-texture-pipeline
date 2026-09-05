@@ -1,0 +1,175 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 4155666,
+  "groups": {
+    "frame__base_shell": {
+      "texture_size": 1024,
+      "n_faces": 7422,
+      "texels": 746465,
+      "field_voxels": 722641
+    },
+    "frame__base_neck": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55111,
+      "field_voxels": 48328
+    },
+    "frame__column_pedestal": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 49982,
+      "field_voxels": 49982
+    },
+    "frame__column_spine": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54800,
+      "field_voxels": 54760
+    },
+    "frame__guide_rail": {
+      "texture_size": 1024,
+      "n_faces": 96,
+      "texels": 853775,
+      "field_voxels": 152161
+    },
+    "frame__column_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52474,
+      "field_voxels": 52288
+    },
+    "frame__stage_support_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50175,
+      "field_voxels": 49946
+    },
+    "frame__stage_support_rib": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58434,
+      "field_voxels": 58341
+    },
+    "frame__stage_plate": {
+      "texture_size": 1024,
+      "n_faces": 244,
+      "texels": 634274,
+      "field_voxels": 315803
+    },
+    "frame__mechanical_stage_pad": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60618,
+      "field_voxels": 59943
+    },
+    "optical_carriage__sleeve": {
+      "texture_size": 1024,
+      "n_faces": 232,
+      "texels": 841523,
+      "field_voxels": 432643
+    },
+    "optical_carriage__slide_shoe": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56976,
+      "field_voxels": 56654
+    },
+    "optical_carriage__carriage_arm": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52993,
+      "field_voxels": 52718
+    },
+    "optical_carriage__head_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58381,
+      "field_voxels": 58303
+    },
+    "optical_carriage__nose_bridge": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46292,
+      "field_voxels": 46046
+    },
+    "optical_carriage__focus_bearing": {
+      "texture_size": 1024,
+      "n_faces": 244,
+      "texels": 785063,
+      "field_voxels": 150445
+    },
+    "optical_carriage__eyepiece_tube": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 851243,
+      "field_voxels": 161048
+    },
+    "optical_carriage__eyepiece_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 734425,
+      "field_voxels": 42367
+    },
+    "optical_carriage__objective_turret": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 802503,
+      "field_voxels": 62521
+    },
+    "optical_carriage__objective_primary": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 717894,
+      "field_voxels": 26296
+    },
+    "optical_carriage__objective_side_left": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 716227,
+      "field_voxels": 12802
+    },
+    "optical_carriage__objective_side_right": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 744999,
+      "field_voxels": 12733
+    },
+    "optical_carriage__objective_tip": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 746444,
+      "field_voxels": 6862
+    },
+    "focus_knob_pair__knob_shaft": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 785791,
+      "field_voxels": 25834
+    },
+    "focus_knob_pair__knob_hub_right": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 702932,
+      "field_voxels": 17472
+    },
+    "focus_knob_pair__knob_hub_left": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 785349,
+      "field_voxels": 17514
+    },
+    "focus_knob_pair__knob_right": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 652828,
+      "field_voxels": 43967
+    },
+    "focus_knob_pair__knob_left": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 747257,
+      "field_voxels": 43816
+    }
+  }
+}

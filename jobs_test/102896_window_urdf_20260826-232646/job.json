@@ -1,0 +1,49 @@
+{
+  "schema_version": 7,
+  "job_id": "102896_window_urdf_20260826-232646",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/partnet_mobility/102896/mobility.urdf",
+  "created": "2026-08-26T23:26:46",
+  "updated": "2026-08-26T23:33:03",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "error",
+      "params": {},
+      "seed": null,
+      "started": "2026-08-26T23:31:44",
+      "finished": "2026-08-26T23:33:03",
+      "error": "Traceback (most recent call last):\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/batch.py\", line 105, in stage_render\n    info = AS.render(job)\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/articulated/stages.py\", line 155, in render\n    render_out = R.render_textured_views(job, group_meshes_textured, R_mat,\n  File \"/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/pbr_texture_pipeline/rendering.py\", line 474, in render_textured_views\n    color[:, :, :3] = np.clip(mapped * 255.0, 0, 255).astype(np.uint8)\nValueError: assignment destination is read-only\n"
+    },
+    "vlm": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "imageedit": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    },
+    "texture": {
+      "status": "pending",
+      "params": {},
+      "seed": null,
+      "started": null,
+      "finished": null,
+      "error": null
+    }
+  }
+}

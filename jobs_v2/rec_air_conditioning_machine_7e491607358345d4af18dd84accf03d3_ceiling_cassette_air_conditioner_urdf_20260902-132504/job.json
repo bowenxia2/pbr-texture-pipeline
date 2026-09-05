@@ -1,0 +1,231 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3_ceiling_cassette_air_conditioner_urdf_20260902-132504",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3/model.urdf",
+  "created": "2026-09-02T13:25:04",
+  "updated": "2026-09-02T14:25:27",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 11,
+        "n_tiny": 9
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:10",
+      "finished": "2026-09-02T13:26:11",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the main body; metal on the mounting brackets",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:26:13",
+      "finished": "2026-09-02T13:32:44",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3_ceiling_cassette_air_conditioner_urdf_20260902-132504/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T13:32:44",
+      "finished": "2026-09-02T14:12:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 11,
+            "n_total": 11,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3_ceiling_cassette_air_conditioner_urdf_20260902-132504/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T14:12:37",
+      "finished": "2026-09-02T14:25:27",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_7e491607358345d4af18dd84accf03d3/model.urdf",
+    "category": "ceiling cassette air conditioner",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.475,
+        -0.475,
+        -0.01
+      ],
+      "max": [
+        0.475,
+        0.475,
+        0.29800000000000004
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "cassette__panel_shell",
+        "link": "cassette",
+        "label": "panel_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cassette_panel_shell.obj"
+        ],
+        "n_faces": 152,
+        "area_frac": 0.341557833499957,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "cassette__intake_grille",
+        "link": "cassette",
+        "label": "intake_grille",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/cassette_intake_grille.obj"
+        ],
+        "n_faces": 732,
+        "area_frac": 0.07246999642626109,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "cassette__upper_body",
+        "link": "cassette",
+        "label": "upper_body",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.46910977711630947,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "front_flap__flap_panel",
+        "link": "front_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02894841601939771,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "rear_flap__flap_panel",
+        "link": "rear_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02894841601939771,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "left_flap__flap_panel",
+        "link": "left_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02894841601939771,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "right_flap__flap_panel",
+        "link": "right_flap",
+        "label": "flap_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.02894841601939771,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_button_0__button_cap",
+        "link": "front_button_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00017303229483798296,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "front_button_0__button_stem",
+        "link": "front_button_0",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0003613321451028468,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "front_button_1__button_cap",
+        "link": "front_button_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00017303229483798296,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "front_button_1__button_stem",
+        "link": "front_button_1",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0003613321451028468,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

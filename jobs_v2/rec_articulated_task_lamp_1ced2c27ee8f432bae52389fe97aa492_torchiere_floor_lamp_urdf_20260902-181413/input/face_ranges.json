@@ -1,0 +1,89 @@
+{
+  "group_order": [
+    "stand__base_disc",
+    "stand__base_foot_ring",
+    "stand__post_shaft",
+    "stand__shoulder_collar",
+    "stand__shoulder_boss",
+    "stand__top_socket",
+    "main_shade__main_bowl_shell",
+    "main_shade__mount_collar",
+    "main_shade__lamp_socket_stem",
+    "reading_arm__root_knuckle",
+    "reading_arm__arm_tube",
+    "reading_arm__tip_block",
+    "reading_shade__hinge_barrel",
+    "reading_shade__shade_shell",
+    "reading_shade__shade_neck"
+  ],
+  "face_ranges": {
+    "stand__base_disc": [
+      0,
+      128
+    ],
+    "stand__base_foot_ring": [
+      128,
+      256
+    ],
+    "stand__post_shaft": [
+      256,
+      384
+    ],
+    "stand__shoulder_collar": [
+      384,
+      512
+    ],
+    "stand__shoulder_boss": [
+      512,
+      640
+    ],
+    "stand__top_socket": [
+      640,
+      768
+    ],
+    "main_shade__main_bowl_shell": [
+      768,
+      3504
+    ],
+    "main_shade__mount_collar": [
+      3504,
+      3632
+    ],
+    "main_shade__lamp_socket_stem": [
+      3632,
+      3760
+    ],
+    "reading_arm__root_knuckle": [
+      3760,
+      3888
+    ],
+    "reading_arm__arm_tube": [
+      3888,
+      6224
+    ],
+    "reading_arm__tip_block": [
+      6224,
+      6236
+    ],
+    "reading_shade__hinge_barrel": [
+      6236,
+      6364
+    ],
+    "reading_shade__shade_shell": [
+      6364,
+      7484
+    ],
+    "reading_shade__shade_neck": [
+      7484,
+      7612
+    ]
+  },
+  "norm": {
+    "center": [
+      0.2092270171204357,
+      0.0,
+      0.905
+    ],
+    "scale": 0.5524806629834255
+  }
+}

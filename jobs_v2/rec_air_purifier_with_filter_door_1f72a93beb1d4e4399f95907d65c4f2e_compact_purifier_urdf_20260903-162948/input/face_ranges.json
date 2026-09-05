@@ -1,0 +1,154 @@
+{
+  "group_order": [
+    "body__back_wall",
+    "body__side_wall_0",
+    "body__side_wall_1",
+    "body__base_wall",
+    "body__top_wall",
+    "body__lower_rail",
+    "body__upper_front",
+    "body__front_stile_0",
+    "body__front_stile_1",
+    "body__guide_rail_0",
+    "body__guide_rail_1",
+    "body__top_vent_0",
+    "body__top_vent_1",
+    "body__top_vent_2",
+    "body__top_vent_3",
+    "body__top_vent_4",
+    "body__top_vent_5",
+    "front_panel__panel",
+    "front_panel__hinge_leaf",
+    "front_panel__knuckle_0",
+    "front_panel__knuckle_1",
+    "front_panel__knuckle_2",
+    "filter__cartridge",
+    "rocker_switch__switch_front",
+    "rocker_switch__switch_rear",
+    "rocker_switch__switch_bridge",
+    "rocker_switch__switch_tab_0",
+    "rocker_switch__switch_tab_1"
+  ],
+  "face_ranges": {
+    "body__back_wall": [
+      0,
+      12
+    ],
+    "body__side_wall_0": [
+      12,
+      24
+    ],
+    "body__side_wall_1": [
+      24,
+      36
+    ],
+    "body__base_wall": [
+      36,
+      48
+    ],
+    "body__top_wall": [
+      48,
+      60
+    ],
+    "body__lower_rail": [
+      60,
+      72
+    ],
+    "body__upper_front": [
+      72,
+      84
+    ],
+    "body__front_stile_0": [
+      84,
+      96
+    ],
+    "body__front_stile_1": [
+      96,
+      108
+    ],
+    "body__guide_rail_0": [
+      108,
+      120
+    ],
+    "body__guide_rail_1": [
+      120,
+      132
+    ],
+    "body__top_vent_0": [
+      132,
+      144
+    ],
+    "body__top_vent_1": [
+      144,
+      156
+    ],
+    "body__top_vent_2": [
+      156,
+      168
+    ],
+    "body__top_vent_3": [
+      168,
+      180
+    ],
+    "body__top_vent_4": [
+      180,
+      192
+    ],
+    "body__top_vent_5": [
+      192,
+      204
+    ],
+    "front_panel__panel": [
+      204,
+      356
+    ],
+    "front_panel__hinge_leaf": [
+      356,
+      368
+    ],
+    "front_panel__knuckle_0": [
+      368,
+      496
+    ],
+    "front_panel__knuckle_1": [
+      496,
+      624
+    ],
+    "front_panel__knuckle_2": [
+      624,
+      752
+    ],
+    "filter__cartridge": [
+      752,
+      764
+    ],
+    "rocker_switch__switch_front": [
+      764,
+      776
+    ],
+    "rocker_switch__switch_rear": [
+      776,
+      788
+    ],
+    "rocker_switch__switch_bridge": [
+      788,
+      800
+    ],
+    "rocker_switch__switch_tab_0": [
+      800,
+      812
+    ],
+    "rocker_switch__switch_tab_1": [
+      812,
+      824
+    ]
+  },
+  "norm": {
+    "center": [
+      0.005999999999999998,
+      0.0,
+      0.21425
+    ],
+    "scale": 2.333698949824971
+  }
+}

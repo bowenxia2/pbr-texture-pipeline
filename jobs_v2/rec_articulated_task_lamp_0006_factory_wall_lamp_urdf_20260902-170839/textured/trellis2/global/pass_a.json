@@ -1,0 +1,127 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 1500690,
+  "groups": {
+    "bracket__backplate": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58463,
+      "field_voxels": 57948
+    },
+    "bracket__standoff": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59732,
+      "field_voxels": 42178
+    },
+    "bracket__shoulder_post": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 868605,
+      "field_voxels": 17008
+    },
+    "bracket__upper_anchor_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 773977,
+      "field_voxels": 5652
+    },
+    "bracket__lower_anchor_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 774101,
+      "field_voxels": 5666
+    },
+    "bracket__upper_rib": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55045,
+      "field_voxels": 18662
+    },
+    "bracket__lower_rib": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55045,
+      "field_voxels": 18662
+    },
+    "boom__shoulder_sleeve": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 702988,
+      "field_voxels": 18944
+    },
+    "boom__shoulder_clevis": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52909,
+      "field_voxels": 34187
+    },
+    "boom__upper_strut": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50016,
+      "field_voxels": 26800
+    },
+    "boom__lower_strut": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50016,
+      "field_voxels": 26812
+    },
+    "boom__head_brace": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52524,
+      "field_voxels": 26028
+    },
+    "boom__head_sleeve": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 798710,
+      "field_voxels": 19020
+    },
+    "boom__tension_rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 736903,
+      "field_voxels": 43121
+    },
+    "head__trunnion": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 719442,
+      "field_voxels": 13292
+    },
+    "head__neck_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52132,
+      "field_voxels": 18052
+    },
+    "head__collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 711657,
+      "field_voxels": 29884
+    },
+    "head__shade_shell": {
+      "texture_size": 1024,
+      "n_faces": 380,
+      "texels": 711964,
+      "field_voxels": 370986
+    },
+    "head__reflector_liner": {
+      "texture_size": 1024,
+      "n_faces": 380,
+      "texels": 754988,
+      "field_voxels": 256410
+    },
+    "head__front_rim": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 601439,
+      "field_voxels": 111100
+    }
+  }
+}

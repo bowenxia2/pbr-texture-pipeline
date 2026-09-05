@@ -1,0 +1,566 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="industrial_air_scrubber">
+	<material name="cabinet_paint">
+		<color rgba="0.8 0.81 0.82 1" />
+	</material>
+	<material name="trim_dark">
+		<color rgba="0.17 0.18 0.2 1" />
+	</material>
+	<material name="blower_dark">
+		<color rgba="0.1 0.11 0.12 1" />
+	</material>
+	<material name="steel">
+		<color rgba="0.62 0.64 0.67 1" />
+	</material>
+	<material name="hinge_steel">
+		<color rgba="0.55 0.57 0.6 1" />
+	</material>
+	<material name="rubber">
+		<color rgba="0.05 0.05 0.05 1" />
+	</material>
+	<link name="cabinet">
+		<inertial>
+			<origin xyz="0 0 0.76" rpy="0 0 0" />
+			<mass value="92" />
+			<inertia ixx="20.1173" ixy="0" ixz="0" iyy="21.6875" iyz="0" izz="6.37867" />
+		</inertial>
+		<visual name="cabinet__left_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__left_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__right_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__right_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__back_wall">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__back_wall.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__base_pan">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__base_pan.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__front_left_jamb">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__front_left_jamb.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__front_right_jamb">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__front_right_jamb.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__front_bottom_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__front_bottom_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__front_top_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__front_top_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__top_front_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__top_front_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__top_rear_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__top_rear_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__top_left_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__top_left_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__top_right_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__top_right_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__blower_plenum">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__blower_plenum.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__lower_hinge_backer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__lower_hinge_backer.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__upper_hinge_backer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__upper_hinge_backer.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__door_hinge_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__door_hinge_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__door_center_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__door_center_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__baffle_hinge_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__baffle_hinge_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="cabinet__baffle_center_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cabinet__baffle_center_knuckle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="access_door">
+		<inertial>
+			<origin xyz="0.316 0.02 0" rpy="0 0 0" />
+			<mass value="18" />
+			<inertia ixx="1.88295" ixy="0" ixz="0" iyy="2.46193" iyz="0" izz="0.581676" />
+		</inertial>
+		<visual name="access_door__left_stile">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__left_stile.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__right_stile">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__right_stile.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__top_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__top_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__bottom_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__bottom_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__upper_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__upper_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__door_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__door_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__upper_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__upper_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__upper_knuckle_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__upper_knuckle_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__lower_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__lower_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__lower_knuckle_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__lower_knuckle_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__handle_upper_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__handle_upper_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__handle_lower_post">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__handle_lower_post.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_door__handle_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_door__handle_grip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="exhaust_baffle">
+		<inertial>
+			<origin xyz="0 0.12 0.03" rpy="0 0 0" />
+			<mass value="5" />
+			<inertia ixx="0.0260417" ixy="0" ixz="0" iyy="0.0980417" iyz="0" izz="0.12" />
+		</inertial>
+		<visual name="exhaust_baffle__baffle_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__baffle_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__left_flange">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__left_flange.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__right_flange">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__right_flange.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__front_lip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__front_lip.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__lift_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__lift_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__left_baffle_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__left_baffle_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__left_baffle_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__left_baffle_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__right_baffle_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__right_baffle_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_baffle__right_baffle_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_baffle__right_baffle_leaf.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_left_caster">
+		<inertial>
+			<origin xyz="0 0 -0.06" rpy="0 0 0" />
+			<mass value="2.2" />
+			<inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+		</inertial>
+		<visual name="front_left_caster__mount_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__mount_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__swivel_head">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__swivel_head.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__swivel_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__swivel_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__yoke_cheek_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__yoke_cheek_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__yoke_cheek_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__yoke_cheek_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__wheel_tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__wheel_tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_left_caster__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_left_caster__wheel_hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_right_caster">
+		<inertial>
+			<origin xyz="0 0 -0.06" rpy="0 0 0" />
+			<mass value="2.2" />
+			<inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+		</inertial>
+		<visual name="front_right_caster__mount_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__mount_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__swivel_head">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__swivel_head.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__swivel_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__swivel_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__yoke_cheek_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__yoke_cheek_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__yoke_cheek_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__yoke_cheek_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__wheel_tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__wheel_tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_right_caster__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_right_caster__wheel_hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rear_left_caster">
+		<inertial>
+			<origin xyz="0 0 -0.06" rpy="0 0 0" />
+			<mass value="2.2" />
+			<inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+		</inertial>
+		<visual name="rear_left_caster__mount_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__mount_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__swivel_head">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__swivel_head.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__swivel_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__swivel_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__yoke_cheek_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__yoke_cheek_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__yoke_cheek_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__yoke_cheek_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__wheel_tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__wheel_tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_left_caster__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_left_caster__wheel_hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rear_right_caster">
+		<inertial>
+			<origin xyz="0 0 -0.06" rpy="0 0 0" />
+			<mass value="2.2" />
+			<inertia ixx="0.00381333" ixy="0" ixz="0" iyy="0.00447333" iyz="0" izz="0.00300667" />
+		</inertial>
+		<visual name="rear_right_caster__mount_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__mount_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__swivel_head">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__swivel_head.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__swivel_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__swivel_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__yoke_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__yoke_bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__yoke_cheek_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__yoke_cheek_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__yoke_cheek_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__yoke_cheek_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__wheel_tire">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__wheel_tire.glb" />
+			</geometry>
+		</visual>
+		<visual name="rear_right_caster__wheel_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_right_caster__wheel_hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="access_door_hinge" type="revolute">
+		<origin xyz="-0.375 0.294 0.77" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="access_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="45" velocity="1.6" lower="0" upper="1.55" />
+	</joint>
+	<joint name="exhaust_baffle_hinge" type="revolute">
+		<origin xyz="0 -0.255 1.544" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="exhaust_baffle" />
+		<axis xyz="1 0 0" />
+		<limit effort="18" velocity="1.4" lower="0" upper="1.1" />
+	</joint>
+	<joint name="front_left_caster_mount" type="fixed">
+		<origin xyz="-0.23 0.18 0.12" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="front_left_caster" />
+	</joint>
+	<joint name="front_right_caster_mount" type="fixed">
+		<origin xyz="0.23 0.18 0.12" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="front_right_caster" />
+	</joint>
+	<joint name="rear_left_caster_mount" type="fixed">
+		<origin xyz="-0.23 -0.18 0.12" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="rear_left_caster" />
+	</joint>
+	<joint name="rear_right_caster_mount" type="fixed">
+		<origin xyz="0.23 -0.18 0.12" rpy="0 0 0" />
+		<parent link="cabinet" />
+		<child link="rear_right_caster" />
+	</joint>
+</robot>

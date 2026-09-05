@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="ceiling_cassette_air_conditioner">
+	<material name="panel_white">
+		<color rgba="0.94 0.95 0.93 1" />
+	</material>
+	<material name="chassis_gray">
+		<color rgba="0.8 0.82 0.82 1" />
+	</material>
+	<material name="grille_gray">
+		<color rgba="0.72 0.75 0.76 1" />
+	</material>
+	<material name="flap_white">
+		<color rgba="0.92 0.93 0.91 1" />
+	</material>
+	<material name="button_gray">
+		<color rgba="0.58 0.6 0.62 1" />
+	</material>
+	<link name="cassette">
+		<collision name="panel_shell">
+			<geometry>
+				<mesh filename="assets/meshes/cassette_panel_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="intake_grille">
+			<geometry>
+				<mesh filename="assets/meshes/cassette_intake_grille.obj" />
+			</geometry>
+		</collision>
+		<collision name="upper_body">
+			<origin xyz="0 0 0.163" rpy="0 0 0" />
+			<geometry>
+				<box size="0.68 0.68 0.27" />
+			</geometry>
+		</collision>
+		<visual name="cassette__panel_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cassette__panel_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="cassette__intake_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cassette__intake_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="cassette__upper_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/cassette__upper_body.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_flap">
+		<collision name="flap_panel">
+			<origin xyz="0 0.0465 -0.005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.488 0.093 0.01" />
+			</geometry>
+		</collision>
+		<visual name="front_flap__flap_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_flap__flap_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="rear_flap">
+		<collision name="flap_panel">
+			<origin xyz="0 -0.0465 -0.005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.488 0.093 0.01" />
+			</geometry>
+		</collision>
+		<visual name="rear_flap__flap_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/rear_flap__flap_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="left_flap">
+		<collision name="flap_panel">
+			<origin xyz="0.0465 0 -0.005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.093 0.488 0.01" />
+			</geometry>
+		</collision>
+		<visual name="left_flap__flap_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_flap__flap_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="right_flap">
+		<collision name="flap_panel">
+			<origin xyz="-0.0465 0 -0.005" rpy="0 0 0" />
+			<geometry>
+				<box size="0.093 0.488 0.01" />
+			</geometry>
+		</collision>
+		<visual name="right_flap__flap_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_flap__flap_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_button_0">
+		<collision name="button_cap">
+			<geometry>
+				<box size="0.018 0.012 0.003" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<box size="0.021 0.015 0.009" />
+			</geometry>
+		</collision>
+		<visual name="front_button_0__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_button_0__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_button_0__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_button_0__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_button_1">
+		<collision name="button_cap">
+			<geometry>
+				<box size="0.018 0.012 0.003" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<box size="0.021 0.015 0.009" />
+			</geometry>
+		</collision>
+		<visual name="front_button_1__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_button_1__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_button_1__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_button_1__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="front_button_0_press" type="prismatic">
+		<origin xyz="0.334 -0.432 0.0015" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="front_button_0" />
+		<axis xyz="0 0 1" />
+		<limit effort="3" velocity="0.05" lower="0" upper="0.0035" />
+	</joint>
+	<joint name="front_button_1_press" type="prismatic">
+		<origin xyz="0.366 -0.432 0.0015" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="front_button_1" />
+		<axis xyz="0 0 1" />
+		<limit effort="3" velocity="0.05" lower="0" upper="0.0035" />
+	</joint>
+	<joint name="front_flap_hinge" type="revolute">
+		<origin xyz="0 -0.366 0" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="front_flap" />
+		<axis xyz="-1 0 0" />
+		<limit effort="8" velocity="1.5" lower="0" upper="1.1" />
+	</joint>
+	<joint name="rear_flap_hinge" type="revolute">
+		<origin xyz="0 0.366 0" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="rear_flap" />
+		<axis xyz="1 0 0" />
+		<limit effort="8" velocity="1.5" lower="0" upper="1.1" />
+	</joint>
+	<joint name="left_flap_hinge" type="revolute">
+		<origin xyz="-0.366 0 0" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="left_flap" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="1.5" lower="0" upper="1.1" />
+	</joint>
+	<joint name="right_flap_hinge" type="revolute">
+		<origin xyz="0.366 0 0" rpy="0 0 0" />
+		<parent link="cassette" />
+		<child link="right_flap" />
+		<axis xyz="0 -1 0" />
+		<limit effort="8" velocity="1.5" lower="0" upper="1.1" />
+	</joint>
+</robot>

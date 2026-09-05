@@ -1,0 +1,193 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 3429076,
+  "groups": {
+    "cabinet__plinth": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53289,
+      "field_voxels": 53255
+    },
+    "cabinet__lower_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 43246,
+      "field_voxels": 43246
+    },
+    "cabinet__upper_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 45715,
+      "field_voxels": 45715
+    },
+    "cabinet__marquee_box": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54030,
+      "field_voxels": 53967
+    },
+    "cabinet__marquee_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57510,
+      "field_voxels": 40112
+    },
+    "cabinet__control_deck": {
+      "texture_size": 1024,
+      "n_faces": 3060,
+      "texels": 916004,
+      "field_voxels": 277683
+    },
+    "cabinet__control_apron": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51907,
+      "field_voxels": 51768
+    },
+    "cabinet__screen_bezel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56436,
+      "field_voxels": 56285
+    },
+    "cabinet__screen_glass": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 60648,
+      "field_voxels": 60240
+    },
+    "cabinet__speaker_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58877,
+      "field_voxels": 56486
+    },
+    "joystick_0__base_collar": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 41022,
+      "field_voxels": 2240
+    },
+    "joystick_0__shaft": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 44804,
+      "field_voxels": 1652
+    },
+    "joystick_0__ball_top": {
+      "texture_size": 256,
+      "n_faces": 1280,
+      "texels": 38886,
+      "field_voxels": 1835
+    },
+    "joystick_1__base_collar": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 41861,
+      "field_voxels": 2256
+    },
+    "joystick_1__shaft": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 44814,
+      "field_voxels": 1658
+    },
+    "joystick_1__ball_top": {
+      "texture_size": 256,
+      "n_faces": 1280,
+      "texels": 29662,
+      "field_voxels": 1820
+    },
+    "start_button_0__button_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 721192,
+      "field_voxels": 2521
+    },
+    "start_button_0__button_plunger": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 38635,
+      "field_voxels": 1615
+    },
+    "start_button_0__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 679066,
+      "field_voxels": 3252
+    },
+    "start_button_1__button_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 702769,
+      "field_voxels": 2530
+    },
+    "start_button_1__button_plunger": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 36441,
+      "field_voxels": 1599
+    },
+    "start_button_1__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 677658,
+      "field_voxels": 3224
+    },
+    "start_button_2__button_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 687501,
+      "field_voxels": 2531
+    },
+    "start_button_2__button_plunger": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 43132,
+      "field_voxels": 1602
+    },
+    "start_button_2__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 690464,
+      "field_voxels": 3221
+    },
+    "start_button_3__button_bezel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 722270,
+      "field_voxels": 2520
+    },
+    "start_button_3__button_plunger": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 38924,
+      "field_voxels": 1613
+    },
+    "start_button_3__button_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 679015,
+      "field_voxels": 3256
+    },
+    "cashbox_door__door_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56734,
+      "field_voxels": 53662
+    },
+    "cashbox_door__door_handle": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 718083,
+      "field_voxels": 4494
+    },
+    "cashbox_door__door_lock": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 35782,
+      "field_voxels": 481
+    }
+  }
+}

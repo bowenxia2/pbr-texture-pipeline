@@ -1,0 +1,244 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b_ductless_mini_split_urdf_20260903-120506",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b/model.urdf",
+  "created": "2026-09-03T12:05:06",
+  "updated": "2026-09-03T12:40:57",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 12,
+        "n_tiny": 8
+      },
+      "seed": null,
+      "started": "2026-09-03T12:05:14",
+      "finished": "2026-09-03T12:05:15",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:05:16",
+      "finished": "2026-09-03T12:05:56",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b_ductless_mini_split_urdf_20260903-120506/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T12:05:56",
+      "finished": "2026-09-03T12:31:40",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 12,
+            "n_total": 12,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b_ductless_mini_split_urdf_20260903-120506/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T12:31:41",
+      "finished": "2026-09-03T12:40:57",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_conditioning_machine_0260a8a6290446d1ab2c18c35aaaca1b/model.urdf",
+    "category": "ductless mini split",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.47,
+        0.0,
+        0.0
+      ],
+      "max": [
+        0.47,
+        0.24026,
+        0.295
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__shell",
+        "link": "body",
+        "label": "shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/body_shell.obj"
+        ],
+        "n_faces": 144,
+        "area_frac": 0.9309734352756379,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__flap_mount_0",
+        "link": "body",
+        "label": "flap_mount_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011084178054153176,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__flap_mount_1",
+        "link": "body",
+        "label": "flap_mount_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0011084178054153176,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_0_lower_mount",
+        "link": "body",
+        "label": "vane_0_lower_mount",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 7.576263586313433e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_0_upper_mount",
+        "link": "body",
+        "label": "vane_0_upper_mount",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 9.68529483224763e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_0_roof_bridge",
+        "link": "body",
+        "label": "vane_0_roof_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014456709954990307,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_1_lower_mount",
+        "link": "body",
+        "label": "vane_1_lower_mount",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 7.576263586313433e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_1_upper_mount",
+        "link": "body",
+        "label": "vane_1_upper_mount",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 9.68529483224763e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__vane_1_roof_bridge",
+        "link": "body",
+        "label": "vane_1_roof_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014456709954990307,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "flap__blade",
+        "link": "flap",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/outlet_flap.obj"
+        ],
+        "n_faces": 428,
+        "area_frac": 0.06192571909195809,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "vane_0__blade",
+        "link": "vane_0",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/vane_0.obj"
+        ],
+        "n_faces": 900,
+        "area_frac": 0.0008237184311020024,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "vane_1__blade",
+        "link": "vane_1",
+        "label": "blade",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/vane_1.obj"
+        ],
+        "n_faces": 900,
+        "area_frac": 0.0008237184311020024,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

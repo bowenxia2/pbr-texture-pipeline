@@ -1,0 +1,751 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54_basket_air_fryer_urdf_20260903-135554",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54/model.urdf",
+  "created": "2026-09-03T13:55:54",
+  "updated": "2026-09-03T14:37:18",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 51,
+        "n_tiny": 36
+      },
+      "seed": null,
+      "started": "2026-09-03T13:56:13",
+      "finished": "2026-09-03T13:56:15",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:56:15",
+      "finished": "2026-09-03T13:58:02",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54_basket_air_fryer_urdf_20260903-135554/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T13:58:02",
+      "finished": "2026-09-03T14:23:15",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 51,
+            "n_total": 51,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54_basket_air_fryer_urdf_20260903-135554/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T14:23:15",
+      "finished": "2026-09-03T14:37:18",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_fryer_with_pullout_basket_c926bf7e9ce7430d960f70eb53f3cc54/model.urdf",
+    "category": "basket air fryer",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.185,
+        -0.155,
+        -0.0070000183659445605
+      ],
+      "max": [
+        0.251,
+        0.155,
+        0.36
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "housing__body_shell",
+        "link": "housing",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/housing_shell.obj"
+        ],
+        "n_faces": 10772,
+        "area_frac": 0.4653518217914562,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__control_panel",
+        "link": "housing",
+        "label": "control_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/control_panel.obj"
+        ],
+        "n_faces": 588,
+        "area_frac": 0.03827494205785424,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__foot_0",
+        "link": "housing",
+        "label": "foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006328197741948528,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__foot_1",
+        "link": "housing",
+        "label": "foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006328197741948528,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__foot_2",
+        "link": "housing",
+        "label": "foot_2",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006328197741948526,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__foot_3",
+        "link": "housing",
+        "label": "foot_3",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0006328197741948526,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "chamber__chamber_floor",
+        "link": "chamber",
+        "label": "chamber_floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05020421466457214,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chamber__chamber_side_0",
+        "link": "chamber",
+        "label": "chamber_side_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.027842190843282856,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chamber__chamber_side_1",
+        "link": "chamber",
+        "label": "chamber_side_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.027842190843282856,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chamber__chamber_rear",
+        "link": "chamber",
+        "label": "chamber_rear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.027842190843282856,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "chamber__chamber_ceiling",
+        "link": "chamber",
+        "label": "chamber_ceiling",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.05020421466457214,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_floor",
+        "link": "drawer",
+        "label": "drawer_floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04430414670185532,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_side_0",
+        "link": "drawer",
+        "label": "drawer_side_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.024033198915663995,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_side_1",
+        "link": "drawer",
+        "label": "drawer_side_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.024033198915663995,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_rear",
+        "link": "drawer",
+        "label": "drawer_rear",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.024033198915663995,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_lower",
+        "link": "drawer",
+        "label": "drawer_front_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013713443679057502,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_cheek_0",
+        "link": "drawer",
+        "label": "drawer_front_cheek_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0032228163443099875,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_cheek_1",
+        "link": "drawer",
+        "label": "drawer_front_cheek_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0032228163443099875,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_lower_panel",
+        "link": "drawer",
+        "label": "drawer_front_lower_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.019208169310309737,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_upper_panel",
+        "link": "drawer",
+        "label": "drawer_front_upper_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.014132578377188162,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_panel_0",
+        "link": "drawer",
+        "label": "drawer_front_panel_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004556078455365474,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_panel_1",
+        "link": "drawer",
+        "label": "drawer_front_panel_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004556078455365474,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_mount_0",
+        "link": "drawer",
+        "label": "drawer_front_mount_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007098471377481628,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_mount_1",
+        "link": "drawer",
+        "label": "drawer_front_mount_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003604405155405179,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__drawer_front_mount_2",
+        "link": "drawer",
+        "label": "drawer_front_mount_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003604405155405179,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__handle_post_0",
+        "link": "drawer",
+        "label": "handle_post_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001590719622155857,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__handle_post_1",
+        "link": "drawer",
+        "label": "handle_post_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001590719622155857,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "drawer__handle_bridge",
+        "link": "drawer",
+        "label": "handle_bridge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0038373429035436085,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_floor",
+        "link": "basket",
+        "label": "basket_floor",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_floor.obj"
+        ],
+        "n_faces": 512,
+        "area_frac": 0.0327277536134494,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__basket_side_0",
+        "link": "basket",
+        "label": "basket_side_0",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_side_0.obj"
+        ],
+        "n_faces": 172,
+        "area_frac": 0.013544104066101605,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__basket_side_1",
+        "link": "basket",
+        "label": "basket_side_1",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_side_1.obj"
+        ],
+        "n_faces": 172,
+        "area_frac": 0.013544104066101605,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__basket_rear",
+        "link": "basket",
+        "label": "basket_rear",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_rear.obj"
+        ],
+        "n_faces": 112,
+        "area_frac": 0.013665170395726182,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "basket__basket_front",
+        "link": "basket",
+        "label": "basket_front",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013461349866105055,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_0",
+        "link": "basket",
+        "label": "basket_foot_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004934602296090429,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_1",
+        "link": "basket",
+        "label": "basket_foot_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004934602296090429,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_2",
+        "link": "basket",
+        "label": "basket_foot_2",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004934602296090425,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_foot_3",
+        "link": "basket",
+        "label": "basket_foot_3",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0004934602296090425,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "basket__basket_handle",
+        "link": "basket",
+        "label": "basket_handle",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/basket_handle.obj"
+        ],
+        "n_faces": 60,
+        "area_frac": 0.007475462733021455,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "release_button__release_button",
+        "link": "release_button",
+        "label": "release_button",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001173883651802877,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "temp_dial__dial_skirt",
+        "link": "temp_dial",
+        "label": "dial_skirt",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.002548098806370221,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "temp_dial__dial_cap",
+        "link": "temp_dial",
+        "label": "dial_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0020036052459599576,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "temp_dial__dial_hub",
+        "link": "temp_dial",
+        "label": "dial_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0004795141273090039,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "temp_dial__dial_indicator",
+        "link": "temp_dial",
+        "label": "dial_indicator",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 9.807905184775988e-05,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "time_dial__dial_skirt",
+        "link": "time_dial",
+        "label": "dial_skirt",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.002548098806370221,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "time_dial__dial_cap",
+        "link": "time_dial",
+        "label": "dial_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0020036052459599576,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "time_dial__dial_hub",
+        "link": "time_dial",
+        "label": "dial_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0004795141273090039,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "time_dial__dial_indicator",
+        "link": "time_dial",
+        "label": "dial_indicator",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 9.807905184775988e-05,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "preset_button_0__button_cap",
+        "link": "preset_button_0",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006283189258997123,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "preset_button_0__button_stem",
+        "link": "preset_button_0",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00024213265924915737,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "preset_button_1__button_cap",
+        "link": "preset_button_1",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0006283189258997123,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "preset_button_1__button_stem",
+        "link": "preset_button_1",
+        "label": "button_stem",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00024213265924915737,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

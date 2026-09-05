@@ -1,0 +1,169 @@
+{
+  "group_order": [
+    "frame__wide_base",
+    "frame__foot_pad_0",
+    "frame__foot_pad_1",
+    "frame__barrel_socket",
+    "frame__vertical_barrel",
+    "frame__top_collar",
+    "frame__support_tube_0",
+    "frame__support_tube_1",
+    "frame__rear_stay",
+    "frame__lower_cross_tube",
+    "frame__hose_hook_peg",
+    "frame__hose_hook_lip",
+    "frame__hook_rounded_tip",
+    "frame__gauge_neck",
+    "frame__gauge_body",
+    "frame__gauge_dial",
+    "frame__gauge_tick_0",
+    "frame__gauge_tick_1",
+    "frame__gauge_tick_2",
+    "frame__gauge_tick_3",
+    "frame__gauge_tick_4",
+    "frame__gauge_tick_5",
+    "frame__gauge_tick_6",
+    "frame__needle_axle",
+    "frame__button_socket",
+    "handle__piston_rod",
+    "handle__t_grip",
+    "handle__handle_boss",
+    "needle__needle_hub",
+    "needle__needle_pointer",
+    "release_button__button_cap"
+  ],
+  "face_ranges": {
+    "frame__wide_base": [
+      0,
+      12
+    ],
+    "frame__foot_pad_0": [
+      12,
+      24
+    ],
+    "frame__foot_pad_1": [
+      24,
+      36
+    ],
+    "frame__barrel_socket": [
+      36,
+      164
+    ],
+    "frame__vertical_barrel": [
+      164,
+      292
+    ],
+    "frame__top_collar": [
+      292,
+      420
+    ],
+    "frame__support_tube_0": [
+      420,
+      548
+    ],
+    "frame__support_tube_1": [
+      548,
+      676
+    ],
+    "frame__rear_stay": [
+      676,
+      804
+    ],
+    "frame__lower_cross_tube": [
+      804,
+      932
+    ],
+    "frame__hose_hook_peg": [
+      932,
+      1060
+    ],
+    "frame__hose_hook_lip": [
+      1060,
+      1188
+    ],
+    "frame__hook_rounded_tip": [
+      1188,
+      2468
+    ],
+    "frame__gauge_neck": [
+      2468,
+      2596
+    ],
+    "frame__gauge_body": [
+      2596,
+      2724
+    ],
+    "frame__gauge_dial": [
+      2724,
+      2852
+    ],
+    "frame__gauge_tick_0": [
+      2852,
+      2864
+    ],
+    "frame__gauge_tick_1": [
+      2864,
+      2876
+    ],
+    "frame__gauge_tick_2": [
+      2876,
+      2888
+    ],
+    "frame__gauge_tick_3": [
+      2888,
+      2900
+    ],
+    "frame__gauge_tick_4": [
+      2900,
+      2912
+    ],
+    "frame__gauge_tick_5": [
+      2912,
+      2924
+    ],
+    "frame__gauge_tick_6": [
+      2924,
+      2936
+    ],
+    "frame__needle_axle": [
+      2936,
+      3064
+    ],
+    "frame__button_socket": [
+      3064,
+      3192
+    ],
+    "handle__piston_rod": [
+      3192,
+      3320
+    ],
+    "handle__t_grip": [
+      3320,
+      3448
+    ],
+    "handle__handle_boss": [
+      3448,
+      3576
+    ],
+    "needle__needle_hub": [
+      3576,
+      3704
+    ],
+    "needle__needle_pointer": [
+      3704,
+      3716
+    ],
+    "release_button__button_cap": [
+      3716,
+      3844
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.5825002663073093
+    ],
+    "scale": 0.8583601225964383
+  }
+}

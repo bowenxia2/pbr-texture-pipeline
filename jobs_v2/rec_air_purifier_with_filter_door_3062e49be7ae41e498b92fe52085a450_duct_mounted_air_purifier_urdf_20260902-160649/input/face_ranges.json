@@ -1,0 +1,204 @@
+{
+  "group_order": [
+    "housing__bottom_shell",
+    "housing__top_shell",
+    "housing__right_wall",
+    "housing__left_wall",
+    "housing__front_shell",
+    "housing__rear_top_rail",
+    "housing__rear_bottom_sill",
+    "housing__rear_left_jamb",
+    "housing__rear_right_jamb",
+    "housing__left_filter_shelf",
+    "housing__right_filter_shelf",
+    "housing__upper_filter_guide",
+    "housing__left_duct_flange",
+    "housing__left_duct_collar",
+    "housing__right_duct_flange",
+    "housing__right_duct_collar",
+    "housing__control_box",
+    "housing__status_window",
+    "housing__hinge_mount_0",
+    "housing__hinge_ear_0_a",
+    "housing__hinge_ear_0_b",
+    "housing__hinge_mount_1",
+    "housing__hinge_ear_1_a",
+    "housing__hinge_ear_1_b",
+    "rear_door__door_panel",
+    "rear_door__service_pull",
+    "rear_door__left_hinge_leaf",
+    "rear_door__left_hinge_knuckle",
+    "rear_door__right_hinge_leaf",
+    "rear_door__right_hinge_knuckle",
+    "filter_frame__left_runner",
+    "filter_frame__right_runner",
+    "filter_frame__top_frame",
+    "filter_frame__bottom_frame",
+    "filter_frame__left_frame_side",
+    "filter_frame__right_frame_side",
+    "filter_frame__filter_media",
+    "filter_frame__filter_pull_tab"
+  ],
+  "face_ranges": {
+    "housing__bottom_shell": [
+      0,
+      12
+    ],
+    "housing__top_shell": [
+      12,
+      24
+    ],
+    "housing__right_wall": [
+      24,
+      36
+    ],
+    "housing__left_wall": [
+      36,
+      48
+    ],
+    "housing__front_shell": [
+      48,
+      60
+    ],
+    "housing__rear_top_rail": [
+      60,
+      72
+    ],
+    "housing__rear_bottom_sill": [
+      72,
+      84
+    ],
+    "housing__rear_left_jamb": [
+      84,
+      96
+    ],
+    "housing__rear_right_jamb": [
+      96,
+      108
+    ],
+    "housing__left_filter_shelf": [
+      108,
+      120
+    ],
+    "housing__right_filter_shelf": [
+      120,
+      132
+    ],
+    "housing__upper_filter_guide": [
+      132,
+      144
+    ],
+    "housing__left_duct_flange": [
+      144,
+      272
+    ],
+    "housing__left_duct_collar": [
+      272,
+      400
+    ],
+    "housing__right_duct_flange": [
+      400,
+      528
+    ],
+    "housing__right_duct_collar": [
+      528,
+      656
+    ],
+    "housing__control_box": [
+      656,
+      668
+    ],
+    "housing__status_window": [
+      668,
+      680
+    ],
+    "housing__hinge_mount_0": [
+      680,
+      692
+    ],
+    "housing__hinge_ear_0_a": [
+      692,
+      704
+    ],
+    "housing__hinge_ear_0_b": [
+      704,
+      716
+    ],
+    "housing__hinge_mount_1": [
+      716,
+      728
+    ],
+    "housing__hinge_ear_1_a": [
+      728,
+      740
+    ],
+    "housing__hinge_ear_1_b": [
+      740,
+      752
+    ],
+    "rear_door__door_panel": [
+      752,
+      764
+    ],
+    "rear_door__service_pull": [
+      764,
+      776
+    ],
+    "rear_door__left_hinge_leaf": [
+      776,
+      788
+    ],
+    "rear_door__left_hinge_knuckle": [
+      788,
+      916
+    ],
+    "rear_door__right_hinge_leaf": [
+      916,
+      928
+    ],
+    "rear_door__right_hinge_knuckle": [
+      928,
+      1056
+    ],
+    "filter_frame__left_runner": [
+      1056,
+      1068
+    ],
+    "filter_frame__right_runner": [
+      1068,
+      1080
+    ],
+    "filter_frame__top_frame": [
+      1080,
+      1092
+    ],
+    "filter_frame__bottom_frame": [
+      1092,
+      1104
+    ],
+    "filter_frame__left_frame_side": [
+      1104,
+      1116
+    ],
+    "filter_frame__right_frame_side": [
+      1116,
+      1128
+    ],
+    "filter_frame__filter_media": [
+      1128,
+      1140
+    ],
+    "filter_frame__filter_pull_tab": [
+      1140,
+      1152
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.025000000000000022,
+      0.27
+    ],
+    "scale": 0.7152999781216414
+  }
+}

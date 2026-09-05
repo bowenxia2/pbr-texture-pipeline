@@ -1,0 +1,109 @@
+{
+  "group_order": [
+    "base__foot_0",
+    "base__foot_1",
+    "base__rear_bridge",
+    "base__front_bridge",
+    "base__gauge_neck",
+    "base__barrel",
+    "base__barrel_collar",
+    "base__gauge_ring",
+    "base__dial",
+    "handle__rod",
+    "handle__guide_cap",
+    "handle__yoke",
+    "handle__crossbar",
+    "handle__stop_0",
+    "handle__stop_1",
+    "grip__sleeve",
+    "grip__pad",
+    "needle__pointer",
+    "needle__hub"
+  ],
+  "face_ranges": {
+    "base__foot_0": [
+      0,
+      12
+    ],
+    "base__foot_1": [
+      12,
+      24
+    ],
+    "base__rear_bridge": [
+      24,
+      36
+    ],
+    "base__front_bridge": [
+      36,
+      48
+    ],
+    "base__gauge_neck": [
+      48,
+      60
+    ],
+    "base__barrel": [
+      60,
+      1572
+    ],
+    "base__barrel_collar": [
+      1572,
+      3084
+    ],
+    "base__gauge_ring": [
+      3084,
+      4596
+    ],
+    "base__dial": [
+      4596,
+      4724
+    ],
+    "handle__rod": [
+      4724,
+      4852
+    ],
+    "handle__guide_cap": [
+      4852,
+      4980
+    ],
+    "handle__yoke": [
+      4980,
+      4992
+    ],
+    "handle__crossbar": [
+      4992,
+      5120
+    ],
+    "handle__stop_0": [
+      5120,
+      5248
+    ],
+    "handle__stop_1": [
+      5248,
+      5376
+    ],
+    "grip__sleeve": [
+      5376,
+      6888
+    ],
+    "grip__pad": [
+      6888,
+      6900
+    ],
+    "needle__pointer": [
+      6900,
+      6912
+    ],
+    "needle__hub": [
+      6912,
+      7040
+    ]
+  },
+  "norm": {
+    "center": [
+      0.004000067954264053,
+      0.0,
+      0.22499757346404475
+    ],
+    "scale": 2.222223965806016
+  }
+}

@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="double_bay_air_purifier">
+	<material name="housing">
+		<color rgba="0.89 0.91 0.93 1" />
+	</material>
+	<material name="trim">
+		<color rgba="0.77 0.8 0.84 1" />
+	</material>
+	<material name="door_finish">
+		<color rgba="0.54 0.58 0.61 1" />
+	</material>
+	<material name="handle_finish">
+		<color rgba="0.2 0.23 0.25 1" />
+	</material>
+	<material name="filter_media">
+		<color rgba="0.6 0.72 0.64 1" />
+	</material>
+	<material name="filter_ribs">
+		<color rgba="0.87 0.92 0.88 1" />
+	</material>
+	<material name="vent_finish">
+		<color rgba="0.7 0.75 0.79 1" />
+	</material>
+	<link name="body">
+		<visual name="body__rear_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__rear_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__bottom_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__bottom_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__center_partition">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__center_partition.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_top_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_top_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__front_bottom_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__front_bottom_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_frame_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_frame_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__center_frame_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__center_frame_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_frame_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_frame_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_filter_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_filter_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_rib_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_rib_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_filter_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_filter_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_rib_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_rib_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_vent_bar_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_vent_bar_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__control_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__control_panel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="left_door">
+		<visual name="left_door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_door__handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_door__handle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="right_door">
+		<visual name="right_door__door_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_door__door_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_door__handle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_door__handle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="left_door_hinge" type="revolute">
+		<origin xyz="-0.32 0.14 0.31" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="left_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="8" velocity="1.8" lower="0" upper="1.45" />
+	</joint>
+	<joint name="right_door_hinge" type="revolute">
+		<origin xyz="0.32 0.14 0.31" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="right_door" />
+		<axis xyz="0 0 1" />
+		<limit effort="8" velocity="1.8" lower="-1.45" upper="0" />
+	</joint>
+</robot>

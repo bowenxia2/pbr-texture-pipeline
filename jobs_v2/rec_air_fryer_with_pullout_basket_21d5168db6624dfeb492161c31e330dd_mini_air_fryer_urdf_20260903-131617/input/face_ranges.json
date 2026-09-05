@@ -1,0 +1,64 @@
+{
+  "group_order": [
+    "body__shell",
+    "basket__basket_shell",
+    "basket__handle",
+    "basket__guide_0",
+    "basket__guide_1",
+    "release_button__release_cap",
+    "timer_knob__knob_shell",
+    "program_button__button_face",
+    "power_rocker__rocker_cap",
+    "power_rocker__rocker_barrel"
+  ],
+  "face_ranges": {
+    "body__shell": [
+      0,
+      1644
+    ],
+    "basket__basket_shell": [
+      1644,
+      1732
+    ],
+    "basket__handle": [
+      1732,
+      1744
+    ],
+    "basket__guide_0": [
+      1744,
+      1756
+    ],
+    "basket__guide_1": [
+      1756,
+      1768
+    ],
+    "release_button__release_cap": [
+      1768,
+      1780
+    ],
+    "timer_knob__knob_shell": [
+      1780,
+      15166
+    ],
+    "program_button__button_face": [
+      15166,
+      15178
+    ],
+    "power_rocker__rocker_cap": [
+      15178,
+      15190
+    ],
+    "power_rocker__rocker_barrel": [
+      15190,
+      15202
+    ]
+  },
+  "norm": {
+    "center": [
+      0.047,
+      0.0030000000000000027,
+      0.174
+    ],
+    "scale": 2.4752227722772275
+  }
+}

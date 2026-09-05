@@ -1,0 +1,428 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="industrial_floor_air_pump">
+	<link name="frame">
+		<collision name="base_plate">
+			<origin xyz="0 0 0.018" rpy="0 0 0" />
+			<geometry>
+				<box size="0.24 0.16 0.036" />
+			</geometry>
+		</collision>
+		<collision name="guide_floor">
+			<origin xyz="0 0 0.041" rpy="0 0 0" />
+			<geometry>
+				<box size="0.52 0.082 0.01" />
+			</geometry>
+		</collision>
+		<collision name="guide_side_0">
+			<origin xyz="0 -0.034 0.064" rpy="0 0 0" />
+			<geometry>
+				<box size="0.52 0.014 0.056" />
+			</geometry>
+		</collision>
+		<collision name="guide_side_1">
+			<origin xyz="0 0.034 0.064" rpy="0 0 0" />
+			<geometry>
+				<box size="0.52 0.014 0.056" />
+			</geometry>
+		</collision>
+		<collision name="guide_top">
+			<origin xyz="0 0 0.089" rpy="0 0 0" />
+			<geometry>
+				<box size="0.52 0.082 0.01" />
+			</geometry>
+		</collision>
+		<collision name="barrel_shell">
+			<origin xyz="0 0 0.545" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/barrel_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="lower_collar">
+			<origin xyz="0 0 0.125" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/lower_collar.obj" />
+			</geometry>
+		</collision>
+		<collision name="upper_collar">
+			<origin xyz="0 0 0.975" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/upper_collar.obj" />
+			</geometry>
+		</collision>
+		<collision name="side_bracket_0">
+			<origin xyz="0 -0.05 0.095" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.02 0.07" />
+			</geometry>
+		</collision>
+		<collision name="side_bracket_1">
+			<origin xyz="0 0.05 0.095" rpy="0 0 0" />
+			<geometry>
+				<box size="0.09 0.02 0.07" />
+			</geometry>
+		</collision>
+		<collision name="tie_rod_0">
+			<origin xyz="-0.052 0.033 0.54" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.76" />
+			</geometry>
+		</collision>
+		<collision name="tie_rod_1">
+			<origin xyz="0.052 0.033 0.54" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.007" length="0.76" />
+			</geometry>
+		</collision>
+		<collision name="gauge_neck">
+			<origin xyz="0 -0.08 0.735" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.017" length="0.058" />
+			</geometry>
+		</collision>
+		<collision name="gauge_body">
+			<origin xyz="0 -0.135 0.735" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.078" length="0.06" />
+			</geometry>
+		</collision>
+		<collision name="gauge_face">
+			<origin xyz="0 -0.167 0.735" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.064" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="gauge_needle">
+			<origin xyz="0.018 -0.17 0.753" rpy="0 0.42 0" />
+			<geometry>
+				<box size="0.008 0.002 0.056" />
+			</geometry>
+		</collision>
+		<collision name="gauge_tick_0">
+			<origin xyz="0 -0.17 0.792" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.002 0.016" />
+			</geometry>
+		</collision>
+		<collision name="gauge_tick_1">
+			<origin xyz="-0.046 -0.17 0.735" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.002 0.006" />
+			</geometry>
+		</collision>
+		<collision name="gauge_tick_2">
+			<origin xyz="0.046 -0.17 0.735" rpy="0 0 0" />
+			<geometry>
+				<box size="0.014 0.002 0.006" />
+			</geometry>
+		</collision>
+		<collision name="gauge_tick_3">
+			<origin xyz="-0.03 -0.17 0.775" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.002 0.006" />
+			</geometry>
+		</collision>
+		<collision name="gauge_tick_4">
+			<origin xyz="0.03 -0.17 0.775" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.002 0.006" />
+			</geometry>
+		</collision>
+		<collision name="button_collar">
+			<origin xyz="0.05 -0.166 0.675" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.006" />
+			</geometry>
+		</collision>
+		<visual name="frame__base_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__base_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__guide_floor">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__guide_floor.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__guide_side_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__guide_side_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__guide_side_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__guide_side_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__guide_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__guide_top.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__barrel_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__barrel_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__lower_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__lower_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__upper_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__upper_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__side_bracket_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__side_bracket_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__side_bracket_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__side_bracket_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__tie_rod_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__tie_rod_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__tie_rod_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__tie_rod_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_neck">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_neck.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_face.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_needle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_needle.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_tick_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_tick_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_tick_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_tick_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_tick_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_tick_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_tick_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_tick_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_tick_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_tick_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__button_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__button_collar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="piston">
+		<collision name="piston_rod">
+			<origin xyz="0 0 -0.28" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.84" />
+			</geometry>
+		</collision>
+		<collision name="handle_stem">
+			<origin xyz="0 0 0.096" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.11" />
+			</geometry>
+		</collision>
+		<collision name="plunger_stop">
+			<origin xyz="0 0 0.006" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.036" length="0.012" />
+			</geometry>
+		</collision>
+		<collision name="t_handle_pad">
+			<origin xyz="0 0 0.165" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.034" length="0.43" />
+			</geometry>
+		</collision>
+		<collision name="handle_end_0">
+			<origin xyz="0 -0.215 0.165" rpy="0 0 0" />
+			<geometry>
+				<sphere radius="0.034" />
+			</geometry>
+		</collision>
+		<collision name="handle_end_1">
+			<origin xyz="0 0.215 0.165" rpy="0 0 0" />
+			<geometry>
+				<sphere radius="0.034" />
+			</geometry>
+		</collision>
+		<visual name="piston__piston_rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__piston_rod.glb" />
+			</geometry>
+		</visual>
+		<visual name="piston__handle_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__handle_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="piston__plunger_stop">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__plunger_stop.glb" />
+			</geometry>
+		</visual>
+		<visual name="piston__t_handle_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__t_handle_pad.glb" />
+			</geometry>
+		</visual>
+		<visual name="piston__handle_end_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__handle_end_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="piston__handle_end_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/piston__handle_end_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="stabilizer">
+		<collision name="slide_bar">
+			<origin xyz="0 0 -0.003" rpy="0 0 0" />
+			<geometry>
+				<box size="0.82 0.042 0.03" />
+			</geometry>
+		</collision>
+		<collision name="foot_pad_0">
+			<origin xyz="-0.38 0 -0.022" rpy="0 0 0" />
+			<geometry>
+				<box size="0.12 0.07 0.018" />
+			</geometry>
+		</collision>
+		<collision name="foot_pad_1">
+			<origin xyz="0.38 0 -0.022" rpy="0 0 0" />
+			<geometry>
+				<box size="0.12 0.07 0.018" />
+			</geometry>
+		</collision>
+		<visual name="stabilizer__slide_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stabilizer__slide_bar.glb" />
+			</geometry>
+		</visual>
+		<visual name="stabilizer__foot_pad_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stabilizer__foot_pad_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="stabilizer__foot_pad_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/stabilizer__foot_pad_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="release_button">
+		<collision name="button_cap">
+			<origin xyz="0 -0.012 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.024" />
+			</geometry>
+		</collision>
+		<collision name="button_dome">
+			<origin xyz="0 -0.024 0" rpy="0 0 0" />
+			<geometry>
+				<sphere radius="0.012" />
+			</geometry>
+		</collision>
+		<visual name="release_button__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="release_button__button_dome">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_button__button_dome.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="frame_to_piston" type="prismatic">
+		<origin xyz="0 0 0.9975" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="piston" />
+		<axis xyz="0 0 1" />
+		<limit effort="180" velocity="0.7" lower="0" upper="0.42" />
+	</joint>
+	<joint name="frame_to_stabilizer" type="prismatic">
+		<origin xyz="0 0 0.064" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="stabilizer" />
+		<axis xyz="1 0 0" />
+		<limit effort="80" velocity="0.35" lower="-0.18" upper="0.18" />
+	</joint>
+	<joint name="frame_to_release_button" type="prismatic">
+		<origin xyz="0.05 -0.169 0.675" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="release_button" />
+		<axis xyz="0 1 0" />
+		<limit effort="8" velocity="0.04" lower="0" upper="0.01" />
+	</joint>
+</robot>

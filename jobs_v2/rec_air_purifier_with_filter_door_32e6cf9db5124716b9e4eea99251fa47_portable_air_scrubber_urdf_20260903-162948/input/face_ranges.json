@@ -1,0 +1,574 @@
+{
+  "group_order": [
+    "housing__side_panel_0",
+    "housing__side_panel_1",
+    "housing__rear_panel",
+    "housing__top_cap",
+    "housing__bottom_pan",
+    "housing__front_stile_0",
+    "housing__front_stile_1",
+    "housing__lower_sill",
+    "housing__middle_rail",
+    "housing__upper_header",
+    "housing__upper_stile_0",
+    "housing__upper_stile_1",
+    "housing__front_grille",
+    "housing__grille_mount_0",
+    "housing__grille_mount_1",
+    "housing__grille_mount_2",
+    "housing__grille_mount_3",
+    "housing__guide_rail_0",
+    "housing__rail_lip_0",
+    "housing__guide_rail_1",
+    "housing__rail_lip_1",
+    "housing__frame_knuckle_0",
+    "housing__frame_hinge_leaf_0",
+    "housing__frame_knuckle_1",
+    "housing__frame_hinge_leaf_1",
+    "housing__frame_knuckle_2",
+    "housing__frame_hinge_leaf_2",
+    "housing__hinge_pin",
+    "housing__caster_plate_0",
+    "housing__caster_stem_0",
+    "housing__caster_fork_0_0",
+    "housing__caster_fork_1_0",
+    "housing__caster_axle_0",
+    "housing__caster_tire_0",
+    "housing__caster_wheel_0",
+    "housing__caster_plate_1",
+    "housing__caster_stem_1",
+    "housing__caster_fork_0_1",
+    "housing__caster_fork_1_1",
+    "housing__caster_axle_1",
+    "housing__caster_tire_1",
+    "housing__caster_wheel_1",
+    "housing__caster_plate_2",
+    "housing__caster_stem_2",
+    "housing__caster_fork_0_2",
+    "housing__caster_fork_1_2",
+    "housing__caster_axle_2",
+    "housing__caster_tire_2",
+    "housing__caster_wheel_2",
+    "housing__caster_plate_3",
+    "housing__caster_stem_3",
+    "housing__caster_fork_0_3",
+    "housing__caster_fork_1_3",
+    "housing__caster_axle_3",
+    "housing__caster_tire_3",
+    "housing__caster_wheel_3",
+    "door__door_panel",
+    "door__lower_label",
+    "door__upper_label",
+    "door__pull_handle_bar",
+    "door__pull_handle_standoff_0",
+    "door__pull_handle_standoff_1",
+    "door__compression_latch",
+    "door__door_knuckle_0",
+    "door__door_hinge_leaf_0",
+    "door__door_knuckle_1",
+    "door__door_hinge_leaf_1",
+    "filter_stack__bottom_sled",
+    "filter_stack__runner_0",
+    "filter_stack__runner_1",
+    "filter_stack__rack_side_0",
+    "filter_stack__rack_side_1",
+    "filter_stack__front_rack_frame",
+    "filter_stack__rear_rack_frame",
+    "filter_stack__top_filter_frame",
+    "filter_stack__stage_0",
+    "filter_stack__stage_0_pleat_0",
+    "filter_stack__stage_0_pleat_1",
+    "filter_stack__stage_0_pleat_2",
+    "filter_stack__stage_0_pleat_3",
+    "filter_stack__stage_0_pleat_4",
+    "filter_stack__stage_0_pleat_5",
+    "filter_stack__stage_0_pleat_6",
+    "filter_stack__stage_0_pleat_7",
+    "filter_stack__stage_1",
+    "filter_stack__stage_1_pleat_0",
+    "filter_stack__stage_1_pleat_1",
+    "filter_stack__stage_1_pleat_2",
+    "filter_stack__stage_1_pleat_3",
+    "filter_stack__stage_1_pleat_4",
+    "filter_stack__stage_1_pleat_5",
+    "filter_stack__stage_1_pleat_6",
+    "filter_stack__stage_1_pleat_7",
+    "filter_stack__stage_2",
+    "filter_stack__stage_2_pleat_0",
+    "filter_stack__stage_2_pleat_1",
+    "filter_stack__stage_2_pleat_2",
+    "filter_stack__stage_2_pleat_3",
+    "filter_stack__stage_2_pleat_4",
+    "filter_stack__stage_2_pleat_5",
+    "filter_stack__stage_2_pleat_6",
+    "filter_stack__stage_2_pleat_7",
+    "filter_stack__stage_3",
+    "filter_stack__stage_3_pleat_0",
+    "filter_stack__stage_3_pleat_1",
+    "filter_stack__stage_3_pleat_2",
+    "filter_stack__stage_3_pleat_3",
+    "filter_stack__stage_3_pleat_4",
+    "filter_stack__stage_3_pleat_5",
+    "filter_stack__stage_3_pleat_6",
+    "filter_stack__stage_3_pleat_7",
+    "filter_stack__cassette_pull"
+  ],
+  "face_ranges": {
+    "housing__side_panel_0": [
+      0,
+      12
+    ],
+    "housing__side_panel_1": [
+      12,
+      24
+    ],
+    "housing__rear_panel": [
+      24,
+      36
+    ],
+    "housing__top_cap": [
+      36,
+      48
+    ],
+    "housing__bottom_pan": [
+      48,
+      60
+    ],
+    "housing__front_stile_0": [
+      60,
+      72
+    ],
+    "housing__front_stile_1": [
+      72,
+      84
+    ],
+    "housing__lower_sill": [
+      84,
+      96
+    ],
+    "housing__middle_rail": [
+      96,
+      108
+    ],
+    "housing__upper_header": [
+      108,
+      120
+    ],
+    "housing__upper_stile_0": [
+      120,
+      132
+    ],
+    "housing__upper_stile_1": [
+      132,
+      144
+    ],
+    "housing__front_grille": [
+      144,
+      4440
+    ],
+    "housing__grille_mount_0": [
+      4440,
+      4452
+    ],
+    "housing__grille_mount_1": [
+      4452,
+      4464
+    ],
+    "housing__grille_mount_2": [
+      4464,
+      4476
+    ],
+    "housing__grille_mount_3": [
+      4476,
+      4488
+    ],
+    "housing__guide_rail_0": [
+      4488,
+      4500
+    ],
+    "housing__rail_lip_0": [
+      4500,
+      4512
+    ],
+    "housing__guide_rail_1": [
+      4512,
+      4524
+    ],
+    "housing__rail_lip_1": [
+      4524,
+      4536
+    ],
+    "housing__frame_knuckle_0": [
+      4536,
+      4664
+    ],
+    "housing__frame_hinge_leaf_0": [
+      4664,
+      4676
+    ],
+    "housing__frame_knuckle_1": [
+      4676,
+      4804
+    ],
+    "housing__frame_hinge_leaf_1": [
+      4804,
+      4816
+    ],
+    "housing__frame_knuckle_2": [
+      4816,
+      4944
+    ],
+    "housing__frame_hinge_leaf_2": [
+      4944,
+      4956
+    ],
+    "housing__hinge_pin": [
+      4956,
+      5084
+    ],
+    "housing__caster_plate_0": [
+      5084,
+      5096
+    ],
+    "housing__caster_stem_0": [
+      5096,
+      5224
+    ],
+    "housing__caster_fork_0_0": [
+      5224,
+      5236
+    ],
+    "housing__caster_fork_1_0": [
+      5236,
+      5248
+    ],
+    "housing__caster_axle_0": [
+      5248,
+      5376
+    ],
+    "housing__caster_tire_0": [
+      5376,
+      12604
+    ],
+    "housing__caster_wheel_0": [
+      12604,
+      18148
+    ],
+    "housing__caster_plate_1": [
+      18148,
+      18160
+    ],
+    "housing__caster_stem_1": [
+      18160,
+      18288
+    ],
+    "housing__caster_fork_0_1": [
+      18288,
+      18300
+    ],
+    "housing__caster_fork_1_1": [
+      18300,
+      18312
+    ],
+    "housing__caster_axle_1": [
+      18312,
+      18440
+    ],
+    "housing__caster_tire_1": [
+      18440,
+      25668
+    ],
+    "housing__caster_wheel_1": [
+      25668,
+      31212
+    ],
+    "housing__caster_plate_2": [
+      31212,
+      31224
+    ],
+    "housing__caster_stem_2": [
+      31224,
+      31352
+    ],
+    "housing__caster_fork_0_2": [
+      31352,
+      31364
+    ],
+    "housing__caster_fork_1_2": [
+      31364,
+      31376
+    ],
+    "housing__caster_axle_2": [
+      31376,
+      31504
+    ],
+    "housing__caster_tire_2": [
+      31504,
+      38732
+    ],
+    "housing__caster_wheel_2": [
+      38732,
+      44276
+    ],
+    "housing__caster_plate_3": [
+      44276,
+      44288
+    ],
+    "housing__caster_stem_3": [
+      44288,
+      44416
+    ],
+    "housing__caster_fork_0_3": [
+      44416,
+      44428
+    ],
+    "housing__caster_fork_1_3": [
+      44428,
+      44440
+    ],
+    "housing__caster_axle_3": [
+      44440,
+      44568
+    ],
+    "housing__caster_tire_3": [
+      44568,
+      51796
+    ],
+    "housing__caster_wheel_3": [
+      51796,
+      57340
+    ],
+    "door__door_panel": [
+      57340,
+      57352
+    ],
+    "door__lower_label": [
+      57352,
+      57364
+    ],
+    "door__upper_label": [
+      57364,
+      57376
+    ],
+    "door__pull_handle_bar": [
+      57376,
+      57504
+    ],
+    "door__pull_handle_standoff_0": [
+      57504,
+      57632
+    ],
+    "door__pull_handle_standoff_1": [
+      57632,
+      57760
+    ],
+    "door__compression_latch": [
+      57760,
+      57772
+    ],
+    "door__door_knuckle_0": [
+      57772,
+      57900
+    ],
+    "door__door_hinge_leaf_0": [
+      57900,
+      57912
+    ],
+    "door__door_knuckle_1": [
+      57912,
+      58040
+    ],
+    "door__door_hinge_leaf_1": [
+      58040,
+      58052
+    ],
+    "filter_stack__bottom_sled": [
+      58052,
+      58064
+    ],
+    "filter_stack__runner_0": [
+      58064,
+      58076
+    ],
+    "filter_stack__runner_1": [
+      58076,
+      58088
+    ],
+    "filter_stack__rack_side_0": [
+      58088,
+      58100
+    ],
+    "filter_stack__rack_side_1": [
+      58100,
+      58112
+    ],
+    "filter_stack__front_rack_frame": [
+      58112,
+      58124
+    ],
+    "filter_stack__rear_rack_frame": [
+      58124,
+      58136
+    ],
+    "filter_stack__top_filter_frame": [
+      58136,
+      58148
+    ],
+    "filter_stack__stage_0": [
+      58148,
+      58160
+    ],
+    "filter_stack__stage_0_pleat_0": [
+      58160,
+      58172
+    ],
+    "filter_stack__stage_0_pleat_1": [
+      58172,
+      58184
+    ],
+    "filter_stack__stage_0_pleat_2": [
+      58184,
+      58196
+    ],
+    "filter_stack__stage_0_pleat_3": [
+      58196,
+      58208
+    ],
+    "filter_stack__stage_0_pleat_4": [
+      58208,
+      58220
+    ],
+    "filter_stack__stage_0_pleat_5": [
+      58220,
+      58232
+    ],
+    "filter_stack__stage_0_pleat_6": [
+      58232,
+      58244
+    ],
+    "filter_stack__stage_0_pleat_7": [
+      58244,
+      58256
+    ],
+    "filter_stack__stage_1": [
+      58256,
+      58268
+    ],
+    "filter_stack__stage_1_pleat_0": [
+      58268,
+      58280
+    ],
+    "filter_stack__stage_1_pleat_1": [
+      58280,
+      58292
+    ],
+    "filter_stack__stage_1_pleat_2": [
+      58292,
+      58304
+    ],
+    "filter_stack__stage_1_pleat_3": [
+      58304,
+      58316
+    ],
+    "filter_stack__stage_1_pleat_4": [
+      58316,
+      58328
+    ],
+    "filter_stack__stage_1_pleat_5": [
+      58328,
+      58340
+    ],
+    "filter_stack__stage_1_pleat_6": [
+      58340,
+      58352
+    ],
+    "filter_stack__stage_1_pleat_7": [
+      58352,
+      58364
+    ],
+    "filter_stack__stage_2": [
+      58364,
+      58376
+    ],
+    "filter_stack__stage_2_pleat_0": [
+      58376,
+      58388
+    ],
+    "filter_stack__stage_2_pleat_1": [
+      58388,
+      58400
+    ],
+    "filter_stack__stage_2_pleat_2": [
+      58400,
+      58412
+    ],
+    "filter_stack__stage_2_pleat_3": [
+      58412,
+      58424
+    ],
+    "filter_stack__stage_2_pleat_4": [
+      58424,
+      58436
+    ],
+    "filter_stack__stage_2_pleat_5": [
+      58436,
+      58448
+    ],
+    "filter_stack__stage_2_pleat_6": [
+      58448,
+      58460
+    ],
+    "filter_stack__stage_2_pleat_7": [
+      58460,
+      58472
+    ],
+    "filter_stack__stage_3": [
+      58472,
+      58484
+    ],
+    "filter_stack__stage_3_pleat_0": [
+      58484,
+      58496
+    ],
+    "filter_stack__stage_3_pleat_1": [
+      58496,
+      58508
+    ],
+    "filter_stack__stage_3_pleat_2": [
+      58508,
+      58520
+    ],
+    "filter_stack__stage_3_pleat_3": [
+      58520,
+      58532
+    ],
+    "filter_stack__stage_3_pleat_4": [
+      58532,
+      58544
+    ],
+    "filter_stack__stage_3_pleat_5": [
+      58544,
+      58556
+    ],
+    "filter_stack__stage_3_pleat_6": [
+      58556,
+      58568
+    ],
+    "filter_stack__stage_3_pleat_7": [
+      58568,
+      58580
+    ],
+    "filter_stack__cassette_pull": [
+      58580,
+      58592
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.0005000000000000004,
+      -0.06,
+      0.67983
+    ],
+    "scale": 0.7351029889586427
+  }
+}

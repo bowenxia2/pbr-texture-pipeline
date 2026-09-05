@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="desktop_air_purifier">
+	<material name="shell_white">
+		<color rgba="0.93 0.94 0.92 1" />
+	</material>
+	<material name="charcoal">
+		<color rgba="0.17 0.18 0.19 1" />
+	</material>
+	<material name="dark_trim">
+		<color rgba="0.23 0.24 0.25 1" />
+	</material>
+	<material name="filter_grey">
+		<color rgba="0.74 0.78 0.8 1" />
+	</material>
+	<material name="filter_frame">
+		<color rgba="0.28 0.29 0.3 1" />
+	</material>
+	<material name="soft_black">
+		<color rgba="0.12 0.13 0.14 1" />
+	</material>
+	<link name="housing">
+		<inertial>
+			<origin xyz="0 0 0.08" rpy="0 0 0" />
+			<mass value="2.2" />
+			<inertia ixx="0.00976213" ixy="0" ixz="0" iyy="0.00976213" iyz="0" izz="0.0101376" />
+		</inertial>
+		<visual name="housing__plinth">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__plinth.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__drum_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__drum_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__bottom_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__bottom_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__latch_seat">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__latch_seat.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="exhaust_cap">
+		<inertial>
+			<origin xyz="0 0 0.015" rpy="0 0 0" />
+			<mass value="0.28" />
+			<inertia ixx="0.00049168" ixy="0" ixz="0" iyy="0.00049168" iyz="0" izz="0.00094136" />
+		</inertial>
+		<visual name="exhaust_cap__cap_flange">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_cap__cap_flange.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_cap__cap_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_cap__cap_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_cap__grille_bar_x">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_cap__grille_bar_x.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_cap__grille_bar_y">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_cap__grille_bar_y.glb" />
+			</geometry>
+		</visual>
+		<visual name="exhaust_cap__grille_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/exhaust_cap__grille_hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="access_panel">
+		<inertial>
+			<origin xyz="0.052 -0.012 0" rpy="0 0 0" />
+			<mass value="0.34" />
+			<inertia ixx="0.000453333" ixy="0" ixz="0" iyy="0.000691333" iyz="0" izz="0.000328667" />
+		</inertial>
+		<visual name="access_panel__door_skin">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__door_skin.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_media">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_media.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__filter_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__filter_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__pull_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__pull_tab.glb" />
+			</geometry>
+		</visual>
+		<visual name="access_panel__latch_tongue">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/access_panel__latch_tongue.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="housing_to_exhaust_cap" type="fixed">
+		<origin xyz="0 0 0.16" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="exhaust_cap" />
+	</joint>
+	<joint name="housing_to_access_panel" type="revolute">
+		<origin xyz="-0.05 0.096 0.085" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="access_panel" />
+		<axis xyz="0 0 1" />
+		<limit effort="4" velocity="2.5" lower="0" upper="1.15" />
+	</joint>
+</robot>

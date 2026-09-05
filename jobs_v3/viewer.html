@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pbr-texture-pipeline - textured meshes</title>
+<script type="module" src="assets/model-viewer.min.js"></script>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: #0f1115; color: #e6e8eb; }
+@media (prefers-color-scheme: light) { body { background: #f4f5f7; color: #1a1c1f; } }
+header { padding: 20px 24px; border-bottom: 1px solid #2a2e37; position: sticky; top: 0;
+  background: inherit; z-index: 5; }
+@media (prefers-color-scheme: light) { header { border-color: #d8dbe0; } }
+h1 { margin: 0 0 4px; font-size: 20px; font-weight: 650; }
+.sub { font-size: 13px; opacity: .65; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 18px; padding: 20px 24px; }
+.card { background: #171a21; border: 1px solid #262b34; border-radius: 12px; overflow: hidden;
+  display: flex; flex-direction: column; }
+@media (prefers-color-scheme: light) { .card { background: #fff; border-color: #e2e5ea; } }
+.card.empty { opacity: .5; }
+.card h2 { margin: 0; padding: 12px 14px 2px; font-size: 16px; font-weight: 620;
+  text-transform: capitalize; }
+.jid { padding: 0 14px 10px; font-size: 11px; font-family: ui-monospace, Menlo, monospace;
+  opacity: .5; word-break: break-all; }
+.viewers { display: flex; gap: 8px; padding: 0 10px 10px; flex-wrap: wrap; }
+.vwrap { flex: 1 1 150px; min-width: 140px; }
+.vlabel { font-size: 11px; opacity: .7; padding: 2px 2px 4px; text-align: center;
+  letter-spacing: .02em; }
+model-viewer { width: 100%; height: 190px; background: #0b0d11; border-radius: 8px;
+  --poster-color: transparent; }
+@media (prefers-color-scheme: light) { model-viewer { background: #eef0f3; } }
+.refrow { display: flex; gap: 10px; align-items: flex-start; padding: 6px 14px 12px; }
+.refrow img { width: 92px; height: 92px; object-fit: cover; border-radius: 8px;
+  border: 1px solid #2a2f39; flex: none; }
+.refcap { font-size: 11px; opacity: .6; }
+table.m { width: 100%; border-collapse: collapse; font-size: 11.5px; margin-top: 4px; }
+table.m th, table.m td { padding: 3px 6px; text-align: right; border-top: 1px solid #262b34; }
+table.m th:first-child, table.m td:first-child { text-align: left; }
+@media (prefers-color-scheme: light) { table.m th, table.m td { border-color: #e6e9ee; } }
+table.m thead th { opacity: .6; font-weight: 550; border-top: none; }
+.status { font-size: 11px; padding: 4px 14px 12px; opacity: .6; font-family: ui-monospace, monospace; }
+.hint { font-size: 11px; opacity: .55; padding: 0 14px 10px; }
+.badge { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: .05em;
+  padding: 1px 6px; border-radius: 6px; background: #2e7d32; color: #fff; margin-left: 4px; }
+.runnerup { width: 100%; height: 190px; object-fit: contain; background: #0b0d11;
+  border-radius: 8px; filter: grayscale(.6) brightness(.75); }
+@media (prefers-color-scheme: light) { .runnerup { background: #eef0f3; } }
+.runnerupcap { font-size: 10px; opacity: .55; text-align: center; padding-top: 2px;
+  font-style: italic; }
+.runnerupcap a { color: inherit; }
+.verdict { font-size: 11px; opacity: .65; padding: 0 14px 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>pbr-texture-pipeline - textured meshes</h1>
+  <div class="sub">10 meshes &middot; 10 textured &middot; drag to rotate, scroll to zoom</div>
+</header>
+<div class="grid">
+<div class="card">
+<h2>Cart</h2>
+<div class="jid">100487_cart_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="100487_cart_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Cart textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/100487_cart_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Window</h2>
+<div class="jid">102896_window_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="102896_window_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Window textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/102896_window_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>CoffeeMachine</h2>
+<div class="jid">103065_coffeemachine_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="103065_coffeemachine_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="CoffeeMachine textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/103065_coffeemachine_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>WashingMachine</h2>
+<div class="jid">103452_washingmachine_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="103452_washingmachine_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="WashingMachine textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/103452_washingmachine_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Dishwasher</h2>
+<div class="jid">12085_dishwasher_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="12085_dishwasher_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Dishwasher textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/12085_dishwasher_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Keyboard</h2>
+<div class="jid">12953_keyboard_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="12953_keyboard_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Keyboard textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/12953_keyboard_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Table</h2>
+<div class="jid">19179_table_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="19179_table_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Table textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/19179_table_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Table</h2>
+<div class="jid">19898_table_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="19898_table_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Table textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/19898_table_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>StorageFurniture</h2>
+<div class="jid">41083_storagefurniture_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="41083_storagefurniture_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="StorageFurniture textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/41083_storagefurniture_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+<div class="card">
+<h2>Door</h2>
+<div class="jid">8930_door_urdf_20260902-000151</div>
+<div class="viewers">
+<div class="vwrap">
+<div class="vlabel">trellis2</div>
+<model-viewer src="8930_door_urdf_20260902-000151/textured/trellis2/assembled.glb" camera-controls touch-action="pan-y" interaction-prompt="none" shadow-intensity="1" exposure="1" environment-image="neutral" reveal="interaction" loading="lazy" alt="Door textured by trellis2"></model-viewer>
+</div>
+</div>
+<div class="hint">Click a model to load it, then drag to rotate / scroll to zoom.</div>
+<div class="hint">articulated &middot; <a href="/viewer/8930_door_urdf_20260902-000151/trellis2" title="needs the pbr-texture-pipeline app running (or scripts/articulated_viewer.py)">joints: trellis2</a></div>
+<div class="refrow">
+<div style="flex:1">
+<div class="refcap">generated reference</div>
+<table class="m"><thead><tr><th>backend</th><th>IoU</th><th>CLIP</th><th>LPIPS</th></tr></thead><tbody>
+<tr><td>trellis2</td><td>-</td><td>-</td><td>-</td></tr>
+</tbody></table>
+</div></div>
+</div>
+</div>
+</body>
+</html>

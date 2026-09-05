@@ -1,10 +1,8 @@
-# Stage V worker env (`vlm`): Qwen3.6-35B-A3B AWQ via vLLM. Needs its own env because vLLM
-# requires torch >= 2.8, which conflicts with the trellis2 env's compiled renderer stack
-# (pinned to torch 2.6). Create with: conda create -n vlm python=3.12
-#
-# vllm resolves and installs a compatible torch build itself; installing it pinned first
-# avoids pip re-resolving torch afterward.
-vllm==0.25.0
+# Stage V worker env (`vlm`): Qwen2.5-VL-7B-Instruct via transformers.
+# Needs its own env because the model's dependencies conflict with the trellis2
+# env's compiled renderer stack (pinned to torch 2.6).
+# Create with: conda create -n vlm python=3.12
 transformers==5.13.1
+accelerate==1.14.0
 pillow==12.3.0
 requests==2.34.2

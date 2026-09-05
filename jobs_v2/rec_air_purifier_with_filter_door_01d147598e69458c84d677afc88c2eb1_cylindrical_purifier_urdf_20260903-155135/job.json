@@ -1,0 +1,166 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1_cylindrical_purifier_urdf_20260903-155135",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1/model.urdf",
+  "created": "2026-09-03T15:51:35",
+  "updated": "2026-09-03T16:29:37",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 6,
+        "n_tiny": 2
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:47",
+      "finished": "2026-09-03T15:51:48",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; plastic on the top cap; plastic on the base",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:51:50",
+      "finished": "2026-09-03T15:53:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1_cylindrical_purifier_urdf_20260903-155135/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:53:47",
+      "finished": "2026-09-03T16:20:35",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 6,
+            "n_total": 6,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1_cylindrical_purifier_urdf_20260903-155135/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T16:20:35",
+      "finished": "2026-09-03T16:29:37",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_01d147598e69458c84d677afc88c2eb1/model.urdf",
+    "category": "cylindrical purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.114,
+        -0.113965,
+        0.0
+      ],
+      "max": [
+        0.12600004775163937,
+        0.113965,
+        0.5549999999999999
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "lower_body__body_shell",
+        "link": "lower_body",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_lower_body.obj"
+        ],
+        "n_faces": 2516,
+        "area_frac": 0.41925207476006704,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "lower_body__button_pad",
+        "link": "lower_body",
+        "label": "button_pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.010794051358065077,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "upper_shell__shell_body",
+        "link": "upper_shell",
+        "label": "shell_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_upper_shell.obj"
+        ],
+        "n_faces": 2078,
+        "area_frac": 0.34821521913133796,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "upper_shell__shell_badge",
+        "link": "upper_shell",
+        "label": "shell_badge",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0030755472752998126,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_cylinder__filter_body",
+        "link": "filter_cylinder",
+        "label": "filter_body",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/purifier_filter_cylinder.obj"
+        ],
+        "n_faces": 3718,
+        "area_frac": 0.21752603623593347,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "power_button__button_cap",
+        "link": "power_button",
+        "label": "button_cap",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.001137071239296755,
+        "motion": "slider",
+        "tiny": false
+      }
+    ]
+  }
+}

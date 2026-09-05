@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="tripod_track_pump">
+	<material name="satin_red">
+		<color rgba="0.72 0.08 0.06 1" />
+	</material>
+	<material name="dark_metal">
+		<color rgba="0.12 0.13 0.14 1" />
+	</material>
+	<material name="brushed_steel">
+		<color rgba="0.68 0.7 0.72 1" />
+	</material>
+	<material name="black_rubber">
+		<color rgba="0.025 0.025 0.025 1" />
+	</material>
+	<material name="gauge_white">
+		<color rgba="0.93 0.91 0.86 1" />
+	</material>
+	<material name="brass">
+		<color rgba="0.78 0.55 0.2 1" />
+	</material>
+	<link name="pump_body">
+		<visual name="pump_body__tripod_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__tripod_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__barrel_socket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__barrel_socket.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__barrel_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__barrel_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__top_bushing">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__top_bushing.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__lower_barrel_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__lower_barrel_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__upper_barrel_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__upper_barrel_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__foot_arm_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__foot_arm_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__rubber_foot_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__rubber_foot_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__foot_arm_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__foot_arm_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__rubber_foot_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__rubber_foot_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__foot_arm_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__foot_arm_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__rubber_foot_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__rubber_foot_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__gauge_bezel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__gauge_bezel.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__gauge_face">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__gauge_face.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__gauge_needle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__gauge_needle.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__side_hose">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__side_hose.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__hose_clip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__hose_clip.glb" />
+			</geometry>
+		</visual>
+		<visual name="pump_body__pump_nozzle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/pump_body__pump_nozzle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="plunger">
+		<visual name="plunger__rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__rod.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__guide_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__guide_stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__wiper_flange">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__wiper_flange.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__handle_socket">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__handle_socket.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__grip.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__grip_cap_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__grip_cap_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="plunger__grip_cap_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/plunger__grip_cap_1.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="barrel_to_plunger" type="prismatic">
+		<origin xyz="0 0 0.93" rpy="0 0 0" />
+		<parent link="pump_body" />
+		<child link="plunger" />
+		<axis xyz="0 0 1" />
+		<limit effort="90" velocity="0.55" lower="0" upper="0.3" />
+	</joint>
+</robot>

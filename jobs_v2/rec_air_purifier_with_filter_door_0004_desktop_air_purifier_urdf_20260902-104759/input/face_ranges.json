@@ -1,0 +1,119 @@
+{
+  "group_order": [
+    "housing__plinth",
+    "housing__drum_shell",
+    "housing__bottom_bezel",
+    "housing__top_bezel",
+    "housing__left_bezel",
+    "housing__right_bezel",
+    "housing__latch_seat",
+    "exhaust_cap__cap_flange",
+    "exhaust_cap__cap_shell",
+    "exhaust_cap__grille_bar_x",
+    "exhaust_cap__grille_bar_y",
+    "exhaust_cap__grille_hub",
+    "access_panel__door_skin",
+    "access_panel__filter_frame",
+    "access_panel__filter_media",
+    "access_panel__filter_pleat_0",
+    "access_panel__filter_pleat_1",
+    "access_panel__filter_pleat_2",
+    "access_panel__filter_pleat_3",
+    "access_panel__pull_tab",
+    "access_panel__latch_tongue"
+  ],
+  "face_ranges": {
+    "housing__plinth": [
+      0,
+      128
+    ],
+    "housing__drum_shell": [
+      128,
+      658
+    ],
+    "housing__bottom_bezel": [
+      658,
+      670
+    ],
+    "housing__top_bezel": [
+      670,
+      682
+    ],
+    "housing__left_bezel": [
+      682,
+      694
+    ],
+    "housing__right_bezel": [
+      694,
+      706
+    ],
+    "housing__latch_seat": [
+      706,
+      718
+    ],
+    "exhaust_cap__cap_flange": [
+      718,
+      846
+    ],
+    "exhaust_cap__cap_shell": [
+      846,
+      974
+    ],
+    "exhaust_cap__grille_bar_x": [
+      974,
+      986
+    ],
+    "exhaust_cap__grille_bar_y": [
+      986,
+      998
+    ],
+    "exhaust_cap__grille_hub": [
+      998,
+      1126
+    ],
+    "access_panel__door_skin": [
+      1126,
+      1138
+    ],
+    "access_panel__filter_frame": [
+      1138,
+      1150
+    ],
+    "access_panel__filter_media": [
+      1150,
+      1162
+    ],
+    "access_panel__filter_pleat_0": [
+      1162,
+      1174
+    ],
+    "access_panel__filter_pleat_1": [
+      1174,
+      1186
+    ],
+    "access_panel__filter_pleat_2": [
+      1186,
+      1198
+    ],
+    "access_panel__filter_pleat_3": [
+      1198,
+      1210
+    ],
+    "access_panel__pull_tab": [
+      1210,
+      1222
+    ],
+    "access_panel__latch_tongue": [
+      1222,
+      1234
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0040000000000000036,
+      0.091
+    ],
+    "scale": 4.99995
+  }
+}

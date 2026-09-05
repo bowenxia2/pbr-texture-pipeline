@@ -1,0 +1,67 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 5742938,
+  "groups": {
+    "body__shell": {
+      "texture_size": 1024,
+      "n_faces": 1644,
+      "texels": 847242,
+      "field_voxels": 847025
+    },
+    "basket__basket_shell": {
+      "texture_size": 1024,
+      "n_faces": 88,
+      "texels": 801027,
+      "field_voxels": 800639
+    },
+    "basket__handle": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52133,
+      "field_voxels": 51902
+    },
+    "basket__guide_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54612,
+      "field_voxels": 23043
+    },
+    "basket__guide_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54612,
+      "field_voxels": 23289
+    },
+    "release_button__release_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53620,
+      "field_voxels": 6794
+    },
+    "timer_knob__knob_shell": {
+      "texture_size": 1024,
+      "n_faces": 13386,
+      "texels": 700655,
+      "field_voxels": 71142
+    },
+    "program_button__button_face": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50697,
+      "field_voxels": 7152
+    },
+    "power_rocker__rocker_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54339,
+      "field_voxels": 19115
+    },
+    "power_rocker__rocker_barrel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54786,
+      "field_voxels": 5412
+    }
+  }
+}

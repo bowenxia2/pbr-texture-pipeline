@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="retro_stainless_air_fryer">
+	<material name="stainless">
+		<color rgba="0.78 0.8 0.82 1" />
+	</material>
+	<material name="panel_black">
+		<color rgba="0.11 0.11 0.12 1" />
+	</material>
+	<material name="trim_black">
+		<color rgba="0.15 0.15 0.16 1" />
+	</material>
+	<material name="basket_dark">
+		<color rgba="0.17 0.17 0.18 1" />
+	</material>
+	<material name="knob_black">
+		<color rgba="0.1 0.1 0.11 1" />
+	</material>
+	<material name="latch_red">
+		<color rgba="0.82 0.14 0.12 1" />
+	</material>
+	<link name="body">
+		<collision name="housing_shell">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_body_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="base_band">
+			<origin xyz="-0.002 0 0.012" rpy="0 0 0" />
+			<geometry>
+				<box size="0.32 0.31 0.024" />
+			</geometry>
+		</collision>
+		<collision name="control_panel">
+			<origin xyz="0.181 0 0.272" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.232 0.124" />
+			</geometry>
+		</collision>
+		<collision name="switch_bezel">
+			<origin xyz="0.181 0.09 0.258" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.034 0.052" />
+			</geometry>
+		</collision>
+		<collision name="drawer_guide_0">
+			<origin xyz="0.024 -0.086 0.038" rpy="0 0 0" />
+			<geometry>
+				<box size="0.2 0.018 0.03" />
+			</geometry>
+		</collision>
+		<collision name="drawer_guide_1">
+			<origin xyz="0.024 0.086 0.038" rpy="0 0 0" />
+			<geometry>
+				<box size="0.2 0.018 0.03" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="-0.115 -0.105 0.004" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.01" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="-0.115 0.105 0.004" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.01" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.115 -0.105 0.004" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.01" />
+			</geometry>
+		</collision>
+		<collision>
+			<origin xyz="0.115 0.105 0.004" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.01" />
+			</geometry>
+		</collision>
+		<visual name="body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="drawer">
+		<collision name="drawer_shell">
+			<geometry>
+				<mesh filename="assets/meshes/air_fryer_drawer_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="handle_cover">
+			<origin xyz="0.066 0 0.077" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.108 0.022" />
+			</geometry>
+		</collision>
+		<visual name="drawer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/drawer.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="timer_dial">
+		<collision name="timer_knob">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/timer_dial.obj" />
+			</geometry>
+		</collision>
+		<visual name="timer_dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/timer_dial.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="temperature_dial">
+		<collision name="temperature_knob">
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<geometry>
+				<mesh filename="assets/meshes/temperature_dial.obj" />
+			</geometry>
+		</collision>
+		<visual name="temperature_dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/temperature_dial.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="power_rocker">
+		<collision name="rocker_paddle">
+			<origin xyz="0.003 -0.009 0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.006 0.018 0.04" />
+			</geometry>
+		</collision>
+		<collision name="rocker_hinge">
+			<origin xyz="0.0025 0 0.02" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0025" length="0.04" />
+			</geometry>
+		</collision>
+		<visual name="power_rocker">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/power_rocker.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="release_latch">
+		<collision name="latch_cap">
+			<origin xyz="0 0 0.008" rpy="0 0 0" />
+			<geometry>
+				<box size="0.02 0.018 0.016" />
+			</geometry>
+		</collision>
+		<collision name="latch_thumb">
+			<origin xyz="0.003 0 0.019" rpy="0 0 0" />
+			<geometry>
+				<box size="0.01 0.02 0.006" />
+			</geometry>
+		</collision>
+		<collision name="latch_tongue">
+			<origin xyz="0 0 -0.0015" rpy="0 0 0" />
+			<geometry>
+				<box size="0.012 0.014 0.003" />
+			</geometry>
+		</collision>
+		<visual name="release_latch">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/release_latch.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_drawer" type="prismatic">
+		<origin xyz="0.182 0 0.053" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="drawer" />
+		<axis xyz="1 0 0" />
+		<limit effort="80" velocity="0.22" lower="0" upper="0.18" />
+	</joint>
+	<joint name="body_to_timer_dial" type="continuous">
+		<origin xyz="0.186 0 0.314" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="timer_dial" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.4" velocity="8" />
+	</joint>
+	<joint name="body_to_temperature_dial" type="continuous">
+		<origin xyz="0.186 0 0.25" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="temperature_dial" />
+		<axis xyz="1 0 0" />
+		<limit effort="0.4" velocity="8" />
+	</joint>
+	<joint name="body_to_power_rocker" type="revolute">
+		<origin xyz="0.186 0.099 0.238" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="power_rocker" />
+		<axis xyz="0 0 1" />
+		<limit effort="1" velocity="2" lower="-0.18" upper="0.32" />
+	</joint>
+	<joint name="drawer_to_release_latch" type="prismatic">
+		<origin xyz="0.041 0 0.093" rpy="0 0 0" />
+		<parent link="drawer" />
+		<child link="release_latch" />
+		<axis xyz="0 0 1" />
+		<limit effort="2" velocity="0.12" lower="0" upper="0.018" />
+	</joint>
+</robot>

@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="through_wall_air_conditioner">
+	<material name="cabinet">
+		<color rgba="0.84 0.83 0.78 1" />
+	</material>
+	<material name="grille">
+		<color rgba="0.9 0.89 0.84 1" />
+	</material>
+	<material name="shadow">
+		<color rgba="0.19 0.2 0.22 1" />
+	</material>
+	<material name="button">
+		<color rgba="0.56 0.57 0.59 1" />
+	</material>
+	<material name="trim">
+		<color rgba="0.72 0.72 0.68 1" />
+	</material>
+	<link name="body">
+		<collision name="bottom_shell">
+			<origin xyz="0 0.25 0.009" rpy="0 0 0" />
+			<geometry>
+				<box size="1.07 0.5 0.018" />
+			</geometry>
+		</collision>
+		<collision name="top_shell">
+			<origin xyz="0 0.25 0.411" rpy="0 0 0" />
+			<geometry>
+				<box size="1.07 0.5 0.018" />
+			</geometry>
+		</collision>
+		<collision name="left_shell">
+			<origin xyz="-0.526 0.25 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.5 0.386" />
+			</geometry>
+		</collision>
+		<collision name="right_shell">
+			<origin xyz="0.526 0.25 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="0.018 0.5 0.386" />
+			</geometry>
+		</collision>
+		<collision name="back_shell">
+			<origin xyz="0 0.49 0.21" rpy="0 0 0" />
+			<geometry>
+				<box size="1.036 0.02 0.386" />
+			</geometry>
+		</collision>
+		<collision name="top_band">
+			<origin xyz="0 0.012 0.396" rpy="0 0 0" />
+			<geometry>
+				<box size="1.036 0.024 0.05" />
+			</geometry>
+		</collision>
+		<collision name="bottom_band">
+			<origin xyz="0 0.012 0.041" rpy="0 0 0" />
+			<geometry>
+				<box size="1.036 0.024 0.082" />
+			</geometry>
+		</collision>
+		<collision name="mid_band">
+			<origin xyz="0 0.012 0.161" rpy="0 0 0" />
+			<geometry>
+				<box size="1.036 0.024 0.044" />
+			</geometry>
+		</collision>
+		<collision name="control_separator">
+			<origin xyz="0.29 0.012 0.226" rpy="0 0 0" />
+			<geometry>
+				<box size="0.06 0.024 0.294" />
+			</geometry>
+		</collision>
+		<collision name="intake_grille">
+			<origin xyz="-0.11 0.001 0.277" rpy="-1.5708 0 0" />
+			<geometry>
+				<mesh filename="assets/meshes/ac_intake_grille.obj" />
+			</geometry>
+		</collision>
+		<collision name="outlet_cavity">
+			<origin xyz="-0.14 0.253 0.11" rpy="0 0 0" />
+			<geometry>
+				<box size="0.69 0.46 0.05" />
+			</geometry>
+		</collision>
+		<collision name="control_backer">
+			<origin xyz="0.405 0.2605 0.22" rpy="0 0 0" />
+			<geometry>
+				<box size="0.14 0.44 0.255" />
+			</geometry>
+		</collision>
+		<visual name="body__bottom_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__bottom_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__left_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__left_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__right_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__right_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__back_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__back_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__top_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__top_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__bottom_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__bottom_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__mid_band">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__mid_band.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__control_separator">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__control_separator.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__intake_grille">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__intake_grille.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__outlet_cavity">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__outlet_cavity.glb" />
+			</geometry>
+		</visual>
+		<visual name="body__control_backer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/body__control_backer.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="flap">
+		<collision name="flap_panel">
+			<origin xyz="0 0.009 -0.029" rpy="0 0 0" />
+			<geometry>
+				<box size="0.706 0.018 0.056" />
+			</geometry>
+		</collision>
+		<collision name="flap_barrel">
+			<origin xyz="0 0.009 0" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.005" length="0.69" />
+			</geometry>
+		</collision>
+		<visual name="flap__flap_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap__flap_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="flap__flap_barrel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/flap__flap_barrel.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="button_0">
+		<collision name="button_cap">
+			<origin xyz="0 0.005 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.038 0.01 0.024" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0.024 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.03 0.014" />
+			</geometry>
+		</collision>
+		<visual name="button_0__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_0__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="button_0__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_0__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="button_1">
+		<collision name="button_cap">
+			<origin xyz="0 0.005 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.038 0.01 0.024" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0.024 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.03 0.014" />
+			</geometry>
+		</collision>
+		<visual name="button_1__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_1__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="button_1__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_1__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="button_2">
+		<collision name="button_cap">
+			<origin xyz="0 0.005 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.038 0.01 0.024" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0.024 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.03 0.014" />
+			</geometry>
+		</collision>
+		<visual name="button_2__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_2__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="button_2__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_2__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="button_3">
+		<collision name="button_cap">
+			<origin xyz="0 0.005 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.038 0.01 0.024" />
+			</geometry>
+		</collision>
+		<collision name="button_stem">
+			<origin xyz="0 0.024 0" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.03 0.014" />
+			</geometry>
+		</collision>
+		<visual name="button_3__button_cap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_3__button_cap.glb" />
+			</geometry>
+		</visual>
+		<visual name="button_3__button_stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/button_3__button_stem.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="body_to_flap" type="revolute">
+		<origin xyz="-0.14 0.0015 0.136" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="flap" />
+		<axis xyz="-1 0 0" />
+		<limit effort="3" velocity="1.5" lower="0" upper="0.95" />
+	</joint>
+	<joint name="body_to_button_0" type="prismatic">
+		<origin xyz="0.405 0.0015 0.315" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="button_0" />
+		<axis xyz="0 1 0" />
+		<limit effort="2" velocity="0.04" lower="0" upper="0.006" />
+	</joint>
+	<joint name="body_to_button_1" type="prismatic">
+		<origin xyz="0.405 0.0015 0.276" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="button_1" />
+		<axis xyz="0 1 0" />
+		<limit effort="2" velocity="0.04" lower="0" upper="0.006" />
+	</joint>
+	<joint name="body_to_button_2" type="prismatic">
+		<origin xyz="0.405 0.0015 0.237" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="button_2" />
+		<axis xyz="0 1 0" />
+		<limit effort="2" velocity="0.04" lower="0" upper="0.006" />
+	</joint>
+	<joint name="body_to_button_3" type="prismatic">
+		<origin xyz="0.405 0.0015 0.198" rpy="0 0 0" />
+		<parent link="body" />
+		<child link="button_3" />
+		<axis xyz="0 1 0" />
+		<limit effort="2" velocity="0.04" lower="0" upper="0.006" />
+	</joint>
+</robot>

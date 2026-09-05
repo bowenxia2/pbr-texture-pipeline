@@ -1,0 +1,154 @@
+{
+  "group_order": [
+    "housing__back_panel",
+    "housing__left_wall",
+    "housing__right_wall",
+    "housing__top_wall",
+    "housing__bottom_wall",
+    "housing__front_frame_0",
+    "housing__front_frame_1",
+    "housing__front_frame_2",
+    "housing__front_frame_3",
+    "housing__hinge_mount",
+    "housing__filter_guide_0",
+    "housing__filter_guide_1",
+    "housing__slider_guide",
+    "housing__top_cap",
+    "door__door_panel",
+    "door__door_liner",
+    "door__hinge_spine",
+    "door__pull_rail",
+    "door__status_lens",
+    "filter_cassette__filter_frame_0",
+    "filter_cassette__filter_frame_1",
+    "filter_cassette__filter_frame_2",
+    "filter_cassette__filter_frame_3",
+    "filter_cassette__filter_media",
+    "filter_cassette__filter_tab",
+    "side_slider__slider_stem",
+    "side_slider__thumb_tab",
+    "side_slider__thumb_ridge"
+  ],
+  "face_ranges": {
+    "housing__back_panel": [
+      0,
+      12
+    ],
+    "housing__left_wall": [
+      12,
+      24
+    ],
+    "housing__right_wall": [
+      24,
+      36
+    ],
+    "housing__top_wall": [
+      36,
+      48
+    ],
+    "housing__bottom_wall": [
+      48,
+      60
+    ],
+    "housing__front_frame_0": [
+      60,
+      72
+    ],
+    "housing__front_frame_1": [
+      72,
+      84
+    ],
+    "housing__front_frame_2": [
+      84,
+      96
+    ],
+    "housing__front_frame_3": [
+      96,
+      108
+    ],
+    "housing__hinge_mount": [
+      108,
+      120
+    ],
+    "housing__filter_guide_0": [
+      120,
+      132
+    ],
+    "housing__filter_guide_1": [
+      132,
+      144
+    ],
+    "housing__slider_guide": [
+      144,
+      156
+    ],
+    "housing__top_cap": [
+      156,
+      168
+    ],
+    "door__door_panel": [
+      168,
+      180
+    ],
+    "door__door_liner": [
+      180,
+      192
+    ],
+    "door__hinge_spine": [
+      192,
+      204
+    ],
+    "door__pull_rail": [
+      204,
+      216
+    ],
+    "door__status_lens": [
+      216,
+      228
+    ],
+    "filter_cassette__filter_frame_0": [
+      228,
+      240
+    ],
+    "filter_cassette__filter_frame_1": [
+      240,
+      252
+    ],
+    "filter_cassette__filter_frame_2": [
+      252,
+      264
+    ],
+    "filter_cassette__filter_frame_3": [
+      264,
+      276
+    ],
+    "filter_cassette__filter_media": [
+      276,
+      288
+    ],
+    "filter_cassette__filter_tab": [
+      288,
+      300
+    ],
+    "side_slider__slider_stem": [
+      300,
+      312
+    ],
+    "side_slider__thumb_tab": [
+      312,
+      324
+    ],
+    "side_slider__thumb_ridge": [
+      324,
+      336
+    ]
+  },
+  "norm": {
+    "center": [
+      0.009999999999999995,
+      0.013499999999999998,
+      0.0
+    ],
+    "scale": 1.4705735294117646
+  }
+}

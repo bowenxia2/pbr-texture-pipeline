@@ -1,0 +1,510 @@
+<robot name="compact_all_in_one_printer">
+  <material name="body_white">
+    <color rgba="0.92 0.93 0.94 1" />
+    </material>
+  <material name="trim_dark">
+    <color rgba="0.18 0.2 0.22 1" />
+    </material>
+  <material name="glass_dark">
+    <color rgba="0.18 0.24 0.3 0.85" />
+    </material>
+  <material name="paper_gray">
+    <color rgba="0.78 0.8 0.82 1" />
+    </material>
+  <material name="button_gray">
+    <color rgba="0.86 0.87 0.88 1" />
+    </material>
+  <link name="body">
+    <visual name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="scanner_glass">
+      <origin xyz="0 -0.052 0.0855" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.206 0.003" />
+        </geometry>
+      <material name="glass_dark">
+        <color rgba="0.18 0.24 0.3 0.85" />
+        </material>
+      </visual>
+    <visual name="display">
+      <origin xyz="0.018 0.126517 0.137683" rpy="-0.426627 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.0025" />
+        </geometry>
+      <material name="glass_dark">
+        <color rgba="0.18 0.24 0.3 0.85" />
+        </material>
+      </visual>
+    <visual name="lid_hinge_bar">
+      <origin xyz="0 -0.162 0.157" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.33" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="body_shell">
+      <geometry>
+        <mesh filename="assets/meshes/body_shell.obj" />
+        </geometry>
+      </collision>
+    <collision name="scanner_glass">
+      <origin xyz="0 -0.052 0.0855" rpy="0 0 0" />
+      <geometry>
+        <box size="0.302 0.206 0.003" />
+        </geometry>
+      </collision>
+    <collision name="display">
+      <origin xyz="0.018 0.126517 0.137683" rpy="-0.426627 0 0" />
+      <geometry>
+        <box size="0.054 0.03 0.0025" />
+        </geometry>
+      </collision>
+    <collision name="lid_hinge_bar">
+      <origin xyz="0 -0.162 0.157" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0045" length="0.33" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="lid">
+    <visual name="lid_top">
+      <origin xyz="0 0.127 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.342 0.238 0.004" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="lid_front">
+      <origin xyz="0 0.241 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.322 0.01 0.02" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="lid_side_0">
+      <origin xyz="0.166 0.123 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.226 0.02" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="lid_side_1">
+      <origin xyz="-0.166 0.123 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.226 0.02" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="lid_rear">
+      <origin xyz="0 0.008 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.342 0.016 0.01" />
+        </geometry>
+      <material name="body_white">
+        <color rgba="0.92 0.93 0.94 1" />
+        </material>
+      </visual>
+    <visual name="lid_barrel">
+      <origin xyz="0 0 0.01" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.302" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="lid_top">
+      <origin xyz="0 0.127 0.022" rpy="0 0 0" />
+      <geometry>
+        <box size="0.342 0.238 0.004" />
+        </geometry>
+      </collision>
+    <collision name="lid_front">
+      <origin xyz="0 0.241 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.322 0.01 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lid_side_0">
+      <origin xyz="0.166 0.123 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.226 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lid_side_1">
+      <origin xyz="-0.166 0.123 0.01" rpy="0 0 0" />
+      <geometry>
+        <box size="0.01 0.226 0.02" />
+        </geometry>
+      </collision>
+    <collision name="lid_rear">
+      <origin xyz="0 0.008 0.005" rpy="0 0 0" />
+      <geometry>
+        <box size="0.342 0.016 0.01" />
+        </geometry>
+      </collision>
+    <collision name="lid_barrel">
+      <origin xyz="0 0 0.01" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.0065" length="0.302" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="tray">
+    <visual name="tray_floor">
+      <origin xyz="0 -0.086 0.00175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.192 0.0035" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="tray_front">
+      <origin xyz="0 -0.00175 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.0035 0.048" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <visual name="tray_rear">
+      <origin xyz="0 -0.18025 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.0035 0.034" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_0">
+      <origin xyz="0.15325 -0.09275 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.1885 0.034" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="tray_side_1">
+      <origin xyz="-0.15325 -0.09275 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.1885 0.034" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <collision name="tray_floor">
+      <origin xyz="0 -0.086 0.00175" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.192 0.0035" />
+        </geometry>
+      </collision>
+    <collision name="tray_front">
+      <origin xyz="0 -0.00175 0.024" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.0035 0.048" />
+        </geometry>
+      </collision>
+    <collision name="tray_rear">
+      <origin xyz="0 -0.18025 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.31 0.0035 0.034" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_0">
+      <origin xyz="0.15325 -0.09275 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.1885 0.034" />
+        </geometry>
+      </collision>
+    <collision name="tray_side_1">
+      <origin xyz="-0.15325 -0.09275 0.017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.1885 0.034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="shelf">
+    <visual name="shelf_panel">
+      <origin xyz="0 0.00175 -0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.286 0.0035 0.094" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shelf_side_0">
+      <origin xyz="0.14125 0.0075 -0.04525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.015 0.0905" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shelf_side_1">
+      <origin xyz="-0.14125 0.0075 -0.04525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.015 0.0905" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shelf_front_lip">
+      <origin xyz="0 0.006 -0.09225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.286 0.012 0.0035" />
+        </geometry>
+      <material name="paper_gray">
+        <color rgba="0.78 0.8 0.82 1" />
+        </material>
+      </visual>
+    <visual name="shelf_barrel">
+      <origin xyz="0 0.003 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.256" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="shelf_panel">
+      <origin xyz="0 0.00175 -0.047" rpy="0 0 0" />
+      <geometry>
+        <box size="0.286 0.0035 0.094" />
+        </geometry>
+      </collision>
+    <collision name="shelf_side_0">
+      <origin xyz="0.14125 0.0075 -0.04525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.015 0.0905" />
+        </geometry>
+      </collision>
+    <collision name="shelf_side_1">
+      <origin xyz="-0.14125 0.0075 -0.04525" rpy="0 0 0" />
+      <geometry>
+        <box size="0.0035 0.015 0.0905" />
+        </geometry>
+      </collision>
+    <collision name="shelf_front_lip">
+      <origin xyz="0 0.006 -0.09225" rpy="0 0 0" />
+      <geometry>
+        <box size="0.286 0.012 0.0035" />
+        </geometry>
+      </collision>
+    <collision name="shelf_barrel">
+      <origin xyz="0 0.003 0" rpy="0 1.5708 0" />
+      <geometry>
+        <cylinder radius="0.003" length="0.256" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_0">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_1">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_2">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_3">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_4">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="key_5">
+    <visual name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      <material name="button_gray">
+        <color rgba="0.86 0.87 0.88 1" />
+        </material>
+      </visual>
+    <collision name="key_cap">
+      <origin xyz="0 0 0.0017" rpy="0 0 0" />
+      <geometry>
+        <box size="0.012 0.008 0.0034" />
+        </geometry>
+      </collision>
+    </link>
+  <link name="menu_dial">
+    <visual name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/menu_dial.obj" />
+        </geometry>
+      <material name="trim_dark">
+        <color rgba="0.18 0.2 0.22 1" />
+        </material>
+      </visual>
+    <collision name="dial_cap">
+      <geometry>
+        <mesh filename="assets/meshes/menu_dial.obj" />
+        </geometry>
+      </collision>
+    </link>
+  <joint name="body_to_lid" type="revolute">
+    <origin xyz="0 -0.162 0.158" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="lid" />
+    <axis xyz="1 0 0" />
+    <limit effort="10" velocity="1.2" lower="0" upper="1.42" />
+    </joint>
+  <joint name="body_to_tray" type="prismatic">
+    <origin xyz="0 0.167 0.012" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="tray" />
+    <axis xyz="0 1 0" />
+    <limit effort="20" velocity="0.25" lower="0" upper="0.092" />
+    </joint>
+  <joint name="body_to_shelf" type="revolute">
+    <origin xyz="0 0.176 0.075" rpy="0 0 0" />
+    <parent link="body" />
+    <child link="shelf" />
+    <axis xyz="1 0 0" />
+    <limit effort="2" velocity="1.5" lower="0" upper="1.48" />
+    </joint>
+  <joint name="body_to_key_0" type="prismatic">
+    <origin xyz="-0.062 0.14 0.130182" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_0" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_key_1" type="prismatic">
+    <origin xyz="-0.062 0.126 0.136545" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_key_2" type="prismatic">
+    <origin xyz="-0.062 0.112 0.142909" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_2" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_key_3" type="prismatic">
+    <origin xyz="0.066 0.14 0.130182" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_key_4" type="prismatic">
+    <origin xyz="0.066 0.126 0.136545" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_4" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_key_5" type="prismatic">
+    <origin xyz="0.066 0.112 0.142909" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="key_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="1" velocity="0.08" lower="0" upper="0.0024" />
+    </joint>
+  <joint name="body_to_menu_dial" type="continuous">
+    <origin xyz="0.122 0.126 0.136545" rpy="-0.426627 -0 0" />
+    <parent link="body" />
+    <child link="menu_dial" />
+    <axis xyz="0 0 1" />
+    <limit effort="0.5" velocity="4" />
+    </joint>
+  </robot>

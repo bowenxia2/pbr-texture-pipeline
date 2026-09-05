@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="wall_hung_air_purifier">
+	<material name="housing_white">
+		<color rgba="0.93 0.94 0.95 1" />
+	</material>
+	<material name="housing_shadow">
+		<color rgba="0.77 0.79 0.81 1" />
+	</material>
+	<material name="bracket_grey">
+		<color rgba="0.43 0.45 0.48 1" />
+	</material>
+	<material name="hinge_dark">
+		<color rgba="0.28 0.3 0.33 1" />
+	</material>
+	<material name="filter_frame">
+		<color rgba="0.2 0.21 0.22 1" />
+	</material>
+	<material name="filter_media">
+		<color rgba="0.82 0.85 0.79 1" />
+	</material>
+	<material name="accent_grey">
+		<color rgba="0.66 0.69 0.72 1" />
+	</material>
+	<material name="led_blue">
+		<color rgba="0.42 0.73 0.94 0.75" />
+	</material>
+	<link name="wall_bracket">
+		<visual name="wall_bracket__back_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__back_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="wall_bracket__upper_hook">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__upper_hook.glb" />
+			</geometry>
+		</visual>
+		<visual name="wall_bracket__lower_hook">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__lower_hook.glb" />
+			</geometry>
+		</visual>
+		<visual name="wall_bracket__left_standoff">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__left_standoff.glb" />
+			</geometry>
+		</visual>
+		<visual name="wall_bracket__right_standoff">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__right_standoff.glb" />
+			</geometry>
+		</visual>
+		<visual name="wall_bracket__center_latch">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/wall_bracket__center_latch.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="housing">
+		<visual name="housing__front_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__front_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__rear_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__rear_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__top_plenum">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__top_plenum.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__left_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__left_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__right_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__right_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_hinge_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__lower_hinge_leaf">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__lower_hinge_leaf.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__upper_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__upper_knuckle.glb" />
+			</geometry>
+		</visual>
+		<visual name="housing__lower_knuckle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/housing__lower_knuckle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="front_cover">
+		<visual name="front_cover__cover_panel">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__cover_panel.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_recess">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_recess.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__grille_slat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__grille_slat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__status_strip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__status_strip.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__upper_hinge_strap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__upper_hinge_strap.glb" />
+			</geometry>
+		</visual>
+		<visual name="front_cover__lower_hinge_strap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/front_cover__lower_hinge_strap.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="filter_cartridge">
+		<visual name="filter_cartridge__filter_frame">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__filter_frame.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_block">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_block.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_8.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_9">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_9.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__media_pleat_10">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__media_pleat_10.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__left_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__left_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__right_runner">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__right_runner.glb" />
+			</geometry>
+		</visual>
+		<visual name="filter_cartridge__pull_tab">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/filter_cartridge__pull_tab.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="bracket_to_housing" type="fixed">
+		<parent link="wall_bracket" />
+		<child link="housing" />
+	</joint>
+	<joint name="housing_to_cover" type="revolute">
+		<origin xyz="-0.243 0.119 0" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="front_cover" />
+		<axis xyz="0 0 1" />
+		<limit effort="8" velocity="1.2" lower="0" upper="1.75" />
+	</joint>
+	<joint name="housing_to_filter" type="prismatic">
+		<origin xyz="0 0.067 0" rpy="0 0 0" />
+		<parent link="housing" />
+		<child link="filter_cartridge" />
+		<axis xyz="0 1 0" />
+		<limit effort="18" velocity="0.2" lower="0" upper="0.12" />
+	</joint>
+</robot>

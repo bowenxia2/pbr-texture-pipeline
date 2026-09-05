@@ -1,0 +1,399 @@
+{
+  "group_order": [
+    "cabinet__left_wall",
+    "cabinet__right_wall",
+    "cabinet__back_wall",
+    "cabinet__base_pan",
+    "cabinet__front_left_jamb",
+    "cabinet__front_right_jamb",
+    "cabinet__front_bottom_rail",
+    "cabinet__front_top_rail",
+    "cabinet__top_front_rail",
+    "cabinet__top_rear_rail",
+    "cabinet__top_left_rail",
+    "cabinet__top_right_rail",
+    "cabinet__blower_plenum",
+    "cabinet__lower_hinge_backer",
+    "cabinet__upper_hinge_backer",
+    "cabinet__door_hinge_bridge",
+    "cabinet__door_center_knuckle",
+    "cabinet__baffle_hinge_bridge",
+    "cabinet__baffle_center_knuckle",
+    "access_door__left_stile",
+    "access_door__right_stile",
+    "access_door__top_rail",
+    "access_door__bottom_rail",
+    "access_door__upper_panel",
+    "access_door__door_grille",
+    "access_door__upper_knuckle",
+    "access_door__upper_knuckle_leaf",
+    "access_door__lower_knuckle",
+    "access_door__lower_knuckle_leaf",
+    "access_door__handle_upper_post",
+    "access_door__handle_lower_post",
+    "access_door__handle_grip",
+    "exhaust_baffle__baffle_panel",
+    "exhaust_baffle__left_flange",
+    "exhaust_baffle__right_flange",
+    "exhaust_baffle__front_lip",
+    "exhaust_baffle__lift_tab",
+    "exhaust_baffle__left_baffle_knuckle",
+    "exhaust_baffle__left_baffle_leaf",
+    "exhaust_baffle__right_baffle_knuckle",
+    "exhaust_baffle__right_baffle_leaf",
+    "front_left_caster__mount_plate",
+    "front_left_caster__swivel_head",
+    "front_left_caster__swivel_stem",
+    "front_left_caster__yoke_bridge",
+    "front_left_caster__yoke_cheek_left",
+    "front_left_caster__yoke_cheek_right",
+    "front_left_caster__axle",
+    "front_left_caster__wheel_tire",
+    "front_left_caster__wheel_hub",
+    "front_right_caster__mount_plate",
+    "front_right_caster__swivel_head",
+    "front_right_caster__swivel_stem",
+    "front_right_caster__yoke_bridge",
+    "front_right_caster__yoke_cheek_left",
+    "front_right_caster__yoke_cheek_right",
+    "front_right_caster__axle",
+    "front_right_caster__wheel_tire",
+    "front_right_caster__wheel_hub",
+    "rear_left_caster__mount_plate",
+    "rear_left_caster__swivel_head",
+    "rear_left_caster__swivel_stem",
+    "rear_left_caster__yoke_bridge",
+    "rear_left_caster__yoke_cheek_left",
+    "rear_left_caster__yoke_cheek_right",
+    "rear_left_caster__axle",
+    "rear_left_caster__wheel_tire",
+    "rear_left_caster__wheel_hub",
+    "rear_right_caster__mount_plate",
+    "rear_right_caster__swivel_head",
+    "rear_right_caster__swivel_stem",
+    "rear_right_caster__yoke_bridge",
+    "rear_right_caster__yoke_cheek_left",
+    "rear_right_caster__yoke_cheek_right",
+    "rear_right_caster__axle",
+    "rear_right_caster__wheel_tire",
+    "rear_right_caster__wheel_hub"
+  ],
+  "face_ranges": {
+    "cabinet__left_wall": [
+      0,
+      12
+    ],
+    "cabinet__right_wall": [
+      12,
+      24
+    ],
+    "cabinet__back_wall": [
+      24,
+      36
+    ],
+    "cabinet__base_pan": [
+      36,
+      48
+    ],
+    "cabinet__front_left_jamb": [
+      48,
+      60
+    ],
+    "cabinet__front_right_jamb": [
+      60,
+      72
+    ],
+    "cabinet__front_bottom_rail": [
+      72,
+      84
+    ],
+    "cabinet__front_top_rail": [
+      84,
+      96
+    ],
+    "cabinet__top_front_rail": [
+      96,
+      108
+    ],
+    "cabinet__top_rear_rail": [
+      108,
+      120
+    ],
+    "cabinet__top_left_rail": [
+      120,
+      132
+    ],
+    "cabinet__top_right_rail": [
+      132,
+      144
+    ],
+    "cabinet__blower_plenum": [
+      144,
+      156
+    ],
+    "cabinet__lower_hinge_backer": [
+      156,
+      168
+    ],
+    "cabinet__upper_hinge_backer": [
+      168,
+      180
+    ],
+    "cabinet__door_hinge_bridge": [
+      180,
+      192
+    ],
+    "cabinet__door_center_knuckle": [
+      192,
+      320
+    ],
+    "cabinet__baffle_hinge_bridge": [
+      320,
+      332
+    ],
+    "cabinet__baffle_center_knuckle": [
+      332,
+      460
+    ],
+    "access_door__left_stile": [
+      460,
+      472
+    ],
+    "access_door__right_stile": [
+      472,
+      484
+    ],
+    "access_door__top_rail": [
+      484,
+      496
+    ],
+    "access_door__bottom_rail": [
+      496,
+      508
+    ],
+    "access_door__upper_panel": [
+      508,
+      520
+    ],
+    "access_door__door_grille": [
+      520,
+      1232
+    ],
+    "access_door__upper_knuckle": [
+      1232,
+      1360
+    ],
+    "access_door__upper_knuckle_leaf": [
+      1360,
+      1372
+    ],
+    "access_door__lower_knuckle": [
+      1372,
+      1500
+    ],
+    "access_door__lower_knuckle_leaf": [
+      1500,
+      1512
+    ],
+    "access_door__handle_upper_post": [
+      1512,
+      1524
+    ],
+    "access_door__handle_lower_post": [
+      1524,
+      1536
+    ],
+    "access_door__handle_grip": [
+      1536,
+      1664
+    ],
+    "exhaust_baffle__baffle_panel": [
+      1664,
+      1676
+    ],
+    "exhaust_baffle__left_flange": [
+      1676,
+      1688
+    ],
+    "exhaust_baffle__right_flange": [
+      1688,
+      1700
+    ],
+    "exhaust_baffle__front_lip": [
+      1700,
+      1712
+    ],
+    "exhaust_baffle__lift_tab": [
+      1712,
+      1724
+    ],
+    "exhaust_baffle__left_baffle_knuckle": [
+      1724,
+      1852
+    ],
+    "exhaust_baffle__left_baffle_leaf": [
+      1852,
+      1864
+    ],
+    "exhaust_baffle__right_baffle_knuckle": [
+      1864,
+      1992
+    ],
+    "exhaust_baffle__right_baffle_leaf": [
+      1992,
+      2004
+    ],
+    "front_left_caster__mount_plate": [
+      2004,
+      2016
+    ],
+    "front_left_caster__swivel_head": [
+      2016,
+      2144
+    ],
+    "front_left_caster__swivel_stem": [
+      2144,
+      2272
+    ],
+    "front_left_caster__yoke_bridge": [
+      2272,
+      2284
+    ],
+    "front_left_caster__yoke_cheek_left": [
+      2284,
+      2296
+    ],
+    "front_left_caster__yoke_cheek_right": [
+      2296,
+      2308
+    ],
+    "front_left_caster__axle": [
+      2308,
+      2436
+    ],
+    "front_left_caster__wheel_tire": [
+      2436,
+      2564
+    ],
+    "front_left_caster__wheel_hub": [
+      2564,
+      2692
+    ],
+    "front_right_caster__mount_plate": [
+      2692,
+      2704
+    ],
+    "front_right_caster__swivel_head": [
+      2704,
+      2832
+    ],
+    "front_right_caster__swivel_stem": [
+      2832,
+      2960
+    ],
+    "front_right_caster__yoke_bridge": [
+      2960,
+      2972
+    ],
+    "front_right_caster__yoke_cheek_left": [
+      2972,
+      2984
+    ],
+    "front_right_caster__yoke_cheek_right": [
+      2984,
+      2996
+    ],
+    "front_right_caster__axle": [
+      2996,
+      3124
+    ],
+    "front_right_caster__wheel_tire": [
+      3124,
+      3252
+    ],
+    "front_right_caster__wheel_hub": [
+      3252,
+      3380
+    ],
+    "rear_left_caster__mount_plate": [
+      3380,
+      3392
+    ],
+    "rear_left_caster__swivel_head": [
+      3392,
+      3520
+    ],
+    "rear_left_caster__swivel_stem": [
+      3520,
+      3648
+    ],
+    "rear_left_caster__yoke_bridge": [
+      3648,
+      3660
+    ],
+    "rear_left_caster__yoke_cheek_left": [
+      3660,
+      3672
+    ],
+    "rear_left_caster__yoke_cheek_right": [
+      3672,
+      3684
+    ],
+    "rear_left_caster__axle": [
+      3684,
+      3812
+    ],
+    "rear_left_caster__wheel_tire": [
+      3812,
+      3940
+    ],
+    "rear_left_caster__wheel_hub": [
+      3940,
+      4068
+    ],
+    "rear_right_caster__mount_plate": [
+      4068,
+      4080
+    ],
+    "rear_right_caster__swivel_head": [
+      4080,
+      4208
+    ],
+    "rear_right_caster__swivel_stem": [
+      4208,
+      4336
+    ],
+    "rear_right_caster__yoke_bridge": [
+      4336,
+      4348
+    ],
+    "rear_right_caster__yoke_cheek_left": [
+      4348,
+      4360
+    ],
+    "rear_right_caster__yoke_cheek_right": [
+      4360,
+      4372
+    ],
+    "rear_right_caster__axle": [
+      4372,
+      4500
+    ],
+    "rear_right_caster__wheel_tire": [
+      4500,
+      4628
+    ],
+    "rear_right_caster__wheel_hub": [
+      4628,
+      4756
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.012999999999999984,
+      0.03249999999999997,
+      0.7919999724511304
+    ],
+    "scale": 0.6313067962224891
+  }
+}

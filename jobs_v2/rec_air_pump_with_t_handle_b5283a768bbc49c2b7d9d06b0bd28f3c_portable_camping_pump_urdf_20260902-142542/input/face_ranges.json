@@ -1,0 +1,44 @@
+{
+  "group_order": [
+    "pump_body__body_shell",
+    "shaft_handle__pump_rod",
+    "shaft_handle__t_grip",
+    "shaft_handle__rod_collar",
+    "left_foot__left_foot_visual",
+    "right_foot__right_foot_visual"
+  ],
+  "face_ranges": {
+    "pump_body__body_shell": [
+      0,
+      3440
+    ],
+    "shaft_handle__pump_rod": [
+      3440,
+      3568
+    ],
+    "shaft_handle__t_grip": [
+      3568,
+      4596
+    ],
+    "shaft_handle__rod_collar": [
+      4596,
+      4724
+    ],
+    "left_foot__left_foot_visual": [
+      4724,
+      5752
+    ],
+    "right_foot__right_foot_visual": [
+      5752,
+      6780
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.172
+    ],
+    "scale": 2.906947674418605
+  }
+}

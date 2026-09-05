@@ -1,0 +1,73 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 4010574,
+  "groups": {
+    "cassette__panel_shell": {
+      "texture_size": 1024,
+      "n_faces": 152,
+      "texels": 575112,
+      "field_voxels": 573827
+    },
+    "cassette__intake_grille": {
+      "texture_size": 1024,
+      "n_faces": 732,
+      "texels": 492876,
+      "field_voxels": 286156
+    },
+    "cassette__upper_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54068,
+      "field_voxels": 54068
+    },
+    "front_flap__flap_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58879,
+      "field_voxels": 54264
+    },
+    "rear_flap__flap_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58879,
+      "field_voxels": 54265
+    },
+    "left_flap__flap_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54534,
+      "field_voxels": 48359
+    },
+    "right_flap__flap_panel": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54534,
+      "field_voxels": 48359
+    },
+    "front_button_0__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50194,
+      "field_voxels": 752
+    },
+    "front_button_0__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 48945,
+      "field_voxels": 1440
+    },
+    "front_button_1__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50194,
+      "field_voxels": 786
+    },
+    "front_button_1__button_stem": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 48945,
+      "field_voxels": 1390
+    }
+  }
+}

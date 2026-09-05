@@ -1,0 +1,560 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7/model.urdf",
+  "created": "2026-09-03T17:10:40",
+  "updated": "2026-09-03T17:40:18",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 37,
+        "n_tiny": 27
+      },
+      "seed": null,
+      "started": "2026-09-03T17:10:59",
+      "finished": "2026-09-03T17:11:00",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the main body; rubber on the base; plastic on the top cap",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:11:05",
+      "finished": "2026-09-03T17:13:00",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7_bathroom_wall_air_purifier_urdf_20260903-171040/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T17:13:00",
+      "finished": "2026-09-03T17:40:17",
+      "error": null
+    },
+    "texture": {
+      "status": "running",
+      "params": {},
+      "seed": 42,
+      "started": "2026-09-03T17:40:18",
+      "finished": null,
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_4f0d39348c4d43afab1c8aa741198bc7/model.urdf",
+    "category": "bathroom wall air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.16,
+        -0.01975,
+        0.0
+      ],
+      "max": [
+        0.181,
+        0.14400000000000002,
+        0.52
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "wall_bracket__wall_plate",
+        "link": "wall_bracket",
+        "label": "wall_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.11816459702860678,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__hook_rail_0",
+        "link": "wall_bracket",
+        "label": "hook_rail_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007765165515800608,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__hook_rail_1",
+        "link": "wall_bracket",
+        "label": "hook_rail_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.007765165515800615,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__screw_head_0",
+        "link": "wall_bracket",
+        "label": "screw_head_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0007665545326547148,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "wall_bracket__screw_slot_0",
+        "link": "wall_bracket",
+        "label": "screw_slot_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 9.490017890236603e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "wall_bracket__screw_head_1",
+        "link": "wall_bracket",
+        "label": "screw_head_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0007665545326547146,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "wall_bracket__screw_slot_1",
+        "link": "wall_bracket",
+        "label": "screw_slot_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 9.490017890236603e-05,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__rear_panel",
+        "link": "housing",
+        "label": "rear_panel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1958828488033865,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_wall_0",
+        "link": "housing",
+        "label": "side_wall_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0777848483915533,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__side_wall_1",
+        "link": "housing",
+        "label": "side_wall_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0777848483915533,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__top_wall",
+        "link": "housing",
+        "label": "top_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04848233701117362,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__bottom_wall",
+        "link": "housing",
+        "label": "bottom_wall",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04848233701117362,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__tray_slide_0",
+        "link": "housing",
+        "label": "tray_slide_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025351112118480006,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__tray_slide_1",
+        "link": "housing",
+        "label": "tray_slide_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0025351112118480006,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__base_fascia",
+        "link": "housing",
+        "label": "base_fascia",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004481952308862619,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__hinge_leaf_0",
+        "link": "housing",
+        "label": "hinge_leaf_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0033165115153247875,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__fixed_knuckle_0_0",
+        "link": "housing",
+        "label": "fixed_knuckle_0_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.000526053427916744,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__fixed_knuckle_0_1",
+        "link": "housing",
+        "label": "fixed_knuckle_0_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005260534279167444,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__hinge_leaf_1",
+        "link": "housing",
+        "label": "hinge_leaf_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003316511515324785,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "housing__fixed_knuckle_1_0",
+        "link": "housing",
+        "label": "fixed_knuckle_1_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005260534279167444,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "housing__fixed_knuckle_1_1",
+        "link": "housing",
+        "label": "fixed_knuckle_1_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005260534279167444,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__cover_side_stile",
+        "link": "front_cover",
+        "label": "cover_side_stile",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017463852805261134,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__cover_hinge_stile",
+        "link": "front_cover",
+        "label": "cover_hinge_stile",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.021610602143030008,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__cover_bottom_rail",
+        "link": "front_cover",
+        "label": "cover_bottom_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012546802600144378,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__cover_top_rail",
+        "link": "front_cover",
+        "label": "cover_top_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.012546802600144392,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__front_grille",
+        "link": "front_cover",
+        "label": "front_grille",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/front_cover_grille.obj"
+        ],
+        "n_faces": 5960,
+        "area_frac": 0.26737211728594823,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__finger_pull",
+        "link": "front_cover",
+        "label": "finger_pull",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.003218836477390193,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__moving_knuckle_0",
+        "link": "front_cover",
+        "label": "moving_knuckle_0",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005643677375677408,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__moving_leaf_0",
+        "link": "front_cover",
+        "label": "moving_leaf_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005549718064465839,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "front_cover__moving_knuckle_1",
+        "link": "front_cover",
+        "label": "moving_knuckle_1",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0005643677375677408,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "front_cover__moving_leaf_1",
+        "link": "front_cover",
+        "label": "moving_leaf_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.000554971806446585,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_tray__tray_side_0",
+        "link": "filter_tray",
+        "label": "tray_side_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00454188926395885,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_tray__tray_side_1",
+        "link": "filter_tray",
+        "label": "tray_side_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00454188926395885,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_tray__tray_rear_rail",
+        "link": "filter_tray",
+        "label": "tray_rear_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009230291084819594,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_tray__tray_front_rail",
+        "link": "filter_tray",
+        "label": "tray_front_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.009230291084819599,
+        "motion": "slider",
+        "tiny": true
+      },
+      {
+        "group_id": "filter_tray__filter_mesh",
+        "link": "filter_tray",
+        "label": "filter_mesh",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/washable_filter_mesh.obj"
+        ],
+        "n_faces": 119084,
+        "area_frac": 0.02879158847150009,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "filter_tray__tray_pull_lip",
+        "link": "filter_tray",
+        "label": "tray_pull_lip",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.004541889263958848,
+        "motion": "slider",
+        "tiny": true
+      }
+    ]
+  }
+}

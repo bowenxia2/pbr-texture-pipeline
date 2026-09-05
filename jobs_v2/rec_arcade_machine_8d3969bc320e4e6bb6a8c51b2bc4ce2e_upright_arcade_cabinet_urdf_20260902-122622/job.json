@@ -1,0 +1,413 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e_upright_arcade_cabinet_urdf_20260902-122622",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e/model.urdf",
+  "created": "2026-09-02T12:26:22",
+  "updated": "2026-09-02T13:24:32",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 25,
+        "n_tiny": 20
+      },
+      "seed": null,
+      "started": "2026-09-02T12:27:01",
+      "finished": "2026-09-02T12:27:02",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "wood on the cabinet body; painted metal on the top edge; plastic on the coin slot; painted metal on the side panel; painted metal on the base; painted metal on the legs",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T12:27:02",
+      "finished": "2026-09-02T12:33:18",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e_upright_arcade_cabinet_urdf_20260902-122622/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T12:33:18",
+      "finished": "2026-09-02T13:08:25",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 25,
+            "n_total": 25,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e_upright_arcade_cabinet_urdf_20260902-122622/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T13:08:27",
+      "finished": "2026-09-02T13:24:32",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_arcade_machine_8d3969bc320e4e6bb6a8c51b2bc4ce2e/model.urdf",
+    "category": "upright arcade cabinet",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.39,
+        -0.46,
+        0.0
+      ],
+      "max": [
+        0.39,
+        0.18636669064837577,
+        1.74
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "body__left_side",
+        "link": "body",
+        "label": "left_side",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/left_side.obj"
+        ],
+        "n_faces": 40,
+        "area_frac": 0.14648516635143508,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__right_side",
+        "link": "body",
+        "label": "right_side",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/right_side.obj"
+        ],
+        "n_faces": 40,
+        "area_frac": 0.14648516635143508,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__coin_panel",
+        "link": "body",
+        "label": "coin_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/coin_panel.obj"
+        ],
+        "n_faces": 52,
+        "area_frac": 0.010557936178010652,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__front_base",
+        "link": "body",
+        "label": "front_base",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01295888806504152,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__tray_side_0",
+        "link": "body",
+        "label": "tray_side_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0036904526528505946,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__tray_side_1",
+        "link": "body",
+        "label": "tray_side_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0036904526528505946,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__mid_rail",
+        "link": "body",
+        "label": "mid_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.013089027404516874,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__door_stile_0",
+        "link": "body",
+        "label": "door_stile_0",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01066463004901655,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__door_stile_1",
+        "link": "body",
+        "label": "door_stile_1",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01066463004901655,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__front_top",
+        "link": "body",
+        "label": "front_top",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03872647728116085,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__tray_surround",
+        "link": "body",
+        "label": "tray_surround",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tray_surround.obj"
+        ],
+        "n_faces": 32,
+        "area_frac": 0.005306491030252069,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__control_apron",
+        "link": "body",
+        "label": "control_apron",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.017904182965104837,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__control_deck",
+        "link": "body",
+        "label": "control_deck",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.04239756193831926,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__monitor_frame",
+        "link": "body",
+        "label": "monitor_frame",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/monitor_frame.obj"
+        ],
+        "n_faces": 32,
+        "area_frac": 0.039442718519228655,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "body__monitor_mount",
+        "link": "body",
+        "label": "monitor_mount",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.058103987076461784,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__screen_glass",
+        "link": "body",
+        "label": "screen_glass",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.03497112485327162,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__marquee_face",
+        "link": "body",
+        "label": "marquee_face",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.030918116912639862,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__roof",
+        "link": "body",
+        "label": "roof",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0361236904916538,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_lower",
+        "link": "body",
+        "label": "rear_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.1272212281243989,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__rear_upper",
+        "link": "body",
+        "label": "rear_upper",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.09598778665031486,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "body__floor",
+        "link": "body",
+        "label": "floor",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.06605573857098436,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "service_door__service_panel",
+        "link": "service_door",
+        "label": "service_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/service_door.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.044301741725316306,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "service_door__service_handle",
+        "link": "service_door",
+        "label": "service_handle",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0014257563144610167,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "tray_flap__tray_panel",
+        "link": "tray_flap",
+        "label": "tray_panel",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tray_flap.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0023207615890773925,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "tray_flap__tray_pull",
+        "link": "tray_flap",
+        "label": "tray_pull",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0005062862031808658,
+        "motion": "hinge",
+        "tiny": true
+      }
+    ]
+  }
+}

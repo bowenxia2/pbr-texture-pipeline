@@ -1,0 +1,85 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 9019375,
+  "groups": {
+    "body__shell": {
+      "texture_size": 1024,
+      "n_faces": 7332,
+      "texels": 778329,
+      "field_voxels": 776539
+    },
+    "scanner_glass__glass": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59369,
+      "field_voxels": 59369
+    },
+    "lid_mount__hinge_pad": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57390,
+      "field_voxels": 21704
+    },
+    "lid__lid_shell": {
+      "texture_size": 1024,
+      "n_faces": 96,
+      "texels": 715198,
+      "field_voxels": 712306
+    },
+    "adf_lid__adf_shell": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 730302,
+      "field_voxels": 556431
+    },
+    "cassette__tray_shell": {
+      "texture_size": 1024,
+      "n_faces": 60,
+      "texels": 754144,
+      "field_voxels": 753724
+    },
+    "tray_flap__flap_panel": {
+      "texture_size": 1024,
+      "n_faces": 28,
+      "texels": 896202,
+      "field_voxels": 189966
+    },
+    "dial__dial_knob": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 692871,
+      "field_voxels": 15456
+    },
+    "button_0__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55584,
+      "field_voxels": 3778
+    },
+    "button_1__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55584,
+      "field_voxels": 3778
+    },
+    "button_2__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55584,
+      "field_voxels": 3778
+    },
+    "button_3__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55584,
+      "field_voxels": 3860
+    },
+    "button_4__button_cap": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 55584,
+      "field_voxels": 3778
+    }
+  }
+}

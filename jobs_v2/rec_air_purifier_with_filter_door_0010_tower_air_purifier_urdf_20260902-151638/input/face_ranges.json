@@ -1,0 +1,69 @@
+{
+  "group_order": [
+    "body__tower_shell",
+    "body__base_ring",
+    "body__top_cap",
+    "body__top_vent",
+    "body__panel_seat",
+    "body__filter_screen",
+    "body__control_display",
+    "body__hinge_jamb",
+    "front_panel__door_shell",
+    "front_panel__door_grip",
+    "front_panel__hinge_leaf"
+  ],
+  "face_ranges": {
+    "body__tower_shell": [
+      0,
+      128
+    ],
+    "body__base_ring": [
+      128,
+      256
+    ],
+    "body__top_cap": [
+      256,
+      384
+    ],
+    "body__top_vent": [
+      384,
+      512
+    ],
+    "body__panel_seat": [
+      512,
+      524
+    ],
+    "body__filter_screen": [
+      524,
+      536
+    ],
+    "body__control_display": [
+      536,
+      548
+    ],
+    "body__hinge_jamb": [
+      548,
+      560
+    ],
+    "front_panel__door_shell": [
+      560,
+      572
+    ],
+    "front_panel__door_grip": [
+      572,
+      584
+    ],
+    "front_panel__hinge_leaf": [
+      584,
+      596
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.34
+    ],
+    "scale": 1.4705735294117646
+  }
+}

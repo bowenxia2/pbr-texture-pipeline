@@ -1,0 +1,54 @@
+{
+  "group_order": [
+    "link_0__frame-15",
+    "link_1__display_panel-11",
+    "link_1__shelf-16",
+    "link_1__shelf-17",
+    "link_1__other_leaf-19",
+    "link_1__handle-12",
+    "link_1__glass-13",
+    "link_1__door_frame-20"
+  ],
+  "face_ranges": {
+    "link_0__frame-15": [
+      0,
+      2660
+    ],
+    "link_1__display_panel-11": [
+      2660,
+      4222
+    ],
+    "link_1__shelf-16": [
+      4222,
+      4662
+    ],
+    "link_1__shelf-17": [
+      4662,
+      4718
+    ],
+    "link_1__other_leaf-19": [
+      4718,
+      44178
+    ],
+    "link_1__handle-12": [
+      44178,
+      44350
+    ],
+    "link_1__glass-13": [
+      44350,
+      44362
+    ],
+    "link_1__door_frame-20": [
+      44362,
+      45348
+    ]
+  },
+  "norm": {
+    "center": [
+      -0.016646999999999856,
+      0.007964500000000263,
+      0.02254799999999979
+    ],
+    "scale": 0.6727361529332933
+  }
+}

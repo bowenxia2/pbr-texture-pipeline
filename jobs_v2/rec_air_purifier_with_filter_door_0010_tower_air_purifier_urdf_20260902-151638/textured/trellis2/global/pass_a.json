@@ -1,0 +1,73 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 2764197,
+  "groups": {
+    "body__tower_shell": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 864839,
+      "field_voxels": 832555
+    },
+    "body__base_ring": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 685091,
+      "field_voxels": 296372
+    },
+    "body__top_cap": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 800937,
+      "field_voxels": 254189
+    },
+    "body__top_vent": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 619616,
+      "field_voxels": 87746
+    },
+    "body__panel_seat": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 56486,
+      "field_voxels": 56486
+    },
+    "body__filter_screen": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50147,
+      "field_voxels": 50147
+    },
+    "body__control_display": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52127,
+      "field_voxels": 18168
+    },
+    "body__hinge_jamb": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50172,
+      "field_voxels": 16090
+    },
+    "front_panel__door_shell": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46403,
+      "field_voxels": 46403
+    },
+    "front_panel__door_grip": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50555,
+      "field_voxels": 9578
+    },
+    "front_panel__hinge_leaf": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51241,
+      "field_voxels": 11071
+    }
+  }
+}

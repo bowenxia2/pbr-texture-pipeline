@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_0.png",
+        "ok": true,
+        "az": 275.0,
+        "el": 15.0,
+        "ro": 15.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_1.png",
+        "ok": true,
+        "az": 43.0,
+        "el": 16.0,
+        "ro": -18.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_2.png",
+        "ok": true,
+        "az": 181.0,
+        "el": 16.0,
+        "ro": 20.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_3.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 15.0,
+        "ro": -17.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_4.png",
+        "ok": true,
+        "az": 272.0,
+        "el": 15.0,
+        "ro": 16.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_5.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 15.0,
+        "ro": -17.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_6.png",
+        "ok": true,
+        "az": 179.0,
+        "el": 15.0,
+        "ro": 20.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/12085_dishwasher_urdf_20260826-232646/render/view_7.png",
+        "ok": true,
+        "az": 47.0,
+        "el": 16.0,
+        "ro": -18.0,
+        "alpha": 4.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 87.04826846957648,
+    "agreement_err_deg": 67.36293288260588,
+    "implied_front_deg": [
+      275.0,
+      88.0,
+      271.0,
+      91.0,
+      92.0,
+      181.0,
+      89.0,
+      2.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 67.4 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 2
+  }
+}

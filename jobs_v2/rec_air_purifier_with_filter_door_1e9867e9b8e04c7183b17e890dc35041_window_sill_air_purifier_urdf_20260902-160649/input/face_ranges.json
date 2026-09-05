@@ -1,0 +1,134 @@
+{
+  "group_order": [
+    "housing__housing_shell",
+    "housing__lower_guide_rail",
+    "housing__upper_guide_rail",
+    "housing__rubber_foot_0_0",
+    "housing__rubber_foot_0_1",
+    "housing__rubber_foot_1_0",
+    "housing__rubber_foot_1_1",
+    "housing__fixed_hinge_leaf_0",
+    "housing__fixed_hinge_leaf_1",
+    "housing__rear_window_gasket",
+    "lid__lid_shell",
+    "lid__top_service_grille",
+    "lid__moving_hinge_leaf_0",
+    "lid__hinge_barrel_0",
+    "lid__moving_hinge_leaf_1",
+    "lid__hinge_barrel_1",
+    "pre_filter__filter_face",
+    "pre_filter__top_filter_frame",
+    "pre_filter__bottom_filter_frame",
+    "pre_filter__filter_frame_0",
+    "pre_filter__filter_frame_1",
+    "pre_filter__lower_runner",
+    "pre_filter__upper_runner",
+    "pre_filter__pull_handle"
+  ],
+  "face_ranges": {
+    "housing__housing_shell": [
+      0,
+      560
+    ],
+    "housing__lower_guide_rail": [
+      560,
+      572
+    ],
+    "housing__upper_guide_rail": [
+      572,
+      584
+    ],
+    "housing__rubber_foot_0_0": [
+      584,
+      596
+    ],
+    "housing__rubber_foot_0_1": [
+      596,
+      608
+    ],
+    "housing__rubber_foot_1_0": [
+      608,
+      620
+    ],
+    "housing__rubber_foot_1_1": [
+      620,
+      632
+    ],
+    "housing__fixed_hinge_leaf_0": [
+      632,
+      644
+    ],
+    "housing__fixed_hinge_leaf_1": [
+      644,
+      656
+    ],
+    "housing__rear_window_gasket": [
+      656,
+      668
+    ],
+    "lid__lid_shell": [
+      668,
+      1192
+    ],
+    "lid__top_service_grille": [
+      1192,
+      4128
+    ],
+    "lid__moving_hinge_leaf_0": [
+      4128,
+      4140
+    ],
+    "lid__hinge_barrel_0": [
+      4140,
+      4268
+    ],
+    "lid__moving_hinge_leaf_1": [
+      4268,
+      4280
+    ],
+    "lid__hinge_barrel_1": [
+      4280,
+      4408
+    ],
+    "pre_filter__filter_face": [
+      4408,
+      7272
+    ],
+    "pre_filter__top_filter_frame": [
+      7272,
+      7284
+    ],
+    "pre_filter__bottom_filter_frame": [
+      7284,
+      7296
+    ],
+    "pre_filter__filter_frame_0": [
+      7296,
+      7308
+    ],
+    "pre_filter__filter_frame_1": [
+      7308,
+      7320
+    ],
+    "pre_filter__lower_runner": [
+      7320,
+      7332
+    ],
+    "pre_filter__upper_runner": [
+      7332,
+      7344
+    ],
+    "pre_filter__pull_handle": [
+      7344,
+      7356
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      -0.0059999999999999915,
+      0.08374999999999999
+    ],
+    "scale": 1.2195
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 712223,
+  "groups": {
+    "base_frame__base_spine": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 59202,
+      "field_voxels": 42163
+    },
+    "base_frame__left_tread": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54478,
+      "field_voxels": 30456
+    },
+    "base_frame__right_tread": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54478,
+      "field_voxels": 30441
+    },
+    "base_frame__pedestal": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53279,
+      "field_voxels": 34072
+    },
+    "base_frame__barrel_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 787305,
+      "field_voxels": 22663
+    },
+    "base_frame__barrel_shell": {
+      "texture_size": 1024,
+      "n_faces": 672,
+      "texels": 673691,
+      "field_voxels": 223425
+    },
+    "base_frame__top_bushing": {
+      "texture_size": 1024,
+      "n_faces": 448,
+      "texels": 683888,
+      "field_voxels": 9192
+    },
+    "base_frame__stop_pad_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51712,
+      "field_voxels": 750
+    },
+    "base_frame__stop_pad_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51712,
+      "field_voxels": 750
+    },
+    "base_frame__gauge_bracket": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52676,
+      "field_voxels": 12544
+    },
+    "base_frame__gauge_shell": {
+      "texture_size": 1024,
+      "n_faces": 448,
+      "texels": 500083,
+      "field_voxels": 27402
+    },
+    "base_frame__gauge_back": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 591915,
+      "field_voxels": 14502
+    },
+    "base_frame__gauge_face": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 621417,
+      "field_voxels": 13941
+    },
+    "base_frame__pivot_post": {
+      "texture_size": 256,
+      "n_faces": 128,
+      "texels": 24669,
+      "field_voxels": 170
+    },
+    "base_frame__gauge_lens": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 585104,
+      "field_voxels": 15286
+    },
+    "base_frame__hose_outlet_block": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 46414,
+      "field_voxels": 2414
+    },
+    "base_frame__hose_support": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53392,
+      "field_voxels": 3554
+    },
+    "base_frame__hose_coupler": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 707853,
+      "field_voxels": 2414
+    },
+    "base_frame__hose": {
+      "texture_size": 1024,
+      "n_faces": 3924,
+      "texels": 267514,
+      "field_voxels": 32128
+    },
+    "base_frame__hose_head": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 729043,
+      "field_voxels": 3483
+    },
+    "base_frame__clip_back": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58822,
+      "field_voxels": 5836
+    },
+    "base_frame__clip_upper": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54656,
+      "field_voxels": 1638
+    },
+    "base_frame__clip_lower": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54656,
+      "field_voxels": 1638
+    },
+    "handle_assembly__rod": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 722149,
+      "field_voxels": 44237
+    },
+    "handle_assembly__guide_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 763119,
+      "field_voxels": 3972
+    },
+    "handle_assembly__handle_block": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51327,
+      "field_voxels": 8000
+    },
+    "handle_assembly__crossbar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 764406,
+      "field_voxels": 23856
+    },
+    "handle_assembly__rod_collar": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 753431,
+      "field_voxels": 3398
+    },
+    "grip__grip_sleeve": {
+      "texture_size": 1024,
+      "n_faces": 448,
+      "texels": 728943,
+      "field_voxels": 31360
+    },
+    "grip__grip_body": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57755,
+      "field_voxels": 19899
+    },
+    "needle__pivot": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 543444,
+      "field_voxels": 368
+    },
+    "needle__pointer": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 42697,
+      "field_voxels": 554
+    },
+    "needle__tail": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 33321,
+      "field_voxels": 138
+    }
+  }
+}

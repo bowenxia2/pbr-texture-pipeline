@@ -1,0 +1,517 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_purifier_with_filter_door_0009_outdoor_tower_air_purifier_urdf_20260903-151449",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0009/model.urdf",
+  "created": "2026-09-03T15:14:49",
+  "updated": "2026-09-03T15:51:28",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 33,
+        "n_tiny": 16
+      },
+      "seed": null,
+      "started": "2026-09-03T15:15:05",
+      "finished": "2026-09-03T15:15:07",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "plastic on the body; metal on the base; plastic on the top cap",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:15:07",
+      "finished": "2026-09-03T15:16:47",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0009_outdoor_tower_air_purifier_urdf_20260903-151449/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T15:16:47",
+      "finished": "2026-09-03T15:43:39",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 33,
+            "n_total": 33,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_purifier_with_filter_door_0009_outdoor_tower_air_purifier_urdf_20260903-151449/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T15:43:39",
+      "finished": "2026-09-03T15:51:28",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0009",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_purifier_with_filter_door_0009/model.urdf",
+    "category": "outdoor tower air purifier",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.17,
+        -0.14,
+        0.0
+      ],
+      "max": [
+        0.17,
+        0.14800000000000002,
+        1.158
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "tower_body__body_shell",
+        "link": "tower_body",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_body_shell.obj"
+        ],
+        "n_faces": 103568,
+        "area_frac": 0.345821243691679,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__base_plinth",
+        "link": "tower_body",
+        "label": "base_plinth",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_base_plinth.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.07044014460719725,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__foot_front_left",
+        "link": "tower_body",
+        "label": "foot_front_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002499441221558886,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__foot_front_right",
+        "link": "tower_body",
+        "label": "foot_front_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002499441221558886,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__foot_rear_left",
+        "link": "tower_body",
+        "label": "foot_rear_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002499441221558886,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__foot_rear_right",
+        "link": "tower_body",
+        "label": "foot_rear_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.002499441221558886,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__filter_cartridge",
+        "link": "tower_body",
+        "label": "filter_cartridge",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_filter_cartridge.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.07305888023296755,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__intake_cavity",
+        "link": "tower_body",
+        "label": "intake_cavity",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_intake_cavity.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.10252574933929631,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__status_window",
+        "link": "tower_body",
+        "label": "status_window",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_status_window.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.005255547318998414,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__status_window_bezel",
+        "link": "tower_body",
+        "label": "status_window_bezel",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.005290383539800782,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__top_deck",
+        "link": "tower_body",
+        "label": "top_deck",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_top_deck.obj"
+        ],
+        "n_faces": 264,
+        "area_frac": 0.040123299126084665,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__exhaust_cavity",
+        "link": "tower_body",
+        "label": "exhaust_cavity",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.01762256629947302,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__exhaust_grille",
+        "link": "tower_body",
+        "label": "exhaust_grille",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_exhaust_grille.obj"
+        ],
+        "n_faces": 756,
+        "area_frac": 0.009927232696689188,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__exhaust_grille_seat",
+        "link": "tower_body",
+        "label": "exhaust_grille_seat",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_exhaust_grille_seat.obj"
+        ],
+        "n_faces": 264,
+        "area_frac": 0.018981616104324636,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__body_hinge_leaf_lower",
+        "link": "tower_body",
+        "label": "body_hinge_leaf_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0018959616784258735,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__body_hinge_mount_mid",
+        "link": "tower_body",
+        "label": "body_hinge_mount_mid",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0018959616784258756,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__body_hinge_leaf_upper",
+        "link": "tower_body",
+        "label": "body_hinge_leaf_upper",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0018959616784258756,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__hood_post_front_left",
+        "link": "tower_body",
+        "label": "hood_post_front_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00120454998629344,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__hood_post_front_right",
+        "link": "tower_body",
+        "label": "hood_post_front_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00120454998629344,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__hood_post_rear_left",
+        "link": "tower_body",
+        "label": "hood_post_rear_left",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00120454998629344,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__hood_post_rear_right",
+        "link": "tower_body",
+        "label": "hood_post_rear_right",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00120454998629344,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "tower_body__top_hood",
+        "link": "tower_body",
+        "label": "top_hood",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_top_hood.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.04148872179488552,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__body_hinge_lower",
+        "link": "tower_body",
+        "label": "body_hinge_lower",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0012011176932653729,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "tower_body__body_hinge_upper",
+        "link": "tower_body",
+        "label": "body_hinge_upper",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0012011176932653742,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_frame",
+        "link": "intake_door",
+        "label": "door_frame",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_intake_door_frame.obj"
+        ],
+        "n_faces": 264,
+        "area_frac": 0.17632732904579837,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_grille",
+        "link": "intake_door",
+        "label": "door_grille",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_intake_door_grille.obj"
+        ],
+        "n_faces": 2196,
+        "area_frac": 0.05577045848039316,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_hinge_leaf_lower",
+        "link": "intake_door",
+        "label": "door_hinge_leaf_lower",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001797188579549811,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "intake_door__door_hinge_leaf_mid",
+        "link": "intake_door",
+        "label": "door_hinge_leaf_mid",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.0017971885795498113,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "intake_door__door_hinge_leaf_upper",
+        "link": "intake_door",
+        "label": "door_hinge_leaf_upper",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.001797188579549811,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "intake_door__door_handle",
+        "link": "intake_door",
+        "label": "door_handle",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/tower_door_handle.obj"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.002745570453015884,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_knuckle_lower",
+        "link": "intake_door",
+        "label": "door_knuckle_lower",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0021078687591763686,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_knuckle_mid",
+        "link": "intake_door",
+        "label": "door_knuckle_mid",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0021078687591763686,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "intake_door__door_knuckle_upper",
+        "link": "intake_door",
+        "label": "door_knuckle_upper",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.0021078687591763686,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

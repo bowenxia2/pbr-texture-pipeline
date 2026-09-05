@@ -132,7 +132,7 @@ def upload_urdf(file_paths: Optional[list]):
 
 # --- Tab 1b: Enhance (VLM + ImageEdit) ---------------------------------------
 def run_enhance(job_id: str):
-    """Run Stage V (VLM) then Stage E (ImageEdit) on the front panel.
+    """Run Stage V (VLM) then Stage E (ImageEdit or ImageGen) on the front panel.
     Returns (materials_text, enhanced_gallery, status)."""
     import traceback
 
@@ -147,7 +147,11 @@ def run_enhance(job_id: str):
     try:
         job.start("vlm")
         vlm_info = AS.vlm(job)
-        job.finish("vlm", params={"materials_preview": vlm_info["materials"][:200]})
+        classification = vlm_info.get("classification", "edit")
+        job.finish("vlm", params={
+            "materials_preview": vlm_info["materials"][:200],
+            "classification": classification,
+        })
         materials = vlm_info["materials"]
     except Exception as e:  # noqa: BLE001
         job.fail("vlm", traceback.format_exc())
@@ -156,17 +160,24 @@ def run_enhance(job_id: str):
     try:
         job.start("imageedit")
         edit_info = AS.imageedit(job)
-        job.finish("imageedit", params={"enhanced": edit_info["enhanced"]})
+        path_taken = edit_info.get("path", classification)
+        job.finish("imageedit", params={
+            "enhanced": edit_info["enhanced"],
+            "path": path_taken,
+        })
     except Exception as e:  # noqa: BLE001
         job.fail("imageedit", traceback.format_exc())
-        return materials, [], f"VLM done, but ImageEdit failed: {e}"
+        return materials, [], f"VLM done, but Stage E failed: {e}"
 
     gallery = []
     if job.render_front_white().is_file():
         gallery.append((str(job.render_front_white()), "Original"))
     if job.enhanced_view(0).is_file():
-        gallery.append((str(job.enhanced_view(0)), "Enhanced"))
-    return materials, gallery, f"Enhancement done. Materials: {materials[:100]}..."
+        label = "Generated" if path_taken == "generate" else "Enhanced"
+        gallery.append((str(job.enhanced_view(0)), label))
+    return materials, gallery, (
+        f"Done ({path_taken} path). Materials: {materials[:100]}..."
+    )
 
 
 # --- Tab 2: Texture & Assembly -----------------------------------------------

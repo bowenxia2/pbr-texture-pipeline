@@ -1,0 +1,174 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2_remote_weapon_station_urdf_20260903-105429",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2/model.urdf",
+  "created": "2026-09-03T10:54:29",
+  "updated": "2026-09-03T11:31:07",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 3,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-03T10:54:41",
+      "finished": "2026-09-03T10:54:42",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "brushed aluminum on the main body; matte black rubber on the base; tempered glass on the top cover; chrome-plated metal on the support legs",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:54:44",
+      "finished": "2026-09-03T10:56:17",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2_remote_weapon_station_urdf_20260903-105429/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:56:17",
+      "finished": "2026-09-03T11:22:57",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 3,
+            "n_total": 3,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2_remote_weapon_station_urdf_20260903-105429/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T11:22:58",
+      "finished": "2026-09-03T11:31:07",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-realistic-highly-detailed-remote-weapon-statio_20260319_120024_321719_84124fc2/model.urdf",
+    "category": "remote weapon station",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.24,
+        -0.24,
+        0.0
+      ],
+      "max": [
+        0.8325000881566357,
+        0.24,
+        0.5499367149845266
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "mount_base",
+        "link": "mount_base",
+        "label": "mount_base",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 1608,
+        "area_frac": 0.4245182392209551,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "turret_housing",
+        "link": "turret_housing",
+        "label": "turret_housing",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "assets/meshes/rws_armored_housing.obj",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 1444,
+        "area_frac": 0.31111764276367554,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "weapon_cradle",
+        "link": "weapon_cradle",
+        "label": "weapon_cradle",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>",
+          "assets/meshes/rws_cradle_yoke.obj",
+          "assets/meshes/rws_cradle_yoke.obj",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "<box>",
+          "assets/meshes/rws_feed_conduit.obj",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>",
+          "<cylinder>"
+        ],
+        "n_faces": 2160,
+        "area_frac": 0.26436411801536924,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

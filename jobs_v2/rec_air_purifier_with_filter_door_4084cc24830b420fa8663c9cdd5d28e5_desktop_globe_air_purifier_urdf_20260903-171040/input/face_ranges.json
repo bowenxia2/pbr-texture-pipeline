@@ -1,0 +1,134 @@
+{
+  "group_order": [
+    "base__bottom_disc",
+    "base__base_skirt",
+    "base__left_skirt_wall",
+    "base__right_skirt_wall",
+    "base__left_front_cheek",
+    "base__right_front_cheek",
+    "base__top_plate",
+    "base__neck_pad",
+    "base__slot_jamb_left",
+    "base__slot_jamb_right",
+    "base__slot_header",
+    "base__slot_sill",
+    "lower_housing__lower_shell",
+    "lower_housing__support_neck",
+    "lower_housing__neck_collar",
+    "lower_housing__intake_band_upper",
+    "lower_housing__intake_band_lower",
+    "top_cap__upper_shell",
+    "top_cap__outlet_shroud",
+    "top_cap__outlet_grille",
+    "top_cap__top_pivot_cap",
+    "filter_drawer__cartridge_body",
+    "filter_drawer__front_panel",
+    "filter_drawer__pull_handle"
+  ],
+  "face_ranges": {
+    "base__bottom_disc": [
+      0,
+      128
+    ],
+    "base__base_skirt": [
+      128,
+      140
+    ],
+    "base__left_skirt_wall": [
+      140,
+      152
+    ],
+    "base__right_skirt_wall": [
+      152,
+      164
+    ],
+    "base__left_front_cheek": [
+      164,
+      176
+    ],
+    "base__right_front_cheek": [
+      176,
+      188
+    ],
+    "base__top_plate": [
+      188,
+      316
+    ],
+    "base__neck_pad": [
+      316,
+      444
+    ],
+    "base__slot_jamb_left": [
+      444,
+      456
+    ],
+    "base__slot_jamb_right": [
+      456,
+      468
+    ],
+    "base__slot_header": [
+      468,
+      480
+    ],
+    "base__slot_sill": [
+      480,
+      492
+    ],
+    "lower_housing__lower_shell": [
+      492,
+      2220
+    ],
+    "lower_housing__support_neck": [
+      2220,
+      2348
+    ],
+    "lower_housing__neck_collar": [
+      2348,
+      2476
+    ],
+    "lower_housing__intake_band_upper": [
+      2476,
+      4492
+    ],
+    "lower_housing__intake_band_lower": [
+      4492,
+      6220
+    ],
+    "top_cap__upper_shell": [
+      6220,
+      8236
+    ],
+    "top_cap__outlet_shroud": [
+      8236,
+      8364
+    ],
+    "top_cap__outlet_grille": [
+      8364,
+      8492
+    ],
+    "top_cap__top_pivot_cap": [
+      8492,
+      8620
+    ],
+    "filter_drawer__cartridge_body": [
+      8620,
+      8632
+    ],
+    "filter_drawer__front_panel": [
+      8632,
+      8644
+    ],
+    "filter_drawer__pull_handle": [
+      8644,
+      8656
+    ]
+  },
+  "norm": {
+    "center": [
+      6.61176614985548e-08,
+      0.0020000000000000018,
+      0.20650000000000002
+    ],
+    "scale": 2.421283292978208
+  }
+}

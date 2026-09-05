@@ -1,0 +1,119 @@
+{
+  "group_order": [
+    "panel__fascia",
+    "panel__plenum",
+    "panel__grille_face",
+    "panel__mount_frame",
+    "flap_0__barrel",
+    "flap_0__blade",
+    "flap_0__rib_0",
+    "flap_0__rib_1",
+    "flap_1__barrel",
+    "flap_1__blade",
+    "flap_1__rib_0",
+    "flap_1__rib_1",
+    "flap_2__barrel",
+    "flap_2__blade",
+    "flap_2__rib_0",
+    "flap_2__rib_1",
+    "flap_3__barrel",
+    "flap_3__blade",
+    "flap_3__rib_0",
+    "flap_3__rib_1",
+    "selector_dial__dial_body"
+  ],
+  "face_ranges": {
+    "panel__fascia": [
+      0,
+      604
+    ],
+    "panel__plenum": [
+      604,
+      616
+    ],
+    "panel__grille_face": [
+      616,
+      9516
+    ],
+    "panel__mount_frame": [
+      9516,
+      9528
+    ],
+    "flap_0__barrel": [
+      9528,
+      9656
+    ],
+    "flap_0__blade": [
+      9656,
+      9668
+    ],
+    "flap_0__rib_0": [
+      9668,
+      9680
+    ],
+    "flap_0__rib_1": [
+      9680,
+      9692
+    ],
+    "flap_1__barrel": [
+      9692,
+      9820
+    ],
+    "flap_1__blade": [
+      9820,
+      9832
+    ],
+    "flap_1__rib_0": [
+      9832,
+      9844
+    ],
+    "flap_1__rib_1": [
+      9844,
+      9856
+    ],
+    "flap_2__barrel": [
+      9856,
+      9984
+    ],
+    "flap_2__blade": [
+      9984,
+      9996
+    ],
+    "flap_2__rib_0": [
+      9996,
+      10008
+    ],
+    "flap_2__rib_1": [
+      10008,
+      10020
+    ],
+    "flap_3__barrel": [
+      10020,
+      10148
+    ],
+    "flap_3__blade": [
+      10148,
+      10160
+    ],
+    "flap_3__rib_0": [
+      10160,
+      10172
+    ],
+    "flap_3__rib_1": [
+      10172,
+      10184
+    ],
+    "selector_dial__dial_body": [
+      10184,
+      12940
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.0,
+      0.10000000000000002
+    ],
+    "scale": 1.0526210526315791
+  }
+}

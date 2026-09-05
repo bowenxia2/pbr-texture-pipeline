@@ -1,0 +1,403 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="bicycle_track_pump">
+	<material name="steel">
+		<color rgba="0.67 0.69 0.72 1" />
+	</material>
+	<material name="dark_steel">
+		<color rgba="0.24 0.25 0.27 1" />
+	</material>
+	<material name="black_rubber">
+		<color rgba="0.08 0.08 0.09 1" />
+	</material>
+	<material name="matte_black">
+		<color rgba="0.12 0.12 0.13 1" />
+	</material>
+	<material name="dial_white">
+		<color rgba="0.96 0.96 0.94 1" />
+	</material>
+	<material name="lens_clear">
+		<color rgba="0.82 0.88 0.92 0.28" />
+	</material>
+	<material name="signal_red">
+		<color rgba="0.8 0.13 0.11 1" />
+	</material>
+	<link name="frame">
+		<collision name="frame_core">
+			<geometry>
+				<mesh filename="assets/meshes/track_pump_frame_core.obj" />
+			</geometry>
+		</collision>
+		<collision name="gauge_boss">
+			<origin xyz="0 0.02799 0.115" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.009" length="0.012" />
+			</geometry>
+		</collision>
+		<collision name="foot_left">
+			<origin xyz="-0.095 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.13 0.13 0.028" />
+			</geometry>
+		</collision>
+		<collision name="foot_right">
+			<origin xyz="0.095 0 0.014" rpy="0 0 0" />
+			<geometry>
+				<box size="0.13 0.13 0.028" />
+			</geometry>
+		</collision>
+		<collision name="bridge">
+			<origin xyz="0 0 0.02" rpy="0 0 0" />
+			<geometry>
+				<box size="0.12 0.1 0.04" />
+			</geometry>
+		</collision>
+		<collision name="tread_left">
+			<origin xyz="-0.095 0 0.031" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1 0.095 0.006" />
+			</geometry>
+		</collision>
+		<collision name="tread_right">
+			<origin xyz="0.095 0 0.031" rpy="0 0 0" />
+			<geometry>
+				<box size="0.1 0.095 0.006" />
+			</geometry>
+		</collision>
+		<collision name="hose">
+			<geometry>
+				<mesh filename="assets/meshes/track_pump_hose.obj" />
+			</geometry>
+		</collision>
+		<collision name="hose_dock">
+			<origin xyz="0.098 -0.006 0.038" rpy="0 0 0" />
+			<geometry>
+				<box size="0.028 0.022 0.022" />
+			</geometry>
+		</collision>
+		<collision name="clip_mid">
+			<origin xyz="0.03 0.018 0.26" rpy="0 0 0" />
+			<geometry>
+				<box size="0.02 0.02 0.018" />
+			</geometry>
+		</collision>
+		<collision name="clip_top">
+			<origin xyz="0.028 0.021 0.58" rpy="0 0 0" />
+			<geometry>
+				<box size="0.02 0.022 0.018" />
+			</geometry>
+		</collision>
+		<visual name="frame__frame_core">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__frame_core.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__gauge_boss">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__gauge_boss.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__foot_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__foot_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__foot_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__foot_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__bridge.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__tread_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__tread_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__tread_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__tread_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__hose">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__hose.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__hose_dock">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__hose_dock.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__clip_mid">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__clip_mid.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__clip_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__clip_top.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="carriage">
+		<collision name="rod">
+			<origin xyz="0 0 -0.075" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.0075" length="0.47" />
+			</geometry>
+		</collision>
+		<collision name="stop_collar">
+			<origin xyz="0 0 0.02" rpy="0 0 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="yoke">
+			<origin xyz="0 0 0.075" rpy="0 0 0" />
+			<geometry>
+				<box size="0.032 0.024 0.055" />
+			</geometry>
+		</collision>
+		<collision name="crossbar">
+			<origin xyz="0 0 0.11" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.009" length="0.34" />
+			</geometry>
+		</collision>
+		<collision name="retainer_left">
+			<origin xyz="0.017 0 0.11" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="retainer_right">
+			<origin xyz="0.073 0 0.11" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.012" length="0.004" />
+			</geometry>
+		</collision>
+		<collision name="handle_left">
+			<origin xyz="-0.135 0 0.11" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.12" />
+			</geometry>
+		</collision>
+		<collision name="handle_right">
+			<origin xyz="0.135 0 0.11" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.018" length="0.12" />
+			</geometry>
+		</collision>
+		<visual name="carriage__rod">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__rod.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__stop_collar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__stop_collar.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__yoke">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__yoke.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__crossbar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__crossbar.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__retainer_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__retainer_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__retainer_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__retainer_right.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__handle_left">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__handle_left.glb" />
+			</geometry>
+		</visual>
+		<visual name="carriage__handle_right">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/carriage__handle_right.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="grip">
+		<collision name="sleeve">
+			<geometry>
+				<mesh filename="assets/meshes/track_pump_grip_sleeve.obj" />
+			</geometry>
+		</collision>
+		<collision name="strap">
+			<origin xyz="0 0.02 -0.046" rpy="0 0 0" />
+			<geometry>
+				<box size="0.024 0.044 0.062" />
+			</geometry>
+		</collision>
+		<collision name="lower_bar">
+			<origin xyz="0 0.042 -0.087" rpy="0 1.5708 0" />
+			<geometry>
+				<cylinder radius="0.01" length="0.11" />
+			</geometry>
+		</collision>
+		<visual name="grip__sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__strap">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__strap.glb" />
+			</geometry>
+		</visual>
+		<visual name="grip__lower_bar">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/grip__lower_bar.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="gauge">
+		<collision name="shell">
+			<geometry>
+				<mesh filename="assets/meshes/track_pump_gauge_shell.obj" />
+			</geometry>
+		</collision>
+		<collision name="dial">
+			<origin xyz="0 -0.0085 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.036" length="0.001" />
+			</geometry>
+		</collision>
+		<collision name="lens">
+			<origin xyz="0 0.0085 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.036" length="0.001" />
+			</geometry>
+		</collision>
+		<collision name="stem">
+			<origin xyz="0 -0.0145 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.008" length="0.011" />
+			</geometry>
+		</collision>
+		<collision name="pivot">
+			<origin xyz="0 -0.006 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.0045" length="0.004" />
+			</geometry>
+		</collision>
+		<visual name="gauge__shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/gauge__shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="gauge__dial">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/gauge__dial.glb" />
+			</geometry>
+		</visual>
+		<visual name="gauge__lens">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/gauge__lens.glb" />
+			</geometry>
+		</visual>
+		<visual name="gauge__stem">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/gauge__stem.glb" />
+			</geometry>
+		</visual>
+		<visual name="gauge__pivot">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/gauge__pivot.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="needle">
+		<collision name="pointer">
+			<origin xyz="0 0 0.015" rpy="0 0 0" />
+			<geometry>
+				<box size="0.004 0.0012 0.03" />
+			</geometry>
+		</collision>
+		<collision name="hub">
+			<origin xyz="0 -0.002 0" rpy="1.5708 0 0" />
+			<geometry>
+				<cylinder radius="0.004" length="0.004" />
+			</geometry>
+		</collision>
+		<visual name="needle__pointer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__pointer.glb" />
+			</geometry>
+		</visual>
+		<visual name="needle__hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/needle__hub.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="pump_slide" type="prismatic">
+		<origin xyz="0 0 0.6" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="carriage" />
+		<axis xyz="0 0 1" />
+		<limit effort="260" velocity="1.2" lower="0" upper="0.23" />
+	</joint>
+	<joint name="grip_spin" type="continuous">
+		<origin xyz="0.045 0 0.11" rpy="0 0 0" />
+		<parent link="carriage" />
+		<child link="grip" />
+		<axis xyz="1 0 0" />
+		<limit effort="4" velocity="8" />
+	</joint>
+	<joint name="frame_to_gauge" type="fixed">
+		<origin xyz="0 0.05399 0.115" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="gauge" />
+	</joint>
+	<joint name="needle_sweep" type="revolute">
+		<parent link="gauge" />
+		<child link="needle" />
+		<axis xyz="0 1 0" />
+		<limit effort="0.2" velocity="8" lower="-1.1" upper="1.1" />
+	</joint>
+</robot>

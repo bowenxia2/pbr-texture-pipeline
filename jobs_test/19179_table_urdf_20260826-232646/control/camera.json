@@ -1,0 +1,107 @@
+{
+  "repose_applied": true,
+  "R": [
+    [
+      6.123233995736766e-17,
+      -1.0,
+      0.0
+    ],
+    [
+      1.0,
+      6.123233995736766e-17,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "orient": {
+    "fallback_panel": 2,
+    "panels": [
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_0.png",
+        "ok": true,
+        "az": 180.0,
+        "el": 12.0,
+        "ro": 13.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_1.png",
+        "ok": true,
+        "az": 42.0,
+        "el": 14.0,
+        "ro": -16.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_2.png",
+        "ok": true,
+        "az": 1.0,
+        "el": 12.0,
+        "ro": 15.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_3.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 15.0,
+        "ro": -17.0,
+        "alpha": 0.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_4.png",
+        "ok": true,
+        "az": 181.0,
+        "el": 14.0,
+        "ro": 13.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_5.png",
+        "ok": true,
+        "az": 228.0,
+        "el": 13.0,
+        "ro": -17.0,
+        "alpha": 4.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_6.png",
+        "ok": true,
+        "az": 180.0,
+        "el": 12.0,
+        "ro": 0.0,
+        "alpha": 2.0
+      },
+      {
+        "image": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_test/19179_table_urdf_20260826-232646/render/view_7.png",
+        "ok": true,
+        "az": 316.0,
+        "el": 15.0,
+        "ro": -17.0,
+        "alpha": 4.0
+      }
+    ],
+    "sign": 1,
+    "front_deg": 90.25125278950276,
+    "agreement_err_deg": 45.75,
+    "implied_front_deg": [
+      180.0,
+      87.0,
+      91.0,
+      91.0,
+      1.0,
+      93.0,
+      90.0,
+      271.0
+    ],
+    "front_panel": 2,
+    "ok": false,
+    "reason": "agreement 45.8 deg > 30.0 deg",
+    "method": "fallback",
+    "predicted_panel": 2
+  }
+}

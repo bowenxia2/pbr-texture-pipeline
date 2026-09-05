@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="air_bike">
+	<material name="frame_black">
+		<color rgba="0.1 0.1 0.11 1" />
+	</material>
+	<material name="brushed_steel">
+		<color rgba="0.64 0.66 0.69 1" />
+	</material>
+	<material name="rubber_black">
+		<color rgba="0.05 0.05 0.05 1" />
+	</material>
+	<material name="vinyl_black">
+		<color rgba="0.15 0.15 0.16 1" />
+	</material>
+	<material name="oxide_red">
+		<color rgba="0.52 0.11 0.1 1" />
+	</material>
+	<link name="frame">
+		<inertial>
+			<origin xyz="0 -0.02 0.4" rpy="0 0 0" />
+			<mass value="45" />
+			<inertia ixx="5.9595" ixy="0" ixz="0" iyy="3.372" iyz="0" izz="4.0395" />
+		</inertial>
+		<visual name="frame__rear_stabilizer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_stabilizer.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_stabilizer">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_stabilizer.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__rear_floor_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__rear_floor_pad.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_floor_pad">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_floor_pad.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__left_floor_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__left_floor_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__right_floor_rail">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__right_floor_rail.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__seat_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__seat_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__down_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__down_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__top_tube">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__top_tube.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__front_mast">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__front_mast.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__left_rear_brace">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__left_rear_brace.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__right_rear_brace">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__right_rear_brace.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__left_front_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__left_front_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__right_front_strut">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__right_front_strut.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__bottom_bracket_shell">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__bottom_bracket_shell.glb" />
+			</geometry>
+		</visual>
+		<visual name="frame__fan_bridge">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/frame__fan_bridge.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="seat">
+		<inertial>
+			<origin xyz="0 0 0.18" rpy="0 0 0" />
+			<mass value="2.5" />
+			<inertia ixx="0.0328333" ixy="0" ixz="0" iyy="0.03075" iyz="0" izz="0.0260833" />
+		</inertial>
+		<visual name="seat__seatpost">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seatpost.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__seat_support_plate">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__seat_support_plate.glb" />
+			</geometry>
+		</visual>
+		<visual name="seat__saddle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/seat__saddle.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="fan_wheel">
+		<inertial>
+			<origin xyz="0 0 0" rpy="0 1.5708 0" />
+			<mass value="8" />
+			<inertia ixx="0.0898667" ixy="0" ixz="0" iyy="0.0898667" iyz="0" izz="0.1764" />
+		</inertial>
+		<visual name="fan_wheel__fan_rim">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_rim.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_mid_ring">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_mid_ring.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_hub">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_hub.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_4">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_4.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_5">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_5.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_6">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_6.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_7">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_7.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_8">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_8.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_9">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_9.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_10">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_10.glb" />
+			</geometry>
+		</visual>
+		<visual name="fan_wheel__fan_blade_11">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/fan_wheel__fan_blade_11.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="crank_assembly">
+		<inertial>
+			<mass value="4" />
+			<inertia ixx="0.048" ixy="0" ixz="0" iyy="0.0913333" iyz="0" izz="0.0529333" />
+		</inertial>
+		<visual name="crank_assembly__crank_axle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__crank_axle.glb" />
+			</geometry>
+		</visual>
+		<visual name="crank_assembly__left_spider">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__left_spider.glb" />
+			</geometry>
+		</visual>
+		<visual name="crank_assembly__right_spider">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__right_spider.glb" />
+			</geometry>
+		</visual>
+		<visual name="crank_assembly__drive_guard">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__drive_guard.glb" />
+			</geometry>
+		</visual>
+		<visual name="crank_assembly__left_crank_arm">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__left_crank_arm.glb" />
+			</geometry>
+		</visual>
+		<visual name="crank_assembly__right_crank_arm">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/crank_assembly__right_crank_arm.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="left_pedal">
+		<inertial>
+			<origin xyz="0.052 0 0" rpy="0 0 0" />
+			<mass value="0.25" />
+			<inertia ixx="0.000285417" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000385417" />
+		</inertial>
+		<visual name="left_pedal__left_spindle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_pedal__left_spindle.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_pedal__left_pedal_inner_cage">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_pedal__left_pedal_inner_cage.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_pedal__left_pedal_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_pedal__left_pedal_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_pedal__left_pedal_tread_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_pedal__left_pedal_tread_top.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_pedal__left_pedal_tread_bottom">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_pedal__left_pedal_tread_bottom.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="right_pedal">
+		<inertial>
+			<origin xyz="-0.052 0 0" rpy="0 0 0" />
+			<mass value="0.25" />
+			<inertia ixx="0.000285417" ixy="0" ixz="0" iyy="0.000166667" iyz="0" izz="0.000385417" />
+		</inertial>
+		<visual name="right_pedal__right_spindle">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_pedal__right_spindle.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_pedal__right_pedal_inner_cage">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_pedal__right_pedal_inner_cage.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_pedal__right_pedal_body">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_pedal__right_pedal_body.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_pedal__right_pedal_tread_top">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_pedal__right_pedal_tread_top.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_pedal__right_pedal_tread_bottom">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_pedal__right_pedal_tread_bottom.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="left_handlebar">
+		<inertial>
+			<origin xyz="0.02 -0.08 0.16" rpy="0 0 0" />
+			<mass value="2" />
+			<inertia ixx="0.102533" ixy="0" ixz="0" iyy="0.0929333" iyz="0" izz="0.0129333" />
+		</inertial>
+		<visual name="left_handlebar__left_bar_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_bar_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_bar_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_bar_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_bar_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_bar_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_bar_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_bar_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_upper_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_upper_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_upper_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_upper_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_pivot_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_pivot_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="left_handlebar__left_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/left_handlebar__left_grip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<link name="right_handlebar">
+		<inertial>
+			<origin xyz="-0.02 -0.08 0.16" rpy="0 0 0" />
+			<mass value="2" />
+			<inertia ixx="0.102533" ixy="0" ixz="0" iyy="0.0929333" iyz="0" izz="0.0129333" />
+		</inertial>
+		<visual name="right_handlebar__right_bar_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_bar_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_bar_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_bar_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_bar_2">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_bar_2.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_bar_3">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_bar_3.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_upper_0">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_upper_0.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_upper_1">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_upper_1.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_pivot_sleeve">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_pivot_sleeve.glb" />
+			</geometry>
+		</visual>
+		<visual name="right_handlebar__right_grip">
+			<origin xyz="0 0 0" rpy="0 0 0" />
+			<geometry>
+				<mesh filename="groups/right_handlebar__right_grip.glb" />
+			</geometry>
+		</visual>
+	</link>
+	<joint name="fan_spin" type="continuous">
+		<origin xyz="0 0.24 0.44" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="fan_wheel" />
+		<axis xyz="1 0 0" />
+		<limit effort="120" velocity="25" />
+	</joint>
+	<joint name="crank_spin" type="continuous">
+		<origin xyz="0 0 0.27" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="crank_assembly" />
+		<axis xyz="1 0 0" />
+		<limit effort="180" velocity="18" />
+	</joint>
+	<joint name="left_pedal_spin" type="continuous">
+		<origin xyz="0.16 0.03 -0.17" rpy="0 0 0" />
+		<parent link="crank_assembly" />
+		<child link="left_pedal" />
+		<axis xyz="1 0 0" />
+		<limit effort="25" velocity="20" />
+	</joint>
+	<joint name="right_pedal_spin" type="continuous">
+		<origin xyz="-0.16 -0.03 0.17" rpy="0 0 0" />
+		<parent link="crank_assembly" />
+		<child link="right_pedal" />
+		<axis xyz="1 0 0" />
+		<limit effort="25" velocity="20" />
+	</joint>
+	<joint name="left_handlebar_swing" type="revolute">
+		<origin xyz="0.16 0.24 0.44" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="left_handlebar" />
+		<axis xyz="1 0 0" />
+		<limit effort="70" velocity="2.5" lower="-0.44" upper="0.44" />
+	</joint>
+	<joint name="right_handlebar_swing" type="revolute">
+		<origin xyz="-0.16 0.24 0.44" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="right_handlebar" />
+		<axis xyz="1 0 0" />
+		<limit effort="70" velocity="2.5" lower="-0.44" upper="0.44" />
+	</joint>
+	<joint name="seat_mount" type="fixed">
+		<origin xyz="0 -0.12 0.66" rpy="0 0 0" />
+		<parent link="frame" />
+		<child link="seat" />
+	</joint>
+</robot>

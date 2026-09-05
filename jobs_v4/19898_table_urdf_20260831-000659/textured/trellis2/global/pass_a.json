@@ -1,0 +1,484 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 6201558,
+  "groups": {
+    "link_0__cabinet_door_surface-81": {
+      "texture_size": 1024,
+      "n_faces": 92,
+      "texels": 351168,
+      "field_voxels": 65338
+    },
+    "link_1__drawer_front-137": {
+      "texture_size": 1024,
+      "n_faces": 612,
+      "texels": 862697,
+      "field_voxels": 102507
+    },
+    "link_1__drawer_side-138": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 35590
+    },
+    "link_1__drawer_side-139": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 35590
+    },
+    "link_1__drawer_back-140": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 968004,
+      "field_voxels": 49120
+    },
+    "link_1__drawer_bottom-141": {
+      "texture_size": 1024,
+      "n_faces": 46,
+      "texels": 824127,
+      "field_voxels": 134298
+    },
+    "link_1__handle-136": {
+      "texture_size": 256,
+      "n_faces": 1566,
+      "texels": 26441,
+      "field_voxels": 1072
+    },
+    "link_2__drawer_front-130": {
+      "texture_size": 1024,
+      "n_faces": 642,
+      "texels": 863378,
+      "field_voxels": 101937
+    },
+    "link_2__drawer_side-131": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745641,
+      "field_voxels": 36016
+    },
+    "link_2__drawer_side-132": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 36016
+    },
+    "link_2__drawer_back-133": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 968004,
+      "field_voxels": 49712
+    },
+    "link_2__drawer_bottom-134": {
+      "texture_size": 1024,
+      "n_faces": 48,
+      "texels": 824127,
+      "field_voxels": 134056,
+      "bbox_warn": "bbox shrank 0.00000 (uv_unwrap welded sliver faces)"
+    },
+    "link_2__handle-129": {
+      "texture_size": 256,
+      "n_faces": 1534,
+      "texels": 25512,
+      "field_voxels": 1023
+    },
+    "link_3__drawer_front-123": {
+      "texture_size": 1024,
+      "n_faces": 642,
+      "texels": 853931,
+      "field_voxels": 101948
+    },
+    "link_3__drawer_side-124": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745641,
+      "field_voxels": 36016
+    },
+    "link_3__drawer_side-125": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 36016
+    },
+    "link_3__drawer_back-126": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 968004,
+      "field_voxels": 49712
+    },
+    "link_3__drawer_bottom-127": {
+      "texture_size": 1024,
+      "n_faces": 46,
+      "texels": 824127,
+      "field_voxels": 134056
+    },
+    "link_3__handle-122": {
+      "texture_size": 256,
+      "n_faces": 1536,
+      "texels": 24997,
+      "field_voxels": 1062
+    },
+    "link_4__drawer_front-120": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 641505,
+      "field_voxels": 61044
+    },
+    "link_4__handle-119": {
+      "texture_size": 256,
+      "n_faces": 1704,
+      "texels": 26739,
+      "field_voxels": 1112
+    },
+    "link_5__drawer_front-113": {
+      "texture_size": 1024,
+      "n_faces": 398,
+      "texels": 627997,
+      "field_voxels": 36842
+    },
+    "link_5__drawer_side-114": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745365,
+      "field_voxels": 36424
+    },
+    "link_5__drawer_side-115": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 36010
+    },
+    "link_5__drawer_back-116": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 820409,
+      "field_voxels": 21992
+    },
+    "link_5__drawer_bottom-117": {
+      "texture_size": 1024,
+      "n_faces": 48,
+      "texels": 775398,
+      "field_voxels": 61026
+    },
+    "link_5__handle-112": {
+      "texture_size": 256,
+      "n_faces": 1704,
+      "texels": 23296,
+      "field_voxels": 1149
+    },
+    "link_6__drawer_front-106": {
+      "texture_size": 1024,
+      "n_faces": 398,
+      "texels": 628414,
+      "field_voxels": 36543
+    },
+    "link_6__drawer_side-107": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745628,
+      "field_voxels": 36016
+    },
+    "link_6__drawer_side-108": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745365,
+      "field_voxels": 36432
+    },
+    "link_6__drawer_back-109": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 820409,
+      "field_voxels": 21992
+    },
+    "link_6__drawer_bottom-110": {
+      "texture_size": 1024,
+      "n_faces": 48,
+      "texels": 775398,
+      "field_voxels": 60505
+    },
+    "link_6__handle-105": {
+      "texture_size": 256,
+      "n_faces": 1704,
+      "texels": 23923,
+      "field_voxels": 1126
+    },
+    "link_7__drawer_front-99": {
+      "texture_size": 1024,
+      "n_faces": 398,
+      "texels": 624277,
+      "field_voxels": 36533
+    },
+    "link_7__drawer_side-100": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745641,
+      "field_voxels": 36016
+    },
+    "link_7__drawer_side-101": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 745365,
+      "field_voxels": 36432
+    },
+    "link_7__drawer_back-102": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 820409,
+      "field_voxels": 21992
+    },
+    "link_7__drawer_bottom-103": {
+      "texture_size": 1024,
+      "n_faces": 48,
+      "texels": 775410,
+      "field_voxels": 60505
+    },
+    "link_7__handle-98": {
+      "texture_size": 256,
+      "n_faces": 1704,
+      "texels": 23712,
+      "field_voxels": 1148
+    },
+    "link_8__foot-52": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 882299,
+      "field_voxels": 9974
+    },
+    "link_8__board-148": {
+      "texture_size": 1024,
+      "n_faces": 1128,
+      "texels": 670794,
+      "field_voxels": 524975
+    },
+    "link_8__other_leaf-147": {
+      "texture_size": 1024,
+      "n_faces": 120,
+      "texels": 730121,
+      "field_voxels": 265810
+    },
+    "link_8__other_leaf-145": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 814501,
+      "field_voxels": 13634
+    },
+    "link_8__other_leaf-146": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 837342,
+      "field_voxels": 13634
+    },
+    "link_8__vertical_side_panel-40": {
+      "texture_size": 1024,
+      "n_faces": 56,
+      "texels": 911142,
+      "field_voxels": 264192
+    },
+    "link_8__vertical_side_panel-41": {
+      "texture_size": 1024,
+      "n_faces": 136,
+      "texels": 907875,
+      "field_voxels": 264526
+    },
+    "link_8__vertical_side_panel-42": {
+      "texture_size": 1024,
+      "n_faces": 144,
+      "texels": 880577,
+      "field_voxels": 269149
+    },
+    "link_8__vertical_side_panel-43": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 904167,
+      "field_voxels": 261665
+    },
+    "link_8__bottom_panel-44": {
+      "texture_size": 1024,
+      "n_faces": 1152,
+      "texels": 731266,
+      "field_voxels": 516113
+    },
+    "link_8__foot-45": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 716459,
+      "field_voxels": 7394
+    },
+    "link_8__foot-46": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 882299,
+      "field_voxels": 9974
+    },
+    "link_8__foot-47": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 646557,
+      "field_voxels": 7394
+    },
+    "link_8__foot-48": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 711039,
+      "field_voxels": 7394
+    },
+    "link_8__foot-49": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 788351,
+      "field_voxels": 7394
+    },
+    "link_8__foot-50": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 646557,
+      "field_voxels": 7394
+    },
+    "link_8__foot-51": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 711039,
+      "field_voxels": 7394
+    },
+    "link_8__foot-53": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 716459,
+      "field_voxels": 7394
+    },
+    "link_8__foot-54": {
+      "texture_size": 1024,
+      "n_faces": 40,
+      "texels": 788351,
+      "field_voxels": 7394
+    },
+    "link_8__tabletop_connector-55": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 898294,
+      "field_voxels": 23504
+    },
+    "link_8__tabletop_connector-56": {
+      "texture_size": 1024,
+      "n_faces": 112,
+      "texels": 797191,
+      "field_voxels": 33937
+    },
+    "link_8__back_panel-65": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 996690,
+      "field_voxels": 262770
+    },
+    "link_8__back_panel-66": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 854026,
+      "field_voxels": 58884
+    },
+    "link_8__back_panel-67": {
+      "texture_size": 1024,
+      "n_faces": 420,
+      "texels": 922788,
+      "field_voxels": 279096
+    },
+    "link_8__vertical_divider_panel-68": {
+      "texture_size": 1024,
+      "n_faces": 144,
+      "texels": 856632,
+      "field_voxels": 259495
+    },
+    "link_8__vertical_front_panel-77": {
+      "texture_size": 1024,
+      "n_faces": 192,
+      "texels": 389502,
+      "field_voxels": 113895
+    },
+    "link_8__vertical_front_panel-78": {
+      "texture_size": 1024,
+      "n_faces": 312,
+      "texels": 393110,
+      "field_voxels": 118998
+    },
+    "link_8__other_leaf-80": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 920428,
+      "field_voxels": 74134
+    },
+    "link_8__back_panel-95": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 976465,
+      "field_voxels": 256324
+    },
+    "link_8__back_panel-96": {
+      "texture_size": 1024,
+      "n_faces": 24,
+      "texels": 923586,
+      "field_voxels": 129934
+    },
+    "link_8__back_panel-23": {
+      "texture_size": 1024,
+      "n_faces": 322,
+      "texels": 779970,
+      "field_voxels": 19405
+    },
+    "link_8__vertical_side_panel-24": {
+      "texture_size": 256,
+      "n_faces": 4,
+      "texels": 63504,
+      "field_voxels": 3626,
+      "bbox_warn": "bbox shrank 0.00000 (uv_unwrap welded sliver faces)"
+    },
+    "link_8__vertical_side_panel-25": {
+      "texture_size": 256,
+      "n_faces": 4,
+      "texels": 63504,
+      "field_voxels": 3626,
+      "bbox_warn": "bbox shrank 0.00000 (uv_unwrap welded sliver faces)"
+    },
+    "link_8__top_panel-26": {
+      "texture_size": 256,
+      "n_faces": 6,
+      "texels": 57588,
+      "field_voxels": 6122
+    },
+    "link_8__drawer_front-29": {
+      "texture_size": 1024,
+      "n_faces": 112,
+      "texels": 681079,
+      "field_voxels": 7248
+    },
+    "link_8__shelf-11": {
+      "texture_size": 256,
+      "n_faces": 18,
+      "texels": 59886,
+      "field_voxels": 9868
+    },
+    "link_8__vertical_side_panel-12": {
+      "texture_size": 1024,
+      "n_faces": 34,
+      "texels": 861691,
+      "field_voxels": 6869
+    },
+    "link_8__vertical_side_panel-13": {
+      "texture_size": 1024,
+      "n_faces": 38,
+      "texels": 822274,
+      "field_voxels": 7002
+    },
+    "link_8__top_panel-14": {
+      "texture_size": 1024,
+      "n_faces": 78,
+      "texels": 860555,
+      "field_voxels": 14196
+    },
+    "link_8__other_leaf-16": {
+      "texture_size": 256,
+      "n_faces": 16,
+      "texels": 57675,
+      "field_voxels": 11103
+    }
+  }
+}

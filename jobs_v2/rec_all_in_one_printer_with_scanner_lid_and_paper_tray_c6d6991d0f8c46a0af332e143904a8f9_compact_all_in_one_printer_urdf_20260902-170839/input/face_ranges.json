@@ -1,0 +1,149 @@
+{
+  "group_order": [
+    "body__body_shell",
+    "body__scanner_glass",
+    "body__display",
+    "body__lid_hinge_bar",
+    "lid__lid_top",
+    "lid__lid_front",
+    "lid__lid_side_0",
+    "lid__lid_side_1",
+    "lid__lid_rear",
+    "lid__lid_barrel",
+    "tray__tray_floor",
+    "tray__tray_front",
+    "tray__tray_rear",
+    "tray__tray_side_0",
+    "tray__tray_side_1",
+    "shelf__shelf_panel",
+    "shelf__shelf_side_0",
+    "shelf__shelf_side_1",
+    "shelf__shelf_front_lip",
+    "shelf__shelf_barrel",
+    "key_0__key_cap",
+    "key_1__key_cap",
+    "key_2__key_cap",
+    "key_3__key_cap",
+    "key_4__key_cap",
+    "key_5__key_cap",
+    "menu_dial__dial_cap"
+  ],
+  "face_ranges": {
+    "body__body_shell": [
+      0,
+      92
+    ],
+    "body__scanner_glass": [
+      92,
+      104
+    ],
+    "body__display": [
+      104,
+      116
+    ],
+    "body__lid_hinge_bar": [
+      116,
+      244
+    ],
+    "lid__lid_top": [
+      244,
+      256
+    ],
+    "lid__lid_front": [
+      256,
+      268
+    ],
+    "lid__lid_side_0": [
+      268,
+      280
+    ],
+    "lid__lid_side_1": [
+      280,
+      292
+    ],
+    "lid__lid_rear": [
+      292,
+      304
+    ],
+    "lid__lid_barrel": [
+      304,
+      432
+    ],
+    "tray__tray_floor": [
+      432,
+      444
+    ],
+    "tray__tray_front": [
+      444,
+      456
+    ],
+    "tray__tray_rear": [
+      456,
+      468
+    ],
+    "tray__tray_side_0": [
+      468,
+      480
+    ],
+    "tray__tray_side_1": [
+      480,
+      492
+    ],
+    "shelf__shelf_panel": [
+      492,
+      504
+    ],
+    "shelf__shelf_side_0": [
+      504,
+      516
+    ],
+    "shelf__shelf_side_1": [
+      516,
+      528
+    ],
+    "shelf__shelf_front_lip": [
+      528,
+      540
+    ],
+    "shelf__shelf_barrel": [
+      540,
+      668
+    ],
+    "key_0__key_cap": [
+      668,
+      680
+    ],
+    "key_1__key_cap": [
+      680,
+      692
+    ],
+    "key_2__key_cap": [
+      692,
+      704
+    ],
+    "key_3__key_cap": [
+      704,
+      716
+    ],
+    "key_4__key_cap": [
+      716,
+      728
+    ],
+    "key_5__key_cap": [
+      728,
+      740
+    ],
+    "menu_dial__dial_cap": [
+      740,
+      3828
+    ]
+  },
+  "norm": {
+    "center": [
+      0.0,
+      0.005500000000000005,
+      0.08149999999999999
+    ],
+    "scale": 2.2727045454545456
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad_precision_roll_axis_rotary_module_urdf_20260903-101828",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad/model.urdf",
+  "created": "2026-09-03T10:18:28",
+  "updated": "2026-09-03T10:54:17",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 16,
+        "n_tiny": 6
+      },
+      "seed": null,
+      "started": "2026-09-03T10:18:40",
+      "finished": "2026-09-03T10:18:41",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "gray plastic on the entire object",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:18:41",
+      "finished": "2026-09-03T10:20:04",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad_precision_roll_axis_rotary_module_urdf_20260903-101828/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-03T10:20:04",
+      "finished": "2026-09-03T10:46:18",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 16,
+            "n_total": 16,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad_precision_roll_axis_rotary_module_urdf_20260903-101828/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-03T10:46:19",
+      "finished": "2026-09-03T10:54:17",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_a-precision-roll-axis-rotary-module-with-a-singl_20260325_151025_071295_d39ce0ad/model.urdf",
+    "category": "precision roll axis rotary module",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.093,
+        -0.05,
+        -0.065
+      ],
+      "max": [
+        0.093,
+        0.05,
+        0.065
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "support_frame__left_plate",
+        "link": "support_frame",
+        "label": "left_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.16741995731783813,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "support_frame__right_plate",
+        "link": "support_frame",
+        "label": "right_plate",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.16741995731783813,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "support_frame__top_rail",
+        "link": "support_frame",
+        "label": "top_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.19026455101420506,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "support_frame__bottom_rail",
+        "link": "support_frame",
+        "label": "bottom_rail",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.19026455101420506,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "left_bearing_cartridge__housing",
+        "link": "left_bearing_cartridge",
+        "label": "housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/bearing_cartridge.obj"
+        ],
+        "n_faces": 4536,
+        "area_frac": 0.07872583158160674,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "right_bearing_cartridge__housing",
+        "link": "right_bearing_cartridge",
+        "label": "housing",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/bearing_cartridge.obj"
+        ],
+        "n_faces": 4536,
+        "area_frac": 0.07872583158160674,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__left_journal",
+        "link": "shaft",
+        "label": "left_journal",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008150772168361912,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__right_journal",
+        "link": "shaft",
+        "label": "right_journal",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.008150772168361912,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__left_shoulder",
+        "link": "shaft",
+        "label": "left_shoulder",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007410009293112817,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__right_shoulder",
+        "link": "shaft",
+        "label": "right_shoulder",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.007410009293112817,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__main_shaft",
+        "link": "shaft",
+        "label": "main_shaft",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.037763316383086665,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__center_hub",
+        "link": "shaft",
+        "label": "center_hub",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.023302589330766142,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft__mount_pad",
+        "link": "shaft",
+        "label": "mount_pad",
+        "semantic_id": null,
+        "objs": [
+          "<box>"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.008190328847203594,
+        "motion": "hinge",
+        "tiny": true
+      },
+      {
+        "group_id": "payload_bracket__clamp_block",
+        "link": "payload_bracket",
+        "label": "clamp_block",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/payload_clamp_block.obj"
+        ],
+        "n_faces": 316,
+        "area_frac": 0.008627994168666131,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "payload_bracket__web_rib",
+        "link": "payload_bracket",
+        "label": "web_rib",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/payload_web_rib.obj"
+        ],
+        "n_faces": 12,
+        "area_frac": 0.00789100450690821,
+        "motion": "static",
+        "tiny": true
+      },
+      {
+        "group_id": "payload_bracket__top_plate",
+        "link": "payload_bracket",
+        "label": "top_plate",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/payload_top_plate.obj"
+        ],
+        "n_faces": 1284,
+        "area_frac": 0.010282524013119678,
+        "motion": "static",
+        "tiny": false
+      }
+    ]
+  }
+}

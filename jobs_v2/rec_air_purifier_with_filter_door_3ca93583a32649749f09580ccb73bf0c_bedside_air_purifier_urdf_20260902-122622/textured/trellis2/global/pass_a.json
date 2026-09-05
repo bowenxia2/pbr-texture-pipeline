@@ -1,0 +1,43 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 9031023,
+  "groups": {
+    "housing__housing_shell": {
+      "texture_size": 1024,
+      "n_faces": 5736,
+      "texels": 671547,
+      "field_voxels": 670714
+    },
+    "housing__lock_mark": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 51372,
+      "field_voxels": 2018
+    },
+    "housing__status_light": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 54954,
+      "field_voxels": 2624
+    },
+    "cap__cap_ring": {
+      "texture_size": 1024,
+      "n_faces": 15570,
+      "texels": 297844,
+      "field_voxels": 296088
+    },
+    "cap__grip_tab": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 57483,
+      "field_voxels": 4630
+    },
+    "filter__filter_cartridge": {
+      "texture_size": 1024,
+      "n_faces": 11856,
+      "texels": 668702,
+      "field_voxels": 665139
+    }
+  }
+}

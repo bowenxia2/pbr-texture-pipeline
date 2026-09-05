@@ -72,6 +72,7 @@ render:
   canonical_pitch: 0.0
   contact_pitch_deg: 15
   canny_thresholds: [100, 200]
+  condition_yaw_offset: 0.4363  # ~25 deg off front
 
 texture:
   trellis2_resolution: 1024

@@ -1,0 +1,166 @@
+{
+  "schema_version": 7,
+  "job_id": "rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c_portable_camping_pump_urdf_20260902-142542",
+  "mesh_source": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c/model.urdf",
+  "created": "2026-09-02T14:25:42",
+  "updated": "2026-09-02T15:16:16",
+  "params": {
+    "batch": true,
+    "backends": [
+      "trellis2"
+    ],
+    "gpu_mode": "dual",
+    "group_by": "semantic"
+  },
+  "stages": {
+    "render": {
+      "status": "done",
+      "params": {
+        "n_groups": 6,
+        "n_tiny": 0
+      },
+      "seed": null,
+      "started": "2026-09-02T14:26:25",
+      "finished": "2026-09-02T14:26:26",
+      "error": null
+    },
+    "vlm": {
+      "status": "done",
+      "params": {
+        "materials_preview": "rubber on the handle grip; plastic on the main body; metal on the base plate; rubber on the stem; metal on the stem cap",
+        "classification": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T14:26:26",
+      "finished": "2026-09-02T14:30:16",
+      "error": null
+    },
+    "imageedit": {
+      "status": "done",
+      "params": {
+        "enhanced": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c_portable_camping_pump_urdf_20260902-142542/imageedit/enhanced_cond.png",
+        "path": "generate"
+      },
+      "seed": null,
+      "started": "2026-09-02T14:30:16",
+      "finished": "2026-09-02T15:04:27",
+      "error": null
+    },
+    "texture": {
+      "status": "done",
+      "params": {
+        "backends": {
+          "trellis2": {
+            "ok": true,
+            "n_ok": 6,
+            "n_total": 6,
+            "glb_path": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/jobs_v2/rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c_portable_camping_pump_urdf_20260902-142542/textured/trellis2/assembled.glb"
+          }
+        }
+      },
+      "seed": 42,
+      "started": "2026-09-02T15:04:28",
+      "finished": "2026-09-02T15:16:16",
+      "error": null
+    }
+  },
+  "asset": {
+    "asset_dir": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c",
+    "urdf": "/mmfs1/gscratch/krishna/bxia2/pbr-texture-pipeline/articraft_extracted/rec_air_pump_with_t_handle_b5283a768bbc49c2b7d9d06b0bd28f3c/model.urdf",
+    "category": "portable camping pump",
+    "group_by": "semantic",
+    "semantic_labels": [],
+    "bbox_world": {
+      "min": [
+        -0.0995,
+        -0.051,
+        0.0
+      ],
+      "max": [
+        0.0995,
+        0.051,
+        0.344
+      ]
+    },
+    "groups": [
+      {
+        "group_id": "pump_body__body_shell",
+        "link": "pump_body",
+        "label": "body_shell",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pump_body_shell.obj"
+        ],
+        "n_faces": 3440,
+        "area_frac": 0.68719686823189,
+        "motion": "static",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft_handle__pump_rod",
+        "link": "shaft_handle",
+        "label": "pump_rod",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.06896157864374605,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft_handle__t_grip",
+        "link": "shaft_handle",
+        "label": "t_grip",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/pump_t_grip.obj"
+        ],
+        "n_faces": 1028,
+        "area_frac": 0.1440815659979287,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "shaft_handle__rod_collar",
+        "link": "shaft_handle",
+        "label": "rod_collar",
+        "semantic_id": null,
+        "objs": [
+          "<cylinder>"
+        ],
+        "n_faces": 128,
+        "area_frac": 0.014453891581379786,
+        "motion": "slider",
+        "tiny": false
+      },
+      {
+        "group_id": "left_foot__left_foot_visual",
+        "link": "left_foot",
+        "label": "left_foot_visual",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/left_stabilizer_foot.obj"
+        ],
+        "n_faces": 1028,
+        "area_frac": 0.04265304777252778,
+        "motion": "hinge",
+        "tiny": false
+      },
+      {
+        "group_id": "right_foot__right_foot_visual",
+        "link": "right_foot",
+        "label": "right_foot_visual",
+        "semantic_id": null,
+        "objs": [
+          "assets/meshes/right_stabilizer_foot.obj"
+        ],
+        "n_faces": 1028,
+        "area_frac": 0.04265304777252778,
+        "motion": "hinge",
+        "tiny": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "group_order": [
+    "housing__base_plinth",
+    "housing__back_panel",
+    "housing__side_shell_0",
+    "housing__side_shell_1",
+    "housing__top_cover",
+    "housing__upper_fascia",
+    "housing__front_grille",
+    "housing__front_jamb_0",
+    "housing__front_jamb_1",
+    "housing__front_sill",
+    "housing__guide_0",
+    "housing__guide_1",
+    "service_flap__panel",
+    "service_flap__pull_ridge",
+    "service_flap__side_return_0",
+    "service_flap__side_return_1",
+    "filter_cassette__filter_media",
+    "filter_cassette__frame_0",
+    "filter_cassette__frame_1",
+    "filter_cassette__frame_2",
+    "filter_cassette__frame_3",
+    "filter_cassette__pull_tab",
+    "filter_cassette__tab_bridge",
+    "control_knob__shaft",
+    "control_knob__knob_cap"
+  ],
+  "face_ranges": {
+    "housing__base_plinth": [
+      0,
+      12
+    ],
+    "housing__back_panel": [
+      12,
+      24
+    ],
+    "housing__side_shell_0": [
+      24,
+      36
+    ],
+    "housing__side_shell_1": [
+      36,
+      48
+    ],
+    "housing__top_cover": [
+      48,
+      60
+    ],
+    "housing__upper_fascia": [
+      60,
+      72
+    ],
+    "housing__front_grille": [
+      72,
+      84
+    ],
+    "housing__front_jamb_0": [
+      84,
+      96
+    ],
+    "housing__front_jamb_1": [
+      96,
+      108
+    ],
+    "housing__front_sill": [
+      108,
+      120
+    ],
+    "housing__guide_0": [
+      120,
+      132
+    ],
+    "housing__guide_1": [
+      132,
+      144
+    ],
+    "service_flap__panel": [
+      144,
+      156
+    ],
+    "service_flap__pull_ridge": [
+      156,
+      168
+    ],
+    "service_flap__side_return_0": [
+      168,
+      180
+    ],
+    "service_flap__side_return_1": [
+      180,
+      192
+    ],
+    "filter_cassette__filter_media": [
+      192,
+      204
+    ],
+    "filter_cassette__frame_0": [
+      204,
+      216
+    ],
+    "filter_cassette__frame_1": [
+      216,
+      228
+    ],
+    "filter_cassette__frame_2": [
+      228,
+      240
+    ],
+    "filter_cassette__frame_3": [
+      240,
+      252
+    ],
+    "filter_cassette__pull_tab": [
+      252,
+      264
+    ],
+    "filter_cassette__tab_bridge": [
+      264,
+      276
+    ],
+    "control_knob__shaft": [
+      276,
+      404
+    ],
+    "control_knob__knob_cap": [
+      404,
+      14614
+    ]
+  },
+  "norm": {
+    "center": [
+      0.015000023870249159,
+      -0.0025000000000000022,
+      0.25
+    ],
+    "scale": 1.99998
+  }
+}

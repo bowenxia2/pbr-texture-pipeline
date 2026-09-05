@@ -1,0 +1,133 @@
+{
+  "resolution": 1024,
+  "seed": 42,
+  "field_voxels_total": 4511088,
+  "groups": {
+    "panel__fascia": {
+      "texture_size": 1024,
+      "n_faces": 604,
+      "texels": 637920,
+      "field_voxels": 637077
+    },
+    "panel__plenum": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 52362,
+      "field_voxels": 52362
+    },
+    "panel__grille_face": {
+      "texture_size": 1024,
+      "n_faces": 8900,
+      "texels": 581904,
+      "field_voxels": 249049
+    },
+    "panel__mount_frame": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 62460,
+      "field_voxels": 62457
+    },
+    "flap_0__barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 947765,
+      "field_voxels": 36280
+    },
+    "flap_0__blade": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58408,
+      "field_voxels": 58233
+    },
+    "flap_0__rib_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53352,
+      "field_voxels": 5208
+    },
+    "flap_0__rib_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53352,
+      "field_voxels": 5208
+    },
+    "flap_1__barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 729293,
+      "field_voxels": 36031
+    },
+    "flap_1__blade": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53355,
+      "field_voxels": 53191
+    },
+    "flap_1__rib_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50750,
+      "field_voxels": 5208
+    },
+    "flap_1__rib_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50750,
+      "field_voxels": 5208
+    },
+    "flap_2__barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 930229,
+      "field_voxels": 35914
+    },
+    "flap_2__blade": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 58408,
+      "field_voxels": 58149
+    },
+    "flap_2__rib_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53352,
+      "field_voxels": 5208
+    },
+    "flap_2__rib_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53352,
+      "field_voxels": 5208
+    },
+    "flap_3__barrel": {
+      "texture_size": 1024,
+      "n_faces": 128,
+      "texels": 953347,
+      "field_voxels": 35501
+    },
+    "flap_3__blade": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 53355,
+      "field_voxels": 53191
+    },
+    "flap_3__rib_0": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50750,
+      "field_voxels": 5208
+    },
+    "flap_3__rib_1": {
+      "texture_size": 256,
+      "n_faces": 12,
+      "texels": 50750,
+      "field_voxels": 5208
+    },
+    "selector_dial__dial_body": {
+      "texture_size": 1024,
+      "n_faces": 2756,
+      "texels": 636204,
+      "field_voxels": 3304
+    }
+  }
+}

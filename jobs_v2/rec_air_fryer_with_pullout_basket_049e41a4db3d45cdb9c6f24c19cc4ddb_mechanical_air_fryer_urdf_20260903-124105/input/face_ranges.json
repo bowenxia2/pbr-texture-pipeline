@@ -1,0 +1,54 @@
+{
+  "group_order": [
+    "body__shell",
+    "drawer__drawer_body",
+    "timer_dial__dial",
+    "temperature_dial__dial",
+    "power_button__button_bezel",
+    "power_button__button_lens",
+    "release_button__release_cap",
+    "release_button__release_stem"
+  ],
+  "face_ranges": {
+    "body__shell": [
+      0,
+      4780
+    ],
+    "drawer__drawer_body": [
+      4780,
+      7208
+    ],
+    "timer_dial__dial": [
+      7208,
+      23048
+    ],
+    "temperature_dial__dial": [
+      23048,
+      38888
+    ],
+    "power_button__button_bezel": [
+      38888,
+      39388
+    ],
+    "power_button__button_lens": [
+      39388,
+      39888
+    ],
+    "release_button__release_cap": [
+      39888,
+      40396
+    ],
+    "release_button__release_stem": [
+      40396,
+      40408
+    ]
+  },
+  "norm": {
+    "center": [
+      0.03,
+      0.0,
+      0.166
+    ],
+    "scale": 2.688145161290323
+  }
+}
